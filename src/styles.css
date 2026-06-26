@@ -6,40 +6,44 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ═══════════════════════════════════════════════════════════════
-   NexaHubTech — violet & human (light)
-   lavender canvas · white cards · deep-plum ink
-   Brand roles (monochrome): the --marigold* vars carry the LEARN
-   color (lighter violet #4b1f79); the --teal* vars carry the BUILD
-   color (deep plum #2b0d4e). Names kept so role classes stay stable.
+   NexaHubTech — warm violet & human (light)
+   blush-lavender canvas · white cards · warm deep-plum ink
+   Brand roles (monochrome violet, warmed): the --marigold* vars carry
+   the LEARN color (vivid violet #7c3aed); the --teal* vars carry the
+   BUILD color (warm deep grape #4a1063). A soft rose --warm accent
+   adds a welcoming glow (sparks + ambient light only, not an arm hue).
+   Names kept so role classes stay stable.
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
-  --paper: #ece9f2;         /* soft lavender canvas */
-  --paper-2: #e1dcec;       /* deeper lavender — footer / insets */
+  --paper: #f6eff4;         /* warm blush-lavender canvas */
+  --paper-2: #ece0e9;       /* warm mauve — footer / insets */
   --card: #ffffff;
-  --ink: #2b0d4e;           /* deep plum — headlines & body */
-  --ink-soft: #4d3f63;      /* muted plum — long-form body text */
-  --mute: #685c7d;          /* readable muted lilac — captions */
-  --mute-2: #b4a7c5;        /* faint lilac — placeholders */
+  --ink: #311049;           /* warm deep plum — headlines & body */
+  --ink-soft: #574164;      /* warm mauve-plum — long-form body text */
+  --mute: #786a85;          /* warm muted mauve — captions */
+  --mute-2: #bfaecb;        /* faint warm lilac — placeholders */
 
-  --marigold: #4b1f79;      /* LEARN — lighter violet, primary CTA */
-  --marigold-deep: #3d1667; /* LEARN hover */
-  --marigold-ink: #4b1f79;  /* LEARN — already dark enough for small text */
-  --marigold-tint: #ece3f8; /* LEARN — bright lilac wash */
+  --marigold: #7c3aed;      /* LEARN — vivid violet, primary CTA */
+  --marigold-deep: #6d28d9; /* LEARN hover */
+  --marigold-ink: #6b21a8;  /* LEARN — darker for small-text contrast */
+  --marigold-tint: #f1e7fd; /* LEARN — bright violet wash */
 
-  --teal: #2b0d4e;          /* BUILD — deep plum */
-  --teal-deep: #1e0937;     /* BUILD hover / strong text */
-  --teal-tint: #ddd6ec;     /* BUILD — cooler greyed lilac wash */
+  --teal: #4a1063;          /* BUILD — warm deep grape */
+  --teal-deep: #380b4c;     /* BUILD hover / strong text */
+  --teal-tint: #e8ddf1;     /* BUILD — warm greyed lilac wash */
 
-  --line: rgba(43, 13, 78, 0.12);
-  --line-soft: rgba(43, 13, 78, 0.07);
-  --shadow: 0 22px 48px -28px rgba(43, 13, 78, 0.42);
-  --shadow-sm: 0 10px 26px -18px rgba(43, 13, 78, 0.34);
+  --warm: #f06ba8;          /* welcoming rose accent — sparks & glows */
+
+  --line: rgba(49, 16, 73, 0.12);
+  --line-soft: rgba(49, 16, 73, 0.07);
+  --shadow: 0 22px 48px -28px rgba(74, 20, 95, 0.42);
+  --shadow-sm: 0 10px 26px -18px rgba(74, 20, 95, 0.32);
 
   --radius: 1rem;
   --maxw: 1140px;
 
-  /* shadcn tokens mapped to the violet light identity */
+  /* shadcn tokens mapped to the warm violet light identity */
   --background: var(--paper);
   --foreground: var(--ink);
   --card-foreground: var(--ink);
@@ -76,6 +80,7 @@
   --color-marigold-ink: var(--marigold-ink);
   --color-teal: var(--teal);
   --color-teal-deep: var(--teal-deep);
+  --color-warm: var(--warm);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -108,10 +113,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-    /* soft violet light — static, cheap */
+    /* warm welcoming light — rose top-right into violet bottom-left, static */
     background-image:
-      radial-gradient(900px 600px at 92% -8%, rgba(75, 31, 121, 0.14), transparent 60%),
-      radial-gradient(820px 620px at -6% 12%, rgba(43, 13, 78, 0.1), transparent 58%);
+      radial-gradient(900px 600px at 92% -8%, rgba(240, 107, 168, 0.18), transparent 60%),
+      radial-gradient(820px 620px at -6% 12%, rgba(124, 58, 237, 0.12), transparent 58%);
   }
   ::selection {
     background: var(--marigold);
@@ -185,7 +190,8 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--marigold);
+  background: var(--warm);
+  box-shadow: 0 0 0 4px rgba(240, 107, 168, 0.18);
 }
 
 .card {
@@ -200,7 +206,7 @@
 }
 .card-lift:hover {
   transform: translateY(-5px);
-  box-shadow: 0 34px 64px -30px rgba(43, 13, 78, 0.5);
+  box-shadow: 0 34px 64px -30px rgba(74, 20, 95, 0.5);
 }
 
 /* ── buttons ───────────────────────────────────────────────────── */
@@ -223,17 +229,17 @@
 .btn-primary {
   background: var(--marigold);
   color: #ffffff;
-  box-shadow: 0 14px 30px -12px rgba(75, 31, 121, 0.7);
+  box-shadow: 0 14px 30px -12px rgba(124, 58, 237, 0.72);
 }
 .btn-primary:hover {
   transform: translateY(-2px);
   background: var(--marigold-deep);
-  box-shadow: 0 20px 40px -14px rgba(75, 31, 121, 0.8);
+  box-shadow: 0 20px 40px -14px rgba(124, 58, 237, 0.82);
 }
 .btn-teal {
   background: var(--teal);
   color: #fff;
-  box-shadow: 0 14px 30px -14px rgba(43, 13, 78, 0.7);
+  box-shadow: 0 14px 30px -14px rgba(74, 16, 99, 0.7);
 }
 .btn-teal:hover {
   transform: translateY(-2px);
@@ -263,9 +269,9 @@
 }
 .site-header.scrolled {
   border-bottom-color: var(--line-soft);
-  background: rgba(236, 233, 242, 0.82);
+  background: rgba(246, 239, 244, 0.82);
   backdrop-filter: blur(12px) saturate(140%);
-  box-shadow: 0 6px 24px -20px rgba(43, 13, 78, 0.5);
+  box-shadow: 0 6px 24px -20px rgba(74, 20, 95, 0.5);
 }
 .nav-link {
   position: relative;
@@ -313,12 +319,12 @@
 .softblob.s-marigold {
   width: 240px; height: 240px;
   top: -10px; right: 0;
-  background: rgba(75, 31, 121, 0.38);
+  background: rgba(168, 85, 247, 0.4);
 }
 .softblob.s-teal {
   width: 230px; height: 230px;
   bottom: 10px; left: -10px;
-  background: rgba(43, 13, 78, 0.28);
+  background: rgba(240, 107, 168, 0.3);
 }
 
 .jcard {
@@ -437,11 +443,11 @@
 /* big tinted feature panels */
 .panel-learn {
   background: linear-gradient(180deg, #fff, var(--marigold-tint));
-  border: 1px solid rgba(75, 31, 121, 0.22);
+  border: 1px solid rgba(124, 58, 237, 0.2);
 }
 .panel-build {
   background: linear-gradient(180deg, #fff, var(--teal-tint));
-  border: 1px solid rgba(43, 13, 78, 0.2);
+  border: 1px solid rgba(74, 16, 99, 0.18);
 }
 
 .devnote {
@@ -461,6 +467,71 @@
 }
 .nav-link.is-active::after {
   transform: scaleX(1);
+}
+
+/* ── mobile hamburger + dropdown ───────────────────────────────── */
+
+.menu-btn {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+.menu-btn span {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  width: 22px;
+  height: 2px;
+  margin-top: -1px;
+  border-radius: 2px;
+  background: var(--ink);
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 140ms ease;
+}
+.menu-btn span:nth-child(1) { transform: translateY(-6px); }
+.menu-btn span:nth-child(3) { transform: translateY(6px); }
+.menu-btn[data-open='true'] span:nth-child(1) { transform: rotate(45deg); }
+.menu-btn[data-open='true'] span:nth-child(2) { opacity: 0; }
+.menu-btn[data-open='true'] span:nth-child(3) { transform: rotate(-45deg); }
+
+/* give the bar a solid backdrop while the menu is open (any scroll pos) */
+.site-header[data-menu-open='true'] {
+  background: rgba(246, 239, 244, 0.96);
+  backdrop-filter: blur(12px) saturate(140%);
+}
+
+.mobile-menu {
+  border-top: 1px solid var(--line-soft);
+  background: rgba(246, 239, 244, 0.97);
+  backdrop-filter: blur(12px) saturate(140%);
+  box-shadow: 0 22px 44px -26px rgba(74, 20, 95, 0.55);
+  animation: menuDrop 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes menuDrop {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: none; }
+}
+.mobile-link {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--ink);
+  padding: 0.85rem 0.25rem;
+  border-bottom: 1px solid var(--line-soft);
+  transition: color 160ms ease, padding-left 160ms ease;
+}
+.mobile-link:hover,
+.mobile-link:active {
+  color: var(--marigold-ink);
+  padding-left: 0.5rem;
+}
+.mobile-link.is-active {
+  color: var(--marigold-ink);
 }
 
 /* ── page intro ────────────────────────────────────────────────── */
@@ -504,7 +575,7 @@
 .select:focus {
   outline: none;
   border-color: var(--marigold);
-  box-shadow: 0 0 0 4px rgba(75, 31, 121, 0.18);
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.18);
 }
 .textarea {
   resize: vertical;

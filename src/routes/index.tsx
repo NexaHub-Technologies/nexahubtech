@@ -5,7 +5,7 @@ export const Route = createFileRoute("/")({ component: Home });
 
 /* ── hero visual : the learn → build journey, rendered warmly ───── */
 
-const AV = ["#4b1f79", "#2b0d4e", "#7c5bb0", "#9c86c9", "#35115c"];
+const AV = ["#7c3aed", "#f06ba8", "#a855f7", "#6d28d9", "#c084fc"];
 
 function HeroStage() {
 	return (
@@ -305,8 +305,8 @@ function ClosingCTA() {
 					<Eyebrow variant="build">For businesses</Eyebrow>
 					<h3 className="display text-[1.8rem] mt-3">Build with us.</h3>
 					<p className="lead mt-3">
-						Tell us about the product you need. We’ll help you design it well
-						and build it right.
+						Tell us about the product you need. We’ll help you design and build
+						it right.
 					</p>
 					<Link to="/contact" className="btn btn-teal mt-6">
 						Start a project
