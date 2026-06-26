@@ -28,7 +28,7 @@ export const Route = createRootRoute({
 				content:
 					"NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio. We teach people to become developers, then put those skills to work building real products for real clients.",
 			},
-			{ name: "theme-color", content: "#fbf7f1" },
+			{ name: "theme-color", content: "#ece9f2" },
 			{
 				property: "og:title",
 				content: "NexaHubTech — Learn to build. Then build for real.",

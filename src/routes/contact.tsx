@@ -25,7 +25,7 @@ function ContactForm() {
 			<div className="card panel-learn p-8 text-center">
 				<div
 					className="w-14 h-14 rounded-2xl grid place-items-center mx-auto"
-					style={{ background: "var(--marigold)", color: "#2a1c06" }}
+					style={{ background: "var(--marigold)", color: "#ffffff" }}
 					aria-hidden="true"
 				>
 					<span className="text-2xl">✓</span>

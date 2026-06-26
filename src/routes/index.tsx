@@ -5,7 +5,7 @@ export const Route = createFileRoute("/")({ component: Home });
 
 /* ── hero visual : the learn → build journey, rendered warmly ───── */
 
-const AV = ["#f2a024", "#0e7c6e", "#e07a5f", "#5b8c7b", "#d9851a"];
+const AV = ["#4b1f79", "#2b0d4e", "#7c5bb0", "#9c86c9", "#35115c"];
 
 function HeroStage() {
 	return (
