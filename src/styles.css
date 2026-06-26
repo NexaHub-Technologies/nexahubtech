@@ -9,7 +9,7 @@
    NexaHubTech — warm violet & human (light)
    blush-lavender canvas · white cards · warm deep-plum ink
    Brand roles (monochrome violet, warmed): the --marigold* vars carry
-   the LEARN color (vivid violet #7c3aed); the --teal* vars carry the
+   the LEARN color (toned-down violet #6a2cad); the --teal* vars carry the
    BUILD color (warm deep grape #4a1063). A soft rose --warm accent
    adds a welcoming glow (sparks + ambient light only, not an arm hue).
    Names kept so role classes stay stable.
@@ -24,10 +24,10 @@
   --mute: #786a85;          /* warm muted mauve — captions */
   --mute-2: #bfaecb;        /* faint warm lilac — placeholders */
 
-  --marigold: #7c3aed;      /* LEARN — vivid violet, primary CTA */
-  --marigold-deep: #6d28d9; /* LEARN hover */
-  --marigold-ink: #6b21a8;  /* LEARN — darker for small-text contrast */
-  --marigold-tint: #f1e7fd; /* LEARN — bright violet wash */
+  --marigold: #6a2cad;      /* LEARN — toned-down violet, primary CTA */
+  --marigold-deep: #5a2494; /* LEARN hover */
+  --marigold-ink: #5e2096;  /* LEARN — darker for small-text contrast */
+  --marigold-tint: #efe6fa; /* LEARN — soft violet wash */
 
   --teal: #4a1063;          /* BUILD — warm deep grape */
   --teal-deep: #380b4c;     /* BUILD hover / strong text */
@@ -116,7 +116,7 @@
     /* warm welcoming light — rose top-right into violet bottom-left, static */
     background-image:
       radial-gradient(900px 600px at 92% -8%, rgba(240, 107, 168, 0.18), transparent 60%),
-      radial-gradient(820px 620px at -6% 12%, rgba(124, 58, 237, 0.12), transparent 58%);
+      radial-gradient(820px 620px at -6% 12%, rgba(106, 44, 173, 0.12), transparent 58%);
   }
   ::selection {
     background: var(--marigold);
@@ -229,12 +229,12 @@
 .btn-primary {
   background: var(--marigold);
   color: #ffffff;
-  box-shadow: 0 14px 30px -12px rgba(124, 58, 237, 0.72);
+  box-shadow: 0 14px 30px -12px rgba(106, 44, 173, 0.62);
 }
 .btn-primary:hover {
   transform: translateY(-2px);
   background: var(--marigold-deep);
-  box-shadow: 0 20px 40px -14px rgba(124, 58, 237, 0.82);
+  box-shadow: 0 20px 40px -14px rgba(106, 44, 173, 0.72);
 }
 .btn-teal {
   background: var(--teal);
@@ -319,7 +319,7 @@
 .softblob.s-marigold {
   width: 240px; height: 240px;
   top: -10px; right: 0;
-  background: rgba(168, 85, 247, 0.4);
+  background: rgba(138, 90, 190, 0.34);
 }
 .softblob.s-teal {
   width: 230px; height: 230px;
@@ -443,7 +443,7 @@
 /* big tinted feature panels */
 .panel-learn {
   background: linear-gradient(180deg, #fff, var(--marigold-tint));
-  border: 1px solid rgba(124, 58, 237, 0.2);
+  border: 1px solid rgba(106, 44, 173, 0.2);
 }
 .panel-build {
   background: linear-gradient(180deg, #fff, var(--teal-tint));
@@ -575,7 +575,7 @@
 .select:focus {
   outline: none;
   border-color: var(--marigold);
-  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.18);
+  box-shadow: 0 0 0 4px rgba(106, 44, 173, 0.18);
 }
 .textarea {
   resize: vertical;
