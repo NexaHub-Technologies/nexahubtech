@@ -41,7 +41,12 @@ export const Route = createRootRoute({
 			{ property: "og:type", content: "website" },
 			{ name: "twitter:card", content: "summary_large_image" },
 		],
-		links: [
+	links: [
+			{
+				rel: "icon",
+				type: "image/svg+xml",
+				href: "/logo-main.svg",
+			},
 			{
 				rel: "stylesheet",
 				href: appCss,
