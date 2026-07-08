@@ -609,6 +609,9 @@
   border-bottom: 1px solid var(--line-soft);
   color: var(--ink-soft);
 }
+a.contact-detail:hover {
+  color: var(--ink);
+}
 .contact-detail .ic {
   width: 36px;
   height: 36px;
@@ -650,6 +653,23 @@
 .footer {
   border-top: 1px solid var(--line);
   background: var(--paper-2);
+}
+
+.social-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink-soft);
+  transition: color 0.2s, border-color 0.2s, transform 0.2s;
+}
+.social-btn:hover {
+  color: var(--ink);
+  border-color: var(--marigold);
+  transform: translateY(-2px);
 }
 
 /* ── responsive ────────────────────────────────────────────────── */

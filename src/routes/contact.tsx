@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Eyebrow, useReveal } from "../components/site";
+import { CONTACT, Eyebrow, SOCIALS, useReveal } from "../components/site";
 
 export const Route = createFileRoute("/contact")({
 	component: Contact,
@@ -181,22 +181,26 @@ function Contact() {
 						<div className="card p-7">
 							<Eyebrow variant="plain">Reach us directly</Eyebrow>
 							<div className="mt-3">
-								<div className="contact-detail">
+								<a className="contact-detail" href={`mailto:${CONTACT.email}`}>
 									<span className="ic" aria-hidden="true">
 										✉
 									</span>
-									<span className="devnote">
-										Add contact email before launch
-									</span>
-								</div>
-								<div className="contact-detail">
+									<span>{CONTACT.email}</span>
+								</a>
+								<a
+									className="contact-detail"
+									href={CONTACT.whatsapp}
+									target="_blank"
+									rel="noreferrer"
+								>
 									<span className="ic" aria-hidden="true">
 										◎
 									</span>
-									<span className="devnote">
-										Add WhatsApp number before launch
+									<span>
+										{CONTACT.phoneDisplay}{" "}
+										<span className="text-mute">· WhatsApp</span>
 									</span>
-								</div>
+								</a>
 								<div
 									className="contact-detail"
 									style={{ borderBottom: "none" }}
@@ -204,8 +208,20 @@ function Contact() {
 									<span className="ic" aria-hidden="true">
 										☆
 									</span>
-									<span className="devnote">
-										Add X · LinkedIn · Instagram before launch
+									<span>
+										{SOCIALS.map((s, i) => (
+											<span key={s.label}>
+												{i > 0 && <span className="text-mute"> · </span>}
+												<a
+													href={s.href}
+													target="_blank"
+													rel="noreferrer"
+													className="hover:underline"
+												>
+													{s.label}
+												</a>
+											</span>
+										))}
 									</span>
 								</div>
 							</div>
