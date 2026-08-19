@@ -1,20 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eyebrow, useReveal } from "../../components/site";
 import { COURSES } from "../../lib/courses";
+import { pageMeta } from "../../lib/seo";
 
 export const Route = createFileRoute("/courses/")({
 	component: CoursesIndex,
 	ssr: false,
-	head: () => ({
-		meta: [
-			{ title: "Courses — NexaHubTech" },
-			{
-				name: "description",
-				content:
-					"Explore all courses at NexaHubTech — from web development and cybersecurity to data analysis and videography. Learn real skills with cohort-based, hands-on teaching.",
-			},
-		],
-	}),
+	head: () =>
+		pageMeta({
+			title: "Courses — NexaHubTech",
+			description:
+				"Explore all courses at NexaHubTech — from web development and cybersecurity to data analysis and videography. Learn real skills with cohort-based, hands-on teaching.",
+			path: "/courses",
+		}),
 });
 
 function CoursesIndex() {
@@ -29,15 +27,16 @@ function CoursesIndex() {
 					</span>
 					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
 						Real skills,{" "}
-						<span style={{ color: "var(--marigold-ink)" }}>
-							taught properly
-						</span>
-						.
+						<span style={{ color: "var(--learn-ink)" }}>taught properly</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
 						Eight courses built on the same principle: understand first, then
 						build. Every track is cohort-based, hands-on, and designed to grow
 						real capability — not just familiarity.
+					</p>
+					<p className="rise rise-4 mt-4 text-[0.95rem] text-mute">
+						Select a course to see its modules, what a session looks like, and
+						how to enrol.
 					</p>
 				</div>
 			</section>
@@ -49,18 +48,14 @@ function CoursesIndex() {
 							key={c.slug}
 							to="/courses/$slug"
 							params={{ slug: c.slug }}
-							className={`card card-lift reveal p-7 flex flex-col ${i % 2 ? "panel-build" : "panel-learn"}`}
+							className="card card-lift reveal panel-learn p-7 flex flex-col"
 						>
 							<div className="flex items-center gap-3 mb-4">
-								<span
-									className={`step-badge ${c.category === "build" ? "badge-build" : "badge-learn"}`}
-								>
+								<span className="step-badge badge-learn">
 									{String(i + 1).padStart(2, "0")}
 								</span>
 								{c.d && (
-									<span
-										className={`pill text-[0.75rem] !py-1 !px-2.5 ${c.category === "build" ? "!border-[rgba(74,16,99,0.2)]" : ""}`}
-									>
+									<span className="pill text-[0.75rem] !py-1 !px-2.5">
 										{c.d}
 									</span>
 								)}
@@ -73,6 +68,9 @@ function CoursesIndex() {
 									{c.duration}
 								</span>
 							</div>
+							<span className="view-link mt-3">
+								View course <i aria-hidden="true">→</i>
+							</span>
 						</Link>
 					))}
 				</div>

@@ -1,5 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { CONTACT, MOTTO } from "../lib/contact";
+import type { SiteMode } from "../lib/mode";
+import { useMode } from "./mode";
+
+export { CONTACT, MOTTO };
 
 /* shared site chrome + small hooks, used by the root layout and pages */
 
@@ -19,7 +24,7 @@ export function Logo({
 				style={{ height, width: "auto" }}
 				className="site-logo"
 			/>
-			<span className="display" style={{ fontSize: wordmark }}>
+			<span className="display site-wordmark" style={{ fontSize: wordmark }}>
 				NexaHubTech
 			</span>
 		</span>
@@ -28,16 +33,53 @@ export function Logo({
 
 export const NAV = [
 	{ to: "/", label: "Home" },
-	{ to: "/courses", label: "Courses" },
+	{ to: "/courses", label: "Courses", side: "learn" },
+	{ to: "/services", label: "Services", side: "build" },
 	{ to: "/about", label: "About" },
 	{ to: "/contact", label: "Contact" },
-] as const;
+] as const satisfies readonly {
+	to: string;
+	label: string;
+	side?: SiteMode;
+}[];
 
-export const CONTACT = {
-	email: "nexahubt@gmail.com",
-	phoneDisplay: "+234 913 451 3173",
-	whatsapp: "https://wa.me/2349134513173",
+/* each side shows only its own routes. The other side's pages stay reachable by URL —
+   landing on one flips the mode, so the visitor never hits a nav that disowns the page
+   they are on. */
+export function navFor(mode: SiteMode) {
+	return NAV.filter((n) => !("side" in n) || n.side === mode);
+}
+
+/* the header's primary action follows the arm you are in */
+export const CTA_BY_MODE = {
+	learn: { to: "/courses", label: "Start learning" },
+	build: { to: "/contact", label: "Start a project" },
 } as const;
+
+export function ModeSwitch({ className = "" }: { className?: string }) {
+	const { mode, setMode } = useMode();
+	return (
+		<fieldset className={`mode-switch ${className}`}>
+			<legend className="sr-only">Choose what brings you here</legend>
+			<button
+				type="button"
+				data-on={mode === "learn"}
+				aria-pressed={mode === "learn"}
+				onClick={() => setMode("learn")}
+			>
+				Learn
+			</button>
+			<button
+				type="button"
+				data-on={mode === "build"}
+				aria-pressed={mode === "build"}
+				onClick={() => setMode("build")}
+			>
+				Build
+			</button>
+		</fieldset>
+	);
+}
 
 function XIcon() {
 	return (
@@ -101,6 +143,9 @@ export const SOCIALS = [
 
 export function Header() {
 	const [open, setOpen] = useState(false);
+	const { mode } = useMode();
+	const cta = CTA_BY_MODE[mode];
+	const nav = navFor(mode);
 
 	useEffect(() => {
 		document.documentElement.classList.add("js");
@@ -120,7 +165,7 @@ export function Header() {
 			if (e.key === "Escape") setOpen(false);
 		};
 		const onResize = () => {
-			if (window.innerWidth >= 768) setOpen(false);
+			if (window.innerWidth >= 1024) setOpen(false);
 		};
 		document.addEventListener("keydown", onKey);
 		window.addEventListener("resize", onResize);
@@ -134,72 +179,82 @@ export function Header() {
 
 	return (
 		<header className="site-header" id="site-header" data-menu-open={open}>
-			<div className="wrap flex items-center justify-between h-[76px]">
+			<div className="wrap flex items-center justify-between gap-4 h-[76px]">
 				<Link
 					to="/"
-					className="flex items-center"
+					className="flex items-center shrink-0"
 					aria-label="NexaHubTech home"
 					onClick={() => setOpen(false)}
 				>
 					<Logo height={26} />
 				</Link>
 
-				<nav className="hidden md:flex items-center gap-8">
-					{NAV.map((n) => (
-						<Link
-							key={n.to}
-							to={n.to}
-							className="nav-link"
-							activeProps={{ className: "nav-link is-active" }}
-						>
-							{n.label}
-						</Link>
-					))}
+				<nav className="hidden lg:flex items-center gap-7">
+					{nav.map((n) => {
+						const side = "side" in n && n.side === mode ? " is-side" : "";
+						return (
+							<Link
+								key={n.to}
+								to={n.to}
+								className={`nav-link${side}`}
+								activeProps={{ className: `nav-link is-active${side}` }}
+							>
+								{n.label}
+							</Link>
+						);
+					})}
 				</nav>
 
-				<div className="hidden md:block">
+				<div className="hidden lg:flex items-center gap-3">
+					<ModeSwitch />
 					<Link
-						to="/contact"
+						to={cta.to}
 						className="btn btn-primary !py-2.5 !px-5 text-[0.9rem]"
 					>
-						Get started
+						{cta.label}
 					</Link>
 				</div>
 
-				<button
-					type="button"
-					className="menu-btn md:hidden"
-					aria-label={open ? "Close menu" : "Open menu"}
-					aria-expanded={open}
-					aria-controls="mobile-menu"
-					data-open={open}
-					onClick={() => setOpen((v) => !v)}
-				>
-					<span />
-					<span />
-					<span />
-				</button>
+				<div className="flex items-center gap-2 lg:hidden">
+					<ModeSwitch className="is-compact" />
+					<button
+						type="button"
+						className="menu-btn"
+						aria-label={open ? "Close menu" : "Open menu"}
+						aria-expanded={open}
+						aria-controls="mobile-menu"
+						data-open={open}
+						onClick={() => setOpen((v) => !v)}
+					>
+						<span />
+						<span />
+						<span />
+					</button>
+				</div>
 			</div>
 
-			<div className="mobile-menu md:hidden" id="mobile-menu" hidden={!open}>
+			<div className="mobile-menu lg:hidden" id="mobile-menu" hidden={!open}>
 				<nav className="wrap flex flex-col py-3">
-					{NAV.map((n) => (
-						<Link
-							key={n.to}
-							to={n.to}
-							className="mobile-link"
-							activeProps={{ className: "mobile-link is-active" }}
-							onClick={() => setOpen(false)}
-						>
-							{n.label}
-						</Link>
-					))}
+					{nav.map((n) => {
+						const side = "side" in n && n.side === mode ? " is-side" : "";
+						return (
+							<Link
+								key={n.to}
+								to={n.to}
+								className={`mobile-link${side}`}
+								activeProps={{ className: `mobile-link is-active${side}` }}
+								onClick={() => setOpen(false)}
+							>
+								{n.label}
+							</Link>
+						);
+					})}
 					<Link
-						to="/contact"
+						to={cta.to}
 						className="btn btn-primary mt-4"
 						onClick={() => setOpen(false)}
 					>
-						Get started
+						{cta.label}
 					</Link>
 				</nav>
 			</div>
@@ -208,6 +263,8 @@ export function Header() {
 }
 
 export function Footer() {
+	const { mode } = useMode();
+	const nav = navFor(mode);
 	return (
 		<footer className="footer mt-10">
 			<div className="wrap py-12 flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
@@ -219,12 +276,19 @@ export function Footer() {
 					>
 						<Logo height={24} />
 					</Link>
-					<p className="text-[0.9rem] text-mute mt-2">
-						Learn to build. Then build for real.
+					<p className="text-[0.9rem] text-mute mt-2">{MOTTO}</p>
+					<p className="text-[0.85rem] text-mute mt-3">
+						{CONTACT.addressShort}
 					</p>
+					<a
+						className="text-[0.85rem] text-mute hover:underline"
+						href={CONTACT.websiteHref}
+					>
+						{CONTACT.website}
+					</a>
 				</div>
-				<nav className="flex flex-wrap gap-6">
-					{NAV.map((n) => (
+				<nav className="flex flex-wrap items-center gap-6">
+					{nav.map((n) => (
 						<Link key={n.to} to={n.to} className="nav-link">
 							{n.label}
 						</Link>
@@ -245,7 +309,19 @@ export function Footer() {
 							</a>
 						))}
 					</div>
-					<p className="text-[0.85rem] text-mute">© 2026 NexaHubTech</p>
+					<p className="text-[0.85rem] text-mute">
+						© 2026 NexaHub Technologies
+					</p>
+					<p className="text-[0.78rem] text-mute">RC {CONTACT.rc}</p>
+					<Link
+						to={mode === "build" ? "/courses" : "/services"}
+						className="cross-link"
+					>
+						{mode === "build"
+							? "Looking to learn? See our courses"
+							: "Need software built? See our services"}
+						<i aria-hidden="true"> →</i>
+					</Link>
 				</div>
 			</div>
 		</footer>

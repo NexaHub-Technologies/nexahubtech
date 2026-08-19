@@ -35,6 +35,18 @@
 
   --warm: #f06ba8;          /* welcoming rose accent — sparks & glows */
 
+  /* chrome surfaces — tokenised so a mode can restyle the header and menu */
+  --chrome-bg: rgba(246, 239, 244, 0.82);
+  --chrome-bg-solid: rgba(246, 239, 244, 0.97);
+  --mode-accent: var(--marigold);
+  --mode-accent-ink: var(--marigold-ink);
+  --mode-accent-tint: var(--marigold-tint);
+
+  /* accent text. These flip with the mode — the raw --marigold-ink / --teal-deep
+     are near-black and drop to 1.2:1 on the studio's dark ground. */
+  --learn-ink: var(--marigold-ink);
+  --build-ink: var(--teal-deep);
+
   --line: rgba(49, 16, 73, 0.12);
   --line-soft: rgba(49, 16, 73, 0.07);
   --shadow: 0 22px 48px -28px rgba(74, 20, 95, 0.42);
@@ -209,6 +221,34 @@
   box-shadow: 0 34px 64px -30px rgba(74, 20, 95, 0.5);
 }
 
+/* "View course →" affordance on the course cards */
+.view-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--learn-ink);
+}
+.view-link.is-build {
+  color: var(--build-ink);
+}
+.view-link i {
+  font-style: normal;
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-lift:hover .view-link i {
+  transform: translateX(4px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .view-link i {
+    transition: none;
+  }
+  .card-lift:hover .view-link i {
+    transform: none;
+  }
+}
+
 /* ── buttons ───────────────────────────────────────────────────── */
 
 .btn {
@@ -269,7 +309,7 @@
 }
 .site-header.scrolled {
   border-bottom-color: var(--line-soft);
-  background: rgba(246, 239, 244, 0.82);
+  background: var(--chrome-bg);
   backdrop-filter: blur(12px) saturate(140%);
   box-shadow: 0 6px 24px -20px rgba(74, 20, 95, 0.5);
 }
@@ -352,37 +392,17 @@
 .j-learn { transform: rotate(-2deg); }
 .j-build {
   transform: rotate(2deg);
-  margin-top: -0.5rem;
   margin-left: auto;
   width: 86%;
 }
 
-.progress {
-  height: 8px;
-  border-radius: 999px;
-  background: var(--paper-2);
-  overflow: hidden;
-}
-.progress > span {
-  display: block;
-  height: 100%;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--marigold), var(--marigold-deep));
-}
-.avatars { display: flex; }
-.avatars i {
-  width: 26px; height: 26px;
-  border-radius: 50%;
-  border: 2px solid var(--card);
-  margin-left: -8px;
-  display: block;
-}
-.avatars i:first-child { margin-left: 0; }
-
-/* the violet loop connector */
+/* the violet loop connector, sitting between the two cards */
 .loop-tag {
-  position: absolute;
+  position: relative;
   z-index: 3;
+  display: block;
+  width: max-content;
+  margin: 0.55rem auto;
   font-weight: 600;
   font-size: 0.74rem;
   color: var(--mute);
@@ -416,8 +436,8 @@
   font-weight: 700;
   font-size: 1.1rem;
 }
-.badge-learn { background: var(--marigold-tint); color: var(--marigold-ink); }
-.badge-build { background: var(--teal-tint); color: var(--teal-deep); }
+.badge-learn { background: var(--marigold-tint); color: var(--learn-ink); }
+.badge-build { background: var(--teal-tint); color: var(--build-ink); }
 
 /* feature list mark */
 .feat {
@@ -437,27 +457,253 @@
   font-weight: 800;
   margin-top: 1px;
 }
-.mk-learn { background: var(--marigold-tint); color: var(--marigold-ink); }
-.mk-build { background: var(--teal-tint); color: var(--teal-deep); }
+.mk-learn { background: var(--marigold-tint); color: var(--learn-ink); }
+.mk-build { background: var(--teal-tint); color: var(--build-ink); }
 
 /* big tinted feature panels */
 .panel-learn {
-  background: linear-gradient(180deg, #fff, var(--marigold-tint));
+  background: linear-gradient(180deg, var(--card), var(--marigold-tint));
   border: 1px solid rgba(106, 44, 173, 0.2);
 }
 .panel-build {
-  background: linear-gradient(180deg, #fff, var(--teal-tint));
+  background: linear-gradient(180deg, var(--card), var(--teal-tint));
   border: 1px solid rgba(74, 16, 99, 0.18);
 }
 
-.devnote {
-  font-size: 0.82rem;
-  color: var(--mute);
-  font-style: italic;
+/* the studio's solid surface — same brand grape, used as ground rather than
+   accent. This is what carries the learn/build split: the school stays light
+   on blush, the studio goes dense and dark. */
+.panel-studio {
+  background: linear-gradient(165deg, var(--teal), var(--teal-deep));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
-.devnote::before {
-  content: '✎ ';
-  font-style: normal;
+.panel-studio .display,
+.panel-studio h1,
+.panel-studio h2,
+.panel-studio h3 {
+  color: #ffffff;
+}
+.panel-studio .lead,
+.panel-studio p {
+  color: #e6d9f0;
+}
+.panel-studio .text-mute {
+  color: #bfaecb;
+}
+.panel-studio .eyebrow {
+  color: #bfaecb;
+}
+.panel-studio .eyebrow::before {
+  background: var(--warm);
+}
+.panel-studio .feat {
+  color: #e6d9f0;
+}
+.panel-studio .mk {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+.panel-studio .step-badge {
+  background: rgba(255, 255, 255, 0.13);
+  color: #ffffff;
+}
+.panel-studio .view-link {
+  color: var(--warm);
+}
+:root .panel-studio .btn-teal,
+:root .panel-studio .btn-primary {
+  background: #ffffff;
+  color: #380b4c;
+  box-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.55);
+}
+.panel-studio .btn-teal:hover,
+.panel-studio .btn-primary:hover {
+  background: var(--marigold-tint);
+  color: var(--teal-deep);
+}
+.panel-studio .btn-ghost {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.panel-studio .btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.panel-studio [class*="border-"] {
+  border-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+/* full-width studio band, for sections rather than cards */
+.studio-band {
+  background: linear-gradient(165deg, var(--teal), var(--teal-deep));
+  color: #ffffff;
+}
+
+/* ── site mode : which arm the visitor is currently in ─────────── */
+
+/* The studio speaks in the deep grape and rose rather than the school's violet.
+   --paper deliberately stays blush for now; inverting the canvas to a full dark
+   studio ground is a change to this one block, nothing else. */
+:root[data-mode='build'] {
+  /* the studio runs dark. Same brand family — the grape becomes the ground and the
+     rose becomes the accent, because violet #6a2cad only reaches 2.34:1 here. */
+  --paper: #2c1440;
+  --paper-2: #241033;
+  --card: #3d1c56;
+
+  --ink: #f6eff4;
+  --ink-soft: #d8c9e2;
+  --mute: #a894b5;
+  --mute-2: #9c88aa;
+
+  --marigold-tint: #2c1440;
+  --teal-tint: #241033;
+
+  --line: rgba(246, 239, 244, 0.14);
+  --line-soft: rgba(246, 239, 244, 0.08);
+  --chrome-bg: rgba(44, 20, 64, 0.82);
+  --chrome-bg-solid: rgba(44, 20, 64, 0.97);
+
+  --shadow: 0 22px 48px -28px rgba(0, 0, 0, 0.85);
+  --shadow-sm: 0 10px 26px -18px rgba(0, 0, 0, 0.7);
+
+  --mode-accent: var(--warm);
+  --mode-accent-ink: #f9a8cd;
+  --mode-accent-tint: rgba(240, 107, 168, 0.16);
+
+  --learn-ink: #c9a9e8;
+  --build-ink: #f9a8cd;
+
+  --spark: var(--warm);
+  --ring: var(--warm);
+  --primary: var(--warm);
+  --background: var(--paper);
+  --foreground: var(--ink);
+}
+
+/* the mark is a single dark fill, so it needs lifting off the dark ground */
+:root[data-mode='build'] .site-logo {
+  filter: brightness(0) invert(1);
+}
+
+/* the rose accent is light, so anything sitting on it takes dark text.
+   White on #f06ba8 is only 2.85:1; #170a20 on it is 6.70:1. */
+:root[data-mode='build'] .mode-switch button[data-on='true'] {
+  color: #170a20;
+}
+
+/* the violet primary fails on the dark ground — the rose carries the action */
+:root[data-mode='build'] .btn-primary,
+:root[data-mode='build'] .btn-teal {
+  background: var(--warm);
+  color: #170a20;
+  box-shadow: 0 14px 30px -14px rgba(240, 107, 168, 0.55);
+}
+:root[data-mode='build'] .btn-primary:hover,
+:root[data-mode='build'] .btn-teal:hover {
+  background: #f9a8cd;
+  color: #170a20;
+}
+:root[data-mode='build'] .btn-ghost {
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+:root[data-mode='build'] .step-card,
+:root[data-mode='build'] .jcard {
+  background: var(--card);
+}
+
+/* chrome follows the active arm */
+:root[data-mode='build'] .nav-link.is-active::after,
+:root[data-mode='build'] .eyebrow::before {
+  background: var(--teal);
+}
+:root[data-mode='build'] .pill .spark {
+  background: var(--warm);
+}
+
+/* the nav item for the side you are in */
+.nav-link.is-side,
+.mobile-link.is-side {
+  color: var(--mode-accent-ink);
+  font-weight: 700;
+}
+
+/* No transition on the ground. Transitioning background-color here left the body
+   stuck on the previous mode's value while the text had already flipped — light text
+   on a light ground, i.e. an unreadable page. The mode change snaps instead. */
+
+/* the other arm, reachable from every page. Without this the filtered nav leaves
+   each mode with no route to the other side of the business. */
+.cross-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--mode-accent-ink);
+  transition: opacity 160ms ease;
+}
+.cross-link:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+/* ── the learn / build switch ──────────────────────────────────── */
+
+.mode-switch {
+  margin: 0;
+  min-inline-size: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border-radius: 999px;
+  background: var(--paper-2);
+  border: 1px solid var(--line-soft);
+}
+.mode-switch button {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+  color: var(--mute);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+.mode-switch button:hover {
+  color: var(--ink);
+}
+.mode-switch button[data-on='true'] {
+  background: var(--mode-accent);
+  color: #ffffff;
+  box-shadow: 0 8px 18px -10px var(--mode-accent);
+}
+/* the header bar is tight on a phone: logo + switch + hamburger */
+.mode-switch.is-compact {
+  padding: 2px;
+}
+.mode-switch.is-compact button {
+  font-size: 0.76rem;
+  padding: 0.32rem 0.6rem;
+}
+@media (max-width: 359px) {
+  .mode-switch.is-compact button {
+    font-size: 0.72rem;
+    padding: 0.3rem 0.5rem;
+  }
+  /* below ~360px the bar cannot hold wordmark + switch + menu button. The mark
+     and the link's aria-label still identify it. */
+  .site-header .site-wordmark {
+    display: none;
+  }
+}
+
+.mode-switch button:focus-visible {
+  outline: 2px solid var(--mode-accent-ink);
+  outline-offset: 2px;
 }
 
 /* ── nav active state ──────────────────────────────────────────── */
@@ -501,13 +747,13 @@
 
 /* give the bar a solid backdrop while the menu is open (any scroll pos) */
 .site-header[data-menu-open='true'] {
-  background: rgba(246, 239, 244, 0.96);
+  background: var(--chrome-bg-solid);
   backdrop-filter: blur(12px) saturate(140%);
 }
 
 .mobile-menu {
   border-top: 1px solid var(--line-soft);
-  background: rgba(246, 239, 244, 0.97);
+  background: var(--chrome-bg-solid);
   backdrop-filter: blur(12px) saturate(140%);
   box-shadow: 0 22px 44px -26px rgba(74, 20, 95, 0.55);
   animation: menuDrop 220ms cubic-bezier(0.16, 1, 0.3, 1);
@@ -527,11 +773,11 @@
 }
 .mobile-link:hover,
 .mobile-link:active {
-  color: var(--marigold-ink);
+  color: var(--mode-accent-ink);
   padding-left: 0.5rem;
 }
 .mobile-link.is-active {
-  color: var(--marigold-ink);
+  color: var(--mode-accent-ink);
 }
 
 /* ── page intro ────────────────────────────────────────────────── */
@@ -599,7 +845,7 @@
 .choice[data-on='true'] {
   border-color: var(--marigold);
   background: var(--marigold-tint);
-  color: var(--marigold-ink);
+  color: var(--learn-ink);
 }
 .contact-detail {
   display: flex;
@@ -619,7 +865,7 @@ a.contact-detail:hover {
   display: grid;
   place-items: center;
   background: var(--teal-tint);
-  color: var(--teal-deep);
+  color: var(--build-ink);
   flex: none;
 }
 

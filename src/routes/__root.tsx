@@ -7,7 +7,10 @@ import {
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 
+import { ModeProvider } from "../components/mode";
 import { Footer, Header } from "../components/site";
+import { SITE_URL } from "../lib/contact";
+import { MODE_INIT_SCRIPT } from "../lib/mode";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
@@ -21,7 +24,7 @@ export const Route = createRootRoute({
 				content: "width=device-width, initial-scale=1",
 			},
 			{
-				title: "NexaHubTech — Learn to build. Then build for real.",
+				title: "NexaHubTech — Learn to build. Build for real.",
 			},
 			{
 				name: "description",
@@ -31,7 +34,7 @@ export const Route = createRootRoute({
 			{ name: "theme-color", content: "#f6eff4" },
 			{
 				property: "og:title",
-				content: "NexaHubTech — Learn to build. Then build for real.",
+				content: "NexaHubTech — Learn to build. Build for real.",
 			},
 			{
 				property: "og:description",
@@ -39,13 +42,29 @@ export const Route = createRootRoute({
 					"A tech school + a software studio. We teach the skills to become a developer, then use them on real client work — so learning is tied to actual engineering, not theory.",
 			},
 			{ property: "og:type", content: "website" },
+			{ property: "og:site_name", content: "NexaHubTech" },
+			{ property: "og:locale", content: "en_NG" },
+			{ property: "og:url", content: `${SITE_URL}/` },
+			{ property: "og:image", content: `${SITE_URL}/og-image.png` },
+			{ property: "og:image:width", content: "1200" },
+			{ property: "og:image:height", content: "630" },
+			{
+				property: "og:image:alt",
+				content:
+					"NexaHubTech — Learn to build. Build for real. A tech school + a software studio.",
+			},
 			{ name: "twitter:card", content: "summary_large_image" },
+			{ name: "twitter:image", content: `${SITE_URL}/og-image.png` },
 		],
 		links: [
 			{
 				rel: "icon",
 				type: "image/svg+xml",
 				href: "/logo-main.svg",
+			},
+			{
+				rel: "manifest",
+				href: "/manifest.json",
 			},
 			{
 				rel: "stylesheet",
@@ -59,13 +78,13 @@ export const Route = createRootRoute({
 
 function RootLayout() {
 	return (
-		<>
+		<ModeProvider>
 			<Header />
 			<main>
 				<Outlet />
 			</main>
 			<Footer />
-		</>
+		</ModeProvider>
 	);
 }
 
@@ -73,6 +92,12 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
 			<head>
+				{/* stamps data-mode before first paint so the server-rendered
+				    /contact route never flashes the wrong side */}
+				<script
+					// biome-ignore lint/security/noDangerouslySetInnerHtml: static, self-authored constant
+					dangerouslySetInnerHTML={{ __html: MODE_INIT_SCRIPT }}
+				/>
 				<HeadContent />
 			</head>
 			<body>

@@ -1,23 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eyebrow, useReveal } from "../../components/site";
 import { COURSES, getCourseBySlug } from "../../lib/courses";
+import { pageMeta } from "../../lib/seo";
 
 export const Route = createFileRoute("/courses/$slug")({
 	component: CourseDetail,
 	ssr: false,
 	head: ({ params }) => {
 		const course = getCourseBySlug(params.slug);
-		return {
-			meta: [
-				{
-					title: course ? `${course.t} — NexaHubTech` : "Course — NexaHubTech",
-				},
-				{
-					name: "description",
-					content: course?.tagline ?? "",
-				},
-			],
-		};
+		return pageMeta({
+			title: course ? `${course.t} — NexaHubTech` : "Course — NexaHubTech",
+			description: course?.tagline ?? "",
+			path: `/courses/${params.slug}`,
+		});
 	},
 });
 
@@ -87,13 +82,9 @@ function CourseDetail() {
 					</p>
 				</div>
 				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-					{course.modules.map((m, i) => (
+					{course.modules.map((m) => (
 						<div key={m.t} className="step-card reveal">
-							<span
-								className={`step-badge ${i % 2 ? "badge-build" : "badge-learn"}`}
-							>
-								{m.n}
-							</span>
+							<span className="step-badge badge-learn">{m.n}</span>
 							<h3 className="display text-[1.2rem] mt-4">{m.t}</h3>
 							<p className="lead mt-2 text-[0.95rem]">{m.d}</p>
 						</div>
@@ -112,11 +103,7 @@ function CourseDetail() {
 				<div className="grid sm:grid-cols-2 gap-4">
 					{course.features.map((f) => (
 						<div key={f} className="feat reveal">
-							<span
-								className={`mk ${course.category === "build" ? "mk-build" : "mk-learn"}`}
-							>
-								✓
-							</span>
+							<span className="mk mk-learn">✓</span>
 							<span>{f}</span>
 						</div>
 					))}
@@ -138,7 +125,7 @@ function CourseDetail() {
 					</div>
 					<div className="grid md:grid-cols-3 gap-5 mt-8">
 						{course.session.map((s) => (
-							<div key={s.t} className="card panel-build p-6">
+							<div key={s.t} className="card panel-learn p-6">
 								<h3 className="display text-[1.15rem]">{s.t}</h3>
 								<p className="lead mt-2 text-[0.95rem]">{s.d}</p>
 							</div>
@@ -172,9 +159,7 @@ function CourseDetail() {
 							</div>
 						</div>
 					</div>
-					<div
-						className={`card p-8 ${course.category === "build" ? "panel-build" : "panel-learn"}`}
-					>
+					<div className="card panel-learn p-8">
 						<h3 className="display text-[1.3rem]">Ready to start?</h3>
 						<p className="lead mt-2">
 							Tell us a little about you and we'll share the next cohort

@@ -1,26 +1,32 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { CONTACT, Eyebrow, SOCIALS, useReveal } from "../components/site";
+import {
+	type ComposedEnquiry,
+	composeEnquiry,
+	type Intent,
+} from "../lib/enquiry";
+import { pageMeta } from "../lib/seo";
 
 export const Route = createFileRoute("/contact")({
 	component: Contact,
-	head: () => ({
-		meta: [
-			{ title: "Contact — NexaHubTech" },
-			{
-				name: "description",
-				content:
-					"Get in touch with NexaHubTech — join a cohort to learn web development, or start a project with the studio.",
-			},
-		],
-	}),
+	head: () =>
+		pageMeta({
+			title: "Contact — NexaHubTech",
+			description:
+				"Get in touch with NexaHubTech — join a cohort to learn web development, or start a project with the studio.",
+			path: "/contact",
+		}),
 });
 
 function ContactForm() {
-	const [intent, setIntent] = useState<"learn" | "build">("learn");
-	const [sent, setSent] = useState(false);
+	const [intent, setIntent] = useState<Intent>("learn");
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [message, setMessage] = useState("");
+	const [handoff, setHandoff] = useState<ComposedEnquiry | null>(null);
 
-	if (sent) {
+	if (handoff) {
 		return (
 			<div className="card panel-learn p-8 text-center">
 				<div
@@ -28,23 +34,35 @@ function ContactForm() {
 					style={{ background: "var(--marigold)", color: "#ffffff" }}
 					aria-hidden="true"
 				>
-					<span className="text-2xl">✓</span>
+					<span className="text-2xl">✉</span>
 				</div>
-				<h3 className="display text-[1.5rem] mt-4">Thanks — message ready.</h3>
-				<p className="lead mt-2 max-w-[26rem] mx-auto">
-					We’d love to hear from you. Once the form is connected, we’ll get back
-					to you soon.
+				<h3 className="display text-[1.5rem] mt-4">
+					Your message is ready to send.
+				</h3>
+				<p className="lead mt-2 max-w-[28rem] mx-auto">
+					We've opened your mail app with everything filled in — just hit send.
+					If nothing opened, use one of the buttons below.
 				</p>
+				<div className="mt-6 flex flex-wrap gap-3 justify-center">
+					<a href={handoff.mailto} className="btn btn-primary">
+						Open in mail app
+					</a>
+					<a
+						href={handoff.whatsapp}
+						target="_blank"
+						rel="noreferrer"
+						className="btn btn-teal"
+					>
+						Send on WhatsApp
+					</a>
+				</div>
 				<button
 					type="button"
-					className="btn btn-ghost mt-5"
-					onClick={() => setSent(false)}
+					className="btn btn-ghost mt-4"
+					onClick={() => setHandoff(null)}
 				>
-					Send another
+					Back to the form
 				</button>
-				<p className="devnote mt-5">
-					Demo only — connect this form to email or Supabase before launch.
-				</p>
 			</div>
 		);
 	}
@@ -54,7 +72,9 @@ function ContactForm() {
 			className="card p-7 md:p-8"
 			onSubmit={(e) => {
 				e.preventDefault();
-				setSent(true);
+				const composed = composeEnquiry({ intent, name, email, message });
+				setHandoff(composed);
+				window.location.href = composed.mailto;
 			}}
 		>
 			<fieldset
@@ -97,7 +117,9 @@ function ContactForm() {
 					name="name"
 					className="input"
 					required
-					placeholder="Ada Obi"
+					autoComplete="name"
+					value={name}
+					onChange={(e) => setName(e.target.value)}
 				/>
 			</label>
 
@@ -109,7 +131,9 @@ function ContactForm() {
 					type="email"
 					className="input"
 					required
-					placeholder="you@example.com"
+					autoComplete="email"
+					value={email}
+					onChange={(e) => setEmail(e.target.value)}
 				/>
 			</label>
 
@@ -124,6 +148,8 @@ function ContactForm() {
 					name="message"
 					className="textarea"
 					required
+					value={message}
+					onChange={(e) => setMessage(e.target.value)}
 					placeholder={
 						intent === "learn"
 							? "Where are you starting from, and what do you want to build?"
@@ -135,6 +161,10 @@ function ContactForm() {
 			<button type="submit" className="btn btn-primary w-full">
 				Send message
 			</button>
+			<p className="text-[0.82rem] text-mute mt-3 text-center">
+				This opens your own mail app with the message ready — or reach us
+				directly using the details opposite.
+			</p>
 		</form>
 	);
 }
@@ -167,11 +197,11 @@ function Contact() {
 						<div className="card panel-learn p-7">
 							<Eyebrow>For learners</Eyebrow>
 							<p className="lead mt-3">
-								Ask about the Frontend Track, the next cohort, or whether it’s
-								right for where you’re starting from.
+								Ask about any of the eight courses, the next cohort, or whether
+								a track is right for where you’re starting from.
 							</p>
 						</div>
-						<div className="card panel-build p-7">
+						<div className="card panel-studio p-7">
 							<Eyebrow variant="build">For businesses</Eyebrow>
 							<p className="lead mt-3">
 								Tell us about the product you need. We’ll help you scope it,
@@ -201,6 +231,23 @@ function Contact() {
 										<span className="text-mute">· WhatsApp</span>
 									</span>
 								</a>
+								<a
+									className="contact-detail"
+									href={CONTACT.websiteHref}
+									target="_blank"
+									rel="noreferrer"
+								>
+									<span className="ic" aria-hidden="true">
+										⬡
+									</span>
+									<span>{CONTACT.website}</span>
+								</a>
+								<div className="contact-detail">
+									<span className="ic" aria-hidden="true">
+										⌂
+									</span>
+									<span>{CONTACT.address}</span>
+								</div>
 								<div
 									className="contact-detail"
 									style={{ borderBottom: "none" }}

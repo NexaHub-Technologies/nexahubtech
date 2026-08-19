@@ -1,39 +1,72 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eyebrow, useReveal } from "../components/site";
+import { pageMeta } from "../lib/seo";
 
 export const Route = createFileRoute("/about")({
 	component: About,
 	ssr: false,
-	head: () => ({
-		meta: [
-			{ title: "About — NexaHubTech" },
-			{
-				name: "description",
-				content:
-					"NexaHubTech is a Nigeria-based skills-to-service company — a tech school and a software studio built on one idea: learning should be tied to real work.",
-			},
-		],
-	}),
+	head: () =>
+		pageMeta({
+			title: "About — NexaHubTech",
+			description:
+				"NexaHubTech is a Nigeria-based skills-to-service company — a tech school and a software studio built on one idea: learning should be tied to real work.",
+			path: "/about",
+		}),
 });
 
+/* the company's six core values, from the company profile */
 const VALUES = [
 	{
-		t: "Understand before you write",
-		d: "First principles over memorization. We’d rather you grasp the idea than recite the syntax.",
+		t: "Innovation",
+		d: "We continuously explore new ideas, tools, and approaches to deliver smarter solutions.",
 	},
 	{
-		t: "Design before you build",
-		d: "Good software is thought through first. We treat every project as a problem worth understanding.",
+		t: "Integrity",
+		d: "We conduct our business with honesty, transparency, and accountability in every engagement.",
 	},
 	{
-		t: "Grow people, not just products",
-		d: "Good engineers are grown. The school and the studio exist to do exactly that, together.",
+		t: "Excellence",
+		d: "We hold ourselves to the highest standards of quality in everything we build and deliver.",
 	},
 	{
-		t: "Keep it least-cost",
-		d: "Solve the real problem with the simplest thing that works — in the classroom and in production.",
+		t: "Collaboration",
+		d: "We strongly believe the best results come from working closely with our clients and one another.",
+	},
+	{
+		t: "Customer-Centricity",
+		d: "Our clients’ goals and success are at the heart of every solution we design.",
+	},
+	{
+		t: "Adaptability",
+		d: "We stay agile and responsive to the evolving needs of technology and business.",
 	},
 ];
+
+/* Founders section is hidden for now. To restore it, uncomment this data and
+   the matching {/* founders *\/} block inside About().
+
+   Real roles from the company profile PDF, to use when the copy is ready:
+     Agbo Divine    — Chief Executive Officer & Co-Founder
+     Onuoha Michael — Chief Technology Officer, Lead Technical Architect
+                      & Co-Founder
+
+const FOUNDERS = [
+	{
+		initials: "AD",
+		name: "Agbo Divine",
+		role: "Co-founder",
+		panel: "panel-learn",
+		tile: "linear-gradient(150deg, var(--marigold), var(--teal))",
+	},
+	{
+		initials: "OM",
+		name: "Onuoha Michael",
+		role: "Co-founder",
+		panel: "panel-build",
+		tile: "linear-gradient(150deg, var(--teal), var(--marigold))",
+	},
+];
+*/
 
 function About() {
 	useReveal();
@@ -47,8 +80,8 @@ function About() {
 					</span>
 					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
 						We closed the gap between{" "}
-						<span style={{ color: "var(--marigold-ink)" }}>learning</span> and{" "}
-						<span style={{ color: "var(--teal-deep)" }}>building</span>.
+						<span style={{ color: "var(--learn-ink)" }}>learning</span> and{" "}
+						<span style={{ color: "var(--build-ink)" }}>building</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
 						NexaHubTech is a Nigeria-based skills-to-service company: a tech
@@ -70,9 +103,7 @@ function About() {
 								We grew into something with a clear purpose: not just building
 								software, and not just teaching it, but wiring the two together.
 							</p>
-							<p className="devnote mt-4">
-								Add your founding story & year when you’re ready.
-							</p>
+							{/* TODO: founding story & rebrand year — awaiting copy */}
 						</div>
 						<div>
 							<Eyebrow variant="build">Skills-to-service</Eyebrow>
@@ -90,15 +121,48 @@ function About() {
 				</div>
 			</section>
 
+			{/* vision & mission */}
+			<section className="wrap py-14">
+				<div className="reveal max-w-[40rem] mb-9">
+					<Eyebrow variant="plain">Where we’re going</Eyebrow>
+					<h2 className="display mt-4 text-[2rem] sm:text-[2.5rem]">
+						Vision & mission.
+					</h2>
+				</div>
+				<div className="grid md:grid-cols-2 gap-5">
+					<div className="card card-lift panel-learn reveal p-8">
+						<Eyebrow>Vision</Eyebrow>
+						<p className="lead mt-4 text-[1.02rem]">
+							To become a global leading technology ecosystem where learning,
+							innovation, and digital transformation create world-class talent
+							and impactful digital solutions.
+						</p>
+					</div>
+					<div className="card card-lift panel-studio reveal p-8">
+						<Eyebrow variant="build">Mission</Eyebrow>
+						<p className="lead mt-4 text-[1.02rem]">
+							To design and deliver cutting-edge technology solutions that solve
+							practical problems, drive efficiency, and create sustainable
+							growth for our clients — combining innovation, integrity, and
+							technical excellence to turn bold ideas into impactful digital
+							realities.
+						</p>
+					</div>
+				</div>
+			</section>
+
 			{/* values */}
 			<section className="wrap py-14">
 				<div className="reveal max-w-[40rem] mb-9">
 					<Eyebrow variant="plain">What we believe</Eyebrow>
 					<h2 className="display mt-4 text-[2rem] sm:text-[2.5rem]">
-						The principles behind both arms.
+						Our core values.
 					</h2>
+					<p className="lead mt-4">
+						The principles behind both arms — the school and the studio alike.
+					</p>
 				</div>
-				<div className="grid sm:grid-cols-2 gap-5">
+				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 					{VALUES.map((v) => (
 						<div key={v.t} className="card card-lift reveal p-7">
 							<h3 className="display text-[1.2rem]">{v.t}</h3>
@@ -108,60 +172,52 @@ function About() {
 				</div>
 			</section>
 
-			{/* founder */}
-			<section className="wrap py-14">
-				<div className="card reveal p-8 md:p-12 grid md:grid-cols-[auto_1fr] gap-8 items-start">
-					<div className="flex shrink-0" aria-hidden="true">
-						<div
-							className="w-20 h-20 rounded-3xl grid place-items-center"
-							style={{
-								background:
-									"linear-gradient(150deg, var(--marigold), var(--teal))",
-								boxShadow: "var(--shadow)",
-							}}
-						>
-							<span className="display text-white text-2xl">AD</span>
-						</div>
-						<div
-							className="w-20 h-20 rounded-3xl grid place-items-center -ml-5"
-							style={{
-								background:
-									"linear-gradient(150deg, var(--teal), var(--marigold))",
-								boxShadow: "var(--shadow)",
-								border: "3px solid var(--card)",
-							}}
-						>
-							<span className="display text-white text-2xl">OM</span>
-						</div>
-					</div>
-					<div>
-						<Eyebrow variant="plain">From the co-founders</Eyebrow>
-						<p className="display text-[1.5rem] sm:text-[1.85rem] mt-3 max-w-[46rem] leading-[1.25]">
-							“The fastest way to become a good developer is to learn next to
-							real problems...”
-						</p>
-						<p className="lead mt-5 max-w-[44rem]">
-							Agbo Divine and Onuoha Michael co-founders of NexaHub
-							Technologies.
-						</p>
-						<p className="devnote mt-5">
-							Co-founder photos & a personal note — to add before launch.
-						</p>
-					</div>
+			{/* founders — hidden for now; restore with the FOUNDERS data above
+						<section className="wrap py-14">
+				<div className="reveal max-w-[40rem] mb-9">
+					<Eyebrow variant="plain">Who’s behind it</Eyebrow>
+					<h2 className="display mt-4 text-[2rem] sm:text-[2.5rem]">
+						The co-founders.
+					</h2>
+					<p className="lead mt-4">
+						NexaHub Technologies — the school and the studio, run as one thing.
+					</p>
 				</div>
+				<div className="grid sm:grid-cols-2 gap-5">
+					{FOUNDERS.map((f) => (
+						<div
+							key={f.name}
+							className={`card card-lift reveal p-7 ${f.panel}`}
+						>
+							<div
+								className="w-16 h-16 rounded-2xl grid place-items-center"
+								style={{ background: f.tile, boxShadow: "var(--shadow)" }}
+								aria-hidden="true"
+							>
+								<span className="display text-white text-xl">{f.initials}</span>
+							</div>
+							<h3 className="display text-[1.35rem] mt-5">{f.name}</h3>
+							<p className="lead mt-1 text-[0.97rem]">{f.role}</p>
+						</div>
+					))}
+				</div>
+				
 			</section>
+			*/}
 
 			{/* cta */}
 			<section className="wrap py-14">
 				<div className="reveal grid md:grid-cols-2 gap-5">
 					<div className="card card-lift panel-learn p-9">
 						<h3 className="display text-[1.6rem]">Want to learn with us?</h3>
-						<p className="lead mt-3">Start with the Frontend Track.</p>
+						<p className="lead mt-3">
+							Eight tracks, from frontend to cybersecurity.
+						</p>
 						<Link to="/courses" className="btn btn-primary mt-5">
-							Explore the course
+							Explore the courses
 						</Link>
 					</div>
-					<div className="card card-lift panel-build p-9">
+					<div className="card card-lift panel-studio p-9">
 						<h3 className="display text-[1.6rem]">Have a product in mind?</h3>
 						<p className="lead mt-3">Let’s build it right.</p>
 						<Link to="/contact" className="btn btn-teal mt-5">

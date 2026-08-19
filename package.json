@@ -13,7 +13,8 @@
     "test": "vitest run",
     "format": "biome format",
     "lint": "biome lint",
-    "check": "biome check"
+    "check": "biome check",
+    "generate-sitemap": "bun run scripts/generate-sitemap.ts"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
