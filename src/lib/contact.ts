@@ -7,8 +7,8 @@ export const CONTACT = {
 	whatsapp: "https://wa.me/2349134513173",
 	website: "www.nexahubtech.company",
 	websiteHref: "https://www.nexahubtech.company",
-	address: "Close D, Katampe Street, Kubwa, FCT, Abuja",
-	addressShort: "Kubwa, FCT, Abuja",
+	address: "F01 Market, Kubwa, FCT-Abuja",
+	addressShort: "Kubwa, FCT-Abuja",
 	rc: "9545130",
 } as const;
 
