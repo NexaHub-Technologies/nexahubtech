@@ -2,6 +2,10 @@ import { CONTACT } from "./contact";
 
 export type Intent = "learn" | "build";
 
+export function isIntent(v: unknown): v is Intent {
+	return v === "learn" || v === "build";
+}
+
 export interface Enquiry {
 	intent: Intent;
 	name: string;

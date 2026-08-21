@@ -6,6 +6,7 @@ import {
 	composeEnquiry,
 	type Intent,
 } from "../lib/enquiry";
+import { sendEnquiry } from "../lib/send-enquiry";
 import { pageMeta } from "../lib/seo";
 
 export const Route = createFileRoute("/contact")({
@@ -26,6 +27,50 @@ function ContactForm() {
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
 	const [handoff, setHandoff] = useState<ComposedEnquiry | null>(null);
+	const [status, setStatus] = useState<"idle" | "sending" | "sent" | "failed">(
+		"idle",
+	);
+
+	if (status === "sent") {
+		return (
+			<div className="card panel-learn p-8 text-center">
+				<div
+					className="w-14 h-14 rounded-2xl grid place-items-center mx-auto"
+					style={{ background: "var(--marigold)", color: "#ffffff" }}
+					aria-hidden="true"
+				>
+					<span className="text-2xl">✓</span>
+				</div>
+				<h3 className="display text-[1.5rem] mt-4">Message sent.</h3>
+				<p className="lead mt-2 max-w-[28rem] mx-auto">
+					Thanks — it's landed in our inbox and we'll reply to{" "}
+					<strong>{email}</strong>. If it's urgent, WhatsApp is faster.
+				</p>
+				<div className="mt-6 flex flex-wrap gap-3 justify-center">
+					<a
+						href={CONTACT.whatsapp}
+						target="_blank"
+						rel="noreferrer"
+						className="btn btn-teal"
+					>
+						Message on WhatsApp
+					</a>
+					<button
+						type="button"
+						className="btn btn-ghost"
+						onClick={() => {
+							setStatus("idle");
+							setName("");
+							setEmail("");
+							setMessage("");
+						}}
+					>
+						Send another
+					</button>
+				</div>
+			</div>
+		);
+	}
 
 	if (handoff) {
 		return (
@@ -38,11 +83,11 @@ function ContactForm() {
 					<span className="text-2xl">✉</span>
 				</div>
 				<h3 className="display text-[1.5rem] mt-4">
-					Your message is ready to send.
+					Couldn't send that automatically.
 				</h3>
 				<p className="lead mt-2 max-w-[28rem] mx-auto">
-					We've opened your mail app with everything filled in — just hit send.
-					If nothing opened, use one of the buttons below.
+					Something went wrong on our side, so nothing was lost — your message
+					is ready to go from your own mail app or WhatsApp instead.
 				</p>
 				<div className="mt-6 flex flex-wrap gap-3 justify-center">
 					<a href={handoff.mailto} className="btn btn-primary">
@@ -71,11 +116,19 @@ function ContactForm() {
 	return (
 		<form
 			className="card p-7 md:p-8"
-			onSubmit={(e) => {
+			onSubmit={async (e) => {
 				e.preventDefault();
-				const composed = composeEnquiry({ intent, name, email, message });
-				setHandoff(composed);
-				window.location.href = composed.mailto;
+				if (status === "sending") return;
+				setStatus("sending");
+				try {
+					await sendEnquiry({ data: { intent, name, email, message } });
+					setStatus("sent");
+				} catch {
+					/* delivery failed — fall back to the visitor's own mail client
+					   rather than losing the enquiry */
+					setStatus("failed");
+					setHandoff(composeEnquiry({ intent, name, email, message }));
+				}
 			}}
 		>
 			<fieldset
@@ -159,12 +212,15 @@ function ContactForm() {
 				/>
 			</label>
 
-			<button type="submit" className="btn btn-primary w-full">
-				Send message
+			<button
+				type="submit"
+				className="btn btn-primary w-full"
+				disabled={status === "sending"}
+			>
+				{status === "sending" ? "Sending…" : "Send message"}
 			</button>
 			<p className="text-[0.82rem] text-mute mt-3 text-center">
-				This opens your own mail app with the message ready — or reach us
-				directly using the details opposite.
+				Goes straight to our inbox. We usually reply within a day.
 			</p>
 		</form>
 	);
