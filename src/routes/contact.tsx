@@ -16,6 +16,7 @@ export const Route = createFileRoute("/contact")({
 			description:
 				"Get in touch with NexaHubTech — join a cohort to learn web development, or start a project with the studio.",
 			path: "/contact",
+			image: "/og/contact.jpg",
 		}),
 });
 

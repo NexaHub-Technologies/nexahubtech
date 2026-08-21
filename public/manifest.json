@@ -1,8 +1,26 @@
 {
   "short_name": "NexaHubTech",
-  "name": "NexaHubTech — Learn to build. Then build for real.",
+  "name": "NexaHubTech \u2014 Learn to build. Then build for real.",
   "description": "A Nigeria-based tech school and software studio. We teach the skills to become a developer, then use them on real client work.",
   "icons": [
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    },
     {
       "src": "logo-main.svg",
       "type": "image/svg+xml",

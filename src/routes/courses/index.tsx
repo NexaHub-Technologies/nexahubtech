@@ -12,6 +12,7 @@ export const Route = createFileRoute("/courses/")({
 			description:
 				"Explore all courses at NexaHubTech — from web development and cybersecurity to data analysis and videography. Learn real skills with cohort-based, hands-on teaching.",
 			path: "/courses",
+			image: "/og/courses.jpg",
 		}),
 });
 

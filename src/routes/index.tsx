@@ -13,6 +13,7 @@ export const Route = createFileRoute("/")({
 			description:
 				"NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio. We teach people to become developers, then put those skills to work building real products for real clients.",
 			path: "/",
+			image: "/og/home.jpg",
 		}),
 });
 

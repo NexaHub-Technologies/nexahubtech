@@ -12,6 +12,7 @@ export const Route = createFileRoute("/services/")({
 			description:
 				"What the NexaHubTech studio builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.",
 			path: "/services",
+			image: "/og/services.jpg",
 		}),
 });
 

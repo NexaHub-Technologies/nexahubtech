@@ -10,7 +10,7 @@ import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { ModeProvider } from "../components/mode";
 import { Footer, Header } from "../components/site";
 import { SITE_URL } from "../lib/contact";
-import { MODE_INIT_SCRIPT } from "../lib/mode";
+import { DEFAULT_MODE, MODE_INIT_SCRIPT } from "../lib/mode";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
@@ -62,6 +62,14 @@ export const Route = createRootRoute({
 				type: "image/svg+xml",
 				href: "/logo-main.svg",
 			},
+			/* SVG for modern browsers, .ico for old ones, and a PNG for iOS —
+			   which ignores SVG when adding to the home screen */
+			{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+			{
+				rel: "apple-touch-icon",
+				sizes: "180x180",
+				href: "/apple-touch-icon.png",
+			},
 			{
 				rel: "manifest",
 				href: "/manifest.json",
@@ -89,8 +97,12 @@ function RootLayout() {
 }
 
 function RootDocument({ children }: { children: React.ReactNode }) {
+	/* MODE_INIT_SCRIPT stamps data-mode on <html> before React hydrates, so the
+	   client DOM legitimately differs from the server markup here. Rendering the
+	   default keeps the served HTML honest for non-JS visitors; the suppression
+	   covers this element's attributes only, which is exactly the divergence. */
 	return (
-		<html lang="en">
+		<html lang="en" data-mode={DEFAULT_MODE} suppressHydrationWarning>
 			<head>
 				{/* stamps data-mode before first paint so the server-rendered
 				    /contact route never flashes the wrong side */}

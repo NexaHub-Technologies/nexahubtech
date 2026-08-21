@@ -11,3 +11,6 @@ dist-ssr
 .vinxi
 __unconfig*
 todos.json
+
+# downloaded fonts used only by scripts/generate-og-images.ts
+.cache

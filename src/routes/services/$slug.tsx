@@ -12,6 +12,7 @@ export const Route = createFileRoute("/services/$slug")({
 			title: service ? `${service.t} — NexaHubTech` : "Service — NexaHubTech",
 			description: service?.tagline ?? "",
 			path: `/services/${params.slug}`,
+			image: `/og/service-${params.slug}.jpg`,
 		});
 	},
 });
