@@ -34,6 +34,7 @@ describe("modeForPath", () => {
 		expect(modeForPath("/services")).toBe("build");
 		expect(modeForPath("/services/digital-solutions")).toBe("build");
 		expect(modeForPath("/approach")).toBe("build");
+		expect(modeForPath("/work")).toBe("build");
 	});
 
 	it("leaves shared routes alone so an explicit choice survives", () => {

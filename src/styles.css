@@ -918,6 +918,19 @@ label.choice {
   background: var(--mode-accent);
 }
 
+/* stack labels on a case study — quiet, since the reader is scanning for the
+   names rather than reading them as prose */
+.tech-chip {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: var(--mode-accent-tint);
+  border: 1px solid var(--line-soft);
+}
+
 .contact-detail {
   display: flex;
   align-items: center;
@@ -979,13 +992,16 @@ a.contact-detail:hover {
   display: grid;
   place-items: center;
   border: 1px solid var(--line);
-  background: #fff;
+  /* --card, not #fff: the studio runs dark, where a white tile under the light
+     --ink-soft glyph left the icons at about 1.3:1 and looking unfilled */
+  background: var(--card);
   color: var(--ink-soft);
   transition: color 0.2s, border-color 0.2s, transform 0.2s;
 }
 .social-btn:hover {
   color: var(--ink);
-  border-color: var(--marigold);
+  /* follows the arm — raw --marigold is near-invisible on the studio's ground */
+  border-color: var(--mode-accent);
   transform: translateY(-2px);
 }
 

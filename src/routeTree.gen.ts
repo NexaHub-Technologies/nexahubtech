@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WorkRouteImport } from './routes/work'
 import { Route as TeachingRouteImport } from './routes/teaching'
 import { Route as EnrolRouteImport } from './routes/enrol'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -20,6 +21,11 @@ import { Route as CoursesIndexRouteImport } from './routes/courses/index'
 import { Route as ServicesSlugRouteImport } from './routes/services/$slug'
 import { Route as CoursesSlugRouteImport } from './routes/courses/$slug'
 
+const WorkRoute = WorkRouteImport.update({
+  id: '/work',
+  path: '/work',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TeachingRoute = TeachingRouteImport.update({
   id: '/teaching',
   path: '/teaching',
@@ -78,6 +84,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/enrol': typeof EnrolRoute
   '/teaching': typeof TeachingRoute
+  '/work': typeof WorkRoute
   '/courses/$slug': typeof CoursesSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/courses/': typeof CoursesIndexRoute
@@ -90,6 +97,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/enrol': typeof EnrolRoute
   '/teaching': typeof TeachingRoute
+  '/work': typeof WorkRoute
   '/courses/$slug': typeof CoursesSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/courses': typeof CoursesIndexRoute
@@ -103,6 +111,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/enrol': typeof EnrolRoute
   '/teaching': typeof TeachingRoute
+  '/work': typeof WorkRoute
   '/courses/$slug': typeof CoursesSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/courses/': typeof CoursesIndexRoute
@@ -117,6 +126,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/enrol'
     | '/teaching'
+    | '/work'
     | '/courses/$slug'
     | '/services/$slug'
     | '/courses/'
@@ -129,6 +139,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/enrol'
     | '/teaching'
+    | '/work'
     | '/courses/$slug'
     | '/services/$slug'
     | '/courses'
@@ -141,6 +152,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/enrol'
     | '/teaching'
+    | '/work'
     | '/courses/$slug'
     | '/services/$slug'
     | '/courses/'
@@ -154,6 +166,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   EnrolRoute: typeof EnrolRoute
   TeachingRoute: typeof TeachingRoute
+  WorkRoute: typeof WorkRoute
   CoursesSlugRoute: typeof CoursesSlugRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
   CoursesIndexRoute: typeof CoursesIndexRoute
@@ -162,6 +175,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/work': {
+      id: '/work'
+      path: '/work'
+      fullPath: '/work'
+      preLoaderRoute: typeof WorkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/teaching': {
       id: '/teaching'
       path: '/teaching'
@@ -242,6 +262,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   EnrolRoute: EnrolRoute,
   TeachingRoute: TeachingRoute,
+  WorkRoute: WorkRoute,
   CoursesSlugRoute: CoursesSlugRoute,
   ServicesSlugRoute: ServicesSlugRoute,
   CoursesIndexRoute: CoursesIndexRoute,

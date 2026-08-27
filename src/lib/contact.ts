@@ -8,7 +8,6 @@ export const CONTACT = {
 	website: "www.nexahubtech.company",
 	websiteHref: "https://www.nexahubtech.company",
 	address: "F01 Market, Kubwa, FCT-Abuja",
-	addressShort: "Kubwa, FCT-Abuja",
 	rc: "9545130",
 } as const;
 

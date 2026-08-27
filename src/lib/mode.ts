@@ -21,6 +21,7 @@ export function modeForPath(pathname: string): SiteMode | null {
 	if (pathname === "/services" || pathname.startsWith("/services/"))
 		return "build";
 	if (pathname === "/approach") return "build";
+	if (pathname === "/work") return "build";
 	return null;
 }
 

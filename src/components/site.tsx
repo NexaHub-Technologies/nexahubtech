@@ -36,6 +36,7 @@ export const NAV = [
 	{ to: "/courses", label: "Courses", side: "learn" },
 	{ to: "/teaching", label: "Teaching", side: "learn" },
 	{ to: "/services", label: "Services", side: "build" },
+	{ to: "/work", label: "Work", side: "build" },
 	{ to: "/approach", label: "Approach", side: "build" },
 	{ to: "/about", label: "About" },
 	{ to: "/contact", label: "Contact" },
@@ -279,9 +280,7 @@ export function Footer() {
 						<Logo height={24} />
 					</Link>
 					<p className="text-[0.9rem] text-mute mt-2">{MOTTO}</p>
-					<p className="text-[0.85rem] text-mute mt-3">
-						{CONTACT.addressShort}
-					</p>
+					<p className="text-[0.85rem] text-mute mt-3">{CONTACT.address}</p>
 					<a
 						className="text-[0.85rem] text-mute hover:underline"
 						href={CONTACT.websiteHref}

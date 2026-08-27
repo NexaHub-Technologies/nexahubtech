@@ -11,6 +11,7 @@ const staticPaths = [
 	"/teaching",
 	"/enrol",
 	"/services",
+	"/work",
 	"/approach",
 	"/about",
 	"/contact",
