@@ -85,10 +85,10 @@ function ServicesIndex() {
 					>
 						<Eyebrow>Looking to learn instead?</Eyebrow>
 						<h2 className="display text-[1.6rem] mt-3">
-							The school runs ten courses.
+							The school runs eleven courses.
 						</h2>
 						<p className="lead mt-3 text-[0.97rem] flex-1">
-							Frontend, React, Next.js, backend, fullstack, mobile,
+							Frontend, JavaScript, React, Next.js, backend, fullstack, mobile,
 							cybersecurity, Python, data and video — all cohort-based and
 							hands-on.
 						</p>

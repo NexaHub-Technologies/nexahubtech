@@ -254,8 +254,8 @@ function Contact() {
 						<div className="card panel-learn p-7">
 							<Eyebrow>For learners</Eyebrow>
 							<p className="lead mt-3">
-								Ask about any of the ten courses, the next cohort, or whether a
-								track is right for where you’re starting from.
+								Ask about any of the eleven courses, the next cohort, or whether
+								a track is right for where you’re starting from.
 							</p>
 						</div>
 						<div className="card panel-studio p-7">

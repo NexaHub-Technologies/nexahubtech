@@ -10,7 +10,7 @@ export const Route = createFileRoute("/courses/")({
 		pageMeta({
 			title: "Courses — NexaHubTech",
 			description:
-				"Explore all courses at NexaHubTech — from web development, React and Next.js to cybersecurity, data analysis and videography. Learn real skills with cohort-based, hands-on teaching.",
+				"Explore all courses at NexaHubTech — from web development, JavaScript, React and Next.js to cybersecurity, data analysis and videography. Learn real skills with cohort-based, hands-on teaching.",
 			path: "/courses",
 			image: "/og/courses.jpg",
 		}),
@@ -31,7 +31,7 @@ function CoursesIndex() {
 						<span style={{ color: "var(--learn-ink)" }}>taught properly</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
-						Ten courses built on the same principle: understand first, then
+						Eleven courses built on the same principle: understand first, then
 						build. Every track is cohort-based, hands-on, and designed to grow
 						real capability — not just familiarity.
 					</p>

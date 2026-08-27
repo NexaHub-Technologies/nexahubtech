@@ -118,7 +118,7 @@ interface Job {
 
 const jobs: Job[] = [
 	{ name: "home", eyebrow: "A tech school + a software studio", headline: "Learn to build.", accent: "Build for real.", sub: "Kubwa, FCT-Abuja · nexahubtech.company" },
-	{ name: "courses", eyebrow: "Our courses", headline: "Real skills,", accent: "taught properly.", sub: "Ten cohort-based tracks · hands-on" },
+	{ name: "courses", eyebrow: "Our courses", headline: "Real skills,", accent: "taught properly.", sub: "Eleven cohort-based tracks · hands-on" },
 	{ name: "enrol", eyebrow: "Enrolment", headline: "Apply for", accent: "a place.", sub: "Pick a track · tell us about you" },
 	{ name: "services", eyebrow: "Our services", headline: "Software, built", accent: "properly.", sub: "Custom software, web, mobile, cloud" },
 	{ name: "work", eyebrow: "Our work", headline: "What we've", accent: "built.", sub: "Marketplaces · real-time video · platforms" },

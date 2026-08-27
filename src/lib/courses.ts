@@ -209,6 +209,92 @@ export const COURSES: Course[] = [
 		],
 	},
 	{
+		slug: "javascript-programming",
+		t: "JavaScript Programming",
+		d: "Browser & Node.js",
+		tagline:
+			"Learn JavaScript as a language — the same core that runs in a browser and on a server.",
+		price: "₦100,000",
+		duration: "10 Weeks",
+		category: "learn",
+		mentalModel: {
+			t: "The language is small; the runtime is the rest",
+			d: "Most of what people call JavaScript is not JavaScript. Values, functions, objects and the event loop are the language, and they are identical everywhere it runs. The DOM, fetch, the file system, timers — those are whatever the host happens to hand you. Once you can tell the two apart, moving between a browser and Node stops being a new language to learn and becomes a new set of tools around one you already have.",
+			unlocks: [
+				"Tell a language feature from something the host handed you",
+				"Move the same code between a browser and Node deliberately",
+				"Read an unfamiliar API as a runtime detail rather than a mystery",
+			],
+		},
+		requirements: {
+			level:
+				"For beginners, and for anyone who has only ever copied JavaScript",
+			know: [
+				"How to use a computer confidently — files, folders, installing software",
+				"No prior JavaScript; the course starts at values and builds up",
+				"A little HTML helps with the browser exercises, but is not assumed",
+			],
+			have: [
+				"A laptop with 4GB of RAM or more (Windows, macOS or Linux)",
+				"Node.js installed — the first session covers it if you haven't",
+				"6–8 hours a week outside sessions for exercises and the project",
+			],
+		},
+		modules: [
+			{
+				n: "01",
+				t: "Values and how JavaScript thinks",
+				d: "Primitives, objects and coercion. Why == surprises people and === does not — from the rules themselves rather than a list of things to avoid.",
+			},
+			{
+				n: "02",
+				t: "Functions, scope & closures",
+				d: "Functions as values, scope as nested boxes, and the closure — the single idea holding up callbacks, modules and most of the language.",
+			},
+			{
+				n: "03",
+				t: "Objects, arrays & the prototype chain",
+				d: "How a property lookup actually resolves. Prototypes as a chain you can follow, and the array methods that replace most of the loops you would have written.",
+			},
+			{
+				n: "04",
+				t: "Asynchrony & the event loop",
+				d: "One thread and a queue. Callbacks, promises and async/await turn out to be three views of the same machinery, which is why mixing them goes wrong.",
+			},
+			{
+				n: "05",
+				t: "Modules and the two runtimes",
+				d: "The same language in a browser and in Node. What each host provides, what it withholds, and how to write code that does not care which one it lands in.",
+			},
+			{
+				n: "06",
+				t: "Building on both sides",
+				d: "One project with a Node half and a browser half, so the split between language and runtime stops being theory and becomes something you have used.",
+			},
+		],
+		session: [
+			{
+				t: "A mental model",
+				d: "Every session opens with the idea, explained plainly, before any code appears.",
+			},
+			{
+				t: "An exercise brief",
+				d: "A focused task that makes you use the concept — not just read about it.",
+			},
+			{
+				t: "A model answer",
+				d: "A worked solution to compare against, so you learn what good looks like.",
+			},
+		],
+		features: [
+			"JavaScript as a language, not as a framework",
+			"Closures, prototypes and the event loop from first principles",
+			"The same core code running in the browser and on Node.js",
+			"Callbacks, promises and async/await, and when each belongs",
+			"A capstone with a server half and a browser half",
+		],
+	},
+	{
 		slug: "react-development",
 		t: "React",
 		d: "Intermediate to Advanced",
