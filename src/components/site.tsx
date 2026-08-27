@@ -36,7 +36,9 @@ export const NAV = [
 	{ to: "/courses", label: "Courses", side: "learn" },
 	{ to: "/teaching", label: "Teaching", side: "learn" },
 	{ to: "/services", label: "Services", side: "build" },
-	{ to: "/work", label: "Work", side: "build" },
+	/* /work is deliberately absent while client naming is unconfirmed — the route
+	   still exists and still claims the build arm, so restoring it is this line:
+	   { to: "/work", label: "Work", side: "build" }, */
 	{ to: "/approach", label: "Approach", side: "build" },
 	{ to: "/about", label: "About" },
 	{ to: "/contact", label: "Contact" },

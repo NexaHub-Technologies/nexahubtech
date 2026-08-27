@@ -3,6 +3,12 @@ import { Eyebrow, useReveal } from "../components/site";
 import { pageMeta } from "../lib/seo";
 import { WORK } from "../lib/work";
 
+/* Hidden for now: off the nav and out of the sitemap while permission to name
+   DOMICOP and ITC publicly is unconfirmed. The page still renders for anyone with
+   the URL, which makes it usable as a preview — noindex keeps it out of search in
+   the meantime. To publish: drop `noindex`, restore the NAV entry in
+   components/site.tsx, put "/work" back in scripts/generate-sitemap.ts and
+   regenerate, and repoint the /approach hero link here. */
 export const Route = createFileRoute("/work")({
 	component: Work,
 	ssr: false,
@@ -13,6 +19,7 @@ export const Route = createFileRoute("/work")({
 				"Case studies from the NexaHubTech studio: cooperative society platforms, a two-sided parking marketplace, a real-time video platform, and an infinite-canvas social product.",
 			path: "/work",
 			image: "/og/work.jpg",
+			noindex: true,
 		}),
 });
 

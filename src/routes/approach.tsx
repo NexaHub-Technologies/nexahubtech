@@ -39,8 +39,8 @@ function Approach() {
 						<Link to="/contact" className="btn btn-teal">
 							Start a project
 						</Link>
-						<Link to="/work" className="btn btn-ghost">
-							See the work
+						<Link to="/services" className="btn btn-ghost">
+							What we build
 						</Link>
 					</div>
 				</div>
