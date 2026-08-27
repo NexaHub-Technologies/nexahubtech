@@ -62,18 +62,35 @@ function ServicesIndex() {
 					))}
 				</div>
 
-				<div className="grid md:grid-cols-2 gap-5 mt-5">
+				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
+					<Link
+						to="/approach"
+						className="card card-lift reveal panel-studio p-8 flex flex-col"
+					>
+						<Eyebrow variant="build">Before we build</Eyebrow>
+						<h2 className="display text-[1.6rem] mt-3">
+							Eleven steps come first.
+						</h2>
+						<p className="lead mt-3 text-[0.97rem] flex-1">
+							Every project starts with system design — what should be built,
+							and why — settled and written down before implementation.
+						</p>
+						<span className="view-link is-build mt-5">
+							See how we work <i aria-hidden="true">→</i>
+						</span>
+					</Link>
 					<Link
 						to="/courses"
 						className="card card-lift reveal panel-learn p-8 flex flex-col"
 					>
 						<Eyebrow>Looking to learn instead?</Eyebrow>
 						<h2 className="display text-[1.6rem] mt-3">
-							The school runs eight courses.
+							The school runs ten courses.
 						</h2>
 						<p className="lead mt-3 text-[0.97rem] flex-1">
-							Frontend, backend, fullstack, mobile, cybersecurity, Python, data
-							and video — all cohort-based and hands-on.
+							Frontend, React, Next.js, backend, fullstack, mobile,
+							cybersecurity, Python, data and video — all cohort-based and
+							hands-on.
 						</p>
 						<span className="view-link mt-5">
 							Explore the courses <i aria-hidden="true">→</i>

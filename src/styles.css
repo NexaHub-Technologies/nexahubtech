@@ -842,11 +842,82 @@
   background: var(--card);
   transition: all 160ms ease;
 }
+/* as a <label> wrapping a radio, rather than the plain <button> the contact
+   form uses — same pill, real control underneath */
+label.choice {
+  display: inline-block;
+  position: relative;
+}
+.choice input[type='radio'] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  margin: 0;
+}
+.choice:has(input:focus-visible) {
+  outline: 2px solid var(--marigold);
+  outline-offset: 2px;
+}
 .choice[data-on='true'] {
   border-color: var(--marigold);
   background: var(--marigold-tint);
   color: var(--learn-ink);
 }
+/* agreement checkboxes — a real input, so the browser enforces `required` */
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  padding: 0.35rem 0;
+  margin-bottom: 0.5rem;
+}
+.check input[type='checkbox'] {
+  flex: none;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.12rem;
+  accent-color: var(--marigold);
+  cursor: pointer;
+}
+
+/* the pill choices are buttons, so their required-ness is reported here */
+.form-error {
+  margin-top: 1rem;
+  padding: 0.7rem 0.95rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #9d1b48;
+  background: rgba(240, 107, 168, 0.12);
+  border: 1.5px solid rgba(240, 107, 168, 0.45);
+}
+
+/* the entry bar for a course, on its index card — so someone can tell whether a
+   track is pitched at them before clicking into it, not after */
+.course-level {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--mute);
+}
+.course-level::before {
+  content: '';
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--mode-accent);
+}
+
 .contact-detail {
   display: flex;
   align-items: center;

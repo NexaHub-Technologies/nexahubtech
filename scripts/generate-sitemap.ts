@@ -5,7 +5,16 @@ import { SITE_URL } from "../src/lib/contact";
 import { COURSES } from "../src/lib/courses";
 import { SERVICES } from "../src/lib/services";
 
-const staticPaths = ["/", "/courses", "/services", "/about", "/contact"];
+const staticPaths = [
+	"/",
+	"/courses",
+	"/teaching",
+	"/enrol",
+	"/services",
+	"/approach",
+	"/about",
+	"/contact",
+];
 const paths = [
 	...staticPaths,
 	...COURSES.map((c) => `/courses/${c.slug}`),

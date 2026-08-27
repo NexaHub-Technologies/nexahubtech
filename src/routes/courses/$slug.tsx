@@ -60,12 +60,47 @@ function CourseDetail() {
 						<span className="text-mute font-semibold">{course.duration}</span>
 					</div>
 					<div className="rise rise-5 mt-8 flex flex-wrap gap-3">
-						<Link to="/contact" className="btn btn-primary">
+						<Link
+							to="/enrol"
+							search={{ course: course.slug }}
+							className="btn btn-primary"
+						>
 							Enrol now
 						</Link>
 						<Link to="/courses" className="btn btn-ghost">
 							All courses
 						</Link>
+					</div>
+				</div>
+			</section>
+
+			{/* the idea the whole course hangs on — before any of the syllabus,
+			    because that is the order we teach it in */}
+			<section className="wrap py-14">
+				<div className="reveal card panel-learn p-8 md:p-12">
+					<div className="grid md:grid-cols-[1.05fr_0.95fr] gap-8 md:gap-10 items-start">
+						<div>
+							<Eyebrow>The mental model</Eyebrow>
+							<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
+								{course.mentalModel.t}
+							</h2>
+							<p className="lead mt-4">{course.mentalModel.d}</p>
+						</div>
+						<div className="md:pt-2">
+							<span className="text-[0.8rem] text-mute font-semibold uppercase tracking-wider">
+								Once it lands
+							</span>
+							<div className="mt-3">
+								{course.mentalModel.unlocks.map((u) => (
+									<div key={u} className="feat">
+										<span className="mk mk-learn" aria-hidden="true">
+											→
+										</span>
+										<span>{u}</span>
+									</div>
+								))}
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -135,6 +170,56 @@ function CourseDetail() {
 				</div>
 			</section>
 
+			{/* the honest check, immediately before the fee and the enrol button —
+			    so nobody signs up for a cohort they can't take part in */}
+			<section className="wrap py-14">
+				<div className="reveal card p-8 md:p-12">
+					<div className="max-w-[42rem]">
+						<Eyebrow variant="plain">Before you start</Eyebrow>
+						<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
+							What you need to take this course.
+						</h2>
+						<p className="lead mt-4">
+							{course.requirements.level} — here is what to have ready before
+							the first session, so nothing gets in the way once the cohort
+							starts.
+						</p>
+					</div>
+					<div className="grid md:grid-cols-2 gap-6 md:gap-10 mt-9">
+						<div>
+							<h3 className="display text-[1.15rem]">What you need to know</h3>
+							<div className="mt-3">
+								{course.requirements.know.map((r) => (
+									<div key={r} className="feat">
+										<span className="mk mk-learn" aria-hidden="true">
+											✓
+										</span>
+										<span>{r}</span>
+									</div>
+								))}
+							</div>
+						</div>
+						<div>
+							<h3 className="display text-[1.15rem]">What you need to have</h3>
+							<div className="mt-3">
+								{course.requirements.have.map((r) => (
+									<div key={r} className="feat">
+										<span className="mk mk-build" aria-hidden="true">
+											✓
+										</span>
+										<span>{r}</span>
+									</div>
+								))}
+							</div>
+						</div>
+					</div>
+					<p className="text-[0.88rem] text-mute mt-8 pt-6 border-t border-[var(--line-soft)]">
+						Not sure whether you meet these? Tell us where you are starting from
+						and we will say honestly whether this is the right track for you.
+					</p>
+				</div>
+			</section>
+
 			{/* logistics */}
 			<section className="wrap py-14">
 				<div className="reveal grid md:grid-cols-[1.1fr_0.9fr] gap-6 items-center">
@@ -166,7 +251,11 @@ function CourseDetail() {
 							Tell us a little about you and we'll share the next cohort
 							details.
 						</p>
-						<Link to="/contact" className="btn btn-primary mt-5">
+						<Link
+							to="/enrol"
+							search={{ course: course.slug }}
+							className="btn btn-primary mt-5"
+						>
 							Enrol now
 						</Link>
 					</div>

@@ -4,6 +4,30 @@ export interface CourseModule {
 	d: string;
 }
 
+/* the one idea a course is really teaching. The three-part session structure is
+   deliberately the same everywhere — that is the pedagogy — but the concept each
+   track is trying to install is not, so it lives here rather than in a template. */
+export interface MentalModel {
+	/* the idea, named — short enough to carry around in your head */
+	t: string;
+	/* the idea, explained without jargon */
+	d: string;
+	/* what it lets you do once it lands */
+	unlocks: string[];
+}
+
+/* what a visitor needs before day one, split the way the question actually gets
+   asked: what do I need to know, and what do I need to have? Stated plainly so
+   nobody pays for a cohort they can't take part in. */
+export interface Requirements {
+	/* who the course is pitched at, as a phrase that can finish a sentence */
+	level: string;
+	/* prior knowledge assumed — including, where it applies, that none is */
+	know: string[];
+	/* kit, accounts and the time it takes each week */
+	have: string[];
+}
+
 export interface Course {
 	slug: string;
 	t: string;
@@ -12,6 +36,8 @@ export interface Course {
 	price: string;
 	duration: string;
 	category: "learn" | "build";
+	mentalModel: MentalModel;
+	requirements: Requirements;
 	modules: CourseModule[];
 	session: { t: string; d: string }[];
 	features: string[];
@@ -27,6 +53,28 @@ export const COURSES: Course[] = [
 		price: "₦180,000",
 		duration: "16 Weeks",
 		category: "learn",
+		mentalModel: {
+			t: "Two computers, one conversation",
+			d: "A browser and a server are separate machines that only ever pass text between them. One asks; the other answers. Every framework, database and deployment step you will ever meet is a refinement of that single exchange — so when something breaks, you always have a first question worth asking: which side is this happening on, and what did it actually send?",
+			unlocks: [
+				"Locate a bug on the right side of the wire before touching code",
+				"Read any new framework as a variation on request and response",
+				"Decide where a piece of data should live, and say why",
+			],
+		},
+		requirements: {
+			level: "Built for complete beginners",
+			know: [
+				"How to use a computer confidently — files, folders, installing software",
+				"Enough English to read technical writing without a struggle",
+				"No coding at all; the first module starts at how the web works",
+			],
+			have: [
+				"A laptop with 8GB of RAM or more (Windows, macOS or Linux)",
+				"A stable internet connection for live sessions",
+				"8–10 hours a week outside sessions for exercises and the project",
+			],
+		},
 		modules: [
 			{
 				n: "01",
@@ -90,6 +138,27 @@ export const COURSES: Course[] = [
 		price: "₦80,000",
 		duration: "12 Weeks",
 		category: "learn",
+		mentalModel: {
+			t: "You describe; the browser draws",
+			d: "You never place a pixel yourself. You hand the browser a document and a set of rules, and it computes the result — structure first, then layout, then paint. Once CSS reads as constraints you hand a layout engine rather than positions you set by hand, “why is it doing that?” stops being a mystery and becomes a question you can reason your way to.",
+			unlocks: [
+				"Predict a layout instead of nudging numbers until it looks right",
+				"Explain why a rule lost, rather than reaching for !important",
+				"Build pages that hold up on screens you have never seen",
+			],
+		},
+		requirements: {
+			level: "Built for complete beginners",
+			know: [
+				"Basic computer literacy — files, folders, installing software",
+				"No HTML, CSS or JavaScript; every one of them starts from zero here",
+			],
+			have: [
+				"A laptop with 4GB of RAM or more (8GB is far more comfortable)",
+				"A stable internet connection for live sessions",
+				"6–8 hours a week outside sessions for exercises",
+			],
+		},
 		modules: [
 			{
 				n: "01",
@@ -140,6 +209,178 @@ export const COURSES: Course[] = [
 		],
 	},
 	{
+		slug: "react-development",
+		t: "React",
+		d: "Intermediate to Advanced",
+		tagline:
+			"Go beyond the basics — build React applications that stay understandable as they grow.",
+		price: "₦140,000",
+		duration: "10 Weeks",
+		category: "learn",
+		mentalModel: {
+			t: "The screen is a function of state",
+			d: "You don't update the page. You change state, describe what the page should look like for any given state, and let React work out the difference. Every stale value, surprise re-render and “why didn't it update?” dissolves once you stop listing the steps to change the screen and start describing what the screen is for the data you hold.",
+			unlocks: [
+				"Put state in the right place the first time",
+				"Read a re-render as a consequence, not a mystery",
+				"Delete the effects you never needed",
+			],
+		},
+		requirements: {
+			level: "Assumes you already write JavaScript",
+			know: [
+				"JavaScript to a working standard — functions, arrays, promises, modules",
+				"HTML and CSS well enough to build a page without a framework",
+				"The basics of React, even shakily: components, props, useState",
+				"The terminal and git for everyday work",
+			],
+			have: [
+				"A laptop with 8GB of RAM or more, with Node.js installed",
+				"A code editor you are already comfortable in",
+				"6–8 hours a week outside sessions for exercises and a project",
+			],
+		},
+		modules: [
+			{
+				n: "01",
+				t: "How React actually works",
+				d: "Rendering, reconciliation, and why the screen updates when it does — the model behind the API.",
+			},
+			{
+				n: "02",
+				t: "State, placed properly",
+				d: "Where state belongs, when to lift it, and how to design it so whole classes of bugs stop existing.",
+			},
+			{
+				n: "03",
+				t: "Effects & the outside world",
+				d: "Data fetching, subscriptions, and cleanup — plus learning when you don't need an effect at all.",
+			},
+			{
+				n: "04",
+				t: "Composition & custom hooks",
+				d: "The patterns that keep components small and share logic without tangling a codebase.",
+			},
+			{
+				n: "05",
+				t: "Performance, measured",
+				d: "Memoisation, list rendering, and profiling. Making it fast on evidence rather than on instinct.",
+			},
+			{
+				n: "06",
+				t: "Architecture at scale",
+				d: "Structure, data layers, and testing — the decisions that decide whether an app ages well.",
+			},
+		],
+		session: [
+			{
+				t: "A mental model",
+				d: "Every session opens with the idea, explained plainly, before any code appears.",
+			},
+			{
+				t: "An exercise brief",
+				d: "A focused task that makes you use the concept — not just read about it.",
+			},
+			{
+				t: "A model answer",
+				d: "A worked solution to compare against, so you learn what good looks like.",
+			},
+		],
+		features: [
+			"For developers already comfortable with JavaScript",
+			"Hooks, composition, and custom hook design",
+			"Rendering behaviour, reconciliation, and profiling",
+			"State management and data-fetching patterns",
+			"An advanced project built to production standards",
+		],
+	},
+	{
+		slug: "nextjs-fullstack",
+		t: "Next.js",
+		d: "Fullstack React",
+		tagline:
+			"Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.",
+		price: "₦160,000",
+		duration: "12 Weeks",
+		category: "learn",
+		mentalModel: {
+			t: "One codebase, two machines",
+			d: "Your code runs in two places — a server you control and a browser you don't — and Next.js lets you write both in one file tree. Nearly every decision it asks of you is the same question wearing different clothes: which machine should this run on, and what has to travel between them? Server or client, where to fetch, what to cache.",
+			unlocks: [
+				"Choose server or client deliberately, not by trial and error",
+				"See at once why a secret must never cross the boundary",
+				"Read caching and revalidation as questions about that line",
+			],
+		},
+		requirements: {
+			level: "Assumes you already write React",
+			know: [
+				"React in practice — components, state, hooks and composition",
+				"JavaScript's async model: promises and async/await",
+				"Enough HTTP to know what a request, a response and a status code are",
+				"The terminal and git for everyday work",
+			],
+			have: [
+				"A laptop with 8GB of RAM or more, with Node.js installed",
+				"A GitHub account, for deploying the capstone",
+				"8–10 hours a week outside sessions for the fullstack project",
+			],
+		},
+		modules: [
+			{
+				n: "01",
+				t: "Why a metaframework",
+				d: "What Next.js adds on top of React, and which problems it exists to solve for you.",
+			},
+			{
+				n: "02",
+				t: "Routing & layouts",
+				d: "File-based routing, nested layouts, and loading states that appear in the right order.",
+			},
+			{
+				n: "03",
+				t: "Server & client components",
+				d: "Where your code runs, why it matters, and how to draw the boundary deliberately.",
+			},
+			{
+				n: "04",
+				t: "Data, caching & mutations",
+				d: "Server actions, caching, and revalidation — keeping data fresh without guesswork.",
+			},
+			{
+				n: "05",
+				t: "Auth, databases & APIs",
+				d: "Sessions, route handlers, and wiring a real backend into the same codebase.",
+			},
+			{
+				n: "06",
+				t: "Rendering & deployment",
+				d: "Static, dynamic, and streaming — then shipping the whole thing to production.",
+			},
+		],
+		session: [
+			{
+				t: "A mental model",
+				d: "Every session opens with the idea, explained plainly, before any code appears.",
+			},
+			{
+				t: "An exercise brief",
+				d: "A focused task that makes you use the concept — not just read about it.",
+			},
+			{
+				t: "A model answer",
+				d: "A worked solution to compare against, so you learn what good looks like.",
+			},
+		],
+		features: [
+			"The App Router taught from first principles",
+			"Server components, server actions, and caching",
+			"Database, authentication, and APIs in one project",
+			"Rendering strategies, SEO, and performance",
+			"Fullstack capstone deployed to production",
+		],
+	},
+	{
 		slug: "backend-development",
 		t: "Backend Development",
 		d: "",
@@ -148,6 +389,28 @@ export const COURSES: Course[] = [
 		price: "₦100,000",
 		duration: "12 Weeks",
 		category: "learn",
+		mentalModel: {
+			t: "A server is a function you can call over a wire",
+			d: "Strip away the frameworks and a backend does one thing: it takes a request and returns a response. What makes it hard is that it does this for many people at once, and it remembers things between calls. Hold those two apart — the translation, and the state it touches — and routing, middleware, databases and auth each drop into place.",
+			unlocks: [
+				"Design an API by its contract before writing its code",
+				"Separate what a request returns from what it changes",
+				"See where two users at the same moment would break your logic",
+			],
+		},
+		requirements: {
+			level: "Open to beginners; smoother with some programming",
+			know: [
+				"Basic programming in any language — variables, loops, functions",
+				"Comfort with the terminal, or the willingness to learn it in week one",
+				"No server, API or database experience needed",
+			],
+			have: [
+				"A laptop with 8GB of RAM or more (Windows, macOS or Linux)",
+				"A stable internet connection for live sessions",
+				"6–8 hours a week outside sessions for exercises",
+			],
+		},
 		modules: [
 			{
 				n: "01",
@@ -205,6 +468,28 @@ export const COURSES: Course[] = [
 		price: "₦200,000",
 		duration: "12 Weeks",
 		category: "build",
+		mentalModel: {
+			t: "Your app is a guest, not the host",
+			d: "A phone interrupts you. A call arrives, the user switches away, the system reclaims your memory, the network vanishes halfway through a tap. A mobile app isn't a program that runs from start to finish — it is something that has to survive being paused, resumed and quietly destroyed, and still look to the person holding it as though it never left.",
+			unlocks: [
+				"Treat state as something that must survive being killed",
+				"Design for a slow or absent network as the normal case",
+				"Work with the platform lifecycle instead of against it",
+			],
+		},
+		requirements: {
+			level: "Assumes you can already program",
+			know: [
+				"JavaScript, or another modern language, to a working standard",
+				"What an API call is — sending a request and handling the reply",
+				"The terminal and git for everyday work",
+			],
+			have: [
+				"A laptop with 8GB of RAM or more; macOS if you intend to build for iOS",
+				"An Android or iOS phone to test on",
+				"8–10 hours a week outside sessions for building",
+			],
+		},
 		modules: [
 			{
 				n: "01",
@@ -262,6 +547,28 @@ export const COURSES: Course[] = [
 		price: "₦230,000",
 		duration: "16 Weeks",
 		category: "build",
+		mentalModel: {
+			t: "Every system has a boundary, and attacks cross it",
+			d: "Security isn't a feature you bolt on; it is a property of where you place trust. Draw the line between what you control and what you don't, and every vulnerability turns out to have the same shape: something crossed that line and was trusted on the far side. Injection, XSS, broken authentication — each is trust granted where it was never earned.",
+			unlocks: [
+				"Find the trust boundary in a system you have never seen",
+				"Recognise a new class of vulnerability as a familiar pattern",
+				"Defend by design rather than by a checklist of patches",
+			],
+		},
+		requirements: {
+			level: "Assumes general technical confidence",
+			know: [
+				"How networks and the web work at a basic level — IPs, ports, HTTP",
+				"The command line, and enough code-reading to follow a script",
+				"No prior security experience needed",
+			],
+			have: [
+				"A laptop with 8GB of RAM or more and room for virtual machines",
+				"A stable internet connection for the hands-on labs",
+				"8–10 hours a week outside sessions for lab work",
+			],
+		},
 		modules: [
 			{
 				n: "01",
@@ -325,6 +632,27 @@ export const COURSES: Course[] = [
 		price: "₦80,000",
 		duration: "8 Weeks",
 		category: "learn",
+		mentalModel: {
+			t: "Names are labels, not boxes",
+			d: "A variable in Python is a name tied to an object, not a container holding one. Two names can point at the same list. Passing a value to a function passes the label, not a copy. This one idea explains almost every surprise a beginner runs into — mutation, identity, default arguments — and turns programming into watching data change shape rather than memorising syntax.",
+			unlocks: [
+				"Predict when a change is shared and when it is copied",
+				"Read an error as a question about types and identity",
+				"Reason about what code does before you run it",
+			],
+		},
+		requirements: {
+			level: "The right place to start if you have never coded",
+			know: [
+				"How to use a computer — files, folders, installing software",
+				"No programming experience of any kind",
+			],
+			have: [
+				"A laptop with 4GB of RAM or more (Windows, macOS or Linux)",
+				"A stable internet connection for live sessions",
+				"5–7 hours a week outside sessions for exercises",
+			],
+		},
 		modules: [
 			{
 				n: "01",
@@ -383,6 +711,28 @@ export const COURSES: Course[] = [
 		price: "₦120,000",
 		duration: "12 Weeks",
 		category: "learn",
+		mentalModel: {
+			t: "Data answers the question you actually asked",
+			d: "Every number in a dataset is the residue of a decision somebody made — what to record, what to leave out, how to count it. Analysis is less about tools than about keeping the question, the data and the claim honestly aligned. The real skill is noticing the gap between what you want to know and what this data can actually tell you.",
+			unlocks: [
+				"Spot a misleading chart — including one of your own",
+				"Tell a real result from noise, and say which it is",
+				"State plainly what a finding does and does not support",
+			],
+		},
+		requirements: {
+			level: "Open to beginners who enjoy a question",
+			know: [
+				"Secondary-school maths — percentages, averages, reading a chart",
+				"Basic spreadsheet use, even if only the fundamentals",
+				"No Python or SQL; both are taught here from the ground up",
+			],
+			have: [
+				"A laptop with 8GB of RAM or more, for working with real datasets",
+				"A stable internet connection for live sessions",
+				"6–8 hours a week outside sessions for exercises",
+			],
+		},
 		modules: [
 			{
 				n: "01",
@@ -441,6 +791,27 @@ export const COURSES: Course[] = [
 		price: "₦120,000",
 		duration: "8 Weeks",
 		category: "build",
+		mentalModel: {
+			t: "You are directing attention, not recording events",
+			d: "A camera doesn't capture a scene — it excludes everything outside the frame. A light doesn't only brighten; it tells the eye where to go. A cut moves attention from one thing to the next. Once framing, lighting and editing read as three ways of answering the same question — what should the viewer be looking at, and when — technique stops being a list of settings and becomes a set of decisions.",
+			unlocks: [
+				"Frame a shot by what you leave out, not only what you include",
+				"Cut on the moment attention is ready to move",
+				"Light and grade to lead the eye, not just to look expensive",
+			],
+		},
+		requirements: {
+			level: "Built for complete beginners",
+			know: [
+				"No filming, lighting or editing experience",
+				"Basic computer skills — files, folders, moving large files around",
+			],
+			have: [
+				"A camera, or a phone that records at 1080p or better",
+				"A laptop that can edit video — 8GB of RAM and 100GB free",
+				"6–8 hours a week for shooting and editing assignments",
+			],
+		},
 		modules: [
 			{
 				n: "01",

@@ -16,9 +16,31 @@ export function isSiteMode(value: unknown): value is SiteMode {
 export function modeForPath(pathname: string): SiteMode | null {
 	if (pathname === "/courses" || pathname.startsWith("/courses/"))
 		return "learn";
+	if (pathname === "/enrol") return "learn";
+	if (pathname === "/teaching") return "learn";
 	if (pathname === "/services" || pathname.startsWith("/services/"))
 		return "build";
+	if (pathname === "/approach") return "build";
 	return null;
+}
+
+/* where each arm begins. Switching arms lands here, and nowhere deeper — the
+   visitor asked for the other side of the company, not for a specific page. */
+export const ARM_HOME = {
+	learn: "/courses",
+	build: "/services",
+} as const;
+
+/* Switching arms while standing on a page owned by the arm you are leaving would
+   strand you: the nav rebuilds around the other side and disowns the page still
+   on screen. So that case navigates. Shared routes return null — they belong to
+   both arms, so the frame changes and the visitor stays where they were. */
+export function destinationForModeSwitch(
+	pathname: string,
+	next: SiteMode,
+): (typeof ARM_HOME)[SiteMode] | null {
+	const owner = modeForPath(pathname);
+	return owner && owner !== next ? ARM_HOME[next] : null;
 }
 
 function readCookie(): SiteMode | null {

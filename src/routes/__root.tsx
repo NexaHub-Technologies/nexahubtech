@@ -63,16 +63,12 @@ export const Route = createRootRoute({
 				href: "/logo-main.svg",
 			},
 			/* SVG for modern browsers, .ico for old ones, and a PNG for iOS —
-			   which ignores SVG when adding to the home screen */
+			   which ignores SVG when bookmarking to the home screen */
 			{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
 			{
 				rel: "apple-touch-icon",
 				sizes: "180x180",
 				href: "/apple-touch-icon.png",
-			},
-			{
-				rel: "manifest",
-				href: "/manifest.json",
 			},
 			{
 				rel: "stylesheet",

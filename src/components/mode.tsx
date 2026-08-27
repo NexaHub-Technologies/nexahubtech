@@ -1,4 +1,4 @@
-import { useRouterState } from "@tanstack/react-router";
+import { useRouter, useRouterState } from "@tanstack/react-router";
 import {
 	createContext,
 	type ReactNode,
@@ -10,6 +10,7 @@ import {
 import {
 	applyModeAttribute,
 	DEFAULT_MODE,
+	destinationForModeSwitch,
 	modeForPath,
 	persistMode,
 	readStoredMode,
@@ -56,6 +57,7 @@ const ModeContext = createContext<ModeContextValue | null>(null);
 export function ModeProvider({ children }: { children: ReactNode }) {
 	const mode = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 	const pathname = useRouterState({ select: (s) => s.location.pathname });
+	const router = useRouter();
 
 	/* arriving on a route that belongs to one arm switches to it; shared routes
 	   return null and leave the visitor's own choice intact */
@@ -69,7 +71,18 @@ export function ModeProvider({ children }: { children: ReactNode }) {
 		applyModeAttribute(mode);
 	}, [mode]);
 
-	const update = useCallback((next: SiteMode) => setMode(next), []);
+	/* choosing an arm is a request to see that arm, not just to restyle the page
+	   you are on — so if the current page belongs to the arm being left behind,
+	   follow the choice through instead of leaving the visitor on a page the new
+	   nav no longer lists */
+	const update = useCallback(
+		(next: SiteMode) => {
+			setMode(next);
+			const to = destinationForModeSwitch(pathname, next);
+			if (to) router.navigate({ to });
+		},
+		[pathname, router],
+	);
 
 	return (
 		<ModeContext.Provider value={{ mode, setMode: update }}>

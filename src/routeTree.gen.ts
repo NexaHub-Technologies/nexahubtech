@@ -9,7 +9,10 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TeachingRouteImport } from './routes/teaching'
+import { Route as EnrolRouteImport } from './routes/enrol'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ApproachRouteImport } from './routes/approach'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesIndexRouteImport } from './routes/services/index'
@@ -17,9 +20,24 @@ import { Route as CoursesIndexRouteImport } from './routes/courses/index'
 import { Route as ServicesSlugRouteImport } from './routes/services/$slug'
 import { Route as CoursesSlugRouteImport } from './routes/courses/$slug'
 
+const TeachingRoute = TeachingRouteImport.update({
+  id: '/teaching',
+  path: '/teaching',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnrolRoute = EnrolRouteImport.update({
+  id: '/enrol',
+  path: '/enrol',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApproachRoute = ApproachRouteImport.update({
+  id: '/approach',
+  path: '/approach',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -56,7 +74,10 @@ const CoursesSlugRoute = CoursesSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/approach': typeof ApproachRoute
   '/contact': typeof ContactRoute
+  '/enrol': typeof EnrolRoute
+  '/teaching': typeof TeachingRoute
   '/courses/$slug': typeof CoursesSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/courses/': typeof CoursesIndexRoute
@@ -65,7 +86,10 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/approach': typeof ApproachRoute
   '/contact': typeof ContactRoute
+  '/enrol': typeof EnrolRoute
+  '/teaching': typeof TeachingRoute
   '/courses/$slug': typeof CoursesSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/courses': typeof CoursesIndexRoute
@@ -75,7 +99,10 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/approach': typeof ApproachRoute
   '/contact': typeof ContactRoute
+  '/enrol': typeof EnrolRoute
+  '/teaching': typeof TeachingRoute
   '/courses/$slug': typeof CoursesSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/courses/': typeof CoursesIndexRoute
@@ -86,7 +113,10 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/approach'
     | '/contact'
+    | '/enrol'
+    | '/teaching'
     | '/courses/$slug'
     | '/services/$slug'
     | '/courses/'
@@ -95,7 +125,10 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/approach'
     | '/contact'
+    | '/enrol'
+    | '/teaching'
     | '/courses/$slug'
     | '/services/$slug'
     | '/courses'
@@ -104,7 +137,10 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/approach'
     | '/contact'
+    | '/enrol'
+    | '/teaching'
     | '/courses/$slug'
     | '/services/$slug'
     | '/courses/'
@@ -114,7 +150,10 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ApproachRoute: typeof ApproachRoute
   ContactRoute: typeof ContactRoute
+  EnrolRoute: typeof EnrolRoute
+  TeachingRoute: typeof TeachingRoute
   CoursesSlugRoute: typeof CoursesSlugRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
   CoursesIndexRoute: typeof CoursesIndexRoute
@@ -123,11 +162,32 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/teaching': {
+      id: '/teaching'
+      path: '/teaching'
+      fullPath: '/teaching'
+      preLoaderRoute: typeof TeachingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/enrol': {
+      id: '/enrol'
+      path: '/enrol'
+      fullPath: '/enrol'
+      preLoaderRoute: typeof EnrolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/approach': {
+      id: '/approach'
+      path: '/approach'
+      fullPath: '/approach'
+      preLoaderRoute: typeof ApproachRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -178,7 +238,10 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  ApproachRoute: ApproachRoute,
   ContactRoute: ContactRoute,
+  EnrolRoute: EnrolRoute,
+  TeachingRoute: TeachingRoute,
   CoursesSlugRoute: CoursesSlugRoute,
   ServicesSlugRoute: ServicesSlugRoute,
   CoursesIndexRoute: CoursesIndexRoute,

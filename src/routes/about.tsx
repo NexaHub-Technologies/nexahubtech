@@ -212,7 +212,7 @@ function About() {
 					<div className="card card-lift panel-learn p-9">
 						<h3 className="display text-[1.6rem]">Want to learn with us?</h3>
 						<p className="lead mt-3">
-							Eight tracks, from frontend to cybersecurity.
+							Ten tracks, from frontend to cybersecurity.
 						</p>
 						<Link to="/courses" className="btn btn-primary mt-5">
 							Explore the courses

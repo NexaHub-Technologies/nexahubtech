@@ -10,7 +10,7 @@ export const Route = createFileRoute("/courses/")({
 		pageMeta({
 			title: "Courses — NexaHubTech",
 			description:
-				"Explore all courses at NexaHubTech — from web development and cybersecurity to data analysis and videography. Learn real skills with cohort-based, hands-on teaching.",
+				"Explore all courses at NexaHubTech — from web development, React and Next.js to cybersecurity, data analysis and videography. Learn real skills with cohort-based, hands-on teaching.",
 			path: "/courses",
 			image: "/og/courses.jpg",
 		}),
@@ -31,7 +31,7 @@ function CoursesIndex() {
 						<span style={{ color: "var(--learn-ink)" }}>taught properly</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
-						Eight courses built on the same principle: understand first, then
+						Ten courses built on the same principle: understand first, then
 						build. Every track is cohort-based, hands-on, and designed to grow
 						real capability — not just familiarity.
 					</p>
@@ -63,7 +63,8 @@ function CoursesIndex() {
 							</div>
 							<h2 className="display text-[1.3rem]">{c.t}</h2>
 							<p className="lead mt-2 text-[0.95rem] flex-1">{c.tagline}</p>
-							<div className="flex items-center justify-between mt-5 pt-4 border-t border-[var(--line-soft)]">
+							<span className="course-level">{c.requirements.level}</span>
+							<div className="flex items-center justify-between mt-4 pt-4 border-t border-[var(--line-soft)]">
 								<span className="display text-[1.05rem]">{c.price}</span>
 								<span className="text-[0.85rem] text-mute font-semibold">
 									{c.duration}
@@ -90,6 +91,9 @@ function CoursesIndex() {
 								slides-to-death. No copy-paste tutorials. Every session is
 								structured to build understanding, then prove it.
 							</p>
+							<Link to="/teaching" className="view-link mt-5">
+								How we teach, in full <i aria-hidden="true">→</i>
+							</Link>
 						</div>
 						<div className="card panel-learn p-8">
 							<h3 className="display text-[1.3rem]">Ready to start?</h3>
@@ -97,7 +101,11 @@ function CoursesIndex() {
 								Pick a course and tell us a little about you. We'll share the
 								next cohort details.
 							</p>
-							<Link to="/contact" className="btn btn-primary mt-5">
+							<Link
+								to="/enrol"
+								search={{ course: undefined }}
+								className="btn btn-primary mt-5"
+							>
 								Enrol now
 							</Link>
 						</div>

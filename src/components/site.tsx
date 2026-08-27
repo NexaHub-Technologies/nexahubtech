@@ -34,7 +34,9 @@ export function Logo({
 export const NAV = [
 	{ to: "/", label: "Home" },
 	{ to: "/courses", label: "Courses", side: "learn" },
+	{ to: "/teaching", label: "Teaching", side: "learn" },
 	{ to: "/services", label: "Services", side: "build" },
+	{ to: "/approach", label: "Approach", side: "build" },
 	{ to: "/about", label: "About" },
 	{ to: "/contact", label: "Contact" },
 ] as const satisfies readonly {
