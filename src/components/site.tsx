@@ -344,7 +344,14 @@ export function useReveal() {
 					}
 				}
 			},
-			{ rootMargin: "0px 0px -10% 0px", threshold: 0.12 },
+			/* threshold MUST stay 0. A fractional threshold is a proportion of the
+			   *element*, so anything taller than viewport ÷ threshold can never reach
+			   it: it stays at opacity 0 for ever and the section renders blank. At
+			   0.12 that ceiling is about eight screens — an 8068px article needed
+			   968px visible in a 656px window and never revealed. The rootMargin
+			   already supplies the "don't fire too early" behaviour, and unlike a
+			   fractional threshold it does not depend on how tall the element is. */
+			{ rootMargin: "0px 0px -10% 0px", threshold: 0 },
 		);
 
 		const observe = () => {
