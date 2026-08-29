@@ -89,8 +89,8 @@ function ServicesIndex() {
 						</h2>
 						<p className="lead mt-3 text-[0.97rem] flex-1">
 							Frontend, JavaScript, React, Next.js, backend, fullstack, mobile,
-							cybersecurity, Python, data and video — all cohort-based and
-							hands-on.
+							cybersecurity, Python, data and video — all taught live, hands-on,
+							and started whenever you are ready.
 						</p>
 						<span className="view-link mt-5">
 							Explore the courses <i aria-hidden="true">→</i>

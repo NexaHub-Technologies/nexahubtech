@@ -18,7 +18,7 @@ export interface MentalModel {
 
 /* what a visitor needs before day one, split the way the question actually gets
    asked: what do I need to know, and what do I need to have? Stated plainly so
-   nobody pays for a cohort they can't take part in. */
+   nobody pays for a course they can't take part in. */
 export interface Requirements {
 	/* who the course is pitched at, as a phrase that can finish a sentence */
 	level: string;
@@ -26,6 +26,19 @@ export interface Requirements {
 	know: string[];
 	/* kit, accounts and the time it takes each week */
 	have: string[];
+}
+
+/* the projects a student builds, in summary. The full brief for each lives in
+   docs/<course>/<project>.md — the course page shows only enough to know what you
+   would come away having built. */
+export interface CourseProject {
+	n: string;
+	/* the product's name. Empty where a course's projects are not yet named. */
+	t: string;
+	/* one line: what it is */
+	d: string;
+	weeks: string;
+	capstone?: boolean;
 }
 
 export interface Course {
@@ -38,6 +51,7 @@ export interface Course {
 	category: "learn" | "build";
 	mentalModel: MentalModel;
 	requirements: Requirements;
+	projects: CourseProject[];
 	modules: CourseModule[];
 	session: { t: string; d: string }[];
 	features: string[];
@@ -50,8 +64,8 @@ export const COURSES: Course[] = [
 		d: "Fullstack",
 		tagline:
 			"Learn frontend and backend in one complete path — from first principles to full applications.",
-		price: "₦180,000",
-		duration: "16 Weeks",
+		price: "₦160,000",
+		duration: "10 Weeks",
 		category: "learn",
 		mentalModel: {
 			t: "Two computers, one conversation",
@@ -72,9 +86,36 @@ export const COURSES: Course[] = [
 			have: [
 				"A laptop with 8GB of RAM or more (Windows, macOS or Linux)",
 				"A stable internet connection for live sessions",
-				"8–10 hours a week outside sessions for exercises and the project",
+				"10–12 hours a week outside sessions — this track moves fast",
 			],
 		},
+		projects: [
+			{
+				n: "1",
+				t: "Ajo",
+				d: "a savings club's site, correct before it is styled",
+				weeks: "1–3",
+			},
+			{
+				n: "2",
+				t: "Òjò",
+				d: "a rain check across Nigerian towns",
+				weeks: "4–6",
+			},
+			{
+				n: "3",
+				t: "Slot",
+				d: "a booking API with no browser side at all",
+				weeks: "7–8",
+			},
+			{
+				n: "4",
+				t: "Found",
+				d: "a deployed lost-and-found board",
+				weeks: "9–10",
+				capstone: true,
+			},
+		],
 		modules: [
 			{
 				n: "01",
@@ -126,7 +167,7 @@ export const COURSES: Course[] = [
 			"HTML, CSS, JavaScript, and Node.js",
 			"Database integration and API design",
 			"Capstone fullstack project",
-			"Cohort-based with structured materials",
+			"Taught live with structured materials — start any time",
 		],
 	},
 	{
@@ -135,8 +176,8 @@ export const COURSES: Course[] = [
 		d: "",
 		tagline:
 			"Learn the web from first principles — HTML, CSS, and JavaScript done properly.",
-		price: "₦80,000",
-		duration: "12 Weeks",
+		price: "₦120,000",
+		duration: "10 Weeks",
 		category: "learn",
 		mentalModel: {
 			t: "You describe; the browser draws",
@@ -159,6 +200,27 @@ export const COURSES: Course[] = [
 				"6–8 hours a week outside sessions for exercises",
 			],
 		},
+		projects: [
+			{
+				n: "1",
+				t: "Stitch",
+				d: "a tailor's shop site, from a supplied design",
+				weeks: "1–4",
+			},
+			{
+				n: "2",
+				t: "Shelf",
+				d: "a book finder over a real, incomplete catalogue",
+				weeks: "5–8",
+			},
+			{
+				n: "3",
+				t: "Signboard",
+				d: "a business site with a quote builder",
+				weeks: "9–10",
+				capstone: true,
+			},
+		],
 		modules: [
 			{
 				n: "01",
@@ -215,7 +277,7 @@ export const COURSES: Course[] = [
 		tagline:
 			"Learn JavaScript as a language — the same core that runs in a browser and on a server.",
 		price: "₦100,000",
-		duration: "10 Weeks",
+		duration: "8 Weeks",
 		category: "learn",
 		mentalModel: {
 			t: "The language is small; the runtime is the rest",
@@ -240,6 +302,27 @@ export const COURSES: Course[] = [
 				"6–8 hours a week outside sessions for exercises and the project",
 			],
 		},
+		projects: [
+			{
+				n: "1",
+				t: "Tender",
+				d: "a money library with no host APIs anywhere in it",
+				weeks: "1–3",
+			},
+			{
+				n: "2",
+				t: "Steady and Digits",
+				d: "async utilities, and one core in two runtimes",
+				weeks: "4–6",
+			},
+			{
+				n: "3",
+				t: "Roster",
+				d: "a duty rota with a Node half and a browser half",
+				weeks: "7–8",
+				capstone: true,
+			},
+		],
 		modules: [
 			{
 				n: "01",
@@ -291,7 +374,7 @@ export const COURSES: Course[] = [
 			"Closures, prototypes and the event loop from first principles",
 			"The same core code running in the browser and on Node.js",
 			"Callbacks, promises and async/await, and when each belongs",
-			"A capstone with a server half and a browser half",
+			"A capstone using Node core modules and real browser APIs",
 		],
 	},
 	{
@@ -300,8 +383,8 @@ export const COURSES: Course[] = [
 		d: "Intermediate to Advanced",
 		tagline:
 			"Go beyond the basics — build React applications that stay understandable as they grow.",
-		price: "₦140,000",
-		duration: "10 Weeks",
+		price: "₦120,000",
+		duration: "8 Weeks",
 		category: "learn",
 		mentalModel: {
 			t: "The screen is a function of state",
@@ -326,6 +409,27 @@ export const COURSES: Course[] = [
 				"6–8 hours a week outside sessions for exercises and a project",
 			],
 		},
+		projects: [
+			{
+				n: "1",
+				t: "Roll Call",
+				d: "an attendance register whose state is in the right places",
+				weeks: "1–3",
+			},
+			{
+				n: "2",
+				t: "Cashbook and Ticker",
+				d: "supplied code, refactored and profiled",
+				weeks: "4–6",
+			},
+			{
+				n: "3",
+				t: "Waybill",
+				d: "a dispatch job board with tested logic",
+				weeks: "7–8",
+				capstone: true,
+			},
+		],
 		modules: [
 			{
 				n: "01",
@@ -387,7 +491,7 @@ export const COURSES: Course[] = [
 		tagline:
 			"Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.",
 		price: "₦160,000",
-		duration: "12 Weeks",
+		duration: "10 Weeks",
 		category: "learn",
 		mentalModel: {
 			t: "One codebase, two machines",
@@ -412,6 +516,33 @@ export const COURSES: Course[] = [
 				"8–10 hours a week outside sessions for the fullstack project",
 			],
 		},
+		projects: [
+			{
+				n: "1",
+				t: "Danfo",
+				d: "a bus-route directory, rebuilt off the client",
+				weeks: "1–3",
+			},
+			{
+				n: "2",
+				t: "Pump",
+				d: "a price board that stays fresh on purpose",
+				weeks: "4–6",
+			},
+			{
+				n: "3",
+				t: "Marksheet",
+				d: "a results portal where roles actually hold",
+				weeks: "7–8",
+			},
+			{
+				n: "4",
+				t: "Owambe",
+				d: "an event page, shipped to production",
+				weeks: "9–10",
+				capstone: true,
+			},
+		],
 		modules: [
 			{
 				n: "01",
@@ -473,7 +604,7 @@ export const COURSES: Course[] = [
 		tagline:
 			"Build the engine behind applications — APIs, databases, and server-side logic.",
 		price: "₦100,000",
-		duration: "12 Weeks",
+		duration: "8 Weeks",
 		category: "learn",
 		mentalModel: {
 			t: "A server is a function you can call over a wire",
@@ -497,6 +628,27 @@ export const COURSES: Course[] = [
 				"6–8 hours a week outside sessions for exercises",
 			],
 		},
+		projects: [
+			{
+				n: "1",
+				t: "Alafia",
+				d: "a pharmacy API whose rules live in the database",
+				weeks: "1–4",
+			},
+			{
+				n: "2",
+				t: "Gatepass",
+				d: "a visitor-pass API, then attacked by its own author",
+				weeks: "5–6",
+			},
+			{
+				n: "3",
+				t: "Buka",
+				d: "a canteen ordering API, deployed",
+				weeks: "7–8",
+				capstone: true,
+			},
+		],
 		modules: [
 			{
 				n: "01",
@@ -543,7 +695,7 @@ export const COURSES: Course[] = [
 			"RESTful API design and database integration",
 			"Authentication, security, and deployment",
 			"Real-world backend architecture patterns",
-			"Cohort-based with hands-on exercises",
+			"Taught live with hands-on exercises — start any time",
 		],
 	},
 	{
@@ -551,7 +703,7 @@ export const COURSES: Course[] = [
 		t: "Mobile Development",
 		d: "",
 		tagline: "Build real mobile applications — from concept to the app store.",
-		price: "₦200,000",
+		price: "₦190,000",
 		duration: "12 Weeks",
 		category: "build",
 		mentalModel: {
@@ -576,6 +728,27 @@ export const COURSES: Course[] = [
 				"8–10 hours a week outside sessions for building",
 			],
 		},
+		projects: [
+			{
+				n: "1",
+				t: "Lineup",
+				d: "an event app that survives the operating system",
+				weeks: "1–4",
+			},
+			{
+				n: "2",
+				t: "Tally",
+				d: "a shop log that works with no network at all",
+				weeks: "5–8",
+			},
+			{
+				n: "3",
+				t: "Kiosk",
+				d: "classifieds, tested and submitted",
+				weeks: "9–12",
+				capstone: true,
+			},
+		],
 		modules: [
 			{
 				n: "01",
@@ -655,6 +828,33 @@ export const COURSES: Course[] = [
 				"8–10 hours a week outside sessions for lab work",
 			],
 		},
+		projects: [
+			{
+				n: "1",
+				t: "Mambilla Range",
+				d: "threat model, then map and segment",
+				weeks: "1–5",
+			},
+			{
+				n: "2",
+				t: "NexaRide Tickets",
+				d: "a web app broken, then fixed properly",
+				weeks: "6–8",
+			},
+			{
+				n: "3",
+				t: "Gurara Vault",
+				d: "a crypto review and a breach reconstructed",
+				weeks: "9–12",
+			},
+			{
+				n: "4",
+				t: "Idanre Range",
+				d: "a full assessment and report",
+				weeks: "13–16",
+				capstone: true,
+			},
+		],
 		modules: [
 			{
 				n: "01",
@@ -716,7 +916,7 @@ export const COURSES: Course[] = [
 		tagline:
 			"Learn programming from scratch with Python — the language that powers everything from scripts to AI.",
 		price: "₦80,000",
-		duration: "8 Weeks",
+		duration: "6 Weeks",
 		category: "learn",
 		mentalModel: {
 			t: "Names are labels, not boxes",
@@ -739,6 +939,27 @@ export const COURSES: Course[] = [
 				"5–7 hours a week outside sessions for exercises",
 			],
 		},
+		projects: [
+			{
+				n: "1",
+				t: "Rent Book",
+				d: "a landlord's rent report, rebuilt from a messy script",
+				weeks: "1–2",
+			},
+			{
+				n: "2",
+				t: "Rate Watch",
+				d: "a daily exchange-rate recorder that survives interruption",
+				weeks: "3–4",
+			},
+			{
+				n: "3",
+				t: "Errand, Meter or Fare",
+				d: "your choice of three",
+				weeks: "5–6",
+				capstone: true,
+			},
+		],
 		modules: [
 			{
 				n: "01",
@@ -819,6 +1040,33 @@ export const COURSES: Course[] = [
 				"6–8 hours a week outside sessions for exercises",
 			],
 		},
+		projects: [
+			{
+				n: "1",
+				t: "Kasuwa Eight",
+				d: "eight questions answered in SQL, and checked",
+				weeks: "1–5",
+			},
+			{
+				n: "2",
+				t: "Basket",
+				d: "an NBS food-price release cleaned, with the decisions logged",
+				weeks: "6–8",
+			},
+			{
+				n: "3",
+				t: "Second Opinion",
+				d: "one finding, two honest charts",
+				weeks: "9–10",
+			},
+			{
+				n: "4",
+				t: "Budget Line, Ward or Grid",
+				d: "your choice of three",
+				weeks: "11–12",
+				capstone: true,
+			},
+		],
 		modules: [
 			{
 				n: "01",
@@ -898,6 +1146,27 @@ export const COURSES: Course[] = [
 				"6–8 hours a week for shooting and editing assignments",
 			],
 		},
+		projects: [
+			{
+				n: "1",
+				t: "",
+				d: "A piece made in-camera, lit and recorded properly",
+				weeks: "1–4",
+			},
+			{
+				n: "2",
+				t: "",
+				d: "Two cuts from one set of rushes",
+				weeks: "5–6",
+			},
+			{
+				n: "3",
+				t: "",
+				d: "Shot, cut, graded, delivered",
+				weeks: "7–8",
+				capstone: true,
+			},
+		],
 		modules: [
 			{
 				n: "01",

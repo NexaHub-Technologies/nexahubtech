@@ -1,11 +1,17 @@
 import { describe, expect, it } from "vitest";
 import { CONTACT } from "./contact";
+import { getCourseBySlug } from "./courses";
 import { renderEmailDocument } from "./email-template";
 import {
 	composeEnrolment,
 	type Enrolment,
 	enrolmentDocument,
 } from "./enrolment";
+
+/* the course the fixture applies for — its fee and length are read rather than
+   repeated, so changing the price list is not a test failure */
+const course = getCourseBySlug("react-development");
+if (!course) throw new Error("fixture course is missing from COURSES");
 
 const base: Enrolment = {
 	course: "react-development",
@@ -49,8 +55,8 @@ describe("enrolmentDocument", () => {
 		const doc = enrolmentDocument(base);
 		expect(doc.highlight.map((f) => f.value)).toEqual([
 			"React",
-			"₦140,000",
-			"10 Weeks",
+			course.price,
+			course.duration,
 			"Online training",
 		]);
 	});
@@ -94,7 +100,7 @@ describe("composeEnrolment", () => {
 		expect(body).toContain("PERSONAL INFORMATION");
 		expect(body).toContain("Full name: Chidi Okeke");
 		expect(body).toContain("Applying for: React (Intermediate to Advanced)");
-		expect(body).toContain("Course fee: ₦140,000");
+		expect(body).toContain(`Course fee: ${course.price}`);
 	});
 
 	it("addresses the fallback mailto to the real inbox", () => {
@@ -122,7 +128,7 @@ describe("renderEmailDocument", () => {
 		expect(html).toContain("NexaHubTech");
 		expect(html).toContain("Enrolment application");
 		expect(html).toContain("Chidi Okeke");
-		expect(html).toContain("₦140,000");
+		expect(html).toContain(course.price);
 		expect(html).toContain(CONTACT.website);
 	});
 

@@ -3,7 +3,7 @@ import { Eyebrow, useReveal } from "../../components/site";
 import { COURSES, getCourseBySlug } from "../../lib/courses";
 import { pageMeta } from "../../lib/seo";
 
-export const Route = createFileRoute("/courses/$slug")({
+export const Route = createFileRoute("/courses/$slug/")({
 	component: CourseDetail,
 	ssr: false,
 	head: ({ params }) => {
@@ -170,8 +170,41 @@ function CourseDetail() {
 				</div>
 			</section>
 
+			{/* what you come away having built. Summaries only — the full brief for
+			    each project lives in docs/<course>/<project>.md, which is for whoever
+			    teaches it rather than for somebody deciding whether to enrol */}
+			<section className="wrap py-14">
+				<div className="reveal max-w-[42rem] mb-9">
+					<Eyebrow variant="build">What you build</Eyebrow>
+					<h2 className="display mt-4 text-[2rem] sm:text-[2.5rem]">
+						{course.projects.length} projects, not exercises.
+					</h2>
+					<p className="lead mt-4">
+						Each one comes after the modules that make it possible, and each is
+						its own finished thing rather than a stage of the last. You leave
+						with {course.projects.length} separate pieces of work.
+					</p>
+				</div>
+				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+					{course.projects.map((p) => (
+						<div key={p.n} className="step-card reveal">
+							<div className="flex items-center gap-2.5">
+								<span className="step-badge badge-build">{p.n}</span>
+								<span className="text-[0.78rem] text-mute font-semibold uppercase tracking-wider">
+									{p.capstone ? "Capstone" : `Weeks ${p.weeks}`}
+								</span>
+							</div>
+							{p.t && <h3 className="display text-[1.2rem] mt-4">{p.t}</h3>}
+							<p className={`lead text-[0.95rem] ${p.t ? "mt-2" : "mt-4"}`}>
+								{p.d}
+							</p>
+						</div>
+					))}
+				</div>
+			</section>
+
 			{/* the honest check, immediately before the fee and the enrol button —
-			    so nobody signs up for a cohort they can't take part in */}
+			    so nobody signs up for a course they can't take part in */}
 			<section className="wrap py-14">
 				<div className="reveal card p-8 md:p-12">
 					<div className="max-w-[42rem]">
@@ -181,8 +214,7 @@ function CourseDetail() {
 						</h2>
 						<p className="lead mt-4">
 							{course.requirements.level} — here is what to have ready before
-							the first session, so nothing gets in the way once the cohort
-							starts.
+							your first session, so nothing gets in the way once you start.
 						</p>
 					</div>
 					<div className="grid md:grid-cols-2 gap-6 md:gap-10 mt-9">
@@ -226,12 +258,13 @@ function CourseDetail() {
 					<div>
 						<Eyebrow variant="plain">Format</Eyebrow>
 						<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
-							Cohort-based, online, hands-on.
+							Taught live, online, hands-on.
 						</h2>
 						<p className="lead mt-4 max-w-[34rem]">
-							You learn alongside a cohort, with structured materials and real
-							feedback. Content has been delivered to active cohorts over
-							WhatsApp, keeping it close and accessible.
+							An instructor teaches you live, with structured materials and real
+							feedback, and you start whenever you are ready rather than waiting
+							for an intake. Sessions and materials run over WhatsApp, keeping
+							it close and accessible.
 						</p>
 						<div className="flex items-center gap-6 mt-6">
 							<div>
@@ -248,8 +281,8 @@ function CourseDetail() {
 					<div className="card panel-learn p-8">
 						<h3 className="display text-[1.3rem]">Ready to start?</h3>
 						<p className="lead mt-2">
-							Tell us a little about you and we'll share the next cohort
-							details.
+							Tell us a little about you and we'll agree your start date and
+							session times.
 						</p>
 						<Link
 							to="/enrol"

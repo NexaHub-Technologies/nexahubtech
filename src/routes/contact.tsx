@@ -15,7 +15,7 @@ export const Route = createFileRoute("/contact")({
 		pageMeta({
 			title: "Contact — NexaHubTech",
 			description:
-				"Get in touch with NexaHubTech — join a cohort to learn web development, or start a project with the studio.",
+				"Get in touch with NexaHubTech — ask about a course, taught live and started whenever you like, or start a project with the studio.",
 			path: "/contact",
 			image: "/og/contact.jpg",
 		}),
@@ -254,8 +254,8 @@ function Contact() {
 						<div className="card panel-learn p-7">
 							<Eyebrow>For learners</Eyebrow>
 							<p className="lead mt-3">
-								Ask about any of the eleven courses, the next cohort, or whether
-								a track is right for where you’re starting from.
+								Ask about any of the eleven courses, when you could start, or
+								whether a track is right for where you’re starting from.
 							</p>
 						</div>
 						<div className="card panel-studio p-7">

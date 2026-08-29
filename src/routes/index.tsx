@@ -181,9 +181,10 @@ function WhatWeDo() {
 						Become a developer, properly.
 					</h3>
 					<p className="lead mt-3">
-						Eleven cohort-based tracks — frontend, JavaScript, React, Next.js,
-						backend, fullstack, mobile, cybersecurity, Python, data and video —
-						for people who want to truly understand how things work.
+						Eleven tracks taught live, started whenever you are ready —
+						frontend, JavaScript, React, Next.js, backend, fullstack, mobile,
+						cybersecurity, Python, data and video — for people who want to truly
+						understand how things work.
 					</p>
 					<ul className="mt-5">
 						{LEARN_FEATS.map((x) => (
@@ -377,8 +378,8 @@ function ClosingCTA() {
 				<Eyebrow>For learners</Eyebrow>
 				<h3 className="display text-[1.9rem] mt-3">Start your journey.</h3>
 				<p className="lead mt-3 max-w-[40rem]">
-					Join the next cohort and learn to build — the right way, from people
-					who do it every day.
+					Start whenever you are ready and learn to build — the right way,
+					taught live by people who do it every day.
 				</p>
 				<Link to="/courses" className="btn btn-primary mt-6">
 					Explore the courses

@@ -151,6 +151,30 @@ function Teaching() {
 				</div>
 			</section>
 
+			{/* rolling enrolment makes the stated length a pace, not a deadline —
+			    said once, here, because every course page prints a duration */}
+			<section className="wrap py-14">
+				<div className="reveal card panel-learn p-8 md:p-10">
+					<div className="max-w-[42rem]">
+						<Eyebrow>How long a course takes</Eyebrow>
+						<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
+							A week is a pace, not a deadline.
+						</h2>
+						<p className="lead mt-4">
+							Every course states a length — eight weeks, twelve weeks. That is
+							what it takes at the hours the course asks for, not a term you
+							have to keep up with. You start the day you are ready rather than
+							waiting for an intake, and nobody is behind.
+						</p>
+						<p className="lead mt-4">
+							Give it double the hours and you will finish in half the time.
+							Give it less and it takes longer. The order of the material does
+							not change, and neither does the teaching.
+						</p>
+					</div>
+				</div>
+			</section>
+
 			{/* what we refuse to do */}
 			<section className="wrap py-14">
 				<div className="reveal max-w-[42rem] mb-9">

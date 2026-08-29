@@ -10,7 +10,7 @@ export const Route = createFileRoute("/courses/")({
 		pageMeta({
 			title: "Courses — NexaHubTech",
 			description:
-				"Explore all courses at NexaHubTech — from web development, JavaScript, React and Next.js to cybersecurity, data analysis and videography. Learn real skills with cohort-based, hands-on teaching.",
+				"Explore all courses at NexaHubTech — from web development, JavaScript, React and Next.js to cybersecurity, data analysis and videography. Learn real skills with live, hands-on teaching you can start at any time.",
 			path: "/courses",
 			image: "/og/courses.jpg",
 		}),
@@ -32,8 +32,9 @@ function CoursesIndex() {
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
 						Eleven courses built on the same principle: understand first, then
-						build. Every track is cohort-based, hands-on, and designed to grow
-						real capability — not just familiarity.
+						build. Every track is taught live by an instructor, starts whenever
+						you are ready, and is designed to grow real capability — not just
+						familiarity.
 					</p>
 					<p className="rise rise-4 mt-4 text-[0.95rem] text-mute">
 						Select a course to see its modules, what a session looks like, and
@@ -98,8 +99,8 @@ function CoursesIndex() {
 						<div className="card panel-learn p-8">
 							<h3 className="display text-[1.3rem]">Ready to start?</h3>
 							<p className="lead mt-2">
-								Pick a course and tell us a little about you. We'll share the
-								next cohort details.
+								Pick a course and tell us a little about you. We'll agree your
+								start date and session times.
 							</p>
 							<Link
 								to="/enrol"

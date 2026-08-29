@@ -32,7 +32,7 @@ export const Route = createFileRoute("/enrol")({
 		pageMeta({
 			title: "Enrol — NexaHubTech",
 			description:
-				"Apply for a place on a NexaHubTech cohort. Tell us about you, pick your course and training mode, and we'll be in touch about the next intake.",
+				"Apply for a place at NexaHubTech — taught live, start any time. Tell us about you, pick your course and training mode, and we'll be in touch about your start date.",
 			path: "/enrol",
 			image: "/og/enrol.jpg",
 		}),
@@ -124,7 +124,7 @@ function CourseSummary({ slug }: { slug: string }) {
 				</span>
 			</div>
 			<p className="text-[0.85rem] text-mute mt-4">
-				{course.modules.length} modules · cohort-based · online
+				{course.modules.length} modules · taught live · start any time
 			</p>
 			<Link
 				to="/courses/$slug"
@@ -176,9 +176,9 @@ function EnrolForm({
 				<p className="lead mt-2 max-w-[30rem] mx-auto">
 					Thanks, {fullName.split(" ")[0]} — your application for{" "}
 					<strong>{getCourseBySlug(course)?.t}</strong> has landed in our inbox.
-					We'll reply to <strong>{email}</strong> with the next cohort details.
-					Submitting doesn't guarantee a place; we may reach out first for a
-					short screening chat.
+					We'll reply to <strong>{email}</strong> with your start date and
+					session times. Submitting doesn't guarantee a place; we may reach out
+					first for a short screening chat.
 				</p>
 				<div className="mt-6 flex flex-wrap gap-3 justify-center">
 					<a
@@ -258,7 +258,7 @@ function EnrolForm({
 		if (!experience) return "Tell us whether you have prior tech experience.";
 		if (!laptop) return "Tell us whether you have a suitable laptop.";
 		if (!heardFrom) return "Tell us how you heard about us.";
-		if (!commit) return "Tell us whether you can commit to the schedule.";
+		if (!commit) return "Tell us whether you can give the hours a week.";
 		return null;
 	}
 
@@ -441,7 +441,7 @@ function EnrolForm({
 
 			<SectionHead
 				title="Motivation & commitment"
-				note="How you found us, and whether the schedule works for you."
+				note="How you found us, and how much time you can give each week."
 			/>
 
 			<ChoiceGroup
@@ -453,7 +453,7 @@ function EnrolForm({
 			/>
 			<ChoiceGroup
 				name="commit"
-				label="Can you commit fully to the training schedule?"
+				label="Can you give the hours a week this course asks for?"
 				options={YES_NO}
 				value={commit}
 				onChange={pick(setCommit)}
@@ -548,7 +548,8 @@ function Enrol() {
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
 						Tell us a little about you and where you're starting from. It takes
-						a couple of minutes, and it helps us place you in the right cohort.
+						a couple of minutes, and it helps us point you at the right track
+						and agree a start date.
 					</p>
 				</div>
 			</section>
@@ -571,8 +572,8 @@ function Enrol() {
 								<li className="feat">
 									<span className="mk mk-learn">2</span>
 									<span>
-										We reply by email — usually within a day — with the next
-										cohort dates.
+										We reply by email — usually within a day — to agree your
+										start date and session times.
 									</span>
 								</li>
 								<li className="feat">

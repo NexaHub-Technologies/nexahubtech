@@ -131,7 +131,7 @@ export function enrolmentDocument(e: Enrolment): EmailDocument {
 			title: "Motivation & commitment",
 			fields: [
 				{ label: "Heard about us via", value: e.heardFrom },
-				{ label: "Can commit to the schedule", value: e.commit },
+				{ label: "Can give the hours a week", value: e.commit },
 			],
 		},
 		{
