@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMode } from "../components/mode";
 import { Eyebrow, useReveal } from "../components/site";
+import { COURSE_COUNT_WORD_CAP } from "../lib/courses";
 import { pageMeta } from "../lib/seo";
 import { SERVICES } from "../lib/services";
 
@@ -181,10 +182,10 @@ function WhatWeDo() {
 						Become a developer, properly.
 					</h3>
 					<p className="lead mt-3">
-						Eleven tracks taught live, started whenever you are ready —
-						frontend, JavaScript, React, Next.js, backend, fullstack, mobile,
-						cybersecurity, Python, data and video — for people who want to truly
-						understand how things work.
+						{COURSE_COUNT_WORD_CAP} tracks taught live, started whenever you are
+						ready — PC basics, Microsoft Office, frontend, JavaScript, React,
+						Next.js, backend, fullstack, mobile, cybersecurity, Python, data and
+						video — for people who want to truly understand how things work.
 					</p>
 					<ul className="mt-5">
 						{LEARN_FEATS.map((x) => (

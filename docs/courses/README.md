@@ -18,8 +18,16 @@ fails if a course has no document, if a module has no exercise brief, or if the
 projects do not tile the course — every module in exactly one project, every
 week accounted for, three or four projects, the last one the capstone.
 
+**Two courses have no projects.** PC Basics and Microsoft Office are assessed
+through their per-module exercise briefs alone, so the tiling rule does not apply
+to them; instead the test requires that they carry no projects section, no
+capstone and no spec directory, and that **every** one of their modules has an
+exercise brief rather than all but the last.
+
 | Course | Length | Fee | Level |
 |---|---|---|---|
+| [PC Basics](pc-basics.md) | 6 Weeks | ₦80,000 | Never used a computer |
+| [Microsoft Office](microsoft-office.md) | 10 Weeks | ₦110,000 | Clerical and office staff |
 | [Web Development (Fullstack)](web-development-fullstack.md) | 10 Weeks | ₦160,000 | Complete beginners |
 | [Frontend Development](frontend-development.md) | 10 Weeks | ₦120,000 | Complete beginners |
 | [JavaScript Programming](javascript-programming.md) | 8 Weeks | ₦100,000 | Beginners, and copy-paste JavaScript |
@@ -28,7 +36,7 @@ week accounted for, three or four projects, the last one the capstone.
 | [Backend Development](backend-development.md) | 8 Weeks | ₦100,000 | Beginners; some programming helps |
 | [Mobile Development](mobile-development.md) | 12 Weeks | ₦190,000 | Can already program |
 | [Cybersecurity](cybersecurity.md) | 16 Weeks | ₦230,000 | General technical confidence |
-| [Python Programming](python-programming.md) | 6 Weeks | ₦80,000 | Never coded before |
+| [Python Programming](python-programming.md) | 6 Weeks | ₦100,000 | Never coded before |
 | [Data Analysis](data-analysis.md) | 12 Weeks | ₦120,000 | Beginners who enjoy a question |
 | [Videography & Video Editing](videography-video-editing.md) | 8 Weeks | ₦120,000 | Complete beginners |
 

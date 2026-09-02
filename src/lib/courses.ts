@@ -28,6 +28,19 @@ export interface Requirements {
 	have: string[];
 }
 
+/* how the course is actually delivered. This lives on the course record rather
+   than as fixed copy in the route because it is not fixed: PC Basics is taught
+   in person, and the course page told visitors it was online until somebody read
+   the curriculum document and the page side by side. The document states the same
+   thing in its Format row, and `src/lib/course-docs.test.ts` fails if the two
+   disagree about whether a course is taught in person. */
+export interface Format {
+	/* the headline — how it is delivered, as a sentence */
+	t: string;
+	/* what that means in practice */
+	d: string;
+}
+
 /* the projects a student builds, in summary. The full brief for each lives in
    docs/<course>/<project>.md — the course page shows only enough to know what you
    would come away having built. */
@@ -49,6 +62,7 @@ export interface Course {
 	price: string;
 	duration: string;
 	category: "learn" | "build";
+	format: Format;
 	mentalModel: MentalModel;
 	requirements: Requirements;
 	projects: CourseProject[];
@@ -57,7 +71,189 @@ export interface Course {
 	features: string[];
 }
 
+/* Twelve of the thirteen courses are delivered identically. They share one
+   object rather than carrying thirteen copies of the same paragraph, which is
+   how a single course quietly ends up describing itself wrongly. */
+const ONLINE: Format = {
+	t: "Taught live, online, hands-on.",
+	d: "An instructor teaches you live, with structured materials and real feedback, and you start whenever you are ready rather than waiting for an intake. Sessions and materials run over WhatsApp, keeping it close and accessible.",
+};
+
 export const COURSES: Course[] = [
+	{
+		slug: "pc-basics",
+		t: "PC Basics",
+		d: "Digital Literacy",
+		tagline:
+			"Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.",
+		price: "₦80,000",
+		duration: "6 Weeks",
+		category: "learn",
+		format: {
+			t: "Taught in the centre, in person.",
+			d: "Every other course here is taught live online. This one cannot be: the first thing a beginner needs is somebody beside them saying that one, on the left. Sitting a person who has never used a computer in front of a video call asks them to use the very skill the course exists to teach. Machines are provided, and you start whenever you are ready.",
+		},
+		mentalModel: {
+			t: "Everything lives somewhere",
+			d: "A computer never puts anything nowhere. Every document you save, every photo you copy, every app you install goes to a place that has a name — and that name is a path you can read out loud. Beginners lose work because they believe the machine decides where things go. It does not: it asks, and the answer is usually a box that got clicked past. Once you can say where a thing is, you can find it again, copy it, back it up and share it — and the fear goes with the not knowing.",
+			unlocks: [
+				"Find any file you have saved, on any computer, without hunting",
+				"Say what went wrong instead of starting the whole thing again",
+				"Move your work between a laptop, a phone and the cloud without losing it",
+			],
+		},
+		requirements: {
+			level: "The place to begin if a computer still feels risky",
+			know: [
+				"Nothing about computers — this is the course that assumes none",
+				"How to read and write in English",
+				"If you can already use a smartphone, you are further ahead than you think",
+			],
+			have: [
+				"A laptop running Windows, macOS or Linux — or use one of ours in the centre",
+				"A phone that can receive SMS, for setting up accounts safely",
+				"A USB drive of any size, for the backup you will actually restore from",
+				"4–5 hours a week outside sessions to practise",
+			],
+		},
+		projects: [],
+		modules: [
+			{
+				n: "01",
+				t: "The machine, and what it is doing",
+				d: "The parts, the desktop, the mouse and the keyboard — and why nothing you click can break it.",
+			},
+			{
+				n: "02",
+				t: "Files, folders and where things go",
+				d: "Paths, saving, naming, copying and backing up. The module the whole course is built on.",
+			},
+			{
+				n: "03",
+				t: "Documents, numbers and slides",
+				d: "Write a letter properly, make a spreadsheet do the arithmetic, and build a deck worth showing.",
+			},
+			{
+				n: "04",
+				t: "The internet, email and accounts",
+				d: "Browse, search well, judge what you find, and set up an account you can get back into.",
+			},
+			{
+				n: "05",
+				t: "Staying safe, and getting unstuck",
+				d: "Scams, passwords and privacy — plus how to describe a problem well enough to be helped.",
+			},
+		],
+		session: [
+			{
+				t: "A mental model",
+				d: "Every session opens with the idea, explained plainly, before anything is clicked.",
+			},
+			{
+				t: "An exercise brief",
+				d: "A focused task that makes you use the concept — not just watch it being done.",
+			},
+			{
+				t: "A model answer",
+				d: "A worked solution to compare against, so you learn what good looks like.",
+			},
+		],
+		features: [
+			"No computer experience assumed at all",
+			"Files and folders taught properly, not guessed at",
+			"Word processing, spreadsheets and slides",
+			"Email, accounts and staying safe from scams",
+			"Machines available in the centre if you do not own one",
+		],
+	},
+	{
+		slug: "microsoft-office",
+		t: "Microsoft Office",
+		d: "Word, Excel, PowerPoint & Access",
+		tagline:
+			"The four programs an office actually runs on, taught to the standard the work deserves.",
+		price: "₦110,000",
+		duration: "10 Weeks",
+		category: "learn",
+		format: ONLINE,
+		mentalModel: {
+			t: "The data is not the document",
+			d: "Each of these four programs keeps two things apart, and nearly every hour a self-taught office worker loses comes from mixing them up. There is the information — names, amounts, dates, records — and there is the way it happens to be laid out today. A style, a formula, a slide master and a query are all the same move: describe the presentation once, point it at the data, and let the program redraw it. Type the answer in by hand instead and you have made something that is correct exactly once, and wrong the first time anything changes.",
+			unlocks: [
+				"Change a hundred pages, or ten thousand rows, with one edit",
+				"Hand over a file a colleague can safely change without breaking it",
+				"Know which of the four programs a job actually belongs in",
+			],
+		},
+		requirements: {
+			level: "Built for clerical and office staff already doing the work",
+			know: [
+				"How to use a computer confidently — files, folders, saving, email",
+				"You have opened Word and Excel before, even if nobody showed you how",
+				"No formulas, no databases and no macros are assumed",
+			],
+			have: [
+				"A Windows PC — Access is not made for macOS, and module 05 is Access",
+				"A Microsoft 365 or Office licence, or use a licensed machine in the centre",
+				"Real work from your own desk to bring, or use the sample desk we supply",
+				"4–6 hours a week outside sessions to practise",
+			],
+		},
+		projects: [],
+		modules: [
+			{
+				n: "01",
+				t: "Word, properly",
+				d: "Styles, templates, long documents and mail merge — the difference between typing and producing.",
+			},
+			{
+				n: "02",
+				t: "PowerPoint that carries a decision",
+				d: "Slide masters, and a deck that still works when it is read without you in the room.",
+			},
+			{
+				n: "03",
+				t: "Excel: the data table and its formulas",
+				d: "One clean table, honest columns, and every figure a formula that recalculates.",
+			},
+			{
+				n: "04",
+				t: "Excel: lookups, pivots and reporting",
+				d: "Joining two sheets, summarising thousands of rows, and charts that answer one question.",
+			},
+			{
+				n: "05",
+				t: "Access: tables, relationships and queries",
+				d: "When a spreadsheet stops being the right answer, and what a database does instead.",
+			},
+			{
+				n: "06",
+				t: "Choosing the right tool, and handing over",
+				d: "Which of the four a job belongs in, and how to leave work a colleague can run.",
+			},
+		],
+		session: [
+			{
+				t: "A mental model",
+				d: "Every session opens with the idea, explained plainly, before anything is clicked.",
+			},
+			{
+				t: "An exercise brief",
+				d: "A focused task that makes you use the concept — not just watch it being done.",
+			},
+			{
+				t: "A model answer",
+				d: "A worked solution to compare against, so you learn what good looks like.",
+			},
+		],
+		features: [
+			"Word, Excel, PowerPoint and Access in one path",
+			"Mail merge, lookups, pivot tables and relational queries",
+			"Built around real clerical work, not invented exercises",
+			"When to stop using a spreadsheet and start using a database",
+			"Licensed machines available in the centre",
+		],
+	},
 	{
 		slug: "web-development-fullstack",
 		t: "Web Development",
@@ -67,6 +263,7 @@ export const COURSES: Course[] = [
 		price: "₦160,000",
 		duration: "10 Weeks",
 		category: "learn",
+		format: ONLINE,
 		mentalModel: {
 			t: "Two computers, one conversation",
 			d: "A browser and a server are separate machines that only ever pass text between them. One asks; the other answers. Every framework, database and deployment step you will ever meet is a refinement of that single exchange — so when something breaks, you always have a first question worth asking: which side is this happening on, and what did it actually send?",
@@ -179,6 +376,7 @@ export const COURSES: Course[] = [
 		price: "₦120,000",
 		duration: "10 Weeks",
 		category: "learn",
+		format: ONLINE,
 		mentalModel: {
 			t: "You describe; the browser draws",
 			d: "You never place a pixel yourself. You hand the browser a document and a set of rules, and it computes the result — structure first, then layout, then paint. Once CSS reads as constraints you hand a layout engine rather than positions you set by hand, “why is it doing that?” stops being a mystery and becomes a question you can reason your way to.",
@@ -279,6 +477,7 @@ export const COURSES: Course[] = [
 		price: "₦100,000",
 		duration: "8 Weeks",
 		category: "learn",
+		format: ONLINE,
 		mentalModel: {
 			t: "The language is small; the runtime is the rest",
 			d: "Most of what people call JavaScript is not JavaScript. Values, functions, objects and the event loop are the language, and they are identical everywhere it runs. The DOM, fetch, the file system, timers — those are whatever the host happens to hand you. Once you can tell the two apart, moving between a browser and Node stops being a new language to learn and becomes a new set of tools around one you already have.",
@@ -386,6 +585,7 @@ export const COURSES: Course[] = [
 		price: "₦120,000",
 		duration: "8 Weeks",
 		category: "learn",
+		format: ONLINE,
 		mentalModel: {
 			t: "The screen is a function of state",
 			d: "You don't update the page. You change state, describe what the page should look like for any given state, and let React work out the difference. Every stale value, surprise re-render and “why didn't it update?” dissolves once you stop listing the steps to change the screen and start describing what the screen is for the data you hold.",
@@ -493,6 +693,7 @@ export const COURSES: Course[] = [
 		price: "₦160,000",
 		duration: "10 Weeks",
 		category: "learn",
+		format: ONLINE,
 		mentalModel: {
 			t: "One codebase, two machines",
 			d: "Your code runs in two places — a server you control and a browser you don't — and Next.js lets you write both in one file tree. Nearly every decision it asks of you is the same question wearing different clothes: which machine should this run on, and what has to travel between them? Server or client, where to fetch, what to cache.",
@@ -606,6 +807,7 @@ export const COURSES: Course[] = [
 		price: "₦100,000",
 		duration: "8 Weeks",
 		category: "learn",
+		format: ONLINE,
 		mentalModel: {
 			t: "A server is a function you can call over a wire",
 			d: "Strip away the frameworks and a backend does one thing: it takes a request and returns a response. What makes it hard is that it does this for many people at once, and it remembers things between calls. Hold those two apart — the translation, and the state it touches — and routing, middleware, databases and auth each drop into place.",
@@ -706,6 +908,7 @@ export const COURSES: Course[] = [
 		price: "₦190,000",
 		duration: "12 Weeks",
 		category: "build",
+		format: ONLINE,
 		mentalModel: {
 			t: "Your app is a guest, not the host",
 			d: "A phone interrupts you. A call arrives, the user switches away, the system reclaims your memory, the network vanishes halfway through a tap. A mobile app isn't a program that runs from start to finish — it is something that has to survive being paused, resumed and quietly destroyed, and still look to the person holding it as though it never left.",
@@ -806,6 +1009,7 @@ export const COURSES: Course[] = [
 		price: "₦230,000",
 		duration: "16 Weeks",
 		category: "build",
+		format: ONLINE,
 		mentalModel: {
 			t: "Every system has a boundary, and attacks cross it",
 			d: "Security isn't a feature you bolt on; it is a property of where you place trust. Draw the line between what you control and what you don't, and every vulnerability turns out to have the same shape: something crossed that line and was trusted on the far side. Injection, XSS, broken authentication — each is trust granted where it was never earned.",
@@ -915,9 +1119,10 @@ export const COURSES: Course[] = [
 		d: "",
 		tagline:
 			"Learn programming from scratch with Python — the language that powers everything from scripts to AI.",
-		price: "₦80,000",
+		price: "₦100,000",
 		duration: "6 Weeks",
 		category: "learn",
+		format: ONLINE,
 		mentalModel: {
 			t: "Names are labels, not boxes",
 			d: "A variable in Python is a name tied to an object, not a container holding one. Two names can point at the same list. Passing a value to a function passes the label, not a copy. This one idea explains almost every surprise a beginner runs into — mutation, identity, default arguments — and turns programming into watching data change shape rather than memorising syntax.",
@@ -1018,6 +1223,7 @@ export const COURSES: Course[] = [
 		price: "₦120,000",
 		duration: "12 Weeks",
 		category: "learn",
+		format: ONLINE,
 		mentalModel: {
 			t: "Data answers the question you actually asked",
 			d: "Every number in a dataset is the residue of a decision somebody made — what to record, what to leave out, how to count it. Analysis is less about tools than about keeping the question, the data and the claim honestly aligned. The real skill is noticing the gap between what you want to know and what this data can actually tell you.",
@@ -1125,6 +1331,7 @@ export const COURSES: Course[] = [
 		price: "₦120,000",
 		duration: "8 Weeks",
 		category: "build",
+		format: ONLINE,
 		mentalModel: {
 			t: "You are directing attention, not recording events",
 			d: "A camera doesn't capture a scene — it excludes everything outside the frame. A light doesn't only brighten; it tells the eye where to go. A cut moves attention from one thing to the next. Once framing, lighting and editing read as three ways of answering the same question — what should the viewer be looking at, and when — technique stops being a list of settings and becomes a set of decisions.",
@@ -1217,6 +1424,41 @@ export const COURSES: Course[] = [
 		],
 	},
 ];
+
+const NUMBER_WORDS = [
+	"zero",
+	"one",
+	"two",
+	"three",
+	"four",
+	"five",
+	"six",
+	"seven",
+	"eight",
+	"nine",
+	"ten",
+	"eleven",
+	"twelve",
+	"thirteen",
+	"fourteen",
+	"fifteen",
+	"sixteen",
+	"seventeen",
+	"eighteen",
+	"nineteen",
+	"twenty",
+];
+
+/* Five sentences across the site say how many courses there are, in words. On
+   the day a twelfth course was added every one of them still said "eleven" —
+   a number spelled out in prose is invisible to the compiler, to the tests and
+   to anyone not looking for it. Derived here so they cannot drift again, and
+   `src/lib/courses.test.ts` fails if a route spells one out by hand. */
+export const COURSE_COUNT = COURSES.length;
+export const COURSE_COUNT_WORD =
+	NUMBER_WORDS[COURSE_COUNT] ?? String(COURSE_COUNT);
+export const COURSE_COUNT_WORD_CAP =
+	COURSE_COUNT_WORD.charAt(0).toUpperCase() + COURSE_COUNT_WORD.slice(1);
 
 export function getCourseBySlug(slug: string): Course | undefined {
 	return COURSES.find((c) => c.slug === slug);

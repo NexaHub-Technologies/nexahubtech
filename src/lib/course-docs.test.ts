@@ -40,11 +40,13 @@ describe("course curriculum docs", () => {
 	it("gives every module an exercise brief", () => {
 		for (const c of COURSES) {
 			const briefs = doc(c.slug).match(/\*\*Exercise brief/g) ?? [];
-			/* every module but the last, whose work is the course capstone and now
-			   lives in the Projects section rather than in the module */
-			expect(briefs.length, `${c.slug}`).toBeGreaterThanOrEqual(
-				c.modules.length - 1,
-			);
+			/* Where a course has projects, the last module's work is the capstone and
+			   lives in the Projects section rather than in the module — so one fewer
+			   brief is correct. A course with no projects has no capstone to absorb
+			   it, so every module must carry its own. */
+			const required =
+				c.projects.length > 0 ? c.modules.length - 1 : c.modules.length;
+			expect(briefs.length, `${c.slug}`).toBeGreaterThanOrEqual(required);
 		}
 	});
 
@@ -63,6 +65,21 @@ describe("course curriculum docs", () => {
 
 		for (const c of COURSES) {
 			const md = doc(c.slug);
+
+			/* Not every course has projects. PC Basics and Microsoft Office are
+			   assessed through their per-module exercises, so the tiling rule cannot
+			   apply — but "no projects" has to mean no projects everywhere, or the
+			   document and the course record drift apart. */
+			if (c.projects.length === 0) {
+				expect(md, `${c.slug} has no projects section`).not.toContain(
+					"## Projects",
+				);
+				expect(md, `${c.slug} has no project blocks`).not.toMatch(
+					/^### Project \d+ — /m,
+				);
+				continue;
+			}
+
 			const section = md.split("## Projects")[1] ?? "";
 			const blocks = [
 				...section.matchAll(
@@ -104,8 +121,14 @@ describe("course curriculum docs", () => {
 		}
 	});
 
-	it("ends every course on a capstone", () => {
+	it("ends every course on a capstone, unless it has no projects", () => {
 		for (const c of COURSES) {
+			if (c.projects.length === 0) {
+				/* the capstone is the last project; with no projects there is nothing
+				   for it to be, and a stray marker would be a leftover */
+				expect(doc(c.slug), `${c.slug}`).not.toContain("**Course capstone.**");
+				continue;
+			}
 			expect(doc(c.slug), `${c.slug}`).toContain("**Course capstone.**");
 		}
 	});
@@ -124,7 +147,10 @@ describe("course curriculum docs", () => {
 
 		for (const c of COURSES) {
 			const md = doc(c.slug);
-			const plan = md.split("## Week plan")[1]?.split("## Projects")[0];
+			/* Split on the next H2, not on "## Projects" by name — two courses have
+			   no projects section, and splitting on a heading that is not there
+			   silently hands this test every module body as well. */
+			const plan = md.split("## Week plan")[1]?.split(/\n## /)[0];
 			expect(plan, `${c.slug} has a week plan`).toBeTruthy();
 
 			const rows = [
@@ -229,6 +255,17 @@ describe("course curriculum docs", () => {
 				...doc(c.slug).matchAll(/^### Project \d+ — (.+)$/gm),
 			].map((m) => slugify((m[1] as string).trim()));
 
+			/* a course with no projects has nothing to generate, so an existing
+			   directory means the generator ran before the projects were removed and
+			   the stale specs were never cleared */
+			if (c.projects.length === 0) {
+				expect(
+					existsSync(`docs/${c.slug}`),
+					`${c.slug} has no projects, so must have no spec dir`,
+				).toBe(false);
+				continue;
+			}
+
 			/* videography's projects are not named yet — its specs are coming from
 			   the videography instructor */
 			if (c.slug === "videography-video-editing") {
@@ -245,6 +282,35 @@ describe("course curriculum docs", () => {
 				.sort();
 
 			expect(specs, `${c.slug} specs`).toEqual([...titles].sort());
+		}
+	});
+
+	/* The course page told visitors PC Basics was "taught live, online" while its
+	   curriculum document said, at length, that it is taught in person and could
+	   not be taught any other way. Two sources of truth, one of them wrong on a
+	   page people enrol from. The delivery is now a field on the course record and
+	   this holds it to what the document says. */
+	it("agrees with each document about whether a course is taught in person", () => {
+		const IN_PERSON = /in person|in the centre/i;
+
+		for (const c of COURSES) {
+			const row = doc(c.slug).match(/^\| \*\*Format\*\* \| (.+?) \|$/m);
+			expect(row, `${c.slug} has a Format row`).toBeTruthy();
+
+			const saysInPerson = IN_PERSON.test(row?.[1] ?? "");
+			const recordSaysInPerson = IN_PERSON.test(`${c.format.t} ${c.format.d}`);
+
+			expect(
+				recordSaysInPerson,
+				`${c.slug}: the document says "${row?.[1]}" but the course record says "${c.format.t}"`,
+			).toBe(saysInPerson);
+		}
+	});
+
+	it("gives every course a delivery its page can render", () => {
+		for (const c of COURSES) {
+			expect(c.format.t.trim(), c.slug).not.toBe("");
+			expect(c.format.d.length, c.slug).toBeGreaterThan(80);
 		}
 	});
 

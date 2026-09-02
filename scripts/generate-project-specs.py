@@ -60,6 +60,9 @@ written = []
 for slug, meta in META.items():
     p = f"docs/courses/{slug}.md"
     s = io.open(p, encoding="utf-8").read()
+    # a course may legitimately have no projects: the two office tracks are
+    # assessed through their per-module exercises instead. No section means
+    # nothing to generate and, importantly, no empty directory to leave behind.
     if "## Projects" not in s: continue
     sec = s.split("## Projects")[1].split("\n---\n\n## Module 01")[0]
     blocks = re.split(r"(?=^### Project \d+ — )", sec, flags=re.M)[1:]
@@ -115,7 +118,6 @@ for slug, meta in META.items():
         parts += [body, "",
                   "---", "",
                   "## Where this sits", "",
-                  f"- Full syllabus: `/courses/{slug}/syllabus`",
                   f"- Curriculum document: [`docs/courses/{slug}.md`](../courses/{slug}.md)",
                   f"- Name register: [`docs/courses/NAMES.md`](../courses/NAMES.md)",
                   ""]

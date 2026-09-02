@@ -172,36 +172,42 @@ function CourseDetail() {
 
 			{/* what you come away having built. Summaries only — the full brief for
 			    each project lives in docs/<course>/<project>.md, which is for whoever
-			    teaches it rather than for somebody deciding whether to enrol */}
-			<section className="wrap py-14">
-				<div className="reveal max-w-[42rem] mb-9">
-					<Eyebrow variant="build">What you build</Eyebrow>
-					<h2 className="display mt-4 text-[2rem] sm:text-[2.5rem]">
-						{course.projects.length} projects, not exercises.
-					</h2>
-					<p className="lead mt-4">
-						Each one comes after the modules that make it possible, and each is
-						its own finished thing rather than a stage of the last. You leave
-						with {course.projects.length} separate pieces of work.
-					</p>
-				</div>
-				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-					{course.projects.map((p) => (
-						<div key={p.n} className="step-card reveal">
-							<div className="flex items-center gap-2.5">
-								<span className="step-badge badge-build">{p.n}</span>
-								<span className="text-[0.78rem] text-mute font-semibold uppercase tracking-wider">
-									{p.capstone ? "Capstone" : `Weeks ${p.weeks}`}
-								</span>
+			    teaches it rather than for somebody deciding whether to enrol.
+
+			    Not every course has projects: the two office tracks are assessed
+			    through the per-module exercises instead, and render nothing here
+			    rather than an empty heading promising "0 projects". */}
+			{course.projects.length > 0 && (
+				<section className="wrap py-14">
+					<div className="reveal max-w-[42rem] mb-9">
+						<Eyebrow variant="build">What you build</Eyebrow>
+						<h2 className="display mt-4 text-[2rem] sm:text-[2.5rem]">
+							{course.projects.length} projects, not exercises.
+						</h2>
+						<p className="lead mt-4">
+							Each one comes after the modules that make it possible, and each
+							is its own finished thing rather than a stage of the last. You
+							leave with {course.projects.length} separate pieces of work.
+						</p>
+					</div>
+					<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+						{course.projects.map((p) => (
+							<div key={p.n} className="step-card reveal">
+								<div className="flex items-center gap-2.5">
+									<span className="step-badge badge-build">{p.n}</span>
+									<span className="text-[0.78rem] text-mute font-semibold uppercase tracking-wider">
+										{p.capstone ? "Capstone" : `Weeks ${p.weeks}`}
+									</span>
+								</div>
+								{p.t && <h3 className="display text-[1.2rem] mt-4">{p.t}</h3>}
+								<p className={`lead text-[0.95rem] ${p.t ? "mt-2" : "mt-4"}`}>
+									{p.d}
+								</p>
 							</div>
-							{p.t && <h3 className="display text-[1.2rem] mt-4">{p.t}</h3>}
-							<p className={`lead text-[0.95rem] ${p.t ? "mt-2" : "mt-4"}`}>
-								{p.d}
-							</p>
-						</div>
-					))}
-				</div>
-			</section>
+						))}
+					</div>
+				</section>
+			)}
 
 			{/* the honest check, immediately before the fee and the enrol button —
 			    so nobody signs up for a course they can't take part in */}
@@ -258,14 +264,9 @@ function CourseDetail() {
 					<div>
 						<Eyebrow variant="plain">Format</Eyebrow>
 						<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
-							Taught live, online, hands-on.
+							{course.format.t}
 						</h2>
-						<p className="lead mt-4 max-w-[34rem]">
-							An instructor teaches you live, with structured materials and real
-							feedback, and you start whenever you are ready rather than waiting
-							for an intake. Sessions and materials run over WhatsApp, keeping
-							it close and accessible.
-						</p>
+						<p className="lead mt-4 max-w-[34rem]">{course.format.d}</p>
 						<div className="flex items-center gap-6 mt-6">
 							<div>
 								<span className="display text-[1.6rem]">{course.price}</span>

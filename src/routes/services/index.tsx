@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eyebrow, useReveal } from "../../components/site";
 import { pageMeta } from "../../lib/seo";
 import { SERVICES } from "../../lib/services";
+import { COURSE_COUNT_WORD } from "../../lib/courses";
 
 export const Route = createFileRoute("/services/")({
 	component: ServicesIndex,
@@ -85,7 +86,7 @@ function ServicesIndex() {
 					>
 						<Eyebrow>Looking to learn instead?</Eyebrow>
 						<h2 className="display text-[1.6rem] mt-3">
-							The school runs eleven courses.
+							The school runs {COURSE_COUNT_WORD} courses.
 						</h2>
 						<p className="lead mt-3 text-[0.97rem] flex-1">
 							Frontend, JavaScript, React, Next.js, backend, fullstack, mobile,

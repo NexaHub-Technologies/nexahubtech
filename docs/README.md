@@ -34,6 +34,12 @@ external dependency, and the full brief with its definition of done.
 from the videography instructor, so `docs/courses/videography-video-editing.md`
 still carries the generic briefs.
 
+**PC Basics and Microsoft Office have no projects at all**, by design rather than
+by omission. Both are assessed through their per-module exercise briefs: the
+people taking them need competence at a job they are already doing, not a
+portfolio piece. Neither has a `docs/<course>/` directory, and
+`src/lib/course-docs.test.ts` fails if one appears.
+
 ## How the two stay in step
 
 The spec files are **generated from the curriculum documents**, so the brief a
@@ -47,10 +53,21 @@ spec file has no project, or if two projects anywhere share a name.
 
 ## Before any of this can be taught
 
-Eleven artefacts are **blocking** — the project cannot run until the school has
-built them. They are listed per project under *Supplied by the school*, and
-include a teaching database, two deliberately-bad codebases, a deliberately
-vulnerable web application, two lab ranges, and an archived dataset snapshot.
+**Twenty-one artefacts across sixteen projects are blocking** — the project
+cannot run until the school has built them. They are listed per project under
+*Supplied by the school*, and include a teaching database, two deliberately-bad
+codebases, a deliberately vulnerable web application, two lab ranges and an
+archived dataset snapshot.
+
+The count is not maintained by hand — it is the `SUPPLIED` table in
+`scripts/generate-project-specs.py`, which is also what puts those lines into the
+spec files. Recount it there rather than trusting this paragraph:
+
+```
+python3 -c "import re;src=open('scripts/generate-project-specs.py').read();\
+ns={};exec(src[src.index('SUPPLIED = {'):src.index(chr(10)+'}',src.index('SUPPLIED = {'))+2],ns);\
+print(len(ns['SUPPLIED']),'projects,',sum(len(v) for v in ns['SUPPLIED'].values()),'artefacts')"
+```
 
 Four courses need **nothing** built and can be taught from writing alone:
 JavaScript Programming, Backend Development, Next.js, and Mobile project 1.

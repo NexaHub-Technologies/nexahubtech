@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eyebrow, useReveal } from "../../components/site";
-import { COURSES } from "../../lib/courses";
+import { COURSE_COUNT_WORD_CAP, COURSES } from "../../lib/courses";
 import { pageMeta } from "../../lib/seo";
 
 export const Route = createFileRoute("/courses/")({
@@ -31,10 +31,10 @@ function CoursesIndex() {
 						<span style={{ color: "var(--learn-ink)" }}>taught properly</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
-						Eleven courses built on the same principle: understand first, then
-						build. Every track is taught live by an instructor, starts whenever
-						you are ready, and is designed to grow real capability — not just
-						familiarity.
+						{COURSE_COUNT_WORD_CAP} courses built on the same principle:
+						understand first, then build. Every track is taught live by an
+						instructor, starts whenever you are ready, and is designed to grow
+						real capability — not just familiarity.
 					</p>
 					<p className="rise rise-4 mt-4 text-[0.95rem] text-mute">
 						Select a course to see its modules, what a session looks like, and

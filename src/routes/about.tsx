@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eyebrow, useReveal } from "../components/site";
+import { COURSE_COUNT_WORD_CAP } from "../lib/courses";
 import { pageMeta } from "../lib/seo";
 
 export const Route = createFileRoute("/about")({
@@ -212,7 +213,8 @@ function About() {
 					<div className="card card-lift panel-learn p-9">
 						<h3 className="display text-[1.6rem]">Want to learn with us?</h3>
 						<p className="lead mt-3">
-							Eleven tracks, from frontend to cybersecurity.
+							{COURSE_COUNT_WORD_CAP} tracks, from switching a computer on to
+							cybersecurity.
 						</p>
 						<Link to="/courses" className="btn btn-primary mt-5">
 							Explore the courses
