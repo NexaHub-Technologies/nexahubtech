@@ -21,7 +21,11 @@
   --card: #ffffff;
   --ink: #311049;           /* warm deep plum — headlines & body */
   --ink-soft: #574164;      /* warm mauve-plum — long-form body text */
-  --mute: #786a85;          /* warm muted mauve — captions */
+  /* darkened from #786a85, which measured 4.42:1 on the light ground — under
+     the 4.5:1 AA floor before the brand mark was ever added, and 3.98:1 with
+     it. This clears AA in both cases (5.01 plain, 4.50 over the mark) and is
+     the same hue and saturation, one step darker. */
+  --mute: #6f627b;          /* warm muted mauve — captions */
   --mute-2: #bfaecb;        /* faint warm lilac — placeholders */
 
   --marigold: #6a2cad;      /* LEARN — toned-down violet, primary CTA */
@@ -46,6 +50,20 @@
      are near-black and drop to 1.2:1 on the studio's dark ground. */
   --learn-ink: var(--marigold-ink);
   --build-ink: var(--teal-deep);
+
+  /* the brand mark, as a background layer. It is inlined rather than linked so
+     it costs no request, and it is a token rather than one fixed image because a
+     background-image cannot inherit currentColor — the light ground needs plum
+     and the studio's dark ground needs pale lilac. The opacity is set inside the
+     SVG so the layer can sit in a list beside the gradients without needing its
+     own element.
+
+     The complete lockup — corner brackets and the centre square. An earlier
+     version dropped the square because at 5.5% it read as a slab; the fix is a
+     lower opacity for the whole mark, not a different mark. A large filled area
+     needs a smaller value than thin brackets do to sit at the same visual
+     weight. */
+  --mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23311049' fill-opacity='.038' d='M0,0L30.68,0L30.68,7.96L7.96,7.96L7.96,46.02L0,46.02L0,0ZM38.64,92.04L61.36,92.04L61.36,100L38.64,100L38.64,92.04ZM100,99.71L69.32,99.71L69.32,91.76L92.04,91.76L92.04,53.69L100,53.69L100,99.71ZM15.34,15.34L84.66,15.34L84.66,84.66L15.34,84.66L15.34,15.34ZM100,0.29L100,46.31L92.04,46.31L92.04,8.24L69.32,8.24L69.32,0.29L100,0.29ZM38.64,0L61.36,0L61.36,7.96L38.64,7.96L38.64,0ZM7.96,53.98L7.96,92.04L30.68,92.04L30.68,100L0,100L0,53.98L7.96,53.98Z'/%3E%3C/svg%3E");
 
   --line: rgba(49, 16, 73, 0.12);
   --line-soft: rgba(49, 16, 73, 0.07);
@@ -125,10 +143,26 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-    /* warm welcoming light — rose top-right into violet bottom-left, static */
+    /* three layers, front to back: the brand mark bleeding off the right edge,
+       then the warm welcoming light — rose top-right into violet bottom-left.
+       All static; nothing here animates or is attached to the viewport, because
+       a fixed background of this size is a known repaint cost on mobile.
+
+       One mark, deliberately. A second placement off the bottom left and a
+       sparse repeat behind both were tried and taken back out: more of the motif
+       meant layers that overlap, and where they stacked the composite pushed the
+       lightest text under the 4.5:1 AA floor.
+
+       The position and size lists must stay the same length as the image list.
+       The gradients carry their own position inside the gradient function, so
+       theirs are 0 0 / auto and only the mark is placed. */
     background-image:
+      var(--mark),
       radial-gradient(900px 600px at 92% -8%, rgba(240, 107, 168, 0.18), transparent 60%),
       radial-gradient(820px 620px at -6% 12%, rgba(106, 44, 173, 0.12), transparent 58%);
+    background-repeat: no-repeat;
+    background-position: right -7rem top 2.5rem, 0 0, 0 0;
+    background-size: min(70vw, 720px) auto, auto, auto;
   }
   ::selection {
     background: var(--marigold);
@@ -558,6 +592,8 @@
 
   --marigold-tint: #2c1440;
   --teal-tint: #241033;
+
+  --mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23f6eff4' fill-opacity='.042' d='M0,0L30.68,0L30.68,7.96L7.96,7.96L7.96,46.02L0,46.02L0,0ZM38.64,92.04L61.36,92.04L61.36,100L38.64,100L38.64,92.04ZM100,99.71L69.32,99.71L69.32,91.76L92.04,91.76L92.04,53.69L100,53.69L100,99.71ZM15.34,15.34L84.66,15.34L84.66,84.66L15.34,84.66L15.34,15.34ZM100,0.29L100,46.31L92.04,46.31L92.04,8.24L69.32,8.24L69.32,0.29L100,0.29ZM38.64,0L61.36,0L61.36,7.96L38.64,7.96L38.64,0ZM7.96,53.98L7.96,92.04L30.68,92.04L30.68,100L0,100L0,53.98L7.96,53.98Z'/%3E%3C/svg%3E");
 
   --line: rgba(246, 239, 244, 0.14);
   --line-soft: rgba(246, 239, 244, 0.08);
