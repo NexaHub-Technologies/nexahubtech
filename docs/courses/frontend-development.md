@@ -297,6 +297,41 @@ Put it together into a project you understand end to end — and can explain.
 **The project.** This module's work is Project 3, the course capstone —
 specified in full in the Projects section above.
 
+**Where this leads.** Everything in this course runs by opening a file in a
+browser, or by serving a folder. That is deliberate, and it is the reason the
+course works: it rests on *you describe; the browser draws*, and a build step
+puts a machine in the middle of that sentence. It is also, increasingly, not how
+frontend work is done in a job.
+
+Professional projects run through a build tool — **Vite** is the current default.
+It serves your pages while you work, reloads them as you save, and bundles them
+for deployment. None of that changes what the browser does; it changes what
+reaches the browser. You have already met the smallest version of the problem it
+solves: Shelf would not run from a `file://` address, so you had to serve the
+folder. A build tool is that, and a great deal more.
+
+We are not going to make you use one, and you should be suspicious of anyone who
+puts one in front of you before you can build a page without it. But you should
+know what it is when you meet it, and you should know what you are still missing:
+
+- **Modules** — `import` and `export`, instead of one script and the order of the
+  tags on the page.
+- **The terminal**, past the single command that serves a folder.
+- **Node**, and the package manager that comes with it.
+
+Those three are [JavaScript Programming](javascript-programming.md) module 05,
+and they are why **[React](react-development.md) is not the next course after
+this one**, even though it looks like it should be. React assumes modules, the
+terminal and Node from week one. Going straight there from here means meeting all
+four of those and React in the same fortnight, which is the most common way people
+bounce off React and conclude they are not clever enough for it.
+
+The path is **Frontend Development → JavaScript Programming → React**. Be warned
+that the first weeks of JavaScript Programming will feel like revision after
+module 04 here — it starts from values and assumes no JavaScript at all. It does
+not stay there: closures, the prototype chain, the event loop and the two
+runtimes are all past where this course stops.
+
 ## Assessment across the course
 
 No grades. A module is done when the exercise is done and you can explain it to

@@ -200,6 +200,18 @@ current load). The seed API is supplied.
 Rendering, reconciliation, and why the screen updates when it does — the model
 behind the API.
 
+**On the tooling.** Every project in this course is a **Vite** app —
+`npm create vite@latest`, then `npm run dev`. That is the current default, and it
+is deliberately not taught here, because none of it is React: Vite's whole job is
+to serve your files while you work and bundle them when you ship. Where a project
+below says *supplied*, it is a Vite project you clone and run.
+
+If the terminal, `npm`, or `import` and `export` are new to you, that is not a
+gap this course fills — take
+[JavaScript Programming](javascript-programming.md) module 05 first. It is
+assumed from week one here, and a student debugging their toolchain and
+reconciliation in the same week will learn neither.
+
 **By the end you can**
 - Say what "render" means, and what it does not mean.
 - Explain reconciliation and what a key is actually for.
