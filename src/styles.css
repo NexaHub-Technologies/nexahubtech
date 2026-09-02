@@ -1005,6 +1005,55 @@ a.contact-detail:hover {
   transform: translateY(-2px);
 }
 
+/* ── approach: the engineering detail, folded away ──────────────── */
+
+/* The eleven steps are supporting detail rather than the offer, so they sit
+   behind a disclosure. Native details/summary on purpose: it is keyboard
+   operable, announced correctly, and works before any JavaScript runs. */
+
+.approach-detail {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+}
+
+.approach-detail > summary {
+  cursor: pointer;
+  padding: 0.95rem 1.15rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 10px;
+}
+
+/* the default triangle, replaced with one that follows the open state */
+.approach-detail > summary::-webkit-details-marker { display: none; }
+
+.approach-detail > summary::after {
+  content: "";
+  inline-size: 0.5rem;
+  block-size: 0.5rem;
+  margin-inline-start: auto;
+  border-right: 2px solid var(--mode-accent);
+  border-bottom: 2px solid var(--mode-accent);
+  transform: rotate(45deg);
+  transition: transform 0.18s ease;
+}
+
+.approach-detail[open] > summary::after { transform: rotate(-135deg); }
+
+.approach-detail > summary:hover { color: var(--build-ink); }
+
+.approach-detail > summary:focus-visible {
+  outline: 2px solid var(--mode-accent);
+  outline-offset: 2px;
+}
+
+.approach-detail > div { padding: 0 1.15rem 1.25rem; }
+
 /* ── responsive ────────────────────────────────────────────────── */
 
 @media (max-width: 760px) {

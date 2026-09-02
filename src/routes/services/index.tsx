@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eyebrow, useReveal } from "../../components/site";
+import { COURSE_COUNT_WORD } from "../../lib/courses";
 import { pageMeta } from "../../lib/seo";
 import { SERVICES } from "../../lib/services";
-import { COURSE_COUNT_WORD } from "../../lib/courses";
 
 export const Route = createFileRoute("/services/")({
 	component: ServicesIndex,
@@ -69,12 +69,10 @@ function ServicesIndex() {
 						className="card card-lift reveal panel-studio p-8 flex flex-col"
 					>
 						<Eyebrow variant="build">Before we build</Eyebrow>
-						<h2 className="display text-[1.6rem] mt-3">
-							Eleven steps come first.
-						</h2>
+						<h2 className="display text-[1.6rem] mt-3">Design comes first.</h2>
 						<p className="lead mt-3 text-[0.97rem] flex-1">
-							Every project starts with system design — what should be built,
-							and why — settled and written down before implementation.
+							Every project starts by settling what should be built and why,
+							written down and agreed with you, before implementation begins.
 						</p>
 						<span className="view-link is-build mt-5">
 							See how we work <i aria-hidden="true">→</i>

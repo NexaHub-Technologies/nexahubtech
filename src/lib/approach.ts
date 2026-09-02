@@ -3,7 +3,14 @@
    write syntax, and the studio says understand before you write software.
 
    Grouped into three phases because eleven flat items read as a checklist, and
-   this is meant to read as an argument. */
+   this is meant to read as an argument. The phases are what the page leads with;
+   the steps are the detail underneath. An earlier version sold the number — the
+   headline was "eleven steps before a line of code" — which advertises process
+   volume to a buyer who is trying to work out whether we are slow and expensive.
+
+   Each phase also carries what the *client* does and gets. The first version of
+   this page described only what we do, in a room the client is not in, which is
+   precisely the half a buyer is reading the page to find out. */
 
 export interface ApproachStep {
 	n: string;
@@ -15,12 +22,19 @@ export interface ApproachPhase {
 	t: string;
 	/* why this phase exists at all — the case for spending time here */
 	d: string;
+	/* the client's side of it: what they are asked for, and what they hold at the
+	   end. Without this the page is an engineering diary rather than an offer. */
+	you: { does: string; gets: string };
 	steps: ApproachStep[];
 }
 
 export const APPROACH: ApproachPhase[] = [
 	{
 		t: "Understand the problem",
+		you: {
+			does: "Talk us through how the work is done today — who does what, where it goes wrong, and what that costs you. No specification needed; the brief is what we are trying to arrive at, not what you have to bring.",
+			gets: "A written statement of the problem, the constraints and the two or three journeys the organisation actually runs on — in your words, checked back with you.",
+		},
 		d: "Before anything is designed, we work out what is actually being asked. Most software that fails does so by solving a problem nobody had.",
 		steps: [
 			{
@@ -47,6 +61,10 @@ export const APPROACH: ApproachPhase[] = [
 	},
 	{
 		t: "Decide the architecture",
+		you: {
+			does: "Read the decisions and push back on them. This is the cheapest moment in the whole project to disagree, and the one place where an hour of your time is worth a fortnight of ours.",
+			gets: "A shape you can see: what your members will use, what your staff will use, who can see what, and what happens when the network drops mid-transaction.",
+		},
 		d: "Only once the problem is pinned down do we choose a shape. Every decision here is written down together with the reason it was made, so it can be argued with later.",
 		steps: [
 			{
@@ -73,6 +91,10 @@ export const APPROACH: ApproachPhase[] = [
 	},
 	{
 		t: "Commit to it",
+		you: {
+			does: "Approve the design and the cost, or send it back. Nothing gets built against a document you have not agreed to.",
+			gets: "A design document and a cost grounded in it — and, once building starts, a written note whenever reality forces a change, rather than a system quietly drifting away from what you signed off.",
+		},
 		d: "The last three steps turn a design into something you can hold us to — and something we can be measured against once the building starts.",
 		steps: [
 			{
@@ -93,6 +115,13 @@ export const APPROACH: ApproachPhase[] = [
 		],
 	},
 ];
+
+/* The obvious objection, answered on the page rather than in a first meeting.
+   Eleven steps sounds like a lot to somebody who wants a five-page site, and
+   claiming every job gets all of them would be both untrue and a promise a
+   client could hold us to. */
+export const SCALING =
+	"Not every project needs all of them. A brochure site for a company that wants to be found does not need a data layer designed around member roles. Software your members sign into every week does, and skipping it there is what produces the rebuild two years later. We tell you which of these a job is before you pay for any of it.";
 
 export const APPROACH_STEP_COUNT = APPROACH.reduce(
 	(n, phase) => n + phase.steps.length,
