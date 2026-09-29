@@ -8,6 +8,7 @@ import { SERVICES } from "../src/lib/services";
 const staticPaths = [
 	"/",
 	"/courses",
+	"/cbt",
 	"/teaching",
 	"/enrol",
 	"/services",

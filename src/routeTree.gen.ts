@@ -13,6 +13,8 @@ import { Route as WorkRouteImport } from './routes/work'
 import { Route as TeachingRouteImport } from './routes/teaching'
 import { Route as EnrolRouteImport } from './routes/enrol'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CbtTrainingRouteImport } from './routes/cbt-training'
+import { Route as CbtRouteImport } from './routes/cbt'
 import { Route as ApproachRouteImport } from './routes/approach'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -39,6 +41,16 @@ const EnrolRoute = EnrolRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CbtTrainingRoute = CbtTrainingRouteImport.update({
+  id: '/cbt-training',
+  path: '/cbt-training',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CbtRoute = CbtRouteImport.update({
+  id: '/cbt',
+  path: '/cbt',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApproachRoute = ApproachRouteImport.update({
@@ -81,6 +93,8 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/approach': typeof ApproachRoute
+  '/cbt': typeof CbtRoute
+  '/cbt-training': typeof CbtTrainingRoute
   '/contact': typeof ContactRoute
   '/enrol': typeof EnrolRoute
   '/teaching': typeof TeachingRoute
@@ -94,6 +108,8 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/approach': typeof ApproachRoute
+  '/cbt': typeof CbtRoute
+  '/cbt-training': typeof CbtTrainingRoute
   '/contact': typeof ContactRoute
   '/enrol': typeof EnrolRoute
   '/teaching': typeof TeachingRoute
@@ -108,6 +124,8 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/approach': typeof ApproachRoute
+  '/cbt': typeof CbtRoute
+  '/cbt-training': typeof CbtTrainingRoute
   '/contact': typeof ContactRoute
   '/enrol': typeof EnrolRoute
   '/teaching': typeof TeachingRoute
@@ -123,6 +141,8 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/approach'
+    | '/cbt'
+    | '/cbt-training'
     | '/contact'
     | '/enrol'
     | '/teaching'
@@ -136,6 +156,8 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/approach'
+    | '/cbt'
+    | '/cbt-training'
     | '/contact'
     | '/enrol'
     | '/teaching'
@@ -149,6 +171,8 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/approach'
+    | '/cbt'
+    | '/cbt-training'
     | '/contact'
     | '/enrol'
     | '/teaching'
@@ -163,6 +187,8 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ApproachRoute: typeof ApproachRoute
+  CbtRoute: typeof CbtRoute
+  CbtTrainingRoute: typeof CbtTrainingRoute
   ContactRoute: typeof ContactRoute
   EnrolRoute: typeof EnrolRoute
   TeachingRoute: typeof TeachingRoute
@@ -201,6 +227,20 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cbt-training': {
+      id: '/cbt-training'
+      path: '/cbt-training'
+      fullPath: '/cbt-training'
+      preLoaderRoute: typeof CbtTrainingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cbt': {
+      id: '/cbt'
+      path: '/cbt'
+      fullPath: '/cbt'
+      preLoaderRoute: typeof CbtRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/approach': {
@@ -259,6 +299,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ApproachRoute: ApproachRoute,
+  CbtRoute: CbtRoute,
+  CbtTrainingRoute: CbtTrainingRoute,
   ContactRoute: ContactRoute,
   EnrolRoute: EnrolRoute,
   TeachingRoute: TeachingRoute,

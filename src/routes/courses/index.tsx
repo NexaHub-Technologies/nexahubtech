@@ -79,6 +79,37 @@ function CoursesIndex() {
 				</div>
 			</section>
 
+			{/* CBT Training Banner */}
+			<section className="wrap pb-8">
+				<div className="reveal card panel-learn p-8 md:p-10 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+					<div className="max-w-[36rem]">
+						<span className="pill text-[0.78rem] !py-1 !px-2.5">
+							Exam Preparation · In-Person in Kubwa
+						</span>
+						<h2 className="display text-[1.6rem] mt-3">
+							Preparing for WAEC or JAMB CBT?
+						</h2>
+						<p className="lead text-[0.97rem] mt-2">
+							We run dedicated Computer-Based Test training at our Kubwa lab —
+							covering the JAMB 8-key system, on-screen calculator drills, time
+							management, and full-length timed mock exams.
+						</p>
+					</div>
+					<div className="flex flex-wrap gap-3 shrink-0">
+						<Link to="/cbt" className="btn btn-primary">
+							View CBT training
+						</Link>
+						<Link
+							to="/enrol"
+							search={{ course: "cbt-training" }}
+							className="btn btn-ghost"
+						>
+							Register now
+						</Link>
+					</div>
+				</div>
+			</section>
+
 			<section className="wrap py-14">
 				<div className="reveal card p-8 md:p-12">
 					<div className="grid md:grid-cols-[1.1fr_0.9fr] gap-6 items-center">

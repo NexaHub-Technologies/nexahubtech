@@ -86,13 +86,22 @@ export interface EmailDocument {
 }
 
 export function courseLabel(slug: string): string {
+	if (slug === "cbt" || slug === "cbt-training") {
+		return "CBT Training (WAEC & JAMB)";
+	}
 	const course = getCourseBySlug(slug);
 	if (!course) return slug;
 	return course.d ? `${course.t} (${course.d})` : course.t;
 }
 
 export function enrolmentDocument(e: Enrolment): EmailDocument {
+	const isCbt = e.course === "cbt" || e.course === "cbt-training";
 	const course = getCourseBySlug(e.course);
+	const courseFee = course?.price ?? (isCbt ? "From ₦15,000" : "—");
+	const courseDuration = course?.duration ?? (isCbt ? "2–4 Weeks" : "—");
+	const courseName = isCbt
+		? "CBT Training (WAEC & JAMB)"
+		: (course?.t ?? e.course);
 
 	const background: DocField[] = [
 		{ label: "Prior tech experience", value: e.experience },
@@ -122,8 +131,8 @@ export function enrolmentDocument(e: Enrolment): EmailDocument {
 			fields: [
 				{ label: "Applying for", value: courseLabel(e.course) },
 				{ label: "Training mode", value: e.mode },
-				{ label: "Course fee", value: course?.price ?? "—" },
-				{ label: "Duration", value: course?.duration ?? "—" },
+				{ label: "Course fee", value: courseFee },
+				{ label: "Duration", value: courseDuration },
 			],
 		},
 		{ title: "Technical background", fields: background },
@@ -157,9 +166,9 @@ export function enrolmentDocument(e: Enrolment): EmailDocument {
 		heading: e.fullName,
 		intro: `${e.fullName} has applied for ${courseLabel(e.course)} via ${CONTACT.website}. Reply to this email to reach them directly.`,
 		highlight: [
-			{ label: "Course", value: course?.t ?? e.course },
-			{ label: "Fee", value: course?.price ?? "—" },
-			{ label: "Duration", value: course?.duration ?? "—" },
+			{ label: "Course", value: courseName },
+			{ label: "Fee", value: courseFee },
+			{ label: "Duration", value: courseDuration },
 			{ label: "Mode", value: e.mode },
 		],
 		sections,

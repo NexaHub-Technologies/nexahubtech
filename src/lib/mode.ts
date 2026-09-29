@@ -18,6 +18,13 @@ export function modeForPath(pathname: string): SiteMode | null {
 		return "learn";
 	if (pathname === "/enrol") return "learn";
 	if (pathname === "/teaching") return "learn";
+	if (
+		pathname === "/cbt" ||
+		pathname.startsWith("/cbt/") ||
+		pathname === "/cbt-training" ||
+		pathname.startsWith("/cbt-training/")
+	)
+		return "learn";
 	if (pathname === "/services" || pathname.startsWith("/services/"))
 		return "build";
 	if (pathname === "/approach") return "build";

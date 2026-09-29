@@ -61,6 +61,16 @@ describe("enrolmentDocument", () => {
 		]);
 	});
 
+	it("resolves CBT training slugs correctly with fee and duration", () => {
+		const doc = enrolmentDocument({ ...base, course: "cbt-training" });
+		expect(doc.highlight.map((f) => f.value)).toEqual([
+			"CBT Training (WAEC & JAMB)",
+			"From ₦15,000",
+			"2–4 Weeks",
+			"Online training",
+		]);
+	});
+
 	it("drops the experience detail when there is no experience to describe", () => {
 		const doc = enrolmentDocument({
 			...base,

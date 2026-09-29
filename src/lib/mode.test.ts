@@ -28,6 +28,8 @@ describe("modeForPath", () => {
 		expect(modeForPath("/courses/frontend-development")).toBe("learn");
 		expect(modeForPath("/enrol")).toBe("learn");
 		expect(modeForPath("/teaching")).toBe("learn");
+		expect(modeForPath("/cbt")).toBe("learn");
+		expect(modeForPath("/cbt-training")).toBe("learn");
 	});
 
 	it("claims the studio routes for build", () => {
@@ -56,7 +58,13 @@ describe("destinationForModeSwitch", () => {
 		for (const p of ["/services", "/services/digital-solutions", "/approach"]) {
 			expect(destinationForModeSwitch(p, "learn")).toBe(ARM_HOME.learn);
 		}
-		for (const p of ["/courses", "/courses/react-development", "/teaching"]) {
+		for (const p of [
+			"/courses",
+			"/courses/react-development",
+			"/teaching",
+			"/cbt",
+			"/cbt-training",
+		]) {
 			expect(destinationForModeSwitch(p, "build")).toBe(ARM_HOME.build);
 		}
 	});
@@ -64,6 +72,8 @@ describe("destinationForModeSwitch", () => {
 	it("stays put when the page already belongs to the arm you chose", () => {
 		expect(destinationForModeSwitch("/services", "build")).toBeNull();
 		expect(destinationForModeSwitch("/courses", "learn")).toBeNull();
+		expect(destinationForModeSwitch("/cbt", "learn")).toBeNull();
+		expect(destinationForModeSwitch("/cbt-training", "learn")).toBeNull();
 	});
 
 	it("leaves shared pages alone — they belong to both arms", () => {
