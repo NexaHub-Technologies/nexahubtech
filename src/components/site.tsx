@@ -34,6 +34,7 @@ export function Logo({
 export const NAV = [
 	{ to: "/", label: "Home" },
 	{ to: "/courses", label: "Courses", side: "learn" },
+	{ to: "/cbt", label: "CBT Training", side: "learn" },
 	{ to: "/teaching", label: "Teaching", side: "learn" },
 	{ to: "/services", label: "Services", side: "build" },
 	/* /work is deliberately absent while client naming is unconfirmed — the route

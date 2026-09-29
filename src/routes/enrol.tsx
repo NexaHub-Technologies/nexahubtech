@@ -97,6 +97,32 @@ function SectionHead({ title, note }: { title: string; note: string }) {
 }
 
 function CourseSummary({ slug }: { slug: string }) {
+	if (slug === "cbt" || slug === "cbt-training") {
+		return (
+			<div className="card panel-learn p-7">
+				<Eyebrow>You're registering for</Eyebrow>
+				<h2 className="display text-[1.4rem] mt-3">
+					CBT Training (WAEC & JAMB)
+				</h2>
+				<p className="lead mt-2 text-[0.95rem]">
+					Intensive Computer-Based Test training, 8-key system mastery, time
+					management, and full-length timed mock exams in our Kubwa lab.
+				</p>
+				<div className="flex items-center justify-between mt-5 pt-4 border-t border-[var(--line-soft)]">
+					<span className="display text-[1.15rem]">From ₦15,000</span>
+					<span className="text-[0.85rem] text-mute font-semibold">
+						2–4 Weeks · Centre-based
+					</span>
+				</div>
+				<p className="text-[0.85rem] text-mute mt-4">
+					F01 Market, Kubwa, Abuja · Dedicated workstations · Power backed up
+				</p>
+				<Link to="/cbt" className="view-link mt-3">
+					See full CBT details <i aria-hidden="true">→</i>
+				</Link>
+			</div>
+		);
+	}
 	const course = getCourseBySlug(slug);
 	if (!course) {
 		return (
@@ -163,6 +189,10 @@ function EnrolForm({
 	const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
 
 	if (status === "sent") {
+		const targetCourseName =
+			course === "cbt" || course === "cbt-training"
+				? "CBT Training for WAEC & JAMB"
+				: (getCourseBySlug(course)?.t ?? course);
 		return (
 			<div className="card panel-learn p-8 text-center">
 				<div
@@ -175,10 +205,10 @@ function EnrolForm({
 				<h3 className="display text-[1.5rem] mt-4">Application sent.</h3>
 				<p className="lead mt-2 max-w-[30rem] mx-auto">
 					Thanks, {fullName.split(" ")[0]} — your application for{" "}
-					<strong>{getCourseBySlug(course)?.t}</strong> has landed in our inbox.
-					We'll reply to <strong>{email}</strong> with your start date and
-					session times. Submitting doesn't guarantee a place; we may reach out
-					first for a short screening chat.
+					<strong>{targetCourseName}</strong> has landed in our inbox. We'll
+					reply to <strong>{email}</strong> with your start date and session
+					times. Submitting doesn't guarantee a place; we may reach out first
+					for a short screening chat.
 				</p>
 				<div className="mt-6 flex flex-wrap gap-3 justify-center">
 					<a
@@ -384,14 +414,21 @@ function EnrolForm({
 					onChange={(e) => setCourse(e.target.value)}
 				>
 					<option value="" disabled>
-						Choose a course…
+						Choose a course or program…
 					</option>
-					{COURSES.map((c) => (
-						<option key={c.slug} value={c.slug}>
-							{c.t}
-							{c.d ? ` — ${c.d}` : ""} · {c.price} · {c.duration}
+					<optgroup label="Exam Preparation (CBT)">
+						<option value="cbt-training">
+							CBT Training for WAEC & JAMB — From ₦15,000 · 2–4 Weeks
 						</option>
-					))}
+					</optgroup>
+					<optgroup label="Software & Tech Tracks">
+						{COURSES.map((c) => (
+							<option key={c.slug} value={c.slug}>
+								{c.t}
+								{c.d ? ` — ${c.d}` : ""} · {c.price} · {c.duration}
+							</option>
+						))}
+					</optgroup>
 				</select>
 			</label>
 
@@ -519,10 +556,13 @@ function Enrol() {
 	const { course: fromUrl } = Route.useSearch();
 	/* prefilled from the course page the visitor clicked "Enrol" on; an unknown
 	   slug falls through to an empty select rather than a wrong course */
-	const [course, setCourse] = useState(
-		fromUrl && getCourseBySlug(fromUrl) ? fromUrl : "",
-	);
+	const [course, setCourse] = useState(() => {
+		if (!fromUrl) return "";
+		if (fromUrl === "cbt" || fromUrl === "cbt-training") return "cbt-training";
+		return getCourseBySlug(fromUrl) ? fromUrl : "";
+	});
 	const chosen = getCourseBySlug(course);
+	const isCbt = course === "cbt" || course === "cbt-training";
 	useReveal();
 
 	return (
@@ -531,10 +571,15 @@ function Enrol() {
 				<div className="max-w-[46rem]">
 					<span className="pill rise rise-1">
 						<span className="spark" />
-						Enrolment
+						{isCbt ? "CBT Registration" : "Enrolment"}
 					</span>
 					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
-						{chosen ? (
+						{isCbt ? (
+							<>
+								Register for{" "}
+								<span style={{ color: "var(--learn-ink)" }}>CBT Training</span>.
+							</>
+						) : chosen ? (
 							<>
 								Enrol in{" "}
 								<span style={{ color: "var(--learn-ink)" }}>{chosen.t}</span>.

@@ -195,9 +195,14 @@ function WhatWeDo() {
 							</li>
 						))}
 					</ul>
-					<Link to="/courses" className="btn btn-primary mt-7">
-						Explore the courses
-					</Link>
+					<div className="mt-7 flex flex-wrap items-center gap-4">
+						<Link to="/courses" className="btn btn-primary">
+							Explore the courses
+						</Link>
+						<Link to="/cbt" className="view-link">
+							CBT for WAEC & JAMB <i aria-hidden="true">→</i>
+						</Link>
+					</div>
 				</div>
 
 				<div className="card card-lift panel-studio reveal p-8">
@@ -380,11 +385,17 @@ function ClosingCTA() {
 				<h3 className="display text-[1.9rem] mt-3">Start your journey.</h3>
 				<p className="lead mt-3 max-w-[40rem]">
 					Start whenever you are ready and learn to build — the right way,
-					taught live by people who do it every day.
+					taught live by people who do it every day. Or prepare for your WAEC
+					and JAMB CBT exams at our Kubwa centre.
 				</p>
-				<Link to="/courses" className="btn btn-primary mt-6">
-					Explore the courses
-				</Link>
+				<div className="mt-6 flex flex-wrap gap-3">
+					<Link to="/courses" className="btn btn-primary">
+						Explore the courses
+					</Link>
+					<Link to="/cbt" className="btn btn-ghost">
+						CBT Training for WAEC & JAMB
+					</Link>
+				</div>
 			</div>
 		</section>
 	);
