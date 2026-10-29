@@ -65,8 +65,8 @@ describe("enrolmentDocument", () => {
 		const doc = enrolmentDocument({ ...base, course: "cbt-training" });
 		expect(doc.highlight.map((f) => f.value)).toEqual([
 			"CBT Training (WAEC & JAMB)",
-			"From ₦15,000",
-			"2–4 Weeks",
+			"From ₦3,000",
+			"1 session – 4 weeks",
 			"Online training",
 		]);
 	});

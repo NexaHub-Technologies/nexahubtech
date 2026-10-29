@@ -97,8 +97,8 @@ export function courseLabel(slug: string): string {
 export function enrolmentDocument(e: Enrolment): EmailDocument {
 	const isCbt = e.course === "cbt" || e.course === "cbt-training";
 	const course = getCourseBySlug(e.course);
-	const courseFee = course?.price ?? (isCbt ? "From ₦15,000" : "—");
-	const courseDuration = course?.duration ?? (isCbt ? "2–4 Weeks" : "—");
+	const courseFee = course?.price ?? (isCbt ? "From ₦3,000" : "—");
+	const courseDuration = course?.duration ?? (isCbt ? "1 session – 4 weeks" : "—");
 	const courseName = isCbt
 		? "CBT Training (WAEC & JAMB)"
 		: (course?.t ?? e.course);
