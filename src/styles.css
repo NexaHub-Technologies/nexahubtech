@@ -1090,6 +1090,262 @@ a.contact-detail:hover {
 
 .approach-detail > div { padding: 0 1.15rem 1.25rem; }
 
+/* ── module timeline ──────────────────────────────────────────────
+   The course syllabus as a vertical line, one marker per module. Without
+   scroll-driven animation support (or with reduced motion) it is a plain,
+   fully drawn list; with it, each module lights up as it reaches the middle
+   of the screen and the line fills on towards the next one. */
+
+.timeline {
+  --tl-marker: 42px;
+  --tl-gap: 1.75rem;
+  display: grid;
+  gap: var(--tl-gap);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--tl-marker) 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+/* the segment down to the next marker — a track, and the fill drawn over
+   it. The last module has no next one, so the line stops there. */
+.timeline-item:not(:last-child)::before,
+.timeline-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  inset-block: calc(var(--tl-marker) / 2) calc(var(--tl-gap) * -1 - var(--tl-marker) / 2);
+  inset-inline-start: calc(var(--tl-marker) / 2 - 1px);
+  inline-size: 2px;
+  border-radius: 2px;
+  background: var(--line);
+}
+
+.timeline-item:not(:last-child)::after {
+  background: var(--mode-accent);
+  transform-origin: top;
+}
+
+.timeline-marker {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  inline-size: var(--tl-marker);
+  block-size: var(--tl-marker);
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  background: var(--mode-accent);
+  color: #fff;
+  box-shadow: 0 0 0 5px var(--paper);
+}
+
+.timeline-body { padding-top: 0.45rem; }
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    /* each module is measured against a line across the middle of the
+       viewport: progress starts as its top crosses that line and ends as its
+       bottom does, so whatever the reader is looking at is what is lit */
+    .timeline-item {
+      view-timeline: --module block;
+      view-timeline-inset: 50% 50%;
+    }
+
+    .timeline-item::after {
+      animation: tl-fill linear both;
+      animation-timeline: --module;
+      animation-range: cover 0% cover 100%;
+    }
+
+    .timeline-marker {
+      animation: tl-mark linear both;
+      animation-timeline: --module;
+      animation-range: cover 0% cover 12%;
+    }
+
+    .timeline-body {
+      animation: tl-in linear both;
+      animation-timeline: --module;
+      animation-range: cover 0% cover 20%;
+    }
+  }
+}
+
+/* ── session loop ─────────────────────────────────────────────────
+   The parts of a session on a ring (components/session-loop.tsx). */
+
+.session-loop {
+  inline-size: 100%;
+  max-inline-size: 26rem;
+  margin: 0 auto;
+  /* it is a <fieldset>, for its group role; undo the browser's frame */
+  min-inline-size: 0;
+  border: 0;
+  padding: 0;
+}
+
+.session-loop-ring {
+  position: relative;
+  aspect-ratio: 1;
+}
+
+.session-loop-ring svg {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  overflow: visible;
+}
+
+.session-loop-track,
+.session-loop-arc {
+  fill: none;
+  stroke-width: 2;
+}
+
+.session-loop-track { stroke: var(--line); }
+
+.session-loop-arc {
+  stroke: var(--mode-accent);
+  stroke-linecap: round;
+  stroke-dasharray: var(--from) 99;
+  animation-name: loop-arc;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loop-arc {
+  from { stroke-dasharray: var(--from) 99; }
+  to { stroke-dasharray: var(--to) 99; }
+}
+
+.session-loop-node {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  translate: -50% -50%;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.session-loop-node:focus-visible {
+  outline: 2px solid var(--mode-accent);
+  outline-offset: 2px;
+}
+
+.session-loop-dot {
+  inline-size: 0.7rem;
+  block-size: 0.7rem;
+  border-radius: 999px;
+  background: var(--card);
+  box-shadow: inset 0 0 0 2px var(--line), 0 0 0 4px var(--card);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.session-loop-node[data-active="true"] .session-loop-dot {
+  transform: scale(1.35);
+  background: var(--mode-accent);
+  box-shadow: 0 0 0 4px var(--mode-accent-tint), 0 0 0 7px var(--card);
+}
+
+.session-loop-node:hover .session-loop-dot { box-shadow: inset 0 0 0 2px var(--mode-accent), 0 0 0 4px var(--card); }
+
+.session-loop-label {
+  position: absolute;
+  inset-inline-start: 50%;
+  translate: -50% 0;
+  inline-size: max-content;
+  max-inline-size: 8rem;
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.25;
+  /* the card's colour behind the text, so the ring passes under a label
+     rather than through it */
+  padding: 0.1rem 0.35rem;
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--ink-soft);
+  opacity: 0.7;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.session-loop-node[data-side="above"] .session-loop-label { bottom: calc(100% + 0.1rem); }
+.session-loop-node[data-side="below"] .session-loop-label { top: calc(100% + 0.1rem); }
+
+.session-loop-node[data-active="true"] .session-loop-label,
+.session-loop-node:hover .session-loop-label {
+  color: var(--ink);
+  opacity: 1;
+}
+
+.session-loop-centre {
+  position: absolute;
+  inset: 30% 22%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+/* every description in one grid cell; only the active one is visible, but
+   all of them count towards the height */
+.session-loop-detail {
+  display: grid;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.session-loop-detail > p {
+  grid-area: 1 / 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.session-loop-detail > p[data-active="true"] {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* no sweep under reduced motion: the global rule would shrink the animation
+   to nothing and the loop would spin through every part at once. The arc
+   just reaches the chosen part instead. */
+@media (prefers-reduced-motion: reduce) {
+  .session-loop-arc { animation: none !important; }
+}
+
+@keyframes tl-fill {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+@keyframes tl-mark {
+  from {
+    background: var(--card);
+    color: var(--ink-soft);
+    box-shadow: 0 0 0 5px var(--paper), inset 0 0 0 2px var(--line);
+  }
+  to {
+    background: var(--mode-accent);
+    color: #fff;
+    box-shadow: 0 0 0 5px var(--paper), inset 0 0 0 2px var(--mode-accent);
+  }
+}
+
+@keyframes tl-in {
+  from { opacity: 0.4; transform: translateX(10px); }
+  to { opacity: 1; transform: none; }
+}
+
 /* ── responsive ────────────────────────────────────────────────── */
 
 @media (max-width: 760px) {

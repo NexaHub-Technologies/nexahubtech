@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { SessionLoop } from "../../components/session-loop";
 import { Eyebrow, useReveal } from "../../components/site";
 import { COURSES, getCourseBySlug } from "../../lib/courses";
 import { pageMeta } from "../../lib/seo";
@@ -105,26 +106,38 @@ function CourseDetail() {
 				</div>
 			</section>
 
-			{/* what you'll learn */}
+			{/* what you'll learn, as a timeline the reader scrolls down. The items
+			    animate on their own scroll timeline (styles.css), so they stay off
+			    .reveal — its transform would fight the timeline's. */}
 			<section className="wrap py-14">
-				<div className="reveal max-w-[40rem] mb-9">
-					<Eyebrow>What you'll learn</Eyebrow>
-					<h2 className="display mt-4 text-[2rem] sm:text-[2.5rem]">
-						A path that builds on itself.
-					</h2>
-					<p className="lead mt-4">
-						Each step establishes the idea before the syntax, so the next one
-						has something solid to stand on.
-					</p>
-				</div>
-				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-					{course.modules.map((m) => (
-						<div key={m.t} className="step-card reveal">
-							<span className="step-badge badge-learn">{m.n}</span>
-							<h3 className="display text-[1.2rem] mt-4">{m.t}</h3>
-							<p className="lead mt-2 text-[0.95rem]">{m.d}</p>
-						</div>
-					))}
+				<div className="grid md:grid-cols-[0.8fr_1.2fr] gap-8 md:gap-14 items-start">
+					<div className="reveal md:sticky md:top-28">
+						<Eyebrow>What you'll learn</Eyebrow>
+						<h2 className="display mt-4 text-[2rem] sm:text-[2.5rem]">
+							A path that builds on itself.
+						</h2>
+						<p className="lead mt-4">
+							{course.modules.length} modules, in order. Each establishes the
+							idea before the syntax, so the next one has something solid to
+							stand on.
+						</p>
+					</div>
+					<ol className="timeline">
+						{course.modules.map((m) => (
+							<li key={m.t} className="timeline-item">
+								<span className="timeline-marker" aria-hidden="true">
+									{m.n}
+								</span>
+								<div className="timeline-body">
+									<span className="text-[0.78rem] text-mute font-semibold uppercase tracking-wider">
+										Module {m.n}
+									</span>
+									<h3 className="display text-[1.25rem] mt-1">{m.t}</h3>
+									<p className="lead mt-2 text-[0.95rem]">{m.d}</p>
+								</div>
+							</li>
+						))}
+					</ol>
 				</div>
 			</section>
 
@@ -146,68 +159,26 @@ function CourseDetail() {
 				</div>
 			</section>
 
-			{/* what a session looks like */}
+			{/* what a session looks like — drawn as a loop, because it is one:
+			    the same three parts, every session */}
 			<section className="wrap py-14">
 				<div className="card reveal p-8 md:p-12">
-					<div className="max-w-[40rem]">
-						<Eyebrow variant="build">Inside a session</Eyebrow>
-						<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
-							Three parts, every time.
-						</h2>
-						<p className="lead mt-4">
-							Our materials aren't generic bootcamp slides. Each session is
-							structured to build understanding, then prove it.
-						</p>
-					</div>
-					<div className="grid md:grid-cols-3 gap-5 mt-8">
-						{course.session.map((s) => (
-							<div key={s.t} className="card panel-learn p-6">
-								<h3 className="display text-[1.15rem]">{s.t}</h3>
-								<p className="lead mt-2 text-[0.95rem]">{s.d}</p>
-							</div>
-						))}
+					<div className="grid md:grid-cols-[0.9fr_1.1fr] gap-10 md:gap-14 items-center">
+						<div>
+							<Eyebrow variant="build">Inside a session</Eyebrow>
+							<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
+								Three parts, every time.
+							</h2>
+							<p className="lead mt-4">
+								Our materials aren't generic bootcamp slides. Each session is
+								structured to build understanding, then prove it — and the next
+								one starts the loop again.
+							</p>
+						</div>
+						<SessionLoop parts={course.session} />
 					</div>
 				</div>
 			</section>
-
-			{/* what you come away having built. Summaries only — the full brief for
-			    each project lives in docs/<course>/<project>.md, which is for whoever
-			    teaches it rather than for somebody deciding whether to enrol.
-
-			    Not every course has projects: the two office tracks are assessed
-			    through the per-module exercises instead, and render nothing here
-			    rather than an empty heading promising "0 projects". */}
-			{course.projects.length > 0 && (
-				<section className="wrap py-14">
-					<div className="reveal max-w-[42rem] mb-9">
-						<Eyebrow variant="build">What you build</Eyebrow>
-						<h2 className="display mt-4 text-[2rem] sm:text-[2.5rem]">
-							{course.projects.length} projects, not exercises.
-						</h2>
-						<p className="lead mt-4">
-							Each one comes after the modules that make it possible, and each
-							is its own finished thing rather than a stage of the last. You
-							leave with {course.projects.length} separate pieces of work.
-						</p>
-					</div>
-					<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-						{course.projects.map((p) => (
-							<div key={p.n} className="step-card reveal">
-								<div className="flex items-center gap-2.5">
-									<span className="step-badge badge-build">{p.n}</span>
-									<span className="text-[0.78rem] text-mute font-semibold uppercase tracking-wider">
-										{p.capstone ? "Capstone" : `Weeks ${p.weeks}`}
-									</span>
-								</div>
-								{p.t && <h3 className="display text-[1.2rem] mt-4">{p.t}</h3>}
-								<p className={`lead text-[0.95rem] ${p.t ? "mt-2" : "mt-4"}`}>
-									{p.d}
-								</p>
-							</div>
-						))}
-					</div>
-				</section>
-			)}
 
 			{/* the honest check, immediately before the fee and the enrol button —
 			    so nobody signs up for a course they can't take part in */}
