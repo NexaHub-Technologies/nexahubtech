@@ -15,6 +15,9 @@ todos.json
 # downloaded fonts used only by scripts/generate-og-images.ts
 .cache
 
+# docs folder
+docs
+
 # playwright output
 test-results
 playwright-report
