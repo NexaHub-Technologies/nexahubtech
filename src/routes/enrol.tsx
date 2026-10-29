@@ -109,9 +109,9 @@ function CourseSummary({ slug }: { slug: string }) {
 					management, and full-length timed mock exams in our Kubwa lab.
 				</p>
 				<div className="flex items-center justify-between mt-5 pt-4 border-t border-[var(--line-soft)]">
-					<span className="display text-[1.15rem]">From ₦15,000</span>
+					<span className="display text-[1.15rem]">From ₦3,000</span>
 					<span className="text-[0.85rem] text-mute font-semibold">
-						2–4 Weeks · Centre-based
+						1 session – 4 weeks · Centre-based
 					</span>
 				</div>
 				<p className="text-[0.85rem] text-mute mt-4">
@@ -418,7 +418,7 @@ function EnrolForm({
 					</option>
 					<optgroup label="Exam Preparation (CBT)">
 						<option value="cbt-training">
-							CBT Training for WAEC & JAMB — From ₦15,000 · 2–4 Weeks
+							CBT Training for WAEC & JAMB — From ₦3,000 · 1 session – 4 weeks
 						</option>
 					</optgroup>
 					<optgroup label="Software & Tech Tracks">

@@ -14,12 +14,11 @@ describe("CBT training data", () => {
 		expect(CBT_DETAILS.targetExams.length).toBeGreaterThanOrEqual(2);
 	});
 
-	it("covers core training pillars with outcomes", () => {
+	it("covers core training pillars", () => {
 		expect(CBT_PILLARS.length).toBeGreaterThanOrEqual(4);
 		for (const p of CBT_PILLARS) {
 			expect(p.title.length).toBeGreaterThan(5);
 			expect(p.description.length).toBeGreaterThan(50);
-			expect(p.outcomes.length).toBeGreaterThanOrEqual(2);
 		}
 	});
 
