@@ -13,6 +13,7 @@ import {
 	TRAINING_MODES,
 	YES_NO,
 } from "./enrolment";
+import { saveApplication } from "./save-application.server";
 
 /* Runs on the server only, so RESEND_API_KEY is never bundled for the client.
    Do not rename it to VITE_* — that prefix would inline the secret into the
@@ -77,16 +78,34 @@ function validate(data: unknown): Enrolment {
 		commit: oneOf(YES_NO, d.commit, "answer"),
 		comments: optional(d.comments, "comments", 2000),
 		accurate: true,
+		updates: d.updates === true,
 	};
 }
 
 export const sendEnrolment = createServerFn({ method: "POST" })
 	.validator(validate)
 	.handler(async ({ data }) => {
-		const key = process.env.RESEND_API_KEY;
-		if (!key) throw new Error("Email is not configured");
+		/* into the staff console first, then by email. Either is enough to keep
+		   the application, so the visitor is only told it failed if both did. */
+		const saved = await saveApplication(data);
 
-		const { subject, body } = composeEnrolment(data);
+		const key = process.env.RESEND_API_KEY;
+		if (!key) {
+			if (saved) return { ok: true as const };
+			throw new Error("Email is not configured");
+		}
+
+		const composed = composeEnrolment(data);
+		const note = saved
+			? "Saved in the staff console: review it under Applications."
+			: "Not saved in the staff console. Add it there by hand.";
+		const subject = composed.subject;
+		const body = `${composed.body}\n\n${note}`;
+		const document = enrolmentDocument(data);
+		document.sections.push({
+			title: "Staff console",
+			fields: [{ label: "Status", value: note, wide: true }],
+		});
 
 		const res = await fetch("https://api.resend.com/emails", {
 			method: "POST",
@@ -102,7 +121,7 @@ export const sendEnrolment = createServerFn({ method: "POST" })
 				/* so a reply from the inbox goes straight back to the applicant */
 				reply_to: data.email,
 				subject,
-				html: renderEmailDocument(enrolmentDocument(data)),
+				html: renderEmailDocument(document),
 				/* text twin for clients that refuse HTML, and for search in the inbox */
 				text: body,
 			}),
@@ -111,7 +130,7 @@ export const sendEnrolment = createServerFn({ method: "POST" })
 		if (!res.ok) {
 			const detail = await res.text();
 			console.error("Resend rejected the enrolment:", res.status, detail);
-			throw new Error("Could not send right now");
+			if (!saved) throw new Error("Could not send right now");
 		}
 
 		return { ok: true as const };

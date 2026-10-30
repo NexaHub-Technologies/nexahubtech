@@ -183,6 +183,7 @@ function EnrolForm({
 	const [commit, setCommit] = useState<YesNo | "">("");
 	const [comments, setComments] = useState("");
 	const [accurate, setAccurate] = useState(false);
+	const [updates, setUpdates] = useState(false);
 
 	const [error, setError] = useState("");
 	const [handoff, setHandoff] = useState<ComposedEnrolment | null>(null);
@@ -320,6 +321,7 @@ function EnrolForm({
 					commit,
 					comments,
 					accurate,
+					updates,
 				} as Enrolment;
 				try {
 					await sendEnrolment({ data });
@@ -529,6 +531,19 @@ function EnrolForm({
 					onChange={(e) => setAccurate(e.target.checked)}
 				/>
 				<span>I confirm that all the information I've given is accurate.</span>
+			</label>
+
+			<label className="check" htmlFor="updates">
+				<input
+					id="updates"
+					name="updates"
+					type="checkbox"
+					checked={updates}
+					onChange={(e) => setUpdates(e.target.checked)}
+				/>
+				<span>
+					Send me class reminders and payment updates by email and SMS.
+				</span>
 			</label>
 
 			{error && (

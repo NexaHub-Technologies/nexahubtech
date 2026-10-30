@@ -51,6 +51,8 @@ export interface Enrolment {
 	commit: YesNo;
 	comments: string;
 	accurate: boolean;
+	/* agreed to class and payment messages by email and SMS (optional) */
+	updates: boolean;
 }
 
 export function isOneOf<T extends readonly string[]>(
@@ -151,6 +153,10 @@ export function enrolmentDocument(e: Enrolment): EmailDocument {
 					label: "Information is accurate",
 					value: e.accurate ? "Confirmed" : "Not confirmed",
 				},
+				{
+					label: "Class and payment updates",
+					value: e.updates ? "Yes, by email and SMS" : "No",
+				},
 			],
 		},
 	];
@@ -212,5 +218,43 @@ export function composeEnrolment(e: Enrolment): ComposedEnrolment {
 		whatsapp: `${CONTACT.whatsapp}?text=${encodeURIComponent(
 			`${subject}\n\n${body}`,
 		)}`,
+	};
+}
+
+/* An application as the staff console stores it (public.applications in
+   nexahub-dash), so the review screen there shows exactly what was sent. */
+export interface ApplicationRow {
+	course_slug: string;
+	full_name: string;
+	email: string;
+	phone: string;
+	gender: string;
+	employment: string;
+	mode: string;
+	has_experience: boolean;
+	experience_detail: string;
+	has_laptop: boolean;
+	heard_from: string;
+	can_commit: boolean;
+	comments: string;
+	notify_consent: boolean;
+}
+
+export function toApplicationRow(e: Enrolment): ApplicationRow {
+	return {
+		course_slug: e.course,
+		full_name: e.fullName,
+		email: e.email.toLowerCase(),
+		phone: e.phone,
+		gender: e.gender,
+		employment: e.employment,
+		mode: e.mode,
+		has_experience: e.experience === "Yes",
+		experience_detail: e.experience === "Yes" ? e.experienceDetail : "",
+		has_laptop: e.laptop === "Yes",
+		heard_from: e.heardFrom,
+		can_commit: e.commit === "Yes",
+		comments: e.comments,
+		notify_consent: e.updates,
 	};
 }
