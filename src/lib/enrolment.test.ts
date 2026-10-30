@@ -6,6 +6,7 @@ import {
 	composeEnrolment,
 	type Enrolment,
 	enrolmentDocument,
+	toApplicationRow,
 } from "./enrolment";
 
 /* the course the fixture applies for — its fee and length are read rather than
@@ -28,6 +29,7 @@ const base: Enrolment = {
 	commit: "Yes",
 	comments: "",
 	accurate: true,
+	updates: true,
 };
 
 function allValues(doc: ReturnType<typeof enrolmentDocument>) {
@@ -169,5 +171,51 @@ describe("wide fields", () => {
 			enrolmentDocument({ ...base, comments: "Evenings only, please." }),
 		);
 		expect(html).toContain('colspan="2"');
+	});
+});
+
+describe("the application as the staff console stores it", () => {
+	it("turns the form's answers into the console's columns", () => {
+		expect(toApplicationRow({ ...base, email: "Ada@Example.com" })).toEqual({
+			course_slug: base.course,
+			full_name: base.fullName,
+			email: "ada@example.com",
+			phone: base.phone,
+			gender: base.gender,
+			employment: base.employment,
+			mode: base.mode,
+			has_experience: true,
+			experience_detail: base.experienceDetail,
+			has_laptop: true,
+			heard_from: base.heardFrom,
+			can_commit: true,
+			comments: base.comments,
+			notify_consent: true,
+		});
+	});
+
+	it("drops experience detail when there's no experience, and carries a refusal of updates", () => {
+		const row = toApplicationRow({
+			...base,
+			experience: "No",
+			experienceDetail: "left over from a changed answer",
+			laptop: "No",
+			commit: "No",
+			updates: false,
+		});
+		expect(row.has_experience).toBe(false);
+		expect(row.experience_detail).toBe("");
+		expect(row.has_laptop).toBe(false);
+		expect(row.can_commit).toBe(false);
+		expect(row.notify_consent).toBe(false);
+	});
+
+	it("shows the update choice in the emailed application", () => {
+		const doc = enrolmentDocument({ ...base, updates: false });
+		const agreement = doc.sections.find((s) => s.title === "Agreement");
+		expect(agreement?.fields).toContainEqual({
+			label: "Class and payment updates",
+			value: "No",
+		});
 	});
 });
