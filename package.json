@@ -17,8 +17,7 @@
     "check": "biome check",
     "generate-sitemap": "bun run scripts/generate-sitemap.ts",
     "generate-og-images": "bun run scripts/generate-og-images.ts",
-    "generate-project-specs": "mkdir -p .cache && bun run scripts/dump-course-modules.ts > .cache/modules.json && python3 scripts/generate-project-specs.py",
-    "sync-courses": "bun run scripts/sync-courses.ts"
+    "generate-project-specs": "mkdir -p .cache && bun run scripts/dump-course-modules.ts > .cache/modules.json && python3 scripts/generate-project-specs.py"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
