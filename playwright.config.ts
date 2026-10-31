@@ -4,6 +4,9 @@ import { defineConfig, devices } from "@playwright/test";
    viewport — most visitors arrive on a phone. Unit tests stay in vitest
    (src/**\/*.test.ts); the specs here live in e2e/ so neither runner picks
    up the other's files. */
+/* E2E_PORT moves the site off :3000 when something else holds it */
+const port = Number(process.env.E2E_PORT ?? 3000);
+
 export default defineConfig({
 	testDir: "./e2e",
 	fullyParallel: true,
@@ -12,7 +15,7 @@ export default defineConfig({
 	workers: process.env.CI ? 1 : undefined,
 	reporter: process.env.CI ? "github" : "list",
 	use: {
-		baseURL: "http://localhost:3000",
+		baseURL: `http://localhost:${port}`,
 		trace: "on-first-retry",
 	},
 	/* the installed Google Chrome rather than Playwright's own download, so
@@ -29,9 +32,18 @@ export default defineConfig({
 	   start, page loads timed out. A build takes seconds and is what visitors
 	   actually get. */
 	webServer: {
-		command: "bun run build && bun run preview --port 3000",
-		url: "http://localhost:3000",
+		command: `bun run build && bun run preview --port ${port}`,
+		url: `http://localhost:${port}`,
 		reuseExistingServer: !process.env.CI,
 		timeout: 120_000,
+		/* applications are saved to the staff console's local Docker database
+		   (e2e/enrol.spec.ts), and never emailed: an empty RESEND_API_KEY
+		   skips the send */
+		env: {
+			DASH_DATABASE_URL:
+				process.env.DASH_DATABASE_URL ??
+				"postgres://website_app:website_app@127.0.0.1:54322/nexahub",
+			RESEND_API_KEY: "",
+		},
 	},
 });
