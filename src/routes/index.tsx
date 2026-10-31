@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMode } from "../components/mode";
 import { Eyebrow, useReveal } from "../components/site";
-import { COURSE_COUNT_WORD_CAP } from "../lib/courses";
+import { COURSE_COUNT, COURSE_COUNT_WORD_CAP } from "../lib/courses";
 import { pageMeta } from "../lib/seo";
 import { SERVICES } from "../lib/services";
 
@@ -23,9 +23,6 @@ export const Route = createFileRoute("/")({
 function HeroStage() {
 	return (
 		<div className="hero-stage rise rise-3" aria-hidden="true">
-			<div className="softblob s-marigold" />
-			<div className="softblob s-teal" />
-
 			<div className="jcard j-learn">
 				<span className="jlabel" style={{ color: "var(--learn-ink)" }}>
 					<span className="jdot jdot-learn" />
@@ -85,43 +82,149 @@ const HERO_BY_MODE = {
 	},
 } as const;
 
+/* fixed spots for the sparks around the burst — positions as percentages of
+   the stage, with staggered delays so they never twinkle together */
+const SPARKS = [
+	{ top: "14%", left: "58%", delay: "0s", size: 14 },
+	{ top: "72%", left: "54%", delay: "1.1s", size: 10 },
+	{ top: "22%", left: "93%", delay: "0.6s", size: 18 },
+	{ top: "84%", left: "88%", delay: "1.7s", size: 12 },
+	{ top: "8%", left: "30%", delay: "2.3s", size: 9 },
+];
+
+/* The opening is a dark stage with a slow-turning burst of rays behind the
+   journey cards: the one place on the page that is loud on purpose. It stays
+   dark in both modes, so its colours are fixed rather than mode tokens. */
 function Hero() {
 	const { mode } = useMode();
 	const h = HERO_BY_MODE[mode];
 	return (
-		<section className="wrap pt-12 md:pt-16 pb-16">
-			<div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
-				<div>
-					<span className="pill rise rise-1">
-						<span className="spark" />
-						{h.pill}
-					</span>
-					<h1
-						className="display rise rise-2 mt-6 text-[2.8rem] sm:text-[3.6rem] lg:text-[4.1rem]"
-						style={{ textWrap: "balance" }}
-					>
-						{h.headA}
-						<br />
-						{h.headB}
-						<span style={{ color: h.accentVar }}>{h.headAccent}</span>.
-					</h1>
-					<p className="lead rise rise-3 mt-6 max-w-[34rem] text-[1.12rem]">
-						{h.lead}
-					</p>
-					<div className="rise rise-4 mt-8 flex flex-wrap gap-3">
-						<Link to={h.primary.to} className="btn btn-primary">
-							{h.primary.label}
-						</Link>
-						<Link to={h.secondary.to} className="btn btn-ghost">
-							{h.secondary.label}
-						</Link>
-					</div>
-					<p className="rise rise-5 mt-7 text-[0.92rem] text-mute">
-						Based in Nigeria · teaching and building for Africa and beyond.
-					</p>
-				</div>
+		<section className="wrap pt-4 md:pt-6 pb-6">
+			<div className="blast rise rise-1">
+				<div className="blast-rays" aria-hidden="true" />
+				<div className="blast-core" aria-hidden="true" />
+				{SPARKS.map((p) => (
+					<span
+						key={p.top + p.left}
+						className="blast-spark"
+						aria-hidden="true"
+						style={{
+							top: p.top,
+							left: p.left,
+							width: p.size,
+							height: p.size,
+							animationDelay: p.delay,
+						}}
+					/>
+				))}
 
-				<HeroStage />
+				<div className="relative z-10 grid lg:grid-cols-[1.3fr_0.7fr] gap-10 xl:gap-14 items-center">
+					<div>
+						<span className="pill rise rise-1">
+							<span className="spark" />
+							{h.pill}
+						</span>
+						<h1
+							className="blast-title slam mt-6"
+							style={{ textWrap: "balance" }}
+						>
+							{h.headA}
+							<br />
+							{h.headB}
+							<span className="hot-text">{h.headAccent}</span>.
+						</h1>
+						<p className="blast-lead rise rise-3 mt-6 max-w-[34rem]">
+							{h.lead}
+						</p>
+						<div className="rise rise-4 mt-9 flex flex-wrap gap-3">
+							<Link to={h.primary.to} className="btn btn-blast">
+								{h.primary.label} <i aria-hidden="true">→</i>
+							</Link>
+							<Link to={h.secondary.to} className="btn btn-ghost">
+								{h.secondary.label}
+							</Link>
+						</div>
+						<p className="rise rise-5 mt-7 text-[0.92rem] text-[#bfaecb]">
+							Based in Nigeria · teaching and building for Africa and beyond.
+						</p>
+					</div>
+
+					<HeroStage />
+				</div>
+			</div>
+		</section>
+	);
+}
+
+/* two strips of tape crossing under the hero, each running the other way.
+   Decorative: every phrase on them is said in full elsewhere on the page. */
+const TAPE_BY_MODE = {
+	learn: [
+		"Learn to build",
+		"Build for real",
+		"Taught live",
+		"Mental model first",
+		"Start when you're ready",
+	],
+	build: [
+		"Software, built properly",
+		"Designed before it's built",
+		"Maintained after",
+		"Shipped in increments",
+		"Someone to call",
+	],
+} as const;
+
+function Tapes() {
+	const { mode } = useMode();
+	const words = TAPE_BY_MODE[mode];
+	const run = (key: string) => (
+		<div className="tape-track" key={key}>
+			{[0, 1].map((copy) =>
+				words.map((w) => (
+					<span key={`${copy}-${w}`} className="tape-item">
+						{w}
+						<span className="tape-star">✦</span>
+					</span>
+				)),
+			)}
+		</div>
+	);
+	return (
+		<div className="tapes" aria-hidden="true">
+			<div className="tape tape-back">{run("back")}</div>
+			<div className="tape tape-front">{run("front")}</div>
+		</div>
+	);
+}
+
+/* real figures only: what the catalogue and the services list actually hold */
+function Numbers() {
+	const { mode } = useMode();
+	const stats =
+		mode === "build"
+			? [
+					{
+						n: String(SERVICES.length),
+						l: "service lines, from first build to support",
+					},
+					{ n: "3", l: "steps: understand, design, build & keep" },
+					{ n: "1", l: "team that teaches what it ships" },
+				]
+			: [
+					{ n: String(COURSE_COUNT), l: "tracks, taught live" },
+					{ n: "3", l: "steps: understand, practice, build" },
+					{ n: "1", l: "studio where the best learners ship real work" },
+				];
+	return (
+		<section className="wrap py-14">
+			<div className="numbers">
+				{stats.map((s) => (
+					<div key={s.l} className="number reveal">
+						<span className="number-n hot-text">{s.n}</span>
+						<span className="number-l">{s.l}</span>
+					</div>
+				))}
 			</div>
 		</section>
 	);
@@ -129,21 +232,17 @@ function Hero() {
 
 function Thesis() {
 	return (
-		<section className="wrap py-16">
-			<div className="card reveal px-7 py-10 md:px-12 md:py-12 text-center">
-				<span className="eyebrow is-plain text-mute justify-center">
-					The idea
-				</span>
-				<p className="display mt-4 text-[1.7rem] sm:text-[2.2rem] max-w-[44rem] mx-auto leading-[1.25]">
-					Most schools teach in a vacuum. We teach the skills{" "}
-					<span style={{ color: "var(--learn-ink)" }}>and</span> use them on
-					live work — so what you learn is what the world actually pays for.
-				</p>
-				<p className="lead mt-5 max-w-[36rem] mx-auto">
-					One company, two connected arms. The studio's real problems shape the
-					lessons; the school grows the people who help build what comes next.
-				</p>
-			</div>
+		<section className="wrap py-16 md:py-24">
+			<span className="eyebrow is-plain text-mute">The idea</span>
+			<p className="manifesto reveal mt-5">
+				Most schools teach in a vacuum. We teach the skills{" "}
+				<mark>and use them on live work</mark> — so what you learn is what the
+				world <mark>actually pays for.</mark>
+			</p>
+			<p className="lead reveal mt-7 max-w-[38rem] text-[1.1rem]">
+				One company, two connected arms. The studio's real problems shape the
+				lessons; the school grows the people who help build what comes next.
+			</p>
 		</section>
 	);
 }
@@ -166,9 +265,7 @@ function WhatWeDo() {
 		<section className="wrap py-16">
 			<div className="reveal max-w-[40rem] mb-10">
 				<Eyebrow variant="plain">What we do</Eyebrow>
-				<h2 className="display mt-4 text-[2.2rem] sm:text-[2.8rem]">
-					Two arms, one mission.
-				</h2>
+				<h2 className="shout mt-4">Two arms, one mission.</h2>
 				<p className="lead mt-4">
 					Teaching people to build, and building real things — each one makes
 					the other better.
@@ -176,9 +273,12 @@ function WhatWeDo() {
 			</div>
 
 			<div className="grid md:grid-cols-2 gap-6">
-				<div className="card card-lift panel-learn reveal p-8">
+				<div className="slab slab-learn panel-studio reveal">
+					<span className="slab-word" aria-hidden="true">
+						Learn
+					</span>
 					<Eyebrow>Learn · the school</Eyebrow>
-					<h3 className="display mt-3 text-[1.7rem]">
+					<h3 className="display mt-3 text-[2rem] sm:text-[2.3rem]">
 						Become a developer, properly.
 					</h3>
 					<p className="lead mt-3">
@@ -205,9 +305,12 @@ function WhatWeDo() {
 					</div>
 				</div>
 
-				<div className="card card-lift panel-studio reveal p-8">
+				<div className="slab slab-build panel-studio reveal">
+					<span className="slab-word" aria-hidden="true">
+						Build
+					</span>
 					<Eyebrow variant="build">Build · the studio</Eyebrow>
-					<h3 className="display mt-3 text-[1.7rem]">
+					<h3 className="display mt-3 text-[2rem] sm:text-[2.3rem]">
 						Get your product built right.
 					</h3>
 					<p className="lead mt-3">
@@ -241,23 +344,24 @@ function Services() {
 		<section className="wrap py-16">
 			<div className="reveal max-w-[42rem] mb-10">
 				<Eyebrow variant="build">What the studio builds</Eyebrow>
-				<h2 className="display mt-4 text-[2.2rem] sm:text-[2.8rem]">
-					Beyond the classroom.
-				</h2>
+				<h2 className="shout mt-4">Beyond the classroom.</h2>
 				<p className="lead mt-4">
 					The studio takes on the full range of client work — from a first
 					product to the systems and support that keep it running.
 				</p>
 			</div>
 			<div className="grid md:grid-cols-2 gap-5">
-				{SERVICES.map((s) => (
+				{SERVICES.map((s, i) => (
 					<Link
 						key={s.slug}
 						to="/services/$slug"
 						params={{ slug: s.slug }}
-						className="card card-lift reveal panel-studio p-8 flex flex-col"
+						className="slab slab-build panel-studio reveal flex flex-col"
 					>
-						<h3 className="display text-[1.5rem]">{s.t}</h3>
+						<span className="slab-word" aria-hidden="true">
+							{String(i + 1).padStart(2, "0")}
+						</span>
+						<h3 className="display text-[1.7rem]">{s.t}</h3>
 						<p className="lead mt-3 text-[0.97rem] flex-1">{s.tagline}</p>
 						<span className="view-link mt-5">
 							View services <i aria-hidden="true">→</i>
@@ -297,9 +401,7 @@ function Approach() {
 		<section className="wrap py-16">
 			<div className="reveal max-w-[42rem] mb-10">
 				<Eyebrow>Our approach</Eyebrow>
-				<h2 className="display mt-4 text-[2.2rem] sm:text-[2.8rem]">
-					Mental model first. Syntax second.
-				</h2>
+				<h2 className="shout mt-4">Mental model first. Syntax second.</h2>
 				<p className="lead mt-4">
 					Most courses start with code and hope understanding catches up. We do
 					it the other way around — and it’s why our learners actually get it.
@@ -309,12 +411,10 @@ function Approach() {
 			<div className="grid md:grid-cols-3 gap-5">
 				{APPROACH.map((s, i) => (
 					<div key={s.t} className="step-card reveal">
-						<span
-							className={`step-badge ${i === 2 ? "badge-build" : "badge-learn"}`}
-						>
-							{s.n}
+						<span className={`step-num ${i === 2 ? "is-build" : ""}`}>
+							0{s.n}
 						</span>
-						<h3 className="display text-[1.3rem] mt-4">{s.t}</h3>
+						<h3 className="display text-[1.5rem] mt-2">{s.t}</h3>
 						<p className="lead mt-2 text-[0.97rem]">{s.d}</p>
 					</div>
 				))}
@@ -343,13 +443,11 @@ function Audience() {
 		<section className="wrap py-16">
 			<div className="reveal max-w-[40rem] mb-10">
 				<Eyebrow variant="plain">Who it’s for</Eyebrow>
-				<h2 className="display mt-4 text-[2.2rem] sm:text-[2.8rem]">
-					Built for people who want to build.
-				</h2>
+				<h2 className="shout mt-4">Built for people who want to build.</h2>
 			</div>
 			<div className="grid md:grid-cols-3 gap-5">
 				{AUDIENCE.map((a) => (
-					<div key={a.t} className="card card-lift reveal p-7">
+					<div key={a.t} className="card card-lift audience-card reveal p-7">
 						<h3 className="display text-[1.25rem]">{a.t}</h3>
 						<p className="lead mt-3 text-[0.97rem]">{a.d}</p>
 					</div>
@@ -361,40 +459,48 @@ function Audience() {
 
 function ClosingCTA() {
 	const { mode } = useMode();
-	if (mode === "build") {
-		return (
-			<section className="wrap py-16">
-				<div className="reveal card card-lift panel-studio p-9 md:p-12">
-					<Eyebrow variant="build">For businesses</Eyebrow>
-					<h3 className="display text-[1.9rem] mt-3">Build with us.</h3>
-					<p className="lead mt-3 max-w-[40rem]">
-						Tell us about the product you need. We’ll help you scope it, design
-						it well, and build it right — then keep it running.
-					</p>
-					<Link to="/contact" className="btn btn-teal mt-6">
-						Start a project
-					</Link>
-				</div>
-			</section>
-		);
-	}
+	const build = mode === "build";
 	return (
 		<section className="wrap py-16">
-			<div className="reveal card card-lift panel-learn p-9 md:p-12">
-				<Eyebrow>For learners</Eyebrow>
-				<h3 className="display text-[1.9rem] mt-3">Start your journey.</h3>
-				<p className="lead mt-3 max-w-[40rem]">
-					Start whenever you are ready and learn to build — the right way,
-					taught live by people who do it every day. Or prepare for your WAEC
-					and JAMB CBT exams at our Kubwa centre.
-				</p>
-				<div className="mt-6 flex flex-wrap gap-3">
-					<Link to="/courses" className="btn btn-primary">
-						Explore the courses
-					</Link>
-					<Link to="/cbt" className="btn btn-ghost">
-						CBT Training for WAEC & JAMB
-					</Link>
+			<div className="blast blast-cta reveal">
+				<div className="blast-rays" aria-hidden="true" />
+				<div className="blast-core" aria-hidden="true" />
+				<div className="relative z-10 max-w-[46rem]">
+					<span className="eyebrow">
+						{build ? "For businesses" : "For learners"}
+					</span>
+					<h2 className="blast-title mt-4">
+						{build ? (
+							<>
+								Build <span className="hot-text">with us</span>.
+							</>
+						) : (
+							<>
+								Start your <span className="hot-text">journey</span>.
+							</>
+						)}
+					</h2>
+					<p className="blast-lead mt-5">
+						{build
+							? "Tell us about the product you need. We’ll help you scope it, design it well, and build it right — then keep it running."
+							: "Start whenever you are ready and learn to build — the right way, taught live by people who do it every day. Or prepare for your WAEC and JAMB CBT exams at our Kubwa centre."}
+					</p>
+					<div className="mt-8 flex flex-wrap gap-3">
+						{build ? (
+							<Link to="/contact" className="btn btn-blast">
+								Start a project <i aria-hidden="true">→</i>
+							</Link>
+						) : (
+							<>
+								<Link to="/courses" className="btn btn-blast">
+									Explore the courses <i aria-hidden="true">→</i>
+								</Link>
+								<Link to="/cbt" className="btn btn-ghost">
+									CBT Training for WAEC & JAMB
+								</Link>
+							</>
+						)}
+					</div>
 				</div>
 			</div>
 		</section>
@@ -424,9 +530,7 @@ function StudioProcess() {
 		<section className="wrap py-16">
 			<div className="reveal max-w-[42rem] mb-10">
 				<Eyebrow variant="build">How we work</Eyebrow>
-				<h2 className="display mt-4 text-[2.2rem] sm:text-[2.8rem]">
-					Understand first, then build.
-				</h2>
+				<h2 className="shout mt-4">Understand first, then build.</h2>
 				<p className="lead mt-4">
 					The same principle the school is built on, applied to client work.
 				</p>
@@ -434,8 +538,8 @@ function StudioProcess() {
 			<div className="grid md:grid-cols-3 gap-5">
 				{STUDIO_PROCESS.map((step) => (
 					<div key={step.t} className="step-card reveal">
-						<span className="step-badge badge-build">{step.n}</span>
-						<h3 className="display text-[1.3rem] mt-4">{step.t}</h3>
+						<span className="step-num is-build">0{step.n}</span>
+						<h3 className="display text-[1.5rem] mt-2">{step.t}</h3>
 						<p className="lead mt-2 text-[0.97rem]">{step.d}</p>
 					</div>
 				))}
@@ -454,6 +558,8 @@ function Home() {
 		return (
 			<>
 				<Hero />
+				<Tapes />
+				<Numbers />
 				<Thesis />
 				<Services />
 				<StudioProcess />
@@ -464,6 +570,8 @@ function Home() {
 	return (
 		<>
 			<Hero />
+			<Tapes />
+			<Numbers />
 			<Thesis />
 			<WhatWeDo />
 			<Approach />

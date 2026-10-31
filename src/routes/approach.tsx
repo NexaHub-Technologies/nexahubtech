@@ -56,7 +56,7 @@ function Approach() {
 					<div className="grid md:grid-cols-[1.05fr_0.95fr] gap-8 md:gap-10 items-start">
 						<div>
 							<Eyebrow variant="build">Why it works this way</Eyebrow>
-							<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
+							<h2 className="shout shout-md mt-4">
 								The expensive mistake is building the wrong thing well.
 							</h2>
 							<p className="lead mt-4">
@@ -99,7 +99,7 @@ function Approach() {
 			<section className="wrap py-14">
 				<div className="reveal max-w-[42rem] mb-10">
 					<Eyebrow variant="plain">The process</Eyebrow>
-					<h2 className="display mt-4 text-[2rem] sm:text-[2.5rem]">
+					<h2 className="shout shout-md mt-4">
 						Three phases, and what you hold at the end of each.
 					</h2>
 					<p className="lead mt-4">

@@ -210,9 +210,7 @@ function CbtPage() {
 				<div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-8 lg:gap-12 items-start">
 					<div className="reveal">
 						<Eyebrow>Try a few questions</Eyebrow>
-						<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
-							Answer with the keyboard.
-						</h2>
+						<h2 className="shout shout-md mt-4">Answer with the keyboard.</h2>
 						<p className="lead mt-4">
 							In the JAMB exam you can answer every question without a mouse.
 							Press <kbd className="font-mono">A</kbd>–
@@ -236,7 +234,7 @@ function CbtPage() {
 			<section className="wrap py-14">
 				<div className="reveal max-w-[40rem] mb-10">
 					<Eyebrow variant="plain">What we practise</Eyebrow>
-					<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
+					<h2 className="shout shout-md mt-4">
 						From first click to final mock.
 					</h2>
 				</div>
@@ -254,9 +252,7 @@ function CbtPage() {
 			<section className="wrap py-14">
 				<div className="reveal max-w-[40rem] mb-10">
 					<Eyebrow>Packages</Eyebrow>
-					<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
-						Pick what fits your timeline.
-					</h2>
+					<h2 className="shout shout-md mt-4">Pick what fits your timeline.</h2>
 				</div>
 				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 					{CBT_PACKAGES.map((pkg) => (
@@ -307,9 +303,7 @@ function CbtPage() {
 				<div className="grid md:grid-cols-[0.8fr_1.2fr] gap-8 md:gap-12 items-start">
 					<div className="reveal">
 						<Eyebrow variant="plain">Questions</Eyebrow>
-						<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
-							Before you register.
-						</h2>
+						<h2 className="shout shout-md mt-4">Before you register.</h2>
 						<p className="lead mt-4">
 							Anything else, ask us on{" "}
 							<a
@@ -339,7 +333,7 @@ function CbtPage() {
 			<section className="wrap py-16">
 				<div className="reveal card panel-learn p-9 md:p-12 text-center max-w-[46rem] mx-auto">
 					<Eyebrow>Come and see the lab</Eyebrow>
-					<h2 className="display text-[2rem] sm:text-[2.4rem] mt-3">
+					<h2 className="shout shout-md mt-3">
 						Start with a free placement test.
 					</h2>
 					<p className="lead mt-4 max-w-[34rem] mx-auto">

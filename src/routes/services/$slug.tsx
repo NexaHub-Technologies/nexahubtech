@@ -70,9 +70,7 @@ function ServiceDetail() {
 			<section className="wrap py-14">
 				<div className="reveal max-w-[40rem] mb-9">
 					<Eyebrow variant="build">What it covers</Eyebrow>
-					<h2 className="display mt-4 text-[2rem] sm:text-[2.5rem]">
-						The work, specifically.
-					</h2>
+					<h2 className="shout shout-md mt-4">The work, specifically.</h2>
 					<p className="lead mt-4">{service.d}</p>
 				</div>
 				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -93,7 +91,7 @@ function ServiceDetail() {
 				<div className="reveal grid md:grid-cols-[1.1fr_0.9fr] gap-6 items-center">
 					<div>
 						<Eyebrow variant="plain">How we work</Eyebrow>
-						<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
+						<h2 className="shout shout-md mt-4">
 							Understand first, then build.
 						</h2>
 						<p className="lead mt-4 max-w-[34rem]">

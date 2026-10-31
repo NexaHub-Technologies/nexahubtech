@@ -60,7 +60,7 @@ function Teaching() {
 					<div className="grid md:grid-cols-[1.05fr_0.95fr] gap-8 md:gap-10 items-start">
 						<div>
 							<Eyebrow>Why it works this way</Eyebrow>
-							<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
+							<h2 className="shout shout-md mt-4">
 								Most people are taught the syntax and never given the idea.
 							</h2>
 							<p className="lead mt-4">
@@ -103,9 +103,7 @@ function Teaching() {
 			<section className="wrap py-14">
 				<div className="reveal max-w-[42rem] mb-9">
 					<Eyebrow variant="plain">The method</Eyebrow>
-					<h2 className="display mt-4 text-[2rem] sm:text-[2.5rem]">
-						Four rules we don't bend.
-					</h2>
+					<h2 className="shout shout-md mt-4">Four rules we don't bend.</h2>
 					<p className="lead mt-4">
 						They shape how every session is written, how exercises are pitched,
 						and what we refuse to do to keep a syllabus looking impressive.
@@ -127,9 +125,7 @@ function Teaching() {
 				<div className="reveal card p-8 md:p-12">
 					<div className="max-w-[42rem]">
 						<Eyebrow variant="build">Inside a session</Eyebrow>
-						<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
-							Three parts, every time.
-						</h2>
+						<h2 className="shout shout-md mt-4">Three parts, every time.</h2>
 						<p className="lead mt-4">
 							The same shape across all {COURSES.length} courses, because the
 							order is the point: the idea, then your attempt, then something to
@@ -157,7 +153,7 @@ function Teaching() {
 				<div className="reveal card panel-learn p-8 md:p-10">
 					<div className="max-w-[42rem]">
 						<Eyebrow>How long a course takes</Eyebrow>
-						<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
+						<h2 className="shout shout-md mt-4">
 							A week is a pace, not a deadline.
 						</h2>
 						<p className="lead mt-4">
@@ -179,9 +175,7 @@ function Teaching() {
 			<section className="wrap py-14">
 				<div className="reveal max-w-[42rem] mb-9">
 					<Eyebrow variant="plain">Just as important</Eyebrow>
-					<h2 className="display mt-4 text-[2rem] sm:text-[2.5rem]">
-						What you won't find here.
-					</h2>
+					<h2 className="shout shout-md mt-4">What you won't find here.</h2>
 					<p className="lead mt-4">
 						A teaching method is defined as much by what it leaves out. These
 						are the four things we have decided not to do, and why.
