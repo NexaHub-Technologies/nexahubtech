@@ -5,7 +5,7 @@
 /* the address in parts, for the schema knowledge graph; CONTACT.address is the
    same thing as one line, built from these so the two cannot disagree */
 export const ADDRESS = {
-	street: "F01 Market",
+	street: "Phase 2, F01 Building Materials Market",
 	locality: "Kubwa",
 	region: "FCT-Abuja",
 	country: "NG",

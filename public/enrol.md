@@ -29,5 +29,5 @@ For WAEC & JAMB CBT training, see [WAEC & JAMB CBT Training](https://nexahubtech
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130

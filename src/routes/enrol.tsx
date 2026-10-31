@@ -109,7 +109,7 @@ function CourseSummary({ slug }: { slug: string }) {
 					</span>
 				</div>
 				<p className="text-[0.85rem] text-mute mt-4">
-					F01 Market, Kubwa, Abuja · Dedicated workstations · Power backed up
+					{CONTACT.address} · Dedicated workstations · Power backed up
 				</p>
 				<Link to="/cbt" className="view-link mt-3">
 					See full CBT details <i aria-hidden="true">→</i>

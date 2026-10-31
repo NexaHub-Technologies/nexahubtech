@@ -1,3 +1,5 @@
+import { CONTACT } from "./contact";
+
 export interface CbtModule {
 	n: string;
 	title: string;
@@ -33,7 +35,7 @@ export interface CbtSampleQuestion {
 
 export const CBT_DETAILS = {
 	title: "WAEC & JAMB CBT Training",
-	location: "F01 Market, Kubwa, FCT-Abuja",
+	location: CONTACT.address,
 	hours: "Monday – Saturday, 8:00 AM – 6:00 PM",
 	/* the same hours for machines: the schema knowledge graph publishes these, and
 	   cbt.test.ts fails if they stop agreeing with the line above */

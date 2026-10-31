@@ -25,7 +25,7 @@
       "telephone": "+2349134513173",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "F01 Market",
+        "streetAddress": "Phase 2, F01 Building Materials Market",
         "addressLocality": "Kubwa",
         "addressRegion": "FCT-Abuja",
         "addressCountry": "NG"
@@ -1471,7 +1471,7 @@
       "@id": "https://nexahubtech.company/cbt#course",
       "url": "https://nexahubtech.company/cbt",
       "name": "WAEC & JAMB CBT Training",
-      "description": "Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, F01 Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.",
+      "description": "Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.",
       "image": "https://nexahubtech.company/og/cbt.jpg",
       "inLanguage": "en",
       "provider": {
@@ -1984,7 +1984,7 @@
       "@id": "https://nexahubtech.company/cbt#webpage",
       "url": "https://nexahubtech.company/cbt",
       "name": "WAEC & JAMB CBT Training in Kubwa, Abuja — NexaHubTech",
-      "description": "Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, F01 Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.",
+      "description": "Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
