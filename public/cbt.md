@@ -1,11 +1,11 @@
 # WAEC & JAMB CBT Training — NexaHubTech
 
-> Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, F01 Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
+> Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
 
 Canonical page: https://nexahubtech.company/cbt
 
 - Exams covered: JAMB UTME, WAEC CB-WASSCE
-- Where: F01 Market, Kubwa, FCT-Abuja, Nigeria — taught in person, on the centre's desktop computers
+- Where: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria — taught in person, on the centre's desktop computers
 - Hours: Monday – Saturday, 8:00 AM – 6:00 PM
 
 ## What you practise
@@ -69,5 +69,5 @@ Yes. Walk in during opening hours, look at the lab, and take a short free placem
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130

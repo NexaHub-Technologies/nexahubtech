@@ -2,7 +2,7 @@
 
 > NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio under one roof. We teach real, in-demand skills — and then put them to work on real client products.
 
-Motto: "Learn to build. Build for real." Based at F01 Market, Kubwa, FCT-Abuja, Nigeria (CAC RC 9545130). Every course is taught live — online, except PC Basics and CBT training, taught in person at the centre — and starts whenever the student is ready. Prices are in Nigerian naira (NGN). Contact: nexahubt@gmail.com, +234 913 451 3173, WhatsApp https://wa.me/2349134513173.
+Motto: "Learn to build. Build for real." Based at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria (CAC RC 9545130). Every course is taught live — online, except PC Basics and CBT training, taught in person at the centre — and starts whenever the student is ready. Prices are in Nigerian naira (NGN). Contact: nexahubt@gmail.com, +234 913 451 3173, WhatsApp https://wa.me/2349134513173.
 
 Each link below is the markdown version of a page on https://nexahubtech.company; drop the `.md` suffix for the HTML page.
 
@@ -13,7 +13,7 @@ Each link below is the markdown version of a page on https://nexahubtech.company
 ## The school
 
 - [Courses](https://nexahubtech.company/courses.md): Explore all courses at NexaHubTech — from web development, JavaScript, React and Next.js to cybersecurity, data analysis and videography. Learn real skills with live, hands-on teaching you can start at any time.
-- [WAEC & JAMB CBT Training](https://nexahubtech.company/cbt.md): Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, F01 Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
+- [WAEC & JAMB CBT Training](https://nexahubtech.company/cbt.md): Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
 - [How We Teach](https://nexahubtech.company/teaching.md): The pedagogy behind every NexaHubTech course: the mental model before the syntax, one idea at a time, and a session built in three parts.
 - [Enrol](https://nexahubtech.company/enrol.md): Apply for a place at NexaHubTech — taught live, start any time. Tell us about you, pick your course and training mode, and we'll be in touch about your start date.
 
@@ -96,7 +96,7 @@ How a project runs: [Our Approach](https://nexahubtech.company/approach.md).
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -134,19 +134,19 @@ Apply for any course at https://nexahubtech.company/enrol.
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
 
 # WAEC & JAMB CBT Training — NexaHubTech
 
-> Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, F01 Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
+> Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
 
 Canonical page: https://nexahubtech.company/cbt
 
 - Exams covered: JAMB UTME, WAEC CB-WASSCE
-- Where: F01 Market, Kubwa, FCT-Abuja, Nigeria — taught in person, on the centre's desktop computers
+- Where: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria — taught in person, on the centre's desktop computers
 - Hours: Monday – Saturday, 8:00 AM – 6:00 PM
 
 ## What you practise
@@ -210,7 +210,7 @@ Yes. Walk in during opening hours, look at the lab, and take a short free placem
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -246,7 +246,7 @@ Canonical page: https://nexahubtech.company/teaching
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -282,7 +282,7 @@ For WAEC & JAMB CBT training, see [WAEC & JAMB CBT Training](https://nexahubtech
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -321,7 +321,7 @@ How a project runs: [Our Approach](https://nexahubtech.company/approach.md). To 
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -372,7 +372,7 @@ The last three steps turn a design into something you can hold us to — and som
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -411,7 +411,7 @@ To design and deliver cutting-edge technology solutions that solve practical pro
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -424,14 +424,14 @@ Canonical page: https://nexahubtech.company/contact
 
 WhatsApp is the fastest way to reach us. To ask about a course, say which one; to start a project, a few lines on what it needs to do is enough — no specification required.
 
-The centre at F01 Market, Kubwa, FCT-Abuja is open Monday – Saturday, 8:00 AM – 6:00 PM.
+The centre at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja is open Monday – Saturday, 8:00 AM – 6:00 PM.
 
 ## Contact
 
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -509,7 +509,7 @@ Apply at https://nexahubtech.company/enrol?course=pc-basics — or ask a questio
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -588,7 +588,7 @@ Apply at https://nexahubtech.company/enrol?course=microsoft-office — or ask a 
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -673,7 +673,7 @@ Apply at https://nexahubtech.company/enrol?course=web-development-fullstack — 
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -755,7 +755,7 @@ Apply at https://nexahubtech.company/enrol?course=frontend-development — or as
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -839,7 +839,7 @@ Apply at https://nexahubtech.company/enrol?course=javascript-programming — or 
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -924,7 +924,7 @@ Apply at https://nexahubtech.company/enrol?course=react-development — or ask a
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -1010,7 +1010,7 @@ Apply at https://nexahubtech.company/enrol?course=nextjs-fullstack — or ask a 
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -1093,7 +1093,7 @@ Apply at https://nexahubtech.company/enrol?course=backend-development — or ask
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -1176,7 +1176,7 @@ Apply at https://nexahubtech.company/enrol?course=mobile-development — or ask 
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -1261,7 +1261,7 @@ Apply at https://nexahubtech.company/enrol?course=cybersecurity — or ask a que
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -1343,7 +1343,7 @@ Apply at https://nexahubtech.company/enrol?course=python-programming — or ask 
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -1427,7 +1427,7 @@ Apply at https://nexahubtech.company/enrol?course=data-analysis — or ask a que
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -1503,7 +1503,7 @@ Apply at https://nexahubtech.company/enrol?course=videography-video-editing — 
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -1532,7 +1532,7 @@ How a project runs: [Our Approach](https://nexahubtech.company/approach.md). To 
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130
 
 ---
@@ -1560,5 +1560,5 @@ How a project runs: [Our Approach](https://nexahubtech.company/approach.md). To 
 - Email: nexahubt@gmail.com
 - Phone: +234 913 451 3173
 - WhatsApp: https://wa.me/2349134513173
-- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
 - Company registration: RC 9545130

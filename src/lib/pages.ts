@@ -85,13 +85,13 @@ export const PAGES = {
 		name: "WAEC & JAMB CBT Training",
 		title: "WAEC & JAMB CBT Training in Kubwa, Abuja — NexaHubTech",
 		description:
-			"Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, F01 Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.",
+			"Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.",
 		image: "/og/cbt.jpg",
 		card: {
 			eyebrow: "WAEC & JAMB CBT training",
 			headline: "Walk into your CBT exam",
 			accent: "already at ease.",
-			sub: `F01 Market, Kubwa · mock exams from ${cheapestCbt}`,
+			sub: `Phase 2, F01 Building Materials Market, Kubwa · mock exams from ${cheapestCbt}`,
 		},
 		kind: "FAQPage",
 	},
