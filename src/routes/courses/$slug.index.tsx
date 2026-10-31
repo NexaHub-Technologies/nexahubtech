@@ -82,9 +82,7 @@ function CourseDetail() {
 					<div className="grid md:grid-cols-[1.05fr_0.95fr] gap-8 md:gap-10 items-start">
 						<div>
 							<Eyebrow>The mental model</Eyebrow>
-							<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
-								{course.mentalModel.t}
-							</h2>
+							<h2 className="shout shout-md mt-4">{course.mentalModel.t}</h2>
 							<p className="lead mt-4">{course.mentalModel.d}</p>
 						</div>
 						<div className="md:pt-2">
@@ -113,7 +111,7 @@ function CourseDetail() {
 				<div className="grid md:grid-cols-[0.8fr_1.2fr] gap-8 md:gap-14 items-start">
 					<div className="reveal md:sticky md:top-28">
 						<Eyebrow>What you'll learn</Eyebrow>
-						<h2 className="display mt-4 text-[2rem] sm:text-[2.5rem]">
+						<h2 className="shout shout-md mt-4">
 							A path that builds on itself.
 						</h2>
 						<p className="lead mt-4">
@@ -145,9 +143,7 @@ function CourseDetail() {
 			<section className="wrap py-14">
 				<div className="reveal max-w-[40rem] mb-9">
 					<Eyebrow variant="build">Why this course</Eyebrow>
-					<h2 className="display mt-4 text-[2rem] sm:text-[2.5rem]">
-						Built for real understanding.
-					</h2>
+					<h2 className="shout shout-md mt-4">Built for real understanding.</h2>
 				</div>
 				<div className="grid sm:grid-cols-2 gap-4">
 					{course.features.map((f) => (
@@ -166,9 +162,7 @@ function CourseDetail() {
 					<div className="grid md:grid-cols-[0.9fr_1.1fr] gap-10 md:gap-14 items-center">
 						<div>
 							<Eyebrow variant="build">Inside a session</Eyebrow>
-							<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
-								Three parts, every time.
-							</h2>
+							<h2 className="shout shout-md mt-4">Three parts, every time.</h2>
 							<p className="lead mt-4">
 								Our materials aren't generic bootcamp slides. Each session is
 								structured to build understanding, then prove it — and the next
@@ -186,7 +180,7 @@ function CourseDetail() {
 				<div className="reveal card p-8 md:p-12">
 					<div className="max-w-[42rem]">
 						<Eyebrow variant="plain">Before you start</Eyebrow>
-						<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
+						<h2 className="shout shout-md mt-4">
 							What you need to take this course.
 						</h2>
 						<p className="lead mt-4">
@@ -234,9 +228,7 @@ function CourseDetail() {
 				<div className="reveal grid md:grid-cols-[1.1fr_0.9fr] gap-6 items-center">
 					<div>
 						<Eyebrow variant="plain">Format</Eyebrow>
-						<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
-							{course.format.t}
-						</h2>
+						<h2 className="shout shout-md mt-4">{course.format.t}</h2>
 						<p className="lead mt-4 max-w-[34rem]">{course.format.d}</p>
 						<div className="flex items-center gap-6 mt-6">
 							<div>

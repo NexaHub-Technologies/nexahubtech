@@ -115,7 +115,7 @@ function CoursesIndex() {
 					<div className="grid md:grid-cols-[1.1fr_0.9fr] gap-6 items-center">
 						<div>
 							<Eyebrow>How we teach</Eyebrow>
-							<h2 className="display mt-4 text-[2rem] sm:text-[2.4rem]">
+							<h2 className="shout shout-md mt-4">
 								Every course, same approach.
 							</h2>
 							<p className="lead mt-4 max-w-[34rem]">

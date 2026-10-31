@@ -100,7 +100,7 @@ function About() {
 					<div className="grid md:grid-cols-2 gap-10">
 						<div>
 							<Eyebrow>Our story</Eyebrow>
-							<h2 className="display mt-4 text-[1.9rem]">Built on one idea.</h2>
+							<h2 className="shout shout-md mt-4">Built on one idea.</h2>
 							<p className="lead mt-4">
 								We grew into something with a clear purpose: not just building
 								software, and not just teaching it, but wiring the two together.
@@ -109,9 +109,7 @@ function About() {
 						</div>
 						<div>
 							<Eyebrow variant="build">Skills-to-service</Eyebrow>
-							<h2 className="display mt-4 text-[1.9rem]">
-								One connected loop.
-							</h2>
+							<h2 className="shout shout-md mt-4">One connected loop.</h2>
 							<p className="lead mt-4">
 								The studio meets real engineering problems. Those problems shape
 								what we teach. The school grows people who go on to help build —
@@ -127,9 +125,7 @@ function About() {
 			<section className="wrap py-14">
 				<div className="reveal max-w-[40rem] mb-9">
 					<Eyebrow variant="plain">Where we’re going</Eyebrow>
-					<h2 className="display mt-4 text-[2rem] sm:text-[2.5rem]">
-						Vision & mission.
-					</h2>
+					<h2 className="shout shout-md mt-4">Vision & mission.</h2>
 				</div>
 				<div className="grid md:grid-cols-2 gap-5">
 					<div className="card card-lift panel-learn reveal p-8">
@@ -157,9 +153,7 @@ function About() {
 			<section className="wrap py-14">
 				<div className="reveal max-w-[40rem] mb-9">
 					<Eyebrow variant="plain">What we believe</Eyebrow>
-					<h2 className="display mt-4 text-[2rem] sm:text-[2.5rem]">
-						Our core values.
-					</h2>
+					<h2 className="shout shout-md mt-4">Our core values.</h2>
 					<p className="lead mt-4">
 						The principles behind both arms — the school and the studio alike.
 					</p>
@@ -178,7 +172,7 @@ function About() {
 						<section className="wrap py-14">
 				<div className="reveal max-w-[40rem] mb-9">
 					<Eyebrow variant="plain">Who’s behind it</Eyebrow>
-					<h2 className="display mt-4 text-[2rem] sm:text-[2.5rem]">
+					<h2 className="shout shout-md mt-4">
 						The co-founders.
 					</h2>
 					<p className="lead mt-4">

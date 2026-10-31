@@ -185,7 +185,7 @@ export function Header() {
 
 	return (
 		<header className="site-header" id="site-header" data-menu-open={open}>
-			<div className="wrap flex items-center justify-between gap-4 h-[76px]">
+			<div className="wrap nav-island flex items-center justify-between gap-3 h-[64px]">
 				<Link
 					to="/"
 					className="flex items-center shrink-0"
@@ -195,7 +195,7 @@ export function Header() {
 					<Logo height={26} />
 				</Link>
 
-				<nav className="hidden lg:flex items-center gap-7">
+				<nav className="hidden lg:flex items-center gap-0.5 xl:gap-1">
 					{nav.map((n) => {
 						const side = "side" in n && n.side === mode ? " is-side" : "";
 						return (
@@ -213,10 +213,7 @@ export function Header() {
 
 				<div className="hidden lg:flex items-center gap-3">
 					<ModeSwitch />
-					<Link
-						to={cta.to}
-						className="btn btn-primary !py-2.5 !px-5 text-[0.9rem]"
-					>
+					<Link to={cta.to} className="btn btn-blast">
 						{cta.label}
 					</Link>
 				</div>
@@ -257,7 +254,7 @@ export function Header() {
 					})}
 					<Link
 						to={cta.to}
-						className="btn btn-primary mt-4"
+						className="btn btn-blast mt-4"
 						onClick={() => setOpen(false)}
 					>
 						{cta.label}
@@ -313,9 +310,7 @@ export function Footer() {
 							</a>
 						))}
 					</div>
-					<p className="text-[0.85rem] text-mute">
-						© 2026 NexaHubTech
-					</p>
+					<p className="text-[0.85rem] text-mute">© 2026 NexaHubTech</p>
 					<p className="text-[0.78rem] text-mute">RC {CONTACT.rc}</p>
 					<Link
 						to={mode === "build" ? "/courses" : "/services"}
@@ -327,6 +322,10 @@ export function Footer() {
 						<i aria-hidden="true"> →</i>
 					</Link>
 				</div>
+			</div>
+			{/* the name, as big as the page allows: a sign-off, not content */}
+			<div className="wrap footer-word" aria-hidden="true">
+				NexaHubTech
 			</div>
 		</footer>
 	);

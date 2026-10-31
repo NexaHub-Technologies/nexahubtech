@@ -1362,3 +1362,770 @@ a.contact-detail:hover {
   }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ── home : the loud version ───────────────────────────────────────
+   The homepage is where the brand shouts. A dark stage with a turning
+   burst of rays, giant type, crossing tape, big numbers and solid slabs.
+   The hot accent runs rose → peach → yellow, the brand's rose taken to a
+   flare. It appears only on the dark stage and the numbers, where it
+   clears contrast; body copy never sits on it.
+   Every moving part stops under prefers-reduced-motion (end of block). */
+
+:root {
+  --hot: linear-gradient(100deg, #f06ba8 0%, #ff9a62 55%, #ffd25a 100%);
+  /* for gradient text on the light ground, where rose and yellow are too
+     pale: violet into a deep rose, both above 4.5:1 on the blush */
+  --hot-on-light: linear-gradient(100deg, #6a2cad 0%, #a8287a 100%);
+  --stage: #1a0828;
+}
+:root[data-mode='build'] {
+  --hot-on-light: var(--hot);
+}
+
+.hot-text {
+  background: var(--hot);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* descenders and the italic overhang of 800 weight would clip */
+  padding-inline-end: 0.04em;
+}
+
+/* section headings: big, tight, heavy */
+.shout {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.5rem, 5.6vw, 4.6rem);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+/* ── the stage ── */
+
+.blast {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 2rem;
+  background:
+    radial-gradient(120% 90% at 0% 100%, rgba(106, 44, 173, 0.55), transparent 55%),
+    var(--stage);
+  color: #ffffff;
+  padding: clamp(2.25rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4.5rem);
+  box-shadow: 0 40px 90px -40px rgba(26, 8, 40, 0.85);
+}
+/* a ring of hard-edged rays, much larger than the stage, centred on the
+   burst point and turning slowly. Only the transform animates. */
+.blast-rays {
+  position: absolute;
+  z-index: -1;
+  top: 42%;
+  left: 74%;
+  width: 260vmax;
+  height: 260vmax;
+  translate: -50% -50%;
+  background: repeating-conic-gradient(
+    from 0deg,
+    rgba(240, 107, 168, 0.16) 0deg 5deg,
+    transparent 5deg 15deg,
+    rgba(160, 100, 230, 0.12) 15deg 19deg,
+    transparent 19deg 30deg
+  );
+  mask-image: radial-gradient(closest-side, #000 0%, rgba(0, 0, 0, 0.6) 18%, transparent 42%);
+  animation: rays-turn 90s linear infinite;
+}
+.blast-core {
+  position: absolute;
+  z-index: -1;
+  top: 42%;
+  left: 74%;
+  width: min(70vw, 720px);
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: radial-gradient(
+    closest-side,
+    rgba(255, 210, 90, 0.55),
+    rgba(255, 154, 98, 0.35) 22%,
+    rgba(240, 107, 168, 0.28) 45%,
+    rgba(106, 44, 173, 0) 100%
+  );
+  animation: core-pulse 6s ease-in-out infinite;
+}
+.blast-spark {
+  position: absolute;
+  z-index: 0;
+  background: #ffd25a;
+  /* a four-point star */
+  clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+  animation: twinkle 2.8s ease-in-out infinite;
+}
+
+.blast-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3rem, 6.4vw, 6.1rem);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+}
+.blast-cta .blast-title {
+  font-size: clamp(2.8rem, 7vw, 6rem);
+}
+.blast-lead {
+  color: #e6d9f0;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+.blast .eyebrow {
+  color: #bfaecb;
+}
+/* beats the build mode's eyebrow rule, which would turn it grape on grape */
+:root[data-mode] .blast .eyebrow::before,
+.blast .eyebrow::before {
+  background: var(--warm);
+}
+.blast .pill {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #f6eff4;
+  box-shadow: none;
+  backdrop-filter: blur(6px);
+}
+:root .blast .btn-ghost {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+  background: transparent;
+}
+:root .blast .btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+
+/* the headline lands: big, then settles */
+.slam {
+  opacity: 0;
+  animation: slam 0.9s cubic-bezier(0.2, 1.35, 0.4, 1) 0.15s forwards;
+}
+
+/* the journey cards, thrown onto the stage at an angle with a hard shadow */
+.blast .hero-stage {
+  padding: 0;
+}
+.blast .jcard {
+  background: #ffffff;
+  color: #311049;
+  border: 0;
+  box-shadow: 10px 10px 0 #f06ba8;
+}
+.blast .jcard .display {
+  color: #311049;
+}
+.blast .jcard .text-mute {
+  color: #6f627b;
+}
+.blast .jcard .jlabel {
+  color: #5e2096 !important;
+}
+.blast .j-learn {
+  transform: rotate(-4deg);
+}
+.blast .j-build {
+  transform: rotate(3deg);
+  box-shadow: 10px 10px 0 #ffd25a;
+}
+.blast .loop-tag {
+  background: #ffd25a;
+  color: #1a0828;
+  border: 0;
+  font-weight: 800;
+}
+
+/* the main action on the stage */
+.btn-blast {
+  background: var(--hot);
+  color: #1a0828;
+  font-weight: 800;
+  font-size: 1.05rem;
+  padding: 1.05rem 1.8rem;
+  box-shadow: 0 18px 40px -14px rgba(255, 154, 98, 0.7);
+}
+.btn-blast i {
+  font-style: normal;
+  transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-blast:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 26px 52px -14px rgba(255, 154, 98, 0.85);
+}
+.btn-blast:hover i {
+  transform: translateX(4px);
+}
+.btn-blast:focus-visible {
+  outline-color: #ffd25a;
+}
+
+/* ── crossing tape ── */
+
+.tapes {
+  position: relative;
+  height: clamp(7rem, 13vw, 10rem);
+  margin-block: -1.5rem 0;
+  /* clip the sideways overhang only; the tilted edges and shadow need the
+     vertical room */
+  overflow-x: clip;
+  pointer-events: none;
+}
+.tape {
+  position: absolute;
+  left: -5%;
+  width: 110%;
+  top: 50%;
+  overflow: hidden;
+  padding-block: 0.7rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.2rem, 2.6vw, 2rem);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.tape-back {
+  translate: 0 -50%;
+  rotate: 3deg;
+  background: var(--marigold);
+  color: #ffffff;
+}
+.tape-front {
+  translate: 0 -50%;
+  rotate: -2.5deg;
+  background: var(--hot);
+  color: #1a0828;
+  box-shadow: 0 16px 34px -18px rgba(26, 8, 40, 0.6);
+}
+.tape-track {
+  display: flex;
+  width: max-content;
+  animation: tape-run 38s linear infinite;
+}
+.tape-back .tape-track {
+  animation-direction: reverse;
+  animation-duration: 46s;
+}
+.tape-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding-inline-end: 1.1rem;
+}
+.tape-star {
+  font-size: 0.8em;
+}
+
+/* ── numbers ── */
+
+.numbers {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+.number {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding-top: 1.1rem;
+  border-top: 3px solid var(--ink);
+}
+.number-n {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(4.5rem, 10vw, 8rem);
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+  background: var(--hot-on-light);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.number-l {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  max-width: 16rem;
+}
+
+/* ── manifesto ── */
+
+.manifesto {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.1rem, 5.2vw, 4.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  max-width: 62rem;
+  text-wrap: balance;
+}
+.manifesto mark {
+  color: inherit;
+  background: linear-gradient(transparent 58%, rgba(240, 107, 168, 0.45) 58%, rgba(255, 154, 98, 0.45) 92%, transparent 92%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding-inline: 0.06em;
+}
+
+/* ── slabs: the arms and the services, solid and stamped ── */
+
+.slab {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 1.75rem;
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  transition: transform 300ms cubic-bezier(0.2, 1.3, 0.4, 1), box-shadow 300ms ease;
+  box-shadow: 0 30px 60px -36px rgba(26, 8, 40, 0.8);
+}
+.slab:hover {
+  transform: translateY(-6px) rotate(-0.6deg);
+  box-shadow: 0 44px 80px -36px rgba(26, 8, 40, 0.9);
+}
+.slab:nth-child(even):hover {
+  transform: translateY(-6px) rotate(0.6deg);
+}
+:root .slab-learn {
+  background:
+    radial-gradient(90% 70% at 100% 0%, rgba(240, 107, 168, 0.45), transparent 60%),
+    linear-gradient(155deg, #7b35c4, #4a1063);
+}
+:root .slab-build {
+  background:
+    radial-gradient(90% 70% at 100% 0%, rgba(255, 154, 98, 0.28), transparent 60%),
+    linear-gradient(155deg, #2c1440, var(--stage));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+/* rose is too faint on the violet; yellow clears it */
+.slab-learn .view-link {
+  color: #ffd25a;
+}
+.slab-word {
+  position: absolute;
+  z-index: -1;
+  right: -0.04em;
+  bottom: -0.2em;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(6rem, 14vw, 11rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.16);
+  transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.slab:hover /* rose is too faint on the violet; yellow clears it */
+.slab-learn .view-link {
+  color: #ffd25a;
+}
+.slab-word {
+  transform: translateX(-0.12em) scale(1.04);
+}
+
+/* ── steps: the number is the shape ── */
+
+.step-num {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 4.6rem;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--marigold);
+  transition: color 240ms ease;
+}
+.step-num.is-build {
+  -webkit-text-stroke-color: var(--build-ink);
+}
+.step-card:hover .step-num {
+  color: var(--marigold);
+}
+.step-card:hover .step-num.is-build {
+  color: var(--build-ink);
+}
+
+.audience-card {
+  border-top: 5px solid transparent;
+  border-image: var(--hot-on-light) 1;
+  border-image-slice: 1 0 0 0;
+}
+
+@keyframes rays-turn {
+  to { rotate: 360deg; }
+}
+@keyframes core-pulse {
+  0%, 100% { scale: 1; opacity: 0.9; }
+  50% { scale: 1.08; opacity: 1; }
+}
+@keyframes twinkle {
+  0%, 100% { scale: 0.4; opacity: 0.25; rotate: 0deg; }
+  50% { scale: 1; opacity: 1; rotate: 45deg; }
+}
+@keyframes slam {
+  0% { opacity: 0; transform: translateY(28px) scale(1.12); filter: blur(6px); }
+  60% { opacity: 1; filter: blur(0); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes tape-run {
+  to { transform: translateX(-50%); }
+}
+
+@media (max-width: 1023px) {
+  .blast-rays,
+  .blast-core {
+    top: 78%;
+    left: 60%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blast-rays,
+  .blast-core,
+  .blast-spark,
+  .tape-track {
+    animation: none;
+  }
+  .slam {
+    opacity: 1;
+    animation: none;
+  }
+  .slab,
+  .slab-word,
+  .btn-blast,
+  .btn-blast i {
+    transition: none;
+  }
+  .slab:hover,
+  .slab:nth-child(even):hover,
+  .btn-blast:hover {
+    transform: none;
+  }
+  .slab:hover .slab-word,
+  .btn-blast:hover i {
+    transform: none;
+  }
+}
+
+/* ── every page : the same voice ───────────────────────────────────
+   The homepage's dark stage, carried through the site. Each page's intro
+   (.page-head), the header bar and the footer are dark surfaces in both
+   modes. Rather than restyle everything inside them, they redefine the
+   colour tokens for their own subtree: text, lines, cards and the accent
+   inks all resolve light-on-dark, so pills, buttons, inline accents and
+   links inside need no rules of their own. The accents become yellow (the
+   school) and pink (the studio), both well above 4.5:1 on the stage. */
+
+.page-head,
+.nav-island,
+.mobile-menu > nav,
+.footer {
+  --ink: #ffffff;
+  --ink-soft: #e6d9f0;
+  --mute: #bfaecb;
+  --mute-2: #9c88aa;
+  --learn-ink: #ffd25a;
+  --build-ink: #f9a8cd;
+  --marigold: #f06ba8;
+  --teal: #f06ba8;
+  --mode-accent: #f06ba8;
+  --mode-accent-ink: #f9a8cd;
+  --card: rgba(255, 255, 255, 0.07);
+  --paper: var(--stage);
+  --paper-2: rgba(255, 255, 255, 0.07);
+  --line: rgba(255, 255, 255, 0.16);
+  --line-soft: rgba(255, 255, 255, 0.09);
+  --shadow-sm: none;
+  color: var(--ink);
+}
+
+/* the brand mark is a dark fill; lift it off every dark surface */
+.nav-island .site-logo,
+.footer .site-logo {
+  filter: brightness(0) invert(1);
+}
+
+/* the actions on a stage take the hot gradient, in either mode */
+:root[data-mode] :is(.page-head, .blast) :is(.btn-primary, .btn-teal),
+:is(.page-head, .blast) :is(.btn-primary, .btn-teal) {
+  background: var(--hot);
+  color: #1a0828;
+  font-weight: 800;
+  box-shadow: 0 18px 40px -14px rgba(255, 154, 98, 0.7);
+}
+:root[data-mode] :is(.page-head, .blast) :is(.btn-primary, .btn-teal):hover,
+:is(.page-head, .blast) :is(.btn-primary, .btn-teal):hover {
+  background: var(--hot);
+  transform: translateY(-3px) scale(1.03);
+}
+:root[data-mode] .page-head .btn-ghost,
+.page-head .btn-ghost {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.page-head .btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+.page-head .pill {
+  backdrop-filter: blur(6px);
+}
+
+/* ── page intro: a stage ── */
+
+.page-head {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  padding: clamp(2.5rem, 6vw, 4.75rem) clamp(1.5rem, 5vw, 4.5rem);
+  background:
+    radial-gradient(110% 90% at 0% 100%, rgba(106, 44, 173, 0.55), transparent 55%),
+    var(--stage);
+  box-shadow: 0 40px 90px -40px rgba(26, 8, 40, 0.85);
+}
+/* the burst sits off to the right, behind nothing but space */
+.page-head::before,
+.page-head::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 88%;
+  translate: -50% -50%;
+  pointer-events: none;
+}
+.page-head::before {
+  width: 220vmax;
+  height: 220vmax;
+  background: repeating-conic-gradient(
+    from 0deg,
+    rgba(240, 107, 168, 0.15) 0deg 5deg,
+    transparent 5deg 15deg,
+    rgba(160, 100, 230, 0.12) 15deg 19deg,
+    transparent 19deg 30deg
+  );
+  mask-image: radial-gradient(closest-side, #000 0%, rgba(0, 0, 0, 0.55) 16%, transparent 34%);
+  animation: rays-turn 110s linear infinite;
+}
+.page-head::after {
+  width: min(60vw, 560px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    closest-side,
+    rgba(255, 210, 90, 0.5),
+    rgba(255, 154, 98, 0.3) 24%,
+    rgba(240, 107, 168, 0.22) 48%,
+    transparent 100%
+  );
+  animation: core-pulse 6s ease-in-out infinite;
+}
+.page-head h1 {
+  font-weight: 800;
+  font-size: clamp(2.7rem, 6.2vw, 5.4rem);
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+.page-head .lead {
+  font-size: 1.15rem;
+}
+
+/* ── type and shapes, everywhere ── */
+
+.display {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.shout-md {
+  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+}
+.eyebrow {
+  font-weight: 800;
+  color: var(--ink-soft);
+}
+.eyebrow::before {
+  width: 28px;
+  height: 3px;
+}
+
+/* cards land with a hard shadow in the arm's colour when hovered */
+.card-lift:hover {
+  transform: translate(-3px, -5px);
+  box-shadow: 8px 10px 0 var(--mode-accent);
+}
+.step-card:hover {
+  transform: translate(-3px, -5px);
+  box-shadow: 8px 10px 0 var(--mode-accent);
+}
+.step-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  font-weight: 800;
+  font-size: 1.35rem;
+}
+:root .badge-learn,
+:root .badge-build {
+  background: var(--hot-on-light);
+  color: #ffffff;
+}
+:root[data-mode='build'] .badge-learn,
+:root[data-mode='build'] .badge-build {
+  color: #1a0828;
+}
+.btn {
+  font-weight: 800;
+}
+
+/* ── header: a floating dark bar ── */
+
+.site-header {
+  padding-top: 0.75rem;
+}
+:root .site-header.scrolled,
+:root .site-header[data-menu-open='true'] {
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom-color: transparent;
+  box-shadow: none;
+}
+.nav-island {
+  border-radius: 999px;
+  padding-inline: 1.1rem 0.45rem;
+  background: rgba(26, 8, 40, 0.94);
+  backdrop-filter: blur(14px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 40px -24px rgba(26, 8, 40, 0.7);
+  transition: box-shadow 220ms ease;
+}
+.site-header.scrolled .nav-island {
+  box-shadow: 0 22px 50px -20px rgba(26, 8, 40, 0.85);
+}
+.nav-island .site-wordmark {
+  font-weight: 800;
+  color: #ffffff;
+}
+.nav-island .nav-link {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #d8c9e2;
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+.nav-island .nav-link::after {
+  display: none;
+}
+.nav-island .nav-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+.nav-island .nav-link.is-active {
+  color: #1a0828;
+  background: #ffffff;
+}
+.nav-island .nav-link.is-side:not(.is-active) {
+  color: #ffd25a;
+}
+:root .nav-island .mode-switch button[data-on='true'] {
+  background: var(--hot);
+  color: #1a0828;
+  box-shadow: none;
+}
+.nav-island .btn-blast {
+  font-size: 0.92rem;
+  padding: 0.7rem 1.25rem;
+}
+.nav-island .menu-btn {
+  border-radius: 999px;
+}
+.nav-island .menu-btn span {
+  background: #ffffff;
+}
+@media (max-width: 1023px) {
+  .nav-island {
+    padding-inline: 0.9rem 0.35rem;
+  }
+}
+
+/* the phone menu drops as a dark card under the bar */
+:root .mobile-menu {
+  border-top: 0;
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+.mobile-menu > nav {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.25rem 1.25rem;
+  border-radius: 1.75rem;
+  background: var(--stage);
+  box-shadow: 0 30px 60px -24px rgba(26, 8, 40, 0.8);
+}
+.mobile-menu .mobile-link {
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: -0.03em;
+}
+.mobile-menu .mobile-link.is-active {
+  color: #ffd25a;
+}
+
+/* ── footer: a stage, signed with the name ── */
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  border-top: 0;
+  border-radius: 2rem 2rem 0 0;
+  background:
+    radial-gradient(70% 120% at 100% 0%, rgba(240, 107, 168, 0.22), transparent 60%),
+    radial-gradient(60% 120% at 0% 100%, rgba(106, 44, 173, 0.45), transparent 60%),
+    var(--stage);
+}
+.footer .site-wordmark {
+  color: #ffffff;
+}
+.footer .social-btn:hover {
+  color: #1a0828;
+  background: #ffd25a;
+  border-color: #ffd25a;
+}
+.footer-word {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3rem, 12.4vw, 11.4rem);
+  line-height: 0.78;
+  letter-spacing: -0.06em;
+  text-align: center;
+  white-space: nowrap;
+  background: var(--hot);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* the descender-less word sits on the bottom edge and is cut by it */
+  margin-bottom: -0.06em;
+  user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-head::before,
+  .page-head::after {
+    animation: none;
+  }
+  .card-lift:hover,
+  .step-card:hover {
+    transform: none;
+  }
+}
