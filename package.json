@@ -17,6 +17,7 @@
     "check": "biome check",
     "generate-sitemap": "bun run scripts/generate-sitemap.ts",
     "generate-og-images": "bun run scripts/generate-og-images.ts",
+    "design-system": "bun run scripts/design-system/build.ts",
     "generate-project-specs": "mkdir -p .cache && bun run scripts/dump-course-modules.ts > .cache/modules.json && python3 scripts/generate-project-specs.py"
   },
   "dependencies": {
@@ -42,6 +43,7 @@
     "@biomejs/biome": "2.4.5",
     "@playwright/test": "^1.64.1",
     "@rolldown/plugin-babel": "^0.2.3",
+    "@tailwindcss/cli": "4.3.1",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/devtools-vite": "latest",
     "@tanstack/router-cli": "^1.167.46",
