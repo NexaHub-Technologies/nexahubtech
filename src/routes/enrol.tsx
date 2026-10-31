@@ -542,7 +542,7 @@ function EnrolForm({
 					onChange={(e) => setUpdates(e.target.checked)}
 				/>
 				<span>
-					Send me class reminders and payment updates by email and SMS.
+					Send me session reminders and payment updates by email and SMS.
 				</span>
 			</label>
 

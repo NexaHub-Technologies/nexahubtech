@@ -71,7 +71,7 @@ export const SESSION: SessionPart[] = [
 export const ANTIPATTERNS: Antipattern[] = [
 	{
 		t: "Slides, read aloud",
-		d: "If a session could have been a document, it should have been a document. Time together is for working through the hard part, not narrating bullet points at people.",
+		d: "If a session could have been a document, it should have been a document. Time together is for working through the hard part, not narrating bullet points at you.",
 	},
 	{
 		t: "Copy-along tutorials",

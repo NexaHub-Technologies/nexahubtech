@@ -76,7 +76,7 @@ export interface Course {
    how a single course quietly ends up describing itself wrongly. */
 const ONLINE: Format = {
 	t: "Taught live, online, hands-on.",
-	d: "An instructor teaches you live, with structured materials and real feedback, and you start whenever you are ready rather than waiting for an intake. Sessions and materials run over WhatsApp, keeping it close and accessible.",
+	d: "An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.",
 };
 
 export const COURSES: Course[] = [

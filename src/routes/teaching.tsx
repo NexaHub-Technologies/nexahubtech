@@ -159,8 +159,8 @@ function Teaching() {
 						<p className="lead mt-4">
 							Every course states a length — eight weeks, twelve weeks. That is
 							what it takes at the hours the course asks for, not a term you
-							have to keep up with. You start the day you are ready rather than
-							waiting for an intake, and nobody is behind.
+							have to keep up with. You start the day you are ready, and you
+							move at your own pace.
 						</p>
 						<p className="lead mt-4">
 							Give it double the hours and you will finish in half the time.

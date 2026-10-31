@@ -21,7 +21,7 @@
 - Frontend Web Development course (HTML, CSS, JavaScript fundamentals), with fullstack ambitions
 - **Pedagogy:** chunk-based teaching — establish the mental model *first*, then introduce syntax. Not generic bootcamp content.
 - Materials: structured session notes, beginner exercise briefs, model-answer files
-- Format has included WhatsApp-distributed course content for active cohorts
+- Format: live teaching, with course content shared over WhatsApp; no cohorts, students start whenever they are ready
 - Positioning: for people who want to actually understand how things work, not just copy-paste syntax
 
 ### B. Delivery Arm — "Build"
@@ -75,7 +75,7 @@ Split clearly into two columns/tabs:
 
 ### Courses
 - Frontend Track: HTML → CSS → JavaScript, chunk-based curriculum
-- Format, duration, cohort structure `[NEEDS INPUT: price, schedule, enrollment process, next cohort date]`
+- Format and duration: rolling enrolment, start any time `[NEEDS INPUT: price, enrollment process]`
 - Sample lesson or exercise teaser (could pull from existing materials)
 - Enrollment CTA
 

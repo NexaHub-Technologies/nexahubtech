@@ -51,7 +51,7 @@ export interface Enrolment {
 	commit: YesNo;
 	comments: string;
 	accurate: boolean;
-	/* agreed to class and payment messages by email and SMS (optional) */
+	/* agreed to session and payment messages by email and SMS (optional) */
 	updates: boolean;
 }
 
@@ -154,7 +154,7 @@ export function enrolmentDocument(e: Enrolment): EmailDocument {
 					value: e.accurate ? "Confirmed" : "Not confirmed",
 				},
 				{
-					label: "Class and payment updates",
+					label: "Session and payment updates",
 					value: e.updates ? "Yes, by email and SMS" : "No",
 				},
 			],
