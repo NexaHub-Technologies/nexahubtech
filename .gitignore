@@ -22,3 +22,6 @@ docs
 test-results
 playwright-report
 blob-report
+
+# design-system bundle built by scripts/design-system/build.ts
+.design-system
