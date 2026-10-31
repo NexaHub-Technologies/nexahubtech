@@ -214,7 +214,7 @@ describe("the application as the staff console stores it", () => {
 		const doc = enrolmentDocument({ ...base, updates: false });
 		const agreement = doc.sections.find((s) => s.title === "Agreement");
 		expect(agreement?.fields).toContainEqual({
-			label: "Class and payment updates",
+			label: "Session and payment updates",
 			value: "No",
 		});
 	});

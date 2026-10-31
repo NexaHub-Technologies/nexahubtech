@@ -124,11 +124,6 @@ export const CBT_FAQS: CbtFaq[] = [
 			"Use of English, Mathematics, Physics, Chemistry, Biology, Economics, Commerce, Government, Literature in English, Financial Accounting, CRS, IRS, Geography and Agricultural Science.",
 	},
 	{
-		question: "Can a school or tutorial centre register a group?",
-		answer:
-			"Yes. We can set aside morning or weekend sessions for a whole class. Message us on WhatsApp to arrange it.",
-	},
-	{
 		question: "Can I see the centre before I pay?",
 		answer:
 			"Yes. Walk in during opening hours, look at the lab, and take a short free placement test.",
