@@ -55,6 +55,16 @@ describe("published discovery files", () => {
 		);
 	});
 
+	/* Vercel serves any public/index.* as the directory index, so a file named
+	   that way shadows the homepage route — which is how / once served markdown */
+	it("publishes nothing that would replace the homepage", () => {
+		for (const path of Object.keys(files))
+			expect(path, path).not.toMatch(/^\/index\./);
+		expect(readdirSync("public").filter((f) => f.startsWith("index."))).toEqual(
+			[],
+		);
+	});
+
 	it("lists every indexable page in the sitemap, and nothing hidden", () => {
 		const locs = [...files["/sitemap.xml"].matchAll(/<loc>(.*?)<\/loc>/g)].map(
 			(m) => m[1],

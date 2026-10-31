@@ -162,9 +162,13 @@ export function findPage(path: string): Page | undefined {
 	return INDEXABLE_PAGES.find((p) => p.path === path);
 }
 
-/* the markdown mirror of a page: /courses/pc-basics → /courses/pc-basics.md, and
-   the homepage, which has no segment to hang a suffix on, → /index.md. This is the
-   convention llms.txt describes for offering a page's text without its markup. */
+/* the markdown mirror of a page: /courses/pc-basics → /courses/pc-basics.md. This
+   is the convention llms.txt describes for offering a page's text without its
+   markup. The homepage has no segment to hang a suffix on, so it gets /home.md —
+   never public/index.*: Vercel serves any index file as the directory index, and
+   an index.md there replaced the live homepage with its own markdown. */
+export const HOME_MARKDOWN = "/home.md";
+
 export function markdownPath(path: string): string {
-	return path === "/" ? "/index.md" : `${path}.md`;
+	return path === "/" ? HOME_MARKDOWN : `${path}.md`;
 }
