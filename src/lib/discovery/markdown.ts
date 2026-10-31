@@ -12,7 +12,7 @@ import { APPROACH } from "../approach";
 import { CBT_DETAILS, CBT_FAQS, CBT_PACKAGES, CBT_PILLARS } from "../cbt";
 import { MISSION, SUMMARY, THESIS, VALUES, VISION } from "../company";
 import { CONTACT, MOTTO, SITE_URL } from "../contact";
-import { COURSES, type Course } from "../courses";
+import { COURSES, type Course, taughtInPerson } from "../courses";
 import {
 	coursePage,
 	INDEXABLE_PAGES,
@@ -23,7 +23,6 @@ import {
 } from "../pages";
 import { SERVICES, type ServiceLine } from "../services";
 import { ANTIPATTERNS, PRINCIPLES, SESSION } from "../teaching";
-import { taughtInPerson } from "./schema";
 
 const abs = (path: string) => `${SITE_URL}${path}`;
 /* links between mirrors point at other mirrors, so an agent can keep walking

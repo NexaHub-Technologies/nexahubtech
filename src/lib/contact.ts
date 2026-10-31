@@ -29,6 +29,5 @@ export const CONTACT = {
 	rc: "9545130",
 } as const;
 
-
 /* the registered company motto, exactly as it appears in the profile */
 export const MOTTO = "Learn to build. Build for real.";
