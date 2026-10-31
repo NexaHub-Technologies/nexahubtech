@@ -8,6 +8,7 @@ import {
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 
 import { ModeProvider } from "../components/mode";
+import { Preloader } from "../components/preloader";
 import { Footer, Header } from "../components/site";
 import { SITE_URL } from "../lib/contact";
 import { DEFAULT_MODE, MODE_INIT_SCRIPT } from "../lib/mode";
@@ -109,6 +110,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 				<HeadContent />
 			</head>
 			<body>
+				<Preloader />
 				{children}
 				<TanStackDevtools
 					config={{
