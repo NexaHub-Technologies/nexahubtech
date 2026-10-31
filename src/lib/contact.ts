@@ -1,6 +1,6 @@
 /* the one place our real company details live — imported by the site chrome,
    the contact page, and the enquiry composer. Sourced from the company
-   profile (NexaHub Technologies, RC 9545130). */
+   profile (NexaHubTech, RC 9545130). */
 export const CONTACT = {
 	email: "nexahubt@gmail.com",
 	phoneDisplay: "+234 913 451 3173",

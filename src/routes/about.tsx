@@ -182,7 +182,7 @@ function About() {
 						The co-founders.
 					</h2>
 					<p className="lead mt-4">
-						NexaHub Technologies — the school and the studio, run as one thing.
+						NexaHubTech — the school and the studio, run as one thing.
 					</p>
 				</div>
 				<div className="grid sm:grid-cols-2 gap-5">
