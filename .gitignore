@@ -25,3 +25,7 @@ blob-report
 
 # design-system bundle built by scripts/design-system/build.ts
 .design-system
+
+# Claude Code settings — kept per machine, not shared
+.claude/settings.json
+.claude/settings.local.json
