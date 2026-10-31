@@ -8,19 +8,13 @@ import {
 	CBT_PILLARS,
 	SAMPLE_CBT_QUESTIONS,
 } from "../lib/cbt";
+import { PAGES } from "../lib/pages";
 import { pageMeta } from "../lib/seo";
 
 export const Route = createFileRoute("/cbt")({
 	component: CbtPage,
 	ssr: false,
-	head: () =>
-		pageMeta({
-			title: "WAEC & JAMB CBT Training in Kubwa, Abuja — NexaHubTech",
-			description:
-				"Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, F01 Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.",
-			path: "/cbt",
-			image: "/og/cbt.jpg",
-		}),
+	head: () => pageMeta(PAGES.cbt),
 });
 
 const WHATSAPP_ENQUIRY = `${CONTACT.whatsapp}?text=${encodeURIComponent(

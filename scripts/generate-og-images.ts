@@ -122,6 +122,7 @@ const jobs: Job[] = [
 	{ name: "enrol", eyebrow: "Enrolment", headline: "Apply for", accent: "a place.", sub: "Pick a track · tell us about you" },
 	{ name: "services", eyebrow: "Our services", headline: "Software, built", accent: "properly.", sub: "Custom software, web, mobile, cloud" },
 	{ name: "work", eyebrow: "Our work", headline: "What we've", accent: "built.", sub: "Marketplaces · real-time video · platforms" },
+	{ name: "cbt", eyebrow: "WAEC & JAMB CBT training", headline: "Ready for", accent: "exam day.", sub: "F01 Market, Kubwa · mock exams from ₦3,000" },
 	{ name: "teaching", eyebrow: "How we teach", headline: "Understand it", accent: "first.", sub: "The method behind every course" },
 	{ name: "approach", eyebrow: "How we work", headline: "Eleven steps", accent: "before the code.", sub: "System design before implementation" },
 	{ name: "about", eyebrow: "Who we are", headline: "Two arms,", accent: "one mission.", sub: "A tech school and a software studio" },

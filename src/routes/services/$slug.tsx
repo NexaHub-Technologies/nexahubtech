@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eyebrow, useReveal } from "../../components/site";
+import { servicePage } from "../../lib/pages";
 import { pageMeta } from "../../lib/seo";
 import { getServiceBySlug, SERVICES } from "../../lib/services";
 
@@ -8,12 +9,16 @@ export const Route = createFileRoute("/services/$slug")({
 	ssr: false,
 	head: ({ params }) => {
 		const service = getServiceBySlug(params.slug);
-		return pageMeta({
-			title: service ? `${service.t} — NexaHubTech` : "Service — NexaHubTech",
-			description: service?.tagline ?? "",
-			path: `/services/${params.slug}`,
-			image: `/og/service-${params.slug}.jpg`,
-		});
+		return pageMeta(
+			service
+				? servicePage(service)
+				: {
+						title: "Service not found — NexaHubTech",
+						description: "",
+						path: `/services/${params.slug}`,
+						noindex: true,
+					},
+		);
 	},
 });
 

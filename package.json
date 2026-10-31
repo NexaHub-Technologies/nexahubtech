@@ -15,7 +15,7 @@
     "format": "biome format",
     "lint": "biome lint",
     "check": "biome check",
-    "generate-sitemap": "bun run scripts/generate-sitemap.ts",
+    "generate-discovery": "bun run scripts/generate-discovery.ts",
     "generate-og-images": "bun run scripts/generate-og-images.ts",
     "design-system": "bun run scripts/design-system/build.ts",
     "generate-project-specs": "mkdir -p .cache && bun run scripts/dump-course-modules.ts > .cache/modules.json && python3 scripts/generate-project-specs.py"

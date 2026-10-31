@@ -14,6 +14,21 @@ describe("CBT training data", () => {
 		expect(CBT_DETAILS.targetExams.length).toBeGreaterThanOrEqual(2);
 	});
 
+	/* the display line is what visitors read; openingHours is what search engines
+	   and AI agents read. Two copies of one fact, so they are checked against each other. */
+	it("publishes the same opening hours it displays", () => {
+		const { hours, openingHours } = CBT_DETAILS;
+		const days = openingHours.days;
+		expect(hours).toContain(`${days[0]} – ${days[days.length - 1]}`);
+		const clock = (hhmm: string) => {
+			const [h, m] = hhmm.split(":").map(Number);
+			return `${h % 12 || 12}:${String(m).padStart(2, "0")} ${h < 12 ? "AM" : "PM"}`;
+		};
+		expect(hours).toContain(
+			`${clock(openingHours.opens)} – ${clock(openingHours.closes)}`,
+		);
+	});
+
 	it("covers core training pillars", () => {
 		expect(CBT_PILLARS.length).toBeGreaterThanOrEqual(4);
 		for (const p of CBT_PILLARS) {

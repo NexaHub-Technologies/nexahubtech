@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SessionLoop } from "../../components/session-loop";
 import { Eyebrow, useReveal } from "../../components/site";
 import { COURSES, getCourseBySlug } from "../../lib/courses";
+import { coursePage } from "../../lib/pages";
 import { pageMeta } from "../../lib/seo";
 
 export const Route = createFileRoute("/courses/$slug/")({
@@ -9,12 +10,16 @@ export const Route = createFileRoute("/courses/$slug/")({
 	ssr: false,
 	head: ({ params }) => {
 		const course = getCourseBySlug(params.slug);
-		return pageMeta({
-			title: course ? `${course.t} — NexaHubTech` : "Course — NexaHubTech",
-			description: course?.tagline ?? "",
-			path: `/courses/${params.slug}`,
-			image: `/og/course-${params.slug}.jpg`,
-		});
+		return pageMeta(
+			course
+				? coursePage(course)
+				: {
+						title: "Course not found — NexaHubTech",
+						description: "",
+						path: `/courses/${params.slug}`,
+						noindex: true,
+					},
+		);
 	},
 });
 

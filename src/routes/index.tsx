@@ -2,20 +2,14 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMode } from "../components/mode";
 import { Eyebrow, useReveal } from "../components/site";
 import { COURSE_COUNT, COURSE_COUNT_WORD_CAP } from "../lib/courses";
+import { PAGES } from "../lib/pages";
 import { pageMeta } from "../lib/seo";
 import { SERVICES } from "../lib/services";
 
 export const Route = createFileRoute("/")({
 	component: Home,
 	ssr: false,
-	head: () =>
-		pageMeta({
-			title: "NexaHubTech — Learn to build. Build for real.",
-			description:
-				"NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio. We teach people to become developers, then put those skills to work building real products for real clients.",
-			path: "/",
-			image: "/og/home.jpg",
-		}),
+	head: () => pageMeta(PAGES.home),
 });
 
 /* ── hero visual : the learn → build journey, rendered warmly ───── */

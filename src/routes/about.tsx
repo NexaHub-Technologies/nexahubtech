@@ -1,48 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eyebrow, useReveal } from "../components/site";
+import { MISSION, SUMMARY, THESIS, VALUES, VISION } from "../lib/company";
 import { COURSE_COUNT_WORD_CAP } from "../lib/courses";
+import { PAGES } from "../lib/pages";
 import { pageMeta } from "../lib/seo";
 
 export const Route = createFileRoute("/about")({
 	component: About,
 	ssr: false,
-	head: () =>
-		pageMeta({
-			title: "About — NexaHubTech",
-			description:
-				"NexaHubTech is a Nigeria-based skills-to-service company — a tech school and a software studio built on one idea: learning should be tied to real work.",
-			path: "/about",
-			image: "/og/about.jpg",
-		}),
+	head: () => pageMeta(PAGES.about),
 });
-
-/* the company's six core values, from the company profile */
-const VALUES = [
-	{
-		t: "Innovation",
-		d: "We continuously explore new ideas, tools, and approaches to deliver smarter solutions.",
-	},
-	{
-		t: "Integrity",
-		d: "We conduct our business with honesty, transparency, and accountability in every engagement.",
-	},
-	{
-		t: "Excellence",
-		d: "We hold ourselves to the highest standards of quality in everything we build and deliver.",
-	},
-	{
-		t: "Collaboration",
-		d: "We strongly believe the best results come from working closely with our clients and one another.",
-	},
-	{
-		t: "Customer-Centricity",
-		d: "Our clients’ goals and success are at the heart of every solution we design.",
-	},
-	{
-		t: "Adaptability",
-		d: "We stay agile and responsive to the evolving needs of technology and business.",
-	},
-];
 
 /* Founders section is hidden for now. To restore it, uncomment this data and
    the matching {/* founders *\/} block inside About().
@@ -86,10 +53,7 @@ function About() {
 						<span style={{ color: "var(--build-ink)" }}>building</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
-						NexaHubTech is a Nigeria-based skills-to-service company: a tech
-						school and a software studio under one roof. We teach real,
-						in-demand skills — and then put them to work on real client
-						products.
+						{SUMMARY}
 					</p>
 				</div>
 			</section>
@@ -110,12 +74,7 @@ function About() {
 						<div>
 							<Eyebrow variant="build">Skills-to-service</Eyebrow>
 							<h2 className="shout shout-md mt-4">One connected loop.</h2>
-							<p className="lead mt-4">
-								The studio meets real engineering problems. Those problems shape
-								what we teach. The school grows people who go on to help build —
-								and the loop continues. Nobody learns in a vacuum, and nobody
-								ships without principles.
-							</p>
+							<p className="lead mt-4">{THESIS}</p>
 						</div>
 					</div>
 				</div>
@@ -130,21 +89,11 @@ function About() {
 				<div className="grid md:grid-cols-2 gap-5">
 					<div className="card card-lift panel-learn reveal p-8">
 						<Eyebrow>Vision</Eyebrow>
-						<p className="lead mt-4 text-[1.02rem]">
-							To become a global leading technology ecosystem where learning,
-							innovation, and digital transformation create world-class talent
-							and impactful digital solutions.
-						</p>
+						<p className="lead mt-4 text-[1.02rem]">{VISION}</p>
 					</div>
 					<div className="card card-lift panel-studio reveal p-8">
 						<Eyebrow variant="build">Mission</Eyebrow>
-						<p className="lead mt-4 text-[1.02rem]">
-							To design and deliver cutting-edge technology solutions that solve
-							practical problems, drive efficiency, and create sustainable
-							growth for our clients — combining innovation, integrity, and
-							technical excellence to turn bold ideas into impactful digital
-							realities.
-						</p>
+						<p className="lead mt-4 text-[1.02rem]">{MISSION}</p>
 					</div>
 				</div>
 			</section>

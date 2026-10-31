@@ -1,0 +1,1564 @@
+# NexaHubTech
+
+> NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio under one roof. We teach real, in-demand skills — and then put them to work on real client products.
+
+Motto: "Learn to build. Build for real." Based at F01 Market, Kubwa, FCT-Abuja, Nigeria (CAC RC 9545130). Every course is taught live — online, except PC Basics and CBT training, taught in person at the centre — and starts whenever the student is ready. Prices are in Nigerian naira (NGN). Contact: nexahubt@gmail.com, +234 913 451 3173, WhatsApp https://wa.me/2349134513173.
+
+Each link below is the markdown version of a page on https://www.nexahubtech.company; drop the `.md` suffix for the HTML page.
+
+## Start here
+
+- [Home](https://www.nexahubtech.company/index.md): NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio. We teach people to become developers, then put those skills to work building real products for real clients.
+
+## The school
+
+- [Courses](https://www.nexahubtech.company/courses.md): Explore all courses at NexaHubTech — from web development, JavaScript, React and Next.js to cybersecurity, data analysis and videography. Learn real skills with live, hands-on teaching you can start at any time.
+- [WAEC & JAMB CBT Training](https://www.nexahubtech.company/cbt.md): Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, F01 Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
+- [How We Teach](https://www.nexahubtech.company/teaching.md): The pedagogy behind every NexaHubTech course: the mental model before the syntax, one idea at a time, and a session built in three parts.
+- [Enrol](https://www.nexahubtech.company/enrol.md): Apply for a place at NexaHubTech — taught live, start any time. Tell us about you, pick your course and training mode, and we'll be in touch about your start date.
+
+## Courses
+
+- [PC Basics](https://www.nexahubtech.company/courses/pc-basics.md): Digital Literacy. ₦80,000, 6 Weeks. Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
+- [Microsoft Office](https://www.nexahubtech.company/courses/microsoft-office.md): Word, Excel, PowerPoint & Access. ₦110,000, 10 Weeks. The four programs an office actually runs on, taught to the standard the work deserves.
+- [Web Development](https://www.nexahubtech.company/courses/web-development-fullstack.md): Fullstack. ₦160,000, 10 Weeks. Learn frontend and backend in one complete path — from first principles to full applications.
+- [Frontend Development](https://www.nexahubtech.company/courses/frontend-development.md): ₦120,000, 10 Weeks. Learn the web from first principles — HTML, CSS, and JavaScript done properly.
+- [JavaScript Programming](https://www.nexahubtech.company/courses/javascript-programming.md): Browser & Node.js. ₦100,000, 8 Weeks. Learn JavaScript as a language — the same core that runs in a browser and on a server.
+- [React](https://www.nexahubtech.company/courses/react-development.md): Intermediate to Advanced. ₦120,000, 8 Weeks. Go beyond the basics — build React applications that stay understandable as they grow.
+- [Next.js](https://www.nexahubtech.company/courses/nextjs-fullstack.md): Fullstack React. ₦160,000, 10 Weeks. Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
+- [Backend Development](https://www.nexahubtech.company/courses/backend-development.md): ₦100,000, 8 Weeks. Build the engine behind applications — APIs, databases, and server-side logic.
+- [Mobile Development](https://www.nexahubtech.company/courses/mobile-development.md): ₦190,000, 12 Weeks. Build real mobile applications — from concept to the app store.
+- [Cybersecurity](https://www.nexahubtech.company/courses/cybersecurity.md): ₦230,000, 16 Weeks. Understand how systems are attacked — and how to defend them.
+- [Python Programming](https://www.nexahubtech.company/courses/python-programming.md): ₦100,000, 6 Weeks. Learn programming from scratch with Python — the language that powers everything from scripts to AI.
+- [Data Analysis](https://www.nexahubtech.company/courses/data-analysis.md): ₦120,000, 12 Weeks. Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
+- [Videography & Video Editing](https://www.nexahubtech.company/courses/videography-video-editing.md): ₦120,000, 8 Weeks. Capture and craft video content that communicates — from shooting to final cut.
+
+## The studio
+
+- [Services](https://www.nexahubtech.company/services.md): What the NexaHubTech studio builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.
+- [Our Approach](https://www.nexahubtech.company/approach.md): How NexaHubTech works: we settle what should be built, and why, before any of it gets written — for company websites and for the software your members sign into.
+- [Software Development](https://www.nexahubtech.company/services/software-development.md): Products built to last — thought through before they’re built, then kept running.
+- [Digital Solutions](https://www.nexahubtech.company/services/digital-solutions.md): The work around the product that decides whether it actually lands.
+
+## The company
+
+- [About](https://www.nexahubtech.company/about.md): NexaHubTech is a Nigeria-based skills-to-service company — a tech school and a software studio built on one idea: learning should be tied to real work.
+- [Contact](https://www.nexahubtech.company/contact.md): Get in touch with NexaHubTech — ask about a course, taught live and started whenever you like, or start a project with the studio.
+
+## Optional
+
+- [Full text](https://www.nexahubtech.company/llms-full.txt): every page above in one file
+- [Knowledge graph](https://www.nexahubtech.company/schema.json): the schema.org JSON-LD graph of the company, its courses, services and pages
+- [Sitemap](https://www.nexahubtech.company/sitemap.xml): every indexable URL
+
+# NexaHubTech
+
+> NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio. We teach people to become developers, then put those skills to work building real products for real clients.
+
+Canonical page: https://www.nexahubtech.company/
+
+NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio under one roof. We teach real, in-demand skills — and then put them to work on real client products.
+
+Motto: *Learn to build. Build for real.*
+
+## How it works
+
+The studio meets real engineering problems. Those problems shape what we teach. The school grows people who go on to help build — and the loop continues. Nobody learns in a vacuum, and nobody ships without principles.
+
+## The school — 13 courses, taught live, start any time
+
+- [PC Basics](https://www.nexahubtech.company/courses/pc-basics.md) — Digital Literacy. ₦80,000 · 6 Weeks · in person, Kubwa. Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
+- [Microsoft Office](https://www.nexahubtech.company/courses/microsoft-office.md) — Word, Excel, PowerPoint & Access. ₦110,000 · 10 Weeks · live online. The four programs an office actually runs on, taught to the standard the work deserves.
+- [Web Development](https://www.nexahubtech.company/courses/web-development-fullstack.md) — Fullstack. ₦160,000 · 10 Weeks · live online. Learn frontend and backend in one complete path — from first principles to full applications.
+- [Frontend Development](https://www.nexahubtech.company/courses/frontend-development.md) — ₦120,000 · 10 Weeks · live online. Learn the web from first principles — HTML, CSS, and JavaScript done properly.
+- [JavaScript Programming](https://www.nexahubtech.company/courses/javascript-programming.md) — Browser & Node.js. ₦100,000 · 8 Weeks · live online. Learn JavaScript as a language — the same core that runs in a browser and on a server.
+- [React](https://www.nexahubtech.company/courses/react-development.md) — Intermediate to Advanced. ₦120,000 · 8 Weeks · live online. Go beyond the basics — build React applications that stay understandable as they grow.
+- [Next.js](https://www.nexahubtech.company/courses/nextjs-fullstack.md) — Fullstack React. ₦160,000 · 10 Weeks · live online. Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
+- [Backend Development](https://www.nexahubtech.company/courses/backend-development.md) — ₦100,000 · 8 Weeks · live online. Build the engine behind applications — APIs, databases, and server-side logic.
+- [Mobile Development](https://www.nexahubtech.company/courses/mobile-development.md) — ₦190,000 · 12 Weeks · live online. Build real mobile applications — from concept to the app store.
+- [Cybersecurity](https://www.nexahubtech.company/courses/cybersecurity.md) — ₦230,000 · 16 Weeks · live online. Understand how systems are attacked — and how to defend them.
+- [Python Programming](https://www.nexahubtech.company/courses/python-programming.md) — ₦100,000 · 6 Weeks · live online. Learn programming from scratch with Python — the language that powers everything from scripts to AI.
+- [Data Analysis](https://www.nexahubtech.company/courses/data-analysis.md) — ₦120,000 · 12 Weeks · live online. Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
+- [Videography & Video Editing](https://www.nexahubtech.company/courses/videography-video-editing.md) — ₦120,000 · 8 Weeks · live online. Capture and craft video content that communicates — from shooting to final cut.
+- [WAEC & JAMB CBT Training](https://www.nexahubtech.company/cbt.md) — from ₦3,000 · in person, Kubwa. Practice on the computer-based exam for JAMB UTME and WAEC CB-WASSCE.
+
+How the teaching works: [How We Teach](https://www.nexahubtech.company/teaching.md). To apply: [Enrol](https://www.nexahubtech.company/enrol.md).
+
+## The studio — software built properly
+
+- [Software Development](https://www.nexahubtech.company/services/software-development.md) — Products built to last — thought through before they’re built, then kept running. (Custom software development, Website design & development, Mobile application development, Enterprise solutions, API development & integration, Software maintenance & support)
+- [Digital Solutions](https://www.nexahubtech.company/services/digital-solutions.md) — The work around the product that decides whether it actually lands. (Branding & digital strategy, Business process automation, IT consulting, Cloud solutions, Technical support)
+
+How a project runs: [Our Approach](https://www.nexahubtech.company/approach.md).
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# Courses — NexaHubTech
+
+> Explore all courses at NexaHubTech — from web development, JavaScript, React and Next.js to cybersecurity, data analysis and videography. Learn real skills with live, hands-on teaching you can start at any time.
+
+Canonical page: https://www.nexahubtech.company/courses
+
+Every course is taught live by an instructor, with structured materials and real feedback, and starts whenever you are ready. Prices are in Nigerian naira and cover the whole course.
+
+- [PC Basics](https://www.nexahubtech.company/courses/pc-basics.md) — Digital Literacy. ₦80,000 · 6 Weeks · in person, Kubwa. Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
+- [Microsoft Office](https://www.nexahubtech.company/courses/microsoft-office.md) — Word, Excel, PowerPoint & Access. ₦110,000 · 10 Weeks · live online. The four programs an office actually runs on, taught to the standard the work deserves.
+- [Web Development](https://www.nexahubtech.company/courses/web-development-fullstack.md) — Fullstack. ₦160,000 · 10 Weeks · live online. Learn frontend and backend in one complete path — from first principles to full applications.
+- [Frontend Development](https://www.nexahubtech.company/courses/frontend-development.md) — ₦120,000 · 10 Weeks · live online. Learn the web from first principles — HTML, CSS, and JavaScript done properly.
+- [JavaScript Programming](https://www.nexahubtech.company/courses/javascript-programming.md) — Browser & Node.js. ₦100,000 · 8 Weeks · live online. Learn JavaScript as a language — the same core that runs in a browser and on a server.
+- [React](https://www.nexahubtech.company/courses/react-development.md) — Intermediate to Advanced. ₦120,000 · 8 Weeks · live online. Go beyond the basics — build React applications that stay understandable as they grow.
+- [Next.js](https://www.nexahubtech.company/courses/nextjs-fullstack.md) — Fullstack React. ₦160,000 · 10 Weeks · live online. Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
+- [Backend Development](https://www.nexahubtech.company/courses/backend-development.md) — ₦100,000 · 8 Weeks · live online. Build the engine behind applications — APIs, databases, and server-side logic.
+- [Mobile Development](https://www.nexahubtech.company/courses/mobile-development.md) — ₦190,000 · 12 Weeks · live online. Build real mobile applications — from concept to the app store.
+- [Cybersecurity](https://www.nexahubtech.company/courses/cybersecurity.md) — ₦230,000 · 16 Weeks · live online. Understand how systems are attacked — and how to defend them.
+- [Python Programming](https://www.nexahubtech.company/courses/python-programming.md) — ₦100,000 · 6 Weeks · live online. Learn programming from scratch with Python — the language that powers everything from scripts to AI.
+- [Data Analysis](https://www.nexahubtech.company/courses/data-analysis.md) — ₦120,000 · 12 Weeks · live online. Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
+- [Videography & Video Editing](https://www.nexahubtech.company/courses/videography-video-editing.md) — ₦120,000 · 8 Weeks · live online. Capture and craft video content that communicates — from shooting to final cut.
+
+## Also offered
+
+- [WAEC & JAMB CBT Training](https://www.nexahubtech.company/cbt.md) — from ₦3,000 · in person, Kubwa. Practice on the computer-based exam for JAMB UTME and WAEC CB-WASSCE.
+
+Apply for any course at https://www.nexahubtech.company/enrol.
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# WAEC & JAMB CBT Training — NexaHubTech
+
+> Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, F01 Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
+
+Canonical page: https://www.nexahubtech.company/cbt
+
+- Exams covered: JAMB UTME, WAEC CB-WASSCE
+- Where: F01 Market, Kubwa, FCT-Abuja, Nigeria — taught in person, on the centre's desktop computers
+- Hours: Monday – Saturday, 8:00 AM – 6:00 PM
+
+## What you practise
+
+01. **Getting comfortable on a computer** — If you have rarely used a desktop, we start there: sitting, reading the screen, and moving around the exam software without fear.
+02. **The keyboard shortcuts** — A, B, C, D to answer, N and P to move, S to submit, R to go back. Keys keep working when a centre's mouse does not.
+03. **Pacing the clock** — How to split your time across four subjects, skip and return to hard questions, and use the on-screen calculator quickly.
+04. **Past questions and timed mocks** — Practice with past JAMB and WAEC questions, then full mock exams under exam conditions, with a review of what you got wrong.
+
+## Packages
+
+### Full Training — ₦25,000 (Most popular)
+
+4 weeks · Mon – Fri. Ideal for: candidates who want to be fully ready.
+
+- 2 hours of guided practice each day
+- Keyboard shortcuts and on-screen calculator
+- Past questions across your four subjects
+- 4 full mock exams with a review
+
+### Crash Course — ₦15,000
+
+2 weeks · Mon – Fri. Ideal for: candidates whose exam is close.
+
+- Daily timed practice
+- Speed drills on the keyboard and calculator
+- 2 full mock exams with a review
+
+### One Mock Exam — ₦3,000
+
+One 2-hour session. Ideal for: anyone who wants to check where they stand.
+
+- A full timed mock exam
+- Your score by subject
+- Feedback on your timing
+
+## Questions
+
+### I have rarely used a computer. Can I still join?
+
+Yes. Many of our students start that way. We begin with the basics and move at your pace until the exam software feels familiar.
+
+### Do I need to bring a laptop?
+
+No. You practise on our desktop computers with full-size keyboards, the same kind of setup you will meet at the exam centre.
+
+### Which subjects can I practise?
+
+Use of English, Mathematics, Physics, Chemistry, Biology, Economics, Commerce, Government, Literature in English, Financial Accounting, CRS, IRS, Geography and Agricultural Science.
+
+### Can a school or tutorial centre register a group?
+
+Yes. Groups of friends, schools and study centres can all register as a group, and we can set aside morning or weekend sessions for them. Message us on WhatsApp to arrange it.
+
+### Can I see the centre before I pay?
+
+Yes. Walk in during opening hours, look at the lab, and take a short free placement test.
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# How We Teach — NexaHubTech
+
+> The pedagogy behind every NexaHubTech course: the mental model before the syntax, one idea at a time, and a session built in three parts.
+
+Canonical page: https://www.nexahubtech.company/teaching
+
+## Principles
+
+01. **The model before the syntax** — Syntax is the cheapest part of programming and the first thing you forget. We spend the time on the idea underneath — what the machine is actually doing — because that is what survives, and what lets you pick up a language nobody taught you.
+02. **One idea at a time** — Chunk-based teaching: a session introduces a single concept, uses it, and stops. Four ideas in an hour feels productive and teaches none of them, because there is no room left to be usefully confused about any one of them.
+03. **Being stuck is the lesson** — Exercises are pitched just past what you already know, which means you will get stuck. That is the part where the learning happens, so sessions leave room to be wrong out loud before the answer turns up.
+04. **You should be able to explain it** — Code runs by accident all the time, so the test of understanding is never that it works. It is whether you can say why it works. Every module ends with something you could defend to another person.
+
+## Every session, in three parts
+
+01. **A mental model** — The session opens with the idea in plain language, before a line of code appears — usually as a picture of what the machine is doing, or an analogy that holds up under pressure. *Why:* Syntax attached to an idea is memorable. Syntax attached to nothing is a list.
+02. **An exercise brief** — A focused task you cannot finish by pattern-matching the example. It forces you to use the concept, which is how you find out whether you actually hold it. *Why:* Reading code you understand feels identical to reading code you don't.
+03. **A model answer** — A worked solution written the way we would write it, with the reasoning left in. It is there to compare against yours, not to replace the attempt. *Why:* Nobody learns what good looks like from a blank page and a passing test.
+
+## What we deliberately do not do
+
+- **Slides, read aloud** — If a session could have been a document, it should have been a document. Time together is for working through the hard part, not narrating bullet points at you.
+- **Copy-along tutorials** — Typing what somebody else typed produces a working app and no transferable skill. You will build things here that you have to think your way through.
+- **Twelve tools in six weeks** — A tour of frameworks looks impressive on a syllabus and leaves you unable to use any of them. We go slower, over fewer things, deliberately.
+- **Frameworks before foundations** — React before JavaScript, or a CSS framework before layout, produces developers who are fluent right up until something breaks. The course order is not an accident.
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# Enrol — NexaHubTech
+
+> Apply for a place at NexaHubTech — taught live, start any time. Tell us about you, pick your course and training mode, and we'll be in touch about your start date.
+
+Canonical page: https://www.nexahubtech.company/enrol
+
+Applying takes a few minutes: tell us about yourself, choose your course and how you want to train, and we will be in touch about your start date. You start when you are ready.
+
+The application form is at https://www.nexahubtech.company/enrol. To open it with a course already chosen, add `?course=<slug>`:
+
+- PC Basics (₦80,000): https://www.nexahubtech.company/enrol?course=pc-basics
+- Microsoft Office (₦110,000): https://www.nexahubtech.company/enrol?course=microsoft-office
+- Web Development (₦160,000): https://www.nexahubtech.company/enrol?course=web-development-fullstack
+- Frontend Development (₦120,000): https://www.nexahubtech.company/enrol?course=frontend-development
+- JavaScript Programming (₦100,000): https://www.nexahubtech.company/enrol?course=javascript-programming
+- React (₦120,000): https://www.nexahubtech.company/enrol?course=react-development
+- Next.js (₦160,000): https://www.nexahubtech.company/enrol?course=nextjs-fullstack
+- Backend Development (₦100,000): https://www.nexahubtech.company/enrol?course=backend-development
+- Mobile Development (₦190,000): https://www.nexahubtech.company/enrol?course=mobile-development
+- Cybersecurity (₦230,000): https://www.nexahubtech.company/enrol?course=cybersecurity
+- Python Programming (₦100,000): https://www.nexahubtech.company/enrol?course=python-programming
+- Data Analysis (₦120,000): https://www.nexahubtech.company/enrol?course=data-analysis
+- Videography & Video Editing (₦120,000): https://www.nexahubtech.company/enrol?course=videography-video-editing
+
+For WAEC & JAMB CBT training, see [WAEC & JAMB CBT Training](https://www.nexahubtech.company/cbt.md), or walk in during opening hours.
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# Services — NexaHubTech
+
+> What the NexaHubTech studio builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.
+
+Canonical page: https://www.nexahubtech.company/services
+
+## [Software Development](https://www.nexahubtech.company/services/software-development.md)
+
+Products built to last — thought through before they’re built, then kept running.
+
+- **Custom software development** — Systems shaped around how you actually work, rather than a template bent to fit.
+- **Website design & development** — Sites that load fast, read clearly, and hold up on the devices your customers really use.
+- **Mobile application development** — Apps for Android and iOS, built to feel native rather than like a website in a shell.
+- **Enterprise solutions** — Internal tools and platforms for organisations where reliability matters more than novelty.
+- **API development & integration** — Getting your systems talking to each other — cleanly, and without a rewrite.
+- **Software maintenance & support** — The unglamorous part done properly: updates, fixes, and someone to call when it breaks.
+
+## [Digital Solutions](https://www.nexahubtech.company/services/digital-solutions.md)
+
+The work around the product that decides whether it actually lands.
+
+- **Branding & digital strategy** — Working out what you’re saying and who you’re saying it to, before deciding where to say it.
+- **Business process automation** — Finding the repetitive work that quietly costs you hours, and handing it to software.
+- **IT consulting** — A straight answer on what to build, what to buy, and what to leave alone for now.
+- **Cloud solutions** — Hosting and infrastructure sized to what you need today, with room to grow into.
+- **Technical support** — Practical help for your team, so problems get solved instead of worked around.
+
+How a project runs: [Our Approach](https://www.nexahubtech.company/approach.md). To start one: [Contact](https://www.nexahubtech.company/contact.md).
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# Our Approach — NexaHubTech
+
+> How NexaHubTech works: we settle what should be built, and why, before any of it gets written — for company websites and for the software your members sign into.
+
+Canonical page: https://www.nexahubtech.company/approach
+
+## Understand the problem
+
+Before anything is designed, we work out what is actually being asked. Most software that fails does so by solving a problem nobody had.
+
+- **What you do:** Talk us through how the work is done today — who does what, where it goes wrong, and what that costs you. No specification needed; the brief is what we are trying to arrive at, not what you have to bring.
+- **What you get:** A written statement of the problem, the constraints and the two or three journeys the organisation actually runs on — in your words, checked back with you.
+
+01. **Clarify the problem** — Separate what you asked for from what you need. We ask what happens today, who it fails, and what that failure costs you — because a brief is already a proposed solution, not the problem itself.
+02. **Name the constraints** — Budget, deadline, team, devices, network, regulation. In this market that usually means mobile-first, intermittent connectivity and local payment rails. Constraints decide architecture, so they go on the table before any architecture does.
+03. **Model the domain** — Name the entities and the rules that bind them before choosing a database. A cooperative's membership and contribution rules are the product; the schema only records them.
+04. **Map the critical flows** — Walk the two or three journeys the business actually runs on, end to end. An architecture that serves real paths beats one that serves an imagined feature list.
+
+## Decide the architecture
+
+Only once the problem is pinned down do we choose a shape. Every decision here is written down together with the reason it was made, so it can be argued with later.
+
+- **What you do:** Read the decisions and push back on them. This is the cheapest moment in the whole project to disagree, and the one place where an hour of your time is worth a fortnight of ours.
+- **What you get:** A shape you can see: what your members will use, what your staff will use, who can see what, and what happens when the network drops mid-transaction.
+
+05. **Choose the shape** — Where state lives, what talks to what, what must happen now and what can wait. We pick the simplest arrangement that satisfies the constraints from step 02 — not the most impressive one.
+06. **Design the data layer** — Schema, relationships, indexes and access rules together, in one pass. Row-level security and role claims are part of the data design, not a layer bolted on once the tables already exist.
+07. **Draw the trust boundaries** — Decide what each kind of user can see and do, and where that is enforced. A permission checked only in the interface is decoration — it belongs where the data lives.
+08. **Plan for failure** — Assume the payment webhook never arrives and the connection dies mid-transaction. What the system does when things go wrong is designed here, deliberately, rather than discovered in production.
+
+## Commit to it
+
+The last three steps turn a design into something you can hold us to — and something we can be measured against once the building starts.
+
+- **What you do:** Approve the design and the cost, or send it back. Nothing gets built against a document you have not agreed to.
+- **What you get:** A design document and a cost grounded in it — and, once building starts, a written note whenever reality forces a change, rather than a system quietly drifting away from what you signed off.
+
+09. **Cost it honestly** — Estimate infrastructure and effort before committing to either. We optimise for the least cost that meets the requirement, because a modest system you will never outgrow is worth more than a clever one you cannot afford to run.
+10. **Write the design document** — The design becomes an artifact you can read, question and disagree with — while disagreeing is still cheap. It is also the thing the finished build gets checked against.
+11. **Build to it, and revise out loud** — Implementation follows the document. When reality contradicts it — and occasionally it does — we change the document and say why, rather than letting the system quietly drift away from its own design.
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# About — NexaHubTech
+
+> NexaHubTech is a Nigeria-based skills-to-service company — a tech school and a software studio built on one idea: learning should be tied to real work.
+
+Canonical page: https://www.nexahubtech.company/about
+
+NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio under one roof. We teach real, in-demand skills — and then put them to work on real client products.
+
+## Skills-to-service
+
+The studio meets real engineering problems. Those problems shape what we teach. The school grows people who go on to help build — and the loop continues. Nobody learns in a vacuum, and nobody ships without principles.
+
+## Vision
+
+To become a global leading technology ecosystem where learning, innovation, and digital transformation create world-class talent and impactful digital solutions.
+
+## Mission
+
+To design and deliver cutting-edge technology solutions that solve practical problems, drive efficiency, and create sustainable growth for our clients — combining innovation, integrity, and technical excellence to turn bold ideas into impactful digital realities.
+
+## Core values
+
+- **Innovation** — We continuously explore new ideas, tools, and approaches to deliver smarter solutions.
+- **Integrity** — We conduct our business with honesty, transparency, and accountability in every engagement.
+- **Excellence** — We hold ourselves to the highest standards of quality in everything we build and deliver.
+- **Collaboration** — We strongly believe the best results come from working closely with our clients and one another.
+- **Customer-Centricity** — Our clients’ goals and success are at the heart of every solution we design.
+- **Adaptability** — We stay agile and responsive to the evolving needs of technology and business.
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# Contact — NexaHubTech
+
+> Get in touch with NexaHubTech — ask about a course, taught live and started whenever you like, or start a project with the studio.
+
+Canonical page: https://www.nexahubtech.company/contact
+
+WhatsApp is the fastest way to reach us. To ask about a course, say which one; to start a project, a few lines on what it needs to do is enough — no specification required.
+
+The centre at F01 Market, Kubwa, FCT-Abuja is open Monday – Saturday, 8:00 AM – 6:00 PM.
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# PC Basics — NexaHubTech
+
+> Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
+
+Canonical page: https://www.nexahubtech.company/courses/pc-basics
+
+| | |
+|---|---|
+| Subject | Digital Literacy |
+| Price | ₦80,000 |
+| Duration | 6 Weeks |
+| Format | Taught in the centre, in person. |
+| Level | The place to begin if a computer still feels risky |
+| Start | Any time |
+
+Every other course here is taught live online. This one cannot be: the first thing a beginner needs is somebody beside them saying that one, on the left. Sitting a person who has never used a computer in front of a video call asks them to use the very skill the course exists to teach. Machines are provided, and you start whenever you are ready.
+
+## The idea this course installs: Everything lives somewhere
+
+A computer never puts anything nowhere. Every document you save, every photo you copy, every app you install goes to a place that has a name — and that name is a path you can read out loud. Beginners lose work because they believe the machine decides where things go. It does not: it asks, and the answer is usually a box that got clicked past. Once you can say where a thing is, you can find it again, copy it, back it up and share it — and the fear goes with the not knowing.
+
+Once it lands, you can:
+
+- Find any file you have saved, on any computer, without hunting
+- Say what went wrong instead of starting the whole thing again
+- Move your work between a laptop, a phone and the cloud without losing it
+
+## Before you start
+
+What you need to know:
+
+- Nothing about computers — this is the course that assumes none
+- How to read and write in English
+- If you can already use a smartphone, you are further ahead than you think
+
+What you need to have:
+
+- A laptop running Windows, macOS or Linux — or use one of ours in the centre
+- A phone that can receive SMS, for setting up accounts safely
+- A USB drive of any size, for the backup you will actually restore from
+- 4–5 hours a week outside sessions to practise
+
+## Modules
+
+01. **The machine, and what it is doing** — The parts, the desktop, the mouse and the keyboard — and why nothing you click can break it.
+02. **Files, folders and where things go** — Paths, saving, naming, copying and backing up. The module the whole course is built on.
+03. **Documents, numbers and slides** — Write a letter properly, make a spreadsheet do the arithmetic, and build a deck worth showing.
+04. **The internet, email and accounts** — Browse, search well, judge what you find, and set up an account you can get back into.
+05. **Staying safe, and getting unstuck** — Scams, passwords and privacy — plus how to describe a problem well enough to be helped.
+
+## Every session
+
+1. **A mental model** — Every session opens with the idea, explained plainly, before anything is clicked.
+2. **An exercise brief** — A focused task that makes you use the concept — not just watch it being done.
+3. **A model answer** — A worked solution to compare against, so you learn what good looks like.
+
+## Included
+
+- No computer experience assumed at all
+- Files and folders taught properly, not guessed at
+- Word processing, spreadsheets and slides
+- Email, accounts and staying safe from scams
+- Machines available in the centre if you do not own one
+
+## Enrol
+
+Apply at https://www.nexahubtech.company/enrol?course=pc-basics — or ask a question on WhatsApp: https://wa.me/2349134513173
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# Microsoft Office — NexaHubTech
+
+> The four programs an office actually runs on, taught to the standard the work deserves.
+
+Canonical page: https://www.nexahubtech.company/courses/microsoft-office
+
+| | |
+|---|---|
+| Subject | Word, Excel, PowerPoint & Access |
+| Price | ₦110,000 |
+| Duration | 10 Weeks |
+| Format | Taught live, online, hands-on. |
+| Level | Built for clerical and office staff already doing the work |
+| Start | Any time |
+
+An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+
+## The idea this course installs: The data is not the document
+
+Each of these four programs keeps two things apart, and nearly every hour a self-taught office worker loses comes from mixing them up. There is the information — names, amounts, dates, records — and there is the way it happens to be laid out today. A style, a formula, a slide master and a query are all the same move: describe the presentation once, point it at the data, and let the program redraw it. Type the answer in by hand instead and you have made something that is correct exactly once, and wrong the first time anything changes.
+
+Once it lands, you can:
+
+- Change a hundred pages, or ten thousand rows, with one edit
+- Hand over a file a colleague can safely change without breaking it
+- Know which of the four programs a job actually belongs in
+
+## Before you start
+
+What you need to know:
+
+- How to use a computer confidently — files, folders, saving, email
+- You have opened Word and Excel before, even if nobody showed you how
+- No formulas, no databases and no macros are assumed
+
+What you need to have:
+
+- A Windows PC — Access is not made for macOS, and module 05 is Access
+- A Microsoft 365 or Office licence, or use a licensed machine in the centre
+- Real work from your own desk to bring, or use the sample desk we supply
+- 4–6 hours a week outside sessions to practise
+
+## Modules
+
+01. **Word, properly** — Styles, templates, long documents and mail merge — the difference between typing and producing.
+02. **PowerPoint that carries a decision** — Slide masters, and a deck that still works when it is read without you in the room.
+03. **Excel: the data table and its formulas** — One clean table, honest columns, and every figure a formula that recalculates.
+04. **Excel: lookups, pivots and reporting** — Joining two sheets, summarising thousands of rows, and charts that answer one question.
+05. **Access: tables, relationships and queries** — When a spreadsheet stops being the right answer, and what a database does instead.
+06. **Choosing the right tool, and handing over** — Which of the four a job belongs in, and how to leave work a colleague can run.
+
+## Every session
+
+1. **A mental model** — Every session opens with the idea, explained plainly, before anything is clicked.
+2. **An exercise brief** — A focused task that makes you use the concept — not just watch it being done.
+3. **A model answer** — A worked solution to compare against, so you learn what good looks like.
+
+## Included
+
+- Word, Excel, PowerPoint and Access in one path
+- Mail merge, lookups, pivot tables and relational queries
+- Built around real clerical work, not invented exercises
+- When to stop using a spreadsheet and start using a database
+- Licensed machines available in the centre
+
+## Enrol
+
+Apply at https://www.nexahubtech.company/enrol?course=microsoft-office — or ask a question on WhatsApp: https://wa.me/2349134513173
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# Web Development — NexaHubTech
+
+> Learn frontend and backend in one complete path — from first principles to full applications.
+
+Canonical page: https://www.nexahubtech.company/courses/web-development-fullstack
+
+| | |
+|---|---|
+| Subject | Fullstack |
+| Price | ₦160,000 |
+| Duration | 10 Weeks |
+| Format | Taught live, online, hands-on. |
+| Level | Built for complete beginners |
+| Start | Any time |
+
+An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+
+## The idea this course installs: Two computers, one conversation
+
+A browser and a server are separate machines that only ever pass text between them. One asks; the other answers. Every framework, database and deployment step you will ever meet is a refinement of that single exchange — so when something breaks, you always have a first question worth asking: which side is this happening on, and what did it actually send?
+
+Once it lands, you can:
+
+- Locate a bug on the right side of the wire before touching code
+- Read any new framework as a variation on request and response
+- Decide where a piece of data should live, and say why
+
+## Before you start
+
+What you need to know:
+
+- How to use a computer confidently — files, folders, installing software
+- Enough English to read technical writing without a struggle
+- No coding at all; the first module starts at how the web works
+
+What you need to have:
+
+- A laptop with 8GB of RAM or more (Windows, macOS or Linux)
+- A stable internet connection for live sessions
+- 10–12 hours a week outside sessions — this track moves fast
+
+## Modules
+
+01. **How the web works** — The mental model first — what a browser and server are really doing before you write a single line of code.
+02. **HTML & structure** — Markup as meaning. Build pages that are readable to people, browsers, and assistive tech.
+03. **CSS & layout** — From the box model to modern layout — styling with intent instead of guesswork.
+04. **JavaScript foundations** — Values, logic, and the DOM. How to make a page think, step by careful step.
+05. **Backend with Node.js** — Servers, routes, and databases. Build an API that powers your frontend.
+06. **Fullstack project** — Put it all together into a complete application you understand end to end.
+
+## What you build
+
+- **Ajo** — a savings club's site, correct before it is styled *Weeks 1–3*
+- **Òjò** — a rain check across Nigerian towns *Weeks 4–6*
+- **Slot** — a booking API with no browser side at all *Weeks 7–8*
+- **Found** (capstone) — a deployed lost-and-found board *Weeks 9–10*
+
+## Every session
+
+1. **A mental model** — Every session opens with the idea, explained plainly, before any code appears.
+2. **An exercise brief** — A focused task that makes you use the concept — not just read about it.
+3. **A model answer** — A worked solution to compare against, so you learn what good looks like.
+
+## Included
+
+- Frontend and backend in one track
+- HTML, CSS, JavaScript, and Node.js
+- Database integration and API design
+- Capstone fullstack project
+- Taught live with structured materials — start any time
+
+## Enrol
+
+Apply at https://www.nexahubtech.company/enrol?course=web-development-fullstack — or ask a question on WhatsApp: https://wa.me/2349134513173
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# Frontend Development — NexaHubTech
+
+> Learn the web from first principles — HTML, CSS, and JavaScript done properly.
+
+Canonical page: https://www.nexahubtech.company/courses/frontend-development
+
+| | |
+|---|---|
+| Subject | Frontend Development |
+| Price | ₦120,000 |
+| Duration | 10 Weeks |
+| Format | Taught live, online, hands-on. |
+| Level | Built for complete beginners |
+| Start | Any time |
+
+An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+
+## The idea this course installs: You describe; the browser draws
+
+You never place a pixel yourself. You hand the browser a document and a set of rules, and it computes the result — structure first, then layout, then paint. Once CSS reads as constraints you hand a layout engine rather than positions you set by hand, “why is it doing that?” stops being a mystery and becomes a question you can reason your way to.
+
+Once it lands, you can:
+
+- Predict a layout instead of nudging numbers until it looks right
+- Explain why a rule lost, rather than reaching for !important
+- Build pages that hold up on screens you have never seen
+
+## Before you start
+
+What you need to know:
+
+- Basic computer literacy — files, folders, installing software
+- No HTML, CSS or JavaScript; every one of them starts from zero here
+
+What you need to have:
+
+- A laptop with 4GB of RAM or more (8GB is far more comfortable)
+- A stable internet connection for live sessions
+- 6–8 hours a week outside sessions for exercises
+
+## Modules
+
+01. **How the web works** — The mental model first — what a browser is really doing before you write a single tag.
+02. **HTML, structurally** — Markup as meaning. Build pages that are readable to people, browsers, and assistive tech.
+03. **CSS & layout** — From the box model to modern layout — styling with intent instead of guesswork.
+04. **JavaScript foundations** — Values, logic, and the DOM. How to make a page think, step by careful step.
+05. **Building something real** — Put it together into a project you understand end to end — and can explain.
+
+## What you build
+
+- **Stitch** — a tailor's shop site, from a supplied design *Weeks 1–4*
+- **Shelf** — a book finder over a real, incomplete catalogue *Weeks 5–8*
+- **Signboard** (capstone) — a business site with a quote builder *Weeks 9–10*
+
+## Every session
+
+1. **A mental model** — Every session opens with the idea, explained plainly, before any code appears.
+2. **An exercise brief** — A focused task that makes you use the concept — not just read about it.
+3. **A model answer** — A worked solution to compare against, so you learn what good looks like.
+
+## Included
+
+- HTML, CSS, and JavaScript from scratch
+- Chunk-based teaching that builds understanding
+- Structured session notes and exercise briefs
+- Real project at the end of the track
+- Built to grow real engineering intuition
+
+## Enrol
+
+Apply at https://www.nexahubtech.company/enrol?course=frontend-development — or ask a question on WhatsApp: https://wa.me/2349134513173
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# JavaScript Programming — NexaHubTech
+
+> Learn JavaScript as a language — the same core that runs in a browser and on a server.
+
+Canonical page: https://www.nexahubtech.company/courses/javascript-programming
+
+| | |
+|---|---|
+| Subject | Browser & Node.js |
+| Price | ₦100,000 |
+| Duration | 8 Weeks |
+| Format | Taught live, online, hands-on. |
+| Level | For beginners, and for anyone who has only ever copied JavaScript |
+| Start | Any time |
+
+An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+
+## The idea this course installs: The language is small; the runtime is the rest
+
+Most of what people call JavaScript is not JavaScript. Values, functions, objects and the event loop are the language, and they are identical everywhere it runs. The DOM, fetch, the file system, timers — those are whatever the host happens to hand you. Once you can tell the two apart, moving between a browser and Node stops being a new language to learn and becomes a new set of tools around one you already have.
+
+Once it lands, you can:
+
+- Tell a language feature from something the host handed you
+- Move the same code between a browser and Node deliberately
+- Read an unfamiliar API as a runtime detail rather than a mystery
+
+## Before you start
+
+What you need to know:
+
+- How to use a computer confidently — files, folders, installing software
+- No prior JavaScript; the course starts at values and builds up
+- A little HTML helps with the browser exercises, but is not assumed
+
+What you need to have:
+
+- A laptop with 4GB of RAM or more (Windows, macOS or Linux)
+- Node.js installed — the first session covers it if you haven't
+- 6–8 hours a week outside sessions for exercises and the project
+
+## Modules
+
+01. **Values and how JavaScript thinks** — Primitives, objects and coercion. Why == surprises people and === does not — from the rules themselves rather than a list of things to avoid.
+02. **Functions, scope & closures** — Functions as values, scope as nested boxes, and the closure — the single idea holding up callbacks, modules and most of the language.
+03. **Objects, arrays & the prototype chain** — How a property lookup actually resolves. Prototypes as a chain you can follow, and the array methods that replace most of the loops you would have written.
+04. **Asynchrony & the event loop** — One thread and a queue. Callbacks, promises and async/await turn out to be three views of the same machinery, which is why mixing them goes wrong.
+05. **Modules and the two runtimes** — The same language in a browser and in Node. What each host provides, what it withholds, and how to write code that does not care which one it lands in.
+06. **Building on both sides** — One project with a Node half and a browser half, so the split between language and runtime stops being theory and becomes something you have used.
+
+## What you build
+
+- **Tender** — a money library with no host APIs anywhere in it *Weeks 1–3*
+- **Steady and Digits** — async utilities, and one core in two runtimes *Weeks 4–6*
+- **Roster** (capstone) — a duty rota with a Node half and a browser half *Weeks 7–8*
+
+## Every session
+
+1. **A mental model** — Every session opens with the idea, explained plainly, before any code appears.
+2. **An exercise brief** — A focused task that makes you use the concept — not just read about it.
+3. **A model answer** — A worked solution to compare against, so you learn what good looks like.
+
+## Included
+
+- JavaScript as a language, not as a framework
+- Closures, prototypes and the event loop from first principles
+- The same core code running in the browser and on Node.js
+- Callbacks, promises and async/await, and when each belongs
+- A capstone using Node core modules and real browser APIs
+
+## Enrol
+
+Apply at https://www.nexahubtech.company/enrol?course=javascript-programming — or ask a question on WhatsApp: https://wa.me/2349134513173
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# React — NexaHubTech
+
+> Go beyond the basics — build React applications that stay understandable as they grow.
+
+Canonical page: https://www.nexahubtech.company/courses/react-development
+
+| | |
+|---|---|
+| Subject | Intermediate to Advanced |
+| Price | ₦120,000 |
+| Duration | 8 Weeks |
+| Format | Taught live, online, hands-on. |
+| Level | Assumes you already write JavaScript |
+| Start | Any time |
+
+An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+
+## The idea this course installs: The screen is a function of state
+
+You don't update the page. You change state, describe what the page should look like for any given state, and let React work out the difference. Every stale value, surprise re-render and “why didn't it update?” dissolves once you stop listing the steps to change the screen and start describing what the screen is for the data you hold.
+
+Once it lands, you can:
+
+- Put state in the right place the first time
+- Read a re-render as a consequence, not a mystery
+- Delete the effects you never needed
+
+## Before you start
+
+What you need to know:
+
+- JavaScript to a working standard — functions, arrays, promises, modules
+- HTML and CSS well enough to build a page without a framework
+- The basics of React, even shakily: components, props, useState
+- The terminal and git for everyday work
+
+What you need to have:
+
+- A laptop with 8GB of RAM or more, with Node.js installed
+- A code editor you are already comfortable in
+- 6–8 hours a week outside sessions for exercises and a project
+
+## Modules
+
+01. **How React actually works** — Rendering, reconciliation, and why the screen updates when it does — the model behind the API.
+02. **State, placed properly** — Where state belongs, when to lift it, and how to design it so whole classes of bugs stop existing.
+03. **Effects & the outside world** — Data fetching, subscriptions, and cleanup — plus learning when you don't need an effect at all.
+04. **Composition & custom hooks** — The patterns that keep components small and share logic without tangling a codebase.
+05. **Performance, measured** — Memoisation, list rendering, and profiling. Making it fast on evidence rather than on instinct.
+06. **Architecture at scale** — Structure, data layers, and testing — the decisions that decide whether an app ages well.
+
+## What you build
+
+- **Roll Call** — an attendance register whose state is in the right places *Weeks 1–3*
+- **Cashbook and Ticker** — supplied code, refactored and profiled *Weeks 4–6*
+- **Waybill** (capstone) — a dispatch job board with tested logic *Weeks 7–8*
+
+## Every session
+
+1. **A mental model** — Every session opens with the idea, explained plainly, before any code appears.
+2. **An exercise brief** — A focused task that makes you use the concept — not just read about it.
+3. **A model answer** — A worked solution to compare against, so you learn what good looks like.
+
+## Included
+
+- For developers already comfortable with JavaScript
+- Hooks, composition, and custom hook design
+- Rendering behaviour, reconciliation, and profiling
+- State management and data-fetching patterns
+- An advanced project built to production standards
+
+## Enrol
+
+Apply at https://www.nexahubtech.company/enrol?course=react-development — or ask a question on WhatsApp: https://wa.me/2349134513173
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# Next.js — NexaHubTech
+
+> Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
+
+Canonical page: https://www.nexahubtech.company/courses/nextjs-fullstack
+
+| | |
+|---|---|
+| Subject | Fullstack React |
+| Price | ₦160,000 |
+| Duration | 10 Weeks |
+| Format | Taught live, online, hands-on. |
+| Level | Assumes you already write React |
+| Start | Any time |
+
+An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+
+## The idea this course installs: One codebase, two machines
+
+Your code runs in two places — a server you control and a browser you don't — and Next.js lets you write both in one file tree. Nearly every decision it asks of you is the same question wearing different clothes: which machine should this run on, and what has to travel between them? Server or client, where to fetch, what to cache.
+
+Once it lands, you can:
+
+- Choose server or client deliberately, not by trial and error
+- See at once why a secret must never cross the boundary
+- Read caching and revalidation as questions about that line
+
+## Before you start
+
+What you need to know:
+
+- React in practice — components, state, hooks and composition
+- JavaScript's async model: promises and async/await
+- Enough HTTP to know what a request, a response and a status code are
+- The terminal and git for everyday work
+
+What you need to have:
+
+- A laptop with 8GB of RAM or more, with Node.js installed
+- A GitHub account, for deploying the capstone
+- 8–10 hours a week outside sessions for the fullstack project
+
+## Modules
+
+01. **Why a metaframework** — What Next.js adds on top of React, and which problems it exists to solve for you.
+02. **Routing & layouts** — File-based routing, nested layouts, and loading states that appear in the right order.
+03. **Server & client components** — Where your code runs, why it matters, and how to draw the boundary deliberately.
+04. **Data, caching & mutations** — Server actions, caching, and revalidation — keeping data fresh without guesswork.
+05. **Auth, databases & APIs** — Sessions, route handlers, and wiring a real backend into the same codebase.
+06. **Rendering & deployment** — Static, dynamic, and streaming — then shipping the whole thing to production.
+
+## What you build
+
+- **Danfo** — a bus-route directory, rebuilt off the client *Weeks 1–3*
+- **Pump** — a price board that stays fresh on purpose *Weeks 4–6*
+- **Marksheet** — a results portal where roles actually hold *Weeks 7–8*
+- **Owambe** (capstone) — an event page, shipped to production *Weeks 9–10*
+
+## Every session
+
+1. **A mental model** — Every session opens with the idea, explained plainly, before any code appears.
+2. **An exercise brief** — A focused task that makes you use the concept — not just read about it.
+3. **A model answer** — A worked solution to compare against, so you learn what good looks like.
+
+## Included
+
+- The App Router taught from first principles
+- Server components, server actions, and caching
+- Database, authentication, and APIs in one project
+- Rendering strategies, SEO, and performance
+- Fullstack capstone deployed to production
+
+## Enrol
+
+Apply at https://www.nexahubtech.company/enrol?course=nextjs-fullstack — or ask a question on WhatsApp: https://wa.me/2349134513173
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# Backend Development — NexaHubTech
+
+> Build the engine behind applications — APIs, databases, and server-side logic.
+
+Canonical page: https://www.nexahubtech.company/courses/backend-development
+
+| | |
+|---|---|
+| Subject | Backend Development |
+| Price | ₦100,000 |
+| Duration | 8 Weeks |
+| Format | Taught live, online, hands-on. |
+| Level | Open to beginners; smoother with some programming |
+| Start | Any time |
+
+An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+
+## The idea this course installs: A server is a function you can call over a wire
+
+Strip away the frameworks and a backend does one thing: it takes a request and returns a response. What makes it hard is that it does this for many people at once, and it remembers things between calls. Hold those two apart — the translation, and the state it touches — and routing, middleware, databases and auth each drop into place.
+
+Once it lands, you can:
+
+- Design an API by its contract before writing its code
+- Separate what a request returns from what it changes
+- See where two users at the same moment would break your logic
+
+## Before you start
+
+What you need to know:
+
+- Basic programming in any language — variables, loops, functions
+- Comfort with the terminal, or the willingness to learn it in week one
+- No server, API or database experience needed
+
+What you need to have:
+
+- A laptop with 8GB of RAM or more (Windows, macOS or Linux)
+- A stable internet connection for live sessions
+- 6–8 hours a week outside sessions for exercises
+
+## Modules
+
+01. **How servers work** — Requests, responses, and the HTTP lifecycle — the foundation everything else sits on.
+02. **Node.js & Express** — Build your first API. Routes, middleware, and the patterns that make backends tick.
+03. **Databases & data modeling** — Store, query, and relate data. SQL or NoSQL — understanding the tradeoffs.
+04. **Authentication & security** — Sessions, tokens, and the basics of keeping users and data safe.
+05. **Deploying your API** — Ship it. Get your backend running in the real world, not just on your machine.
+
+## What you build
+
+- **Alafia** — a pharmacy API whose rules live in the database *Weeks 1–4*
+- **Gatepass** — a visitor-pass API, then attacked by its own author *Weeks 5–6*
+- **Buka** (capstone) — a canteen ordering API, deployed *Weeks 7–8*
+
+## Every session
+
+1. **A mental model** — Every session opens with the idea, explained plainly, before any code appears.
+2. **An exercise brief** — A focused task that makes you use the concept — not just read about it.
+3. **A model answer** — A worked solution to compare against, so you learn what good looks like.
+
+## Included
+
+- Node.js and Express from first principles
+- RESTful API design and database integration
+- Authentication, security, and deployment
+- Real-world backend architecture patterns
+- Taught live with hands-on exercises — start any time
+
+## Enrol
+
+Apply at https://www.nexahubtech.company/enrol?course=backend-development — or ask a question on WhatsApp: https://wa.me/2349134513173
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# Mobile Development — NexaHubTech
+
+> Build real mobile applications — from concept to the app store.
+
+Canonical page: https://www.nexahubtech.company/courses/mobile-development
+
+| | |
+|---|---|
+| Subject | Mobile Development |
+| Price | ₦190,000 |
+| Duration | 12 Weeks |
+| Format | Taught live, online, hands-on. |
+| Level | Assumes you can already program |
+| Start | Any time |
+
+An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+
+## The idea this course installs: Your app is a guest, not the host
+
+A phone interrupts you. A call arrives, the user switches away, the system reclaims your memory, the network vanishes halfway through a tap. A mobile app isn't a program that runs from start to finish — it is something that has to survive being paused, resumed and quietly destroyed, and still look to the person holding it as though it never left.
+
+Once it lands, you can:
+
+- Treat state as something that must survive being killed
+- Design for a slow or absent network as the normal case
+- Work with the platform lifecycle instead of against it
+
+## Before you start
+
+What you need to know:
+
+- JavaScript, or another modern language, to a working standard
+- What an API call is — sending a request and handling the reply
+- The terminal and git for everyday work
+
+What you need to have:
+
+- A laptop with 8GB of RAM or more; macOS if you intend to build for iOS
+- An Android or iOS phone to test on
+- 8–10 hours a week outside sessions for building
+
+## Modules
+
+01. **Mobile development foundations** — How mobile platforms work — native vs cross-platform, and choosing your path.
+02. **UI components & navigation** — Build screens that feel right. Layouts, gestures, and moving between views.
+03. **State & data management** — Keep your app responsive as complexity grows — local state, global state, and syncing.
+04. **APIs and backend integration** — Connect your app to real data. Fetching, caching, and handling offline.
+05. **Testing & publishing** — Make it reliable, then ship it. Testing strategies and app store deployment.
+
+## What you build
+
+- **Lineup** — an event app that survives the operating system *Weeks 1–4*
+- **Tally** — a shop log that works with no network at all *Weeks 5–8*
+- **Kiosk** (capstone) — classifieds, tested and submitted *Weeks 9–12*
+
+## Every session
+
+1. **A mental model** — Every session opens with the idea, explained plainly, before any code appears.
+2. **An exercise brief** — A focused task that makes you use the concept — not just read about it.
+3. **A model answer** — A worked solution to compare against, so you learn what good looks like.
+
+## Included
+
+- Cross-platform mobile development
+- UI/UX best practices for mobile
+- State management and API integration
+- Testing and app store deployment
+- Capstone mobile project
+
+## Enrol
+
+Apply at https://www.nexahubtech.company/enrol?course=mobile-development — or ask a question on WhatsApp: https://wa.me/2349134513173
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# Cybersecurity — NexaHubTech
+
+> Understand how systems are attacked — and how to defend them.
+
+Canonical page: https://www.nexahubtech.company/courses/cybersecurity
+
+| | |
+|---|---|
+| Subject | Cybersecurity |
+| Price | ₦230,000 |
+| Duration | 16 Weeks |
+| Format | Taught live, online, hands-on. |
+| Level | Assumes general technical confidence |
+| Start | Any time |
+
+An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+
+## The idea this course installs: Every system has a boundary, and attacks cross it
+
+Security isn't a feature you bolt on; it is a property of where you place trust. Draw the line between what you control and what you don't, and every vulnerability turns out to have the same shape: something crossed that line and was trusted on the far side. Injection, XSS, broken authentication — each is trust granted where it was never earned.
+
+Once it lands, you can:
+
+- Find the trust boundary in a system you have never seen
+- Recognise a new class of vulnerability as a familiar pattern
+- Defend by design rather than by a checklist of patches
+
+## Before you start
+
+What you need to know:
+
+- How networks and the web work at a basic level — IPs, ports, HTTP
+- The command line, and enough code-reading to follow a script
+- No prior security experience needed
+
+What you need to have:
+
+- A laptop with 8GB of RAM or more and room for virtual machines
+- A stable internet connection for the hands-on labs
+- 8–10 hours a week outside sessions for lab work
+
+## Modules
+
+01. **Security foundations** — The principles of confidentiality, integrity, and availability — and why they matter.
+02. **Network security** — How networks are attacked and defended. Firewalls, intrusion detection, and monitoring.
+03. **Web application security** — OWASP Top 10, injection attacks, XSS — learn to find and fix vulnerabilities.
+04. **Cryptography basics** — Encryption, hashing, and key management — the tools that protect data.
+05. **Incident response** — What to do when things go wrong. Detection, containment, and recovery.
+06. **Security in practice** — Hands-on labs and real-world scenarios that put your skills to the test.
+
+## What you build
+
+- **Mambilla Range** — threat model, then map and segment *Weeks 1–5*
+- **NexaRide Tickets** — a web app broken, then fixed properly *Weeks 6–8*
+- **Gurara Vault** — a crypto review and a breach reconstructed *Weeks 9–12*
+- **Idanre Range** (capstone) — a full assessment and report *Weeks 13–16*
+
+## Every session
+
+1. **A mental model** — Every session opens with the idea, explained plainly, before any code appears.
+2. **An exercise brief** — A focused task that makes you use the concept — not just read about it.
+3. **A model answer** — A worked solution to compare against, so you learn what good looks like.
+
+## Included
+
+- Network and application security
+- Ethical hacking and penetration testing
+- Cryptography and data protection
+- Incident response and recovery
+- Hands-on security labs
+
+## Enrol
+
+Apply at https://www.nexahubtech.company/enrol?course=cybersecurity — or ask a question on WhatsApp: https://wa.me/2349134513173
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# Python Programming — NexaHubTech
+
+> Learn programming from scratch with Python — the language that powers everything from scripts to AI.
+
+Canonical page: https://www.nexahubtech.company/courses/python-programming
+
+| | |
+|---|---|
+| Subject | Python Programming |
+| Price | ₦100,000 |
+| Duration | 6 Weeks |
+| Format | Taught live, online, hands-on. |
+| Level | The right place to start if you have never coded |
+| Start | Any time |
+
+An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+
+## The idea this course installs: Names are labels, not boxes
+
+A variable in Python is a name tied to an object, not a container holding one. Two names can point at the same list. Passing a value to a function passes the label, not a copy. This one idea explains almost every surprise a beginner runs into — mutation, identity, default arguments — and turns programming into watching data change shape rather than memorising syntax.
+
+Once it lands, you can:
+
+- Predict when a change is shared and when it is copied
+- Read an error as a question about types and identity
+- Reason about what code does before you run it
+
+## Before you start
+
+What you need to know:
+
+- How to use a computer — files, folders, installing software
+- No programming experience of any kind
+
+What you need to have:
+
+- A laptop with 4GB of RAM or more (Windows, macOS or Linux)
+- A stable internet connection for live sessions
+- 5–7 hours a week outside sessions for exercises
+
+## Modules
+
+01. **How programming works** — Variables, logic, and control flow — the universal building blocks of code.
+02. **Functions & data structures** — Organize your code and your data. Lists, dictionaries, and clean function design.
+03. **Working with files & APIs** — Read, write, and fetch data. Connect your scripts to the real world.
+04. **Object-oriented Python** — Classes, objects, and when OOP actually helps — not just when it adds noise.
+05. **Building a project** — Put it all together into something real you can show and explain.
+
+## What you build
+
+- **Rent Book** — a landlord's rent report, rebuilt from a messy script *Weeks 1–2*
+- **Rate Watch** — a daily exchange-rate recorder that survives interruption *Weeks 3–4*
+- **Errand, Meter or Fare** (capstone) — your choice of three *Weeks 5–6*
+
+## Every session
+
+1. **A mental model** — Every session opens with the idea, explained plainly, before any code appears.
+2. **An exercise brief** — A focused task that makes you use the concept — not just read about it.
+3. **A model answer** — A worked solution to compare against, so you learn what good looks like.
+
+## Included
+
+- Python from first principles
+- Data structures, functions, and OOP
+- File handling and API integration
+- Real-world project at the end
+- No prior coding experience required
+
+## Enrol
+
+Apply at https://www.nexahubtech.company/enrol?course=python-programming — or ask a question on WhatsApp: https://wa.me/2349134513173
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# Data Analysis — NexaHubTech
+
+> Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
+
+Canonical page: https://www.nexahubtech.company/courses/data-analysis
+
+| | |
+|---|---|
+| Subject | Data Analysis |
+| Price | ₦120,000 |
+| Duration | 12 Weeks |
+| Format | Taught live, online, hands-on. |
+| Level | Open to beginners who enjoy a question |
+| Start | Any time |
+
+An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+
+## The idea this course installs: Data answers the question you actually asked
+
+Every number in a dataset is the residue of a decision somebody made — what to record, what to leave out, how to count it. Analysis is less about tools than about keeping the question, the data and the claim honestly aligned. The real skill is noticing the gap between what you want to know and what this data can actually tell you.
+
+Once it lands, you can:
+
+- Spot a misleading chart — including one of your own
+- Tell a real result from noise, and say which it is
+- State plainly what a finding does and does not support
+
+## Before you start
+
+What you need to know:
+
+- Secondary-school maths — percentages, averages, reading a chart
+- Basic spreadsheet use, even if only the fundamentals
+- No Python or SQL; both are taught here from the ground up
+
+What you need to have:
+
+- A laptop with 8GB of RAM or more, for working with real datasets
+- A stable internet connection for live sessions
+- 6–8 hours a week outside sessions for exercises
+
+## Modules
+
+01. **Thinking with data** — Asking the right questions. What data can tell you — and what it can't.
+02. **SQL for analysis** — Query, filter, and join data. Get comfortable pulling insights from real databases.
+03. **Python for data** — Pandas, NumPy, and Jupyter. Clean, transform, and explore datasets efficiently.
+04. **Visualization & storytelling** — Charts, dashboards, and narratives. Make your findings clear and compelling.
+05. **A real analysis project** — Take a dataset from question to insight to presentation.
+
+## What you build
+
+- **Kasuwa Eight** — eight questions answered in SQL, and checked *Weeks 1–5*
+- **Basket** — an NBS food-price release cleaned, with the decisions logged *Weeks 6–8*
+- **Second Opinion** — one finding, two honest charts *Weeks 9–10*
+- **Budget Line, Ward or Grid** (capstone) — your choice of three *Weeks 11–12*
+
+## Every session
+
+1. **A mental model** — Every session opens with the idea, explained plainly, before any code appears.
+2. **An exercise brief** — A focused task that makes you use the concept — not just read about it.
+3. **A model answer** — A worked solution to compare against, so you learn what good looks like.
+
+## Included
+
+- SQL and Python for data work
+- Data cleaning and transformation
+- Visualization with real datasets
+- Analytical thinking and storytelling
+- Capstone analysis project
+
+## Enrol
+
+Apply at https://www.nexahubtech.company/enrol?course=data-analysis — or ask a question on WhatsApp: https://wa.me/2349134513173
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# Videography & Video Editing — NexaHubTech
+
+> Capture and craft video content that communicates — from shooting to final cut.
+
+Canonical page: https://www.nexahubtech.company/courses/videography-video-editing
+
+| | |
+|---|---|
+| Subject | Videography & Video Editing |
+| Price | ₦120,000 |
+| Duration | 8 Weeks |
+| Format | Taught live, online, hands-on. |
+| Level | Built for complete beginners |
+| Start | Any time |
+
+An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+
+## The idea this course installs: You are directing attention, not recording events
+
+A camera doesn't capture a scene — it excludes everything outside the frame. A light doesn't only brighten; it tells the eye where to go. A cut moves attention from one thing to the next. Once framing, lighting and editing read as three ways of answering the same question — what should the viewer be looking at, and when — technique stops being a list of settings and becomes a set of decisions.
+
+Once it lands, you can:
+
+- Frame a shot by what you leave out, not only what you include
+- Cut on the moment attention is ready to move
+- Light and grade to lead the eye, not just to look expensive
+
+## Before you start
+
+What you need to know:
+
+- No filming, lighting or editing experience
+- Basic computer skills — files, folders, moving large files around
+
+What you need to have:
+
+- A camera, or a phone that records at 1080p or better
+- A laptop that can edit video — 8GB of RAM and 100GB free
+- 6–8 hours a week for shooting and editing assignments
+
+## Modules
+
+01. **Camera fundamentals** — Exposure, framing, and movement. How to use a camera with intention, not guesswork.
+02. **Lighting & audio** — The invisible elements that make or break a video. Sound and light, controlled.
+03. **Editing with purpose** — Cuts, pacing, and flow. Software skills plus the editorial thinking behind them.
+04. **Color & finishing** — Color grading, titles, and export. Polishing your work to a professional standard.
+05. **A complete project** — Shoot, edit, and deliver a finished piece from concept to export.
+
+## Every session
+
+1. **A mental model** — Every session opens with the idea, explained plainly, before any code appears.
+2. **An exercise brief** — A focused task that makes you use the concept — not just read about it.
+3. **A model answer** — A worked solution to compare against, so you learn what good looks like.
+
+## Included
+
+- Camera operation and composition
+- Lighting and audio techniques
+- Professional editing workflows
+- Color grading and post-production
+- Complete video project delivery
+
+## Enrol
+
+Apply at https://www.nexahubtech.company/enrol?course=videography-video-editing — or ask a question on WhatsApp: https://wa.me/2349134513173
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# Software Development — NexaHubTech
+
+> Products built to last — thought through before they’re built, then kept running.
+
+Canonical page: https://www.nexahubtech.company/services/software-development
+
+We take on software from the first conversation to long after launch. Every project starts with understanding the problem properly, because the cost of building the wrong thing well is higher than the cost of thinking first.
+
+## What this covers
+
+- **Custom software development** — Systems shaped around how you actually work, rather than a template bent to fit.
+- **Website design & development** — Sites that load fast, read clearly, and hold up on the devices your customers really use.
+- **Mobile application development** — Apps for Android and iOS, built to feel native rather than like a website in a shell.
+- **Enterprise solutions** — Internal tools and platforms for organisations where reliability matters more than novelty.
+- **API development & integration** — Getting your systems talking to each other — cleanly, and without a rewrite.
+- **Software maintenance & support** — The unglamorous part done properly: updates, fixes, and someone to call when it breaks.
+
+How a project runs: [Our Approach](https://www.nexahubtech.company/approach.md). To start one, email nexahubt@gmail.com or message https://wa.me/2349134513173.
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# Digital Solutions — NexaHubTech
+
+> The work around the product that decides whether it actually lands.
+
+Canonical page: https://www.nexahubtech.company/services/digital-solutions
+
+Good software rarely fails for technical reasons alone. This is the work that surrounds it — how it’s positioned, how it fits your operations, and what it runs on.
+
+## What this covers
+
+- **Branding & digital strategy** — Working out what you’re saying and who you’re saying it to, before deciding where to say it.
+- **Business process automation** — Finding the repetitive work that quietly costs you hours, and handing it to software.
+- **IT consulting** — A straight answer on what to build, what to buy, and what to leave alone for now.
+- **Cloud solutions** — Hosting and infrastructure sized to what you need today, with room to grow into.
+- **Technical support** — Practical help for your team, so problems get solved instead of worked around.
+
+How a project runs: [Our Approach](https://www.nexahubtech.company/approach.md). To start one, email nexahubt@gmail.com or message https://wa.me/2349134513173.
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: F01 Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
