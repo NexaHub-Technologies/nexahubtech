@@ -6,21 +6,21 @@
         "EducationalOrganization",
         "LocalBusiness"
       ],
-      "@id": "https://www.nexahubtech.company/#organization",
+      "@id": "https://nexahubtech.company/#organization",
       "name": "NexaHubTech",
-      "url": "https://www.nexahubtech.company/",
+      "url": "https://nexahubtech.company/",
       "description": "NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio under one roof. We teach real, in-demand skills — and then put them to work on real client products.",
       "slogan": "Learn to build. Build for real.",
       "logo": {
         "@type": "ImageObject",
-        "@id": "https://www.nexahubtech.company/#logo",
-        "url": "https://www.nexahubtech.company/apple-touch-icon.png",
-        "contentUrl": "https://www.nexahubtech.company/apple-touch-icon.png",
+        "@id": "https://nexahubtech.company/#logo",
+        "url": "https://nexahubtech.company/apple-touch-icon.png",
+        "contentUrl": "https://nexahubtech.company/apple-touch-icon.png",
         "width": 180,
         "height": 180,
         "caption": "NexaHubTech"
       },
-      "image": "https://www.nexahubtech.company/og-image.png",
+      "image": "https://nexahubtech.company/og-image.png",
       "email": "nexahubt@gmail.com",
       "telephone": "+2349134513173",
       "address": {
@@ -95,142 +95,142 @@
       ],
       "hasOfferCatalog": [
         {
-          "@id": "https://www.nexahubtech.company/courses#catalog"
+          "@id": "https://nexahubtech.company/courses#catalog"
         },
         {
-          "@id": "https://www.nexahubtech.company/services#catalog"
+          "@id": "https://nexahubtech.company/services#catalog"
         }
       ]
     },
     {
       "@type": "WebSite",
-      "@id": "https://www.nexahubtech.company/#website",
-      "url": "https://www.nexahubtech.company/",
+      "@id": "https://nexahubtech.company/#website",
+      "url": "https://nexahubtech.company/",
       "name": "NexaHubTech",
       "description": "NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio. We teach people to become developers, then put those skills to work building real products for real clients.",
       "inLanguage": "en-NG",
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       }
     },
     {
       "@type": "OfferCatalog",
-      "@id": "https://www.nexahubtech.company/courses#catalog",
+      "@id": "https://nexahubtech.company/courses#catalog",
       "name": "NexaHubTech courses",
-      "url": "https://www.nexahubtech.company/courses",
+      "url": "https://nexahubtech.company/courses",
       "numberOfItems": 14,
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://www.nexahubtech.company/courses/pc-basics#course"
+            "@id": "https://nexahubtech.company/courses/pc-basics#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://www.nexahubtech.company/courses/microsoft-office#course"
+            "@id": "https://nexahubtech.company/courses/microsoft-office#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://www.nexahubtech.company/courses/web-development-fullstack#course"
+            "@id": "https://nexahubtech.company/courses/web-development-fullstack#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 4,
           "item": {
-            "@id": "https://www.nexahubtech.company/courses/frontend-development#course"
+            "@id": "https://nexahubtech.company/courses/frontend-development#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 5,
           "item": {
-            "@id": "https://www.nexahubtech.company/courses/javascript-programming#course"
+            "@id": "https://nexahubtech.company/courses/javascript-programming#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 6,
           "item": {
-            "@id": "https://www.nexahubtech.company/courses/react-development#course"
+            "@id": "https://nexahubtech.company/courses/react-development#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 7,
           "item": {
-            "@id": "https://www.nexahubtech.company/courses/nextjs-fullstack#course"
+            "@id": "https://nexahubtech.company/courses/nextjs-fullstack#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 8,
           "item": {
-            "@id": "https://www.nexahubtech.company/courses/backend-development#course"
+            "@id": "https://nexahubtech.company/courses/backend-development#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 9,
           "item": {
-            "@id": "https://www.nexahubtech.company/courses/mobile-development#course"
+            "@id": "https://nexahubtech.company/courses/mobile-development#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 10,
           "item": {
-            "@id": "https://www.nexahubtech.company/courses/cybersecurity#course"
+            "@id": "https://nexahubtech.company/courses/cybersecurity#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 11,
           "item": {
-            "@id": "https://www.nexahubtech.company/courses/python-programming#course"
+            "@id": "https://nexahubtech.company/courses/python-programming#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 12,
           "item": {
-            "@id": "https://www.nexahubtech.company/courses/data-analysis#course"
+            "@id": "https://nexahubtech.company/courses/data-analysis#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 13,
           "item": {
-            "@id": "https://www.nexahubtech.company/courses/videography-video-editing#course"
+            "@id": "https://nexahubtech.company/courses/videography-video-editing#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 14,
           "item": {
-            "@id": "https://www.nexahubtech.company/cbt#course"
+            "@id": "https://nexahubtech.company/cbt#course"
           }
         }
       ]
     },
     {
       "@type": "Course",
-      "@id": "https://www.nexahubtech.company/courses/pc-basics#course",
-      "url": "https://www.nexahubtech.company/courses/pc-basics",
+      "@id": "https://nexahubtech.company/courses/pc-basics#course",
+      "url": "https://nexahubtech.company/courses/pc-basics",
       "name": "PC Basics",
       "description": "Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.",
       "about": "Digital Literacy",
-      "image": "https://www.nexahubtech.company/og/course-pc-basics.jpg",
+      "image": "https://nexahubtech.company/og/course-pc-basics.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "educationalLevel": "The place to begin if a computer still feels risky",
       "coursePrerequisites": [
@@ -285,10 +285,10 @@
         "availability": "https://schema.org/InStock",
         "category": "Paid",
         "seller": {
-          "@id": "https://www.nexahubtech.company/#organization"
+          "@id": "https://nexahubtech.company/#organization"
         },
         "price": "80000",
-        "url": "https://www.nexahubtech.company/enrol?course=pc-basics"
+        "url": "https://nexahubtech.company/enrol?course=pc-basics"
       },
       "hasCourseInstance": {
         "@type": "CourseInstance",
@@ -296,21 +296,21 @@
         "description": "Taught in the centre, in person. Every other course here is taught live online. This one cannot be: the first thing a beginner needs is somebody beside them saying that one, on the left. Sitting a person who has never used a computer in front of a video call asks them to use the very skill the course exists to teach. Machines are provided, and you start whenever you are ready.",
         "duration": "P6W",
         "location": {
-          "@id": "https://www.nexahubtech.company/#organization"
+          "@id": "https://nexahubtech.company/#organization"
         }
       }
     },
     {
       "@type": "Course",
-      "@id": "https://www.nexahubtech.company/courses/microsoft-office#course",
-      "url": "https://www.nexahubtech.company/courses/microsoft-office",
+      "@id": "https://nexahubtech.company/courses/microsoft-office#course",
+      "url": "https://nexahubtech.company/courses/microsoft-office",
       "name": "Microsoft Office",
       "description": "The four programs an office actually runs on, taught to the standard the work deserves.",
       "about": "Word, Excel, PowerPoint & Access",
-      "image": "https://www.nexahubtech.company/og/course-microsoft-office.jpg",
+      "image": "https://nexahubtech.company/og/course-microsoft-office.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "educationalLevel": "Built for clerical and office staff already doing the work",
       "coursePrerequisites": [
@@ -371,10 +371,10 @@
         "availability": "https://schema.org/InStock",
         "category": "Paid",
         "seller": {
-          "@id": "https://www.nexahubtech.company/#organization"
+          "@id": "https://nexahubtech.company/#organization"
         },
         "price": "110000",
-        "url": "https://www.nexahubtech.company/enrol?course=microsoft-office"
+        "url": "https://nexahubtech.company/enrol?course=microsoft-office"
       },
       "hasCourseInstance": {
         "@type": "CourseInstance",
@@ -385,15 +385,15 @@
     },
     {
       "@type": "Course",
-      "@id": "https://www.nexahubtech.company/courses/web-development-fullstack#course",
-      "url": "https://www.nexahubtech.company/courses/web-development-fullstack",
+      "@id": "https://nexahubtech.company/courses/web-development-fullstack#course",
+      "url": "https://nexahubtech.company/courses/web-development-fullstack",
       "name": "Web Development",
       "description": "Learn frontend and backend in one complete path — from first principles to full applications.",
       "about": "Fullstack",
-      "image": "https://www.nexahubtech.company/og/course-web-development-fullstack.jpg",
+      "image": "https://nexahubtech.company/og/course-web-development-fullstack.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "educationalLevel": "Built for complete beginners",
       "coursePrerequisites": [
@@ -479,10 +479,10 @@
         "availability": "https://schema.org/InStock",
         "category": "Paid",
         "seller": {
-          "@id": "https://www.nexahubtech.company/#organization"
+          "@id": "https://nexahubtech.company/#organization"
         },
         "price": "160000",
-        "url": "https://www.nexahubtech.company/enrol?course=web-development-fullstack"
+        "url": "https://nexahubtech.company/enrol?course=web-development-fullstack"
       },
       "hasCourseInstance": {
         "@type": "CourseInstance",
@@ -493,14 +493,14 @@
     },
     {
       "@type": "Course",
-      "@id": "https://www.nexahubtech.company/courses/frontend-development#course",
-      "url": "https://www.nexahubtech.company/courses/frontend-development",
+      "@id": "https://nexahubtech.company/courses/frontend-development#course",
+      "url": "https://nexahubtech.company/courses/frontend-development",
       "name": "Frontend Development",
       "description": "Learn the web from first principles — HTML, CSS, and JavaScript done properly.",
-      "image": "https://www.nexahubtech.company/og/course-frontend-development.jpg",
+      "image": "https://nexahubtech.company/og/course-frontend-development.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "educationalLevel": "Built for complete beginners",
       "coursePrerequisites": [
@@ -573,10 +573,10 @@
         "availability": "https://schema.org/InStock",
         "category": "Paid",
         "seller": {
-          "@id": "https://www.nexahubtech.company/#organization"
+          "@id": "https://nexahubtech.company/#organization"
         },
         "price": "120000",
-        "url": "https://www.nexahubtech.company/enrol?course=frontend-development"
+        "url": "https://nexahubtech.company/enrol?course=frontend-development"
       },
       "hasCourseInstance": {
         "@type": "CourseInstance",
@@ -587,15 +587,15 @@
     },
     {
       "@type": "Course",
-      "@id": "https://www.nexahubtech.company/courses/javascript-programming#course",
-      "url": "https://www.nexahubtech.company/courses/javascript-programming",
+      "@id": "https://nexahubtech.company/courses/javascript-programming#course",
+      "url": "https://nexahubtech.company/courses/javascript-programming",
       "name": "JavaScript Programming",
       "description": "Learn JavaScript as a language — the same core that runs in a browser and on a server.",
       "about": "Browser & Node.js",
-      "image": "https://www.nexahubtech.company/og/course-javascript-programming.jpg",
+      "image": "https://nexahubtech.company/og/course-javascript-programming.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "educationalLevel": "For beginners, and for anyone who has only ever copied JavaScript",
       "coursePrerequisites": [
@@ -675,10 +675,10 @@
         "availability": "https://schema.org/InStock",
         "category": "Paid",
         "seller": {
-          "@id": "https://www.nexahubtech.company/#organization"
+          "@id": "https://nexahubtech.company/#organization"
         },
         "price": "100000",
-        "url": "https://www.nexahubtech.company/enrol?course=javascript-programming"
+        "url": "https://nexahubtech.company/enrol?course=javascript-programming"
       },
       "hasCourseInstance": {
         "@type": "CourseInstance",
@@ -689,15 +689,15 @@
     },
     {
       "@type": "Course",
-      "@id": "https://www.nexahubtech.company/courses/react-development#course",
-      "url": "https://www.nexahubtech.company/courses/react-development",
+      "@id": "https://nexahubtech.company/courses/react-development#course",
+      "url": "https://nexahubtech.company/courses/react-development",
       "name": "React",
       "description": "Go beyond the basics — build React applications that stay understandable as they grow.",
       "about": "Intermediate to Advanced",
-      "image": "https://www.nexahubtech.company/og/course-react-development.jpg",
+      "image": "https://nexahubtech.company/og/course-react-development.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "educationalLevel": "Assumes you already write JavaScript",
       "coursePrerequisites": [
@@ -778,10 +778,10 @@
         "availability": "https://schema.org/InStock",
         "category": "Paid",
         "seller": {
-          "@id": "https://www.nexahubtech.company/#organization"
+          "@id": "https://nexahubtech.company/#organization"
         },
         "price": "120000",
-        "url": "https://www.nexahubtech.company/enrol?course=react-development"
+        "url": "https://nexahubtech.company/enrol?course=react-development"
       },
       "hasCourseInstance": {
         "@type": "CourseInstance",
@@ -792,15 +792,15 @@
     },
     {
       "@type": "Course",
-      "@id": "https://www.nexahubtech.company/courses/nextjs-fullstack#course",
-      "url": "https://www.nexahubtech.company/courses/nextjs-fullstack",
+      "@id": "https://nexahubtech.company/courses/nextjs-fullstack#course",
+      "url": "https://nexahubtech.company/courses/nextjs-fullstack",
       "name": "Next.js",
       "description": "Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.",
       "about": "Fullstack React",
-      "image": "https://www.nexahubtech.company/og/course-nextjs-fullstack.jpg",
+      "image": "https://nexahubtech.company/og/course-nextjs-fullstack.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "educationalLevel": "Assumes you already write React",
       "coursePrerequisites": [
@@ -887,10 +887,10 @@
         "availability": "https://schema.org/InStock",
         "category": "Paid",
         "seller": {
-          "@id": "https://www.nexahubtech.company/#organization"
+          "@id": "https://nexahubtech.company/#organization"
         },
         "price": "160000",
-        "url": "https://www.nexahubtech.company/enrol?course=nextjs-fullstack"
+        "url": "https://nexahubtech.company/enrol?course=nextjs-fullstack"
       },
       "hasCourseInstance": {
         "@type": "CourseInstance",
@@ -901,14 +901,14 @@
     },
     {
       "@type": "Course",
-      "@id": "https://www.nexahubtech.company/courses/backend-development#course",
-      "url": "https://www.nexahubtech.company/courses/backend-development",
+      "@id": "https://nexahubtech.company/courses/backend-development#course",
+      "url": "https://nexahubtech.company/courses/backend-development",
       "name": "Backend Development",
       "description": "Build the engine behind applications — APIs, databases, and server-side logic.",
-      "image": "https://www.nexahubtech.company/og/course-backend-development.jpg",
+      "image": "https://nexahubtech.company/og/course-backend-development.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "educationalLevel": "Open to beginners; smoother with some programming",
       "coursePrerequisites": [
@@ -982,10 +982,10 @@
         "availability": "https://schema.org/InStock",
         "category": "Paid",
         "seller": {
-          "@id": "https://www.nexahubtech.company/#organization"
+          "@id": "https://nexahubtech.company/#organization"
         },
         "price": "100000",
-        "url": "https://www.nexahubtech.company/enrol?course=backend-development"
+        "url": "https://nexahubtech.company/enrol?course=backend-development"
       },
       "hasCourseInstance": {
         "@type": "CourseInstance",
@@ -996,14 +996,14 @@
     },
     {
       "@type": "Course",
-      "@id": "https://www.nexahubtech.company/courses/mobile-development#course",
-      "url": "https://www.nexahubtech.company/courses/mobile-development",
+      "@id": "https://nexahubtech.company/courses/mobile-development#course",
+      "url": "https://nexahubtech.company/courses/mobile-development",
       "name": "Mobile Development",
       "description": "Build real mobile applications — from concept to the app store.",
-      "image": "https://www.nexahubtech.company/og/course-mobile-development.jpg",
+      "image": "https://nexahubtech.company/og/course-mobile-development.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "educationalLevel": "Assumes you can already program",
       "coursePrerequisites": [
@@ -1077,10 +1077,10 @@
         "availability": "https://schema.org/InStock",
         "category": "Paid",
         "seller": {
-          "@id": "https://www.nexahubtech.company/#organization"
+          "@id": "https://nexahubtech.company/#organization"
         },
         "price": "190000",
-        "url": "https://www.nexahubtech.company/enrol?course=mobile-development"
+        "url": "https://nexahubtech.company/enrol?course=mobile-development"
       },
       "hasCourseInstance": {
         "@type": "CourseInstance",
@@ -1091,14 +1091,14 @@
     },
     {
       "@type": "Course",
-      "@id": "https://www.nexahubtech.company/courses/cybersecurity#course",
-      "url": "https://www.nexahubtech.company/courses/cybersecurity",
+      "@id": "https://nexahubtech.company/courses/cybersecurity#course",
+      "url": "https://nexahubtech.company/courses/cybersecurity",
       "name": "Cybersecurity",
       "description": "Understand how systems are attacked — and how to defend them.",
-      "image": "https://www.nexahubtech.company/og/course-cybersecurity.jpg",
+      "image": "https://nexahubtech.company/og/course-cybersecurity.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "educationalLevel": "Assumes general technical confidence",
       "coursePrerequisites": [
@@ -1184,10 +1184,10 @@
         "availability": "https://schema.org/InStock",
         "category": "Paid",
         "seller": {
-          "@id": "https://www.nexahubtech.company/#organization"
+          "@id": "https://nexahubtech.company/#organization"
         },
         "price": "230000",
-        "url": "https://www.nexahubtech.company/enrol?course=cybersecurity"
+        "url": "https://nexahubtech.company/enrol?course=cybersecurity"
       },
       "hasCourseInstance": {
         "@type": "CourseInstance",
@@ -1198,14 +1198,14 @@
     },
     {
       "@type": "Course",
-      "@id": "https://www.nexahubtech.company/courses/python-programming#course",
-      "url": "https://www.nexahubtech.company/courses/python-programming",
+      "@id": "https://nexahubtech.company/courses/python-programming#course",
+      "url": "https://nexahubtech.company/courses/python-programming",
       "name": "Python Programming",
       "description": "Learn programming from scratch with Python — the language that powers everything from scripts to AI.",
-      "image": "https://www.nexahubtech.company/og/course-python-programming.jpg",
+      "image": "https://nexahubtech.company/og/course-python-programming.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "educationalLevel": "The right place to start if you have never coded",
       "coursePrerequisites": [
@@ -1278,10 +1278,10 @@
         "availability": "https://schema.org/InStock",
         "category": "Paid",
         "seller": {
-          "@id": "https://www.nexahubtech.company/#organization"
+          "@id": "https://nexahubtech.company/#organization"
         },
         "price": "100000",
-        "url": "https://www.nexahubtech.company/enrol?course=python-programming"
+        "url": "https://nexahubtech.company/enrol?course=python-programming"
       },
       "hasCourseInstance": {
         "@type": "CourseInstance",
@@ -1292,14 +1292,14 @@
     },
     {
       "@type": "Course",
-      "@id": "https://www.nexahubtech.company/courses/data-analysis#course",
-      "url": "https://www.nexahubtech.company/courses/data-analysis",
+      "@id": "https://nexahubtech.company/courses/data-analysis#course",
+      "url": "https://nexahubtech.company/courses/data-analysis",
       "name": "Data Analysis",
       "description": "Turn raw data into clear insights — with Python, SQL, and real analytical thinking.",
-      "image": "https://www.nexahubtech.company/og/course-data-analysis.jpg",
+      "image": "https://nexahubtech.company/og/course-data-analysis.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "educationalLevel": "Open to beginners who enjoy a question",
       "coursePrerequisites": [
@@ -1379,10 +1379,10 @@
         "availability": "https://schema.org/InStock",
         "category": "Paid",
         "seller": {
-          "@id": "https://www.nexahubtech.company/#organization"
+          "@id": "https://nexahubtech.company/#organization"
         },
         "price": "120000",
-        "url": "https://www.nexahubtech.company/enrol?course=data-analysis"
+        "url": "https://nexahubtech.company/enrol?course=data-analysis"
       },
       "hasCourseInstance": {
         "@type": "CourseInstance",
@@ -1393,14 +1393,14 @@
     },
     {
       "@type": "Course",
-      "@id": "https://www.nexahubtech.company/courses/videography-video-editing#course",
-      "url": "https://www.nexahubtech.company/courses/videography-video-editing",
+      "@id": "https://nexahubtech.company/courses/videography-video-editing#course",
+      "url": "https://nexahubtech.company/courses/videography-video-editing",
       "name": "Videography & Video Editing",
       "description": "Capture and craft video content that communicates — from shooting to final cut.",
-      "image": "https://www.nexahubtech.company/og/course-videography-video-editing.jpg",
+      "image": "https://nexahubtech.company/og/course-videography-video-editing.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "educationalLevel": "Built for complete beginners",
       "coursePrerequisites": [
@@ -1454,10 +1454,10 @@
         "availability": "https://schema.org/InStock",
         "category": "Paid",
         "seller": {
-          "@id": "https://www.nexahubtech.company/#organization"
+          "@id": "https://nexahubtech.company/#organization"
         },
         "price": "120000",
-        "url": "https://www.nexahubtech.company/enrol?course=videography-video-editing"
+        "url": "https://nexahubtech.company/enrol?course=videography-video-editing"
       },
       "hasCourseInstance": {
         "@type": "CourseInstance",
@@ -1468,14 +1468,14 @@
     },
     {
       "@type": "Course",
-      "@id": "https://www.nexahubtech.company/cbt#course",
-      "url": "https://www.nexahubtech.company/cbt",
+      "@id": "https://nexahubtech.company/cbt#course",
+      "url": "https://nexahubtech.company/cbt",
       "name": "WAEC & JAMB CBT Training",
       "description": "Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, F01 Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.",
-      "image": "https://www.nexahubtech.company/og/cbt.jpg",
+      "image": "https://nexahubtech.company/og/cbt.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "about": [
         {
@@ -1527,13 +1527,13 @@
           "availability": "https://schema.org/InStock",
           "category": "Paid",
           "seller": {
-            "@id": "https://www.nexahubtech.company/#organization"
+            "@id": "https://nexahubtech.company/#organization"
           },
-          "@id": "https://www.nexahubtech.company/cbt#masterclass",
+          "@id": "https://nexahubtech.company/cbt#masterclass",
           "name": "Full Training",
           "description": "4 weeks · Mon – Fri. Candidates who want to be fully ready. Includes: 2 hours of guided practice each day; Keyboard shortcuts and on-screen calculator; Past questions across your four subjects; 4 full mock exams with a review.",
           "price": "25000",
-          "url": "https://www.nexahubtech.company/cbt"
+          "url": "https://nexahubtech.company/cbt"
         },
         {
           "@type": "Offer",
@@ -1541,13 +1541,13 @@
           "availability": "https://schema.org/InStock",
           "category": "Paid",
           "seller": {
-            "@id": "https://www.nexahubtech.company/#organization"
+            "@id": "https://nexahubtech.company/#organization"
           },
-          "@id": "https://www.nexahubtech.company/cbt#intensive-crash",
+          "@id": "https://nexahubtech.company/cbt#intensive-crash",
           "name": "Crash Course",
           "description": "2 weeks · Mon – Fri. Candidates whose exam is close. Includes: Daily timed practice; Speed drills on the keyboard and calculator; 2 full mock exams with a review.",
           "price": "15000",
-          "url": "https://www.nexahubtech.company/cbt"
+          "url": "https://nexahubtech.company/cbt"
         },
         {
           "@type": "Offer",
@@ -1555,56 +1555,56 @@
           "availability": "https://schema.org/InStock",
           "category": "Paid",
           "seller": {
-            "@id": "https://www.nexahubtech.company/#organization"
+            "@id": "https://nexahubtech.company/#organization"
           },
-          "@id": "https://www.nexahubtech.company/cbt#walkin-mock",
+          "@id": "https://nexahubtech.company/cbt#walkin-mock",
           "name": "One Mock Exam",
           "description": "One 2-hour session. Anyone who wants to check where they stand. Includes: A full timed mock exam; Your score by subject; Feedback on your timing.",
           "price": "3000",
-          "url": "https://www.nexahubtech.company/cbt"
+          "url": "https://nexahubtech.company/cbt"
         }
       ],
       "hasCourseInstance": {
         "@type": "CourseInstance",
         "courseMode": "Onsite",
         "location": {
-          "@id": "https://www.nexahubtech.company/#organization"
+          "@id": "https://nexahubtech.company/#organization"
         }
       }
     },
     {
       "@type": "OfferCatalog",
-      "@id": "https://www.nexahubtech.company/services#catalog",
+      "@id": "https://nexahubtech.company/services#catalog",
       "name": "NexaHubTech studio services",
-      "url": "https://www.nexahubtech.company/services",
+      "url": "https://nexahubtech.company/services",
       "numberOfItems": 2,
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://www.nexahubtech.company/services/software-development#service"
+            "@id": "https://nexahubtech.company/services/software-development#service"
           }
         },
         {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://www.nexahubtech.company/services/digital-solutions#service"
+            "@id": "https://nexahubtech.company/services/digital-solutions#service"
           }
         }
       ]
     },
     {
       "@type": "Service",
-      "@id": "https://www.nexahubtech.company/services/software-development#service",
-      "url": "https://www.nexahubtech.company/services/software-development",
+      "@id": "https://nexahubtech.company/services/software-development#service",
+      "url": "https://nexahubtech.company/services/software-development",
       "name": "Software Development",
       "serviceType": "Software Development",
       "description": "Products built to last — thought through before they’re built, then kept running. We take on software from the first conversation to long after launch. Every project starts with understanding the problem properly, because the cost of building the wrong thing well is higher than the cost of thinking first.",
-      "image": "https://www.nexahubtech.company/og/service-software-development.jpg",
+      "image": "https://nexahubtech.company/og/service-software-development.jpg",
       "provider": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "areaServed": {
         "@type": "Country",
@@ -1621,7 +1621,7 @@
               "name": "Custom software development",
               "description": "Systems shaped around how you actually work, rather than a template bent to fit.",
               "provider": {
-                "@id": "https://www.nexahubtech.company/#organization"
+                "@id": "https://nexahubtech.company/#organization"
               }
             }
           },
@@ -1632,7 +1632,7 @@
               "name": "Website design & development",
               "description": "Sites that load fast, read clearly, and hold up on the devices your customers really use.",
               "provider": {
-                "@id": "https://www.nexahubtech.company/#organization"
+                "@id": "https://nexahubtech.company/#organization"
               }
             }
           },
@@ -1643,7 +1643,7 @@
               "name": "Mobile application development",
               "description": "Apps for Android and iOS, built to feel native rather than like a website in a shell.",
               "provider": {
-                "@id": "https://www.nexahubtech.company/#organization"
+                "@id": "https://nexahubtech.company/#organization"
               }
             }
           },
@@ -1654,7 +1654,7 @@
               "name": "Enterprise solutions",
               "description": "Internal tools and platforms for organisations where reliability matters more than novelty.",
               "provider": {
-                "@id": "https://www.nexahubtech.company/#organization"
+                "@id": "https://nexahubtech.company/#organization"
               }
             }
           },
@@ -1665,7 +1665,7 @@
               "name": "API development & integration",
               "description": "Getting your systems talking to each other — cleanly, and without a rewrite.",
               "provider": {
-                "@id": "https://www.nexahubtech.company/#organization"
+                "@id": "https://nexahubtech.company/#organization"
               }
             }
           },
@@ -1676,7 +1676,7 @@
               "name": "Software maintenance & support",
               "description": "The unglamorous part done properly: updates, fixes, and someone to call when it breaks.",
               "provider": {
-                "@id": "https://www.nexahubtech.company/#organization"
+                "@id": "https://nexahubtech.company/#organization"
               }
             }
           }
@@ -1685,14 +1685,14 @@
     },
     {
       "@type": "Service",
-      "@id": "https://www.nexahubtech.company/services/digital-solutions#service",
-      "url": "https://www.nexahubtech.company/services/digital-solutions",
+      "@id": "https://nexahubtech.company/services/digital-solutions#service",
+      "url": "https://nexahubtech.company/services/digital-solutions",
       "name": "Digital Solutions",
       "serviceType": "Digital Solutions",
       "description": "The work around the product that decides whether it actually lands. Good software rarely fails for technical reasons alone. This is the work that surrounds it — how it’s positioned, how it fits your operations, and what it runs on.",
-      "image": "https://www.nexahubtech.company/og/service-digital-solutions.jpg",
+      "image": "https://nexahubtech.company/og/service-digital-solutions.jpg",
       "provider": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "areaServed": {
         "@type": "Country",
@@ -1709,7 +1709,7 @@
               "name": "Branding & digital strategy",
               "description": "Working out what you’re saying and who you’re saying it to, before deciding where to say it.",
               "provider": {
-                "@id": "https://www.nexahubtech.company/#organization"
+                "@id": "https://nexahubtech.company/#organization"
               }
             }
           },
@@ -1720,7 +1720,7 @@
               "name": "Business process automation",
               "description": "Finding the repetitive work that quietly costs you hours, and handing it to software.",
               "provider": {
-                "@id": "https://www.nexahubtech.company/#organization"
+                "@id": "https://nexahubtech.company/#organization"
               }
             }
           },
@@ -1731,7 +1731,7 @@
               "name": "IT consulting",
               "description": "A straight answer on what to build, what to buy, and what to leave alone for now.",
               "provider": {
-                "@id": "https://www.nexahubtech.company/#organization"
+                "@id": "https://nexahubtech.company/#organization"
               }
             }
           },
@@ -1742,7 +1742,7 @@
               "name": "Cloud solutions",
               "description": "Hosting and infrastructure sized to what you need today, with room to grow into.",
               "provider": {
-                "@id": "https://www.nexahubtech.company/#organization"
+                "@id": "https://nexahubtech.company/#organization"
               }
             }
           },
@@ -1753,7 +1753,7 @@
               "name": "Technical support",
               "description": "Practical help for your team, so problems get solved instead of worked around.",
               "provider": {
-                "@id": "https://www.nexahubtech.company/#organization"
+                "@id": "https://nexahubtech.company/#organization"
               }
             }
           }
@@ -1762,7 +1762,7 @@
     },
     {
       "@type": "ItemList",
-      "@id": "https://www.nexahubtech.company/teaching#principles",
+      "@id": "https://nexahubtech.company/teaching#principles",
       "name": "How NexaHubTech teaches",
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "itemListElement": [
@@ -1794,7 +1794,7 @@
     },
     {
       "@type": "HowTo",
-      "@id": "https://www.nexahubtech.company/teaching#session",
+      "@id": "https://nexahubtech.company/teaching#session",
       "name": "How a NexaHubTech teaching session runs",
       "description": "Every session on every course is built in the same three parts.",
       "step": [
@@ -1820,7 +1820,7 @@
     },
     {
       "@type": "HowTo",
-      "@id": "https://www.nexahubtech.company/approach#process",
+      "@id": "https://nexahubtech.company/approach#process",
       "name": "How NexaHubTech designs software before building it",
       "description": "How NexaHubTech works: we settle what should be built, and why, before any of it gets written — for company websites and for the software your members sign into.",
       "step": [
@@ -1918,86 +1918,86 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/#webpage",
-      "url": "https://www.nexahubtech.company/",
+      "@id": "https://nexahubtech.company/#webpage",
+      "url": "https://nexahubtech.company/",
       "name": "NexaHubTech — Learn to build. Build for real.",
       "description": "NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio. We teach people to become developers, then put those skills to work building real products for real clients.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/home.jpg"
+        "url": "https://nexahubtech.company/og/home.jpg"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       }
     },
     {
       "@type": "CollectionPage",
-      "@id": "https://www.nexahubtech.company/courses#webpage",
-      "url": "https://www.nexahubtech.company/courses",
+      "@id": "https://nexahubtech.company/courses#webpage",
+      "url": "https://nexahubtech.company/courses",
       "name": "Courses — NexaHubTech",
       "description": "Explore all courses at NexaHubTech — from web development, JavaScript, React and Next.js to cybersecurity, data analysis and videography. Learn real skills with live, hands-on teaching you can start at any time.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/courses.jpg"
+        "url": "https://nexahubtech.company/og/courses.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/courses#breadcrumb"
+        "@id": "https://nexahubtech.company/courses#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/courses#catalog"
+        "@id": "https://nexahubtech.company/courses#catalog"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/courses#breadcrumb",
+      "@id": "https://nexahubtech.company/courses#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Courses",
-          "item": "https://www.nexahubtech.company/courses"
+          "item": "https://nexahubtech.company/courses"
         }
       ]
     },
     {
       "@type": "FAQPage",
-      "@id": "https://www.nexahubtech.company/cbt#webpage",
-      "url": "https://www.nexahubtech.company/cbt",
+      "@id": "https://nexahubtech.company/cbt#webpage",
+      "url": "https://nexahubtech.company/cbt",
       "name": "WAEC & JAMB CBT Training in Kubwa, Abuja — NexaHubTech",
       "description": "Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, F01 Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/cbt.jpg"
+        "url": "https://nexahubtech.company/og/cbt.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/cbt#breadcrumb"
+        "@id": "https://nexahubtech.company/cbt#breadcrumb"
       },
       "mainEntity": [
         {
@@ -2042,996 +2042,996 @@
         }
       ],
       "about": {
-        "@id": "https://www.nexahubtech.company/cbt#course"
+        "@id": "https://nexahubtech.company/cbt#course"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/cbt#breadcrumb",
+      "@id": "https://nexahubtech.company/cbt#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "WAEC & JAMB CBT Training",
-          "item": "https://www.nexahubtech.company/cbt"
+          "item": "https://nexahubtech.company/cbt"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/teaching#webpage",
-      "url": "https://www.nexahubtech.company/teaching",
+      "@id": "https://nexahubtech.company/teaching#webpage",
+      "url": "https://nexahubtech.company/teaching",
       "name": "How We Teach — NexaHubTech",
       "description": "The pedagogy behind every NexaHubTech course: the mental model before the syntax, one idea at a time, and a session built in three parts.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/teaching.jpg"
+        "url": "https://nexahubtech.company/og/teaching.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/teaching#breadcrumb"
+        "@id": "https://nexahubtech.company/teaching#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/teaching#principles"
+        "@id": "https://nexahubtech.company/teaching#principles"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/teaching#breadcrumb",
+      "@id": "https://nexahubtech.company/teaching#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "How We Teach",
-          "item": "https://www.nexahubtech.company/teaching"
+          "item": "https://nexahubtech.company/teaching"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/enrol#webpage",
-      "url": "https://www.nexahubtech.company/enrol",
+      "@id": "https://nexahubtech.company/enrol#webpage",
+      "url": "https://nexahubtech.company/enrol",
       "name": "Enrol — NexaHubTech",
       "description": "Apply for a place at NexaHubTech — taught live, start any time. Tell us about you, pick your course and training mode, and we'll be in touch about your start date.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/enrol.jpg"
+        "url": "https://nexahubtech.company/og/enrol.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/enrol#breadcrumb"
+        "@id": "https://nexahubtech.company/enrol#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/courses#catalog"
+        "@id": "https://nexahubtech.company/courses#catalog"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/enrol#breadcrumb",
+      "@id": "https://nexahubtech.company/enrol#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Enrol",
-          "item": "https://www.nexahubtech.company/enrol"
+          "item": "https://nexahubtech.company/enrol"
         }
       ]
     },
     {
       "@type": "CollectionPage",
-      "@id": "https://www.nexahubtech.company/services#webpage",
-      "url": "https://www.nexahubtech.company/services",
+      "@id": "https://nexahubtech.company/services#webpage",
+      "url": "https://nexahubtech.company/services",
       "name": "Services — NexaHubTech",
       "description": "What the NexaHubTech studio builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/services.jpg"
+        "url": "https://nexahubtech.company/og/services.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/services#breadcrumb"
+        "@id": "https://nexahubtech.company/services#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/services#catalog"
+        "@id": "https://nexahubtech.company/services#catalog"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/services#breadcrumb",
+      "@id": "https://nexahubtech.company/services#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Services",
-          "item": "https://www.nexahubtech.company/services"
+          "item": "https://nexahubtech.company/services"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/approach#webpage",
-      "url": "https://www.nexahubtech.company/approach",
+      "@id": "https://nexahubtech.company/approach#webpage",
+      "url": "https://nexahubtech.company/approach",
       "name": "Our Approach — NexaHubTech",
       "description": "How NexaHubTech works: we settle what should be built, and why, before any of it gets written — for company websites and for the software your members sign into.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/approach.jpg"
+        "url": "https://nexahubtech.company/og/approach.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/approach#breadcrumb"
+        "@id": "https://nexahubtech.company/approach#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/approach#process"
+        "@id": "https://nexahubtech.company/approach#process"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/approach#breadcrumb",
+      "@id": "https://nexahubtech.company/approach#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Our Approach",
-          "item": "https://www.nexahubtech.company/approach"
+          "item": "https://nexahubtech.company/approach"
         }
       ]
     },
     {
       "@type": "AboutPage",
-      "@id": "https://www.nexahubtech.company/about#webpage",
-      "url": "https://www.nexahubtech.company/about",
+      "@id": "https://nexahubtech.company/about#webpage",
+      "url": "https://nexahubtech.company/about",
       "name": "About — NexaHubTech",
       "description": "NexaHubTech is a Nigeria-based skills-to-service company — a tech school and a software studio built on one idea: learning should be tied to real work.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/about.jpg"
+        "url": "https://nexahubtech.company/og/about.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/about#breadcrumb"
+        "@id": "https://nexahubtech.company/about#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/about#breadcrumb",
+      "@id": "https://nexahubtech.company/about#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "About",
-          "item": "https://www.nexahubtech.company/about"
+          "item": "https://nexahubtech.company/about"
         }
       ]
     },
     {
       "@type": "ContactPage",
-      "@id": "https://www.nexahubtech.company/contact#webpage",
-      "url": "https://www.nexahubtech.company/contact",
+      "@id": "https://nexahubtech.company/contact#webpage",
+      "url": "https://nexahubtech.company/contact",
       "name": "Contact — NexaHubTech",
       "description": "Get in touch with NexaHubTech — ask about a course, taught live and started whenever you like, or start a project with the studio.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/contact.jpg"
+        "url": "https://nexahubtech.company/og/contact.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/contact#breadcrumb"
+        "@id": "https://nexahubtech.company/contact#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/contact#breadcrumb",
+      "@id": "https://nexahubtech.company/contact#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Contact",
-          "item": "https://www.nexahubtech.company/contact"
+          "item": "https://nexahubtech.company/contact"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/courses/pc-basics#webpage",
-      "url": "https://www.nexahubtech.company/courses/pc-basics",
+      "@id": "https://nexahubtech.company/courses/pc-basics#webpage",
+      "url": "https://nexahubtech.company/courses/pc-basics",
       "name": "PC Basics — NexaHubTech",
       "description": "Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/course-pc-basics.jpg"
+        "url": "https://nexahubtech.company/og/course-pc-basics.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/courses/pc-basics#breadcrumb"
+        "@id": "https://nexahubtech.company/courses/pc-basics#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/courses/pc-basics#course"
+        "@id": "https://nexahubtech.company/courses/pc-basics#course"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/courses/pc-basics#breadcrumb",
+      "@id": "https://nexahubtech.company/courses/pc-basics#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Courses",
-          "item": "https://www.nexahubtech.company/courses"
+          "item": "https://nexahubtech.company/courses"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "PC Basics",
-          "item": "https://www.nexahubtech.company/courses/pc-basics"
+          "item": "https://nexahubtech.company/courses/pc-basics"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/courses/microsoft-office#webpage",
-      "url": "https://www.nexahubtech.company/courses/microsoft-office",
+      "@id": "https://nexahubtech.company/courses/microsoft-office#webpage",
+      "url": "https://nexahubtech.company/courses/microsoft-office",
       "name": "Microsoft Office — NexaHubTech",
       "description": "The four programs an office actually runs on, taught to the standard the work deserves.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/course-microsoft-office.jpg"
+        "url": "https://nexahubtech.company/og/course-microsoft-office.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/courses/microsoft-office#breadcrumb"
+        "@id": "https://nexahubtech.company/courses/microsoft-office#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/courses/microsoft-office#course"
+        "@id": "https://nexahubtech.company/courses/microsoft-office#course"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/courses/microsoft-office#breadcrumb",
+      "@id": "https://nexahubtech.company/courses/microsoft-office#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Courses",
-          "item": "https://www.nexahubtech.company/courses"
+          "item": "https://nexahubtech.company/courses"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Microsoft Office",
-          "item": "https://www.nexahubtech.company/courses/microsoft-office"
+          "item": "https://nexahubtech.company/courses/microsoft-office"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/courses/web-development-fullstack#webpage",
-      "url": "https://www.nexahubtech.company/courses/web-development-fullstack",
+      "@id": "https://nexahubtech.company/courses/web-development-fullstack#webpage",
+      "url": "https://nexahubtech.company/courses/web-development-fullstack",
       "name": "Web Development — NexaHubTech",
       "description": "Learn frontend and backend in one complete path — from first principles to full applications.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/course-web-development-fullstack.jpg"
+        "url": "https://nexahubtech.company/og/course-web-development-fullstack.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/courses/web-development-fullstack#breadcrumb"
+        "@id": "https://nexahubtech.company/courses/web-development-fullstack#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/courses/web-development-fullstack#course"
+        "@id": "https://nexahubtech.company/courses/web-development-fullstack#course"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/courses/web-development-fullstack#breadcrumb",
+      "@id": "https://nexahubtech.company/courses/web-development-fullstack#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Courses",
-          "item": "https://www.nexahubtech.company/courses"
+          "item": "https://nexahubtech.company/courses"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Web Development",
-          "item": "https://www.nexahubtech.company/courses/web-development-fullstack"
+          "item": "https://nexahubtech.company/courses/web-development-fullstack"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/courses/frontend-development#webpage",
-      "url": "https://www.nexahubtech.company/courses/frontend-development",
+      "@id": "https://nexahubtech.company/courses/frontend-development#webpage",
+      "url": "https://nexahubtech.company/courses/frontend-development",
       "name": "Frontend Development — NexaHubTech",
       "description": "Learn the web from first principles — HTML, CSS, and JavaScript done properly.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/course-frontend-development.jpg"
+        "url": "https://nexahubtech.company/og/course-frontend-development.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/courses/frontend-development#breadcrumb"
+        "@id": "https://nexahubtech.company/courses/frontend-development#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/courses/frontend-development#course"
+        "@id": "https://nexahubtech.company/courses/frontend-development#course"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/courses/frontend-development#breadcrumb",
+      "@id": "https://nexahubtech.company/courses/frontend-development#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Courses",
-          "item": "https://www.nexahubtech.company/courses"
+          "item": "https://nexahubtech.company/courses"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Frontend Development",
-          "item": "https://www.nexahubtech.company/courses/frontend-development"
+          "item": "https://nexahubtech.company/courses/frontend-development"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/courses/javascript-programming#webpage",
-      "url": "https://www.nexahubtech.company/courses/javascript-programming",
+      "@id": "https://nexahubtech.company/courses/javascript-programming#webpage",
+      "url": "https://nexahubtech.company/courses/javascript-programming",
       "name": "JavaScript Programming — NexaHubTech",
       "description": "Learn JavaScript as a language — the same core that runs in a browser and on a server.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/course-javascript-programming.jpg"
+        "url": "https://nexahubtech.company/og/course-javascript-programming.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/courses/javascript-programming#breadcrumb"
+        "@id": "https://nexahubtech.company/courses/javascript-programming#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/courses/javascript-programming#course"
+        "@id": "https://nexahubtech.company/courses/javascript-programming#course"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/courses/javascript-programming#breadcrumb",
+      "@id": "https://nexahubtech.company/courses/javascript-programming#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Courses",
-          "item": "https://www.nexahubtech.company/courses"
+          "item": "https://nexahubtech.company/courses"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "JavaScript Programming",
-          "item": "https://www.nexahubtech.company/courses/javascript-programming"
+          "item": "https://nexahubtech.company/courses/javascript-programming"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/courses/react-development#webpage",
-      "url": "https://www.nexahubtech.company/courses/react-development",
+      "@id": "https://nexahubtech.company/courses/react-development#webpage",
+      "url": "https://nexahubtech.company/courses/react-development",
       "name": "React — NexaHubTech",
       "description": "Go beyond the basics — build React applications that stay understandable as they grow.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/course-react-development.jpg"
+        "url": "https://nexahubtech.company/og/course-react-development.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/courses/react-development#breadcrumb"
+        "@id": "https://nexahubtech.company/courses/react-development#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/courses/react-development#course"
+        "@id": "https://nexahubtech.company/courses/react-development#course"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/courses/react-development#breadcrumb",
+      "@id": "https://nexahubtech.company/courses/react-development#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Courses",
-          "item": "https://www.nexahubtech.company/courses"
+          "item": "https://nexahubtech.company/courses"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "React",
-          "item": "https://www.nexahubtech.company/courses/react-development"
+          "item": "https://nexahubtech.company/courses/react-development"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/courses/nextjs-fullstack#webpage",
-      "url": "https://www.nexahubtech.company/courses/nextjs-fullstack",
+      "@id": "https://nexahubtech.company/courses/nextjs-fullstack#webpage",
+      "url": "https://nexahubtech.company/courses/nextjs-fullstack",
       "name": "Next.js — NexaHubTech",
       "description": "Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/course-nextjs-fullstack.jpg"
+        "url": "https://nexahubtech.company/og/course-nextjs-fullstack.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/courses/nextjs-fullstack#breadcrumb"
+        "@id": "https://nexahubtech.company/courses/nextjs-fullstack#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/courses/nextjs-fullstack#course"
+        "@id": "https://nexahubtech.company/courses/nextjs-fullstack#course"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/courses/nextjs-fullstack#breadcrumb",
+      "@id": "https://nexahubtech.company/courses/nextjs-fullstack#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Courses",
-          "item": "https://www.nexahubtech.company/courses"
+          "item": "https://nexahubtech.company/courses"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Next.js",
-          "item": "https://www.nexahubtech.company/courses/nextjs-fullstack"
+          "item": "https://nexahubtech.company/courses/nextjs-fullstack"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/courses/backend-development#webpage",
-      "url": "https://www.nexahubtech.company/courses/backend-development",
+      "@id": "https://nexahubtech.company/courses/backend-development#webpage",
+      "url": "https://nexahubtech.company/courses/backend-development",
       "name": "Backend Development — NexaHubTech",
       "description": "Build the engine behind applications — APIs, databases, and server-side logic.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/course-backend-development.jpg"
+        "url": "https://nexahubtech.company/og/course-backend-development.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/courses/backend-development#breadcrumb"
+        "@id": "https://nexahubtech.company/courses/backend-development#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/courses/backend-development#course"
+        "@id": "https://nexahubtech.company/courses/backend-development#course"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/courses/backend-development#breadcrumb",
+      "@id": "https://nexahubtech.company/courses/backend-development#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Courses",
-          "item": "https://www.nexahubtech.company/courses"
+          "item": "https://nexahubtech.company/courses"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Backend Development",
-          "item": "https://www.nexahubtech.company/courses/backend-development"
+          "item": "https://nexahubtech.company/courses/backend-development"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/courses/mobile-development#webpage",
-      "url": "https://www.nexahubtech.company/courses/mobile-development",
+      "@id": "https://nexahubtech.company/courses/mobile-development#webpage",
+      "url": "https://nexahubtech.company/courses/mobile-development",
       "name": "Mobile Development — NexaHubTech",
       "description": "Build real mobile applications — from concept to the app store.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/course-mobile-development.jpg"
+        "url": "https://nexahubtech.company/og/course-mobile-development.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/courses/mobile-development#breadcrumb"
+        "@id": "https://nexahubtech.company/courses/mobile-development#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/courses/mobile-development#course"
+        "@id": "https://nexahubtech.company/courses/mobile-development#course"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/courses/mobile-development#breadcrumb",
+      "@id": "https://nexahubtech.company/courses/mobile-development#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Courses",
-          "item": "https://www.nexahubtech.company/courses"
+          "item": "https://nexahubtech.company/courses"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Mobile Development",
-          "item": "https://www.nexahubtech.company/courses/mobile-development"
+          "item": "https://nexahubtech.company/courses/mobile-development"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/courses/cybersecurity#webpage",
-      "url": "https://www.nexahubtech.company/courses/cybersecurity",
+      "@id": "https://nexahubtech.company/courses/cybersecurity#webpage",
+      "url": "https://nexahubtech.company/courses/cybersecurity",
       "name": "Cybersecurity — NexaHubTech",
       "description": "Understand how systems are attacked — and how to defend them.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/course-cybersecurity.jpg"
+        "url": "https://nexahubtech.company/og/course-cybersecurity.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/courses/cybersecurity#breadcrumb"
+        "@id": "https://nexahubtech.company/courses/cybersecurity#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/courses/cybersecurity#course"
+        "@id": "https://nexahubtech.company/courses/cybersecurity#course"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/courses/cybersecurity#breadcrumb",
+      "@id": "https://nexahubtech.company/courses/cybersecurity#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Courses",
-          "item": "https://www.nexahubtech.company/courses"
+          "item": "https://nexahubtech.company/courses"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Cybersecurity",
-          "item": "https://www.nexahubtech.company/courses/cybersecurity"
+          "item": "https://nexahubtech.company/courses/cybersecurity"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/courses/python-programming#webpage",
-      "url": "https://www.nexahubtech.company/courses/python-programming",
+      "@id": "https://nexahubtech.company/courses/python-programming#webpage",
+      "url": "https://nexahubtech.company/courses/python-programming",
       "name": "Python Programming — NexaHubTech",
       "description": "Learn programming from scratch with Python — the language that powers everything from scripts to AI.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/course-python-programming.jpg"
+        "url": "https://nexahubtech.company/og/course-python-programming.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/courses/python-programming#breadcrumb"
+        "@id": "https://nexahubtech.company/courses/python-programming#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/courses/python-programming#course"
+        "@id": "https://nexahubtech.company/courses/python-programming#course"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/courses/python-programming#breadcrumb",
+      "@id": "https://nexahubtech.company/courses/python-programming#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Courses",
-          "item": "https://www.nexahubtech.company/courses"
+          "item": "https://nexahubtech.company/courses"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Python Programming",
-          "item": "https://www.nexahubtech.company/courses/python-programming"
+          "item": "https://nexahubtech.company/courses/python-programming"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/courses/data-analysis#webpage",
-      "url": "https://www.nexahubtech.company/courses/data-analysis",
+      "@id": "https://nexahubtech.company/courses/data-analysis#webpage",
+      "url": "https://nexahubtech.company/courses/data-analysis",
       "name": "Data Analysis — NexaHubTech",
       "description": "Turn raw data into clear insights — with Python, SQL, and real analytical thinking.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/course-data-analysis.jpg"
+        "url": "https://nexahubtech.company/og/course-data-analysis.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/courses/data-analysis#breadcrumb"
+        "@id": "https://nexahubtech.company/courses/data-analysis#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/courses/data-analysis#course"
+        "@id": "https://nexahubtech.company/courses/data-analysis#course"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/courses/data-analysis#breadcrumb",
+      "@id": "https://nexahubtech.company/courses/data-analysis#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Courses",
-          "item": "https://www.nexahubtech.company/courses"
+          "item": "https://nexahubtech.company/courses"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Data Analysis",
-          "item": "https://www.nexahubtech.company/courses/data-analysis"
+          "item": "https://nexahubtech.company/courses/data-analysis"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/courses/videography-video-editing#webpage",
-      "url": "https://www.nexahubtech.company/courses/videography-video-editing",
+      "@id": "https://nexahubtech.company/courses/videography-video-editing#webpage",
+      "url": "https://nexahubtech.company/courses/videography-video-editing",
       "name": "Videography & Video Editing — NexaHubTech",
       "description": "Capture and craft video content that communicates — from shooting to final cut.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/course-videography-video-editing.jpg"
+        "url": "https://nexahubtech.company/og/course-videography-video-editing.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/courses/videography-video-editing#breadcrumb"
+        "@id": "https://nexahubtech.company/courses/videography-video-editing#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/courses/videography-video-editing#course"
+        "@id": "https://nexahubtech.company/courses/videography-video-editing#course"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/courses/videography-video-editing#breadcrumb",
+      "@id": "https://nexahubtech.company/courses/videography-video-editing#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Courses",
-          "item": "https://www.nexahubtech.company/courses"
+          "item": "https://nexahubtech.company/courses"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Videography & Video Editing",
-          "item": "https://www.nexahubtech.company/courses/videography-video-editing"
+          "item": "https://nexahubtech.company/courses/videography-video-editing"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/services/software-development#webpage",
-      "url": "https://www.nexahubtech.company/services/software-development",
+      "@id": "https://nexahubtech.company/services/software-development#webpage",
+      "url": "https://nexahubtech.company/services/software-development",
       "name": "Software Development — NexaHubTech",
       "description": "Products built to last — thought through before they’re built, then kept running.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/service-software-development.jpg"
+        "url": "https://nexahubtech.company/og/service-software-development.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/services/software-development#breadcrumb"
+        "@id": "https://nexahubtech.company/services/software-development#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/services/software-development#service"
+        "@id": "https://nexahubtech.company/services/software-development#service"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/services/software-development#breadcrumb",
+      "@id": "https://nexahubtech.company/services/software-development#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Services",
-          "item": "https://www.nexahubtech.company/services"
+          "item": "https://nexahubtech.company/services"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Software Development",
-          "item": "https://www.nexahubtech.company/services/software-development"
+          "item": "https://nexahubtech.company/services/software-development"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://www.nexahubtech.company/services/digital-solutions#webpage",
-      "url": "https://www.nexahubtech.company/services/digital-solutions",
+      "@id": "https://nexahubtech.company/services/digital-solutions#webpage",
+      "url": "https://nexahubtech.company/services/digital-solutions",
       "name": "Digital Solutions — NexaHubTech",
       "description": "The work around the product that decides whether it actually lands.",
       "inLanguage": "en-NG",
       "isPartOf": {
-        "@id": "https://www.nexahubtech.company/#website"
+        "@id": "https://nexahubtech.company/#website"
       },
       "publisher": {
-        "@id": "https://www.nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.nexahubtech.company/og/service-digital-solutions.jpg"
+        "url": "https://nexahubtech.company/og/service-digital-solutions.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.nexahubtech.company/services/digital-solutions#breadcrumb"
+        "@id": "https://nexahubtech.company/services/digital-solutions#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://www.nexahubtech.company/services/digital-solutions#service"
+        "@id": "https://nexahubtech.company/services/digital-solutions#service"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.nexahubtech.company/services/digital-solutions#breadcrumb",
+      "@id": "https://nexahubtech.company/services/digital-solutions#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.nexahubtech.company/"
+          "item": "https://nexahubtech.company/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Services",
-          "item": "https://www.nexahubtech.company/services"
+          "item": "https://nexahubtech.company/services"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Digital Solutions",
-          "item": "https://www.nexahubtech.company/services/digital-solutions"
+          "item": "https://nexahubtech.company/services/digital-solutions"
         }
       ]
     }

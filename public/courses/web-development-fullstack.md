@@ -2,7 +2,7 @@
 
 > Learn frontend and backend in one complete path — from first principles to full applications.
 
-Canonical page: https://www.nexahubtech.company/courses/web-development-fullstack
+Canonical page: https://nexahubtech.company/courses/web-development-fullstack
 
 | | |
 |---|---|
@@ -71,7 +71,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=web-development-fullstack — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=web-development-fullstack — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 

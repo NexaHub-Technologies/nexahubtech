@@ -2,7 +2,7 @@
 
 > Understand how systems are attacked — and how to defend them.
 
-Canonical page: https://www.nexahubtech.company/courses/cybersecurity
+Canonical page: https://nexahubtech.company/courses/cybersecurity
 
 | | |
 |---|---|
@@ -71,7 +71,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=cybersecurity — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=cybersecurity — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 

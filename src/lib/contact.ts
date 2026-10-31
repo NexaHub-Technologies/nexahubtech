@@ -11,20 +11,24 @@ export const ADDRESS = {
 	country: "NG",
 } as const;
 
+/* Absolute origin — Open Graph and canonical links must not be relative. It must
+   be the host that actually serves the site: the bare domain. www redirects to
+   it, and a canonical URL that redirects tells search engines and AI crawlers two
+   different things about where the page lives. */
+export const SITE_URL = "https://nexahubtech.company";
+
 export const CONTACT = {
 	email: "nexahubt@gmail.com",
 	phoneDisplay: "+234 913 451 3173",
 	/* E.164 — the form tel: links and structured data expect */
 	phone: "+2349134513173",
 	whatsapp: "https://wa.me/2349134513173",
-	website: "www.nexahubtech.company",
-	websiteHref: "https://www.nexahubtech.company",
+	website: "nexahubtech.company",
+	websiteHref: SITE_URL,
 	address: `${ADDRESS.street}, ${ADDRESS.locality}, ${ADDRESS.region}`,
 	rc: "9545130",
 } as const;
 
-/* absolute origin — Open Graph and canonical links must not be relative */
-export const SITE_URL = "https://www.nexahubtech.company";
 
 /* the registered company motto, exactly as it appears in the profile */
 export const MOTTO = "Learn to build. Build for real.";

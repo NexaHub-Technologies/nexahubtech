@@ -2,7 +2,7 @@
 
 > Capture and craft video content that communicates — from shooting to final cut.
 
-Canonical page: https://www.nexahubtech.company/courses/videography-video-editing
+Canonical page: https://nexahubtech.company/courses/videography-video-editing
 
 | | |
 |---|---|
@@ -62,7 +62,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=videography-video-editing — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=videography-video-editing — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 

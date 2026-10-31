@@ -4,58 +4,58 @@
 
 Motto: "Learn to build. Build for real." Based at F01 Market, Kubwa, FCT-Abuja, Nigeria (CAC RC 9545130). Every course is taught live — online, except PC Basics and CBT training, taught in person at the centre — and starts whenever the student is ready. Prices are in Nigerian naira (NGN). Contact: nexahubt@gmail.com, +234 913 451 3173, WhatsApp https://wa.me/2349134513173.
 
-Each link below is the markdown version of a page on https://www.nexahubtech.company; drop the `.md` suffix for the HTML page.
+Each link below is the markdown version of a page on https://nexahubtech.company; drop the `.md` suffix for the HTML page.
 
 ## Start here
 
-- [Home](https://www.nexahubtech.company/index.md): NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio. We teach people to become developers, then put those skills to work building real products for real clients.
+- [Home](https://nexahubtech.company/index.md): NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio. We teach people to become developers, then put those skills to work building real products for real clients.
 
 ## The school
 
-- [Courses](https://www.nexahubtech.company/courses.md): Explore all courses at NexaHubTech — from web development, JavaScript, React and Next.js to cybersecurity, data analysis and videography. Learn real skills with live, hands-on teaching you can start at any time.
-- [WAEC & JAMB CBT Training](https://www.nexahubtech.company/cbt.md): Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, F01 Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
-- [How We Teach](https://www.nexahubtech.company/teaching.md): The pedagogy behind every NexaHubTech course: the mental model before the syntax, one idea at a time, and a session built in three parts.
-- [Enrol](https://www.nexahubtech.company/enrol.md): Apply for a place at NexaHubTech — taught live, start any time. Tell us about you, pick your course and training mode, and we'll be in touch about your start date.
+- [Courses](https://nexahubtech.company/courses.md): Explore all courses at NexaHubTech — from web development, JavaScript, React and Next.js to cybersecurity, data analysis and videography. Learn real skills with live, hands-on teaching you can start at any time.
+- [WAEC & JAMB CBT Training](https://nexahubtech.company/cbt.md): Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, F01 Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
+- [How We Teach](https://nexahubtech.company/teaching.md): The pedagogy behind every NexaHubTech course: the mental model before the syntax, one idea at a time, and a session built in three parts.
+- [Enrol](https://nexahubtech.company/enrol.md): Apply for a place at NexaHubTech — taught live, start any time. Tell us about you, pick your course and training mode, and we'll be in touch about your start date.
 
 ## Courses
 
-- [PC Basics](https://www.nexahubtech.company/courses/pc-basics.md): Digital Literacy. ₦80,000, 6 Weeks. Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
-- [Microsoft Office](https://www.nexahubtech.company/courses/microsoft-office.md): Word, Excel, PowerPoint & Access. ₦110,000, 10 Weeks. The four programs an office actually runs on, taught to the standard the work deserves.
-- [Web Development](https://www.nexahubtech.company/courses/web-development-fullstack.md): Fullstack. ₦160,000, 10 Weeks. Learn frontend and backend in one complete path — from first principles to full applications.
-- [Frontend Development](https://www.nexahubtech.company/courses/frontend-development.md): ₦120,000, 10 Weeks. Learn the web from first principles — HTML, CSS, and JavaScript done properly.
-- [JavaScript Programming](https://www.nexahubtech.company/courses/javascript-programming.md): Browser & Node.js. ₦100,000, 8 Weeks. Learn JavaScript as a language — the same core that runs in a browser and on a server.
-- [React](https://www.nexahubtech.company/courses/react-development.md): Intermediate to Advanced. ₦120,000, 8 Weeks. Go beyond the basics — build React applications that stay understandable as they grow.
-- [Next.js](https://www.nexahubtech.company/courses/nextjs-fullstack.md): Fullstack React. ₦160,000, 10 Weeks. Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
-- [Backend Development](https://www.nexahubtech.company/courses/backend-development.md): ₦100,000, 8 Weeks. Build the engine behind applications — APIs, databases, and server-side logic.
-- [Mobile Development](https://www.nexahubtech.company/courses/mobile-development.md): ₦190,000, 12 Weeks. Build real mobile applications — from concept to the app store.
-- [Cybersecurity](https://www.nexahubtech.company/courses/cybersecurity.md): ₦230,000, 16 Weeks. Understand how systems are attacked — and how to defend them.
-- [Python Programming](https://www.nexahubtech.company/courses/python-programming.md): ₦100,000, 6 Weeks. Learn programming from scratch with Python — the language that powers everything from scripts to AI.
-- [Data Analysis](https://www.nexahubtech.company/courses/data-analysis.md): ₦120,000, 12 Weeks. Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
-- [Videography & Video Editing](https://www.nexahubtech.company/courses/videography-video-editing.md): ₦120,000, 8 Weeks. Capture and craft video content that communicates — from shooting to final cut.
+- [PC Basics](https://nexahubtech.company/courses/pc-basics.md): Digital Literacy. ₦80,000, 6 Weeks. Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
+- [Microsoft Office](https://nexahubtech.company/courses/microsoft-office.md): Word, Excel, PowerPoint & Access. ₦110,000, 10 Weeks. The four programs an office actually runs on, taught to the standard the work deserves.
+- [Web Development](https://nexahubtech.company/courses/web-development-fullstack.md): Fullstack. ₦160,000, 10 Weeks. Learn frontend and backend in one complete path — from first principles to full applications.
+- [Frontend Development](https://nexahubtech.company/courses/frontend-development.md): ₦120,000, 10 Weeks. Learn the web from first principles — HTML, CSS, and JavaScript done properly.
+- [JavaScript Programming](https://nexahubtech.company/courses/javascript-programming.md): Browser & Node.js. ₦100,000, 8 Weeks. Learn JavaScript as a language — the same core that runs in a browser and on a server.
+- [React](https://nexahubtech.company/courses/react-development.md): Intermediate to Advanced. ₦120,000, 8 Weeks. Go beyond the basics — build React applications that stay understandable as they grow.
+- [Next.js](https://nexahubtech.company/courses/nextjs-fullstack.md): Fullstack React. ₦160,000, 10 Weeks. Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
+- [Backend Development](https://nexahubtech.company/courses/backend-development.md): ₦100,000, 8 Weeks. Build the engine behind applications — APIs, databases, and server-side logic.
+- [Mobile Development](https://nexahubtech.company/courses/mobile-development.md): ₦190,000, 12 Weeks. Build real mobile applications — from concept to the app store.
+- [Cybersecurity](https://nexahubtech.company/courses/cybersecurity.md): ₦230,000, 16 Weeks. Understand how systems are attacked — and how to defend them.
+- [Python Programming](https://nexahubtech.company/courses/python-programming.md): ₦100,000, 6 Weeks. Learn programming from scratch with Python — the language that powers everything from scripts to AI.
+- [Data Analysis](https://nexahubtech.company/courses/data-analysis.md): ₦120,000, 12 Weeks. Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
+- [Videography & Video Editing](https://nexahubtech.company/courses/videography-video-editing.md): ₦120,000, 8 Weeks. Capture and craft video content that communicates — from shooting to final cut.
 
 ## The studio
 
-- [Services](https://www.nexahubtech.company/services.md): What the NexaHubTech studio builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.
-- [Our Approach](https://www.nexahubtech.company/approach.md): How NexaHubTech works: we settle what should be built, and why, before any of it gets written — for company websites and for the software your members sign into.
-- [Software Development](https://www.nexahubtech.company/services/software-development.md): Products built to last — thought through before they’re built, then kept running.
-- [Digital Solutions](https://www.nexahubtech.company/services/digital-solutions.md): The work around the product that decides whether it actually lands.
+- [Services](https://nexahubtech.company/services.md): What the NexaHubTech studio builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.
+- [Our Approach](https://nexahubtech.company/approach.md): How NexaHubTech works: we settle what should be built, and why, before any of it gets written — for company websites and for the software your members sign into.
+- [Software Development](https://nexahubtech.company/services/software-development.md): Products built to last — thought through before they’re built, then kept running.
+- [Digital Solutions](https://nexahubtech.company/services/digital-solutions.md): The work around the product that decides whether it actually lands.
 
 ## The company
 
-- [About](https://www.nexahubtech.company/about.md): NexaHubTech is a Nigeria-based skills-to-service company — a tech school and a software studio built on one idea: learning should be tied to real work.
-- [Contact](https://www.nexahubtech.company/contact.md): Get in touch with NexaHubTech — ask about a course, taught live and started whenever you like, or start a project with the studio.
+- [About](https://nexahubtech.company/about.md): NexaHubTech is a Nigeria-based skills-to-service company — a tech school and a software studio built on one idea: learning should be tied to real work.
+- [Contact](https://nexahubtech.company/contact.md): Get in touch with NexaHubTech — ask about a course, taught live and started whenever you like, or start a project with the studio.
 
 ## Optional
 
-- [Full text](https://www.nexahubtech.company/llms-full.txt): every page above in one file
-- [Knowledge graph](https://www.nexahubtech.company/schema.json): the schema.org JSON-LD graph of the company, its courses, services and pages
-- [Sitemap](https://www.nexahubtech.company/sitemap.xml): every indexable URL
+- [Full text](https://nexahubtech.company/llms-full.txt): every page above in one file
+- [Knowledge graph](https://nexahubtech.company/schema.json): the schema.org JSON-LD graph of the company, its courses, services and pages
+- [Sitemap](https://nexahubtech.company/sitemap.xml): every indexable URL
 
 # NexaHubTech
 
 > NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio. We teach people to become developers, then put those skills to work building real products for real clients.
 
-Canonical page: https://www.nexahubtech.company/
+Canonical page: https://nexahubtech.company/
 
 NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio under one roof. We teach real, in-demand skills — and then put them to work on real client products.
 
@@ -67,29 +67,29 @@ The studio meets real engineering problems. Those problems shape what we teach. 
 
 ## The school — 13 courses, taught live, start any time
 
-- [PC Basics](https://www.nexahubtech.company/courses/pc-basics.md) — Digital Literacy. ₦80,000 · 6 Weeks · in person, Kubwa. Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
-- [Microsoft Office](https://www.nexahubtech.company/courses/microsoft-office.md) — Word, Excel, PowerPoint & Access. ₦110,000 · 10 Weeks · live online. The four programs an office actually runs on, taught to the standard the work deserves.
-- [Web Development](https://www.nexahubtech.company/courses/web-development-fullstack.md) — Fullstack. ₦160,000 · 10 Weeks · live online. Learn frontend and backend in one complete path — from first principles to full applications.
-- [Frontend Development](https://www.nexahubtech.company/courses/frontend-development.md) — ₦120,000 · 10 Weeks · live online. Learn the web from first principles — HTML, CSS, and JavaScript done properly.
-- [JavaScript Programming](https://www.nexahubtech.company/courses/javascript-programming.md) — Browser & Node.js. ₦100,000 · 8 Weeks · live online. Learn JavaScript as a language — the same core that runs in a browser and on a server.
-- [React](https://www.nexahubtech.company/courses/react-development.md) — Intermediate to Advanced. ₦120,000 · 8 Weeks · live online. Go beyond the basics — build React applications that stay understandable as they grow.
-- [Next.js](https://www.nexahubtech.company/courses/nextjs-fullstack.md) — Fullstack React. ₦160,000 · 10 Weeks · live online. Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
-- [Backend Development](https://www.nexahubtech.company/courses/backend-development.md) — ₦100,000 · 8 Weeks · live online. Build the engine behind applications — APIs, databases, and server-side logic.
-- [Mobile Development](https://www.nexahubtech.company/courses/mobile-development.md) — ₦190,000 · 12 Weeks · live online. Build real mobile applications — from concept to the app store.
-- [Cybersecurity](https://www.nexahubtech.company/courses/cybersecurity.md) — ₦230,000 · 16 Weeks · live online. Understand how systems are attacked — and how to defend them.
-- [Python Programming](https://www.nexahubtech.company/courses/python-programming.md) — ₦100,000 · 6 Weeks · live online. Learn programming from scratch with Python — the language that powers everything from scripts to AI.
-- [Data Analysis](https://www.nexahubtech.company/courses/data-analysis.md) — ₦120,000 · 12 Weeks · live online. Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
-- [Videography & Video Editing](https://www.nexahubtech.company/courses/videography-video-editing.md) — ₦120,000 · 8 Weeks · live online. Capture and craft video content that communicates — from shooting to final cut.
-- [WAEC & JAMB CBT Training](https://www.nexahubtech.company/cbt.md) — from ₦3,000 · in person, Kubwa. Practice on the computer-based exam for JAMB UTME and WAEC CB-WASSCE.
+- [PC Basics](https://nexahubtech.company/courses/pc-basics.md) — Digital Literacy. ₦80,000 · 6 Weeks · in person, Kubwa. Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
+- [Microsoft Office](https://nexahubtech.company/courses/microsoft-office.md) — Word, Excel, PowerPoint & Access. ₦110,000 · 10 Weeks · live online. The four programs an office actually runs on, taught to the standard the work deserves.
+- [Web Development](https://nexahubtech.company/courses/web-development-fullstack.md) — Fullstack. ₦160,000 · 10 Weeks · live online. Learn frontend and backend in one complete path — from first principles to full applications.
+- [Frontend Development](https://nexahubtech.company/courses/frontend-development.md) — ₦120,000 · 10 Weeks · live online. Learn the web from first principles — HTML, CSS, and JavaScript done properly.
+- [JavaScript Programming](https://nexahubtech.company/courses/javascript-programming.md) — Browser & Node.js. ₦100,000 · 8 Weeks · live online. Learn JavaScript as a language — the same core that runs in a browser and on a server.
+- [React](https://nexahubtech.company/courses/react-development.md) — Intermediate to Advanced. ₦120,000 · 8 Weeks · live online. Go beyond the basics — build React applications that stay understandable as they grow.
+- [Next.js](https://nexahubtech.company/courses/nextjs-fullstack.md) — Fullstack React. ₦160,000 · 10 Weeks · live online. Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
+- [Backend Development](https://nexahubtech.company/courses/backend-development.md) — ₦100,000 · 8 Weeks · live online. Build the engine behind applications — APIs, databases, and server-side logic.
+- [Mobile Development](https://nexahubtech.company/courses/mobile-development.md) — ₦190,000 · 12 Weeks · live online. Build real mobile applications — from concept to the app store.
+- [Cybersecurity](https://nexahubtech.company/courses/cybersecurity.md) — ₦230,000 · 16 Weeks · live online. Understand how systems are attacked — and how to defend them.
+- [Python Programming](https://nexahubtech.company/courses/python-programming.md) — ₦100,000 · 6 Weeks · live online. Learn programming from scratch with Python — the language that powers everything from scripts to AI.
+- [Data Analysis](https://nexahubtech.company/courses/data-analysis.md) — ₦120,000 · 12 Weeks · live online. Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
+- [Videography & Video Editing](https://nexahubtech.company/courses/videography-video-editing.md) — ₦120,000 · 8 Weeks · live online. Capture and craft video content that communicates — from shooting to final cut.
+- [WAEC & JAMB CBT Training](https://nexahubtech.company/cbt.md) — from ₦3,000 · in person, Kubwa. Practice on the computer-based exam for JAMB UTME and WAEC CB-WASSCE.
 
-How the teaching works: [How We Teach](https://www.nexahubtech.company/teaching.md). To apply: [Enrol](https://www.nexahubtech.company/enrol.md).
+How the teaching works: [How We Teach](https://nexahubtech.company/teaching.md). To apply: [Enrol](https://nexahubtech.company/enrol.md).
 
 ## The studio — software built properly
 
-- [Software Development](https://www.nexahubtech.company/services/software-development.md) — Products built to last — thought through before they’re built, then kept running. (Custom software development, Website design & development, Mobile application development, Enterprise solutions, API development & integration, Software maintenance & support)
-- [Digital Solutions](https://www.nexahubtech.company/services/digital-solutions.md) — The work around the product that decides whether it actually lands. (Branding & digital strategy, Business process automation, IT consulting, Cloud solutions, Technical support)
+- [Software Development](https://nexahubtech.company/services/software-development.md) — Products built to last — thought through before they’re built, then kept running. (Custom software development, Website design & development, Mobile application development, Enterprise solutions, API development & integration, Software maintenance & support)
+- [Digital Solutions](https://nexahubtech.company/services/digital-solutions.md) — The work around the product that decides whether it actually lands. (Branding & digital strategy, Business process automation, IT consulting, Cloud solutions, Technical support)
 
-How a project runs: [Our Approach](https://www.nexahubtech.company/approach.md).
+How a project runs: [Our Approach](https://nexahubtech.company/approach.md).
 
 ## Contact
 
@@ -105,29 +105,29 @@ How a project runs: [Our Approach](https://www.nexahubtech.company/approach.md).
 
 > Explore all courses at NexaHubTech — from web development, JavaScript, React and Next.js to cybersecurity, data analysis and videography. Learn real skills with live, hands-on teaching you can start at any time.
 
-Canonical page: https://www.nexahubtech.company/courses
+Canonical page: https://nexahubtech.company/courses
 
 Every course is taught live by an instructor, with structured materials and real feedback, and starts whenever you are ready. Prices are in Nigerian naira and cover the whole course.
 
-- [PC Basics](https://www.nexahubtech.company/courses/pc-basics.md) — Digital Literacy. ₦80,000 · 6 Weeks · in person, Kubwa. Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
-- [Microsoft Office](https://www.nexahubtech.company/courses/microsoft-office.md) — Word, Excel, PowerPoint & Access. ₦110,000 · 10 Weeks · live online. The four programs an office actually runs on, taught to the standard the work deserves.
-- [Web Development](https://www.nexahubtech.company/courses/web-development-fullstack.md) — Fullstack. ₦160,000 · 10 Weeks · live online. Learn frontend and backend in one complete path — from first principles to full applications.
-- [Frontend Development](https://www.nexahubtech.company/courses/frontend-development.md) — ₦120,000 · 10 Weeks · live online. Learn the web from first principles — HTML, CSS, and JavaScript done properly.
-- [JavaScript Programming](https://www.nexahubtech.company/courses/javascript-programming.md) — Browser & Node.js. ₦100,000 · 8 Weeks · live online. Learn JavaScript as a language — the same core that runs in a browser and on a server.
-- [React](https://www.nexahubtech.company/courses/react-development.md) — Intermediate to Advanced. ₦120,000 · 8 Weeks · live online. Go beyond the basics — build React applications that stay understandable as they grow.
-- [Next.js](https://www.nexahubtech.company/courses/nextjs-fullstack.md) — Fullstack React. ₦160,000 · 10 Weeks · live online. Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
-- [Backend Development](https://www.nexahubtech.company/courses/backend-development.md) — ₦100,000 · 8 Weeks · live online. Build the engine behind applications — APIs, databases, and server-side logic.
-- [Mobile Development](https://www.nexahubtech.company/courses/mobile-development.md) — ₦190,000 · 12 Weeks · live online. Build real mobile applications — from concept to the app store.
-- [Cybersecurity](https://www.nexahubtech.company/courses/cybersecurity.md) — ₦230,000 · 16 Weeks · live online. Understand how systems are attacked — and how to defend them.
-- [Python Programming](https://www.nexahubtech.company/courses/python-programming.md) — ₦100,000 · 6 Weeks · live online. Learn programming from scratch with Python — the language that powers everything from scripts to AI.
-- [Data Analysis](https://www.nexahubtech.company/courses/data-analysis.md) — ₦120,000 · 12 Weeks · live online. Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
-- [Videography & Video Editing](https://www.nexahubtech.company/courses/videography-video-editing.md) — ₦120,000 · 8 Weeks · live online. Capture and craft video content that communicates — from shooting to final cut.
+- [PC Basics](https://nexahubtech.company/courses/pc-basics.md) — Digital Literacy. ₦80,000 · 6 Weeks · in person, Kubwa. Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
+- [Microsoft Office](https://nexahubtech.company/courses/microsoft-office.md) — Word, Excel, PowerPoint & Access. ₦110,000 · 10 Weeks · live online. The four programs an office actually runs on, taught to the standard the work deserves.
+- [Web Development](https://nexahubtech.company/courses/web-development-fullstack.md) — Fullstack. ₦160,000 · 10 Weeks · live online. Learn frontend and backend in one complete path — from first principles to full applications.
+- [Frontend Development](https://nexahubtech.company/courses/frontend-development.md) — ₦120,000 · 10 Weeks · live online. Learn the web from first principles — HTML, CSS, and JavaScript done properly.
+- [JavaScript Programming](https://nexahubtech.company/courses/javascript-programming.md) — Browser & Node.js. ₦100,000 · 8 Weeks · live online. Learn JavaScript as a language — the same core that runs in a browser and on a server.
+- [React](https://nexahubtech.company/courses/react-development.md) — Intermediate to Advanced. ₦120,000 · 8 Weeks · live online. Go beyond the basics — build React applications that stay understandable as they grow.
+- [Next.js](https://nexahubtech.company/courses/nextjs-fullstack.md) — Fullstack React. ₦160,000 · 10 Weeks · live online. Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
+- [Backend Development](https://nexahubtech.company/courses/backend-development.md) — ₦100,000 · 8 Weeks · live online. Build the engine behind applications — APIs, databases, and server-side logic.
+- [Mobile Development](https://nexahubtech.company/courses/mobile-development.md) — ₦190,000 · 12 Weeks · live online. Build real mobile applications — from concept to the app store.
+- [Cybersecurity](https://nexahubtech.company/courses/cybersecurity.md) — ₦230,000 · 16 Weeks · live online. Understand how systems are attacked — and how to defend them.
+- [Python Programming](https://nexahubtech.company/courses/python-programming.md) — ₦100,000 · 6 Weeks · live online. Learn programming from scratch with Python — the language that powers everything from scripts to AI.
+- [Data Analysis](https://nexahubtech.company/courses/data-analysis.md) — ₦120,000 · 12 Weeks · live online. Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
+- [Videography & Video Editing](https://nexahubtech.company/courses/videography-video-editing.md) — ₦120,000 · 8 Weeks · live online. Capture and craft video content that communicates — from shooting to final cut.
 
 ## Also offered
 
-- [WAEC & JAMB CBT Training](https://www.nexahubtech.company/cbt.md) — from ₦3,000 · in person, Kubwa. Practice on the computer-based exam for JAMB UTME and WAEC CB-WASSCE.
+- [WAEC & JAMB CBT Training](https://nexahubtech.company/cbt.md) — from ₦3,000 · in person, Kubwa. Practice on the computer-based exam for JAMB UTME and WAEC CB-WASSCE.
 
-Apply for any course at https://www.nexahubtech.company/enrol.
+Apply for any course at https://nexahubtech.company/enrol.
 
 ## Contact
 
@@ -143,7 +143,7 @@ Apply for any course at https://www.nexahubtech.company/enrol.
 
 > Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, F01 Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
 
-Canonical page: https://www.nexahubtech.company/cbt
+Canonical page: https://nexahubtech.company/cbt
 
 - Exams covered: JAMB UTME, WAEC CB-WASSCE
 - Where: F01 Market, Kubwa, FCT-Abuja, Nigeria — taught in person, on the centre's desktop computers
@@ -219,7 +219,7 @@ Yes. Walk in during opening hours, look at the lab, and take a short free placem
 
 > The pedagogy behind every NexaHubTech course: the mental model before the syntax, one idea at a time, and a session built in three parts.
 
-Canonical page: https://www.nexahubtech.company/teaching
+Canonical page: https://nexahubtech.company/teaching
 
 ## Principles
 
@@ -255,27 +255,27 @@ Canonical page: https://www.nexahubtech.company/teaching
 
 > Apply for a place at NexaHubTech — taught live, start any time. Tell us about you, pick your course and training mode, and we'll be in touch about your start date.
 
-Canonical page: https://www.nexahubtech.company/enrol
+Canonical page: https://nexahubtech.company/enrol
 
 Applying takes a few minutes: tell us about yourself, choose your course and how you want to train, and we will be in touch about your start date. You start when you are ready.
 
-The application form is at https://www.nexahubtech.company/enrol. To open it with a course already chosen, add `?course=<slug>`:
+The application form is at https://nexahubtech.company/enrol. To open it with a course already chosen, add `?course=<slug>`:
 
-- PC Basics (₦80,000): https://www.nexahubtech.company/enrol?course=pc-basics
-- Microsoft Office (₦110,000): https://www.nexahubtech.company/enrol?course=microsoft-office
-- Web Development (₦160,000): https://www.nexahubtech.company/enrol?course=web-development-fullstack
-- Frontend Development (₦120,000): https://www.nexahubtech.company/enrol?course=frontend-development
-- JavaScript Programming (₦100,000): https://www.nexahubtech.company/enrol?course=javascript-programming
-- React (₦120,000): https://www.nexahubtech.company/enrol?course=react-development
-- Next.js (₦160,000): https://www.nexahubtech.company/enrol?course=nextjs-fullstack
-- Backend Development (₦100,000): https://www.nexahubtech.company/enrol?course=backend-development
-- Mobile Development (₦190,000): https://www.nexahubtech.company/enrol?course=mobile-development
-- Cybersecurity (₦230,000): https://www.nexahubtech.company/enrol?course=cybersecurity
-- Python Programming (₦100,000): https://www.nexahubtech.company/enrol?course=python-programming
-- Data Analysis (₦120,000): https://www.nexahubtech.company/enrol?course=data-analysis
-- Videography & Video Editing (₦120,000): https://www.nexahubtech.company/enrol?course=videography-video-editing
+- PC Basics (₦80,000): https://nexahubtech.company/enrol?course=pc-basics
+- Microsoft Office (₦110,000): https://nexahubtech.company/enrol?course=microsoft-office
+- Web Development (₦160,000): https://nexahubtech.company/enrol?course=web-development-fullstack
+- Frontend Development (₦120,000): https://nexahubtech.company/enrol?course=frontend-development
+- JavaScript Programming (₦100,000): https://nexahubtech.company/enrol?course=javascript-programming
+- React (₦120,000): https://nexahubtech.company/enrol?course=react-development
+- Next.js (₦160,000): https://nexahubtech.company/enrol?course=nextjs-fullstack
+- Backend Development (₦100,000): https://nexahubtech.company/enrol?course=backend-development
+- Mobile Development (₦190,000): https://nexahubtech.company/enrol?course=mobile-development
+- Cybersecurity (₦230,000): https://nexahubtech.company/enrol?course=cybersecurity
+- Python Programming (₦100,000): https://nexahubtech.company/enrol?course=python-programming
+- Data Analysis (₦120,000): https://nexahubtech.company/enrol?course=data-analysis
+- Videography & Video Editing (₦120,000): https://nexahubtech.company/enrol?course=videography-video-editing
 
-For WAEC & JAMB CBT training, see [WAEC & JAMB CBT Training](https://www.nexahubtech.company/cbt.md), or walk in during opening hours.
+For WAEC & JAMB CBT training, see [WAEC & JAMB CBT Training](https://nexahubtech.company/cbt.md), or walk in during opening hours.
 
 ## Contact
 
@@ -291,9 +291,9 @@ For WAEC & JAMB CBT training, see [WAEC & JAMB CBT Training](https://www.nexahub
 
 > What the NexaHubTech studio builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.
 
-Canonical page: https://www.nexahubtech.company/services
+Canonical page: https://nexahubtech.company/services
 
-## [Software Development](https://www.nexahubtech.company/services/software-development.md)
+## [Software Development](https://nexahubtech.company/services/software-development.md)
 
 Products built to last — thought through before they’re built, then kept running.
 
@@ -304,7 +304,7 @@ Products built to last — thought through before they’re built, then kept run
 - **API development & integration** — Getting your systems talking to each other — cleanly, and without a rewrite.
 - **Software maintenance & support** — The unglamorous part done properly: updates, fixes, and someone to call when it breaks.
 
-## [Digital Solutions](https://www.nexahubtech.company/services/digital-solutions.md)
+## [Digital Solutions](https://nexahubtech.company/services/digital-solutions.md)
 
 The work around the product that decides whether it actually lands.
 
@@ -314,7 +314,7 @@ The work around the product that decides whether it actually lands.
 - **Cloud solutions** — Hosting and infrastructure sized to what you need today, with room to grow into.
 - **Technical support** — Practical help for your team, so problems get solved instead of worked around.
 
-How a project runs: [Our Approach](https://www.nexahubtech.company/approach.md). To start one: [Contact](https://www.nexahubtech.company/contact.md).
+How a project runs: [Our Approach](https://nexahubtech.company/approach.md). To start one: [Contact](https://nexahubtech.company/contact.md).
 
 ## Contact
 
@@ -330,7 +330,7 @@ How a project runs: [Our Approach](https://www.nexahubtech.company/approach.md).
 
 > How NexaHubTech works: we settle what should be built, and why, before any of it gets written — for company websites and for the software your members sign into.
 
-Canonical page: https://www.nexahubtech.company/approach
+Canonical page: https://nexahubtech.company/approach
 
 ## Understand the problem
 
@@ -381,7 +381,7 @@ The last three steps turn a design into something you can hold us to — and som
 
 > NexaHubTech is a Nigeria-based skills-to-service company — a tech school and a software studio built on one idea: learning should be tied to real work.
 
-Canonical page: https://www.nexahubtech.company/about
+Canonical page: https://nexahubtech.company/about
 
 NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio under one roof. We teach real, in-demand skills — and then put them to work on real client products.
 
@@ -420,7 +420,7 @@ To design and deliver cutting-edge technology solutions that solve practical pro
 
 > Get in touch with NexaHubTech — ask about a course, taught live and started whenever you like, or start a project with the studio.
 
-Canonical page: https://www.nexahubtech.company/contact
+Canonical page: https://nexahubtech.company/contact
 
 WhatsApp is the fastest way to reach us. To ask about a course, say which one; to start a project, a few lines on what it needs to do is enough — no specification required.
 
@@ -440,7 +440,7 @@ The centre at F01 Market, Kubwa, FCT-Abuja is open Monday – Saturday, 8:00 AM 
 
 > Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
 
-Canonical page: https://www.nexahubtech.company/courses/pc-basics
+Canonical page: https://nexahubtech.company/courses/pc-basics
 
 | | |
 |---|---|
@@ -502,7 +502,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=pc-basics — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=pc-basics — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 
@@ -518,7 +518,7 @@ Apply at https://www.nexahubtech.company/enrol?course=pc-basics — or ask a que
 
 > The four programs an office actually runs on, taught to the standard the work deserves.
 
-Canonical page: https://www.nexahubtech.company/courses/microsoft-office
+Canonical page: https://nexahubtech.company/courses/microsoft-office
 
 | | |
 |---|---|
@@ -581,7 +581,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=microsoft-office — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=microsoft-office — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 
@@ -597,7 +597,7 @@ Apply at https://www.nexahubtech.company/enrol?course=microsoft-office — or as
 
 > Learn frontend and backend in one complete path — from first principles to full applications.
 
-Canonical page: https://www.nexahubtech.company/courses/web-development-fullstack
+Canonical page: https://nexahubtech.company/courses/web-development-fullstack
 
 | | |
 |---|---|
@@ -666,7 +666,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=web-development-fullstack — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=web-development-fullstack — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 
@@ -682,7 +682,7 @@ Apply at https://www.nexahubtech.company/enrol?course=web-development-fullstack 
 
 > Learn the web from first principles — HTML, CSS, and JavaScript done properly.
 
-Canonical page: https://www.nexahubtech.company/courses/frontend-development
+Canonical page: https://nexahubtech.company/courses/frontend-development
 
 | | |
 |---|---|
@@ -748,7 +748,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=frontend-development — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=frontend-development — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 
@@ -764,7 +764,7 @@ Apply at https://www.nexahubtech.company/enrol?course=frontend-development — o
 
 > Learn JavaScript as a language — the same core that runs in a browser and on a server.
 
-Canonical page: https://www.nexahubtech.company/courses/javascript-programming
+Canonical page: https://nexahubtech.company/courses/javascript-programming
 
 | | |
 |---|---|
@@ -832,7 +832,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=javascript-programming — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=javascript-programming — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 
@@ -848,7 +848,7 @@ Apply at https://www.nexahubtech.company/enrol?course=javascript-programming —
 
 > Go beyond the basics — build React applications that stay understandable as they grow.
 
-Canonical page: https://www.nexahubtech.company/courses/react-development
+Canonical page: https://nexahubtech.company/courses/react-development
 
 | | |
 |---|---|
@@ -917,7 +917,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=react-development — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=react-development — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 
@@ -933,7 +933,7 @@ Apply at https://www.nexahubtech.company/enrol?course=react-development — or a
 
 > Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
 
-Canonical page: https://www.nexahubtech.company/courses/nextjs-fullstack
+Canonical page: https://nexahubtech.company/courses/nextjs-fullstack
 
 | | |
 |---|---|
@@ -1003,7 +1003,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=nextjs-fullstack — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=nextjs-fullstack — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 
@@ -1019,7 +1019,7 @@ Apply at https://www.nexahubtech.company/enrol?course=nextjs-fullstack — or as
 
 > Build the engine behind applications — APIs, databases, and server-side logic.
 
-Canonical page: https://www.nexahubtech.company/courses/backend-development
+Canonical page: https://nexahubtech.company/courses/backend-development
 
 | | |
 |---|---|
@@ -1086,7 +1086,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=backend-development — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=backend-development — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 
@@ -1102,7 +1102,7 @@ Apply at https://www.nexahubtech.company/enrol?course=backend-development — or
 
 > Build real mobile applications — from concept to the app store.
 
-Canonical page: https://www.nexahubtech.company/courses/mobile-development
+Canonical page: https://nexahubtech.company/courses/mobile-development
 
 | | |
 |---|---|
@@ -1169,7 +1169,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=mobile-development — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=mobile-development — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 
@@ -1185,7 +1185,7 @@ Apply at https://www.nexahubtech.company/enrol?course=mobile-development — or 
 
 > Understand how systems are attacked — and how to defend them.
 
-Canonical page: https://www.nexahubtech.company/courses/cybersecurity
+Canonical page: https://nexahubtech.company/courses/cybersecurity
 
 | | |
 |---|---|
@@ -1254,7 +1254,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=cybersecurity — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=cybersecurity — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 
@@ -1270,7 +1270,7 @@ Apply at https://www.nexahubtech.company/enrol?course=cybersecurity — or ask a
 
 > Learn programming from scratch with Python — the language that powers everything from scripts to AI.
 
-Canonical page: https://www.nexahubtech.company/courses/python-programming
+Canonical page: https://nexahubtech.company/courses/python-programming
 
 | | |
 |---|---|
@@ -1336,7 +1336,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=python-programming — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=python-programming — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 
@@ -1352,7 +1352,7 @@ Apply at https://www.nexahubtech.company/enrol?course=python-programming — or 
 
 > Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
 
-Canonical page: https://www.nexahubtech.company/courses/data-analysis
+Canonical page: https://nexahubtech.company/courses/data-analysis
 
 | | |
 |---|---|
@@ -1420,7 +1420,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=data-analysis — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=data-analysis — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 
@@ -1436,7 +1436,7 @@ Apply at https://www.nexahubtech.company/enrol?course=data-analysis — or ask a
 
 > Capture and craft video content that communicates — from shooting to final cut.
 
-Canonical page: https://www.nexahubtech.company/courses/videography-video-editing
+Canonical page: https://nexahubtech.company/courses/videography-video-editing
 
 | | |
 |---|---|
@@ -1496,7 +1496,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=videography-video-editing — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=videography-video-editing — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 
@@ -1512,7 +1512,7 @@ Apply at https://www.nexahubtech.company/enrol?course=videography-video-editing 
 
 > Products built to last — thought through before they’re built, then kept running.
 
-Canonical page: https://www.nexahubtech.company/services/software-development
+Canonical page: https://nexahubtech.company/services/software-development
 
 We take on software from the first conversation to long after launch. Every project starts with understanding the problem properly, because the cost of building the wrong thing well is higher than the cost of thinking first.
 
@@ -1525,7 +1525,7 @@ We take on software from the first conversation to long after launch. Every proj
 - **API development & integration** — Getting your systems talking to each other — cleanly, and without a rewrite.
 - **Software maintenance & support** — The unglamorous part done properly: updates, fixes, and someone to call when it breaks.
 
-How a project runs: [Our Approach](https://www.nexahubtech.company/approach.md). To start one, email nexahubt@gmail.com or message https://wa.me/2349134513173.
+How a project runs: [Our Approach](https://nexahubtech.company/approach.md). To start one, email nexahubt@gmail.com or message https://wa.me/2349134513173.
 
 ## Contact
 
@@ -1541,7 +1541,7 @@ How a project runs: [Our Approach](https://www.nexahubtech.company/approach.md).
 
 > The work around the product that decides whether it actually lands.
 
-Canonical page: https://www.nexahubtech.company/services/digital-solutions
+Canonical page: https://nexahubtech.company/services/digital-solutions
 
 Good software rarely fails for technical reasons alone. This is the work that surrounds it — how it’s positioned, how it fits your operations, and what it runs on.
 
@@ -1553,7 +1553,7 @@ Good software rarely fails for technical reasons alone. This is the work that su
 - **Cloud solutions** — Hosting and infrastructure sized to what you need today, with room to grow into.
 - **Technical support** — Practical help for your team, so problems get solved instead of worked around.
 
-How a project runs: [Our Approach](https://www.nexahubtech.company/approach.md). To start one, email nexahubt@gmail.com or message https://wa.me/2349134513173.
+How a project runs: [Our Approach](https://nexahubtech.company/approach.md). To start one, email nexahubt@gmail.com or message https://wa.me/2349134513173.
 
 ## Contact
 

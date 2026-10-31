@@ -2,7 +2,7 @@
 
 > The work around the product that decides whether it actually lands.
 
-Canonical page: https://www.nexahubtech.company/services/digital-solutions
+Canonical page: https://nexahubtech.company/services/digital-solutions
 
 Good software rarely fails for technical reasons alone. This is the work that surrounds it — how it’s positioned, how it fits your operations, and what it runs on.
 
@@ -14,7 +14,7 @@ Good software rarely fails for technical reasons alone. This is the work that su
 - **Cloud solutions** — Hosting and infrastructure sized to what you need today, with room to grow into.
 - **Technical support** — Practical help for your team, so problems get solved instead of worked around.
 
-How a project runs: [Our Approach](https://www.nexahubtech.company/approach.md). To start one, email nexahubt@gmail.com or message https://wa.me/2349134513173.
+How a project runs: [Our Approach](https://nexahubtech.company/approach.md). To start one, email nexahubt@gmail.com or message https://wa.me/2349134513173.
 
 ## Contact
 

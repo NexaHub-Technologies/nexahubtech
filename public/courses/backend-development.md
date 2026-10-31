@@ -2,7 +2,7 @@
 
 > Build the engine behind applications — APIs, databases, and server-side logic.
 
-Canonical page: https://www.nexahubtech.company/courses/backend-development
+Canonical page: https://nexahubtech.company/courses/backend-development
 
 | | |
 |---|---|
@@ -69,7 +69,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=backend-development — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=backend-development — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 
