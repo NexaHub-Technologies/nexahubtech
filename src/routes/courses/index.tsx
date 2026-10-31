@@ -1,19 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eyebrow, useReveal } from "../../components/site";
 import { COURSE_COUNT_WORD_CAP, COURSES } from "../../lib/courses";
+import { PAGES } from "../../lib/pages";
 import { pageMeta } from "../../lib/seo";
 
 export const Route = createFileRoute("/courses/")({
 	component: CoursesIndex,
 	ssr: false,
-	head: () =>
-		pageMeta({
-			title: "Courses — NexaHubTech",
-			description:
-				"Explore all courses at NexaHubTech — from web development, JavaScript, React and Next.js to cybersecurity, data analysis and videography. Learn real skills with live, hands-on teaching you can start at any time.",
-			path: "/courses",
-			image: "/og/courses.jpg",
-		}),
+	head: () => pageMeta(PAGES.courses),
 });
 
 function CoursesIndex() {

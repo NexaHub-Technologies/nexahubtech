@@ -1,19 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eyebrow, useReveal } from "../components/site";
 import { APPROACH, SCALING } from "../lib/approach";
+import { PAGES } from "../lib/pages";
 import { pageMeta } from "../lib/seo";
 
 export const Route = createFileRoute("/approach")({
 	component: Approach,
 	ssr: false,
-	head: () =>
-		pageMeta({
-			title: "Our Approach — NexaHubTech",
-			description:
-				"How NexaHubTech works: we settle what should be built, and why, before any of it gets written — for company websites and for the software your members sign into.",
-			path: "/approach",
-			image: "/og/approach.jpg",
-		}),
+	head: () => pageMeta(PAGES.approach),
 });
 
 function Approach() {

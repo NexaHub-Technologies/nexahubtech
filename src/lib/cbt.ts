@@ -35,6 +35,13 @@ export const CBT_DETAILS = {
 	title: "WAEC & JAMB CBT Training",
 	location: "F01 Market, Kubwa, FCT-Abuja",
 	hours: "Monday – Saturday, 8:00 AM – 6:00 PM",
+	/* the same hours for machines: the schema knowledge graph publishes these, and
+	   cbt.test.ts fails if they stop agreeing with the line above */
+	openingHours: {
+		days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+		opens: "08:00",
+		closes: "18:00",
+	},
 	targetExams: ["JAMB UTME", "WAEC CB-WASSCE"],
 } as const;
 

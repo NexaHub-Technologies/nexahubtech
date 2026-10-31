@@ -1,8 +1,14 @@
 import { SITE_URL } from "./contact";
+import { pageGraph } from "./discovery/schema";
+import { findPage, markdownPath } from "./pages";
 
 /* Without per-route og:* tags every shared link renders with the homepage's title
    and description. This also emits a canonical, since the same page is reachable
-   in either site mode. */
+   in either site mode.
+
+   For a page in the registry (lib/pages.ts) it adds the two things a machine
+   reader needs, given that the body only renders once JavaScript runs: the page's
+   slice of the schema.org knowledge graph, and a link to its markdown mirror. */
 export function pageMeta({
 	title,
 	description,
@@ -22,6 +28,8 @@ export function pageMeta({
 	noindex?: boolean;
 }) {
 	const url = `${SITE_URL}${path}`;
+	/* a hidden page stays out of the graph and the mirrors along with search */
+	const page = noindex ? undefined : findPage(path);
 	return {
 		meta: [
 			{ title },
@@ -32,7 +40,19 @@ export function pageMeta({
 			{ property: "og:image", content: `${SITE_URL}${image}` },
 			{ name: "twitter:image", content: `${SITE_URL}${image}` },
 			...(noindex ? [{ name: "robots", content: "noindex, nofollow" }] : []),
+			...(page ? [{ "script:ld+json": pageGraph(page) }] : []),
 		],
-		links: [{ rel: "canonical", href: url }],
+		links: [
+			{ rel: "canonical", href: url },
+			...(page
+				? [
+						{
+							rel: "alternate",
+							type: "text/markdown",
+							href: `${SITE_URL}${markdownPath(page.path)}`,
+						},
+					]
+				: []),
+		],
 	};
 }

@@ -7,19 +7,13 @@ import {
 	composeEnquiry,
 	type Intent,
 } from "../lib/enquiry";
+import { PAGES } from "../lib/pages";
 import { sendEnquiry } from "../lib/send-enquiry";
 import { pageMeta } from "../lib/seo";
 
 export const Route = createFileRoute("/contact")({
 	component: Contact,
-	head: () =>
-		pageMeta({
-			title: "Contact — NexaHubTech",
-			description:
-				"Get in touch with NexaHubTech — ask about a course, taught live and started whenever you like, or start a project with the studio.",
-			path: "/contact",
-			image: "/og/contact.jpg",
-		}),
+	head: () => pageMeta(PAGES.contact),
 });
 
 function ContactForm() {

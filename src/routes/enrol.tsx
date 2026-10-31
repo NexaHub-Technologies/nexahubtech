@@ -17,6 +17,7 @@ import {
 	YES_NO,
 	type YesNo,
 } from "../lib/enrolment";
+import { PAGES } from "../lib/pages";
 import { sendEnrolment } from "../lib/send-enrolment";
 import { pageMeta } from "../lib/seo";
 
@@ -28,14 +29,7 @@ export const Route = createFileRoute("/enrol")({
 	validateSearch: (search: Record<string, unknown>) => ({
 		course: typeof search.course === "string" ? search.course : undefined,
 	}),
-	head: () =>
-		pageMeta({
-			title: "Enrol — NexaHubTech",
-			description:
-				"Apply for a place at NexaHubTech — taught live, start any time. Tell us about you, pick your course and training mode, and we'll be in touch about your start date.",
-			path: "/enrol",
-			image: "/og/enrol.jpg",
-		}),
+	head: () => pageMeta(PAGES.enrol),
 });
 
 const legendStyle = {

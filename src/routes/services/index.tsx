@@ -1,20 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eyebrow, useReveal } from "../../components/site";
 import { COURSE_COUNT_WORD } from "../../lib/courses";
+import { PAGES } from "../../lib/pages";
 import { pageMeta } from "../../lib/seo";
 import { SERVICES } from "../../lib/services";
 
 export const Route = createFileRoute("/services/")({
 	component: ServicesIndex,
 	ssr: false,
-	head: () =>
-		pageMeta({
-			title: "Services — NexaHubTech",
-			description:
-				"What the NexaHubTech studio builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.",
-			path: "/services",
-			image: "/og/services.jpg",
-		}),
+	head: () => pageMeta(PAGES.services),
 });
 
 function ServicesIndex() {

@@ -1,20 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eyebrow, useReveal } from "../components/site";
 import { COURSES } from "../lib/courses";
+import { PAGES } from "../lib/pages";
 import { pageMeta } from "../lib/seo";
 import { ANTIPATTERNS, PRINCIPLES, SESSION } from "../lib/teaching";
 
 export const Route = createFileRoute("/teaching")({
 	component: Teaching,
 	ssr: false,
-	head: () =>
-		pageMeta({
-			title: "How We Teach — NexaHubTech",
-			description:
-				"The pedagogy behind every NexaHubTech course: the mental model before the syntax, one idea at a time, and a session built in three parts.",
-			path: "/teaching",
-			image: "/og/teaching.jpg",
-		}),
+	head: () => pageMeta(PAGES.teaching),
 });
 
 function Teaching() {
