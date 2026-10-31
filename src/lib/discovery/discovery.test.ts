@@ -154,6 +154,17 @@ describe("pageMeta", () => {
 		});
 	});
 
+	it("describes each page's own share card in its alt text", () => {
+		const alt = (m: ReturnType<typeof pageMeta>) =>
+			m.meta.find((t) => "property" in t && t.property === "og:image:alt");
+		expect(alt(pageMeta(PAGES.cbt))?.content).toContain(
+			PAGES.cbt.card.headline,
+		);
+		expect(alt(pageMeta(PAGES.home))?.content).not.toBe(
+			alt(pageMeta(PAGES.cbt))?.content,
+		);
+	});
+
 	it("keeps a hidden page out of the graph and the mirrors", () => {
 		const m = pageMeta(PAGES.work);
 		expect(ldJson(m)).toHaveLength(0);

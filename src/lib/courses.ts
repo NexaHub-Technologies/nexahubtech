@@ -1460,6 +1460,10 @@ export const COURSE_COUNT_WORD =
 export const COURSE_COUNT_WORD_CAP =
 	COURSE_COUNT_WORD.charAt(0).toUpperCase() + COURSE_COUNT_WORD.slice(1);
 
+/* the same test course-docs.test.ts applies to the curriculum documents */
+export const taughtInPerson = (c: Course) =>
+	/in person|in the centre/i.test(c.format.t);
+
 export function getCourseBySlug(slug: string): Course | undefined {
 	return COURSES.find((c) => c.slug === slug);
 }

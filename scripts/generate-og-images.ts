@@ -7,7 +7,9 @@
    Run with: bun run generate-og-images */
 import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { basename } from "node:path";
 import { COURSES } from "../src/lib/courses";
+import { coursePage, PAGES, type Page, servicePage } from "../src/lib/pages";
 import { SERVICES } from "../src/lib/services";
 
 const CACHE = ".cache/og-fonts";
@@ -43,23 +45,29 @@ async function ensureFonts() {
 const esc = (s: string) =>
 	s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-/* wrap to at most two lines, shrinking the type if the words are long */
-function layout(text: string) {
+/* Up to two headline lines, broken where the two halves come out most even —
+   a greedy wrap strands a single word on the second line ("…your CBT / exam").
+   Type shrinks for long lines, and again when an accent line makes it three. */
+function layout(text: string, hasAccent: boolean) {
 	const words = text.split(" ");
-	const lines: string[] = [];
-	let line = "";
-	const max = text.length > 26 ? 17 : 22;
-	for (const w of words) {
-		if ((line + " " + w).trim().length > max && line) {
-			lines.push(line);
-			line = w;
-		} else line = (line + " " + w).trim();
+	let lines = [text];
+	if (text.length > 22) {
+		let best = Number.POSITIVE_INFINITY;
+		for (let i = 1; i < words.length; i++) {
+			const pair = [words.slice(0, i).join(" "), words.slice(i).join(" ")];
+			const longest = Math.max(...pair.map((l) => l.length));
+			if (longest < best) {
+				best = longest;
+				lines = pair;
+			}
+		}
 	}
-	if (line) lines.push(line);
-	const two = lines.slice(0, 2);
-	const longest = Math.max(...two.map((l) => l.length));
-	const size = longest > 20 ? 68 : longest > 15 ? 82 : 92;
-	return { lines: two, size };
+	const longest = Math.max(...lines.map((l) => l.length));
+	if (longest > 24)
+		throw new Error(`"${text}" is too long for a two-line card headline`);
+	let size = longest > 20 ? 68 : longest > 15 ? 82 : 92;
+	if (lines.length + (hasAccent ? 1 : 0) > 2) size = Math.min(size, 74);
+	return { lines, size };
 }
 
 const logo = (() => {
@@ -71,8 +79,13 @@ const logo = (() => {
 })();
 
 function svg(eyebrow: string, headline: string, accent: string, sub: string) {
-	const { lines, size } = layout(headline);
-	const top = lines.length > 1 ? 268 : 320;
+	const { lines, size } = layout(headline, Boolean(accent));
+	/* centre the headline, accent and subline in the space under the eyebrow,
+	   so a three-line card neither climbs into the eyebrow nor runs off the end */
+	const lineCount = lines.length + (accent ? 1 : 0);
+	const blockHeight = lineCount * (size + 14) + 150;
+	const free = Math.max(0, 600 - 222 - blockHeight);
+	const top = Math.round(222 + size * 0.8 + free / 2);
 	const body = lines
 		.map(
 			(l, i) =>
@@ -108,40 +121,18 @@ function svg(eyebrow: string, headline: string, accent: string, sub: string) {
 </svg>`;
 }
 
-interface Job {
-	name: string;
-	eyebrow: string;
-	headline: string;
-	accent: string;
-	sub: string;
-}
-
-const jobs: Job[] = [
-	{ name: "home", eyebrow: "A tech school + a software studio", headline: "Learn to build.", accent: "Build for real.", sub: "Kubwa, FCT-Abuja · nexahubtech.company" },
-	{ name: "courses", eyebrow: "Our courses", headline: "Real skills,", accent: "taught properly.", sub: "Eleven tracks · taught live · start any time" },
-	{ name: "enrol", eyebrow: "Enrolment", headline: "Apply for", accent: "a place.", sub: "Pick a track · tell us about you" },
-	{ name: "services", eyebrow: "Our services", headline: "Software, built", accent: "properly.", sub: "Custom software, web, mobile, cloud" },
-	{ name: "work", eyebrow: "Our work", headline: "What we've", accent: "built.", sub: "Marketplaces · real-time video · platforms" },
-	{ name: "cbt", eyebrow: "WAEC & JAMB CBT training", headline: "Ready for", accent: "exam day.", sub: "F01 Market, Kubwa · mock exams from ₦3,000" },
-	{ name: "teaching", eyebrow: "How we teach", headline: "Understand it", accent: "first.", sub: "The method behind every course" },
-	{ name: "approach", eyebrow: "How we work", headline: "Eleven steps", accent: "before the code.", sub: "System design before implementation" },
-	{ name: "about", eyebrow: "Who we are", headline: "Two arms,", accent: "one mission.", sub: "A tech school and a software studio" },
-	{ name: "contact", eyebrow: "Two ways in", headline: "Let's talk.", accent: "", sub: "nexahubt@gmail.com · +234 913 451 3173" },
-	...COURSES.map((c) => ({
-		name: `course-${c.slug}`,
-		eyebrow: "Course",
-		headline: c.t,
-		accent: "",
-		sub: `${c.price} · ${c.duration}`,
-	})),
-	...SERVICES.map((s) => ({
-		name: `service-${s.slug}`,
-		eyebrow: "The studio",
-		headline: s.t,
-		accent: "",
-		sub: `${s.items.length} services · NexaHubTech`,
-	})),
+/* every page's card, from the same registry the page heads read — so the image
+   a link previews with always says what the page says */
+const pages: Page[] = [
+	...Object.values(PAGES),
+	...COURSES.map(coursePage),
+	...SERVICES.map(servicePage),
 ];
+const jobs = pages.map((p) => ({
+	name: basename(p.image, ".jpg"),
+	...p.card,
+	accent: p.card.accent ?? "",
+}));
 
 await ensureFonts();
 mkdirSync(OUT, { recursive: true });

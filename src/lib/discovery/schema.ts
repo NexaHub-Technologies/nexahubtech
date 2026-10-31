@@ -16,7 +16,7 @@ import { APPROACH } from "../approach";
 import { CBT_DETAILS, CBT_FAQS, CBT_PACKAGES, CBT_PILLARS } from "../cbt";
 import { SUMMARY } from "../company";
 import { ADDRESS, CONTACT, MOTTO, SITE_URL } from "../contact";
-import { COURSES, type Course } from "../courses";
+import { COURSES, type Course, taughtInPerson } from "../courses";
 import {
 	coursePage,
 	findPage,
@@ -73,10 +73,6 @@ export function isoWeeks(duration: string): string | undefined {
 	const m = duration.match(/^(\d+)\s+weeks?$/i);
 	return m ? `P${m[1]}W` : undefined;
 }
-
-/* the same test course-docs.test.ts applies to the curriculum documents */
-export const taughtInPerson = (c: Course) =>
-	/in person|in the centre/i.test(c.format.t);
 
 const offerBase = {
 	"@type": "Offer",
