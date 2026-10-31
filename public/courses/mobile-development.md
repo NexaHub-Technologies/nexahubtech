@@ -2,7 +2,7 @@
 
 > Build real mobile applications — from concept to the app store.
 
-Canonical page: https://www.nexahubtech.company/courses/mobile-development
+Canonical page: https://nexahubtech.company/courses/mobile-development
 
 | | |
 |---|---|
@@ -69,7 +69,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=mobile-development — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=mobile-development — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 

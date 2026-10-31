@@ -2,7 +2,7 @@
 
 > Learn JavaScript as a language — the same core that runs in a browser and on a server.
 
-Canonical page: https://www.nexahubtech.company/courses/javascript-programming
+Canonical page: https://nexahubtech.company/courses/javascript-programming
 
 | | |
 |---|---|
@@ -70,7 +70,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=javascript-programming — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=javascript-programming — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 

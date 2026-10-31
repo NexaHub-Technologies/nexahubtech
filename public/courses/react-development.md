@@ -2,7 +2,7 @@
 
 > Go beyond the basics — build React applications that stay understandable as they grow.
 
-Canonical page: https://www.nexahubtech.company/courses/react-development
+Canonical page: https://nexahubtech.company/courses/react-development
 
 | | |
 |---|---|
@@ -71,7 +71,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=react-development — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=react-development — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 

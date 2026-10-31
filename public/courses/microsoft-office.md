@@ -2,7 +2,7 @@
 
 > The four programs an office actually runs on, taught to the standard the work deserves.
 
-Canonical page: https://www.nexahubtech.company/courses/microsoft-office
+Canonical page: https://nexahubtech.company/courses/microsoft-office
 
 | | |
 |---|---|
@@ -65,7 +65,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=microsoft-office — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=microsoft-office — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 

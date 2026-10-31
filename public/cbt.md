@@ -2,7 +2,7 @@
 
 > Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, F01 Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
 
-Canonical page: https://www.nexahubtech.company/cbt
+Canonical page: https://nexahubtech.company/cbt
 
 - Exams covered: JAMB UTME, WAEC CB-WASSCE
 - Where: F01 Market, Kubwa, FCT-Abuja, Nigeria — taught in person, on the centre's desktop computers

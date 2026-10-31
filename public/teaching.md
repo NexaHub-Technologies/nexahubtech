@@ -2,7 +2,7 @@
 
 > The pedagogy behind every NexaHubTech course: the mental model before the syntax, one idea at a time, and a session built in three parts.
 
-Canonical page: https://www.nexahubtech.company/teaching
+Canonical page: https://nexahubtech.company/teaching
 
 ## Principles
 

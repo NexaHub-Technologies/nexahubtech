@@ -3,9 +3,9 @@
 #
 # Every page renders in the browser, so a crawler that does not run JavaScript
 # should read the markdown versions instead:
-#   https://www.nexahubtech.company/llms.txt        index of every page, as markdown
-#   https://www.nexahubtech.company/llms-full.txt   the whole site in one file
-#   https://www.nexahubtech.company/schema.json     schema.org knowledge graph
+#   https://nexahubtech.company/llms.txt        index of every page, as markdown
+#   https://nexahubtech.company/llms-full.txt   the whole site in one file
+#   https://nexahubtech.company/schema.json     schema.org knowledge graph
 #
 # Hidden pages are kept out of search with a noindex tag, not a Disallow here:
 # a disallowed URL can still be indexed from a link elsewhere, because the
@@ -48,4 +48,4 @@ User-agent: CCBot
 Allow: /
 Disallow: /_serverFn/
 
-Sitemap: https://www.nexahubtech.company/sitemap.xml
+Sitemap: https://nexahubtech.company/sitemap.xml

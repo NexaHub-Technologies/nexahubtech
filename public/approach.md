@@ -2,7 +2,7 @@
 
 > How NexaHubTech works: we settle what should be built, and why, before any of it gets written — for company websites and for the software your members sign into.
 
-Canonical page: https://www.nexahubtech.company/approach
+Canonical page: https://nexahubtech.company/approach
 
 ## Understand the problem
 

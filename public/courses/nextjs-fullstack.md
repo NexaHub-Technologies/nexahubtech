@@ -2,7 +2,7 @@
 
 > Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
 
-Canonical page: https://www.nexahubtech.company/courses/nextjs-fullstack
+Canonical page: https://nexahubtech.company/courses/nextjs-fullstack
 
 | | |
 |---|---|
@@ -72,7 +72,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=nextjs-fullstack — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=nextjs-fullstack — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 

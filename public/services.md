@@ -2,9 +2,9 @@
 
 > What the NexaHubTech studio builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.
 
-Canonical page: https://www.nexahubtech.company/services
+Canonical page: https://nexahubtech.company/services
 
-## [Software Development](https://www.nexahubtech.company/services/software-development.md)
+## [Software Development](https://nexahubtech.company/services/software-development.md)
 
 Products built to last — thought through before they’re built, then kept running.
 
@@ -15,7 +15,7 @@ Products built to last — thought through before they’re built, then kept run
 - **API development & integration** — Getting your systems talking to each other — cleanly, and without a rewrite.
 - **Software maintenance & support** — The unglamorous part done properly: updates, fixes, and someone to call when it breaks.
 
-## [Digital Solutions](https://www.nexahubtech.company/services/digital-solutions.md)
+## [Digital Solutions](https://nexahubtech.company/services/digital-solutions.md)
 
 The work around the product that decides whether it actually lands.
 
@@ -25,7 +25,7 @@ The work around the product that decides whether it actually lands.
 - **Cloud solutions** — Hosting and infrastructure sized to what you need today, with room to grow into.
 - **Technical support** — Practical help for your team, so problems get solved instead of worked around.
 
-How a project runs: [Our Approach](https://www.nexahubtech.company/approach.md). To start one: [Contact](https://www.nexahubtech.company/contact.md).
+How a project runs: [Our Approach](https://nexahubtech.company/approach.md). To start one: [Contact](https://nexahubtech.company/contact.md).
 
 ## Contact
 

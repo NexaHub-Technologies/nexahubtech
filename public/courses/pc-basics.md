@@ -2,7 +2,7 @@
 
 > Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
 
-Canonical page: https://www.nexahubtech.company/courses/pc-basics
+Canonical page: https://nexahubtech.company/courses/pc-basics
 
 | | |
 |---|---|
@@ -64,7 +64,7 @@ What you need to have:
 
 ## Enrol
 
-Apply at https://www.nexahubtech.company/enrol?course=pc-basics — or ask a question on WhatsApp: https://wa.me/2349134513173
+Apply at https://nexahubtech.company/enrol?course=pc-basics — or ask a question on WhatsApp: https://wa.me/2349134513173
 
 ## Contact
 

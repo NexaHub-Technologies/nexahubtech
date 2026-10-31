@@ -2,7 +2,7 @@
 
 > Products built to last — thought through before they’re built, then kept running.
 
-Canonical page: https://www.nexahubtech.company/services/software-development
+Canonical page: https://nexahubtech.company/services/software-development
 
 We take on software from the first conversation to long after launch. Every project starts with understanding the problem properly, because the cost of building the wrong thing well is higher than the cost of thinking first.
 
@@ -15,7 +15,7 @@ We take on software from the first conversation to long after launch. Every proj
 - **API development & integration** — Getting your systems talking to each other — cleanly, and without a rewrite.
 - **Software maintenance & support** — The unglamorous part done properly: updates, fixes, and someone to call when it breaks.
 
-How a project runs: [Our Approach](https://www.nexahubtech.company/approach.md). To start one, email nexahubt@gmail.com or message https://wa.me/2349134513173.
+How a project runs: [Our Approach](https://nexahubtech.company/approach.md). To start one, email nexahubt@gmail.com or message https://wa.me/2349134513173.
 
 ## Contact
 
