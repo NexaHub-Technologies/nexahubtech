@@ -314,7 +314,7 @@ export function Footer() {
 						))}
 					</div>
 					<p className="text-[0.85rem] text-mute">
-						© 2026 NexaHub Technologies
+						© 2026 NexaHubTech
 					</p>
 					<p className="text-[0.78rem] text-mute">RC {CONTACT.rc}</p>
 					<Link
