@@ -23,7 +23,6 @@ import { pageMeta } from "../lib/seo";
 
 export const Route = createFileRoute("/enrol")({
 	component: Enrol,
-	ssr: false,
 	/* ?course=<slug> is how a course page hands its course over. An unknown or
 	   missing slug is not an error — the form just starts on no course chosen. */
 	validateSearch: (search: Record<string, unknown>) => ({

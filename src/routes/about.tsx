@@ -7,7 +7,6 @@ import { pageMeta } from "../lib/seo";
 
 export const Route = createFileRoute("/about")({
 	component: About,
-	ssr: false,
 	head: () => pageMeta(PAGES.about),
 });
 

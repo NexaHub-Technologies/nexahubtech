@@ -6,7 +6,6 @@ import { pageMeta } from "../lib/seo";
 
 export const Route = createFileRoute("/approach")({
 	component: Approach,
-	ssr: false,
 	head: () => pageMeta(PAGES.approach),
 });
 

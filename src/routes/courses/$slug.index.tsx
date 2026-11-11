@@ -7,7 +7,6 @@ import { pageMeta } from "../../lib/seo";
 
 export const Route = createFileRoute("/courses/$slug/")({
 	component: CourseDetail,
-	ssr: false,
 	head: ({ params }) => {
 		const course = getCourseBySlug(params.slug);
 		return pageMeta(

@@ -8,7 +8,6 @@ import { SERVICES } from "../lib/services";
 
 export const Route = createFileRoute("/")({
 	component: Home,
-	ssr: false,
 	head: () => pageMeta(PAGES.home),
 });
 
