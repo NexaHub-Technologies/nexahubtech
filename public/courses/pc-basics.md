@@ -7,13 +7,14 @@ Canonical page: https://nexahubtech.company/courses/pc-basics
 | | |
 |---|---|
 | Subject | Digital Literacy |
-| Price | ₦80,000 |
+| Fee — in kubwa, max 6 | ₦75,000, or 2 × ₦40,000 |
 | Duration | 6 Weeks |
 | Format | Taught in the centre, in person. |
 | Level | The place to begin if a computer still feels risky |
-| Start | Any time |
+| Start | Any day |
+| Session times | Tue, Thu · 8:30 AM – 11:00 AM (in kubwa, max 6); Mon, Wed, Fri · 11:30 AM – 2:00 PM (in kubwa, max 6); Sat · 9:00 AM – 12:00 PM (in kubwa, max 6) |
 
-Every other course here is taught live online. This one cannot be: the first thing a beginner needs is somebody beside them saying that one, on the left. Sitting a person who has never used a computer in front of a video call asks them to use the very skill the course exists to teach. Machines are provided, and you start whenever you are ready.
+This course is only taught in person, and cannot be taught any other way: the first thing a beginner needs is somebody beside them saying that one, on the left. Sitting a person who has never used a computer in front of a video call asks them to use the very skill the course exists to teach. Machines are provided, and you start whenever you are ready.
 
 ## The idea this course installs: Everything lives somewhere
 
@@ -61,6 +62,10 @@ What you need to have:
 - Word processing, spreadsheets and slides
 - Email, accounts and staying safe from scams
 - Machines available in the centre if you do not own one
+
+## Where it leads
+
+Next: [Office Essentials](https://nexahubtech.company/courses/office-essentials.md).
 
 ## Enrol
 

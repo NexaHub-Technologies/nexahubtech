@@ -6,7 +6,7 @@
 |---|---|
 | **Course** | [Web Development](../courses/web-development-fullstack.md) |
 | **Modules** | 05 |
-| **Weeks** | 7–8 |
+| **Weeks** | 10–14 |
 | **Course level** | Built for complete beginners |
 
 ## What you can rely on

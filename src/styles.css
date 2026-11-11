@@ -2304,3 +2304,180 @@ a.contact-detail:hover {
     animation: preloader-failsafe 0.3s ease forwards;
   }
 }
+
+/* ── fees & session times ──────────────────────────────────────────
+   Every naira figure renders through src/components/fees.tsx; these are its
+   shapes. Quiet on purpose: the number is the loud part. */
+
+.fee-lines {
+  display: grid;
+  gap: 0.55rem;
+}
+.fee-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.fee-line-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--mute);
+}
+.fee-line-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+.fee-line-price .display {
+  font-size: 1.05rem;
+}
+.fee-line-plan {
+  font-size: 0.75rem;
+  color: var(--mute);
+}
+
+.fee-option {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1.25rem 1.35rem;
+  border-radius: 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+.fee-option[data-delivery='inhouse'] {
+  background: var(--marigold-tint);
+  border-color: transparent;
+}
+.fee-option-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--learn-ink);
+}
+.fee-option-price {
+  font-size: 1.75rem;
+  margin-top: 0.2rem;
+}
+.fee-option-plan {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.fee-option-note {
+  margin-top: 0.5rem;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--mute);
+}
+
+.slot-list {
+  display: grid;
+  gap: 0.5rem;
+}
+.slot-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  background: var(--card);
+  border: 1px solid var(--line-soft);
+}
+.slot-row[data-delivery='inhouse'] {
+  border-left: 3px solid var(--marigold);
+}
+.slot-row[data-delivery='online'] {
+  border-left: 3px solid var(--teal);
+}
+.slot-when {
+  font-weight: 700;
+  color: var(--ink);
+}
+.slot-where {
+  font-size: 0.85rem;
+  color: var(--mute);
+}
+
+/* a plain, readable table for the fees page — wraps sideways on a phone
+   rather than squeezing the figures */
+.fee-table-wrap {
+  overflow-x: auto;
+  border-radius: 18px;
+  border: 1px solid var(--line-soft);
+  background: var(--card);
+}
+.fee-table {
+  width: 100%;
+  min-width: 34rem;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+}
+.fee-table caption {
+  text-align: left;
+  padding: 1rem 1.1rem 0.25rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+.fee-table th,
+.fee-table td {
+  text-align: left;
+  padding: 0.75rem 1.1rem;
+  border-top: 1px solid var(--line-soft);
+  vertical-align: top;
+}
+.fee-table thead th {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+.fee-table tbody th {
+  font-weight: 700;
+  color: var(--ink);
+}
+.fee-table th small,
+.fee-table td small {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.78rem;
+  color: var(--mute);
+}
+.fee-table .is-none {
+  color: var(--mute-2);
+}
+
+/* the learning path at the top of /courses */
+.path-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.path-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--learn-ink);
+  background: var(--marigold-tint);
+  transition: background 180ms ease;
+}
+.path-chip:hover {
+  background: var(--card);
+}
+.path-arrow {
+  color: var(--mute);
+  font-size: 0.85rem;
+}

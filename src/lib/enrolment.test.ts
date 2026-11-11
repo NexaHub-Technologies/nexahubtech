@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { CONTACT } from "./contact";
-import { getCourseBySlug } from "./courses";
+import { feeSummary, getCourseBySlug } from "./courses";
 import { renderEmailDocument } from "./email-template";
 import {
 	composeEnrolment,
@@ -57,7 +57,7 @@ describe("enrolmentDocument", () => {
 		const doc = enrolmentDocument(base);
 		expect(doc.highlight.map((f) => f.value)).toEqual([
 			"React",
-			course.price,
+			feeSummary(course),
 			course.duration,
 			"Online training",
 		]);
@@ -112,7 +112,7 @@ describe("composeEnrolment", () => {
 		expect(body).toContain("PERSONAL INFORMATION");
 		expect(body).toContain("Full name: Chidi Okeke");
 		expect(body).toContain("Applying for: React (Intermediate to Advanced)");
-		expect(body).toContain(`Course fee: ${course.price}`);
+		expect(body).toContain(`Course fee: ${feeSummary(course)}`);
 	});
 
 	it("addresses the fallback mailto to the real inbox", () => {
@@ -140,7 +140,7 @@ describe("renderEmailDocument", () => {
 		expect(html).toContain("NexaHubTech");
 		expect(html).toContain("Enrolment application");
 		expect(html).toContain("Chidi Okeke");
-		expect(html).toContain(course.price);
+		expect(html).toContain(feeSummary(course));
 		expect(html).toContain(CONTACT.website);
 	});
 

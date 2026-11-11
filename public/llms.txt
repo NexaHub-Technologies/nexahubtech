@@ -2,36 +2,43 @@
 
 > NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio under one roof. We teach real, in-demand skills — and then put them to work on real client products.
 
-Motto: "Learn to build. Build for real." Based at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria (CAC RC 9545130). Every course is taught live — online, except PC Basics and CBT training, taught in person at the centre — and starts whenever the student is ready. Prices are in Nigerian naira (NGN). Contact: nexahubt@gmail.com, +234 913 451 3173, WhatsApp https://wa.me/2349134513173.
+Motto: "Learn to build. Build for real." Based at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria (CAC RC 9545130). Every course is taught live and starts whenever the student is ready: Computer Essentials, PC Basics, Office Essentials, Microsoft Office, Videography & Video Editing and CBT training only in person at the centre; Mobile Videography only online; everything else either way, with a seat at the centre (at most 6 per class) priced above a place online. Fees can be paid in instalments. Prices are in Nigerian naira (NGN). Contact: nexahubt@gmail.com, +234 913 451 3173, WhatsApp https://wa.me/2349134513173.
 
 Each link below is the markdown version of a page on https://nexahubtech.company; drop the `.md` suffix for the HTML page.
 
 ## Start here
 
-- [Home](https://nexahubtech.company/home.md): NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio. We teach people to become developers, then put those skills to work building real products for real clients.
+- [Home](https://nexahubtech.company/home.md): NexaHubTech is a tech school in Kubwa, FCT-Abuja, with a software studio behind it. Learn computer skills, Microsoft Office, coding, data and video — in small classes of six at the centre, or live online from anywhere in Nigeria — and start whenever you are ready.
 
 ## The school
 
-- [Courses](https://nexahubtech.company/courses.md): Explore all courses at NexaHubTech — from web development, JavaScript, React and Next.js to cybersecurity, data analysis and videography. Learn real skills with live, hands-on teaching you can start at any time.
+- [Courses](https://nexahubtech.company/courses.md): Every course at NexaHubTech, from your first time on a computer to React, data analysis and video — taught live online or in small groups at our Kubwa centre, with fees you can pay in instalments. Start any day.
+- [Fees](https://nexahubtech.company/fees.md): Every NexaHubTech fee on one page: each course live online and in person at the Kubwa centre, paid in full or in instalments, plus CBT practice and rates for organisations.
+- [Timetable](https://nexahubtech.company/timetable.md): When NexaHubTech classes run each week — at the Kubwa centre and live online. There are no fixed intakes: you start any day and join a standing session that suits you.
 - [WAEC & JAMB CBT Training](https://nexahubtech.company/cbt.md): Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
+- [For Business](https://nexahubtech.company/for-business.md): Train your staff, your students or your team with NexaHubTech: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online or at our Kubwa centre.
+- [The Centre](https://nexahubtech.company/centre.md): Visit the NexaHubTech centre at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja: one room, classes of at most 6, machines provided, open Monday – Saturday, 8:00 AM – 6:00 PM. Come and see it before you pay.
 - [How We Teach](https://nexahubtech.company/teaching.md): The pedagogy behind every NexaHubTech course: the mental model before the syntax, one idea at a time, and a session built in three parts.
-- [Enrol](https://nexahubtech.company/enrol.md): Apply for a place at NexaHubTech — taught live, start any time. Tell us about you, pick your course and training mode, and we'll be in touch about your start date.
+- [Enrol](https://nexahubtech.company/enrol.md): Apply for a place at NexaHubTech — taught live, online or at our Kubwa centre, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.
 
 ## Courses
 
-- [PC Basics](https://nexahubtech.company/courses/pc-basics.md): Digital Literacy. ₦80,000, 6 Weeks. Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
-- [Microsoft Office](https://nexahubtech.company/courses/microsoft-office.md): Word, Excel, PowerPoint & Access. ₦110,000, 10 Weeks. The four programs an office actually runs on, taught to the standard the work deserves.
-- [Web Development](https://nexahubtech.company/courses/web-development-fullstack.md): Fullstack. ₦160,000, 10 Weeks. Learn frontend and backend in one complete path — from first principles to full applications.
-- [Frontend Development](https://nexahubtech.company/courses/frontend-development.md): ₦120,000, 10 Weeks. Learn the web from first principles — HTML, CSS, and JavaScript done properly.
-- [JavaScript Programming](https://nexahubtech.company/courses/javascript-programming.md): Browser & Node.js. ₦100,000, 8 Weeks. Learn JavaScript as a language — the same core that runs in a browser and on a server.
-- [React](https://nexahubtech.company/courses/react-development.md): Intermediate to Advanced. ₦120,000, 8 Weeks. Go beyond the basics — build React applications that stay understandable as they grow.
-- [Next.js](https://nexahubtech.company/courses/nextjs-fullstack.md): Fullstack React. ₦160,000, 10 Weeks. Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
-- [Backend Development](https://nexahubtech.company/courses/backend-development.md): ₦100,000, 8 Weeks. Build the engine behind applications — APIs, databases, and server-side logic.
-- [Mobile Development](https://nexahubtech.company/courses/mobile-development.md): ₦190,000, 12 Weeks. Build real mobile applications — from concept to the app store.
-- [Cybersecurity](https://nexahubtech.company/courses/cybersecurity.md): ₦230,000, 16 Weeks. Understand how systems are attacked — and how to defend them.
-- [Python Programming](https://nexahubtech.company/courses/python-programming.md): ₦100,000, 6 Weeks. Learn programming from scratch with Python — the language that powers everything from scripts to AI.
-- [Data Analysis](https://nexahubtech.company/courses/data-analysis.md): ₦120,000, 12 Weeks. Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
-- [Videography & Video Editing](https://nexahubtech.company/courses/videography-video-editing.md): ₦120,000, 8 Weeks. Capture and craft video content that communicates — from shooting to final cut.
+- [Computer Essentials](https://nexahubtech.company/courses/computer-essentials.md): Digital Literacy. In Kubwa, max 6 ₦45,000 (or 2 × ₦25,000). 3 Weeks. Three weeks from never having used a computer to saving, finding and printing your own work — with somebody beside you the whole way.
+- [PC Basics](https://nexahubtech.company/courses/pc-basics.md): Digital Literacy. In Kubwa, max 6 ₦75,000 (or 2 × ₦40,000). 6 Weeks. Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
+- [Office Essentials](https://nexahubtech.company/courses/office-essentials.md): Word & Excel. In Kubwa, max 6 ₦55,000 (or 2 × ₦30,000). 4 Weeks. The two programs most office work actually happens in — Word and Excel — in four weeks, taught properly.
+- [Microsoft Office](https://nexahubtech.company/courses/microsoft-office.md): Word, Excel, PowerPoint & Access. In Kubwa, max 6 ₦95,000 (or 2 × ₦52,500). 8 Weeks. The four programs an office actually runs on, taught to the standard the work deserves.
+- [Python Programming](https://nexahubtech.company/courses/python-programming.md): Live online ₦95,000 (or 2 × ₦52,500) · In Kubwa, max 6 ₦115,000 (or 2 × ₦62,500). 6 Weeks. Learn programming from scratch with Python — the language that powers everything from scripts to AI.
+- [JavaScript Programming](https://nexahubtech.company/courses/javascript-programming.md): Browser & Node.js. Live online ₦95,000 (or 2 × ₦52,500) · In Kubwa, max 6 ₦115,000 (or 2 × ₦62,500). 8 Weeks. Learn JavaScript as a language — the same core that runs in a browser and on a server.
+- [Frontend Development](https://nexahubtech.company/courses/frontend-development.md): Live online ₦120,000 (or 2 × ₦65,000) · In Kubwa, max 6 ₦145,000 (or 2 × ₦77,500). 10 Weeks. Learn the web from first principles — HTML, CSS, and JavaScript done properly.
+- [Backend Development](https://nexahubtech.company/courses/backend-development.md): Live online ₦110,000 (or 2 × ₦60,000) · In Kubwa, max 6 ₦135,000 (or 2 × ₦72,500). 8 Weeks. Build the engine behind applications — APIs, databases, and server-side logic.
+- [Web Development](https://nexahubtech.company/courses/web-development-fullstack.md): Fullstack. Live online ₦200,000 (or 3 × ₦75,000) · In Kubwa, max 6 ₦240,000 (or 3 × ₦87,500). 18 Weeks. Learn frontend and backend in one complete path — from first principles to full applications.
+- [React](https://nexahubtech.company/courses/react-development.md): Intermediate to Advanced. Live online ₦130,000 (or 2 × ₦70,000) · In Kubwa, max 6 ₦160,000 (or 2 × ₦87,500). 8 Weeks. Go beyond the basics — build React applications that stay understandable as they grow.
+- [Next.js](https://nexahubtech.company/courses/nextjs-fullstack.md): Fullstack React. Live online ₦160,000 (or 2 × ₦87,500) · In Kubwa, max 6 ₦195,000 (or 2 × ₦105,000). 10 Weeks. Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
+- [Mobile Development](https://nexahubtech.company/courses/mobile-development.md): Live online ₦190,000 (or 2 × ₦102,500) · In Kubwa, max 6 ₦230,000 (or 2 × ₦125,000). 12 Weeks. Build real mobile applications — from concept to the app store.
+- [Data Analysis](https://nexahubtech.company/courses/data-analysis.md): Live online ₦130,000 (or 2 × ₦70,000) · In Kubwa, max 6 ₦160,000 (or 2 × ₦87,500). 10 Weeks. Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
+- [Mobile Videography](https://nexahubtech.company/courses/mobile-videography.md): Phone video & editing. Live online ₦50,000 (or 2 × ₦27,500). 4 Weeks. Shoot, light, record and edit video worth watching — on the phone you already own.
+- [Videography & Video Editing](https://nexahubtech.company/courses/videography-video-editing.md): In Kubwa, max 6 ₦120,000 (or 2 × ₦65,000). 8 Weeks. Capture and craft video content that communicates — from shooting to final cut.
+- [Cybersecurity](https://nexahubtech.company/courses/cybersecurity.md): Live online ₦230,000 (or 3 × ₦82,500) · In Kubwa, max 6 ₦280,000 (or 3 × ₦100,000). 16 Weeks. Understand how systems are attacked — and how to defend them.
 
 ## The studio
 

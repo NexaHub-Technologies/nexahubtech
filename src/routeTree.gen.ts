@@ -14,9 +14,13 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ApproachRouteImport } from './routes/approach'
 import { Route as CbtRouteImport } from './routes/cbt'
 import { Route as CbtTrainingRouteImport } from './routes/cbt-training'
+import { Route as CentreRouteImport } from './routes/centre'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as EnrolRouteImport } from './routes/enrol'
+import { Route as FeesRouteImport } from './routes/fees'
+import { Route as ForBusinessRouteImport } from './routes/for-business'
 import { Route as TeachingRouteImport } from './routes/teaching'
+import { Route as TimetableRouteImport } from './routes/timetable'
 import { Route as WorkRouteImport } from './routes/work'
 import { Route as CoursesIndexRouteImport } from './routes/courses/index'
 import { Route as ServicesIndexRouteImport } from './routes/services/index'
@@ -48,6 +52,11 @@ const CbtTrainingRoute = CbtTrainingRouteImport.update({
   path: '/cbt-training',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CentreRoute = CentreRouteImport.update({
+  id: '/centre',
+  path: '/centre',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -58,9 +67,24 @@ const EnrolRoute = EnrolRouteImport.update({
   path: '/enrol',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FeesRoute = FeesRouteImport.update({
+  id: '/fees',
+  path: '/fees',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForBusinessRoute = ForBusinessRouteImport.update({
+  id: '/for-business',
+  path: '/for-business',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TeachingRoute = TeachingRouteImport.update({
   id: '/teaching',
   path: '/teaching',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TimetableRoute = TimetableRouteImport.update({
+  id: '/timetable',
+  path: '/timetable',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WorkRoute = WorkRouteImport.update({
@@ -95,9 +119,13 @@ export interface FileRoutesByFullPath {
   '/approach': typeof ApproachRoute
   '/cbt': typeof CbtRoute
   '/cbt-training': typeof CbtTrainingRoute
+  '/centre': typeof CentreRoute
   '/contact': typeof ContactRoute
   '/enrol': typeof EnrolRoute
+  '/fees': typeof FeesRoute
+  '/for-business': typeof ForBusinessRoute
   '/teaching': typeof TeachingRoute
+  '/timetable': typeof TimetableRoute
   '/work': typeof WorkRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/courses/': typeof CoursesIndexRoute
@@ -110,9 +138,13 @@ export interface FileRoutesByTo {
   '/approach': typeof ApproachRoute
   '/cbt': typeof CbtRoute
   '/cbt-training': typeof CbtTrainingRoute
+  '/centre': typeof CentreRoute
   '/contact': typeof ContactRoute
   '/enrol': typeof EnrolRoute
+  '/fees': typeof FeesRoute
+  '/for-business': typeof ForBusinessRoute
   '/teaching': typeof TeachingRoute
+  '/timetable': typeof TimetableRoute
   '/work': typeof WorkRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/courses': typeof CoursesIndexRoute
@@ -126,9 +158,13 @@ export interface FileRoutesById {
   '/approach': typeof ApproachRoute
   '/cbt': typeof CbtRoute
   '/cbt-training': typeof CbtTrainingRoute
+  '/centre': typeof CentreRoute
   '/contact': typeof ContactRoute
   '/enrol': typeof EnrolRoute
+  '/fees': typeof FeesRoute
+  '/for-business': typeof ForBusinessRoute
   '/teaching': typeof TeachingRoute
+  '/timetable': typeof TimetableRoute
   '/work': typeof WorkRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/courses/': typeof CoursesIndexRoute
@@ -143,9 +179,13 @@ export interface FileRouteTypes {
     | '/approach'
     | '/cbt'
     | '/cbt-training'
+    | '/centre'
     | '/contact'
     | '/enrol'
+    | '/fees'
+    | '/for-business'
     | '/teaching'
+    | '/timetable'
     | '/work'
     | '/services/$slug'
     | '/courses/'
@@ -158,9 +198,13 @@ export interface FileRouteTypes {
     | '/approach'
     | '/cbt'
     | '/cbt-training'
+    | '/centre'
     | '/contact'
     | '/enrol'
+    | '/fees'
+    | '/for-business'
     | '/teaching'
+    | '/timetable'
     | '/work'
     | '/services/$slug'
     | '/courses'
@@ -173,9 +217,13 @@ export interface FileRouteTypes {
     | '/approach'
     | '/cbt'
     | '/cbt-training'
+    | '/centre'
     | '/contact'
     | '/enrol'
+    | '/fees'
+    | '/for-business'
     | '/teaching'
+    | '/timetable'
     | '/work'
     | '/services/$slug'
     | '/courses/'
@@ -189,9 +237,13 @@ export interface RootRouteChildren {
   ApproachRoute: typeof ApproachRoute
   CbtRoute: typeof CbtRoute
   CbtTrainingRoute: typeof CbtTrainingRoute
+  CentreRoute: typeof CentreRoute
   ContactRoute: typeof ContactRoute
   EnrolRoute: typeof EnrolRoute
+  FeesRoute: typeof FeesRoute
+  ForBusinessRoute: typeof ForBusinessRoute
   TeachingRoute: typeof TeachingRoute
+  TimetableRoute: typeof TimetableRoute
   WorkRoute: typeof WorkRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
   CoursesIndexRoute: typeof CoursesIndexRoute
@@ -236,6 +288,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CbtTrainingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/centre': {
+      id: '/centre'
+      path: '/centre'
+      fullPath: '/centre'
+      preLoaderRoute: typeof CentreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -250,11 +309,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EnrolRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fees': {
+      id: '/fees'
+      path: '/fees'
+      fullPath: '/fees'
+      preLoaderRoute: typeof FeesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/for-business': {
+      id: '/for-business'
+      path: '/for-business'
+      fullPath: '/for-business'
+      preLoaderRoute: typeof ForBusinessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/teaching': {
       id: '/teaching'
       path: '/teaching'
       fullPath: '/teaching'
       preLoaderRoute: typeof TeachingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/timetable': {
+      id: '/timetable'
+      path: '/timetable'
+      fullPath: '/timetable'
+      preLoaderRoute: typeof TimetableRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/work': {
@@ -301,9 +381,13 @@ const rootRouteChildren: RootRouteChildren = {
   ApproachRoute: ApproachRoute,
   CbtRoute: CbtRoute,
   CbtTrainingRoute: CbtTrainingRoute,
+  CentreRoute: CentreRoute,
   ContactRoute: ContactRoute,
   EnrolRoute: EnrolRoute,
+  FeesRoute: FeesRoute,
+  ForBusinessRoute: ForBusinessRoute,
   TeachingRoute: TeachingRoute,
+  TimetableRoute: TimetableRoute,
   WorkRoute: WorkRoute,
   ServicesSlugRoute: ServicesSlugRoute,
   CoursesIndexRoute: CoursesIndexRoute,

@@ -17,7 +17,12 @@ losing hours a week to it.
 
 | | |
 |---|---|
-| **Format** | Taught live, online · start any time |
+| **Format** | Taught in the centre, in person · start any time |
+
+**Why in person.** Office work is learnt at a real desk, with your own files open
+and somebody able to look over your shoulder at the sheet that will not add up.
+The course runs in the centre on licensed Windows machines, in groups of at most
+six. Teams can also be trained at their own office, on their own machines.
 
 ## Before you start
 
@@ -29,19 +34,19 @@ pretend you should already know them.
 **Have:** **a Windows PC.** This is not a preference. Access is not made for
 macOS, and module 05 is Access — a Mac can carry the other five modules and then
 stops. The centre has licensed Windows machines, and anyone on a Mac should plan
-to use one for weeks 8 and 9. You will also need a Microsoft 365 or Office
+to use one in week 7. You will also need a Microsoft 365 or Office
 licence, real work from your own desk to bring, and 4–6 hours a week outside
 sessions.
 
 > **How this differs from PC Basics.** They overlap by design and are not
 > substitutes. [PC Basics](pc-basics.md) module 03 spends two weeks on the *idea*
 > — that a heading is a style and a total is a formula — for somebody who has
-> never used a computer. This course assumes that idea and spends ten weeks on
+> never used a computer. This course assumes that idea and spends eight weeks on
 > the craft: mail merge, lookups, pivot tables, slide masters, and a relational
 > database. If you have never used a computer, start there. If you have been
 > doing this job for three years by hand, start here.
 
-> **On the honest limit.** Ten weeks makes you genuinely good at four programs.
+> **On the honest limit.** Eight weeks makes you genuinely good at four programs.
 > It does not make you a data analyst — that is
 > [Data Analysis](data-analysis.md) — and it does not teach macros or VBA, which
 > are programming and are deliberately out of scope. What it does teach is how to
@@ -53,10 +58,10 @@ sessions.
 |---|---|---|
 | 1–2 | 01 | Word, properly |
 | 3 | 02 | PowerPoint that carries a decision |
-| 4–5 | 03 | Excel: the data table and its formulas |
-| 6–7 | 04 | Excel: lookups, pivots and reporting |
-| 8–9 | 05 | Access: tables, relationships and queries |
-| 10 | 06 | Choosing the right tool, and handing over |
+| 4 | 03 | Excel: the data table and its formulas |
+| 5–6 | 04 | Excel: lookups, pivots and reporting |
+| 7 | 05 | Access: tables, relationships and queries |
+| 8 | 06 | Choosing the right tool, and handing over |
 
 ## Module 01 — Word, properly
 *Weeks 1–2*
@@ -120,7 +125,7 @@ speaker was carrying in the first version.
 ---
 
 ## Module 03 — Excel: the data table and its formulas
-*Weeks 4–5*
+*Week 4*
 
 One clean table, honest columns, and every figure a formula that recalculates.
 
@@ -148,7 +153,7 @@ decision that caused it, and the sheet restructured rather than patched around.
 ---
 
 ## Module 04 — Excel: lookups, pivots and reporting
-*Weeks 6–7*
+*Weeks 5–6*
 
 Joining two sheets, summarising thousands of rows, and charts that answer one
 question.
@@ -178,7 +183,7 @@ should happen to them.
 ---
 
 ## Module 05 — Access: tables, relationships and queries
-*Weeks 8–9*
+*Week 7*
 
 When a spreadsheet stops being the right answer, and what a database does
 instead.
@@ -209,7 +214,7 @@ where a defensible alternative existed and was rejected for a stated reason.
 ---
 
 ## Module 06 — Choosing the right tool, and handing over
-*Week 10*
+*Week 8*
 
 Which of the four a job belongs in, and how to leave work a colleague can run.
 

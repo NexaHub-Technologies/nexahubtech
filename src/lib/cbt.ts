@@ -103,6 +103,32 @@ export const CBT_PACKAGES: CbtPackage[] = [
 		idealFor: "Candidates whose exam is close",
 	},
 	{
+		id: "school-group",
+		name: "School & Group Training",
+		price: "₦20,000",
+		duration: "4 weeks · Mon – Fri · per candidate, groups of 10 or more",
+		badge: "For schools",
+		features: [
+			"The Full Training, for every candidate in the group",
+			"Morning or weekend sessions set aside for the group",
+			"4 full mock exams with a review",
+			"One invoice for the school or centre",
+		],
+		idealFor: "Schools, tutorial centres and study groups of 10 or more",
+	},
+	{
+		id: "mock-bundle",
+		name: "Three Mock Exams",
+		price: "₦8,000",
+		duration: "Three 2-hour sessions, on separate days",
+		features: [
+			"Three full timed mock exams",
+			"Your score by subject after each one",
+			"Feedback on your timing, and what to practise before the next",
+		],
+		idealFor: "Candidates who want to see themselves improve before the day",
+	},
+	{
 		id: "walkin-mock",
 		name: "One Mock Exam",
 		price: "₦3,000",
@@ -115,6 +141,16 @@ export const CBT_PACKAGES: CbtPackage[] = [
 		idealFor: "Anyone who wants to check where they stand",
 	},
 ];
+
+/* the cheapest way in — a single mock exam today, but read rather than assumed,
+   so reordering the packages cannot quietly change a "from" price */
+export const CBT_FROM_PRICE = CBT_PACKAGES.map((p) => p.price).sort(
+	(a, b) => Number(a.replace(/\D/g, "")) - Number(b.replace(/\D/g, "")),
+)[0];
+
+export const CBT_GROUP_PACKAGE = CBT_PACKAGES.find(
+	(p) => p.id === "school-group",
+) as CbtPackage;
 
 export const CBT_FAQS: CbtFaq[] = [
 	{
@@ -135,7 +171,7 @@ export const CBT_FAQS: CbtFaq[] = [
 	{
 		question: "Can a school or tutorial centre register a group?",
 		answer:
-			"Yes. Groups of friends, schools and study centres can all register as a group, and we can set aside morning or weekend sessions for them. Message us on WhatsApp to arrange it.",
+			"Yes. Schools, tutorial centres and study groups of 10 or more can register together at a group rate, and we set aside morning or weekend sessions for them. Message us on WhatsApp to arrange it.",
 	},
 	{
 		question: "Can I see the centre before I pay?",

@@ -34,6 +34,23 @@ Canonical page: https://nexahubtech.company/cbt
 - Speed drills on the keyboard and calculator
 - 2 full mock exams with a review
 
+### School & Group Training — ₦20,000 (For schools)
+
+4 weeks · Mon – Fri · per candidate, groups of 10 or more. Ideal for: schools, tutorial centres and study groups of 10 or more.
+
+- The Full Training, for every candidate in the group
+- Morning or weekend sessions set aside for the group
+- 4 full mock exams with a review
+- One invoice for the school or centre
+
+### Three Mock Exams — ₦8,000
+
+Three 2-hour sessions, on separate days. Ideal for: candidates who want to see themselves improve before the day.
+
+- Three full timed mock exams
+- Your score by subject after each one
+- Feedback on your timing, and what to practise before the next
+
 ### One Mock Exam — ₦3,000
 
 One 2-hour session. Ideal for: anyone who wants to check where they stand.
@@ -58,7 +75,7 @@ Use of English, Mathematics, Physics, Chemistry, Biology, Economics, Commerce, G
 
 ### Can a school or tutorial centre register a group?
 
-Yes. Groups of friends, schools and study centres can all register as a group, and we can set aside morning or weekend sessions for them. Message us on WhatsApp to arrange it.
+Yes. Schools, tutorial centres and study groups of 10 or more can register together at a group rate, and we set aside morning or weekend sessions for them. Message us on WhatsApp to arrange it.
 
 ### Can I see the centre before I pay?
 

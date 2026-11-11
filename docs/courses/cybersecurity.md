@@ -12,7 +12,7 @@ Understand how systems are attacked — and how to defend them.
 
 | | |
 |---|---|
-| **Format** | Taught live, online · start any time · lab-heavy |
+| **Format** | Taught live — online, or in person at the centre · start any time · lab-heavy |
 
 ## Before you start
 

@@ -34,8 +34,9 @@ export function Logo({
 export const NAV = [
 	{ to: "/", label: "Home" },
 	{ to: "/courses", label: "Courses", side: "learn" },
+	{ to: "/fees", label: "Fees", side: "learn" },
 	{ to: "/cbt", label: "CBT Training", side: "learn" },
-	{ to: "/teaching", label: "Teaching", side: "learn" },
+	{ to: "/for-business", label: "For Business", side: "learn" },
 	{ to: "/services", label: "Services", side: "build" },
 	/* /work is deliberately absent while client naming is unconfirmed — the route
 	   still exists and still claims the build arm, so restoring it is this line:
@@ -48,6 +49,14 @@ export const NAV = [
 	label: string;
 	side?: SiteMode;
 }[];
+
+/* the school's other pages — reachable from the footer and from the pages
+   that need them, without crowding the header */
+export const LEARN_MORE = [
+	{ to: "/timetable", label: "Session times" },
+	{ to: "/centre", label: "The centre" },
+	{ to: "/teaching", label: "How we teach" },
+] as const;
 
 /* each side shows only its own routes. The other side's pages stay reachable by URL —
    landing on one flips the mode, so the visitor never hits a nav that disowns the page
@@ -294,6 +303,13 @@ export function Footer() {
 							{n.label}
 						</Link>
 					))}
+					{mode === "learn"
+						? LEARN_MORE.map((n) => (
+								<Link key={n.to} to={n.to} className="nav-link">
+									{n.label}
+								</Link>
+							))
+						: null}
 				</nav>
 				<div className="flex flex-col items-start md:items-end gap-3">
 					<div className="flex gap-2.5">

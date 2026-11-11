@@ -30,6 +30,10 @@ describe("modeForPath", () => {
 		expect(modeForPath("/teaching")).toBe("learn");
 		expect(modeForPath("/cbt")).toBe("learn");
 		expect(modeForPath("/cbt-training")).toBe("learn");
+		expect(modeForPath("/fees")).toBe("learn");
+		expect(modeForPath("/timetable")).toBe("learn");
+		expect(modeForPath("/centre")).toBe("learn");
+		expect(modeForPath("/for-business")).toBe("learn");
 	});
 
 	it("claims the studio routes for build", () => {

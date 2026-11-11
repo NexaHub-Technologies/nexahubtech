@@ -12,7 +12,7 @@ Learn the web from first principles — HTML, CSS, and JavaScript done properly.
 
 | | |
 |---|---|
-| **Format** | Taught live, online · start any time |
+| **Format** | Taught live — online, or in person at the centre · start any time |
 | **Scope** | HTML, CSS and JavaScript. No framework, no backend. |
 
 ## Before you start
