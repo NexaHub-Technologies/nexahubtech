@@ -6,8 +6,8 @@ module, the exercise brief for every module, and the capstone specification.
 These are working documents for whoever teaches the course. They are meant to be
 edited by hand as sessions get delivered and the material improves.
 
-**`src/lib/courses.ts` is the source of truth for the commercial facts** — fee,
-length, level, prerequisites and module titles. The website renders from it, and
+**`src/lib/courses.ts` is the source of truth for the commercial facts** — fees,
+how a course is delivered, length, level, prerequisites and module titles. The website renders from it, and
 these documents restate it so they read on their own.
 
 The fee, length, level and self-study hours are **not repeated in these
@@ -18,27 +18,36 @@ fails if a course has no document, if a module has no exercise brief, or if the
 projects do not tile the course — every module in exactly one project, every
 week accounted for, three or four projects, the last one the capstone.
 
-**Two courses have no projects.** PC Basics and Microsoft Office are assessed
-through their per-module exercise briefs alone, so the tiling rule does not apply
-to them; instead the test requires that they carry no projects section, no
-capstone and no spec directory, and that **every** one of their modules has an
-exercise brief rather than all but the last.
+**Five courses have no projects.** Computer Essentials, PC Basics, Office
+Essentials, Microsoft Office and Mobile Videography are assessed through their
+per-module exercise briefs alone, so the tiling rule does not apply to them;
+instead the test requires that they carry no projects section, no capstone and no
+spec directory, and that **every** one of their modules has an exercise brief
+rather than all but the last.
 
-| Course | Length | Fee | Level |
-|---|---|---|---|
-| [PC Basics](pc-basics.md) | 6 Weeks | ₦80,000 | Never used a computer |
-| [Microsoft Office](microsoft-office.md) | 10 Weeks | ₦110,000 | Clerical and office staff |
-| [Web Development (Fullstack)](web-development-fullstack.md) | 10 Weeks | ₦160,000 | Complete beginners |
-| [Frontend Development](frontend-development.md) | 10 Weeks | ₦120,000 | Complete beginners |
-| [JavaScript Programming](javascript-programming.md) | 8 Weeks | ₦100,000 | Beginners, and copy-paste JavaScript |
-| [React](react-development.md) | 8 Weeks | ₦120,000 | Already writes JavaScript |
-| [Next.js](nextjs-fullstack.md) | 10 Weeks | ₦160,000 | Already writes React |
-| [Backend Development](backend-development.md) | 8 Weeks | ₦100,000 | Beginners; some programming helps |
-| [Mobile Development](mobile-development.md) | 12 Weeks | ₦190,000 | Can already program |
-| [Cybersecurity](cybersecurity.md) | 16 Weeks | ₦230,000 | General technical confidence |
-| [Python Programming](python-programming.md) | 6 Weeks | ₦100,000 | Never coded before |
-| [Data Analysis](data-analysis.md) | 12 Weeks | ₦120,000 | Beginners who enjoy a question |
-| [Videography & Video Editing](videography-video-editing.md) | 8 Weeks | ₦120,000 | Complete beginners |
+**How a course is delivered** — live online, in person at the Kubwa centre, or
+either — is stated in each document's Format row, and the test holds it to the
+course record, which is also what decides which fees the site sells. Courses
+offered both ways are taught from the same document.
+
+| Course | Length | Level |
+|---|---|---|
+| [Computer Essentials](computer-essentials.md) | 3 Weeks | Never used a computer |
+| [PC Basics](pc-basics.md) | 6 Weeks | Never used a computer |
+| [Office Essentials](office-essentials.md) | 4 Weeks | Office staff, Word and Excel |
+| [Microsoft Office](microsoft-office.md) | 8 Weeks | Clerical and office staff |
+| [Python Programming](python-programming.md) | 6 Weeks | Never coded before |
+| [JavaScript Programming](javascript-programming.md) | 8 Weeks | Beginners, and copy-paste JavaScript |
+| [Frontend Development](frontend-development.md) | 10 Weeks | Complete beginners |
+| [Backend Development](backend-development.md) | 8 Weeks | Beginners; some programming helps |
+| [Web Development (Fullstack)](web-development-fullstack.md) | 18 Weeks | Complete beginners |
+| [React](react-development.md) | 8 Weeks | Already writes JavaScript |
+| [Next.js](nextjs-fullstack.md) | 10 Weeks | Already writes React |
+| [Mobile Development](mobile-development.md) | 12 Weeks | Can already program |
+| [Data Analysis](data-analysis.md) | 10 Weeks | Beginners who enjoy a question |
+| [Mobile Videography](mobile-videography.md) | 4 Weeks | Complete beginners with a phone |
+| [Videography & Video Editing](videography-video-editing.md) | 8 Weeks | Complete beginners |
+| [Cybersecurity](cybersecurity.md) | 16 Weeks | General technical confidence |
 
 ## The shape every document follows
 

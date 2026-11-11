@@ -13,7 +13,7 @@ thinking.
 
 | | |
 |---|---|
-| **Format** | Taught live, online · start any time |
+| **Format** | Taught live — online, or in person at the centre · start any time |
 
 ## Before you start
 
@@ -27,11 +27,11 @@ internet connection; 6–8 hours a week.
 
 | Week | Module | Focus |
 |---|---|---|
-| 1–2 | 01 | Thinking with data |
-| 3–5 | 02 | SQL for analysis |
-| 6–8 | 03 | Python for data |
-| 9–10 | 04 | Visualization & storytelling |
-| 11–12 | 05 | A real analysis project |
+| 1 | 01 | Thinking with data |
+| 2–3 | 02 | SQL for analysis |
+| 4–6 | 03 | Python for data |
+| 7–8 | 04 | Visualization & storytelling |
+| 9–10 | 05 | A real analysis project |
 
 ## Projects
 
@@ -44,18 +44,18 @@ The per-module exercise briefs below are practice. These are the integration.
 
 | # | Modules | Weeks | The project |
 |---|---|---|---|
-| 1 | 01–02 | 1–5 | **Kasuwa Eight** — eight questions answered in SQL, and checked |
-| 2 | 03 | 6–8 | **Basket** — an NBS food-price release cleaned, with the decisions logged |
-| 3 | 04 | 9–10 | **Second Opinion** — one finding, two honest charts |
-| 4 | 05 | 11–12 | **Course capstone.** **Budget Line**, **Ward** or **Grid** — your choice of three |
+| 1 | 01–02 | 1–3 | **Kasuwa Eight** — eight questions answered in SQL, and checked |
+| 2 | 03 | 4–6 | **Basket** — an NBS food-price release cleaned, with the decisions logged |
+| 3 | 04 | 7–8 | **Second Opinion** — one finding, two honest charts |
+| 4 | 05 | 9–10 | **Course capstone.** **Budget Line**, **Ward** or **Grid** — your choice of three |
 
 ### Project 1 — Kasuwa Eight
-*Modules 01–02 · Weeks 1–5*
+*Modules 01–02 · Weeks 1–3*
 
 Kasuwa is a market-trading database the school builds and hands you: eight
 tables covering traders, stalls, orders, deliveries, payments and returns, and
 labelled synthetic on every page, because nothing produced from it is a fact
-about any real market. Eight questions get answered against it over five weeks.
+about any real market. Eight questions get answered against it over three weeks.
 
 It sits across both modules on purpose. Module 01 is the shaping of the question
 and module 02 is the SQL, and separating them produces analysts who can write a
@@ -87,7 +87,7 @@ three narrowed questions, the answers with their checks, and the correction.
 **Out of scope**
 - Charts. There are none in this project, deliberately — visualisation is module
   04, and a chart is a very effective way to stop looking at a number.
-- Pandas. The whole point of five weeks here is that the database does the work.
+- Pandas. The whole point of three weeks here is that the database does the work.
 
 **What is assessed**
 - An explicit account of what the dataset leaves out, and the selection effects
@@ -99,7 +99,7 @@ three narrowed questions, the answers with their checks, and the correction.
 - Earlier answers corrected once a later one exposed them.
 
 ### Project 2 — Basket
-*Module 03 · Weeks 6–8*
+*Module 03 · Weeks 4–6*
 
 Basket takes a National Bureau of Statistics selected food-price release and
 gets it into a state where it can be analysed at all: item names spelled several
@@ -146,7 +146,7 @@ markdown table so it can be read without running anything.
 - The work re-runs from the archived snapshot and produces the same numbers.
 
 ### Project 3 — Second Opinion
-*Module 04 · Weeks 9–10*
+*Module 04 · Weeks 7–8*
 
 Second Opinion is built on a single finding drawn from a small supplied extract,
 and asks for two charts that lead a reader to different emphases while both
@@ -189,11 +189,11 @@ original beside it.
 - Source, units and period legible on every chart without the write-up.
 
 ### Project 4 — Budget Line, Ward or Grid
-*Module 05 · Weeks 11–12*
+*Module 05 · Weeks 9–10*
 
 **Course capstone.** Take one public Nigerian dataset from a question to a
 conclusion, and deliver a written analysis and a short presentation. Choose one
-of three. Whichever you take, **the dataset is locked at the end of week 10** —
+of three. Whichever you take, **the dataset is locked at the end of week 8** —
 two weeks is enough to analyse a dataset and not enough to also go and find one.
 
 **Budget Line** — federal budget data published by the Budget Office of the
@@ -233,7 +233,7 @@ and the slides.
 **Out of scope**
 - Causal claims. These are observational public datasets; "A caused B" is not
   available from any of the three, however strong the pattern looks.
-- A dataset you assemble yourself by scraping. Locked at week 10 means locked.
+- A dataset you assemble yourself by scraping. Locked at week 8 means locked.
 
 **What is assessed**
 - The question is stated before the analysis, and is answerable by this data.
@@ -246,7 +246,7 @@ and the slides.
 ---
 
 ## Module 01 — Thinking with data
-*Weeks 1–2*
+*Week 1*
 
 Asking the right questions. What data can tell you — and what it can't.
 
@@ -270,7 +270,7 @@ selection effects — no charts at all in this exercise, on purpose.
 ---
 
 ## Module 02 — SQL for analysis
-*Weeks 3–5*
+*Weeks 2–3*
 
 Query, filter, and join data. Get comfortable pulling insights from real
 databases.
@@ -294,7 +294,7 @@ explained.
 ---
 
 ## Module 03 — Python for data
-*Weeks 6–8*
+*Weeks 4–6*
 
 Pandas, NumPy, and Jupyter. Clean, transform, and explore datasets efficiently.
 
@@ -318,7 +318,7 @@ data differently and both be defensible; what is not defensible is not saying so
 ---
 
 ## Module 04 — Visualization & storytelling
-*Weeks 9–10*
+*Weeks 7–8*
 
 Charts, dashboards, and narratives. Make your findings clear and compelling.
 
@@ -341,7 +341,7 @@ defensible final pick.
 ---
 
 ## Module 05 — A real analysis project
-*Weeks 11–12*
+*Weeks 9–10*
 
 Take a dataset from question to insight to presentation.
 

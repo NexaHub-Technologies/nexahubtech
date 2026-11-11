@@ -2,13 +2,13 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { CONTACT, SITE_URL } from "../contact";
-import { COURSES } from "../courses";
+import { COURSES, deliveriesOf } from "../courses";
 import { INDEXABLE_PAGES, markdownPath, PAGES } from "../pages";
 import { pageMeta } from "../seo";
 import { AI_CRAWLERS, robotsTxt } from "./crawlers";
 import { discoveryFiles } from "./index";
 import { llmsTxt } from "./markdown";
-import { type Graph, isoWeeks, naira, pageGraph, siteGraph } from "./schema";
+import { type Graph, isoWeeks, pageGraph, siteGraph } from "./schema";
 
 const files = discoveryFiles();
 
@@ -125,7 +125,8 @@ describe("schema knowledge graph", () => {
 
 	it("prices and times every course in machine-readable form", () => {
 		for (const c of COURSES) {
-			expect(Number(naira(c.price)), c.slug).toBeGreaterThan(0);
+			for (const d of deliveriesOf(c))
+				expect(c.fees[d]?.upfront ?? 0, `${c.slug} ${d}`).toBeGreaterThan(0);
 			expect(isoWeeks(c.duration), c.slug).toMatch(/^P\d+W$/);
 		}
 	});

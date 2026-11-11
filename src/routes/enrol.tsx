@@ -1,7 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
+import { FeeLines } from "../components/fees";
 import { CONTACT, Eyebrow, useReveal } from "../components/site";
-import { COURSES, getCourseBySlug } from "../lib/courses";
+import { CBT_FROM_PRICE } from "../lib/cbt";
+import { COURSES, getCourseBySlug, priceLabel } from "../lib/courses";
 import {
 	type ComposedEnrolment,
 	composeEnrolment,
@@ -103,7 +105,7 @@ function CourseSummary({ slug }: { slug: string }) {
 					management, and full-length timed mock exams in our Kubwa lab.
 				</p>
 				<div className="flex items-center justify-between mt-5 pt-4 border-t border-[var(--line-soft)]">
-					<span className="display text-[1.15rem]">From ₦3,000</span>
+					<span className="display text-[1.15rem]">From {CBT_FROM_PRICE}</span>
 					<span className="text-[0.85rem] text-mute font-semibold">
 						1 session – 4 weeks · Centre-based
 					</span>
@@ -137,14 +139,12 @@ function CourseSummary({ slug }: { slug: string }) {
 			<Eyebrow>You're applying for</Eyebrow>
 			<h2 className="display text-[1.4rem] mt-3">{course.t}</h2>
 			<p className="lead mt-2 text-[0.95rem]">{course.tagline}</p>
-			<div className="flex items-center justify-between mt-5 pt-4 border-t border-[var(--line-soft)]">
-				<span className="display text-[1.15rem]">{course.price}</span>
-				<span className="text-[0.85rem] text-mute font-semibold">
-					{course.duration}
-				</span>
+			<div className="mt-5 pt-4 border-t border-[var(--line-soft)]">
+				<FeeLines course={course} />
 			</div>
 			<p className="text-[0.85rem] text-mute mt-4">
-				{course.modules.length} modules · taught live · start any time
+				{course.duration} · {course.modules.length} modules ·{" "}
+				{course.admission === "rolling" ? "start any day" : "opens on request"}
 			</p>
 			<Link
 				to="/courses/$slug"
@@ -414,14 +414,15 @@ function EnrolForm({
 					</option>
 					<optgroup label="Exam Preparation (CBT)">
 						<option value="cbt-training">
-							CBT Training for WAEC & JAMB — From ₦3,000 · 1 session – 4 weeks
+							CBT Training for WAEC & JAMB — From {CBT_FROM_PRICE} · 1 session –
+							4 weeks
 						</option>
 					</optgroup>
 					<optgroup label="Software & Tech Tracks">
 						{COURSES.map((c) => (
 							<option key={c.slug} value={c.slug}>
 								{c.t}
-								{c.d ? ` — ${c.d}` : ""} · {c.price} · {c.duration}
+								{c.d ? ` — ${c.d}` : ""} · {priceLabel(c)} · {c.duration}
 							</option>
 						))}
 					</optgroup>

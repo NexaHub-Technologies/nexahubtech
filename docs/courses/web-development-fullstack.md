@@ -13,7 +13,7 @@ applications.
 
 | | |
 |---|---|
-| **Format** | Taught live, online · start any time |
+| **Format** | Taught live — online, or in person at the centre · start any time |
 | **Scope** | HTML, CSS, JavaScript, Node.js and Express. No React or Next.js. |
 
 ## Before you start
@@ -23,22 +23,24 @@ software); enough English to read technical writing without a struggle. No
 coding at all — module 01 starts at how the web works.
 
 **Have:** a laptop with 8GB RAM or more; a stable internet connection;
-10–12 hours a week outside sessions.
+6–8 hours a week outside sessions.
 
-> **A word on pace.** This track covers what the Frontend and Backend courses
-> cover separately over 18 weeks. It is compressed on purpose and it is not the
-> gentler option — it is the faster one. Anyone who cannot reliably find 10 hours
-> a week should take Frontend first instead.
+> **A word on what this is.** This track covers what the Frontend and Backend
+> courses cover separately, over the same 18 weeks, as one continuous course with
+> its own projects — and it costs less than taking the two apart. It is not a
+> shortcut: the pace is the pace of those two courses. Anyone who cannot find six
+> hours a week should start with Frontend on its own.
 
 ## Week plan
 
 | Week | Module | Focus |
 |---|---|---|
-| 1 | 01–02 | How the web works · HTML & structure |
-| 2–3 | 03 | CSS & layout |
-| 4–6 | 04 | JavaScript foundations |
-| 7–8 | 05 | Backend with Node.js |
-| 9–10 | 06 | Fullstack project |
+| 1 | 01 | How the web works |
+| 2–3 | 02 | HTML & structure |
+| 4–5 | 03 | CSS & layout |
+| 6–9 | 04 | JavaScript foundations |
+| 10–14 | 05 | Backend with Node.js |
+| 15–18 | 06 | Fullstack project |
 
 ## Projects
 
@@ -51,13 +53,13 @@ The per-module exercise briefs below are practice. These are the integration.
 
 | # | Modules | Weeks | The project |
 |---|---|---|---|
-| 1 | 01–03 | 1–3 | **Ajo** — a savings club's site, correct before it is styled |
-| 2 | 04 | 4–6 | **Òjò** — a rain check across Nigerian towns |
-| 3 | 05 | 7–8 | **Slot** — a booking API with no browser side at all |
-| 4 | 06 | 9–10 | **Course capstone.** **Found** — a deployed lost-and-found board |
+| 1 | 01–03 | 1–5 | **Ajo** — a savings club's site, correct before it is styled |
+| 2 | 04 | 6–9 | **Òjò** — a rain check across Nigerian towns |
+| 3 | 05 | 10–14 | **Slot** — a booking API with no browser side at all |
+| 4 | 06 | 15–18 | **Course capstone.** **Found** — a deployed lost-and-found board |
 
 ### Project 1 — Ajo
-*Modules 01–03 · Weeks 1–3*
+*Modules 01–03 · Weeks 1–5*
 
 Ajo is a three-page site for a contribution savings club — the scheme called
 *ajo* in the south-west, *adashe* in the north and *isusu* in the south-east.
@@ -96,7 +98,7 @@ across all three, with the current page marked `aria-current="page"`.
   too — it is a workaround for a tool you do not have yet, and it produces a
   control that lies about what it is.
 - A form that actually sends. That is module 05. Submitting and doing nothing is
-  the correct behaviour at week 3, and you must be able to say why.
+  the correct behaviour at week 5, and you must be able to say why.
 
 **What is assessed**
 - It is usable by keyboard and sensible read aloud *before* any styling exists.
@@ -107,7 +109,7 @@ across all three, with the current page marked `aria-current="page"`.
   stated as rules; nothing on the page claims to be a fact about a real club.
 
 ### Project 2 — Òjò
-*Modules 04 · Weeks 4–6*
+*Modules 04 · Weeks 6–9*
 
 Òjò is a single-page rain check for a fixed list of Nigerian towns: one request,
 then a table you can search, filter and sort to answer "where is it raining this
@@ -145,7 +147,7 @@ The request:
   the server and arrives in module 05. If you want it, the answer is "not yet,
   and here is which machine will own it".
 - Letting the visitor add a town by typing its name. That needs geocoding — a
-  second API and a second failure mode — and it will eat the three weeks.
+  second API and a second failure mode — and it will eat the four weeks.
 
 **What is assessed**
 - Loading, empty and failed states each handled on purpose, not discovered.
@@ -154,7 +156,7 @@ The request:
 - It still behaves with the network throttled to something realistic.
 
 ### Project 3 — Slot
-*Modules 05 · Weeks 7–8*
+*Modules 05 · Weeks 10–14*
 
 Slot is a booking API for a single-chair business — a barber, a hairdresser, a
 phone-repair bench. Create a booking, list the day's bookings, cancel one. There
@@ -203,7 +205,7 @@ and whether that was right.
 - An honest report of at least one hole you found in your own work.
 
 ### Project 4 — Found
-*Modules 06 · Weeks 9–10*
+*Modules 06 · Weeks 15–18*
 
 **Course capstone.** Found is a deployed lost-and-found board for a campus or an
 estate: somebody who finds a thing posts it, somebody who lost a thing searches,
@@ -235,8 +237,8 @@ a claim form that takes a code. Server: `POST /items`, `GET /items?q=&category=`
 run it locally, and where the split falls.
 
 **Out of scope**
-- User accounts. The claim code exists precisely so no login is needed. Two weeks
-  does not hold sessions, hashing and this product.
+- User accounts. The claim code exists precisely so no login is needed. One
+  capstone does not hold sessions, hashing and this product.
 - Photo upload. File storage is a deployment problem rather than an application
   one, and it is where this capstone dies. A text description is enough.
 
@@ -276,7 +278,7 @@ screenshot with labels.
 ---
 
 ## Module 02 — HTML & structure
-*Week 1*
+*Weeks 2–3*
 
 Markup as meaning. Build pages that are readable to people, browsers, and
 assistive tech.
@@ -301,7 +303,7 @@ reasoning rather than the tag list.
 ---
 
 ## Module 03 — CSS & layout
-*Weeks 2–3*
+*Weeks 4–5*
 
 From the box model to modern layout — styling with intent instead of guesswork.
 
@@ -325,7 +327,7 @@ at least one specificity conflict.
 ---
 
 ## Module 04 — JavaScript foundations
-*Weeks 4–6*
+*Weeks 6–9*
 
 Values, logic, and the DOM. How to make a page think, step by careful step.
 
@@ -349,7 +351,7 @@ rendering.
 ---
 
 ## Module 05 — Backend with Node.js
-*Weeks 7–8*
+*Weeks 10–14*
 
 Servers, routes, and databases. Build an API that powers your frontend.
 
@@ -374,7 +376,7 @@ the student in their own work.
 ---
 
 ## Module 06 — Fullstack project
-*Weeks 9–10*
+*Weeks 15–18*
 
 Put it all together into a complete application you understand end to end.
 

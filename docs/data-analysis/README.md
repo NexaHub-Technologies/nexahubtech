@@ -5,9 +5,9 @@ behind it are done; the last one is the course capstone.
 
 | # | Project | Modules | Weeks |
 |---|---|---|---|
-| 1 | [Kasuwa Eight](kasuwa-eight.md) | 01–02 | 1–5 |
-| 2 | [Basket](basket.md) | 03 | 6–8 |
-| 3 | [Second Opinion](second-opinion.md) | 04 | 9–10 |
-| 4 | [Budget Line, Ward or Grid](budget-line-ward-or-grid.md) | 05 | 11–12 |
+| 1 | [Kasuwa Eight](kasuwa-eight.md) | 01–02 | 1–3 |
+| 2 | [Basket](basket.md) | 03 | 4–6 |
+| 3 | [Second Opinion](second-opinion.md) | 04 | 7–8 |
+| 4 | [Budget Line, Ward or Grid](budget-line-ward-or-grid.md) | 05 | 9–10 |
 
 Course document: [`docs/courses/data-analysis.md`](../courses/data-analysis.md)

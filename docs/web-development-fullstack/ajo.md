@@ -6,7 +6,7 @@
 |---|---|
 | **Course** | [Web Development](../courses/web-development-fullstack.md) |
 | **Modules** | 01–03 |
-| **Weeks** | 1–3 |
+| **Weeks** | 1–5 |
 | **Course level** | Built for complete beginners |
 
 ## What you can rely on
@@ -56,7 +56,7 @@ across all three, with the current page marked `aria-current="page"`.
   too — it is a workaround for a tool you do not have yet, and it produces a
   control that lies about what it is.
 - A form that actually sends. That is module 05. Submitting and doing nothing is
-  the correct behaviour at week 3, and you must be able to say why.
+  the correct behaviour at week 5, and you must be able to say why.
 
 **What is assessed**
 - It is usable by keyboard and sensible read aloud *before* any styling exists.

@@ -66,21 +66,24 @@
         }
       ],
       "currenciesAccepted": "NGN",
-      "priceRange": "₦3,000 – ₦230,000",
+      "priceRange": "₦3,000 – ₦280,000",
       "knowsAbout": [
+        "Computer Essentials",
         "PC Basics",
+        "Office Essentials",
         "Microsoft Office",
-        "Web Development",
-        "Frontend Development",
+        "Python Programming",
         "JavaScript Programming",
+        "Frontend Development",
+        "Backend Development",
+        "Web Development",
         "React",
         "Next.js",
-        "Backend Development",
         "Mobile Development",
-        "Cybersecurity",
-        "Python Programming",
         "Data Analysis",
+        "Mobile Videography",
         "Videography & Video Editing",
+        "Cybersecurity",
         "Custom software development",
         "Website design & development",
         "Mobile application development",
@@ -107,7 +110,7 @@
       "@id": "https://nexahubtech.company/#website",
       "url": "https://nexahubtech.company/",
       "name": "NexaHubTech",
-      "description": "NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio. We teach people to become developers, then put those skills to work building real products for real clients.",
+      "description": "NexaHubTech is a tech school in Kubwa, FCT-Abuja, with a software studio behind it. Learn computer skills, Microsoft Office, coding, data and video — in small classes of six at the centre, or live online from anywhere in Nigeria — and start whenever you are ready.",
       "inLanguage": "en-NG",
       "publisher": {
         "@id": "https://nexahubtech.company/#organization"
@@ -118,55 +121,55 @@
       "@id": "https://nexahubtech.company/courses#catalog",
       "name": "NexaHubTech courses",
       "url": "https://nexahubtech.company/courses",
-      "numberOfItems": 14,
+      "numberOfItems": 17,
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://nexahubtech.company/courses/pc-basics#course"
+            "@id": "https://nexahubtech.company/courses/computer-essentials#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://nexahubtech.company/courses/microsoft-office#course"
+            "@id": "https://nexahubtech.company/courses/pc-basics#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://nexahubtech.company/courses/web-development-fullstack#course"
+            "@id": "https://nexahubtech.company/courses/office-essentials#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 4,
           "item": {
-            "@id": "https://nexahubtech.company/courses/frontend-development#course"
+            "@id": "https://nexahubtech.company/courses/microsoft-office#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 5,
           "item": {
-            "@id": "https://nexahubtech.company/courses/javascript-programming#course"
+            "@id": "https://nexahubtech.company/courses/python-programming#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 6,
           "item": {
-            "@id": "https://nexahubtech.company/courses/react-development#course"
+            "@id": "https://nexahubtech.company/courses/javascript-programming#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 7,
           "item": {
-            "@id": "https://nexahubtech.company/courses/nextjs-fullstack#course"
+            "@id": "https://nexahubtech.company/courses/frontend-development#course"
           }
         },
         {
@@ -180,42 +183,136 @@
           "@type": "ListItem",
           "position": 9,
           "item": {
-            "@id": "https://nexahubtech.company/courses/mobile-development#course"
+            "@id": "https://nexahubtech.company/courses/web-development-fullstack#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 10,
           "item": {
-            "@id": "https://nexahubtech.company/courses/cybersecurity#course"
+            "@id": "https://nexahubtech.company/courses/react-development#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 11,
           "item": {
-            "@id": "https://nexahubtech.company/courses/python-programming#course"
+            "@id": "https://nexahubtech.company/courses/nextjs-fullstack#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 12,
           "item": {
-            "@id": "https://nexahubtech.company/courses/data-analysis#course"
+            "@id": "https://nexahubtech.company/courses/mobile-development#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 13,
           "item": {
-            "@id": "https://nexahubtech.company/courses/videography-video-editing#course"
+            "@id": "https://nexahubtech.company/courses/data-analysis#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 14,
           "item": {
+            "@id": "https://nexahubtech.company/courses/mobile-videography#course"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "item": {
+            "@id": "https://nexahubtech.company/courses/videography-video-editing#course"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "item": {
+            "@id": "https://nexahubtech.company/courses/cybersecurity#course"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "item": {
             "@id": "https://nexahubtech.company/cbt#course"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://nexahubtech.company/courses/computer-essentials#course",
+      "url": "https://nexahubtech.company/courses/computer-essentials",
+      "name": "Computer Essentials",
+      "description": "Three weeks from never having used a computer to saving, finding and printing your own work — with somebody beside you the whole way.",
+      "about": "Digital Literacy",
+      "image": "https://nexahubtech.company/og/course-computer-essentials.jpg",
+      "inLanguage": "en",
+      "provider": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "educationalLevel": "The shortest way in if a computer still feels risky",
+      "coursePrerequisites": [
+        "Nothing about computers — this course assumes none",
+        "How to read and write in English"
+      ],
+      "teaches": [
+        "Every screen is asking you something",
+        "Read a box before clicking it, and know what you are agreeing to",
+        "Undo, close and recover without panicking",
+        "Save your work where you meant to, and open it again tomorrow"
+      ],
+      "timeRequired": "P3W",
+      "syllabusSections": [
+        {
+          "@type": "Syllabus",
+          "position": 1,
+          "name": "The machine, and what it is doing",
+          "description": "The parts, the desktop, the mouse and the keyboard — and why nothing you click can break it."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 2,
+          "name": "Files, folders and where things go",
+          "description": "Paths, saving, naming and copying — so your work is always somewhere you can find it."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 3,
+          "name": "Documents, numbers and slides",
+          "description": "A letter, a sum and a slide: enough of each to do real work, and to see what to learn next."
+        }
+      ],
+      "hasPart": [],
+      "isAccessibleForFree": false,
+      "offers": [
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In Kubwa, max 6",
+          "price": "45000",
+          "description": "₦45,000 in full, or 2 × ₦25,000.",
+          "url": "https://nexahubtech.company/enrol?course=computer-essentials"
+        }
+      ],
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Onsite",
+          "description": "Taught in the centre, in person. The first three modules of PC Basics, on their own. Like PC Basics it is only taught in person at our Kubwa centre: a beginner needs somebody beside them saying that one, on the left, not a video call. Machines are provided, and you start whenever you are ready.",
+          "duration": "P3W",
+          "location": {
+            "@id": "https://nexahubtech.company/#organization"
           }
         }
       ]
@@ -279,26 +376,111 @@
       ],
       "hasPart": [],
       "isAccessibleForFree": false,
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "NGN",
-        "availability": "https://schema.org/InStock",
-        "category": "Paid",
-        "seller": {
-          "@id": "https://nexahubtech.company/#organization"
-        },
-        "price": "80000",
-        "url": "https://nexahubtech.company/enrol?course=pc-basics"
-      },
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "Onsite",
-        "description": "Taught in the centre, in person. Every other course here is taught live online. This one cannot be: the first thing a beginner needs is somebody beside them saying that one, on the left. Sitting a person who has never used a computer in front of a video call asks them to use the very skill the course exists to teach. Machines are provided, and you start whenever you are ready.",
-        "duration": "P6W",
-        "location": {
-          "@id": "https://nexahubtech.company/#organization"
+      "offers": [
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In Kubwa, max 6",
+          "price": "75000",
+          "description": "₦75,000 in full, or 2 × ₦40,000.",
+          "url": "https://nexahubtech.company/enrol?course=pc-basics"
         }
-      }
+      ],
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Onsite",
+          "description": "Taught in the centre, in person. This course is only taught in person, and cannot be taught any other way: the first thing a beginner needs is somebody beside them saying that one, on the left. Sitting a person who has never used a computer in front of a video call asks them to use the very skill the course exists to teach. Machines are provided, and you start whenever you are ready.",
+          "duration": "P6W",
+          "location": {
+            "@id": "https://nexahubtech.company/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://nexahubtech.company/courses/office-essentials#course",
+      "url": "https://nexahubtech.company/courses/office-essentials",
+      "name": "Office Essentials",
+      "description": "The two programs most office work actually happens in — Word and Excel — in four weeks, taught properly.",
+      "about": "Word & Excel",
+      "image": "https://nexahubtech.company/og/course-office-essentials.jpg",
+      "inLanguage": "en",
+      "provider": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "educationalLevel": "Built for office staff who use Word and Excel but were never shown how",
+      "coursePrerequisites": [
+        "How to use a computer — files, folders, saving, email",
+        "You have opened Word and Excel before, even if nobody showed you how"
+      ],
+      "teaches": [
+        "Type it once",
+        "Restyle a whole document with one change",
+        "Send one letter to a hundred people without retyping it",
+        "Build a sheet whose totals are still right after the numbers change"
+      ],
+      "timeRequired": "P4W",
+      "syllabusSections": [
+        {
+          "@type": "Syllabus",
+          "position": 1,
+          "name": "Word: styles, not formatting",
+          "description": "Headings, templates and long documents built so that one change restyles all of them."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 2,
+          "name": "Word: one letter, many people",
+          "description": "Mail merge from a list — including the rows where the list is not clean."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 3,
+          "name": "Excel: a clean table that does the arithmetic",
+          "description": "One row per thing, one column per fact, and every total a formula."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 4,
+          "name": "Excel: lookups and a summary that updates",
+          "description": "Join two lists, summarise many rows, and chart one answer."
+        }
+      ],
+      "hasPart": [],
+      "isAccessibleForFree": false,
+      "offers": [
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In Kubwa, max 6",
+          "price": "55000",
+          "description": "₦55,000 in full, or 2 × ₦30,000.",
+          "url": "https://nexahubtech.company/enrol?course=office-essentials"
+        }
+      ],
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Onsite",
+          "description": "Taught in the centre, in person. Taught in person at our Kubwa centre, in a group of at most 6, on licensed Windows machines — with work from your own desk open in front of you. You start the day you are ready. Teams can also be trained at their own office.",
+          "duration": "P4W",
+          "location": {
+            "@id": "https://nexahubtech.company/#organization"
+          }
+        }
+      ]
     },
     {
       "@type": "Course",
@@ -324,7 +506,7 @@
         "Hand over a file a colleague can safely change without breaking it",
         "Know which of the four programs a job actually belongs in"
       ],
-      "timeRequired": "P10W",
+      "timeRequired": "P8W",
       "syllabusSections": [
         {
           "@type": "Syllabus",
@@ -365,225 +547,154 @@
       ],
       "hasPart": [],
       "isAccessibleForFree": false,
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "NGN",
-        "availability": "https://schema.org/InStock",
-        "category": "Paid",
-        "seller": {
-          "@id": "https://nexahubtech.company/#organization"
-        },
-        "price": "110000",
-        "url": "https://nexahubtech.company/enrol?course=microsoft-office"
-      },
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "Online",
-        "description": "Taught live, online, hands-on. An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.",
-        "duration": "P10W"
-      }
+      "offers": [
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In Kubwa, max 6",
+          "price": "95000",
+          "description": "₦95,000 in full, or 2 × ₦52,500.",
+          "url": "https://nexahubtech.company/enrol?course=microsoft-office"
+        }
+      ],
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Onsite",
+          "description": "Taught in the centre, in person. Office work is learnt at a real desk, on a real machine, with your own files open — so this course is taught in person at our Kubwa centre, in a group of at most 6, on licensed Windows machines. Bring work from your own desk, start the day you are ready, and leave each session with something that already runs better. Teams can also be trained at their own office.",
+          "duration": "P8W",
+          "location": {
+            "@id": "https://nexahubtech.company/#organization"
+          }
+        }
+      ]
     },
     {
       "@type": "Course",
-      "@id": "https://nexahubtech.company/courses/web-development-fullstack#course",
-      "url": "https://nexahubtech.company/courses/web-development-fullstack",
-      "name": "Web Development",
-      "description": "Learn frontend and backend in one complete path — from first principles to full applications.",
-      "about": "Fullstack",
-      "image": "https://nexahubtech.company/og/course-web-development-fullstack.jpg",
+      "@id": "https://nexahubtech.company/courses/python-programming#course",
+      "url": "https://nexahubtech.company/courses/python-programming",
+      "name": "Python Programming",
+      "description": "Learn programming from scratch with Python — the language that powers everything from scripts to AI.",
+      "image": "https://nexahubtech.company/og/course-python-programming.jpg",
       "inLanguage": "en",
       "provider": {
         "@id": "https://nexahubtech.company/#organization"
       },
-      "educationalLevel": "Built for complete beginners",
+      "educationalLevel": "The right place to start if you have never coded",
       "coursePrerequisites": [
-        "How to use a computer confidently — files, folders, installing software",
-        "Enough English to read technical writing without a struggle",
-        "No coding at all; the first module starts at how the web works"
+        "How to use a computer — files, folders, installing software",
+        "No programming experience of any kind"
       ],
       "teaches": [
-        "Two computers, one conversation",
-        "Locate a bug on the right side of the wire before touching code",
-        "Read any new framework as a variation on request and response",
-        "Decide where a piece of data should live, and say why"
+        "Names are labels, not boxes",
+        "Predict when a change is shared and when it is copied",
+        "Read an error as a question about types and identity",
+        "Reason about what code does before you run it"
       ],
-      "timeRequired": "P10W",
+      "timeRequired": "P6W",
       "syllabusSections": [
         {
           "@type": "Syllabus",
           "position": 1,
-          "name": "How the web works",
-          "description": "The mental model first — what a browser and server are really doing before you write a single line of code."
+          "name": "How programming works",
+          "description": "Variables, logic, and control flow — the universal building blocks of code."
         },
         {
           "@type": "Syllabus",
           "position": 2,
-          "name": "HTML & structure",
-          "description": "Markup as meaning. Build pages that are readable to people, browsers, and assistive tech."
+          "name": "Functions & data structures",
+          "description": "Organize your code and your data. Lists, dictionaries, and clean function design."
         },
         {
           "@type": "Syllabus",
           "position": 3,
-          "name": "CSS & layout",
-          "description": "From the box model to modern layout — styling with intent instead of guesswork."
+          "name": "Working with files & APIs",
+          "description": "Read, write, and fetch data. Connect your scripts to the real world."
         },
         {
           "@type": "Syllabus",
           "position": 4,
-          "name": "JavaScript foundations",
-          "description": "Values, logic, and the DOM. How to make a page think, step by careful step."
+          "name": "Object-oriented Python",
+          "description": "Classes, objects, and when OOP actually helps — not just when it adds noise."
         },
         {
           "@type": "Syllabus",
           "position": 5,
-          "name": "Backend with Node.js",
-          "description": "Servers, routes, and databases. Build an API that powers your frontend."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 6,
-          "name": "Fullstack project",
-          "description": "Put it all together into a complete application you understand end to end."
+          "name": "Building a project",
+          "description": "Put it all together into something real you can show and explain."
         }
       ],
       "hasPart": [
         {
           "@type": "CreativeWork",
-          "name": "Ajo",
-          "description": "a savings club's site, correct before it is styled",
+          "name": "Rent Book",
+          "description": "a landlord's rent report, rebuilt from a messy script",
           "learningResourceType": "Project"
         },
         {
           "@type": "CreativeWork",
-          "name": "Òjò",
-          "description": "a rain check across Nigerian towns",
+          "name": "Rate Watch",
+          "description": "a daily exchange-rate recorder that survives interruption",
           "learningResourceType": "Project"
         },
         {
           "@type": "CreativeWork",
-          "name": "Slot",
-          "description": "a booking API with no browser side at all",
-          "learningResourceType": "Project"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Found",
-          "description": "a deployed lost-and-found board",
+          "name": "Errand, Meter or Fare",
+          "description": "your choice of three",
           "learningResourceType": "Capstone project"
         }
       ],
       "isAccessibleForFree": false,
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "NGN",
-        "availability": "https://schema.org/InStock",
-        "category": "Paid",
-        "seller": {
-          "@id": "https://nexahubtech.company/#organization"
-        },
-        "price": "160000",
-        "url": "https://nexahubtech.company/enrol?course=web-development-fullstack"
-      },
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "Online",
-        "description": "Taught live, online, hands-on. An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.",
-        "duration": "P10W"
-      }
-    },
-    {
-      "@type": "Course",
-      "@id": "https://nexahubtech.company/courses/frontend-development#course",
-      "url": "https://nexahubtech.company/courses/frontend-development",
-      "name": "Frontend Development",
-      "description": "Learn the web from first principles — HTML, CSS, and JavaScript done properly.",
-      "image": "https://nexahubtech.company/og/course-frontend-development.jpg",
-      "inLanguage": "en",
-      "provider": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "educationalLevel": "Built for complete beginners",
-      "coursePrerequisites": [
-        "Basic computer literacy — files, folders, installing software",
-        "No HTML, CSS or JavaScript; every one of them starts from zero here"
-      ],
-      "teaches": [
-        "You describe; the browser draws",
-        "Predict a layout instead of nudging numbers until it looks right",
-        "Explain why a rule lost, rather than reaching for !important",
-        "Build pages that hold up on screens you have never seen"
-      ],
-      "timeRequired": "P10W",
-      "syllabusSections": [
+      "offers": [
         {
-          "@type": "Syllabus",
-          "position": 1,
-          "name": "How the web works",
-          "description": "The mental model first — what a browser is really doing before you write a single tag."
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "Live online",
+          "price": "95000",
+          "description": "₦95,000 in full, or 2 × ₦52,500.",
+          "url": "https://nexahubtech.company/enrol?course=python-programming"
         },
         {
-          "@type": "Syllabus",
-          "position": 2,
-          "name": "HTML, structurally",
-          "description": "Markup as meaning. Build pages that are readable to people, browsers, and assistive tech."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 3,
-          "name": "CSS & layout",
-          "description": "From the box model to modern layout — styling with intent instead of guesswork."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 4,
-          "name": "JavaScript foundations",
-          "description": "Values, logic, and the DOM. How to make a page think, step by careful step."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 5,
-          "name": "Building something real",
-          "description": "Put it together into a project you understand end to end — and can explain."
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In Kubwa, max 6",
+          "price": "115000",
+          "description": "₦115,000 in full, or 2 × ₦62,500.",
+          "url": "https://nexahubtech.company/enrol?course=python-programming"
         }
       ],
-      "hasPart": [
+      "hasCourseInstance": [
         {
-          "@type": "CreativeWork",
-          "name": "Stitch",
-          "description": "a tailor's shop site, from a supplied design",
-          "learningResourceType": "Project"
+          "@type": "CourseInstance",
+          "courseMode": "Online",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P6W"
         },
         {
-          "@type": "CreativeWork",
-          "name": "Shelf",
-          "description": "a book finder over a real, incomplete catalogue",
-          "learningResourceType": "Project"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Signboard",
-          "description": "a business site with a quote builder",
-          "learningResourceType": "Capstone project"
+          "@type": "CourseInstance",
+          "courseMode": "Onsite",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P6W",
+          "location": {
+            "@id": "https://nexahubtech.company/#organization"
+          }
         }
-      ],
-      "isAccessibleForFree": false,
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "NGN",
-        "availability": "https://schema.org/InStock",
-        "category": "Paid",
-        "seller": {
-          "@id": "https://nexahubtech.company/#organization"
-        },
-        "price": "120000",
-        "url": "https://nexahubtech.company/enrol?course=frontend-development"
-      },
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "Online",
-        "description": "Taught live, online, hands-on. An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.",
-        "duration": "P10W"
-      }
+      ]
     },
     {
       "@type": "Course",
@@ -669,23 +780,432 @@
         }
       ],
       "isAccessibleForFree": false,
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "NGN",
-        "availability": "https://schema.org/InStock",
-        "category": "Paid",
-        "seller": {
-          "@id": "https://nexahubtech.company/#organization"
+      "offers": [
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "Live online",
+          "price": "95000",
+          "description": "₦95,000 in full, or 2 × ₦52,500.",
+          "url": "https://nexahubtech.company/enrol?course=javascript-programming"
         },
-        "price": "100000",
-        "url": "https://nexahubtech.company/enrol?course=javascript-programming"
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In Kubwa, max 6",
+          "price": "115000",
+          "description": "₦115,000 in full, or 2 × ₦62,500.",
+          "url": "https://nexahubtech.company/enrol?course=javascript-programming"
+        }
+      ],
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Online",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P8W"
+        },
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Onsite",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P8W",
+          "location": {
+            "@id": "https://nexahubtech.company/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://nexahubtech.company/courses/frontend-development#course",
+      "url": "https://nexahubtech.company/courses/frontend-development",
+      "name": "Frontend Development",
+      "description": "Learn the web from first principles — HTML, CSS, and JavaScript done properly.",
+      "image": "https://nexahubtech.company/og/course-frontend-development.jpg",
+      "inLanguage": "en",
+      "provider": {
+        "@id": "https://nexahubtech.company/#organization"
       },
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "Online",
-        "description": "Taught live, online, hands-on. An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.",
-        "duration": "P8W"
-      }
+      "educationalLevel": "Built for complete beginners",
+      "coursePrerequisites": [
+        "Basic computer literacy — files, folders, installing software",
+        "No HTML, CSS or JavaScript; every one of them starts from zero here"
+      ],
+      "teaches": [
+        "You describe; the browser draws",
+        "Predict a layout instead of nudging numbers until it looks right",
+        "Explain why a rule lost, rather than reaching for !important",
+        "Build pages that hold up on screens you have never seen"
+      ],
+      "timeRequired": "P10W",
+      "syllabusSections": [
+        {
+          "@type": "Syllabus",
+          "position": 1,
+          "name": "How the web works",
+          "description": "The mental model first — what a browser is really doing before you write a single tag."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 2,
+          "name": "HTML, structurally",
+          "description": "Markup as meaning. Build pages that are readable to people, browsers, and assistive tech."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 3,
+          "name": "CSS & layout",
+          "description": "From the box model to modern layout — styling with intent instead of guesswork."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 4,
+          "name": "JavaScript foundations",
+          "description": "Values, logic, and the DOM. How to make a page think, step by careful step."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 5,
+          "name": "Building something real",
+          "description": "Put it together into a project you understand end to end — and can explain."
+        }
+      ],
+      "hasPart": [
+        {
+          "@type": "CreativeWork",
+          "name": "Stitch",
+          "description": "a tailor's shop site, from a supplied design",
+          "learningResourceType": "Project"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Shelf",
+          "description": "a book finder over a real, incomplete catalogue",
+          "learningResourceType": "Project"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Signboard",
+          "description": "a business site with a quote builder",
+          "learningResourceType": "Capstone project"
+        }
+      ],
+      "isAccessibleForFree": false,
+      "offers": [
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "Live online",
+          "price": "120000",
+          "description": "₦120,000 in full, or 2 × ₦65,000.",
+          "url": "https://nexahubtech.company/enrol?course=frontend-development"
+        },
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In Kubwa, max 6",
+          "price": "145000",
+          "description": "₦145,000 in full, or 2 × ₦77,500.",
+          "url": "https://nexahubtech.company/enrol?course=frontend-development"
+        }
+      ],
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Online",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P10W"
+        },
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Onsite",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P10W",
+          "location": {
+            "@id": "https://nexahubtech.company/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://nexahubtech.company/courses/backend-development#course",
+      "url": "https://nexahubtech.company/courses/backend-development",
+      "name": "Backend Development",
+      "description": "Build the engine behind applications — APIs, databases, and server-side logic.",
+      "image": "https://nexahubtech.company/og/course-backend-development.jpg",
+      "inLanguage": "en",
+      "provider": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "educationalLevel": "Open to beginners; smoother with some programming",
+      "coursePrerequisites": [
+        "Basic programming in any language — variables, loops, functions",
+        "Comfort with the terminal, or the willingness to learn it in week one",
+        "No server, API or database experience needed"
+      ],
+      "teaches": [
+        "A server is a function you can call over a wire",
+        "Design an API by its contract before writing its code",
+        "Separate what a request returns from what it changes",
+        "See where two users at the same moment would break your logic"
+      ],
+      "timeRequired": "P8W",
+      "syllabusSections": [
+        {
+          "@type": "Syllabus",
+          "position": 1,
+          "name": "How servers work",
+          "description": "Requests, responses, and the HTTP lifecycle — the foundation everything else sits on."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 2,
+          "name": "Node.js & Express",
+          "description": "Build your first API. Routes, middleware, and the patterns that make backends tick."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 3,
+          "name": "Databases & data modeling",
+          "description": "Store, query, and relate data. SQL or NoSQL — understanding the tradeoffs."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 4,
+          "name": "Authentication & security",
+          "description": "Sessions, tokens, and the basics of keeping users and data safe."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 5,
+          "name": "Deploying your API",
+          "description": "Ship it. Get your backend running in the real world, not just on your machine."
+        }
+      ],
+      "hasPart": [
+        {
+          "@type": "CreativeWork",
+          "name": "Alafia",
+          "description": "a pharmacy API whose rules live in the database",
+          "learningResourceType": "Project"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Gatepass",
+          "description": "a visitor-pass API, then attacked by its own author",
+          "learningResourceType": "Project"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Buka",
+          "description": "a canteen ordering API, deployed",
+          "learningResourceType": "Capstone project"
+        }
+      ],
+      "isAccessibleForFree": false,
+      "offers": [
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "Live online",
+          "price": "110000",
+          "description": "₦110,000 in full, or 2 × ₦60,000.",
+          "url": "https://nexahubtech.company/enrol?course=backend-development"
+        },
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In Kubwa, max 6",
+          "price": "135000",
+          "description": "₦135,000 in full, or 2 × ₦72,500.",
+          "url": "https://nexahubtech.company/enrol?course=backend-development"
+        }
+      ],
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Online",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P8W"
+        },
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Onsite",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P8W",
+          "location": {
+            "@id": "https://nexahubtech.company/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://nexahubtech.company/courses/web-development-fullstack#course",
+      "url": "https://nexahubtech.company/courses/web-development-fullstack",
+      "name": "Web Development",
+      "description": "Learn frontend and backend in one complete path — from first principles to full applications.",
+      "about": "Fullstack",
+      "image": "https://nexahubtech.company/og/course-web-development-fullstack.jpg",
+      "inLanguage": "en",
+      "provider": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "educationalLevel": "Built for complete beginners",
+      "coursePrerequisites": [
+        "How to use a computer confidently — files, folders, installing software",
+        "Enough English to read technical writing without a struggle",
+        "No coding at all; the first module starts at how the web works"
+      ],
+      "teaches": [
+        "Two computers, one conversation",
+        "Locate a bug on the right side of the wire before touching code",
+        "Read any new framework as a variation on request and response",
+        "Decide where a piece of data should live, and say why"
+      ],
+      "timeRequired": "P18W",
+      "syllabusSections": [
+        {
+          "@type": "Syllabus",
+          "position": 1,
+          "name": "How the web works",
+          "description": "The mental model first — what a browser and server are really doing before you write a single line of code."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 2,
+          "name": "HTML & structure",
+          "description": "Markup as meaning. Build pages that are readable to people, browsers, and assistive tech."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 3,
+          "name": "CSS & layout",
+          "description": "From the box model to modern layout — styling with intent instead of guesswork."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 4,
+          "name": "JavaScript foundations",
+          "description": "Values, logic, and the DOM. How to make a page think, step by careful step."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 5,
+          "name": "Backend with Node.js",
+          "description": "Servers, routes, and databases. Build an API that powers your frontend."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 6,
+          "name": "Fullstack project",
+          "description": "Put it all together into a complete application you understand end to end."
+        }
+      ],
+      "hasPart": [
+        {
+          "@type": "CreativeWork",
+          "name": "Ajo",
+          "description": "a savings club's site, correct before it is styled",
+          "learningResourceType": "Project"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Òjò",
+          "description": "a rain check across Nigerian towns",
+          "learningResourceType": "Project"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Slot",
+          "description": "a booking API with no browser side at all",
+          "learningResourceType": "Project"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Found",
+          "description": "a deployed lost-and-found board",
+          "learningResourceType": "Capstone project"
+        }
+      ],
+      "isAccessibleForFree": false,
+      "offers": [
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "Live online",
+          "price": "200000",
+          "description": "₦200,000 in full, or 3 × ₦75,000.",
+          "url": "https://nexahubtech.company/enrol?course=web-development-fullstack"
+        },
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In Kubwa, max 6",
+          "price": "240000",
+          "description": "₦240,000 in full, or 3 × ₦87,500.",
+          "url": "https://nexahubtech.company/enrol?course=web-development-fullstack"
+        }
+      ],
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Online",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P18W"
+        },
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Onsite",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P18W",
+          "location": {
+            "@id": "https://nexahubtech.company/#organization"
+          }
+        }
+      ]
     },
     {
       "@type": "Course",
@@ -772,23 +1292,51 @@
         }
       ],
       "isAccessibleForFree": false,
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "NGN",
-        "availability": "https://schema.org/InStock",
-        "category": "Paid",
-        "seller": {
-          "@id": "https://nexahubtech.company/#organization"
+      "offers": [
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "Live online",
+          "price": "130000",
+          "description": "₦130,000 in full, or 2 × ₦70,000.",
+          "url": "https://nexahubtech.company/enrol?course=react-development"
         },
-        "price": "120000",
-        "url": "https://nexahubtech.company/enrol?course=react-development"
-      },
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "Online",
-        "description": "Taught live, online, hands-on. An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.",
-        "duration": "P8W"
-      }
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In Kubwa, max 6",
+          "price": "160000",
+          "description": "₦160,000 in full, or 2 × ₦87,500.",
+          "url": "https://nexahubtech.company/enrol?course=react-development"
+        }
+      ],
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Online",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P8W"
+        },
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Onsite",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P8W",
+          "location": {
+            "@id": "https://nexahubtech.company/#organization"
+          }
+        }
+      ]
     },
     {
       "@type": "Course",
@@ -881,118 +1429,51 @@
         }
       ],
       "isAccessibleForFree": false,
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "NGN",
-        "availability": "https://schema.org/InStock",
-        "category": "Paid",
-        "seller": {
-          "@id": "https://nexahubtech.company/#organization"
-        },
-        "price": "160000",
-        "url": "https://nexahubtech.company/enrol?course=nextjs-fullstack"
-      },
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "Online",
-        "description": "Taught live, online, hands-on. An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.",
-        "duration": "P10W"
-      }
-    },
-    {
-      "@type": "Course",
-      "@id": "https://nexahubtech.company/courses/backend-development#course",
-      "url": "https://nexahubtech.company/courses/backend-development",
-      "name": "Backend Development",
-      "description": "Build the engine behind applications — APIs, databases, and server-side logic.",
-      "image": "https://nexahubtech.company/og/course-backend-development.jpg",
-      "inLanguage": "en",
-      "provider": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "educationalLevel": "Open to beginners; smoother with some programming",
-      "coursePrerequisites": [
-        "Basic programming in any language — variables, loops, functions",
-        "Comfort with the terminal, or the willingness to learn it in week one",
-        "No server, API or database experience needed"
-      ],
-      "teaches": [
-        "A server is a function you can call over a wire",
-        "Design an API by its contract before writing its code",
-        "Separate what a request returns from what it changes",
-        "See where two users at the same moment would break your logic"
-      ],
-      "timeRequired": "P8W",
-      "syllabusSections": [
+      "offers": [
         {
-          "@type": "Syllabus",
-          "position": 1,
-          "name": "How servers work",
-          "description": "Requests, responses, and the HTTP lifecycle — the foundation everything else sits on."
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "Live online",
+          "price": "160000",
+          "description": "₦160,000 in full, or 2 × ₦87,500.",
+          "url": "https://nexahubtech.company/enrol?course=nextjs-fullstack"
         },
         {
-          "@type": "Syllabus",
-          "position": 2,
-          "name": "Node.js & Express",
-          "description": "Build your first API. Routes, middleware, and the patterns that make backends tick."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 3,
-          "name": "Databases & data modeling",
-          "description": "Store, query, and relate data. SQL or NoSQL — understanding the tradeoffs."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 4,
-          "name": "Authentication & security",
-          "description": "Sessions, tokens, and the basics of keeping users and data safe."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 5,
-          "name": "Deploying your API",
-          "description": "Ship it. Get your backend running in the real world, not just on your machine."
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In Kubwa, max 6",
+          "price": "195000",
+          "description": "₦195,000 in full, or 2 × ₦105,000.",
+          "url": "https://nexahubtech.company/enrol?course=nextjs-fullstack"
         }
       ],
-      "hasPart": [
+      "hasCourseInstance": [
         {
-          "@type": "CreativeWork",
-          "name": "Alafia",
-          "description": "a pharmacy API whose rules live in the database",
-          "learningResourceType": "Project"
+          "@type": "CourseInstance",
+          "courseMode": "Online",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P10W"
         },
         {
-          "@type": "CreativeWork",
-          "name": "Gatepass",
-          "description": "a visitor-pass API, then attacked by its own author",
-          "learningResourceType": "Project"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Buka",
-          "description": "a canteen ordering API, deployed",
-          "learningResourceType": "Capstone project"
+          "@type": "CourseInstance",
+          "courseMode": "Onsite",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P10W",
+          "location": {
+            "@id": "https://nexahubtech.company/#organization"
+          }
         }
-      ],
-      "isAccessibleForFree": false,
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "NGN",
-        "availability": "https://schema.org/InStock",
-        "category": "Paid",
-        "seller": {
-          "@id": "https://nexahubtech.company/#organization"
-        },
-        "price": "100000",
-        "url": "https://nexahubtech.company/enrol?course=backend-development"
-      },
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "Online",
-        "description": "Taught live, online, hands-on. An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.",
-        "duration": "P8W"
-      }
+      ]
     },
     {
       "@type": "Course",
@@ -1071,23 +1552,340 @@
         }
       ],
       "isAccessibleForFree": false,
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "NGN",
-        "availability": "https://schema.org/InStock",
-        "category": "Paid",
-        "seller": {
-          "@id": "https://nexahubtech.company/#organization"
+      "offers": [
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "Live online",
+          "price": "190000",
+          "description": "₦190,000 in full, or 2 × ₦102,500.",
+          "url": "https://nexahubtech.company/enrol?course=mobile-development"
         },
-        "price": "190000",
-        "url": "https://nexahubtech.company/enrol?course=mobile-development"
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In Kubwa, max 6",
+          "price": "230000",
+          "description": "₦230,000 in full, or 2 × ₦125,000.",
+          "url": "https://nexahubtech.company/enrol?course=mobile-development"
+        }
+      ],
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Online",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P12W"
+        },
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Onsite",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P12W",
+          "location": {
+            "@id": "https://nexahubtech.company/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://nexahubtech.company/courses/data-analysis#course",
+      "url": "https://nexahubtech.company/courses/data-analysis",
+      "name": "Data Analysis",
+      "description": "Turn raw data into clear insights — with Python, SQL, and real analytical thinking.",
+      "image": "https://nexahubtech.company/og/course-data-analysis.jpg",
+      "inLanguage": "en",
+      "provider": {
+        "@id": "https://nexahubtech.company/#organization"
       },
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "Online",
-        "description": "Taught live, online, hands-on. An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.",
-        "duration": "P12W"
-      }
+      "educationalLevel": "Open to beginners who enjoy a question",
+      "coursePrerequisites": [
+        "Secondary-school maths — percentages, averages, reading a chart",
+        "Basic spreadsheet use, even if only the fundamentals",
+        "No Python or SQL; both are taught here from the ground up"
+      ],
+      "teaches": [
+        "Data answers the question you actually asked",
+        "Spot a misleading chart — including one of your own",
+        "Tell a real result from noise, and say which it is",
+        "State plainly what a finding does and does not support"
+      ],
+      "timeRequired": "P10W",
+      "syllabusSections": [
+        {
+          "@type": "Syllabus",
+          "position": 1,
+          "name": "Thinking with data",
+          "description": "Asking the right questions. What data can tell you — and what it can't."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 2,
+          "name": "SQL for analysis",
+          "description": "Query, filter, and join data. Get comfortable pulling insights from real databases."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 3,
+          "name": "Python for data",
+          "description": "Pandas, NumPy, and Jupyter. Clean, transform, and explore datasets efficiently."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 4,
+          "name": "Visualization & storytelling",
+          "description": "Charts, dashboards, and narratives. Make your findings clear and compelling."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 5,
+          "name": "A real analysis project",
+          "description": "Take a dataset from question to insight to presentation."
+        }
+      ],
+      "hasPart": [
+        {
+          "@type": "CreativeWork",
+          "name": "Kasuwa Eight",
+          "description": "eight questions answered in SQL, and checked",
+          "learningResourceType": "Project"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Basket",
+          "description": "an NBS food-price release cleaned, with the decisions logged",
+          "learningResourceType": "Project"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Second Opinion",
+          "description": "one finding, two honest charts",
+          "learningResourceType": "Project"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Budget Line, Ward or Grid",
+          "description": "your choice of three",
+          "learningResourceType": "Capstone project"
+        }
+      ],
+      "isAccessibleForFree": false,
+      "offers": [
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "Live online",
+          "price": "130000",
+          "description": "₦130,000 in full, or 2 × ₦70,000.",
+          "url": "https://nexahubtech.company/enrol?course=data-analysis"
+        },
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In Kubwa, max 6",
+          "price": "160000",
+          "description": "₦160,000 in full, or 2 × ₦87,500.",
+          "url": "https://nexahubtech.company/enrol?course=data-analysis"
+        }
+      ],
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Online",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P10W"
+        },
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Onsite",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P10W",
+          "location": {
+            "@id": "https://nexahubtech.company/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://nexahubtech.company/courses/mobile-videography#course",
+      "url": "https://nexahubtech.company/courses/mobile-videography",
+      "name": "Mobile Videography",
+      "description": "Shoot, light, record and edit video worth watching — on the phone you already own.",
+      "about": "Phone video & editing",
+      "image": "https://nexahubtech.company/og/course-mobile-videography.jpg",
+      "inLanguage": "en",
+      "provider": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "educationalLevel": "Built for complete beginners with a phone",
+      "coursePrerequisites": [
+        "No filming or editing experience",
+        "How to install an app and move files on your phone"
+      ],
+      "teaches": [
+        "The edit starts when you press record",
+        "Shoot clips that cut together, instead of clips you have to rescue",
+        "Get clean sound from a phone without buying anything",
+        "Edit a short piece for a real purpose and export it properly"
+      ],
+      "timeRequired": "P4W",
+      "syllabusSections": [
+        {
+          "@type": "Syllabus",
+          "position": 1,
+          "name": "The phone as a camera",
+          "description": "Framing, focus and exposure lock, holding it steady, and shooting so the clips will cut."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 2,
+          "name": "Light and sound you already have",
+          "description": "Windows, shade and a quiet room: clean light and clean audio without buying kit."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 3,
+          "name": "Editing on the phone",
+          "description": "Cutting, pacing, captions and music in a free editing app — and the decisions behind them."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 4,
+          "name": "A short for a real purpose",
+          "description": "Plan, shoot, edit and export a finished short for a business, a church or an event."
+        }
+      ],
+      "hasPart": [],
+      "isAccessibleForFree": false,
+      "offers": [
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "Live online",
+          "price": "50000",
+          "description": "₦50,000 in full, or 2 × ₦27,500.",
+          "url": "https://nexahubtech.company/enrol?course=mobile-videography"
+        }
+      ],
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Online",
+          "description": "Taught live, online. Everything here is done on a phone, so it is taught live online — from anywhere in Nigeria, with sessions and materials on WhatsApp and your clips reviewed between sessions. You start the day you are ready. When you want cameras, lights and an edit suite, Videography & Video Editing is the next step.",
+          "duration": "P4W"
+        }
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://nexahubtech.company/courses/videography-video-editing#course",
+      "url": "https://nexahubtech.company/courses/videography-video-editing",
+      "name": "Videography & Video Editing",
+      "description": "Capture and craft video content that communicates — from shooting to final cut.",
+      "image": "https://nexahubtech.company/og/course-videography-video-editing.jpg",
+      "inLanguage": "en",
+      "provider": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "educationalLevel": "Built for complete beginners",
+      "coursePrerequisites": [
+        "No filming, lighting or editing experience",
+        "Basic computer skills — files, folders, moving large files around"
+      ],
+      "teaches": [
+        "You are directing attention, not recording events",
+        "Frame a shot by what you leave out, not only what you include",
+        "Cut on the moment attention is ready to move",
+        "Light and grade to lead the eye, not just to look expensive"
+      ],
+      "timeRequired": "P8W",
+      "syllabusSections": [
+        {
+          "@type": "Syllabus",
+          "position": 1,
+          "name": "Camera fundamentals",
+          "description": "Exposure, framing, and movement. How to use a camera with intention, not guesswork."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 2,
+          "name": "Lighting & audio",
+          "description": "The invisible elements that make or break a video. Sound and light, controlled."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 3,
+          "name": "Editing with purpose",
+          "description": "Cuts, pacing, and flow. Software skills plus the editorial thinking behind them."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 4,
+          "name": "Color & finishing",
+          "description": "Color grading, titles, and export. Polishing your work to a professional standard."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 5,
+          "name": "A complete project",
+          "description": "Shoot, edit, and deliver a finished piece from concept to export."
+        }
+      ],
+      "hasPart": [],
+      "isAccessibleForFree": false,
+      "offers": [
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In Kubwa, max 6",
+          "price": "120000",
+          "description": "₦120,000 in full, or 2 × ₦65,000.",
+          "url": "https://nexahubtech.company/enrol?course=videography-video-editing"
+        }
+      ],
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Onsite",
+          "description": "Taught in the centre, in person, with shoots on location. Cameras, lights and an edit suite are learnt with your hands on them, so this course is taught in person at our Kubwa centre, in a group of at most 6 — with shooting assignments out on location between sessions. You start the day you are ready. New to video, with only a phone? Mobile Videography is the online way in.",
+          "duration": "P8W",
+          "location": {
+            "@id": "https://nexahubtech.company/#organization"
+          }
+        }
+      ]
     },
     {
       "@type": "Course",
@@ -1178,293 +1976,51 @@
         }
       ],
       "isAccessibleForFree": false,
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "NGN",
-        "availability": "https://schema.org/InStock",
-        "category": "Paid",
-        "seller": {
-          "@id": "https://nexahubtech.company/#organization"
-        },
-        "price": "230000",
-        "url": "https://nexahubtech.company/enrol?course=cybersecurity"
-      },
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "Online",
-        "description": "Taught live, online, hands-on. An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.",
-        "duration": "P16W"
-      }
-    },
-    {
-      "@type": "Course",
-      "@id": "https://nexahubtech.company/courses/python-programming#course",
-      "url": "https://nexahubtech.company/courses/python-programming",
-      "name": "Python Programming",
-      "description": "Learn programming from scratch with Python — the language that powers everything from scripts to AI.",
-      "image": "https://nexahubtech.company/og/course-python-programming.jpg",
-      "inLanguage": "en",
-      "provider": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "educationalLevel": "The right place to start if you have never coded",
-      "coursePrerequisites": [
-        "How to use a computer — files, folders, installing software",
-        "No programming experience of any kind"
-      ],
-      "teaches": [
-        "Names are labels, not boxes",
-        "Predict when a change is shared and when it is copied",
-        "Read an error as a question about types and identity",
-        "Reason about what code does before you run it"
-      ],
-      "timeRequired": "P6W",
-      "syllabusSections": [
+      "offers": [
         {
-          "@type": "Syllabus",
-          "position": 1,
-          "name": "How programming works",
-          "description": "Variables, logic, and control flow — the universal building blocks of code."
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "Live online",
+          "price": "230000",
+          "description": "₦230,000 in full, or 3 × ₦82,500.",
+          "url": "https://nexahubtech.company/enrol?course=cybersecurity"
         },
         {
-          "@type": "Syllabus",
-          "position": 2,
-          "name": "Functions & data structures",
-          "description": "Organize your code and your data. Lists, dictionaries, and clean function design."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 3,
-          "name": "Working with files & APIs",
-          "description": "Read, write, and fetch data. Connect your scripts to the real world."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 4,
-          "name": "Object-oriented Python",
-          "description": "Classes, objects, and when OOP actually helps — not just when it adds noise."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 5,
-          "name": "Building a project",
-          "description": "Put it all together into something real you can show and explain."
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In Kubwa, max 6",
+          "price": "280000",
+          "description": "₦280,000 in full, or 3 × ₦100,000.",
+          "url": "https://nexahubtech.company/enrol?course=cybersecurity"
         }
       ],
-      "hasPart": [
+      "hasCourseInstance": [
         {
-          "@type": "CreativeWork",
-          "name": "Rent Book",
-          "description": "a landlord's rent report, rebuilt from a messy script",
-          "learningResourceType": "Project"
+          "@type": "CourseInstance",
+          "courseMode": "Online",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P16W"
         },
         {
-          "@type": "CreativeWork",
-          "name": "Rate Watch",
-          "description": "a daily exchange-rate recorder that survives interruption",
-          "learningResourceType": "Project"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Errand, Meter or Fare",
-          "description": "your choice of three",
-          "learningResourceType": "Capstone project"
+          "@type": "CourseInstance",
+          "courseMode": "Onsite",
+          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "duration": "P16W",
+          "location": {
+            "@id": "https://nexahubtech.company/#organization"
+          }
         }
-      ],
-      "isAccessibleForFree": false,
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "NGN",
-        "availability": "https://schema.org/InStock",
-        "category": "Paid",
-        "seller": {
-          "@id": "https://nexahubtech.company/#organization"
-        },
-        "price": "100000",
-        "url": "https://nexahubtech.company/enrol?course=python-programming"
-      },
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "Online",
-        "description": "Taught live, online, hands-on. An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.",
-        "duration": "P6W"
-      }
-    },
-    {
-      "@type": "Course",
-      "@id": "https://nexahubtech.company/courses/data-analysis#course",
-      "url": "https://nexahubtech.company/courses/data-analysis",
-      "name": "Data Analysis",
-      "description": "Turn raw data into clear insights — with Python, SQL, and real analytical thinking.",
-      "image": "https://nexahubtech.company/og/course-data-analysis.jpg",
-      "inLanguage": "en",
-      "provider": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "educationalLevel": "Open to beginners who enjoy a question",
-      "coursePrerequisites": [
-        "Secondary-school maths — percentages, averages, reading a chart",
-        "Basic spreadsheet use, even if only the fundamentals",
-        "No Python or SQL; both are taught here from the ground up"
-      ],
-      "teaches": [
-        "Data answers the question you actually asked",
-        "Spot a misleading chart — including one of your own",
-        "Tell a real result from noise, and say which it is",
-        "State plainly what a finding does and does not support"
-      ],
-      "timeRequired": "P12W",
-      "syllabusSections": [
-        {
-          "@type": "Syllabus",
-          "position": 1,
-          "name": "Thinking with data",
-          "description": "Asking the right questions. What data can tell you — and what it can't."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 2,
-          "name": "SQL for analysis",
-          "description": "Query, filter, and join data. Get comfortable pulling insights from real databases."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 3,
-          "name": "Python for data",
-          "description": "Pandas, NumPy, and Jupyter. Clean, transform, and explore datasets efficiently."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 4,
-          "name": "Visualization & storytelling",
-          "description": "Charts, dashboards, and narratives. Make your findings clear and compelling."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 5,
-          "name": "A real analysis project",
-          "description": "Take a dataset from question to insight to presentation."
-        }
-      ],
-      "hasPart": [
-        {
-          "@type": "CreativeWork",
-          "name": "Kasuwa Eight",
-          "description": "eight questions answered in SQL, and checked",
-          "learningResourceType": "Project"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Basket",
-          "description": "an NBS food-price release cleaned, with the decisions logged",
-          "learningResourceType": "Project"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Second Opinion",
-          "description": "one finding, two honest charts",
-          "learningResourceType": "Project"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Budget Line, Ward or Grid",
-          "description": "your choice of three",
-          "learningResourceType": "Capstone project"
-        }
-      ],
-      "isAccessibleForFree": false,
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "NGN",
-        "availability": "https://schema.org/InStock",
-        "category": "Paid",
-        "seller": {
-          "@id": "https://nexahubtech.company/#organization"
-        },
-        "price": "120000",
-        "url": "https://nexahubtech.company/enrol?course=data-analysis"
-      },
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "Online",
-        "description": "Taught live, online, hands-on. An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.",
-        "duration": "P12W"
-      }
-    },
-    {
-      "@type": "Course",
-      "@id": "https://nexahubtech.company/courses/videography-video-editing#course",
-      "url": "https://nexahubtech.company/courses/videography-video-editing",
-      "name": "Videography & Video Editing",
-      "description": "Capture and craft video content that communicates — from shooting to final cut.",
-      "image": "https://nexahubtech.company/og/course-videography-video-editing.jpg",
-      "inLanguage": "en",
-      "provider": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "educationalLevel": "Built for complete beginners",
-      "coursePrerequisites": [
-        "No filming, lighting or editing experience",
-        "Basic computer skills — files, folders, moving large files around"
-      ],
-      "teaches": [
-        "You are directing attention, not recording events",
-        "Frame a shot by what you leave out, not only what you include",
-        "Cut on the moment attention is ready to move",
-        "Light and grade to lead the eye, not just to look expensive"
-      ],
-      "timeRequired": "P8W",
-      "syllabusSections": [
-        {
-          "@type": "Syllabus",
-          "position": 1,
-          "name": "Camera fundamentals",
-          "description": "Exposure, framing, and movement. How to use a camera with intention, not guesswork."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 2,
-          "name": "Lighting & audio",
-          "description": "The invisible elements that make or break a video. Sound and light, controlled."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 3,
-          "name": "Editing with purpose",
-          "description": "Cuts, pacing, and flow. Software skills plus the editorial thinking behind them."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 4,
-          "name": "Color & finishing",
-          "description": "Color grading, titles, and export. Polishing your work to a professional standard."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 5,
-          "name": "A complete project",
-          "description": "Shoot, edit, and deliver a finished piece from concept to export."
-        }
-      ],
-      "hasPart": [],
-      "isAccessibleForFree": false,
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "NGN",
-        "availability": "https://schema.org/InStock",
-        "category": "Paid",
-        "seller": {
-          "@id": "https://nexahubtech.company/#organization"
-        },
-        "price": "120000",
-        "url": "https://nexahubtech.company/enrol?course=videography-video-editing"
-      },
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "Online",
-        "description": "Taught live, online, hands-on. An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.",
-        "duration": "P8W"
-      }
+      ]
     },
     {
       "@type": "Course",
@@ -1547,6 +2103,34 @@
           "name": "Crash Course",
           "description": "2 weeks · Mon – Fri. Candidates whose exam is close. Includes: Daily timed practice; Speed drills on the keyboard and calculator; 2 full mock exams with a review.",
           "price": "15000",
+          "url": "https://nexahubtech.company/cbt"
+        },
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "@id": "https://nexahubtech.company/cbt#school-group",
+          "name": "School & Group Training",
+          "description": "4 weeks · Mon – Fri · per candidate, groups of 10 or more. Schools, tutorial centres and study groups of 10 or more. Includes: The Full Training, for every candidate in the group; Morning or weekend sessions set aside for the group; 4 full mock exams with a review; One invoice for the school or centre.",
+          "price": "20000",
+          "url": "https://nexahubtech.company/cbt"
+        },
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "@id": "https://nexahubtech.company/cbt#mock-bundle",
+          "name": "Three Mock Exams",
+          "description": "Three 2-hour sessions, on separate days. Candidates who want to see themselves improve before the day. Includes: Three full timed mock exams; Your score by subject after each one; Feedback on your timing, and what to practise before the next.",
+          "price": "8000",
           "url": "https://nexahubtech.company/cbt"
         },
         {
@@ -1920,8 +2504,8 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/#webpage",
       "url": "https://nexahubtech.company/",
-      "name": "NexaHubTech — Learn to build. Build for real.",
-      "description": "NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio. We teach people to become developers, then put those skills to work building real products for real clients.",
+      "name": "NexaHubTech — Learn tech properly, in Kubwa or online",
+      "description": "NexaHubTech is a tech school in Kubwa, FCT-Abuja, with a software studio behind it. Learn computer skills, Microsoft Office, coding, data and video — in small classes of six at the centre, or live online from anywhere in Nigeria — and start whenever you are ready.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -1942,7 +2526,7 @@
       "@id": "https://nexahubtech.company/courses#webpage",
       "url": "https://nexahubtech.company/courses",
       "name": "Courses — NexaHubTech",
-      "description": "Explore all courses at NexaHubTech — from web development, JavaScript, React and Next.js to cybersecurity, data analysis and videography. Learn real skills with live, hands-on teaching you can start at any time.",
+      "description": "Every course at NexaHubTech, from your first time on a computer to React, data analysis and video — taught live online or in small groups at our Kubwa centre, with fees you can pay in instalments. Start any day.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -1976,6 +2560,90 @@
           "position": 2,
           "name": "Courses",
           "item": "https://nexahubtech.company/courses"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nexahubtech.company/fees#webpage",
+      "url": "https://nexahubtech.company/fees",
+      "name": "Course Fees — NexaHubTech",
+      "description": "Every NexaHubTech fee on one page: each course live online and in person at the Kubwa centre, paid in full or in instalments, plus CBT practice and rates for organisations.",
+      "inLanguage": "en-NG",
+      "isPartOf": {
+        "@id": "https://nexahubtech.company/#website"
+      },
+      "publisher": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nexahubtech.company/og/fees.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://nexahubtech.company/fees#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://nexahubtech.company/courses#catalog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nexahubtech.company/fees#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nexahubtech.company/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Fees",
+          "item": "https://nexahubtech.company/fees"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nexahubtech.company/timetable#webpage",
+      "url": "https://nexahubtech.company/timetable",
+      "name": "Session Times — NexaHubTech",
+      "description": "When NexaHubTech classes run each week — at the Kubwa centre and live online. There are no fixed intakes: you start any day and join a standing session that suits you.",
+      "inLanguage": "en-NG",
+      "isPartOf": {
+        "@id": "https://nexahubtech.company/#website"
+      },
+      "publisher": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nexahubtech.company/og/timetable.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://nexahubtech.company/timetable#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://nexahubtech.company/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nexahubtech.company/timetable#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nexahubtech.company/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Timetable",
+          "item": "https://nexahubtech.company/timetable"
         }
       ]
     },
@@ -2029,7 +2697,7 @@
           "name": "Can a school or tutorial centre register a group?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Groups of friends, schools and study centres can all register as a group, and we can set aside morning or weekend sessions for them. Message us on WhatsApp to arrange it."
+            "text": "Yes. Schools, tutorial centres and study groups of 10 or more can register together at a group rate, and we set aside morning or weekend sessions for them. Message us on WhatsApp to arrange it."
           }
         },
         {
@@ -2060,6 +2728,90 @@
           "position": 2,
           "name": "WAEC & JAMB CBT Training",
           "item": "https://nexahubtech.company/cbt"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nexahubtech.company/for-business#webpage",
+      "url": "https://nexahubtech.company/for-business",
+      "name": "Training for Organisations — NexaHubTech",
+      "description": "Train your staff, your students or your team with NexaHubTech: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online or at our Kubwa centre.",
+      "inLanguage": "en-NG",
+      "isPartOf": {
+        "@id": "https://nexahubtech.company/#website"
+      },
+      "publisher": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nexahubtech.company/og/for-business.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://nexahubtech.company/for-business#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://nexahubtech.company/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nexahubtech.company/for-business#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nexahubtech.company/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "For Business",
+          "item": "https://nexahubtech.company/for-business"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nexahubtech.company/centre#webpage",
+      "url": "https://nexahubtech.company/centre",
+      "name": "Our Kubwa Centre — NexaHubTech",
+      "description": "Visit the NexaHubTech centre at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja: one room, classes of at most 6, machines provided, open Monday – Saturday, 8:00 AM – 6:00 PM. Come and see it before you pay.",
+      "inLanguage": "en-NG",
+      "isPartOf": {
+        "@id": "https://nexahubtech.company/#website"
+      },
+      "publisher": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nexahubtech.company/og/centre.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://nexahubtech.company/centre#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://nexahubtech.company/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nexahubtech.company/centre#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nexahubtech.company/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "The Centre",
+          "item": "https://nexahubtech.company/centre"
         }
       ]
     },
@@ -2110,7 +2862,7 @@
       "@id": "https://nexahubtech.company/enrol#webpage",
       "url": "https://nexahubtech.company/enrol",
       "name": "Enrol — NexaHubTech",
-      "description": "Apply for a place at NexaHubTech — taught live, start any time. Tell us about you, pick your course and training mode, and we'll be in touch about your start date.",
+      "description": "Apply for a place at NexaHubTech — taught live, online or at our Kubwa centre, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2317,6 +3069,54 @@
     },
     {
       "@type": "WebPage",
+      "@id": "https://nexahubtech.company/courses/computer-essentials#webpage",
+      "url": "https://nexahubtech.company/courses/computer-essentials",
+      "name": "Computer Essentials — NexaHubTech",
+      "description": "Three weeks from never having used a computer to saving, finding and printing your own work — with somebody beside you the whole way.",
+      "inLanguage": "en-NG",
+      "isPartOf": {
+        "@id": "https://nexahubtech.company/#website"
+      },
+      "publisher": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nexahubtech.company/og/course-computer-essentials.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://nexahubtech.company/courses/computer-essentials#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://nexahubtech.company/courses/computer-essentials#course"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nexahubtech.company/courses/computer-essentials#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nexahubtech.company/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses",
+          "item": "https://nexahubtech.company/courses"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Computer Essentials",
+          "item": "https://nexahubtech.company/courses/computer-essentials"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/pc-basics#webpage",
       "url": "https://nexahubtech.company/courses/pc-basics",
       "name": "PC Basics — NexaHubTech",
@@ -2360,6 +3160,54 @@
           "position": 3,
           "name": "PC Basics",
           "item": "https://nexahubtech.company/courses/pc-basics"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nexahubtech.company/courses/office-essentials#webpage",
+      "url": "https://nexahubtech.company/courses/office-essentials",
+      "name": "Office Essentials — NexaHubTech",
+      "description": "The two programs most office work actually happens in — Word and Excel — in four weeks, taught properly.",
+      "inLanguage": "en-NG",
+      "isPartOf": {
+        "@id": "https://nexahubtech.company/#website"
+      },
+      "publisher": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nexahubtech.company/og/course-office-essentials.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://nexahubtech.company/courses/office-essentials#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://nexahubtech.company/courses/office-essentials#course"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nexahubtech.company/courses/office-essentials#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nexahubtech.company/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses",
+          "item": "https://nexahubtech.company/courses"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Office Essentials",
+          "item": "https://nexahubtech.company/courses/office-essentials"
         }
       ]
     },
@@ -2413,10 +3261,10 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://nexahubtech.company/courses/web-development-fullstack#webpage",
-      "url": "https://nexahubtech.company/courses/web-development-fullstack",
-      "name": "Web Development — NexaHubTech",
-      "description": "Learn frontend and backend in one complete path — from first principles to full applications.",
+      "@id": "https://nexahubtech.company/courses/python-programming#webpage",
+      "url": "https://nexahubtech.company/courses/python-programming",
+      "name": "Python Programming — NexaHubTech",
+      "description": "Learn programming from scratch with Python — the language that powers everything from scripts to AI.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2426,18 +3274,18 @@
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://nexahubtech.company/og/course-web-development-fullstack.jpg"
+        "url": "https://nexahubtech.company/og/course-python-programming.jpg"
       },
       "breadcrumb": {
-        "@id": "https://nexahubtech.company/courses/web-development-fullstack#breadcrumb"
+        "@id": "https://nexahubtech.company/courses/python-programming#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://nexahubtech.company/courses/web-development-fullstack#course"
+        "@id": "https://nexahubtech.company/courses/python-programming#course"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://nexahubtech.company/courses/web-development-fullstack#breadcrumb",
+      "@id": "https://nexahubtech.company/courses/python-programming#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -2454,8 +3302,56 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Web Development",
-          "item": "https://nexahubtech.company/courses/web-development-fullstack"
+          "name": "Python Programming",
+          "item": "https://nexahubtech.company/courses/python-programming"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nexahubtech.company/courses/javascript-programming#webpage",
+      "url": "https://nexahubtech.company/courses/javascript-programming",
+      "name": "JavaScript Programming — NexaHubTech",
+      "description": "Learn JavaScript as a language — the same core that runs in a browser and on a server.",
+      "inLanguage": "en-NG",
+      "isPartOf": {
+        "@id": "https://nexahubtech.company/#website"
+      },
+      "publisher": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nexahubtech.company/og/course-javascript-programming.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://nexahubtech.company/courses/javascript-programming#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://nexahubtech.company/courses/javascript-programming#course"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nexahubtech.company/courses/javascript-programming#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nexahubtech.company/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses",
+          "item": "https://nexahubtech.company/courses"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "JavaScript Programming",
+          "item": "https://nexahubtech.company/courses/javascript-programming"
         }
       ]
     },
@@ -2509,10 +3405,10 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://nexahubtech.company/courses/javascript-programming#webpage",
-      "url": "https://nexahubtech.company/courses/javascript-programming",
-      "name": "JavaScript Programming — NexaHubTech",
-      "description": "Learn JavaScript as a language — the same core that runs in a browser and on a server.",
+      "@id": "https://nexahubtech.company/courses/backend-development#webpage",
+      "url": "https://nexahubtech.company/courses/backend-development",
+      "name": "Backend Development — NexaHubTech",
+      "description": "Build the engine behind applications — APIs, databases, and server-side logic.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2522,18 +3418,18 @@
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://nexahubtech.company/og/course-javascript-programming.jpg"
+        "url": "https://nexahubtech.company/og/course-backend-development.jpg"
       },
       "breadcrumb": {
-        "@id": "https://nexahubtech.company/courses/javascript-programming#breadcrumb"
+        "@id": "https://nexahubtech.company/courses/backend-development#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://nexahubtech.company/courses/javascript-programming#course"
+        "@id": "https://nexahubtech.company/courses/backend-development#course"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://nexahubtech.company/courses/javascript-programming#breadcrumb",
+      "@id": "https://nexahubtech.company/courses/backend-development#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -2550,8 +3446,56 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "JavaScript Programming",
-          "item": "https://nexahubtech.company/courses/javascript-programming"
+          "name": "Backend Development",
+          "item": "https://nexahubtech.company/courses/backend-development"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nexahubtech.company/courses/web-development-fullstack#webpage",
+      "url": "https://nexahubtech.company/courses/web-development-fullstack",
+      "name": "Web Development — NexaHubTech",
+      "description": "Learn frontend and backend in one complete path — from first principles to full applications.",
+      "inLanguage": "en-NG",
+      "isPartOf": {
+        "@id": "https://nexahubtech.company/#website"
+      },
+      "publisher": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nexahubtech.company/og/course-web-development-fullstack.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://nexahubtech.company/courses/web-development-fullstack#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://nexahubtech.company/courses/web-development-fullstack#course"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nexahubtech.company/courses/web-development-fullstack#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nexahubtech.company/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses",
+          "item": "https://nexahubtech.company/courses"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Web Development",
+          "item": "https://nexahubtech.company/courses/web-development-fullstack"
         }
       ]
     },
@@ -2653,54 +3597,6 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://nexahubtech.company/courses/backend-development#webpage",
-      "url": "https://nexahubtech.company/courses/backend-development",
-      "name": "Backend Development — NexaHubTech",
-      "description": "Build the engine behind applications — APIs, databases, and server-side logic.",
-      "inLanguage": "en-NG",
-      "isPartOf": {
-        "@id": "https://nexahubtech.company/#website"
-      },
-      "publisher": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://nexahubtech.company/og/course-backend-development.jpg"
-      },
-      "breadcrumb": {
-        "@id": "https://nexahubtech.company/courses/backend-development#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://nexahubtech.company/courses/backend-development#course"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://nexahubtech.company/courses/backend-development#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nexahubtech.company/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Courses",
-          "item": "https://nexahubtech.company/courses"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Backend Development",
-          "item": "https://nexahubtech.company/courses/backend-development"
-        }
-      ]
-    },
-    {
-      "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/mobile-development#webpage",
       "url": "https://nexahubtech.company/courses/mobile-development",
       "name": "Mobile Development — NexaHubTech",
@@ -2744,102 +3640,6 @@
           "position": 3,
           "name": "Mobile Development",
           "item": "https://nexahubtech.company/courses/mobile-development"
-        }
-      ]
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://nexahubtech.company/courses/cybersecurity#webpage",
-      "url": "https://nexahubtech.company/courses/cybersecurity",
-      "name": "Cybersecurity — NexaHubTech",
-      "description": "Understand how systems are attacked — and how to defend them.",
-      "inLanguage": "en-NG",
-      "isPartOf": {
-        "@id": "https://nexahubtech.company/#website"
-      },
-      "publisher": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://nexahubtech.company/og/course-cybersecurity.jpg"
-      },
-      "breadcrumb": {
-        "@id": "https://nexahubtech.company/courses/cybersecurity#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://nexahubtech.company/courses/cybersecurity#course"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://nexahubtech.company/courses/cybersecurity#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nexahubtech.company/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Courses",
-          "item": "https://nexahubtech.company/courses"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Cybersecurity",
-          "item": "https://nexahubtech.company/courses/cybersecurity"
-        }
-      ]
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://nexahubtech.company/courses/python-programming#webpage",
-      "url": "https://nexahubtech.company/courses/python-programming",
-      "name": "Python Programming — NexaHubTech",
-      "description": "Learn programming from scratch with Python — the language that powers everything from scripts to AI.",
-      "inLanguage": "en-NG",
-      "isPartOf": {
-        "@id": "https://nexahubtech.company/#website"
-      },
-      "publisher": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://nexahubtech.company/og/course-python-programming.jpg"
-      },
-      "breadcrumb": {
-        "@id": "https://nexahubtech.company/courses/python-programming#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://nexahubtech.company/courses/python-programming#course"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://nexahubtech.company/courses/python-programming#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nexahubtech.company/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Courses",
-          "item": "https://nexahubtech.company/courses"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Python Programming",
-          "item": "https://nexahubtech.company/courses/python-programming"
         }
       ]
     },
@@ -2893,6 +3693,54 @@
     },
     {
       "@type": "WebPage",
+      "@id": "https://nexahubtech.company/courses/mobile-videography#webpage",
+      "url": "https://nexahubtech.company/courses/mobile-videography",
+      "name": "Mobile Videography — NexaHubTech",
+      "description": "Shoot, light, record and edit video worth watching — on the phone you already own.",
+      "inLanguage": "en-NG",
+      "isPartOf": {
+        "@id": "https://nexahubtech.company/#website"
+      },
+      "publisher": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nexahubtech.company/og/course-mobile-videography.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://nexahubtech.company/courses/mobile-videography#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://nexahubtech.company/courses/mobile-videography#course"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nexahubtech.company/courses/mobile-videography#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nexahubtech.company/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses",
+          "item": "https://nexahubtech.company/courses"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Mobile Videography",
+          "item": "https://nexahubtech.company/courses/mobile-videography"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/videography-video-editing#webpage",
       "url": "https://nexahubtech.company/courses/videography-video-editing",
       "name": "Videography & Video Editing — NexaHubTech",
@@ -2936,6 +3784,54 @@
           "position": 3,
           "name": "Videography & Video Editing",
           "item": "https://nexahubtech.company/courses/videography-video-editing"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nexahubtech.company/courses/cybersecurity#webpage",
+      "url": "https://nexahubtech.company/courses/cybersecurity",
+      "name": "Cybersecurity — NexaHubTech",
+      "description": "Understand how systems are attacked — and how to defend them.",
+      "inLanguage": "en-NG",
+      "isPartOf": {
+        "@id": "https://nexahubtech.company/#website"
+      },
+      "publisher": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nexahubtech.company/og/course-cybersecurity.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://nexahubtech.company/courses/cybersecurity#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://nexahubtech.company/courses/cybersecurity#course"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nexahubtech.company/courses/cybersecurity#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nexahubtech.company/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses",
+          "item": "https://nexahubtech.company/courses"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cybersecurity",
+          "item": "https://nexahubtech.company/courses/cybersecurity"
         }
       ]
     },

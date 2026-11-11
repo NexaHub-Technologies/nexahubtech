@@ -7,13 +7,15 @@ Canonical page: https://nexahubtech.company/courses/python-programming
 | | |
 |---|---|
 | Subject | Python Programming |
-| Price | ₦100,000 |
+| Fee — live online | ₦95,000, or 2 × ₦52,500 |
+| Fee — in kubwa, max 6 | ₦115,000, or 2 × ₦62,500 |
 | Duration | 6 Weeks |
-| Format | Taught live, online, hands-on. |
+| Format | Taught live — online, or in person at the centre. |
 | Level | The right place to start if you have never coded |
-| Start | Any time |
+| Start | Any day |
+| Session times | Mon, Wed, Fri · 8:30 AM – 11:00 AM (in kubwa, max 6); Tue, Thu · 2:00 PM – 4:00 PM (in kubwa, max 6); Sat · 12:30 PM – 3:30 PM (in kubwa, max 6); Mon, Wed, Fri · 7:00 PM – 9:00 PM (live online); Tue, Thu · 7:00 PM – 9:00 PM (live online) |
 
-An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.
 
 ## The idea this course installs: Names are labels, not boxes
 
@@ -65,6 +67,10 @@ What you need to have:
 - File handling and API integration
 - Real-world project at the end
 - No prior coding experience required
+
+## Where it leads
+
+Next: [Data Analysis](https://nexahubtech.company/courses/data-analysis.md).
 
 ## Enrol
 

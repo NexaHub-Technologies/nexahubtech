@@ -6,7 +6,7 @@
 |---|---|
 | **Course** | [Web Development](../courses/web-development-fullstack.md) |
 | **Modules** | 06 |
-| **Weeks** | 9–10 |
+| **Weeks** | 15–18 |
 | **Course level** | Built for complete beginners |
 
 ## What you can rely on
@@ -47,8 +47,8 @@ a claim form that takes a code. Server: `POST /items`, `GET /items?q=&category=`
 run it locally, and where the split falls.
 
 **Out of scope**
-- User accounts. The claim code exists precisely so no login is needed. Two weeks
-  does not hold sessions, hashing and this product.
+- User accounts. The claim code exists precisely so no login is needed. One
+  capstone does not hold sessions, hashing and this product.
 - Photo upload. File storage is a deployment problem rather than an application
   one, and it is where this capstone dies. A text description is enough.
 

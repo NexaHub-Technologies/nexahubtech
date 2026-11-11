@@ -7,13 +7,15 @@ Canonical page: https://nexahubtech.company/courses/mobile-development
 | | |
 |---|---|
 | Subject | Mobile Development |
-| Price | ₦190,000 |
+| Fee — live online | ₦190,000, or 2 × ₦102,500 |
+| Fee — in kubwa, max 6 | ₦230,000, or 2 × ₦125,000 |
 | Duration | 12 Weeks |
-| Format | Taught live, online, hands-on. |
+| Format | Taught live — online, or in person at the centre. |
 | Level | Assumes you can already program |
-| Start | Any time |
+| Start | Any day |
+| Session times | Mon, Wed, Fri · 8:30 AM – 11:00 AM (in kubwa, max 6); Tue, Thu · 2:00 PM – 4:00 PM (in kubwa, max 6); Sat · 12:30 PM – 3:30 PM (in kubwa, max 6); Mon, Wed, Fri · 7:00 PM – 9:00 PM (live online); Tue, Thu · 7:00 PM – 9:00 PM (live online) |
 
-An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.
 
 ## The idea this course installs: Your app is a guest, not the host
 

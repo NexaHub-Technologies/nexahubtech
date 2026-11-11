@@ -7,13 +7,14 @@ Canonical page: https://nexahubtech.company/courses/microsoft-office
 | | |
 |---|---|
 | Subject | Word, Excel, PowerPoint & Access |
-| Price | ₦110,000 |
-| Duration | 10 Weeks |
-| Format | Taught live, online, hands-on. |
+| Fee — in kubwa, max 6 | ₦95,000, or 2 × ₦52,500 |
+| Duration | 8 Weeks |
+| Format | Taught in the centre, in person. |
 | Level | Built for clerical and office staff already doing the work |
-| Start | Any time |
+| Start | Any day |
+| Session times | Tue, Thu · 8:30 AM – 11:00 AM (in kubwa, max 6); Mon, Wed, Fri · 11:30 AM – 2:00 PM (in kubwa, max 6); Sat · 9:00 AM – 12:00 PM (in kubwa, max 6) |
 
-An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+Office work is learnt at a real desk, on a real machine, with your own files open — so this course is taught in person at our Kubwa centre, in a group of at most 6, on licensed Windows machines. Bring work from your own desk, start the day you are ready, and leave each session with something that already runs better. Teams can also be trained at their own office.
 
 ## The idea this course installs: The data is not the document
 
@@ -62,6 +63,10 @@ What you need to have:
 - Built around real clerical work, not invented exercises
 - When to stop using a spreadsheet and start using a database
 - Licensed machines available in the centre
+
+## Where it leads
+
+Next: [Data Analysis](https://nexahubtech.company/courses/data-analysis.md).
 
 ## Enrol
 
