@@ -7,7 +7,6 @@ import { ANTIPATTERNS, PRINCIPLES, SESSION } from "../lib/teaching";
 
 export const Route = createFileRoute("/teaching")({
 	component: Teaching,
-	ssr: false,
 	head: () => pageMeta(PAGES.teaching),
 });
 

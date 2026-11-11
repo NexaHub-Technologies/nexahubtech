@@ -13,7 +13,6 @@ import { WORK } from "../lib/work";
    `bun run generate-discovery`, and repoint the /approach hero link here. */
 export const Route = createFileRoute("/work")({
 	component: Work,
-	ssr: false,
 	head: () => pageMeta(PAGES.work),
 });
 

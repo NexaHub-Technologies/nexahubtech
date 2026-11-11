@@ -6,7 +6,6 @@ import { getServiceBySlug, SERVICES } from "../../lib/services";
 
 export const Route = createFileRoute("/services/$slug")({
 	component: ServiceDetail,
-	ssr: false,
 	head: ({ params }) => {
 		const service = getServiceBySlug(params.slug);
 		return pageMeta(

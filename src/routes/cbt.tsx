@@ -13,7 +13,6 @@ import { pageMeta } from "../lib/seo";
 
 export const Route = createFileRoute("/cbt")({
 	component: CbtPage,
-	ssr: false,
 	head: () => pageMeta(PAGES.cbt),
 });
 

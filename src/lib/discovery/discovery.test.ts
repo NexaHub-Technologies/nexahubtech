@@ -194,3 +194,20 @@ describe("robots.txt", () => {
 		expect(robots).toContain(`Sitemap: ${SITE_URL}/sitemap.xml`);
 	});
 });
+
+/* Google indexes the HTML it is served. With ssr: false that HTML is only the
+   preloader, so Search Console filed the pages under "Crawled – currently not
+   indexed". Every route must render its content on the server. */
+describe("server rendering", () => {
+	const routes = (dir: string): string[] =>
+		readdirSync(dir, { withFileTypes: true }).flatMap((e) =>
+			e.isDirectory()
+				? routes(join(dir, e.name))
+				: e.name.endsWith(".tsx")
+					? [join(dir, e.name)]
+					: [],
+		);
+	it.each(routes("src/routes"))("%s renders on the server", (file) => {
+		expect(readFileSync(file, "utf8")).not.toMatch(/ssr:\s*false/);
+	});
+});

@@ -7,7 +7,6 @@ import { SERVICES } from "../../lib/services";
 
 export const Route = createFileRoute("/services/")({
 	component: ServicesIndex,
-	ssr: false,
 	head: () => pageMeta(PAGES.services),
 });
 
