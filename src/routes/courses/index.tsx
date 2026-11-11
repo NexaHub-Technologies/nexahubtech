@@ -1,6 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { FeeLines } from "../../components/fees";
 import { Eyebrow, useReveal } from "../../components/site";
-import { COURSE_COUNT_WORD_CAP, COURSES } from "../../lib/courses";
+import {
+	bundleSaving,
+	CENTRE_SEATS,
+	COURSE_COUNT_WORD_CAP,
+	COURSES,
+	coursesAt,
+	formatNaira,
+	getCourseBySlug,
+	LEVELS,
+} from "../../lib/courses";
 import { PAGES } from "../../lib/pages";
 import { pageMeta } from "../../lib/seo";
 
@@ -8,6 +18,21 @@ export const Route = createFileRoute("/courses/")({
 	component: CoursesIndex,
 	ssr: false,
 	head: () => pageMeta(PAGES.courses),
+});
+
+/* one sensible route through the catalogue, for somebody who has not chosen
+   yet. Every stop is a real course — an unknown slug fails the build. */
+const PATH = [
+	"computer-essentials",
+	"pc-basics",
+	"frontend-development",
+	"backend-development",
+	"react-development",
+	"nextjs-fullstack",
+].map((slug) => {
+	const c = getCourseBySlug(slug);
+	if (!c) throw new Error(`courses/index: ${slug} is not a course`);
+	return c;
 });
 
 function CoursesIndex() {
@@ -26,55 +51,109 @@ function CoursesIndex() {
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
 						{COURSE_COUNT_WORD_CAP} courses built on the same principle:
-						understand first, then build. Every track is taught live by an
-						instructor, starts whenever you are ready, and is designed to grow
-						real capability — not just familiarity.
+						understand first, then build. Every one is taught live by an
+						instructor — online, or in a group of at most {CENTRE_SEATS} at our
+						Kubwa centre — and starts whenever you are ready.
 					</p>
 					<p className="rise rise-4 mt-4 text-[0.95rem] text-mute">
-						Select a course to see its modules, what a session looks like, and
-						how to enrol.
+						Every fee can be paid in full or in instalments.{" "}
+						<Link to="/fees" className="underline font-semibold">
+							All fees on one page
+						</Link>{" "}
+						·{" "}
+						<Link to="/timetable" className="underline font-semibold">
+							Session times
+						</Link>
 					</p>
 				</div>
 			</section>
 
-			<section className="wrap py-14">
-				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-					{COURSES.map((c, i) => (
-						<Link
-							key={c.slug}
-							to="/courses/$slug"
-							params={{ slug: c.slug }}
-							className="card card-lift reveal panel-learn p-7 flex flex-col"
-						>
-							<div className="flex items-center gap-3 mb-4">
-								<span className="step-badge badge-learn">
-									{String(i + 1).padStart(2, "0")}
-								</span>
-								{c.d && (
-									<span className="pill text-[0.75rem] !py-1 !px-2.5">
-										{c.d}
+			<section className="wrap pt-4 pb-6">
+				<div className="reveal card p-6 md:p-7">
+					<span className="text-[0.8rem] text-mute font-semibold uppercase tracking-wider">
+						Not sure where to start? One route through
+					</span>
+					<div className="path-row mt-3">
+						{PATH.map((c, i) => (
+							<span key={c.slug} className="contents">
+								{i > 0 && (
+									<span className="path-arrow" aria-hidden="true">
+										→
 									</span>
 								)}
-							</div>
-							<h2 className="display text-[1.3rem]">{c.t}</h2>
-							<p className="lead mt-2 text-[0.95rem] flex-1">{c.tagline}</p>
-							<span className="course-level">{c.requirements.level}</span>
-							<div className="flex items-center justify-between mt-4 pt-4 border-t border-[var(--line-soft)]">
-								<span className="display text-[1.05rem]">{c.price}</span>
-								<span className="text-[0.85rem] text-mute font-semibold">
-									{c.duration}
-								</span>
-							</div>
-							<span className="view-link mt-3">
-								View course <i aria-hidden="true">→</i>
+								<Link
+									to="/courses/$slug"
+									params={{ slug: c.slug }}
+									className="path-chip"
+								>
+									{c.t}
+								</Link>
 							</span>
-						</Link>
-					))}
+						))}
+					</div>
 				</div>
 			</section>
 
+			{LEVELS.map((level) => (
+				<section key={level.id} className="wrap py-10" id={level.id}>
+					<div className="reveal max-w-[42rem] mb-7">
+						<Eyebrow>{level.t}</Eyebrow>
+						<p className="lead mt-3">{level.d}</p>
+					</div>
+					<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+						{coursesAt(level.id).map((c) => {
+							const saving = bundleSaving(c);
+							return (
+								<Link
+									key={c.slug}
+									to="/courses/$slug"
+									params={{ slug: c.slug }}
+									className="card card-lift reveal panel-learn p-7 flex flex-col"
+								>
+									<div className="flex items-center gap-3 mb-4">
+										<span className="step-badge badge-learn">
+											{String(COURSES.indexOf(c) + 1).padStart(2, "0")}
+										</span>
+										{c.d && (
+											<span className="pill text-[0.75rem] !py-1 !px-2.5">
+												{c.d}
+											</span>
+										)}
+									</div>
+									<h2 className="display text-[1.3rem]">{c.t}</h2>
+									<p className="lead mt-2 text-[0.95rem] flex-1">{c.tagline}</p>
+									<span className="course-level">{c.requirements.level}</span>
+									{saving && c.bundle ? (
+										<span className="course-level">
+											{c.bundle.parts
+												.map((s) => getCourseBySlug(s)?.t ?? s)
+												.join(" + ")}{" "}
+											in one track — save {formatNaira(saving)}
+										</span>
+									) : null}
+									<div className="mt-4 pt-4 border-t border-[var(--line-soft)]">
+										<FeeLines course={c} />
+									</div>
+									<div className="flex items-center justify-between mt-3">
+										<span className="text-[0.85rem] text-mute font-semibold">
+											{c.duration} ·{" "}
+											{c.admission === "rolling"
+												? "start any day"
+												: "on request"}
+										</span>
+										<span className="view-link">
+											View <i aria-hidden="true">→</i>
+										</span>
+									</div>
+								</Link>
+							);
+						})}
+					</div>
+				</section>
+			))}
+
 			{/* CBT Training Banner */}
-			<section className="wrap pb-8">
+			<section className="wrap py-8">
 				<div className="reveal card panel-learn p-8 md:p-10 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
 					<div className="max-w-[36rem]">
 						<span className="pill text-[0.78rem] !py-1 !px-2.5">
@@ -125,15 +204,20 @@ function CoursesIndex() {
 							<h3 className="display text-[1.3rem]">Ready to start?</h3>
 							<p className="lead mt-2">
 								Pick a course and tell us a little about you. We'll agree your
-								start date and session times.
+								start date and which weekly session you join.
 							</p>
-							<Link
-								to="/enrol"
-								search={{ course: undefined }}
-								className="btn btn-primary mt-5"
-							>
-								Enrol now
-							</Link>
+							<div className="mt-5 flex flex-wrap gap-3">
+								<Link
+									to="/enrol"
+									search={{ course: undefined }}
+									className="btn btn-primary"
+								>
+									Enrol now
+								</Link>
+								<Link to="/for-business" className="btn btn-ghost">
+									Training a team?
+								</Link>
+							</div>
 						</div>
 					</div>
 				</div>

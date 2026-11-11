@@ -1,9 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { FeeOptions, NextSteps, SlotList } from "../../components/fees";
 import { SessionLoop } from "../../components/session-loop";
 import { Eyebrow, useReveal } from "../../components/site";
-import { COURSES, getCourseBySlug } from "../../lib/courses";
+import {
+	bundlesContaining,
+	COURSES,
+	deliveryPhrase,
+	getCourseBySlug,
+	priceLabel,
+} from "../../lib/courses";
 import { coursePage } from "../../lib/pages";
 import { pageMeta } from "../../lib/seo";
+import { slotsFor } from "../../lib/timetable";
 
 export const Route = createFileRoute("/courses/$slug/")({
 	component: CourseDetail,
@@ -46,6 +54,8 @@ function CourseDetail() {
 	const prev = currentIndex > 0 ? COURSES[currentIndex - 1] : null;
 	const next =
 		currentIndex < COURSES.length - 1 ? COURSES[currentIndex + 1] : null;
+	const onRequest = course.admission === "on-request";
+	const enrolLabel = onRequest ? "Register your interest" : "Enrol now";
 
 	return (
 		<>
@@ -61,9 +71,12 @@ function CourseDetail() {
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
 						{course.tagline}
 					</p>
-					<div className="rise rise-4 mt-6 flex flex-wrap items-center gap-4">
-						<span className="display text-[1.4rem]">{course.price}</span>
-						<span className="text-mute font-semibold">{course.duration}</span>
+					<div className="rise rise-4 mt-6 flex flex-wrap items-center gap-x-4 gap-y-1">
+						<span className="display text-[1.4rem]">{priceLabel(course)}</span>
+						<span className="text-mute font-semibold">
+							{course.duration} · {deliveryPhrase(course)} ·{" "}
+							{onRequest ? "opens on request" : "start any day"}
+						</span>
 					</div>
 					<div className="rise rise-5 mt-8 flex flex-wrap gap-3">
 						<Link
@@ -71,7 +84,7 @@ function CourseDetail() {
 							search={{ course: course.slug }}
 							className="btn btn-primary"
 						>
-							Enrol now
+							{enrolLabel}
 						</Link>
 						<Link to="/courses" className="btn btn-ghost">
 							All courses
@@ -228,41 +241,72 @@ function CourseDetail() {
 				</div>
 			</section>
 
-			{/* logistics */}
+			{/* how it is taught, what it costs each way, and when it runs */}
 			<section className="wrap py-14">
-				<div className="reveal grid md:grid-cols-[1.1fr_0.9fr] gap-6 items-center">
+				<div className="reveal max-w-[42rem]">
+					<Eyebrow variant="plain">Format & fees</Eyebrow>
+					<h2 className="shout shout-md mt-4">{course.format.t}</h2>
+					<p className="lead mt-4">{course.format.d}</p>
+				</div>
+				<div className="reveal mt-8">
+					<FeeOptions course={course} />
+					<p className="text-[0.88rem] text-mute mt-4">
+						{course.duration}. Pay in full before your first session, or in
+						equal instalments across the course.{" "}
+						<Link to="/fees" className="underline font-semibold">
+							Every fee
+						</Link>
+					</p>
+				</div>
+
+				<div className="reveal grid md:grid-cols-[1.1fr_0.9fr] gap-6 items-start mt-12">
 					<div>
-						<Eyebrow variant="plain">Format</Eyebrow>
-						<h2 className="shout shout-md mt-4">{course.format.t}</h2>
-						<p className="lead mt-4 max-w-[34rem]">{course.format.d}</p>
-						<div className="flex items-center gap-6 mt-6">
-							<div>
-								<span className="display text-[1.6rem]">{course.price}</span>
-								<p className="text-[0.85rem] text-mute mt-0.5">Course fee</p>
-							</div>
-							<div className="w-px h-10 bg-[var(--line)]" />
-							<div>
-								<span className="display text-[1.6rem]">{course.duration}</span>
-								<p className="text-[0.85rem] text-mute mt-0.5">Duration</p>
-							</div>
+						<h3 className="display text-[1.3rem]">
+							{onRequest ? "When it opens" : "When it runs"}
+						</h3>
+						<p className="lead mt-2 text-[0.95rem]">
+							{onRequest
+								? "This course opens when enough people have asked for it, in the sessions below. Register your interest and we will tell you when it starts."
+								: "There are no intakes to wait for. Start any day, in whichever of these weekly sessions suits you — people at different points in the course share a session, and the materials carry you at your own pace."}
+						</p>
+						<div className="mt-4">
+							<SlotList slots={slotsFor(course)} />
 						</div>
+						<Link to="/timetable" className="view-link mt-4">
+							The whole week's timetable <i aria-hidden="true">→</i>
+						</Link>
 					</div>
 					<div className="card panel-learn p-8">
-						<h3 className="display text-[1.3rem]">Ready to start?</h3>
+						<h3 className="display text-[1.3rem]">
+							{onRequest ? "Interested?" : "Ready to start?"}
+						</h3>
 						<p className="lead mt-2">
-							Tell us a little about you and we'll agree your start date and
-							session times.
+							{onRequest
+								? "Tell us a little about you and how you would like to take it, and we will be in touch as soon as it opens."
+								: "Tell us a little about you and we'll agree your start date and which weekly session you join."}
 						</p>
 						<Link
 							to="/enrol"
 							search={{ course: course.slug }}
 							className="btn btn-primary mt-5"
 						>
-							Enrol now
+							{enrolLabel}
 						</Link>
 					</div>
 				</div>
 			</section>
+
+			{/* where it leads — the next course, or the track this one is half of */}
+			{course.next || course.bundle || bundlesContaining(course.slug).length ? (
+				<section className="wrap py-14">
+					<div className="reveal max-w-[40rem] mb-7">
+						<Eyebrow>Where this leads</Eyebrow>
+					</div>
+					<div className="reveal">
+						<NextSteps course={course} />
+					</div>
+				</section>
+			) : null}
 
 			{/* navigation between courses */}
 			<section className="wrap py-14">
@@ -278,7 +322,7 @@ function CourseDetail() {
 							</span>
 							<h3 className="display text-[1.2rem] mt-2">{prev.t}</h3>
 							<p className="lead mt-1 text-[0.9rem]">
-								{prev.price} · {prev.duration}
+								{priceLabel(prev)} · {prev.duration}
 							</p>
 						</Link>
 					) : (
@@ -295,7 +339,7 @@ function CourseDetail() {
 							</span>
 							<h3 className="display text-[1.2rem] mt-2">{next.t}</h3>
 							<p className="lead mt-1 text-[0.9rem]">
-								{next.price} · {next.duration}
+								{priceLabel(next)} · {next.duration}
 							</p>
 						</Link>
 					) : (

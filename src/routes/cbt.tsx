@@ -281,13 +281,22 @@ function CbtPage() {
 									</li>
 								))}
 							</ul>
-							<Link
-								to="/enrol"
-								search={{ course: "cbt-training" }}
-								className={`btn ${pkg.badge ? "btn-primary" : "btn-ghost"} w-full mt-6 !py-2 text-[0.88rem]`}
-							>
-								Choose this
-							</Link>
+							{pkg.id === "school-group" ? (
+								<Link
+									to="/for-business"
+									className="btn btn-primary w-full mt-6 !py-2 text-[0.88rem]"
+								>
+									Arrange for a group
+								</Link>
+							) : (
+								<Link
+									to="/enrol"
+									search={{ course: "cbt-training" }}
+									className={`btn ${pkg.badge ? "btn-primary" : "btn-ghost"} w-full mt-6 !py-2 text-[0.88rem]`}
+								>
+									Choose this
+								</Link>
+							)}
 						</div>
 					))}
 				</div>

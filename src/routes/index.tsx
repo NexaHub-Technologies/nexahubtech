@@ -1,7 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMode } from "../components/mode";
 import { Eyebrow, useReveal } from "../components/site";
-import { COURSE_COUNT, COURSE_COUNT_WORD_CAP } from "../lib/courses";
+import { BUSINESS_OFFERS } from "../lib/business";
+import { CBT_DETAILS } from "../lib/cbt";
+import {
+	CENTRE_SEATS,
+	COURSE_COUNT,
+	coursesAt,
+	formatNaira,
+	LEVELS,
+	type Level,
+	lowestFee,
+} from "../lib/courses";
 import { PAGES } from "../lib/pages";
 import { pageMeta } from "../lib/seo";
 import { SERVICES } from "../lib/services";
@@ -55,14 +65,14 @@ function HeroStage() {
    the mode decides who gets addressed first. */
 const HERO_BY_MODE = {
 	learn: {
-		pill: "A tech school + a software studio",
-		headA: "Learn to build.",
-		headB: "Build ",
-		headAccent: "for real",
+		pill: "A tech school in Kubwa, FCT-Abuja",
+		headA: "Learn tech properly.",
+		headB: "In Kubwa or ",
+		headAccent: "online",
 		accentVar: "var(--learn-ink)",
-		lead: "NexaHubTech teaches people the skills to become developers — then puts those skills to work building real products for real clients. Learning that's tied to actual work, not theory.",
-		primary: { to: "/courses", label: "Explore the courses" },
-		secondary: { to: "/contact", label: "Work with us" },
+		lead: `Small classes of ${CENTRE_SEATS} at our Kubwa centre, or live online from anywhere in Nigeria. The mental model first, then the practice — taught by people who build real software every day. Start any day, and pay in instalments if you need to.`,
+		primary: { to: "/courses", label: "See courses & fees" },
+		secondary: { to: "/centre", label: "Visit the centre" },
 	},
 	build: {
 		pill: "A software studio + a tech school",
@@ -154,11 +164,11 @@ function Hero() {
    Decorative: every phrase on them is said in full elsewhere on the page. */
 const TAPE_BY_MODE = {
 	learn: [
-		"Learn to build",
-		"Build for real",
-		"Taught live",
+		`Max ${CENTRE_SEATS} per class`,
+		"In Kubwa or online",
+		"Pay in instalments",
 		"Mental model first",
-		"Start when you're ready",
+		"Start any day",
 	],
 	build: [
 		"Software, built properly",
@@ -206,9 +216,9 @@ function Numbers() {
 					{ n: "1", l: "team that teaches what it ships" },
 				]
 			: [
-					{ n: String(COURSE_COUNT), l: "tracks, taught live" },
-					{ n: "3", l: "steps: understand, practice, build" },
-					{ n: "1", l: "studio where the best learners ship real work" },
+					{ n: String(COURSE_COUNT), l: "courses, taught live" },
+					{ n: String(CENTRE_SEATS), l: "seats per class at the centre" },
+					{ n: "2", l: "ways to learn: in Kubwa or live online" },
 				];
 	return (
 		<section className="wrap py-14">
@@ -241,93 +251,166 @@ function Thesis() {
 	);
 }
 
-const LEARN_FEATS = [
-	"Frontend foundations — HTML, CSS & JavaScript done properly",
-	"Chunk-based teaching: the mental model first, then the syntax",
-	"Structured session notes, exercise briefs & model answers",
-	"Built to grow real engineering intuition — not copy-paste habits",
-];
-const BUILD_FEATS = [
-	"Production software built for real businesses and founders",
-	"Thoughtful, reliable products — designed before they’re built",
-	"A studio that treats every project as a problem worth understanding",
-	"Where our best learners get to work on the real thing",
+/* ── learn-side sections ─────────────────────────────────────────── */
+
+const STARTING_POINTS: { level: Level; who: string }[] = [
+	{ level: "start-here", who: "New to computers or office work" },
+	{ level: "developer", who: "Ready to learn to code" },
+	{ level: "level-up", who: "Already writing code" },
 ];
 
-function WhatWeDo() {
+function StartingPoints() {
 	return (
 		<section className="wrap py-16">
 			<div className="reveal max-w-[40rem] mb-10">
-				<Eyebrow variant="plain">What we do</Eyebrow>
-				<h2 className="shout mt-4">Two arms, one mission.</h2>
+				<Eyebrow>Choose your starting point</Eyebrow>
+				<h2 className="shout mt-4">Wherever you are, there is a next step.</h2>
+			</div>
+			<div className="grid md:grid-cols-3 gap-5">
+				{STARTING_POINTS.map(({ level, who }) => {
+					const meta = LEVELS.find((l) => l.id === level);
+					const courses = coursesAt(level);
+					const from = formatNaira(Math.min(...courses.map(lowestFee)));
+					return (
+						<Link
+							key={level}
+							to="/courses"
+							hash={level}
+							className="card card-lift panel-learn reveal p-7 flex flex-col"
+						>
+							<span className="text-[0.8rem] text-mute font-semibold uppercase tracking-wider">
+								{who}
+							</span>
+							<h3 className="display text-[1.5rem] mt-2">{meta?.t}</h3>
+							<p className="lead mt-2 text-[0.95rem] flex-1">
+								{courses.map((c) => c.t).join(" · ")}
+							</p>
+							<div className="flex items-center justify-between mt-5 pt-4 border-t border-[var(--line-soft)]">
+								<span className="display text-[1.05rem]">From {from}</span>
+								<span className="view-link">
+									See courses <i aria-hidden="true">→</i>
+								</span>
+							</div>
+						</Link>
+					);
+				})}
+			</div>
+		</section>
+	);
+}
+
+const AT_THE_CENTRE = [
+	"Somebody beside you who can see your screen",
+	"Machines provided for computer, office and CBT classes",
+	`Open ${CBT_DETAILS.hours}`,
+	"Weekday and Saturday sessions",
+];
+
+const LIVE_ONLINE = [
+	"Live sessions with a real instructor — not recordings",
+	"Materials, exercises and feedback on WhatsApp",
+	"Evening sessions around a working day",
+	"Priced below a seat in the centre",
+];
+
+function TwoWays() {
+	return (
+		<section className="wrap py-16">
+			<div className="reveal max-w-[40rem] mb-10">
+				<Eyebrow>In Kubwa or online</Eyebrow>
+				<h2 className="shout mt-4">Two ways in. Same course.</h2>
 				<p className="lead mt-4">
-					Teaching people to build, and building real things — each one makes
-					the other better.
+					The same curriculum, the same materials and the same instructors — in
+					the room with you, or live on your screen.
 				</p>
 			</div>
-
 			<div className="grid md:grid-cols-2 gap-6">
-				<div className="slab slab-learn panel-studio reveal">
-					<span className="slab-word" aria-hidden="true">
-						Learn
-					</span>
-					<Eyebrow>Learn · the school</Eyebrow>
-					<h3 className="display mt-3 text-[2rem] sm:text-[2.3rem]">
-						Become a developer, properly.
+				<div className="card panel-learn reveal p-8">
+					<Eyebrow>At the centre</Eyebrow>
+					<h3 className="display text-[1.7rem] mt-3">
+						At most {CENTRE_SEATS} people, one instructor, in the room.
 					</h3>
-					<p className="lead mt-3">
-						{COURSE_COUNT_WORD_CAP} tracks taught live, started whenever you are
-						ready — PC basics, Microsoft Office, frontend, JavaScript, React,
-						Next.js, backend, fullstack, mobile, cybersecurity, Python, data and
-						video — for people who want to truly understand how things work.
-					</p>
 					<ul className="mt-5">
-						{LEARN_FEATS.map((x) => (
+						{AT_THE_CENTRE.map((x) => (
 							<li key={x} className="feat">
 								<span className="mk mk-learn">✓</span>
 								{x}
 							</li>
 						))}
 					</ul>
-					<div className="mt-7 flex flex-wrap items-center gap-4">
-						<Link to="/courses" className="btn btn-primary">
-							Explore the courses
-						</Link>
-						<Link to="/cbt" className="view-link">
-							CBT for WAEC & JAMB <i aria-hidden="true">→</i>
-						</Link>
-					</div>
+					<Link to="/centre" className="view-link mt-6">
+						About the centre <i aria-hidden="true">→</i>
+					</Link>
 				</div>
-
-				<div className="slab slab-build panel-studio reveal">
-					<span className="slab-word" aria-hidden="true">
-						Build
-					</span>
-					<Eyebrow variant="build">Build · the studio</Eyebrow>
-					<h3 className="display mt-3 text-[2rem] sm:text-[2.3rem]">
-						Get your product built right.
+				<div className="card reveal p-8">
+					<Eyebrow variant="build">Live online</Eyebrow>
+					<h3 className="display text-[1.7rem] mt-3">
+						From anywhere in Nigeria, in the evening.
 					</h3>
-					<p className="lead mt-3">
-						A software studio that builds production systems for clients — with
-						the same care and rigor we teach in the classroom.
-					</p>
 					<ul className="mt-5">
-						{BUILD_FEATS.map((x) => (
+						{LIVE_ONLINE.map((x) => (
 							<li key={x} className="feat">
 								<span className="mk mk-build">✓</span>
 								{x}
 							</li>
 						))}
 					</ul>
+					<Link to="/timetable" className="view-link mt-6">
+						Session times <i aria-hidden="true">→</i>
+					</Link>
+				</div>
+			</div>
+		</section>
+	);
+}
+
+function StudioProof() {
+	return (
+		<section className="wrap py-16">
+			<div className="slab slab-build panel-studio reveal">
+				<span className="slab-word" aria-hidden="true">
+					Build
+				</span>
+				<div className="max-w-[40rem]">
+					<Eyebrow variant="build">Built by people who build</Eyebrow>
+					<h2 className="display mt-3 text-[2rem] sm:text-[2.3rem]">
+						Taught by a team that ships real software.
+					</h2>
+					<p className="lead mt-3">
+						The school sits beside a software studio that builds production
+						systems for businesses. The problems it meets shape the lessons, and
+						the strongest learners get to work on the real thing.
+					</p>
 					<div className="mt-7 flex flex-wrap items-center gap-4">
 						<Link to="/services" className="btn btn-teal">
-							See what we build
+							See the studio
 						</Link>
-						<Link to="/contact" className="view-link is-build">
-							Start a project <i aria-hidden="true">→</i>
+						<Link to="/teaching" className="view-link is-build">
+							How we teach <i aria-hidden="true">→</i>
 						</Link>
 					</div>
 				</div>
+			</div>
+		</section>
+	);
+}
+
+function ForTeams() {
+	return (
+		<section className="wrap py-10">
+			<div className="reveal card p-8 md:p-10 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+				<div className="max-w-[38rem]">
+					<Eyebrow variant="plain">For organisations</Eyebrow>
+					<h2 className="display text-[1.6rem] mt-3">
+						Training a team, or a school's candidates?
+					</h2>
+					<p className="lead text-[0.97rem] mt-2">
+						{BUSINESS_OFFERS.map((o) => o.t).join(" · ")}.
+					</p>
+				</div>
+				<Link to="/for-business" className="btn btn-primary shrink-0">
+					For business
+				</Link>
 			</div>
 		</section>
 	);
@@ -417,40 +500,6 @@ function Approach() {
 	);
 }
 
-const AUDIENCE = [
-	{
-		t: "Aspiring developers",
-		d: "Whether you're just starting out or changing careers, we provide a clear path into web development with practical, hands-on learning from people who build software every day.",
-	},
-	{
-		t: "Founders & businesses",
-		d: "Need a reliable technology partner? We work closely with you to understand your goals and build software that supports your business as it grows.",
-	},
-	{
-		t: "Our graduates",
-		d: "Learning doesn't stop at graduation. We continue to support our alumni as they gain experience, work on real projects, and grow in their careers.",
-	},
-];
-
-function Audience() {
-	return (
-		<section className="wrap py-16">
-			<div className="reveal max-w-[40rem] mb-10">
-				<Eyebrow variant="plain">Who it’s for</Eyebrow>
-				<h2 className="shout mt-4">Built for people who want to build.</h2>
-			</div>
-			<div className="grid md:grid-cols-3 gap-5">
-				{AUDIENCE.map((a) => (
-					<div key={a.t} className="card card-lift audience-card reveal p-7">
-						<h3 className="display text-[1.25rem]">{a.t}</h3>
-						<p className="lead mt-3 text-[0.97rem]">{a.d}</p>
-					</div>
-				))}
-			</div>
-		</section>
-	);
-}
-
 function ClosingCTA() {
 	const { mode } = useMode();
 	const build = mode === "build";
@@ -477,7 +526,7 @@ function ClosingCTA() {
 					<p className="blast-lead mt-5">
 						{build
 							? "Tell us about the product you need. We’ll help you scope it, design it well, and build it right — then keep it running."
-							: "Start whenever you are ready and learn to build — the right way, taught live by people who do it every day. Or prepare for your WAEC and JAMB CBT exams at our Kubwa centre."}
+							: "Start any day, in Kubwa or online, and pay in full or in instalments — taught live by people who build software every day. Or prepare for your WAEC and JAMB CBT exams at our Kubwa centre."}
 					</p>
 					<div className="mt-8 flex flex-wrap gap-3">
 						{build ? (
@@ -487,7 +536,7 @@ function ClosingCTA() {
 						) : (
 							<>
 								<Link to="/courses" className="btn btn-blast">
-									Explore the courses <i aria-hidden="true">→</i>
+									See courses & fees <i aria-hidden="true">→</i>
 								</Link>
 								<Link to="/cbt" className="btn btn-ghost">
 									CBT Training for WAEC & JAMB
@@ -566,10 +615,11 @@ function Home() {
 			<Hero />
 			<Tapes />
 			<Numbers />
-			<Thesis />
-			<WhatWeDo />
+			<StartingPoints />
+			<TwoWays />
 			<Approach />
-			<Audience />
+			<StudioProof />
+			<ForTeams />
 			<ClosingCTA />
 		</>
 	);

@@ -6,7 +6,7 @@
 |---|---|
 | **Course** | [Data Analysis](../courses/data-analysis.md) |
 | **Modules** | 01–02 |
-| **Weeks** | 1–5 |
+| **Weeks** | 1–3 |
 | **Course level** | Open to beginners who enjoy a question |
 
 ## What you can rely on
@@ -27,7 +27,7 @@ This project cannot run until these exist.
 Kasuwa is a market-trading database the school builds and hands you: eight
 tables covering traders, stalls, orders, deliveries, payments and returns, and
 labelled synthetic on every page, because nothing produced from it is a fact
-about any real market. Eight questions get answered against it over five weeks.
+about any real market. Eight questions get answered against it over three weeks.
 
 It sits across both modules on purpose. Module 01 is the shaping of the question
 and module 02 is the SQL, and separating them produces analysts who can write a
@@ -59,7 +59,7 @@ three narrowed questions, the answers with their checks, and the correction.
 **Out of scope**
 - Charts. There are none in this project, deliberately — visualisation is module
   04, and a chart is a very effective way to stop looking at a number.
-- Pandas. The whole point of five weeks here is that the database does the work.
+- Pandas. The whole point of three weeks here is that the database does the work.
 
 **What is assessed**
 - An explicit account of what the dataset leaves out, and the selection effects

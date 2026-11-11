@@ -6,7 +6,7 @@
 |---|---|
 | **Course** | [Data Analysis](../courses/data-analysis.md) |
 | **Modules** | 05 |
-| **Weeks** | 11–12 |
+| **Weeks** | 9–10 |
 | **Course level** | Open to beginners who enjoy a question |
 
 ## What you can rely on
@@ -19,7 +19,7 @@ later project.
 
 **Course capstone.** Take one public Nigerian dataset from a question to a
 conclusion, and deliver a written analysis and a short presentation. Choose one
-of three. Whichever you take, **the dataset is locked at the end of week 10** —
+of three. Whichever you take, **the dataset is locked at the end of week 8** —
 two weeks is enough to analyse a dataset and not enough to also go and find one.
 
 **Budget Line** — federal budget data published by the Budget Office of the
@@ -59,7 +59,7 @@ and the slides.
 **Out of scope**
 - Causal claims. These are observational public datasets; "A caused B" is not
   available from any of the three, however strong the pattern looks.
-- A dataset you assemble yourself by scraping. Locked at week 10 means locked.
+- A dataset you assemble yourself by scraping. Locked at week 8 means locked.
 
 **What is assessed**
 - The question is stated before the analysis, and is answerable by this data.

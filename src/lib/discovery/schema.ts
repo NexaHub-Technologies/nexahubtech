@@ -16,7 +16,15 @@ import { APPROACH } from "../approach";
 import { CBT_DETAILS, CBT_FAQS, CBT_PACKAGES, CBT_PILLARS } from "../cbt";
 import { SUMMARY } from "../company";
 import { ADDRESS, CONTACT, MOTTO, SITE_URL } from "../contact";
-import { COURSES, type Course, taughtInPerson } from "../courses";
+import {
+	COURSES,
+	type Course,
+	DELIVERY_LABEL,
+	deliveriesOf,
+	type Fee,
+	formatNaira,
+	instalmentLabel,
+} from "../courses";
 import {
 	coursePage,
 	findPage,
@@ -85,9 +93,12 @@ const offerBase = {
 /* ── the organisation and the website ───────────────────────────── */
 
 function allPrices(): number[] {
-	return [...COURSES.map((c) => c.price), ...CBT_PACKAGES.map((p) => p.price)]
-		.map(naira)
-		.map(Number);
+	return [
+		...COURSES.flatMap((c) =>
+			deliveriesOf(c).map((d) => (c.fees[d] as Fee).upfront),
+		),
+		...CBT_PACKAGES.map((p) => Number(naira(p.price))),
+	];
 }
 
 export function organization(): Node {
@@ -172,7 +183,7 @@ export function website(): Node {
 
 export function course(c: Course): Node {
 	const page = coursePage(c);
-	const inPerson = taughtInPerson(c);
+	const ways = deliveriesOf(c);
 	return {
 		"@type": "Course",
 		"@id": ID.course(c),
@@ -203,18 +214,24 @@ export function course(c: Course): Node {
 				learningResourceType: p.capstone ? "Capstone project" : "Project",
 			})),
 		isAccessibleForFree: false,
-		offers: {
-			...offerBase,
-			price: naira(c.price),
-			url: abs(`${PAGES.enrol.path}?course=${c.slug}`),
-		},
-		hasCourseInstance: {
+		/* one offer per way the course is sold, each with its instalment plan */
+		offers: ways.map((d) => {
+			const fee = c.fees[d] as Fee;
+			return {
+				...offerBase,
+				name: DELIVERY_LABEL[d],
+				price: String(fee.upfront),
+				description: `${formatNaira(fee.upfront)} in full, or ${instalmentLabel(fee)}.`,
+				url: abs(`${PAGES.enrol.path}?course=${c.slug}`),
+			};
+		}),
+		hasCourseInstance: ways.map((d) => ({
 			"@type": "CourseInstance",
-			courseMode: inPerson ? "Onsite" : "Online",
+			courseMode: d === "inhouse" ? "Onsite" : "Online",
 			description: `${c.format.t} ${c.format.d}`,
 			duration: isoWeeks(c.duration),
-			location: inPerson ? ref(ID.organization) : undefined,
-		},
+			location: d === "inhouse" ? ref(ID.organization) : undefined,
+		})),
 	};
 }
 
@@ -416,6 +433,7 @@ function subjectOf(page: Page): { main?: string; nodes: Node[] } {
 		case PAGES.approach.path:
 			return { main: ID.approach, nodes: [approachHowTo()] };
 		case PAGES.enrol.path:
+		case PAGES.fees.path:
 			return { main: ID.courseCatalog, nodes: [courseCatalog()] };
 		default:
 			/* home, about, contact: the page is about the company itself */

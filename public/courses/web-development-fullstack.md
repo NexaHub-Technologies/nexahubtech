@@ -7,13 +7,15 @@ Canonical page: https://nexahubtech.company/courses/web-development-fullstack
 | | |
 |---|---|
 | Subject | Fullstack |
-| Price | ₦160,000 |
-| Duration | 10 Weeks |
-| Format | Taught live, online, hands-on. |
+| Fee — live online | ₦200,000, or 3 × ₦75,000 |
+| Fee — in kubwa, max 6 | ₦240,000, or 3 × ₦87,500 |
+| Duration | 18 Weeks |
+| Format | Taught live — online, or in person at the centre. |
 | Level | Built for complete beginners |
-| Start | Any time |
+| Start | Any day |
+| Session times | Mon, Wed, Fri · 8:30 AM – 11:00 AM (in kubwa, max 6); Tue, Thu · 2:00 PM – 4:00 PM (in kubwa, max 6); Sat · 12:30 PM – 3:30 PM (in kubwa, max 6); Mon, Wed, Fri · 7:00 PM – 9:00 PM (live online); Tue, Thu · 7:00 PM – 9:00 PM (live online) |
 
-An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.
 
 ## The idea this course installs: Two computers, one conversation
 
@@ -37,7 +39,7 @@ What you need to have:
 
 - A laptop with 8GB of RAM or more (Windows, macOS or Linux)
 - A stable internet connection for live sessions
-- 10–12 hours a week outside sessions — this track moves fast
+- 6–8 hours a week outside sessions for exercises and projects
 
 ## Modules
 
@@ -50,10 +52,10 @@ What you need to have:
 
 ## What you build
 
-- **Ajo** — a savings club's site, correct before it is styled *Weeks 1–3*
-- **Òjò** — a rain check across Nigerian towns *Weeks 4–6*
-- **Slot** — a booking API with no browser side at all *Weeks 7–8*
-- **Found** (capstone) — a deployed lost-and-found board *Weeks 9–10*
+- **Ajo** — a savings club's site, correct before it is styled *Weeks 1–5*
+- **Òjò** — a rain check across Nigerian towns *Weeks 6–9*
+- **Slot** — a booking API with no browser side at all *Weeks 10–14*
+- **Found** (capstone) — a deployed lost-and-found board *Weeks 15–18*
 
 ## Every session
 
@@ -63,11 +65,17 @@ What you need to have:
 
 ## Included
 
-- Frontend and backend in one track
+- Frontend and Backend in one 18-week track
 - HTML, CSS, JavaScript, and Node.js
 - Database integration and API design
 - Capstone fullstack project
 - Taught live with structured materials — start any time
+
+## Where it leads
+
+This one track covers Frontend Development and Backend Development, for ₦30,000 less than taking them separately.
+
+Next: [React](https://nexahubtech.company/courses/react-development.md).
 
 ## Enrol
 

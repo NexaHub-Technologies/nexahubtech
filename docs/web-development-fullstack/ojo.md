@@ -6,7 +6,7 @@
 |---|---|
 | **Course** | [Web Development](../courses/web-development-fullstack.md) |
 | **Modules** | 04 |
-| **Weeks** | 4–6 |
+| **Weeks** | 6–9 |
 | **Course level** | Built for complete beginners |
 
 ## What you can rely on
@@ -57,7 +57,7 @@ The request:
   the server and arrives in module 05. If you want it, the answer is "not yet,
   and here is which machine will own it".
 - Letting the visitor add a town by typing its name. That needs geocoding — a
-  second API and a second failure mode — and it will eat the three weeks.
+  second API and a second failure mode — and it will eat the four weeks.
 
 **What is assessed**
 - Loading, empty and failed states each handled on purpose, not discovered.

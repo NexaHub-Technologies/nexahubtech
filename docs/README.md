@@ -34,10 +34,10 @@ external dependency, and the full brief with its definition of done.
 from the videography instructor, so `docs/courses/videography-video-editing.md`
 still carries the generic briefs.
 
-**PC Basics and Microsoft Office have no projects at all**, by design rather than
-by omission. Both are assessed through their per-module exercise briefs: the
-people taking them need competence at a job they are already doing, not a
-portfolio piece. Neither has a `docs/<course>/` directory, and
+**Computer Essentials, PC Basics, Office Essentials, Microsoft Office and Mobile
+Videography have no projects at all**, by design rather than by omission. All five are assessed through their per-module exercise briefs: the
+people taking them need a working skill — usually for a job they are already
+doing — not a portfolio piece. None has a `docs/<course>/` directory, and
 `src/lib/course-docs.test.ts` fails if one appears.
 
 ## How the two stay in step

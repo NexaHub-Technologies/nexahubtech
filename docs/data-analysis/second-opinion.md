@@ -6,7 +6,7 @@
 |---|---|
 | **Course** | [Data Analysis](../courses/data-analysis.md) |
 | **Modules** | 04 |
-| **Weeks** | 9–10 |
+| **Weeks** | 7–8 |
 | **Course level** | Open to beginners who enjoy a question |
 
 ## What you can rely on

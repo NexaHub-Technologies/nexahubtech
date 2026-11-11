@@ -14,7 +14,7 @@ server.
 
 | | |
 |---|---|
-| **Format** | Taught live, online · start any time |
+| **Format** | Taught live — online, or in person at the centre · start any time |
 | **Scope** | The language itself, in both runtimes. Not a framework course. |
 
 ## Before you start

@@ -17,8 +17,8 @@ actually doing, and how to use one without the constant worry of breaking it.
 |---|---|
 | **Format** | Taught in the centre, in person · start any time |
 
-**Why in person, and not online like the rest.** Every other course here is
-taught live online. This one cannot be: the first thing a student needs is
+**Why in person only.** Most courses here can be taken live online or at the
+centre. This one is only taught at the centre: the first thing a student needs is
 someone standing beside them saying *that one, on the left*. Sitting a person who
 has never used a computer in front of a video call is asking them to use the
 skill the course exists to teach.
@@ -34,6 +34,10 @@ week one will be putting names to things you already do.
 centre, which is what most people do. A phone that can receive SMS, for setting
 up accounts safely. A USB drive of any size. 4–5 hours a week outside sessions
 to practise, and the practice is the course.
+
+> **A shorter way in.** [Computer Essentials](computer-essentials.md) is modules
+> 01–03 of this course on their own, over three weeks. Anyone who starts there
+> and carries on picks this course up at module 04.
 
 > **On pace.** Six weeks is not long, and the thing that decides whether it
 > works is not clever teaching — it is whether you touch a computer between
