@@ -134,7 +134,7 @@ function TikTokIcon() {
 }
 
 export const SOCIALS = [
-	{ label: "X", href: "https://x.com/NexaHubTech", icon: XIcon },
+	{ label: "X", href: "https://x.com/nexahubtech", icon: XIcon },
 	{
 		label: "Instagram",
 		href: "https://www.instagram.com/nexahubtech",
