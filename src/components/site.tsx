@@ -137,12 +137,12 @@ export const SOCIALS = [
 	{ label: "X", href: "https://x.com/NexaHubTech", icon: XIcon },
 	{
 		label: "Instagram",
-		href: "https://www.instagram.com/nexahub_tech",
+		href: "https://www.instagram.com/nexahubtech",
 		icon: InstagramIcon,
 	},
 	{
 		label: "TikTok",
-		href: "https://www.tiktok.com/@nexahub.tech",
+		href: "https://www.tiktok.com/@nexahubtech",
 		icon: TikTokIcon,
 	},
 ] as const;
