@@ -6,7 +6,7 @@ import { COURSES } from "../courses";
 import { INDEXABLE_PAGES, markdownPath, PAGES } from "../pages";
 import { pageMeta } from "../seo";
 import { AI_CRAWLERS, robotsTxt } from "./crawlers";
-import { discoveryFiles } from "./index";
+import { discoveryFiles, discoveryHeaders } from "./index";
 import { llmsTxt } from "./markdown";
 import { type Graph, isoWeeks, naira, pageGraph, siteGraph } from "./schema";
 
@@ -84,6 +84,30 @@ describe("published discovery files", () => {
 	it("has a share image on disk for every page it describes", () => {
 		for (const p of INDEXABLE_PAGES)
 			expect(existsSync(`public${p.image}`), p.image).toBe(true);
+	});
+});
+
+describe("discovery headers", () => {
+	const rules = discoveryHeaders();
+
+	/* a mirror without a canonical is a duplicate page as far as Google knows */
+	it("points every markdown mirror at its HTML page", () => {
+		for (const p of INDEXABLE_PAGES)
+			expect(rules[markdownPath(p.path)]?.headers.Link).toBe(
+				`<${SITE_URL}${p.path}>; rel="canonical"`,
+			);
+	});
+
+	it("covers only files that are published", () => {
+		for (const path of Object.keys(rules))
+			expect(Object.keys(files)).toContain(path);
+	});
+
+	/* the sitemap and robots.txt must stay readable and must not carry noindex */
+	it("keeps search results to pages", () => {
+		expect(rules["/llms.txt"].headers["X-Robots-Tag"]).toBe("noindex");
+		expect(rules["/sitemap.xml"]).toBeUndefined();
+		expect(rules["/robots.txt"]).toBeUndefined();
 	});
 });
 
