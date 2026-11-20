@@ -10,7 +10,7 @@
       "name": "NexaHubTech",
       "url": "https://nexahubtech.company/",
       "description": "NexaHubTech is a Nigerian technology company that designs, builds and maintains software for businesses. Its training division, NexaHubTech Academy, teaches practical technology skills — online and in person — and develops the talent our engineering work depends on.",
-      "slogan": "Software, built properly.",
+      "slogan": "Design. Ship. Support.",
       "logo": {
         "@type": "ImageObject",
         "@id": "https://nexahubtech.company/#logo",
@@ -110,7 +110,7 @@
       "alternateName": "NexaHubTech Academy, a division of NexaHubTech",
       "url": "https://nexahubtech.company/academy",
       "description": "NexaHubTech Academy is the training division of NexaHubTech. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day.",
-      "slogan": "Learn to build. Build for real.",
+      "slogan": "Learn. Build. Ship.",
       "parentOrganization": {
         "@id": "https://nexahubtech.company/#organization"
       },

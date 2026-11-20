@@ -46,10 +46,10 @@ export const NAV = [
 	   { to: "/work", label: "Work", side: "build" }, */
 	{ to: "/approach", label: "Approach", side: "build" },
 	{ to: "/about", label: "About", side: "build" },
-	/* the Academy's header has no Home link: its name is the link home. Four
-	   links and one button — pricing and organisations live in the footer and on
-	   the pages that need them. */
+	/* the Academy's header has no Home link: its name is the link home.
+	   Organisations lives in the footer and on the pages that need it. */
 	{ to: "/courses", label: "Courses", side: "learn" },
+	{ to: "/fees", label: "Pricing", side: "learn" },
 	{ to: "/cbt", label: "CBT prep", side: "learn" },
 	{ to: "/academy/about", label: "About", side: "learn" },
 	{ to: "/contact", label: "Contact" },
@@ -61,7 +61,6 @@ export const NAV = [
 
 /* the Academy's other pages — in the footer, without crowding the header */
 export const LEARN_MORE = [
-	{ to: "/fees", label: "Pricing" },
 	{ to: "/for-business", label: "Organisations" },
 ] as const;
 

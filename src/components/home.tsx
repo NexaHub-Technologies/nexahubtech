@@ -28,7 +28,7 @@ const STAGE = {
 			d: "Build the mental model first — the code comes easily after that.",
 			foot: "Understand → practice → build.",
 		},
-		tag: "skills → service ↻",
+		tag: "learn → build → ship ↻",
 		b: {
 			label: "In production",
 			t: "Taught by engineers who ship for clients",
@@ -185,6 +185,7 @@ export function Hero() {
    Decorative: every phrase on them is said in full elsewhere on the page. */
 const TAPE_BY_MODE = {
 	learn: [
+		"Learn. Build. Ship.",
 		"Online or in person",
 		"Live, instructor-led",
 		"Start any day",
@@ -192,7 +193,7 @@ const TAPE_BY_MODE = {
 		"Mental model first",
 	],
 	build: [
-		"Software, built properly",
+		"Design. Ship. Support.",
 		"Designed before it's built",
 		"Maintained after",
 		"Shipped in increments",

@@ -2,7 +2,7 @@
 
 > NexaHubTech is a Nigerian technology company that designs, builds and maintains software for businesses. Its training division, NexaHubTech Academy, teaches practical technology skills — online and in person — and develops the talent our engineering work depends on.
 
-Tagline: "Software, built properly." Based at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria (CAC RC 9545130). Its training division, NexaHubTech Academy, runs as a separate business with its own pages. Every Academy course is taught live and starts whenever the student is ready, online or in person (no more than 6 per in-person class, priced above a place online). PC Basics and CBT training are taught in person only. Fees can be paid in instalments. Prices are in Nigerian naira (NGN). Contact: nexahubt@gmail.com, +234 913 451 3173, WhatsApp https://wa.me/2349134513173.
+Tagline: "Design. Ship. Support." Based at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria (CAC RC 9545130). Its training division, NexaHubTech Academy, runs as a separate business with its own pages. Every Academy course is taught live and starts whenever the student is ready, online or in person (no more than 6 per in-person class, priced above a place online). PC Basics and CBT training are taught in person only. Fees can be paid in instalments. Prices are in Nigerian naira (NGN). Contact: nexahubt@gmail.com, +234 913 451 3173, WhatsApp https://wa.me/2349134513173.
 
 Each link below is the markdown version of a page on https://nexahubtech.company; drop the `.md` suffix for the HTML page.
 
@@ -67,7 +67,7 @@ Canonical page: https://nexahubtech.company/
 
 NexaHubTech is a Nigeria-based software development company. We design, build and maintain production software for businesses and founders — scoped carefully, built properly, and supported long after launch.
 
-Tagline: *Software, built properly.*
+Tagline: *Design. Ship. Support.*
 
 ## What we build
 
@@ -98,7 +98,7 @@ Canonical page: https://nexahubtech.company/academy
 
 NexaHubTech Academy is the training division of NexaHubTech. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day.
 
-Tagline: *Learn to build. Build for real.*
+Tagline: *Learn. Build. Ship.*
 
 ## 16 live courses, online or in person, start any day
 
