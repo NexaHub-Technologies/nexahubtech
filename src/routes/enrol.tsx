@@ -585,18 +585,15 @@ function Enrol() {
 					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
 						{isCbt ? (
 							<>
-								Register for{" "}
-								<span style={{ color: "var(--learn-ink)" }}>CBT Training</span>.
+								Register for <span className="hot-text">CBT Training</span>.
 							</>
 						) : chosen ? (
 							<>
-								Enrol in{" "}
-								<span style={{ color: "var(--learn-ink)" }}>{chosen.t}</span>.
+								Enrol in <span className="hot-text">{chosen.t}</span>.
 							</>
 						) : (
 							<>
-								Apply for a{" "}
-								<span style={{ color: "var(--learn-ink)" }}>place</span>.
+								Apply for a <span className="hot-text">place</span>.
 							</>
 						)}
 					</h1>

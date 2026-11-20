@@ -174,7 +174,7 @@ function CbtPage() {
 					</span>
 					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.5rem]">
 						Walk into your CBT exam{" "}
-						<span style={{ color: "var(--learn-ink)" }}>already at ease</span>.
+						<span className="hot-text">already at ease</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
 						Knowing your subjects is half of it. The other half is the computer:

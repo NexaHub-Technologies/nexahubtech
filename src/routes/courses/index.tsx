@@ -49,7 +49,7 @@ function CoursesIndex() {
 						NexaHubTech Academy
 					</span>
 					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
-						Find your <span style={{ color: "var(--learn-ink)" }}>course</span>.
+						Find your <span className="hot-text">course</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
 						{COURSE_COUNT_WORD_CAP} courses, grouped by what you want to do.

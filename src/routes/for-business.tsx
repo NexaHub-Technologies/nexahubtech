@@ -43,8 +43,7 @@ function ForBusinessPage() {
 						For organisations
 					</span>
 					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
-						Train your team,{" "}
-						<span style={{ color: "var(--learn-ink)" }}>properly</span>.
+						Train your team, <span className="hot-text">properly</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
 						Staff who lose hours to Word and Excel. Candidates who have never

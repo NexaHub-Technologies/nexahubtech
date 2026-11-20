@@ -58,10 +58,7 @@ function AcademyAbout() {
 					</span>
 					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
 						Understand it first.{" "}
-						<span style={{ color: "var(--learn-ink)" }}>
-							Then build with it
-						</span>
-						.
+						<span className="hot-text">Then build with it</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
 						NexaHubTech Academy is the training division of NexaHubTech. Every

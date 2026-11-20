@@ -1541,7 +1541,7 @@ a.contact-detail:hover {
   box-shadow: 10px 10px 0 #ffd25a;
 }
 .blast .loop-tag {
-  background: #ffd25a;
+  background: var(--hot);
   color: #1a0828;
   border: 0;
   font-weight: 800;
@@ -1708,9 +1708,12 @@ a.contact-detail:hover {
     linear-gradient(155deg, #2c1440, var(--stage));
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
-/* rose is too faint on the violet; yellow clears it */
+/* rose is too faint on the violet; the gradient clears it */
 .slab-learn .view-link {
-  color: #ffd25a;
+  background: var(--hot);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .slab-word {
   position: absolute;
@@ -1726,9 +1729,12 @@ a.contact-detail:hover {
   -webkit-text-stroke: 2px rgba(255, 255, 255, 0.16);
   transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
 }
-.slab:hover /* rose is too faint on the violet; yellow clears it */
+.slab:hover /* rose is too faint on the violet; the gradient clears it */
 .slab-learn .view-link {
-  color: #ffd25a;
+  background: var(--hot);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .slab-word {
   transform: translateX(-0.12em) scale(1.04);
@@ -1825,8 +1831,10 @@ a.contact-detail:hover {
    modes. Rather than restyle everything inside them, they redefine the
    colour tokens for their own subtree: text, lines, cards and the accent
    inks all resolve light-on-dark, so pills, buttons, inline accents and
-   links inside need no rules of their own. The accents become yellow (the
-   school) and pink (the studio), both well above 4.5:1 on the stage. */
+   links inside need no rules of their own. Small accent text becomes peach
+   (the Academy) and pink (the company), both well above 4.5:1 on the stage;
+   anything that carries the Academy's colour prominently takes the --hot
+   gradient itself (see "one accent on the stage" below). */
 
 .page-head,
 .nav-island,
@@ -1836,7 +1844,7 @@ a.contact-detail:hover {
   --ink-soft: #e6d9f0;
   --mute: #bfaecb;
   --mute-2: #9c88aa;
-  --learn-ink: #ffd25a;
+  --learn-ink: #ff9a62;
   --build-ink: #f9a8cd;
   --marigold: #f06ba8;
   --teal: #f06ba8;
@@ -2040,7 +2048,10 @@ a.contact-detail:hover {
   background: #ffffff;
 }
 .nav-island .nav-link.is-side:not(.is-active) {
-  color: #ffd25a;
+  background: var(--hot);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 :root .nav-island .mode-switch button[data-on='true'] {
   background: var(--hot);
@@ -2083,7 +2094,10 @@ a.contact-detail:hover {
   letter-spacing: -0.03em;
 }
 .mobile-menu .mobile-link.is-active {
-  color: #ffd25a;
+  background: var(--hot);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* ── footer: a stage, signed with the name ── */
@@ -2103,8 +2117,8 @@ a.contact-detail:hover {
 }
 .footer .social-btn:hover {
   color: #1a0828;
-  background: #ffd25a;
-  border-color: #ffd25a;
+  background: var(--hot);
+  border-color: transparent;
 }
 .footer-word {
   font-family: var(--font-display);
@@ -2511,4 +2525,23 @@ a.contact-detail:hover {
 .track-filter button:focus-visible {
   outline: 2px solid var(--learn-ink);
   outline-offset: 2px;
+}
+
+/* ── one accent on the stage ───────────────────────────────────────
+   The Academy switch and the Enrol button wear the --hot gradient, so
+   everything else that carries the Academy's colour on a dark surface wears
+   the same gradient rather than a flat yellow cut from one end of it: the
+   division name, the active track chip and the in-page links. */
+.nav-island .site-subbrand,
+.footer .site-subbrand,
+.page-head .view-link {
+  background: var(--hot);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.page-head .track-filter button[aria-pressed='true'] {
+  background: var(--hot);
+  border-color: transparent;
+  color: #1a0828;
 }

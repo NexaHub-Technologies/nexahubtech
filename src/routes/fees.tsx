@@ -76,8 +76,7 @@ function PricingPage() {
 						Pricing
 					</span>
 					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
-						Simple pricing,{" "}
-						<span style={{ color: "var(--learn-ink)" }}>no surprises</span>.
+						Simple pricing, <span className="hot-text">no surprises</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
 						Every course, both ways it can be taken. Prices are in naira and
