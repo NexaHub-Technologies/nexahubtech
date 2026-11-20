@@ -8,7 +8,7 @@ NexaHubTech Academy is the training division of NexaHubTech. It teaches software
 
 Tagline: *Learn. Build. Ship.*
 
-## 16 live courses, online or in person, start any day
+## 15 live courses, online or in person, start any day
 
 Every course but PC Basics can be taken live online or in person, in a class of no more than 6. Fees can be paid in full or in instalments: [Pricing](https://nexahubtech.company/fees.md). How we teach, where and when: [About the Academy](https://nexahubtech.company/academy/about.md).
 
@@ -27,7 +27,6 @@ Every course but PC Basics can be taken live online or in person, in a class of 
 - [Data Analysis](https://nexahubtech.company/courses/data-analysis.md) — From ₦130,000 · 10 Weeks · live online or in person. Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
 - [Mobile Videography](https://nexahubtech.company/courses/mobile-videography.md) — Phone video & editing. From ₦50,000 · 4 Weeks · live online or in person. Shoot, light, record and edit video worth watching — on the phone you already own.
 - [Videography & Video Editing](https://nexahubtech.company/courses/videography-video-editing.md) — From ₦100,000 · 8 Weeks · live online or in person. Capture and craft video content that communicates — from shooting to final cut.
-- [Cybersecurity](https://nexahubtech.company/courses/cybersecurity.md) — From ₦230,000 · 16 Weeks · live online or in person. Understand how systems are attacked — and how to defend them.
 - [WAEC & JAMB CBT Training](https://nexahubtech.company/cbt.md) — from ₦3,000 · in person, Kubwa. Practice on the computer-based exam for JAMB UTME and WAEC CB-WASSCE.
 
 Training for organisations: [Organisations](https://nexahubtech.company/for-business.md). To apply: [Enrol](https://nexahubtech.company/enrol.md).

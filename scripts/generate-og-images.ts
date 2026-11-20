@@ -6,8 +6,14 @@
 
    Run with: bun run generate-og-images */
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import {
+	existsSync,
+	mkdirSync,
+	readFileSync,
+	writeFileSync,
+} from "node:fs";
 import { basename } from "node:path";
+import { inflateSync } from "node:zlib";
 import { COURSES } from "../src/lib/courses";
 import { modeForPath } from "../src/lib/mode";
 import { coursePage, PAGES, type Page, servicePage } from "../src/lib/pages";
@@ -18,11 +24,64 @@ const OUT = "public/og";
 const TMP = ".cache/og-tmp";
 
 const FONT_CSS =
-	"https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Hanken+Grotesk:wght@500;600&display=swap";
+	"https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&display=swap";
+
+/* Cal Sans, the display face, comes from the same @fontsource package the site
+   self-hosts, so the cards and the pages cannot drift apart. It has one weight —
+   the cards set 400 so nothing fakes a bold. */
+const CAL_SANS =
+	"node_modules/@fontsource/cal-sans/files/cal-sans-latin-400-normal.woff";
+
+/* fontconfig lists a WOFF file but the SVG renderer cannot shape text from
+   one, so unpack it to a plain TrueType file. WOFF 1 is the sfnt's tables,
+   each zlib-compressed when that made it smaller; rebuild the table
+   directory around the inflated tables. */
+function woffToTtf(woff: Buffer): Buffer {
+	const flavor = woff.readUInt32BE(4);
+	const numTables = woff.readUInt16BE(12);
+	const tables = Array.from({ length: numTables }, (_, i) => {
+		const at = 44 + i * 20;
+		const offset = woff.readUInt32BE(at + 4);
+		const compLength = woff.readUInt32BE(at + 8);
+		const origLength = woff.readUInt32BE(at + 12);
+		const raw = woff.subarray(offset, offset + compLength);
+		return {
+			tag: woff.subarray(at, at + 4),
+			checksum: woff.readUInt32BE(at + 16),
+			data: compLength < origLength ? inflateSync(raw) : raw,
+		};
+	});
+	const pow = 2 ** Math.floor(Math.log2(numTables));
+	const head = Buffer.alloc(12 + 16 * numTables);
+	head.writeUInt32BE(flavor, 0);
+	head.writeUInt16BE(numTables, 4);
+	head.writeUInt16BE(pow * 16, 6);
+	head.writeUInt16BE(Math.log2(pow), 8);
+	head.writeUInt16BE(numTables * 16 - pow * 16, 10);
+	const body: Buffer[] = [];
+	let offset = head.length;
+	tables.forEach((t, i) => {
+		const at = 12 + i * 16;
+		t.tag.copy(head, at);
+		head.writeUInt32BE(t.checksum, at + 4);
+		head.writeUInt32BE(offset, at + 8);
+		head.writeUInt32BE(t.data.length, at + 12);
+		const padded = Buffer.alloc(Math.ceil(t.data.length / 4) * 4);
+		t.data.copy(padded);
+		body.push(padded);
+		offset += padded.length;
+	});
+	return Buffer.concat([head, ...body]);
+}
 
 async function ensureFonts() {
-	if (existsSync(`${CACHE}/fonts.conf`)) return;
 	mkdirSync(`${CACHE}/cache`, { recursive: true });
+	if (!existsSync(`${CACHE}/CalSans.ttf`))
+		writeFileSync(
+			`${CACHE}/CalSans.ttf`,
+			woffToTtf(readFileSync(CAL_SANS)),
+		);
+	if (existsSync(`${CACHE}/fonts.conf`)) return;
 	const css = await fetch(FONT_CSS, {
 		headers: { "User-Agent": "Mozilla/5.0" },
 	}).then((r) => r.text());
@@ -96,7 +155,7 @@ function svg(
 	const body = lines
 		.map(
 			(l, i) =>
-				`<text x="80" y="${top + i * (size + 14)}" font-family="Bricolage Grotesque" font-weight="800" font-size="${size}" fill="#ffffff">${esc(l)}</text>`,
+				`<text x="80" y="${top + i * (size + 14)}" font-family="Cal Sans" font-weight="400" font-size="${size}" fill="#ffffff">${esc(l)}</text>`,
 		)
 		.join("\n  ");
 	/* only reserve the accent line's height when there is one, or short titles
@@ -119,10 +178,10 @@ function svg(
   <rect width="1200" height="630" fill="url(#glow)"/>
   <rect width="1200" height="630" fill="url(#glow2)"/>
   <g transform="translate(80,74) scale(0.0501)">${logo}</g>
-  <text x="150" y="112" font-family="Bricolage Grotesque" font-weight="700" font-size="34" fill="#ffffff">NexaHubTech${academy ? '<tspan dx="12" fill="#f9a8cd" font-weight="600" font-size="30">Academy</tspan>' : ""}</text>
+  <text x="158" y="112" font-family="Cal Sans" font-weight="400" font-size="34" fill="#ffffff">NexaHubTech${academy ? '<tspan dx="12" fill="#f9a8cd" font-size="30">Academy</tspan>' : ""}</text>
   <text x="80" y="186" font-family="Hanken Grotesk" font-weight="600" font-size="26" fill="#f9a8cd" letter-spacing="3">${esc(eyebrow.toUpperCase())}</text>
   ${body}
-  ${accent ? `<text x="80" y="${blockEnd}" font-family="Bricolage Grotesque" font-weight="800" font-size="${size}" fill="#f9a8cd">${esc(accent)}</text>` : ""}
+  ${accent ? `<text x="80" y="${blockEnd}" font-family="Cal Sans" font-weight="400" font-size="${size}" fill="#f9a8cd">${esc(accent)}</text>` : ""}
   <rect x="80" y="${blockEnd + 46}" width="86" height="4" rx="2" fill="#f06ba8"/>
   <text x="80" y="${blockEnd + 104}" font-family="Hanken Grotesk" font-weight="500" font-size="27" fill="#cfbcdd">${esc(sub)}</text>
 </svg>`;

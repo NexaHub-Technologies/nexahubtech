@@ -39,7 +39,6 @@ NexaHubTech Academy is the training division of NexaHubTech. It teaches software
 - [Data Analysis](https://nexahubtech.company/courses/data-analysis.md): Live online ₦130,000 (or 2 × ₦70,000) · In person ₦160,000 (or 2 × ₦87,500). 10 Weeks. Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
 - [Mobile Videography](https://nexahubtech.company/courses/mobile-videography.md): Phone video & editing. Live online ₦50,000 (or 2 × ₦27,500) · In person ₦60,000 (or 2 × ₦32,500). 4 Weeks. Shoot, light, record and edit video worth watching — on the phone you already own.
 - [Videography & Video Editing](https://nexahubtech.company/courses/videography-video-editing.md): Live online ₦100,000 (or 2 × ₦55,000) · In person ₦120,000 (or 2 × ₦65,000). 8 Weeks. Capture and craft video content that communicates — from shooting to final cut.
-- [Cybersecurity](https://nexahubtech.company/courses/cybersecurity.md): Live online ₦230,000 (or 3 × ₦82,500) · In person ₦280,000 (or 3 × ₦100,000). 16 Weeks. Understand how systems are attacked — and how to defend them.
 
 ## Services
 

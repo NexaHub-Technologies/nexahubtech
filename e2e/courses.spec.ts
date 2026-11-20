@@ -109,3 +109,13 @@ for (const [from, hash] of [
 		);
 	});
 }
+
+test("a paused course is nowhere on the site, and its address lands on the catalogue", async ({
+	page,
+}) => {
+	await page.goto("/courses/cybersecurity");
+	await expect(page).toHaveURL(/\/courses\/?$/);
+	await expect(page.getByText("Cybersecurity")).toHaveCount(0);
+	await page.goto("/fees");
+	await expect(page.getByText("Cybersecurity")).toHaveCount(0);
+});

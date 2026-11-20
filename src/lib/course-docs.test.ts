@@ -1,6 +1,6 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { COURSES } from "./courses";
+import { CATALOGUE, COURSES } from "./courses";
 
 /* courses.ts is the source of truth. The commercial facts are no longer copied
    into these documents at all — the course page renders them from the course
@@ -17,7 +17,9 @@ describe("course curriculum docs", () => {
 			.filter((f) => f.endsWith(".md") && f !== "README.md" && f !== "NAMES.md")
 			.map((f) => f.replace(/\.md$/, ""))
 			.sort();
-		expect(files).toEqual(COURSES.map((c) => c.slug).sort());
+		/* every written course keeps its document, paused ones included — the
+		   curriculum is what makes bringing one back cheap */
+		expect(files).toEqual(CATALOGUE.map((c) => c.slug).sort());
 	});
 
 	it("covers every module, by its real title", () => {

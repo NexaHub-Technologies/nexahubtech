@@ -28,7 +28,6 @@ Every fee covers the whole course. Pay in full before your first session, or in 
 | Next.js | 10 Weeks | ₦160,000 (or 2 × ₦87,500) | ₦195,000 (or 2 × ₦105,000) |
 | Mobile Development | 12 Weeks | ₦190,000 (or 2 × ₦102,500) | ₦230,000 (or 2 × ₦125,000) |
 | Data Analysis | 10 Weeks | ₦130,000 (or 2 × ₦70,000) | ₦160,000 (or 2 × ₦87,500) |
-| Cybersecurity | 16 Weeks | ₦230,000 (or 3 × ₦82,500) | ₦280,000 (or 3 × ₦100,000) |
 
 ## Video
 

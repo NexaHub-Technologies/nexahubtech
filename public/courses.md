@@ -17,7 +17,7 @@ Computers and Microsoft Office, from the very first click to the reports your jo
 
 ## Software & data
 
-Coding, websites, mobile apps, data analysis and security — from your first line of code. For: ready to code, or already coding.
+Coding, websites, mobile apps and data analysis — from your first line of code. For: ready to code, or already coding.
 
 - [Python Programming](https://nexahubtech.company/courses/python-programming.md) — From ₦95,000 · 6 Weeks · live online or in person. Learn programming from scratch with Python — the language that powers everything from scripts to AI.
 - [JavaScript Programming](https://nexahubtech.company/courses/javascript-programming.md) — Browser & Node.js. From ₦95,000 · 8 Weeks · live online or in person. Learn JavaScript as a language — the same core that runs in a browser and on a server.
@@ -28,7 +28,6 @@ Coding, websites, mobile apps, data analysis and security — from your first li
 - [Next.js](https://nexahubtech.company/courses/nextjs-fullstack.md) — Fullstack React. From ₦160,000 · 10 Weeks · live online or in person. Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
 - [Mobile Development](https://nexahubtech.company/courses/mobile-development.md) — From ₦190,000 · 12 Weeks · live online or in person. Build real mobile applications — from concept to the app store.
 - [Data Analysis](https://nexahubtech.company/courses/data-analysis.md) — From ₦130,000 · 10 Weeks · live online or in person. Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
-- [Cybersecurity](https://nexahubtech.company/courses/cybersecurity.md) — From ₦230,000 · 16 Weeks · live online or in person. Understand how systems are attacked — and how to defend them.
 
 ## Video
 

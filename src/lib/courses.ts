@@ -129,7 +129,7 @@ export const TRACKS: { id: Family; t: string; d: string; who: string }[] = [
 	{
 		id: "development",
 		t: "Software & data",
-		d: "Coding, websites, mobile apps, data analysis and security — from your first line of code.",
+		d: "Coding, websites, mobile apps and data analysis — from your first line of code.",
 		who: "Ready to code, or already coding",
 	},
 	{
@@ -177,7 +177,10 @@ const ONLINE_OR_CENTRE: Format = {
 	d: `You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than ${CENTRE_SEATS}. The instructor, the materials and the standard are the same either way — and you start the day you are ready.`,
 };
 
-export const COURSES: Course[] = [
+/* Every course we have written, including any not offered right now. The site
+   reads COURSES below; this list keeps the full outline of a paused course so
+   bringing it back is one line in PAUSED, not a rewrite. */
+export const CATALOGUE: Course[] = [
 	{
 		slug: "computer-essentials",
 		t: "Computer Essentials",
@@ -1872,6 +1875,20 @@ export const COURSES: Course[] = [
 		],
 	},
 ];
+
+/* Courses not offered right now, by slug, with the reason. Cybersecurity is
+   paused until we hold the certification and accreditation to teach it. A
+   paused course disappears from every page, price list, sitemap and feed, and
+   its old address redirects to the catalogue. */
+export const PAUSED: Record<string, string> = {
+	cybersecurity: "awaiting certification and accreditation",
+};
+
+export const COURSES: Course[] = CATALOGUE.filter((c) => !(c.slug in PAUSED));
+
+export function isPaused(slug: string): boolean {
+	return slug in PAUSED && CATALOGUE.some((c) => c.slug === slug);
+}
 
 const NUMBER_WORDS = [
 	"zero",

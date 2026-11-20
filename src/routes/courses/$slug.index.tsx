@@ -1,10 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { PriceBox } from "../../components/fees";
 import { SessionLoop } from "../../components/session-loop";
 import { CONTACT, Eyebrow, useReveal } from "../../components/site";
 import {
 	deliveryPhrase,
 	getCourseBySlug,
+	isPaused,
 	priceLabel,
 	TRACKS,
 } from "../../lib/courses";
@@ -12,6 +13,12 @@ import { coursePage } from "../../lib/pages";
 import { pageMeta } from "../../lib/seo";
 
 export const Route = createFileRoute("/courses/$slug/")({
+	/* a paused course's old address lands on the catalogue, not a dead end.
+	   302, because the course is coming back. */
+	beforeLoad: ({ params }) => {
+		if (isPaused(params.slug))
+			throw redirect({ to: "/courses", statusCode: 302 });
+	},
 	component: CourseDetail,
 	head: ({ params }) => {
 		const course = getCourseBySlug(params.slug);

@@ -83,8 +83,8 @@ export function Preloader() {
 					<defs>
 						<linearGradient id="preloader-hot" x1="0" y1="0" x2="1" y2="1">
 							<stop offset="0" stopColor="#f06ba8" />
-							<stop offset="0.55" stopColor="#ff9a62" />
-							<stop offset="1" stopColor="#ffd25a" />
+							<stop offset="0.5" stopColor="#e08fd8" />
+							<stop offset="1" stopColor="#cdb2f7" />
 						</linearGradient>
 					</defs>
 					{PIECES.map((p) => (
