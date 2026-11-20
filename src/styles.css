@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap');
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 @import 'tw-animate-css';
@@ -96,7 +96,7 @@
 
 @theme inline {
   --font-sans: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Bricolage Grotesque', 'Hanken Grotesk', sans-serif;
+  --font-display: 'Cal Sans', 'Hanken Grotesk', sans-serif;
 
   --color-paper: var(--paper);
   --color-paper-2: var(--paper-2);
@@ -187,7 +187,7 @@
 }
 .display {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: -0.022em;
   line-height: 1.04;
   color: var(--ink);
@@ -467,7 +467,7 @@
   width: 42px; height: 42px;
   border-radius: 14px;
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: 1.1rem;
 }
 .badge-learn { background: var(--marigold-tint); color: var(--learn-ink); }
@@ -801,7 +801,7 @@
 }
 .mobile-link {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.3rem;
   color: var(--ink);
   padding: 0.85rem 0.25rem;
@@ -1395,7 +1395,7 @@ a.contact-detail:hover {
 /* section headings: big, tight, heavy */
 .shout {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 400;
   font-size: clamp(2.5rem, 5.6vw, 4.6rem);
   line-height: 0.96;
   letter-spacing: -0.04em;
@@ -1466,7 +1466,7 @@ a.contact-detail:hover {
 
 .blast-title {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 400;
   font-size: clamp(3rem, 6.4vw, 6.1rem);
   line-height: 0.92;
   letter-spacing: -0.035em;
@@ -1590,7 +1590,7 @@ a.contact-detail:hover {
   overflow: hidden;
   padding-block: 0.7rem;
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 400;
   font-size: clamp(1.2rem, 2.6vw, 2rem);
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -1644,7 +1644,7 @@ a.contact-detail:hover {
 }
 .number-n {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 400;
   font-size: clamp(4.5rem, 10vw, 8rem);
   line-height: 0.85;
   letter-spacing: -0.05em;
@@ -1663,7 +1663,7 @@ a.contact-detail:hover {
 
 .manifesto {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 400;
   font-size: clamp(2.1rem, 5.2vw, 4.4rem);
   line-height: 1.02;
   letter-spacing: -0.04em;
@@ -1721,7 +1721,7 @@ a.contact-detail:hover {
   right: -0.04em;
   bottom: -0.2em;
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 400;
   font-size: clamp(6rem, 14vw, 11rem);
   line-height: 1;
   letter-spacing: -0.05em;
@@ -1745,7 +1745,7 @@ a.contact-detail:hover {
 .step-num {
   display: block;
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 400;
   font-size: 4.6rem;
   line-height: 0.9;
   letter-spacing: -0.05em;
@@ -2122,7 +2122,7 @@ a.contact-detail:hover {
 }
 .footer-word {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 400;
   font-size: clamp(3rem, 12.4vw, 11.4rem);
   line-height: 0.78;
   letter-spacing: -0.06em;
@@ -2214,7 +2214,7 @@ a.contact-detail:hover {
 .preloader-word {
   margin: 0;
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 400;
   font-size: clamp(1.5rem, 4.5vmin, 2.1rem);
   letter-spacing: -0.03em;
   color: #ffffff;
@@ -2375,7 +2375,7 @@ a.contact-detail:hover {
   text-align: left;
   padding: 1rem 1.1rem 0.25rem;
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: 1.15rem;
   color: var(--ink);
 }
