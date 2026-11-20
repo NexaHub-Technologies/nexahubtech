@@ -1,11 +1,4 @@
-/* the remote import must come first: CSS drops an @import that follows the
-   inlined @font-face rules below */
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap');
-/* Cal Sans is the brand's display face, self-hosted from @fontsource. It ships
-   one weight, drawn heavy, so the bold weights the headings ask for must not be
-   faked on top of it — see font-synthesis-weight below. */
-@import '@fontsource/cal-sans/latin.css';
-@import '@fontsource/cal-sans/latin-ext.css';
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap');
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 @import 'tw-animate-css';
@@ -45,13 +38,6 @@
   --teal-tint: #e8ddf1;     /* BUILD — warm greyed lilac wash */
 
   --warm: #f06ba8;          /* welcoming rose accent — sparks & glows */
-  /* the brand's two accents as they appear on the dark stage: rose (the
-     company) and a light lilac tint of the Academy's violet. Orchid is only
-     ever the midpoint of a gradient between them. No yellow or orange — they
-     are not brand colours. */
-  --rose-soft: #f9a8cd;
-  --lilac: #cdb2f7;
-  --orchid: #e08fd8;
 
   /* chrome surfaces — tokenised so a mode can restyle the header and menu */
   --chrome-bg: rgba(246, 239, 244, 0.82);
@@ -110,7 +96,7 @@
 
 @theme inline {
   --font-sans: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Cal Sans', 'Hanken Grotesk', sans-serif;
+  --font-display: 'Bricolage Grotesque', 'Hanken Grotesk', sans-serif;
 
   --color-paper: var(--paper);
   --color-paper-2: var(--paper-2);
@@ -143,12 +129,6 @@
     border-color: var(--line);
   }
   html {
-    /* Cal Sans has a single (heavy) weight; a browser asked for 700/800 would
-       otherwise smear a fake bold over it. Hanken ships every weight in use,
-       so nothing else is affected. */
-    font-synthesis-weight: none;
-    /* Cal Sans is drawn tight; the old display face's negative tracking ran
-       its words together, so display sizes now track close to zero */
     scroll-behavior: smooth;
     scroll-padding-top: 92px;
   }
@@ -208,7 +188,7 @@
 .display {
   font-family: var(--font-display);
   font-weight: 700;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.022em;
   line-height: 1.04;
   color: var(--ink);
 }
@@ -1387,14 +1367,14 @@ a.contact-detail:hover {
 /* ── home : the loud version ───────────────────────────────────────
    The homepage is where the brand shouts. A dark stage with a turning
    burst of rays, giant type, crossing tape, big numbers and solid slabs.
-   The hot accent runs rose → orchid → lilac: the company's rose into a
-   light tint of the Academy's violet. It appears only on the dark stage and the numbers, where it
+   The hot accent runs rose → peach → yellow, the brand's rose taken to a
+   flare. It appears only on the dark stage and the numbers, where it
    clears contrast; body copy never sits on it.
    Every moving part stops under prefers-reduced-motion (end of block). */
 
 :root {
-  --hot: linear-gradient(100deg, #f06ba8 0%, #e08fd8 50%, #cdb2f7 100%);
-  /* for gradient text on the light ground, where rose and lilac are too
+  --hot: linear-gradient(100deg, #f06ba8 0%, #ff9a62 55%, #ffd25a 100%);
+  /* for gradient text on the light ground, where rose and yellow are too
      pale: violet into a deep rose, both above 4.5:1 on the blush */
   --hot-on-light: linear-gradient(100deg, #6a2cad 0%, #a8287a 100%);
   --stage: #1a0828;
@@ -1418,7 +1398,7 @@ a.contact-detail:hover {
   font-weight: 800;
   font-size: clamp(2.5rem, 5.6vw, 4.6rem);
   line-height: 0.96;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.04em;
   color: var(--ink);
   text-wrap: balance;
 }
@@ -1468,8 +1448,8 @@ a.contact-detail:hover {
   border-radius: 50%;
   background: radial-gradient(
     closest-side,
-    rgba(205, 178, 247, 0.55),
-    rgba(224, 143, 216, 0.35) 22%,
+    rgba(255, 210, 90, 0.55),
+    rgba(255, 154, 98, 0.35) 22%,
     rgba(240, 107, 168, 0.28) 45%,
     rgba(106, 44, 173, 0) 100%
   );
@@ -1478,7 +1458,7 @@ a.contact-detail:hover {
 .blast-spark {
   position: absolute;
   z-index: 0;
-  background: var(--lilac);
+  background: #ffd25a;
   /* a four-point star */
   clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
   animation: twinkle 2.8s ease-in-out infinite;
@@ -1489,7 +1469,7 @@ a.contact-detail:hover {
   font-weight: 800;
   font-size: clamp(3rem, 6.4vw, 6.1rem);
   line-height: 0.92;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.035em;
   color: #ffffff;
 }
 .blast-cta .blast-title {
@@ -1558,10 +1538,10 @@ a.contact-detail:hover {
 }
 .blast .j-build {
   transform: rotate(3deg);
-  box-shadow: 10px 10px 0 var(--lilac);
+  box-shadow: 10px 10px 0 #ffd25a;
 }
 .blast .loop-tag {
-  background: var(--lilac);
+  background: #ffd25a;
   color: #1a0828;
   border: 0;
   font-weight: 800;
@@ -1574,7 +1554,7 @@ a.contact-detail:hover {
   font-weight: 800;
   font-size: 1.05rem;
   padding: 1.05rem 1.8rem;
-  box-shadow: 0 18px 40px -14px rgba(224, 143, 216, 0.7);
+  box-shadow: 0 18px 40px -14px rgba(255, 154, 98, 0.7);
 }
 .btn-blast i {
   font-style: normal;
@@ -1582,13 +1562,13 @@ a.contact-detail:hover {
 }
 .btn-blast:hover {
   transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 26px 52px -14px rgba(224, 143, 216, 0.85);
+  box-shadow: 0 26px 52px -14px rgba(255, 154, 98, 0.85);
 }
 .btn-blast:hover i {
   transform: translateX(4px);
 }
 .btn-blast:focus-visible {
-  outline-color: var(--lilac);
+  outline-color: #ffd25a;
 }
 
 /* ── crossing tape ── */
@@ -1612,7 +1592,7 @@ a.contact-detail:hover {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(1.2rem, 2.6vw, 2rem);
-  letter-spacing: 0;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -1667,7 +1647,7 @@ a.contact-detail:hover {
   font-weight: 800;
   font-size: clamp(4.5rem, 10vw, 8rem);
   line-height: 0.85;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.05em;
   background: var(--hot-on-light);
   -webkit-background-clip: text;
   background-clip: text;
@@ -1686,14 +1666,14 @@ a.contact-detail:hover {
   font-weight: 800;
   font-size: clamp(2.1rem, 5.2vw, 4.4rem);
   line-height: 1.02;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.04em;
   color: var(--ink);
   max-width: 62rem;
   text-wrap: balance;
 }
 .manifesto mark {
   color: inherit;
-  background: linear-gradient(transparent 58%, rgba(240, 107, 168, 0.45) 58%, rgba(224, 143, 216, 0.45) 92%, transparent 92%);
+  background: linear-gradient(transparent 58%, rgba(240, 107, 168, 0.45) 58%, rgba(255, 154, 98, 0.45) 92%, transparent 92%);
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   padding-inline: 0.06em;
@@ -1724,13 +1704,13 @@ a.contact-detail:hover {
 }
 :root .slab-build {
   background:
-    radial-gradient(90% 70% at 100% 0%, rgba(224, 143, 216, 0.28), transparent 60%),
+    radial-gradient(90% 70% at 100% 0%, rgba(255, 154, 98, 0.28), transparent 60%),
     linear-gradient(155deg, #2c1440, var(--stage));
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
-/* rose is too faint on the violet; lilac clears it */
+/* rose is too faint on the violet; yellow clears it */
 .slab-learn .view-link {
-  color: var(--lilac);
+  color: #ffd25a;
 }
 .slab-word {
   position: absolute;
@@ -1741,14 +1721,14 @@ a.contact-detail:hover {
   font-weight: 800;
   font-size: clamp(6rem, 14vw, 11rem);
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.05em;
   color: transparent;
   -webkit-text-stroke: 2px rgba(255, 255, 255, 0.16);
   transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
 }
-.slab:hover /* rose is too faint on the violet; lilac clears it */
+.slab:hover /* rose is too faint on the violet; yellow clears it */
 .slab-learn .view-link {
-  color: var(--lilac);
+  color: #ffd25a;
 }
 .slab-word {
   transform: translateX(-0.12em) scale(1.04);
@@ -1762,7 +1742,7 @@ a.contact-detail:hover {
   font-weight: 800;
   font-size: 4.6rem;
   line-height: 0.9;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.05em;
   color: transparent;
   -webkit-text-stroke: 2px var(--marigold);
   transition: color 240ms ease;
@@ -1845,8 +1825,8 @@ a.contact-detail:hover {
    modes. Rather than restyle everything inside them, they redefine the
    colour tokens for their own subtree: text, lines, cards and the accent
    inks all resolve light-on-dark, so pills, buttons, inline accents and
-   links inside need no rules of their own. The accents become lilac (the
-   Academy) and pink (the company), both well above 4.5:1 on the stage. */
+   links inside need no rules of their own. The accents become yellow (the
+   school) and pink (the studio), both well above 4.5:1 on the stage. */
 
 .page-head,
 .nav-island,
@@ -1856,7 +1836,7 @@ a.contact-detail:hover {
   --ink-soft: #e6d9f0;
   --mute: #bfaecb;
   --mute-2: #9c88aa;
-  --learn-ink: var(--lilac);
+  --learn-ink: #ffd25a;
   --build-ink: #f9a8cd;
   --marigold: #f06ba8;
   --teal: #f06ba8;
@@ -1883,7 +1863,7 @@ a.contact-detail:hover {
   background: var(--hot);
   color: #1a0828;
   font-weight: 800;
-  box-shadow: 0 18px 40px -14px rgba(224, 143, 216, 0.7);
+  box-shadow: 0 18px 40px -14px rgba(255, 154, 98, 0.7);
 }
 :root[data-mode] :is(.page-head, .blast) :is(.btn-primary, .btn-teal):hover,
 :is(.page-head, .blast) :is(.btn-primary, .btn-teal):hover {
@@ -1947,8 +1927,8 @@ a.contact-detail:hover {
   border-radius: 50%;
   background: radial-gradient(
     closest-side,
-    rgba(205, 178, 247, 0.5),
-    rgba(224, 143, 216, 0.3) 24%,
+    rgba(255, 210, 90, 0.5),
+    rgba(255, 154, 98, 0.3) 24%,
     rgba(240, 107, 168, 0.22) 48%,
     transparent 100%
   );
@@ -1958,7 +1938,7 @@ a.contact-detail:hover {
   font-weight: 800;
   font-size: clamp(2.7rem, 6.2vw, 5.4rem);
   line-height: 0.94;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.04em;
   text-wrap: balance;
 }
 .page-head .lead {
@@ -1969,7 +1949,7 @@ a.contact-detail:hover {
 
 .display {
   font-weight: 800;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.03em;
 }
 .shout-md {
   font-size: clamp(2.2rem, 4.2vw, 3.6rem);
@@ -2060,7 +2040,7 @@ a.contact-detail:hover {
   background: #ffffff;
 }
 .nav-island .nav-link.is-side:not(.is-active) {
-  color: var(--lilac);
+  color: #ffd25a;
 }
 :root .nav-island .mode-switch button[data-on='true'] {
   background: var(--hot);
@@ -2100,10 +2080,10 @@ a.contact-detail:hover {
 .mobile-menu .mobile-link {
   font-weight: 800;
   font-size: 1.6rem;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.03em;
 }
 .mobile-menu .mobile-link.is-active {
-  color: var(--lilac);
+  color: #ffd25a;
 }
 
 /* ── footer: a stage, signed with the name ── */
@@ -2123,15 +2103,15 @@ a.contact-detail:hover {
 }
 .footer .social-btn:hover {
   color: #1a0828;
-  background: var(--lilac);
-  border-color: var(--lilac);
+  background: #ffd25a;
+  border-color: #ffd25a;
 }
 .footer-word {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(3rem, 12.4vw, 11.4rem);
   line-height: 0.78;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.06em;
   text-align: center;
   white-space: nowrap;
   background: var(--hot);
@@ -2180,7 +2160,7 @@ a.contact-detail:hover {
   border-radius: 50%;
   background: radial-gradient(
     closest-side,
-    rgba(205, 178, 247, 0.35),
+    rgba(255, 210, 90, 0.35),
     rgba(240, 107, 168, 0.22) 45%,
     transparent 100%
   );
@@ -2222,7 +2202,7 @@ a.contact-detail:hover {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(1.5rem, 4.5vmin, 2.1rem);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.03em;
   color: #ffffff;
   display: flex;
 }
