@@ -10,7 +10,7 @@
       "name": "NexaHubTech",
       "url": "https://nexahubtech.company/",
       "description": "NexaHubTech is a Nigerian technology company that designs, builds and maintains software for businesses. Its training division, NexaHubTech Academy, teaches practical technology skills — online and in person — and develops the talent our engineering work depends on.",
-      "slogan": "Software, built properly.",
+      "slogan": "Design. Ship. Support.",
       "logo": {
         "@type": "ImageObject",
         "@id": "https://nexahubtech.company/#logo",
@@ -66,7 +66,7 @@
         }
       ],
       "currenciesAccepted": "NGN",
-      "priceRange": "₦3,000 – ₦280,000",
+      "priceRange": "₦3,000 – ₦240,000",
       "knowsAbout": [
         "Computer Essentials",
         "PC Basics",
@@ -83,7 +83,6 @@
         "Data Analysis",
         "Mobile Videography",
         "Videography & Video Editing",
-        "Cybersecurity",
         "Custom software development",
         "Website design & development",
         "Mobile application development",
@@ -110,7 +109,7 @@
       "alternateName": "NexaHubTech Academy, a division of NexaHubTech",
       "url": "https://nexahubtech.company/academy",
       "description": "NexaHubTech Academy is the training division of NexaHubTech. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day.",
-      "slogan": "Learn to build. Build for real.",
+      "slogan": "Learn. Build. Ship.",
       "parentOrganization": {
         "@id": "https://nexahubtech.company/#organization"
       },
@@ -148,7 +147,7 @@
       "@id": "https://nexahubtech.company/courses#catalog",
       "name": "NexaHubTech Academy courses",
       "url": "https://nexahubtech.company/courses",
-      "numberOfItems": 17,
+      "numberOfItems": 16,
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -258,13 +257,6 @@
         {
           "@type": "ListItem",
           "position": 16,
-          "item": {
-            "@id": "https://nexahubtech.company/courses/cybersecurity#course"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 17,
           "item": {
             "@id": "https://nexahubtech.company/cbt#course"
           }
@@ -2014,141 +2006,6 @@
     },
     {
       "@type": "Course",
-      "@id": "https://nexahubtech.company/courses/cybersecurity#course",
-      "url": "https://nexahubtech.company/courses/cybersecurity",
-      "name": "Cybersecurity",
-      "description": "Understand how systems are attacked — and how to defend them.",
-      "image": "https://nexahubtech.company/og/course-cybersecurity.jpg",
-      "inLanguage": "en",
-      "provider": {
-        "@id": "https://nexahubtech.company/academy#organization"
-      },
-      "educationalLevel": "Assumes general technical confidence",
-      "coursePrerequisites": [
-        "How networks and the web work at a basic level — IPs, ports, HTTP",
-        "The command line, and enough code-reading to follow a script",
-        "No prior security experience needed"
-      ],
-      "teaches": [
-        "Every system has a boundary, and attacks cross it",
-        "Find the trust boundary in a system you have never seen",
-        "Recognise a new class of vulnerability as a familiar pattern",
-        "Defend by design rather than by a checklist of patches"
-      ],
-      "timeRequired": "P16W",
-      "syllabusSections": [
-        {
-          "@type": "Syllabus",
-          "position": 1,
-          "name": "Security foundations",
-          "description": "The principles of confidentiality, integrity, and availability — and why they matter."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 2,
-          "name": "Network security",
-          "description": "How networks are attacked and defended. Firewalls, intrusion detection, and monitoring."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 3,
-          "name": "Web application security",
-          "description": "OWASP Top 10, injection attacks, XSS — learn to find and fix vulnerabilities."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 4,
-          "name": "Cryptography basics",
-          "description": "Encryption, hashing, and key management — the tools that protect data."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 5,
-          "name": "Incident response",
-          "description": "What to do when things go wrong. Detection, containment, and recovery."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 6,
-          "name": "Security in practice",
-          "description": "Hands-on labs and real-world scenarios that put your skills to the test."
-        }
-      ],
-      "hasPart": [
-        {
-          "@type": "CreativeWork",
-          "name": "Mambilla Range",
-          "description": "threat model, then map and segment",
-          "learningResourceType": "Project"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "NexaRide Tickets",
-          "description": "a web app broken, then fixed properly",
-          "learningResourceType": "Project"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Gurara Vault",
-          "description": "a crypto review and a breach reconstructed",
-          "learningResourceType": "Project"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Idanre Range",
-          "description": "a full assessment and report",
-          "learningResourceType": "Capstone project"
-        }
-      ],
-      "isAccessibleForFree": false,
-      "offers": [
-        {
-          "@type": "Offer",
-          "priceCurrency": "NGN",
-          "availability": "https://schema.org/InStock",
-          "category": "Paid",
-          "seller": {
-            "@id": "https://nexahubtech.company/#organization"
-          },
-          "name": "Live online",
-          "price": "230000",
-          "description": "₦230,000 in full, or 3 × ₦82,500.",
-          "url": "https://nexahubtech.company/enrol?course=cybersecurity"
-        },
-        {
-          "@type": "Offer",
-          "priceCurrency": "NGN",
-          "availability": "https://schema.org/InStock",
-          "category": "Paid",
-          "seller": {
-            "@id": "https://nexahubtech.company/#organization"
-          },
-          "name": "In person",
-          "price": "280000",
-          "description": "₦280,000 in full, or 3 × ₦100,000.",
-          "url": "https://nexahubtech.company/enrol?course=cybersecurity"
-        }
-      ],
-      "hasCourseInstance": [
-        {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
-          "duration": "P16W"
-        },
-        {
-          "@type": "CourseInstance",
-          "courseMode": "Onsite",
-          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
-          "duration": "P16W",
-          "location": {
-            "@id": "https://nexahubtech.company/#organization"
-          }
-        }
-      ]
-    },
-    {
-      "@type": "Course",
       "@id": "https://nexahubtech.company/cbt#course",
       "url": "https://nexahubtech.company/cbt",
       "name": "WAEC & JAMB CBT Training",
@@ -2471,8 +2328,8 @@
     },
     {
       "@type": "ItemList",
-      "@id": "https://nexahubtech.company/teaching#principles",
-      "name": "How NexaHubTech teaches",
+      "@id": "https://nexahubtech.company/academy/about#principles",
+      "name": "How NexaHubTech Academy teaches",
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "itemListElement": [
         {
@@ -2503,8 +2360,8 @@
     },
     {
       "@type": "HowTo",
-      "@id": "https://nexahubtech.company/teaching#session",
-      "name": "How a NexaHubTech teaching session runs",
+      "@id": "https://nexahubtech.company/academy/about#session",
+      "name": "How a NexaHubTech Academy session runs",
       "description": "Every session on every course is built in the same three parts.",
       "step": [
         {
@@ -2731,90 +2588,6 @@
       ]
     },
     {
-      "@type": "WebPage",
-      "@id": "https://nexahubtech.company/fees#webpage",
-      "url": "https://nexahubtech.company/fees",
-      "name": "Course Fees — NexaHubTech Academy",
-      "description": "Every NexaHubTech Academy fee on one page: each course online and in person, paid in full or in instalments, plus CBT practice and rates for organisations.",
-      "inLanguage": "en-NG",
-      "isPartOf": {
-        "@id": "https://nexahubtech.company/#website"
-      },
-      "publisher": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://nexahubtech.company/og/fees.jpg"
-      },
-      "breadcrumb": {
-        "@id": "https://nexahubtech.company/fees#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://nexahubtech.company/courses#catalog"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://nexahubtech.company/fees#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nexahubtech.company/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Fees",
-          "item": "https://nexahubtech.company/fees"
-        }
-      ]
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://nexahubtech.company/timetable#webpage",
-      "url": "https://nexahubtech.company/timetable",
-      "name": "Session Times — NexaHubTech Academy",
-      "description": "When NexaHubTech Academy classes run each week, online and in person. There are no fixed intakes: start any day and join the session that suits you.",
-      "inLanguage": "en-NG",
-      "isPartOf": {
-        "@id": "https://nexahubtech.company/#website"
-      },
-      "publisher": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://nexahubtech.company/og/timetable.jpg"
-      },
-      "breadcrumb": {
-        "@id": "https://nexahubtech.company/timetable#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://nexahubtech.company/#organization"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://nexahubtech.company/timetable#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nexahubtech.company/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Timetable",
-          "item": "https://nexahubtech.company/timetable"
-        }
-      ]
-    },
-    {
       "@type": "FAQPage",
       "@id": "https://nexahubtech.company/cbt#webpage",
       "url": "https://nexahubtech.company/cbt",
@@ -2899,6 +2672,96 @@
       ]
     },
     {
+      "@type": "AboutPage",
+      "@id": "https://nexahubtech.company/academy/about#webpage",
+      "url": "https://nexahubtech.company/academy/about",
+      "name": "About NexaHubTech Academy — How We Teach, Where and When",
+      "description": "How NexaHubTech Academy teaches — the idea before the syntax, every session in three parts — and where and when it happens: live online in the evenings, or in person in classes of no more than 6 at our learning centre in Kubwa, Abuja.",
+      "inLanguage": "en-NG",
+      "isPartOf": {
+        "@id": "https://nexahubtech.company/#website"
+      },
+      "publisher": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nexahubtech.company/og/academy-about.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://nexahubtech.company/academy/about#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://nexahubtech.company/academy/about#principles"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nexahubtech.company/academy/about#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nexahubtech.company/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "NexaHubTech Academy",
+          "item": "https://nexahubtech.company/academy"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "About the Academy",
+          "item": "https://nexahubtech.company/academy/about"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nexahubtech.company/fees#webpage",
+      "url": "https://nexahubtech.company/fees",
+      "name": "Pricing — NexaHubTech Academy",
+      "description": "Simple, all-inclusive pricing for every NexaHubTech Academy course: one fee for the whole course, online or in person, paid in full or in parts — plus CBT practice and rates for organisations.",
+      "inLanguage": "en-NG",
+      "isPartOf": {
+        "@id": "https://nexahubtech.company/#website"
+      },
+      "publisher": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nexahubtech.company/og/fees.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://nexahubtech.company/fees#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://nexahubtech.company/courses#catalog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nexahubtech.company/fees#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nexahubtech.company/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pricing",
+          "item": "https://nexahubtech.company/fees"
+        }
+      ]
+    },
+    {
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/for-business#webpage",
       "url": "https://nexahubtech.company/for-business",
@@ -2935,92 +2798,8 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "For Business",
+          "name": "Organisations",
           "item": "https://nexahubtech.company/for-business"
-        }
-      ]
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://nexahubtech.company/centre#webpage",
-      "url": "https://nexahubtech.company/centre",
-      "name": "Our Learning Centre — NexaHubTech Academy",
-      "description": "Visit the NexaHubTech Academy learning centre at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja: small classes of no more than 6, machines provided, open Monday – Saturday, 8:00 AM – 6:00 PM. You are welcome to visit before you enrol.",
-      "inLanguage": "en-NG",
-      "isPartOf": {
-        "@id": "https://nexahubtech.company/#website"
-      },
-      "publisher": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://nexahubtech.company/og/centre.jpg"
-      },
-      "breadcrumb": {
-        "@id": "https://nexahubtech.company/centre#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://nexahubtech.company/#organization"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://nexahubtech.company/centre#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nexahubtech.company/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Learning Centre",
-          "item": "https://nexahubtech.company/centre"
-        }
-      ]
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://nexahubtech.company/teaching#webpage",
-      "url": "https://nexahubtech.company/teaching",
-      "name": "How We Teach — NexaHubTech Academy",
-      "description": "The pedagogy behind every NexaHubTech Academy course: the mental model before the syntax, one idea at a time, and a session built in three parts.",
-      "inLanguage": "en-NG",
-      "isPartOf": {
-        "@id": "https://nexahubtech.company/#website"
-      },
-      "publisher": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://nexahubtech.company/og/teaching.jpg"
-      },
-      "breadcrumb": {
-        "@id": "https://nexahubtech.company/teaching#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://nexahubtech.company/teaching#principles"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://nexahubtech.company/teaching#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nexahubtech.company/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "How We Teach",
-          "item": "https://nexahubtech.company/teaching"
         }
       ]
     },
@@ -3951,54 +3730,6 @@
           "position": 3,
           "name": "Videography & Video Editing",
           "item": "https://nexahubtech.company/courses/videography-video-editing"
-        }
-      ]
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://nexahubtech.company/courses/cybersecurity#webpage",
-      "url": "https://nexahubtech.company/courses/cybersecurity",
-      "name": "Cybersecurity — NexaHubTech Academy",
-      "description": "Understand how systems are attacked — and how to defend them.",
-      "inLanguage": "en-NG",
-      "isPartOf": {
-        "@id": "https://nexahubtech.company/#website"
-      },
-      "publisher": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://nexahubtech.company/og/course-cybersecurity.jpg"
-      },
-      "breadcrumb": {
-        "@id": "https://nexahubtech.company/courses/cybersecurity#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://nexahubtech.company/courses/cybersecurity#course"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://nexahubtech.company/courses/cybersecurity#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nexahubtech.company/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Courses",
-          "item": "https://nexahubtech.company/courses"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Cybersecurity",
-          "item": "https://nexahubtech.company/courses/cybersecurity"
         }
       ]
     },

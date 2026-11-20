@@ -60,8 +60,8 @@ export const ID = {
 	serviceCatalog: `${abs(PAGES.services.path)}#catalog`,
 	cbtCourse: `${abs(PAGES.cbt.path)}#course`,
 	approach: `${abs(PAGES.approach.path)}#process`,
-	session: `${abs(PAGES.teaching.path)}#session`,
-	principles: `${abs(PAGES.teaching.path)}#principles`,
+	session: `${abs(PAGES.academyAbout.path)}#session`,
+	principles: `${abs(PAGES.academyAbout.path)}#principles`,
 	webpage: (path: string) => `${abs(path)}#webpage`,
 	breadcrumb: (path: string) => `${abs(path)}#breadcrumb`,
 	course: (c: Course) => `${abs(coursePage(c).path)}#course`,
@@ -319,7 +319,7 @@ export function teachingPrinciples(): Node {
 	return {
 		"@type": "ItemList",
 		"@id": ID.principles,
-		name: "How NexaHubTech teaches",
+		name: "How NexaHubTech Academy teaches",
 		itemListOrder: "https://schema.org/ItemListOrderAscending",
 		itemListElement: PRINCIPLES.map((p, i) => ({
 			"@type": "ListItem",
@@ -334,7 +334,7 @@ export function sessionHowTo(): Node {
 	return {
 		"@type": "HowTo",
 		"@id": ID.session,
-		name: "How a NexaHubTech teaching session runs",
+		name: "How a NexaHubTech Academy session runs",
 		description:
 			"Every session on every course is built in the same three parts.",
 		step: SESSION.map((s, i) => ({
@@ -455,7 +455,7 @@ function subjectOf(page: Page): { main?: string; nodes: Node[] } {
 			return { main: ID.serviceCatalog, nodes: [serviceCatalog()] };
 		case PAGES.cbt.path:
 			return { nodes: [cbtCourse()] };
-		case PAGES.teaching.path:
+		case PAGES.academyAbout.path:
 			return {
 				main: ID.principles,
 				nodes: [teachingPrinciples(), sessionHowTo()],

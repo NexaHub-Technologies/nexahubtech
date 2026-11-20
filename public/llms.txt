@@ -2,7 +2,7 @@
 
 > NexaHubTech is a Nigerian technology company that designs, builds and maintains software for businesses. Its training division, NexaHubTech Academy, teaches practical technology skills — online and in person — and develops the talent our engineering work depends on.
 
-Tagline: "Software, built properly." Based at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria (CAC RC 9545130). Its training division, NexaHubTech Academy, runs as a separate business with its own pages. Every Academy course is taught live and starts whenever the student is ready, online or in person (no more than 6 per in-person class, priced above a place online). PC Basics and CBT training are taught in person only. Fees can be paid in instalments. Prices are in Nigerian naira (NGN). Contact: nexahubt@gmail.com, +234 913 451 3173, WhatsApp https://wa.me/2349134513173.
+Tagline: "Design. Ship. Support." Based at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria (CAC RC 9545130). Its training division, NexaHubTech Academy, runs as a separate business with its own pages. Every Academy course is taught live and starts whenever the student is ready, online or in person (no more than 6 per in-person class, priced above a place online). PC Basics and CBT training are taught in person only. Fees can be paid in instalments. Prices are in Nigerian naira (NGN). Contact: nexahubt@gmail.com, +234 913 451 3173, WhatsApp https://wa.me/2349134513173.
 
 Each link below is the markdown version of a page on https://nexahubtech.company; drop the `.md` suffix for the HTML page.
 
@@ -16,12 +16,10 @@ NexaHubTech Academy is the training division of NexaHubTech. It teaches software
 
 - [NexaHubTech Academy](https://nexahubtech.company/academy.md): NexaHubTech Academy, the training division of NexaHubTech, offers live, instructor-led courses in software development, data, office productivity and video. Learn online or in person, start any day, and pay in instalments.
 - [Courses](https://nexahubtech.company/courses.md): Every NexaHubTech Academy course, from first steps on a computer to React, data analysis and video — taught live, online or in person, with flexible payment plans. Start any day.
-- [Fees](https://nexahubtech.company/fees.md): Every NexaHubTech Academy fee on one page: each course online and in person, paid in full or in instalments, plus CBT practice and rates for organisations.
-- [Timetable](https://nexahubtech.company/timetable.md): When NexaHubTech Academy classes run each week, online and in person. There are no fixed intakes: start any day and join the session that suits you.
 - [WAEC & JAMB CBT Training](https://nexahubtech.company/cbt.md): Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech Academy, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
-- [For Business](https://nexahubtech.company/for-business.md): Train your staff, your students or your team with NexaHubTech Academy: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online, in person or at your office.
-- [Learning Centre](https://nexahubtech.company/centre.md): Visit the NexaHubTech Academy learning centre at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja: small classes of no more than 6, machines provided, open Monday – Saturday, 8:00 AM – 6:00 PM. You are welcome to visit before you enrol.
-- [How We Teach](https://nexahubtech.company/teaching.md): The pedagogy behind every NexaHubTech Academy course: the mental model before the syntax, one idea at a time, and a session built in three parts.
+- [About the Academy](https://nexahubtech.company/academy/about.md): How NexaHubTech Academy teaches — the idea before the syntax, every session in three parts — and where and when it happens: live online in the evenings, or in person in classes of no more than 6 at our learning centre in Kubwa, Abuja.
+- [Pricing](https://nexahubtech.company/fees.md): Simple, all-inclusive pricing for every NexaHubTech Academy course: one fee for the whole course, online or in person, paid in full or in parts — plus CBT practice and rates for organisations.
+- [Organisations](https://nexahubtech.company/for-business.md): Train your staff, your students or your team with NexaHubTech Academy: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online, in person or at your office.
 - [Enrol](https://nexahubtech.company/enrol.md): Apply for a place at NexaHubTech Academy — taught live, online or in person, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.
 
 ## Courses
@@ -41,7 +39,6 @@ NexaHubTech Academy is the training division of NexaHubTech. It teaches software
 - [Data Analysis](https://nexahubtech.company/courses/data-analysis.md): Live online ₦130,000 (or 2 × ₦70,000) · In person ₦160,000 (or 2 × ₦87,500). 10 Weeks. Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
 - [Mobile Videography](https://nexahubtech.company/courses/mobile-videography.md): Phone video & editing. Live online ₦50,000 (or 2 × ₦27,500) · In person ₦60,000 (or 2 × ₦32,500). 4 Weeks. Shoot, light, record and edit video worth watching — on the phone you already own.
 - [Videography & Video Editing](https://nexahubtech.company/courses/videography-video-editing.md): Live online ₦100,000 (or 2 × ₦55,000) · In person ₦120,000 (or 2 × ₦65,000). 8 Weeks. Capture and craft video content that communicates — from shooting to final cut.
-- [Cybersecurity](https://nexahubtech.company/courses/cybersecurity.md): Live online ₦230,000 (or 3 × ₦82,500) · In person ₦280,000 (or 3 × ₦100,000). 16 Weeks. Understand how systems are attacked — and how to defend them.
 
 ## Services
 

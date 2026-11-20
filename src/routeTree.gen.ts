@@ -23,6 +23,7 @@ import { Route as ForBusinessRouteImport } from './routes/for-business'
 import { Route as TeachingRouteImport } from './routes/teaching'
 import { Route as TimetableRouteImport } from './routes/timetable'
 import { Route as WorkRouteImport } from './routes/work'
+import { Route as AcademyAboutRouteImport } from './routes/academy_.about'
 import { Route as CoursesIndexRouteImport } from './routes/courses/index'
 import { Route as ServicesIndexRouteImport } from './routes/services/index'
 import { Route as ServicesSlugRouteImport } from './routes/services/$slug'
@@ -98,6 +99,11 @@ const WorkRoute = WorkRouteImport.update({
   path: '/work',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AcademyAboutRoute = AcademyAboutRouteImport.update({
+  id: '/academy_/about',
+  path: '/academy/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CoursesIndexRoute = CoursesIndexRouteImport.update({
   id: '/courses/',
   path: '/courses/',
@@ -134,6 +140,7 @@ export interface FileRoutesByFullPath {
   '/teaching': typeof TeachingRoute
   '/timetable': typeof TimetableRoute
   '/work': typeof WorkRoute
+  '/academy/about': typeof AcademyAboutRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/courses/': typeof CoursesIndexRoute
   '/services/': typeof ServicesIndexRoute
@@ -154,6 +161,7 @@ export interface FileRoutesByTo {
   '/teaching': typeof TeachingRoute
   '/timetable': typeof TimetableRoute
   '/work': typeof WorkRoute
+  '/academy/about': typeof AcademyAboutRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/courses': typeof CoursesIndexRoute
   '/services': typeof ServicesIndexRoute
@@ -175,6 +183,7 @@ export interface FileRoutesById {
   '/teaching': typeof TeachingRoute
   '/timetable': typeof TimetableRoute
   '/work': typeof WorkRoute
+  '/academy_/about': typeof AcademyAboutRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/courses/': typeof CoursesIndexRoute
   '/services/': typeof ServicesIndexRoute
@@ -197,6 +206,7 @@ export interface FileRouteTypes {
     | '/teaching'
     | '/timetable'
     | '/work'
+    | '/academy/about'
     | '/services/$slug'
     | '/courses/'
     | '/services/'
@@ -217,6 +227,7 @@ export interface FileRouteTypes {
     | '/teaching'
     | '/timetable'
     | '/work'
+    | '/academy/about'
     | '/services/$slug'
     | '/courses'
     | '/services'
@@ -237,6 +248,7 @@ export interface FileRouteTypes {
     | '/teaching'
     | '/timetable'
     | '/work'
+    | '/academy_/about'
     | '/services/$slug'
     | '/courses/'
     | '/services/'
@@ -258,6 +270,7 @@ export interface RootRouteChildren {
   TeachingRoute: typeof TeachingRoute
   TimetableRoute: typeof TimetableRoute
   WorkRoute: typeof WorkRoute
+  AcademyAboutRoute: typeof AcademyAboutRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
   CoursesIndexRoute: typeof CoursesIndexRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
@@ -364,6 +377,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/academy_/about': {
+      id: '/academy_/about'
+      path: '/academy/about'
+      fullPath: '/academy/about'
+      preLoaderRoute: typeof AcademyAboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/courses/': {
       id: '/courses/'
       path: '/courses'
@@ -410,6 +430,7 @@ const rootRouteChildren: RootRouteChildren = {
   TeachingRoute: TeachingRoute,
   TimetableRoute: TimetableRoute,
   WorkRoute: WorkRoute,
+  AcademyAboutRoute: AcademyAboutRoute,
   ServicesSlugRoute: ServicesSlugRoute,
   CoursesIndexRoute: CoursesIndexRoute,
   ServicesIndexRoute: ServicesIndexRoute,

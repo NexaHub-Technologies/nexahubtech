@@ -6,7 +6,7 @@ Canonical page: https://nexahubtech.company/
 
 NexaHubTech is a Nigeria-based software development company. We design, build and maintain production software for businesses and founders — scoped carefully, built properly, and supported long after launch.
 
-Tagline: *Software, built properly.*
+Tagline: *Design. Ship. Support.*
 
 ## What we build
 

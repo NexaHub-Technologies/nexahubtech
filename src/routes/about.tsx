@@ -168,7 +168,7 @@ function About() {
 						<h3 className="display text-[1.6rem]">Want to learn with us?</h3>
 						<p className="lead mt-3">
 							NexaHubTech Academy runs {COURSE_COUNT_WORD_CAP} courses, from
-							switching a computer on to cybersecurity.
+							switching a computer on to building full-stack apps.
 						</p>
 						<Link to="/academy" className="btn btn-primary mt-5">
 							Visit the Academy

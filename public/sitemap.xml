@@ -10,22 +10,16 @@
     <loc>https://nexahubtech.company/courses</loc>
   </url>
   <url>
-    <loc>https://nexahubtech.company/fees</loc>
-  </url>
-  <url>
-    <loc>https://nexahubtech.company/timetable</loc>
-  </url>
-  <url>
     <loc>https://nexahubtech.company/cbt</loc>
   </url>
   <url>
+    <loc>https://nexahubtech.company/academy/about</loc>
+  </url>
+  <url>
+    <loc>https://nexahubtech.company/fees</loc>
+  </url>
+  <url>
     <loc>https://nexahubtech.company/for-business</loc>
-  </url>
-  <url>
-    <loc>https://nexahubtech.company/centre</loc>
-  </url>
-  <url>
-    <loc>https://nexahubtech.company/teaching</loc>
   </url>
   <url>
     <loc>https://nexahubtech.company/enrol</loc>
@@ -86,9 +80,6 @@
   </url>
   <url>
     <loc>https://nexahubtech.company/courses/videography-video-editing</loc>
-  </url>
-  <url>
-    <loc>https://nexahubtech.company/courses/cybersecurity</loc>
   </url>
   <url>
     <loc>https://nexahubtech.company/services/software-development</loc>

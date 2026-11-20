@@ -4,17 +4,21 @@ import { describe, expect, it } from "vitest";
 import {
 	bundleSaving,
 	bundlesContaining,
+	CATALOGUE,
 	COURSE_COUNT,
 	COURSE_COUNT_WORD,
 	COURSES,
-	coursesAt,
+	coursesIn,
 	deliveriesOf,
 	type Fee,
 	formatNaira,
 	instalmentTotal,
+	isPaused,
 	LEVELS,
 	nextCourse,
 	offeredInPerson,
+	PAUSED,
+	TRACKS,
 } from "./courses";
 
 /* every course carries a mental model, and the type makes that non-negotiable —
@@ -209,8 +213,13 @@ describe("the catalogue's structure", () => {
 		const seen = COURSES.map((c) => order.indexOf(c.level));
 		expect(seen.every((i) => i >= 0)).toBe(true);
 		expect(seen).toEqual([...seen].sort((a, b) => a - b));
+		/* a level may be empty on the site while its only course is paused, but
+		   never empty in the catalogue */
 		for (const l of LEVELS)
-			expect(coursesAt(l.id).length, l.id).toBeGreaterThan(0);
+			expect(
+				CATALOGUE.filter((c) => c.level === l.id).length,
+				l.id,
+			).toBeGreaterThan(0);
 	});
 
 	it("points every next step at a real, different course", () => {
@@ -241,6 +250,35 @@ describe("the catalogue's structure", () => {
 			expect(c.admission === "on-request", c.slug).toBe(
 				c.level === "on-request",
 			);
+		}
+	});
+});
+
+describe("tracks", () => {
+	it("place every course in exactly one track, and no track is empty", () => {
+		const placed = TRACKS.flatMap((t) => coursesIn(t.id).map((c) => c.slug));
+		expect(placed.sort()).toEqual(COURSES.map((c) => c.slug).sort());
+		for (const t of TRACKS)
+			expect(coursesIn(t.id).length, t.id).toBeGreaterThan(0);
+	});
+});
+
+describe("paused courses", () => {
+	it("are kept in the catalogue but never offered", () => {
+		for (const slug of Object.keys(PAUSED)) {
+			expect(isPaused(slug), slug).toBe(true);
+			expect(
+				COURSES.some((c) => c.slug === slug),
+				slug,
+			).toBe(false);
+		}
+	});
+
+	it("leave no published course pointing at them", () => {
+		for (const c of COURSES) {
+			expect(c.next && c.next.slug in PAUSED, c.slug).toBeFalsy();
+			for (const part of c.bundle?.parts ?? [])
+				expect(part in PAUSED, `${c.slug} bundles ${part}`).toBe(false);
 		}
 	});
 });

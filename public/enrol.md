@@ -23,7 +23,6 @@ The application form is at https://nexahubtech.company/enrol. To open it with a 
 - Data Analysis (From ₦130,000): https://nexahubtech.company/enrol?course=data-analysis
 - Mobile Videography (From ₦50,000): https://nexahubtech.company/enrol?course=mobile-videography
 - Videography & Video Editing (From ₦100,000): https://nexahubtech.company/enrol?course=videography-video-editing
-- Cybersecurity (From ₦230,000): https://nexahubtech.company/enrol?course=cybersecurity
 
 For WAEC & JAMB CBT training, see [WAEC & JAMB CBT Training](https://nexahubtech.company/cbt.md), or walk in during opening hours.
 
