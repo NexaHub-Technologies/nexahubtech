@@ -25,8 +25,8 @@ instead the test requires that they carry no projects section, no capstone and n
 spec directory, and that **every** one of their modules has an exercise brief
 rather than all but the last.
 
-**How a course is delivered** — live online, in person at the Kubwa centre, or
-either — is stated in each document's Format row, and the test holds it to the
+**How a course is delivered** — live online, in person, or either — is stated in
+each document's Format row, and the test holds it to the
 course record, which is also what decides which fees the site sells. Courses
 offered both ways are taught from the same document.
 

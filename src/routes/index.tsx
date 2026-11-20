@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMode } from "../components/mode";
 import { Eyebrow, useReveal } from "../components/site";
 import { BUSINESS_OFFERS } from "../lib/business";
-import { CBT_DETAILS } from "../lib/cbt";
 import {
 	CENTRE_SEATS,
 	COURSE_COUNT,
@@ -64,14 +63,14 @@ function HeroStage() {
    the mode decides who gets addressed first. */
 const HERO_BY_MODE = {
 	learn: {
-		pill: "A tech school in Kubwa, FCT-Abuja",
+		pill: "Live, instructor-led tech courses",
 		headA: "Learn tech properly.",
-		headB: "In Kubwa or ",
-		headAccent: "online",
+		headB: "On your ",
+		headAccent: "terms",
 		accentVar: "var(--learn-ink)",
-		lead: `Small classes of ${CENTRE_SEATS} at our Kubwa centre, or live online from anywhere in Nigeria. The mental model first, then the practice — taught by people who build real software every day. Start any day, and pay in instalments if you need to.`,
-		primary: { to: "/courses", label: "See courses & fees" },
-		secondary: { to: "/centre", label: "Visit the centre" },
+		lead: "Practical courses in software development, data, office productivity and video — taught live by people who build real software every day. Learn online from anywhere or in person in a small class, start any day, and spread your fee across the course.",
+		primary: { to: "/courses", label: "Explore courses" },
+		secondary: { to: "/fees", label: "Compare fees" },
 	},
 	build: {
 		pill: "A software studio + a tech school",
@@ -163,11 +162,11 @@ function Hero() {
    Decorative: every phrase on them is said in full elsewhere on the page. */
 const TAPE_BY_MODE = {
 	learn: [
-		`Max ${CENTRE_SEATS} per class`,
-		"In Kubwa or online",
-		"Pay in instalments",
-		"Mental model first",
+		"Online or in person",
+		"Live, instructor-led",
 		"Start any day",
+		"Flexible payment plans",
+		"Mental model first",
 	],
 	build: [
 		"Software, built properly",
@@ -215,9 +214,12 @@ function Numbers() {
 					{ n: "1", l: "team that teaches what it ships" },
 				]
 			: [
-					{ n: String(COURSE_COUNT), l: "courses, taught live" },
-					{ n: String(CENTRE_SEATS), l: "seats per class at the centre" },
-					{ n: "2", l: "ways to learn: in Kubwa or live online" },
+					{ n: String(COURSE_COUNT), l: "live, instructor-led courses" },
+					{ n: "2", l: "ways to learn — online or in person" },
+					{
+						n: String(CENTRE_SEATS),
+						l: "learners at most in an in-person class",
+					},
 				];
 	return (
 		<section className="wrap py-14">
@@ -298,64 +300,65 @@ function StartingPoints() {
 	);
 }
 
-const AT_THE_CENTRE = [
-	"Somebody beside you who can see your screen",
-	"Machines provided for computer, office and CBT classes",
-	`Open ${CBT_DETAILS.hours}`,
-	"Weekday and Saturday sessions",
+const LIVE_ONLINE = [
+	"Real-time sessions with your instructor — never pre-recorded",
+	"Materials, exercises and feedback shared on WhatsApp",
+	"Evening sessions that fit around work or study",
+	"Our most affordable way to learn",
 ];
 
-const LIVE_ONLINE = [
-	"Live sessions with a real instructor — not recordings",
-	"Materials, exercises and feedback on WhatsApp",
-	"Evening sessions around a working day",
-	"Priced below a seat in the centre",
+const IN_PERSON = [
+	"Your instructor in the room, able to see your screen",
+	"Machines provided for computer and office courses",
+	"Weekday and Saturday sessions",
+	"Our learning centre in Kubwa, Abuja",
 ];
 
 function TwoWays() {
 	return (
 		<section className="wrap py-16">
 			<div className="reveal max-w-[40rem] mb-10">
-				<Eyebrow>In Kubwa or online</Eyebrow>
-				<h2 className="shout mt-4">Two ways in. Same course.</h2>
+				<Eyebrow>Your choice</Eyebrow>
+				<h2 className="shout mt-4">Learn online or in person.</h2>
 				<p className="lead mt-4">
-					The same curriculum, the same materials and the same instructors — in
-					the room with you, or live on your screen.
+					Same curriculum, same instructors, same standard. Almost every course
+					is offered both ways, so you choose the format that fits your
+					schedule.
 				</p>
 			</div>
 			<div className="grid md:grid-cols-2 gap-6">
 				<div className="card panel-learn reveal p-8">
-					<Eyebrow>At the centre</Eyebrow>
+					<Eyebrow>Live online</Eyebrow>
 					<h3 className="display text-[1.7rem] mt-3">
-						At most {CENTRE_SEATS} people, one instructor, in the room.
+						Learn from anywhere, in real time.
 					</h3>
 					<ul className="mt-5">
-						{AT_THE_CENTRE.map((x) => (
+						{LIVE_ONLINE.map((x) => (
 							<li key={x} className="feat">
 								<span className="mk mk-learn">✓</span>
 								{x}
 							</li>
 						))}
 					</ul>
-					<Link to="/centre" className="view-link mt-6">
-						About the centre <i aria-hidden="true">→</i>
+					<Link to="/timetable" className="view-link mt-6">
+						See session times <i aria-hidden="true">→</i>
 					</Link>
 				</div>
 				<div className="card reveal p-8">
-					<Eyebrow variant="build">Live online</Eyebrow>
+					<Eyebrow variant="build">In person</Eyebrow>
 					<h3 className="display text-[1.7rem] mt-3">
-						From anywhere in Nigeria, in the evening.
+						Small classes of no more than {CENTRE_SEATS}.
 					</h3>
 					<ul className="mt-5">
-						{LIVE_ONLINE.map((x) => (
+						{IN_PERSON.map((x) => (
 							<li key={x} className="feat">
 								<span className="mk mk-build">✓</span>
 								{x}
 							</li>
 						))}
 					</ul>
-					<Link to="/timetable" className="view-link mt-6">
-						Session times <i aria-hidden="true">→</i>
+					<Link to="/centre" className="view-link mt-6">
+						Visit the learning centre <i aria-hidden="true">→</i>
 					</Link>
 				</div>
 			</div>
@@ -525,7 +528,7 @@ function ClosingCTA() {
 					<p className="blast-lead mt-5">
 						{build
 							? "Tell us about the product you need. We’ll help you scope it, design it well, and build it right — then keep it running."
-							: "Start any day, in Kubwa or online, and pay in full or in instalments — taught live by people who build software every day. Or prepare for your WAEC and JAMB CBT exams at our Kubwa centre."}
+							: "Start any day, online or in person, with a payment plan that suits you — taught live by people who build software every day. Preparing for WAEC or JAMB? Our CBT training gets you exam-ready."}
 					</p>
 					<div className="mt-8 flex flex-wrap gap-3">
 						{build ? (

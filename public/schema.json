@@ -110,7 +110,7 @@
       "@id": "https://nexahubtech.company/#website",
       "url": "https://nexahubtech.company/",
       "name": "NexaHubTech",
-      "description": "NexaHubTech is a tech school in Kubwa, FCT-Abuja, with a software studio behind it. Learn computer skills, Microsoft Office, coding, data and video — in small classes of six at the centre, or live online from anywhere in Nigeria — and start whenever you are ready.",
+      "description": "NexaHubTech offers live, instructor-led courses in software development, data, office productivity and video, backed by a working software studio. Learn online from anywhere or in person in a small class, start any day, and pay in instalments.",
       "inLanguage": "en-NG",
       "publisher": {
         "@id": "https://nexahubtech.company/#organization"
@@ -299,7 +299,20 @@
           "seller": {
             "@id": "https://nexahubtech.company/#organization"
           },
-          "name": "In Kubwa, max 6",
+          "name": "Live online",
+          "price": "37500",
+          "description": "₦37,500 in full, or 2 × ₦20,000.",
+          "url": "https://nexahubtech.company/enrol?course=computer-essentials"
+        },
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In person",
           "price": "45000",
           "description": "₦45,000 in full, or 2 × ₦25,000.",
           "url": "https://nexahubtech.company/enrol?course=computer-essentials"
@@ -308,8 +321,14 @@
       "hasCourseInstance": [
         {
           "@type": "CourseInstance",
+          "courseMode": "Online",
+          "description": "Taught live — online or in person. The first three modules of PC Basics, on their own. Learn online, with your instructor guiding every click on a shared screen, or in person in a class of no more than 6, where machines are provided. Start whenever you are ready.",
+          "duration": "P3W"
+        },
+        {
+          "@type": "CourseInstance",
           "courseMode": "Onsite",
-          "description": "Taught in the centre, in person. The first three modules of PC Basics, on their own. Like PC Basics it is only taught in person at our Kubwa centre: a beginner needs somebody beside them saying that one, on the left, not a video call. Machines are provided, and you start whenever you are ready.",
+          "description": "Taught live — online or in person. The first three modules of PC Basics, on their own. Learn online, with your instructor guiding every click on a shared screen, or in person in a class of no more than 6, where machines are provided. Start whenever you are ready.",
           "duration": "P3W",
           "location": {
             "@id": "https://nexahubtech.company/#organization"
@@ -385,7 +404,7 @@
           "seller": {
             "@id": "https://nexahubtech.company/#organization"
           },
-          "name": "In Kubwa, max 6",
+          "name": "In person",
           "price": "75000",
           "description": "₦75,000 in full, or 2 × ₦40,000.",
           "url": "https://nexahubtech.company/enrol?course=pc-basics"
@@ -395,7 +414,7 @@
         {
           "@type": "CourseInstance",
           "courseMode": "Onsite",
-          "description": "Taught in the centre, in person. This course is only taught in person, and cannot be taught any other way: the first thing a beginner needs is somebody beside them saying that one, on the left. Sitting a person who has never used a computer in front of a video call asks them to use the very skill the course exists to teach. Machines are provided, and you start whenever you are ready.",
+          "description": "Taught in the centre, in person. This is the one course we teach only in person, in a class of no more than 6. A complete beginner needs someone beside them pointing to the right button — a video call would depend on the very skills the course exists to teach. Machines are provided, and you start whenever you are ready.",
           "duration": "P6W",
           "location": {
             "@id": "https://nexahubtech.company/#organization"
@@ -464,7 +483,20 @@
           "seller": {
             "@id": "https://nexahubtech.company/#organization"
           },
-          "name": "In Kubwa, max 6",
+          "name": "Live online",
+          "price": "45000",
+          "description": "₦45,000 in full, or 2 × ₦25,000.",
+          "url": "https://nexahubtech.company/enrol?course=office-essentials"
+        },
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In person",
           "price": "55000",
           "description": "₦55,000 in full, or 2 × ₦30,000.",
           "url": "https://nexahubtech.company/enrol?course=office-essentials"
@@ -473,8 +505,14 @@
       "hasCourseInstance": [
         {
           "@type": "CourseInstance",
+          "courseMode": "Online",
+          "description": "Taught live — online or in person. Learn live online on your own computer, or in person in a class of no more than 6 on our licensed Windows machines. Either way you work on real documents from your own desk, and you start the day you are ready. Teams can also be trained at their own office.",
+          "duration": "P4W"
+        },
+        {
+          "@type": "CourseInstance",
           "courseMode": "Onsite",
-          "description": "Taught in the centre, in person. Taught in person at our Kubwa centre, in a group of at most 6, on licensed Windows machines — with work from your own desk open in front of you. You start the day you are ready. Teams can also be trained at their own office.",
+          "description": "Taught live — online or in person. Learn live online on your own computer, or in person in a class of no more than 6 on our licensed Windows machines. Either way you work on real documents from your own desk, and you start the day you are ready. Teams can also be trained at their own office.",
           "duration": "P4W",
           "location": {
             "@id": "https://nexahubtech.company/#organization"
@@ -556,7 +594,20 @@
           "seller": {
             "@id": "https://nexahubtech.company/#organization"
           },
-          "name": "In Kubwa, max 6",
+          "name": "Live online",
+          "price": "80000",
+          "description": "₦80,000 in full, or 2 × ₦42,500.",
+          "url": "https://nexahubtech.company/enrol?course=microsoft-office"
+        },
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In person",
           "price": "95000",
           "description": "₦95,000 in full, or 2 × ₦52,500.",
           "url": "https://nexahubtech.company/enrol?course=microsoft-office"
@@ -565,8 +616,14 @@
       "hasCourseInstance": [
         {
           "@type": "CourseInstance",
+          "courseMode": "Online",
+          "description": "Taught live — online or in person. Learn live online on your own Windows PC, or in person in a class of no more than 6 on our licensed machines. Either way the course is built around real work from your own desk, so you leave each session with something that already runs better. Start the day you are ready. Teams can also be trained at their own office.",
+          "duration": "P8W"
+        },
+        {
+          "@type": "CourseInstance",
           "courseMode": "Onsite",
-          "description": "Taught in the centre, in person. Office work is learnt at a real desk, on a real machine, with your own files open — so this course is taught in person at our Kubwa centre, in a group of at most 6, on licensed Windows machines. Bring work from your own desk, start the day you are ready, and leave each session with something that already runs better. Teams can also be trained at their own office.",
+          "description": "Taught live — online or in person. Learn live online on your own Windows PC, or in person in a class of no more than 6 on our licensed machines. Either way the course is built around real work from your own desk, so you leave each session with something that already runs better. Start the day you are ready. Teams can also be trained at their own office.",
           "duration": "P8W",
           "location": {
             "@id": "https://nexahubtech.company/#organization"
@@ -672,7 +729,7 @@
           "seller": {
             "@id": "https://nexahubtech.company/#organization"
           },
-          "name": "In Kubwa, max 6",
+          "name": "In person",
           "price": "115000",
           "description": "₦115,000 in full, or 2 × ₦62,500.",
           "url": "https://nexahubtech.company/enrol?course=python-programming"
@@ -682,13 +739,13 @@
         {
           "@type": "CourseInstance",
           "courseMode": "Online",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P6W"
         },
         {
           "@type": "CourseInstance",
           "courseMode": "Onsite",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P6W",
           "location": {
             "@id": "https://nexahubtech.company/#organization"
@@ -802,7 +859,7 @@
           "seller": {
             "@id": "https://nexahubtech.company/#organization"
           },
-          "name": "In Kubwa, max 6",
+          "name": "In person",
           "price": "115000",
           "description": "₦115,000 in full, or 2 × ₦62,500.",
           "url": "https://nexahubtech.company/enrol?course=javascript-programming"
@@ -812,13 +869,13 @@
         {
           "@type": "CourseInstance",
           "courseMode": "Online",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P8W"
         },
         {
           "@type": "CourseInstance",
           "courseMode": "Onsite",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P8W",
           "location": {
             "@id": "https://nexahubtech.company/#organization"
@@ -924,7 +981,7 @@
           "seller": {
             "@id": "https://nexahubtech.company/#organization"
           },
-          "name": "In Kubwa, max 6",
+          "name": "In person",
           "price": "145000",
           "description": "₦145,000 in full, or 2 × ₦77,500.",
           "url": "https://nexahubtech.company/enrol?course=frontend-development"
@@ -934,13 +991,13 @@
         {
           "@type": "CourseInstance",
           "courseMode": "Online",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P10W"
         },
         {
           "@type": "CourseInstance",
           "courseMode": "Onsite",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P10W",
           "location": {
             "@id": "https://nexahubtech.company/#organization"
@@ -1047,7 +1104,7 @@
           "seller": {
             "@id": "https://nexahubtech.company/#organization"
           },
-          "name": "In Kubwa, max 6",
+          "name": "In person",
           "price": "135000",
           "description": "₦135,000 in full, or 2 × ₦72,500.",
           "url": "https://nexahubtech.company/enrol?course=backend-development"
@@ -1057,13 +1114,13 @@
         {
           "@type": "CourseInstance",
           "courseMode": "Online",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P8W"
         },
         {
           "@type": "CourseInstance",
           "courseMode": "Onsite",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P8W",
           "location": {
             "@id": "https://nexahubtech.company/#organization"
@@ -1183,7 +1240,7 @@
           "seller": {
             "@id": "https://nexahubtech.company/#organization"
           },
-          "name": "In Kubwa, max 6",
+          "name": "In person",
           "price": "240000",
           "description": "₦240,000 in full, or 3 × ₦87,500.",
           "url": "https://nexahubtech.company/enrol?course=web-development-fullstack"
@@ -1193,13 +1250,13 @@
         {
           "@type": "CourseInstance",
           "courseMode": "Online",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P18W"
         },
         {
           "@type": "CourseInstance",
           "courseMode": "Onsite",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P18W",
           "location": {
             "@id": "https://nexahubtech.company/#organization"
@@ -1314,7 +1371,7 @@
           "seller": {
             "@id": "https://nexahubtech.company/#organization"
           },
-          "name": "In Kubwa, max 6",
+          "name": "In person",
           "price": "160000",
           "description": "₦160,000 in full, or 2 × ₦87,500.",
           "url": "https://nexahubtech.company/enrol?course=react-development"
@@ -1324,13 +1381,13 @@
         {
           "@type": "CourseInstance",
           "courseMode": "Online",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P8W"
         },
         {
           "@type": "CourseInstance",
           "courseMode": "Onsite",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P8W",
           "location": {
             "@id": "https://nexahubtech.company/#organization"
@@ -1451,7 +1508,7 @@
           "seller": {
             "@id": "https://nexahubtech.company/#organization"
           },
-          "name": "In Kubwa, max 6",
+          "name": "In person",
           "price": "195000",
           "description": "₦195,000 in full, or 2 × ₦105,000.",
           "url": "https://nexahubtech.company/enrol?course=nextjs-fullstack"
@@ -1461,13 +1518,13 @@
         {
           "@type": "CourseInstance",
           "courseMode": "Online",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P10W"
         },
         {
           "@type": "CourseInstance",
           "courseMode": "Onsite",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P10W",
           "location": {
             "@id": "https://nexahubtech.company/#organization"
@@ -1574,7 +1631,7 @@
           "seller": {
             "@id": "https://nexahubtech.company/#organization"
           },
-          "name": "In Kubwa, max 6",
+          "name": "In person",
           "price": "230000",
           "description": "₦230,000 in full, or 2 × ₦125,000.",
           "url": "https://nexahubtech.company/enrol?course=mobile-development"
@@ -1584,13 +1641,13 @@
         {
           "@type": "CourseInstance",
           "courseMode": "Online",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P12W"
         },
         {
           "@type": "CourseInstance",
           "courseMode": "Onsite",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P12W",
           "location": {
             "@id": "https://nexahubtech.company/#organization"
@@ -1703,7 +1760,7 @@
           "seller": {
             "@id": "https://nexahubtech.company/#organization"
           },
-          "name": "In Kubwa, max 6",
+          "name": "In person",
           "price": "160000",
           "description": "₦160,000 in full, or 2 × ₦87,500.",
           "url": "https://nexahubtech.company/enrol?course=data-analysis"
@@ -1713,13 +1770,13 @@
         {
           "@type": "CourseInstance",
           "courseMode": "Online",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P10W"
         },
         {
           "@type": "CourseInstance",
           "courseMode": "Onsite",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P10W",
           "location": {
             "@id": "https://nexahubtech.company/#organization"
@@ -1792,14 +1849,36 @@
           "price": "50000",
           "description": "₦50,000 in full, or 2 × ₦27,500.",
           "url": "https://nexahubtech.company/enrol?course=mobile-videography"
+        },
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In person",
+          "price": "60000",
+          "description": "₦60,000 in full, or 2 × ₦32,500.",
+          "url": "https://nexahubtech.company/enrol?course=mobile-videography"
         }
       ],
       "hasCourseInstance": [
         {
           "@type": "CourseInstance",
           "courseMode": "Online",
-          "description": "Taught live, online. Everything here is done on a phone, so it is taught live online — from anywhere in Nigeria, with sessions and materials on WhatsApp and your clips reviewed between sessions. You start the day you are ready. When you want cameras, lights and an edit suite, Videography & Video Editing is the next step.",
+          "description": "Taught live — online or in person. Everything is done on the phone you already own, so you can learn live online from anywhere or in person in a class of no more than 6. Your clips are reviewed between sessions either way, and you start the day you are ready. When you want cameras, lights and an edit suite, Videography & Video Editing is the next step.",
           "duration": "P4W"
+        },
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Onsite",
+          "description": "Taught live — online or in person. Everything is done on the phone you already own, so you can learn live online from anywhere or in person in a class of no more than 6. Your clips are reviewed between sessions either way, and you start the day you are ready. When you want cameras, lights and an edit suite, Videography & Video Editing is the next step.",
+          "duration": "P4W",
+          "location": {
+            "@id": "https://nexahubtech.company/#organization"
+          }
         }
       ]
     },
@@ -1869,7 +1948,20 @@
           "seller": {
             "@id": "https://nexahubtech.company/#organization"
           },
-          "name": "In Kubwa, max 6",
+          "name": "Live online",
+          "price": "100000",
+          "description": "₦100,000 in full, or 2 × ₦55,000.",
+          "url": "https://nexahubtech.company/enrol?course=videography-video-editing"
+        },
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In person",
           "price": "120000",
           "description": "₦120,000 in full, or 2 × ₦65,000.",
           "url": "https://nexahubtech.company/enrol?course=videography-video-editing"
@@ -1878,8 +1970,14 @@
       "hasCourseInstance": [
         {
           "@type": "CourseInstance",
+          "courseMode": "Online",
+          "description": "Taught live — online or in person, with shoots on location. Learn live online, with your footage reviewed between sessions, or in person in a class of no more than 6, with cameras, lights and an edit suite to work on. Either way, shooting assignments happen out on location, and you start the day you are ready. New to video with only a phone? Mobile Videography is the quickest way in.",
+          "duration": "P8W"
+        },
+        {
+          "@type": "CourseInstance",
           "courseMode": "Onsite",
-          "description": "Taught in the centre, in person, with shoots on location. Cameras, lights and an edit suite are learnt with your hands on them, so this course is taught in person at our Kubwa centre, in a group of at most 6 — with shooting assignments out on location between sessions. You start the day you are ready. New to video, with only a phone? Mobile Videography is the online way in.",
+          "description": "Taught live — online or in person, with shoots on location. Learn live online, with your footage reviewed between sessions, or in person in a class of no more than 6, with cameras, lights and an edit suite to work on. Either way, shooting assignments happen out on location, and you start the day you are ready. New to video with only a phone? Mobile Videography is the quickest way in.",
           "duration": "P8W",
           "location": {
             "@id": "https://nexahubtech.company/#organization"
@@ -1998,7 +2096,7 @@
           "seller": {
             "@id": "https://nexahubtech.company/#organization"
           },
-          "name": "In Kubwa, max 6",
+          "name": "In person",
           "price": "280000",
           "description": "₦280,000 in full, or 3 × ₦100,000.",
           "url": "https://nexahubtech.company/enrol?course=cybersecurity"
@@ -2008,13 +2106,13 @@
         {
           "@type": "CourseInstance",
           "courseMode": "Online",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P16W"
         },
         {
           "@type": "CourseInstance",
           "courseMode": "Onsite",
-          "description": "Taught live — online, or in person at the centre. Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.",
+          "description": "Taught live — online or in person. You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.",
           "duration": "P16W",
           "location": {
             "@id": "https://nexahubtech.company/#organization"
@@ -2504,8 +2602,8 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/#webpage",
       "url": "https://nexahubtech.company/",
-      "name": "NexaHubTech — Learn tech properly, in Kubwa or online",
-      "description": "NexaHubTech is a tech school in Kubwa, FCT-Abuja, with a software studio behind it. Learn computer skills, Microsoft Office, coding, data and video — in small classes of six at the centre, or live online from anywhere in Nigeria — and start whenever you are ready.",
+      "name": "NexaHubTech — Live Tech Courses, Online or In Person",
+      "description": "NexaHubTech offers live, instructor-led courses in software development, data, office productivity and video, backed by a working software studio. Learn online from anywhere or in person in a small class, start any day, and pay in instalments.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2526,7 +2624,7 @@
       "@id": "https://nexahubtech.company/courses#webpage",
       "url": "https://nexahubtech.company/courses",
       "name": "Courses — NexaHubTech",
-      "description": "Every course at NexaHubTech, from your first time on a computer to React, data analysis and video — taught live online or in small groups at our Kubwa centre, with fees you can pay in instalments. Start any day.",
+      "description": "Every NexaHubTech course, from first steps on a computer to React, data analysis and video — taught live, online or in person, with flexible payment plans. Start any day.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2568,7 +2666,7 @@
       "@id": "https://nexahubtech.company/fees#webpage",
       "url": "https://nexahubtech.company/fees",
       "name": "Course Fees — NexaHubTech",
-      "description": "Every NexaHubTech fee on one page: each course live online and in person at the Kubwa centre, paid in full or in instalments, plus CBT practice and rates for organisations.",
+      "description": "Every NexaHubTech fee on one page: each course online and in person, paid in full or in instalments, plus CBT practice and rates for organisations.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2610,7 +2708,7 @@
       "@id": "https://nexahubtech.company/timetable#webpage",
       "url": "https://nexahubtech.company/timetable",
       "name": "Session Times — NexaHubTech",
-      "description": "When NexaHubTech classes run each week — at the Kubwa centre and live online. There are no fixed intakes: you start any day and join a standing session that suits you.",
+      "description": "When NexaHubTech classes run each week, online and in person. There are no fixed intakes: start any day and join the session that suits you.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2736,7 +2834,7 @@
       "@id": "https://nexahubtech.company/for-business#webpage",
       "url": "https://nexahubtech.company/for-business",
       "name": "Training for Organisations — NexaHubTech",
-      "description": "Train your staff, your students or your team with NexaHubTech: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online or at our Kubwa centre.",
+      "description": "Train your staff, your students or your team with NexaHubTech: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online, in person or at your office.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2777,8 +2875,8 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/centre#webpage",
       "url": "https://nexahubtech.company/centre",
-      "name": "Our Kubwa Centre — NexaHubTech",
-      "description": "Visit the NexaHubTech centre at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja: one room, classes of at most 6, machines provided, open Monday – Saturday, 8:00 AM – 6:00 PM. Come and see it before you pay.",
+      "name": "Our Learning Centre — NexaHubTech",
+      "description": "Visit the NexaHubTech learning centre at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja: small classes of no more than 6, machines provided, open Monday – Saturday, 8:00 AM – 6:00 PM. You are welcome to visit before you enrol.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2810,7 +2908,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "The Centre",
+          "name": "Learning Centre",
           "item": "https://nexahubtech.company/centre"
         }
       ]
@@ -2862,7 +2960,7 @@
       "@id": "https://nexahubtech.company/enrol#webpage",
       "url": "https://nexahubtech.company/enrol",
       "name": "Enrol — NexaHubTech",
-      "description": "Apply for a place at NexaHubTech — taught live, online or at our Kubwa centre, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.",
+      "description": "Apply for a place at NexaHubTech — taught live, online or in person, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"

@@ -8,14 +8,14 @@ Canonical page: https://nexahubtech.company/courses/backend-development
 |---|---|
 | Subject | Backend Development |
 | Fee — live online | ₦110,000, or 2 × ₦60,000 |
-| Fee — in kubwa, max 6 | ₦135,000, or 2 × ₦72,500 |
+| Fee — in person | ₦135,000, or 2 × ₦72,500 |
 | Duration | 8 Weeks |
-| Format | Taught live — online, or in person at the centre. |
+| Format | Taught live — online or in person. |
 | Level | Open to beginners; smoother with some programming |
 | Start | Any day |
-| Session times | Mon, Wed, Fri · 8:30 AM – 11:00 AM (in kubwa, max 6); Tue, Thu · 2:00 PM – 4:00 PM (in kubwa, max 6); Sat · 12:30 PM – 3:30 PM (in kubwa, max 6); Mon, Wed, Fri · 7:00 PM – 9:00 PM (live online); Tue, Thu · 7:00 PM – 9:00 PM (live online) |
+| Session times | Mon, Wed, Fri · 8:30 AM – 11:00 AM (in person); Tue, Thu · 2:00 PM – 4:00 PM (in person); Sat · 12:30 PM – 3:30 PM (in person); Mon, Wed, Fri · 7:00 PM – 9:00 PM (live online); Tue, Thu · 7:00 PM – 9:00 PM (live online) |
 
-Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most 6. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.
+You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.
 
 ## The idea this course installs: A server is a function you can call over a wire
 

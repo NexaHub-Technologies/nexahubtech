@@ -7,14 +7,15 @@ Canonical page: https://nexahubtech.company/courses/office-essentials
 | | |
 |---|---|
 | Subject | Word & Excel |
-| Fee — in kubwa, max 6 | ₦55,000, or 2 × ₦30,000 |
+| Fee — live online | ₦45,000, or 2 × ₦25,000 |
+| Fee — in person | ₦55,000, or 2 × ₦30,000 |
 | Duration | 4 Weeks |
-| Format | Taught in the centre, in person. |
+| Format | Taught live — online or in person. |
 | Level | Built for office staff who use Word and Excel but were never shown how |
 | Start | Any day |
-| Session times | Tue, Thu · 8:30 AM – 11:00 AM (in kubwa, max 6); Mon, Wed, Fri · 11:30 AM – 2:00 PM (in kubwa, max 6); Sat · 9:00 AM – 12:00 PM (in kubwa, max 6) |
+| Session times | Tue, Thu · 8:30 AM – 11:00 AM (in person); Mon, Wed, Fri · 11:30 AM – 2:00 PM (in person); Sat · 9:00 AM – 12:00 PM (in person); Mon, Wed · 7:00 PM – 9:00 PM (live online) |
 
-Taught in person at our Kubwa centre, in a group of at most 6, on licensed Windows machines — with work from your own desk open in front of you. You start the day you are ready. Teams can also be trained at their own office.
+Learn live online on your own computer, or in person in a class of no more than 6 on our licensed Windows machines. Either way you work on real documents from your own desk, and you start the day you are ready. Teams can also be trained at their own office.
 
 ## The idea this course installs: Type it once
 
@@ -35,7 +36,8 @@ What you need to know:
 
 What you need to have:
 
-- Nothing to buy — licensed Windows machines are provided in the centre
+- Online: a Windows PC with Word and Excel installed
+- In person: nothing to buy — licensed machines are provided
 - Work from your own desk to bring, or use the sample desk we supply
 - 3–4 hours a week outside sessions to practise
 
@@ -58,7 +60,7 @@ What you need to have:
 - Styles, templates and mail merge
 - Clean tables, formulas and lookups
 - Built around real work from your own desk
-- Licensed machines provided in the centre
+- Learn online, or in person on our licensed machines
 
 ## Where it leads
 

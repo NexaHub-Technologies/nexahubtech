@@ -54,9 +54,10 @@ export interface CourseProject {
 	capstone?: boolean;
 }
 
-/* The two ways a course can be taken. "inhouse" is a small group of at most
-   six, in person at the Kubwa centre — the room seats six, so that number is a
-   fact about the building, not a marketing figure. */
+/* The two ways a course can be taken: live online, or in person in a small
+   class at the learning centre in Kubwa, Abuja. The room seats six, so that
+   number is a fact about the building, not a marketing figure. Every course is
+   offered both ways except PC Basics, which is in person only — see its format. */
 export type Delivery = "online" | "inhouse";
 export const DELIVERIES: readonly Delivery[] = ["online", "inhouse"];
 
@@ -64,7 +65,7 @@ export const CENTRE_SEATS = 6;
 
 export const DELIVERY_LABEL: Record<Delivery, string> = {
 	online: "Live online",
-	inhouse: `In Kubwa, max ${CENTRE_SEATS}`,
+	inhouse: "In person",
 };
 
 /* A fee is paid in full before the first session, or in equal instalments —
@@ -87,12 +88,12 @@ export const LEVELS: { id: Level; t: string; d: string }[] = [
 	{
 		id: "start-here",
 		t: "Start here",
-		d: "For anyone new to computers or office software. Taught in person at the centre, where somebody can sit beside you.",
+		d: "Patient, hands-on courses for anyone new to computers or office software — with every step shown, not assumed.",
 	},
 	{
 		id: "developer",
 		t: "Become a developer",
-		d: "From your first line of code to working applications. Live online, or in a small group at the centre.",
+		d: "From your first line of code to applications that work — at a pace that fits around work or study.",
 	},
 	{
 		id: "level-up",
@@ -107,7 +108,7 @@ export const LEVELS: { id: Level; t: string; d: string }[] = [
 	{
 		id: "on-request",
 		t: "On request",
-		d: "Specialist courses that open when enough people have asked, so each one gets the instructor time it needs. Tell us you are interested and we will be in touch when it opens.",
+		d: "Specialist courses that open once enough learners have registered interest, so each one gets the instructor time it deserves. Register yours and we will be in touch when it opens.",
 	},
 ];
 
@@ -148,8 +149,8 @@ export interface Course {
    paragraph each, which is how a single course quietly ends up describing
    itself wrongly. */
 const ONLINE_OR_CENTRE: Format = {
-	t: "Taught live — online, or in person at the centre.",
-	d: `Take it live online from anywhere in Nigeria, with sessions and materials on WhatsApp — or in person at our Kubwa centre, in a group of at most ${CENTRE_SEATS}. Either way an instructor teaches you live, with structured materials and real feedback, and you start the day you are ready.`,
+	t: "Taught live — online or in person.",
+	d: `You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than ${CENTRE_SEATS}. The instructor, the materials and the standard are the same either way — and you start the day you are ready.`,
 };
 
 export const COURSES: Course[] = [
@@ -165,12 +166,13 @@ export const COURSES: Course[] = [
 		family: "digital",
 		admission: "rolling",
 		fees: {
+			online: { upfront: 37_500, instalments: { count: 2, amount: 20_000 } },
 			inhouse: { upfront: 45_000, instalments: { count: 2, amount: 25_000 } },
 		},
 		next: { slug: "pc-basics", upgrade: 35_000 },
 		format: {
-			t: "Taught in the centre, in person.",
-			d: "The first three modules of PC Basics, on their own. Like PC Basics it is only taught in person at our Kubwa centre: a beginner needs somebody beside them saying that one, on the left, not a video call. Machines are provided, and you start whenever you are ready.",
+			t: "Taught live — online or in person.",
+			d: `The first three modules of PC Basics, on their own. Learn online, with your instructor guiding every click on a shared screen, or in person in a class of no more than ${CENTRE_SEATS}, where machines are provided. Start whenever you are ready.`,
 		},
 		mentalModel: {
 			t: "Every screen is asking you something",
@@ -188,8 +190,9 @@ export const COURSES: Course[] = [
 				"How to read and write in English",
 			],
 			have: [
-				"Nothing to buy — a machine is provided at every session",
-				"A USB drive of any size, to take your work home",
+				"Online: a laptop or desktop computer and a stable internet connection",
+				"In person: nothing to buy — a machine is provided at every session",
+				"A USB drive of any size, to keep a copy of your work",
 				"3–4 hours a week outside sessions to practise",
 			],
 		},
@@ -227,7 +230,7 @@ export const COURSES: Course[] = [
 		],
 		features: [
 			"No computer experience assumed at all",
-			"A machine provided at every session",
+			"Learn online, or in person with a machine provided",
 			"Files and folders taught properly, not guessed at",
 			"A letter, a spreadsheet and a slide of your own",
 			"Carry on into the full PC Basics course whenever you are ready",
@@ -250,7 +253,7 @@ export const COURSES: Course[] = [
 		next: { slug: "office-essentials" },
 		format: {
 			t: "Taught in the centre, in person.",
-			d: "This course is only taught in person, and cannot be taught any other way: the first thing a beginner needs is somebody beside them saying that one, on the left. Sitting a person who has never used a computer in front of a video call asks them to use the very skill the course exists to teach. Machines are provided, and you start whenever you are ready.",
+			d: `This is the one course we teach only in person, in a class of no more than ${CENTRE_SEATS}. A complete beginner needs someone beside them pointing to the right button — a video call would depend on the very skills the course exists to teach. Machines are provided, and you start whenever you are ready.`,
 		},
 		mentalModel: {
 			t: "Everything lives somewhere",
@@ -337,12 +340,13 @@ export const COURSES: Course[] = [
 		family: "digital",
 		admission: "rolling",
 		fees: {
+			online: { upfront: 45_000, instalments: { count: 2, amount: 25_000 } },
 			inhouse: { upfront: 55_000, instalments: { count: 2, amount: 30_000 } },
 		},
 		next: { slug: "microsoft-office" },
 		format: {
-			t: "Taught in the centre, in person.",
-			d: `Taught in person at our Kubwa centre, in a group of at most ${CENTRE_SEATS}, on licensed Windows machines — with work from your own desk open in front of you. You start the day you are ready. Teams can also be trained at their own office.`,
+			t: "Taught live — online or in person.",
+			d: `Learn live online on your own computer, or in person in a class of no more than ${CENTRE_SEATS} on our licensed Windows machines. Either way you work on real documents from your own desk, and you start the day you are ready. Teams can also be trained at their own office.`,
 		},
 		mentalModel: {
 			t: "Type it once",
@@ -361,7 +365,8 @@ export const COURSES: Course[] = [
 				"You have opened Word and Excel before, even if nobody showed you how",
 			],
 			have: [
-				"Nothing to buy — licensed Windows machines are provided in the centre",
+				"Online: a Windows PC with Word and Excel installed",
+				"In person: nothing to buy — licensed machines are provided",
 				"Work from your own desk to bring, or use the sample desk we supply",
 				"3–4 hours a week outside sessions to practise",
 			],
@@ -408,7 +413,7 @@ export const COURSES: Course[] = [
 			"Styles, templates and mail merge",
 			"Clean tables, formulas and lookups",
 			"Built around real work from your own desk",
-			"Licensed machines provided in the centre",
+			"Learn online, or in person on our licensed machines",
 		],
 	},
 	{
@@ -423,12 +428,13 @@ export const COURSES: Course[] = [
 		family: "digital",
 		admission: "rolling",
 		fees: {
+			online: { upfront: 80_000, instalments: { count: 2, amount: 42_500 } },
 			inhouse: { upfront: 95_000, instalments: { count: 2, amount: 52_500 } },
 		},
 		next: { slug: "data-analysis" },
 		format: {
-			t: "Taught in the centre, in person.",
-			d: `Office work is learnt at a real desk, on a real machine, with your own files open — so this course is taught in person at our Kubwa centre, in a group of at most ${CENTRE_SEATS}, on licensed Windows machines. Bring work from your own desk, start the day you are ready, and leave each session with something that already runs better. Teams can also be trained at their own office.`,
+			t: "Taught live — online or in person.",
+			d: `Learn live online on your own Windows PC, or in person in a class of no more than ${CENTRE_SEATS} on our licensed machines. Either way the course is built around real work from your own desk, so you leave each session with something that already runs better. Start the day you are ready. Teams can also be trained at their own office.`,
 		},
 		mentalModel: {
 			t: "The data is not the document",
@@ -448,7 +454,7 @@ export const COURSES: Course[] = [
 			],
 			have: [
 				"A Windows PC — Access is not made for macOS, and module 05 is Access",
-				"A Microsoft 365 or Office licence, or use a licensed machine in the centre",
+				"Online: a Microsoft 365 or Office licence. In person: licensed machines are provided",
 				"Real work from your own desk to bring, or use the sample desk we supply",
 				"4–6 hours a week outside sessions to practise",
 			],
@@ -505,7 +511,7 @@ export const COURSES: Course[] = [
 			"Mail merge, lookups, pivot tables and relational queries",
 			"Built around real clerical work, not invented exercises",
 			"When to stop using a spreadsheet and start using a database",
-			"Licensed machines available in the centre",
+			"Learn online, or in person on our licensed machines",
 		],
 	},
 	{
@@ -1539,11 +1545,12 @@ export const COURSES: Course[] = [
 		admission: "rolling",
 		fees: {
 			online: { upfront: 50_000, instalments: { count: 2, amount: 27_500 } },
+			inhouse: { upfront: 60_000, instalments: { count: 2, amount: 32_500 } },
 		},
 		next: { slug: "videography-video-editing" },
 		format: {
-			t: "Taught live, online.",
-			d: "Everything here is done on a phone, so it is taught live online — from anywhere in Nigeria, with sessions and materials on WhatsApp and your clips reviewed between sessions. You start the day you are ready. When you want cameras, lights and an edit suite, Videography & Video Editing is the next step.",
+			t: "Taught live — online or in person.",
+			d: `Everything is done on the phone you already own, so you can learn live online from anywhere or in person in a class of no more than ${CENTRE_SEATS}. Your clips are reviewed between sessions either way, and you start the day you are ready. When you want cameras, lights and an edit suite, Videography & Video Editing is the next step.`,
 		},
 		mentalModel: {
 			t: "The edit starts when you press record",
@@ -1563,7 +1570,7 @@ export const COURSES: Course[] = [
 			have: [
 				"A phone that records at 1080p or better, with 10GB free",
 				"A free phone editing app — we say which in the first session",
-				"A stable internet connection for live sessions",
+				"For online sessions, a stable internet connection",
 				"3–4 hours a week for shooting and editing assignments",
 			],
 		},
@@ -1609,7 +1616,7 @@ export const COURSES: Course[] = [
 			"Framing, light and sound without buying kit",
 			"Editing in a free phone app",
 			"A finished short for a real purpose",
-			"Taught live online — start any day",
+			"Online or in person — start any day",
 		],
 	},
 	{
@@ -1624,11 +1631,12 @@ export const COURSES: Course[] = [
 		family: "video",
 		admission: "rolling",
 		fees: {
+			online: { upfront: 100_000, instalments: { count: 2, amount: 55_000 } },
 			inhouse: { upfront: 120_000, instalments: { count: 2, amount: 65_000 } },
 		},
 		format: {
-			t: "Taught in the centre, in person, with shoots on location.",
-			d: `Cameras, lights and an edit suite are learnt with your hands on them, so this course is taught in person at our Kubwa centre, in a group of at most ${CENTRE_SEATS} — with shooting assignments out on location between sessions. You start the day you are ready. New to video, with only a phone? Mobile Videography is the online way in.`,
+			t: "Taught live — online or in person, with shoots on location.",
+			d: `Learn live online, with your footage reviewed between sessions, or in person in a class of no more than ${CENTRE_SEATS}, with cameras, lights and an edit suite to work on. Either way, shooting assignments happen out on location, and you start the day you are ready. New to video with only a phone? Mobile Videography is the quickest way in.`,
 		},
 		mentalModel: {
 			t: "You are directing attention, not recording events",
@@ -1898,10 +1906,10 @@ export function deliveriesOf(c: Course): Delivery[] {
 export const offeredInPerson = (c: Course) => Boolean(c.fees.inhouse);
 export const offeredOnline = (c: Course) => Boolean(c.fees.online);
 
-/* "live online", "in person, Kubwa" or both — for one-line summaries */
+/* "live online", "in person" or both — for one-line summaries */
 export function deliveryPhrase(c: Course): string {
 	const parts = deliveriesOf(c).map((d) =>
-		d === "online" ? "live online" : "in person, Kubwa",
+		d === "online" ? "live online" : "in person",
 	);
 	return parts.join(" or ");
 }
@@ -1925,7 +1933,7 @@ export function instalmentTotal(fee: Fee): number {
 	return fee.instalments.count * fee.instalments.amount;
 }
 
-/* "Live online ₦120,000 (or 2 × ₦65,000) · In Kubwa, max 6 ₦145,000 (or 2 × ₦77,500)" */
+/* "Live online ₦120,000 (or 2 × ₦65,000) · In person ₦145,000 (or 2 × ₦77,500)" */
 export function feeSummary(c: Course): string {
 	return deliveriesOf(c)
 		.map((d) => {

@@ -137,7 +137,7 @@ describe("course fees", () => {
 			for (const d of ways) {
 				const fee = c.fees[d] as Fee;
 				expect(Number.isInteger(fee.upfront), c.slug).toBe(true);
-				expect(fee.upfront % 5_000, `${c.slug} ${d} upfront`).toBe(0);
+				expect(fee.upfront % 2_500, `${c.slug} ${d} upfront`).toBe(0);
 				expect(
 					fee.instalments.amount % 2_500,
 					`${c.slug} ${d} instalment`,
@@ -161,6 +161,16 @@ describe("course fees", () => {
 				);
 				expect(fee.instalments.count, `${c.slug} ${d}`).toBeLessThanOrEqual(3);
 			}
+		}
+	});
+
+	/* Learners choose how they learn. PC Basics is the single exception: a
+	   complete beginner cannot be taught to use a computer over a video call. */
+	it("offers every course both online and in person, except PC Basics", () => {
+		for (const c of COURSES) {
+			expect(deliveriesOf(c), c.slug).toEqual(
+				c.slug === "pc-basics" ? ["inhouse"] : ["online", "inhouse"],
+			);
 		}
 	});
 

@@ -93,14 +93,14 @@ Motto: *${MOTTO}*
 
 ${THESIS}
 
-## The school — ${COURSES.length} courses, online or in Kubwa, start any day
+## The school — ${COURSES.length} live courses, online or in person, start any day
 
-Classes of at most ${CENTRE_SEATS} at the centre, or live online from anywhere in Nigeria. Fees can be paid in full or in instalments: ${mdLink(PAGES.fees)}. Session times: ${mdLink(PAGES.timetable)}.
+Every course but PC Basics can be taken live online or in person, in a class of no more than ${CENTRE_SEATS}. Fees can be paid in full or in instalments: ${mdLink(PAGES.fees)}. Session times: ${mdLink(PAGES.timetable)}.
 
 ${COURSES.map(courseLine).join("\n")}
 ${cbtLine()}
 
-How the teaching works: ${mdLink(PAGES.teaching)}. The centre: ${mdLink(PAGES.centre)}. Training for organisations: ${mdLink(PAGES.forBusiness)}. To apply: ${mdLink(PAGES.enrol)}.
+How the teaching works: ${mdLink(PAGES.teaching)}. The learning centre: ${mdLink(PAGES.centre)}. Training for organisations: ${mdLink(PAGES.forBusiness)}. To apply: ${mdLink(PAGES.enrol)}.
 
 ## The studio — software built properly
 
@@ -110,7 +110,7 @@ How a project runs: ${mdLink(PAGES.approach)}.`;
 }
 
 function courses(): string {
-	return `Every course is taught live by an instructor, with structured materials and real feedback — online, in person at the Kubwa centre in a group of at most ${CENTRE_SEATS}, or either — and starts whenever you are ready. Prices are in Nigerian naira, cover the whole course, and can be paid in instalments: ${mdLink(PAGES.fees)}.
+	return `Every course is taught live by an instructor, with structured materials and real feedback — online, or in person in a class of no more than ${CENTRE_SEATS} — and starts whenever you are ready. Every course is offered both ways except PC Basics, which is taught in person only. Prices are in Nigerian naira, cover the whole course, and can be paid in instalments: ${mdLink(PAGES.fees)}.
 
 ${LEVELS.map(
 	(l) => `## ${l.t}
@@ -207,12 +207,12 @@ function courseNext(c: Course): string {
 }
 
 function fees(): string {
-	return `Every fee covers the whole course. Pay in full before your first session, or in equal instalments — which cost a little more in total. A seat in the centre costs more than a place online, because the room holds ${CENTRE_SEATS}.
+	return `Every fee covers the whole course. Pay in full before your first session, or in equal instalments — which cost a little more in total. Almost every course is offered online and in person; in-person places cost more because classes are capped at ${CENTRE_SEATS}.
 
 ${LEVELS.map(
 	(l) => `## ${l.t}
 
-| Course | Length | Live online | In Kubwa, max ${CENTRE_SEATS} |
+| Course | Length | ${DELIVERY_LABEL.online} | ${DELIVERY_LABEL.inhouse} |
 |---|---|---|---|
 ${coursesAt(l.id).map(feeRow).join("\n")}`,
 ).join("\n\n")}
@@ -238,7 +238,7 @@ function timetable(): string {
 			.join("\n");
 	return `There are no fixed intakes. You start any day and join one of these standing weekly sessions; people at different points in the same course share a session, and the materials carry each person at their own pace. Times are in West Africa Time.
 
-## In the centre — at most ${CENTRE_SEATS} people
+## In person — no more than ${CENTRE_SEATS} per class, at the learning centre in Kubwa, Abuja
 
 ${group(true)}
 
@@ -264,25 +264,25 @@ To arrange any of these, email ${CONTACT.email} or message ${CONTACT.whatsapp}.`
 }
 
 function centre(): string {
-	const inPerson = COURSES.filter(offeredInPerson);
-	const onlineOnly = COURSES.filter(
-		(c) => offeredOnline(c) && !offeredInPerson(c),
+	const onlyHere = COURSES.filter(
+		(c) => offeredInPerson(c) && !offeredOnline(c),
 	);
+	const either = COURSES.filter((c) => offeredInPerson(c) && offeredOnline(c));
 	return `- Where: ${CONTACT.address}, Nigeria
 - Open: ${CBT_DETAILS.hours}
-- One room, and classes of at most ${CENTRE_SEATS}
+- Small classes of no more than ${CENTRE_SEATS}
 - Machines are provided for the computer-skills, office and CBT sessions
 
-Walk in during opening hours to see the room before you pay. CBT candidates can take a short free placement test on the day.
+You are welcome to visit before you enrol. CBT candidates can take a short free placement test on the day.
 
-## Taught here
+## In person only
 
-${inPerson.map((c) => `- ${mdLink(coursePage(c))}`).join("\n")}
+${onlyHere.map((c) => `- ${mdLink(coursePage(c))}`).join("\n")}
 - ${mdLink(PAGES.cbt)}
 
-## Online only
+## In person or online
 
-${onlineOnly.map((c) => `- ${mdLink(coursePage(c))}`).join("\n")}`;
+${either.map((c) => `- ${mdLink(coursePage(c))}`).join("\n")}`;
 }
 
 function cbt(): string {
@@ -462,7 +462,7 @@ export function llmsTxt(): string {
 
 > ${SUMMARY}
 
-Motto: "${MOTTO}" Based at ${CONTACT.address}, Nigeria (CAC RC ${CONTACT.rc}). Every course is taught live and starts whenever the student is ready: ${names(COURSES.filter((c) => offeredInPerson(c) && !offeredOnline(c)))} and CBT training only in person at the centre; ${names(COURSES.filter((c) => offeredOnline(c) && !offeredInPerson(c)))} only online; everything else either way, with a seat at the centre (at most ${CENTRE_SEATS} per class) priced above a place online. Fees can be paid in instalments. Prices are in Nigerian naira (NGN). Contact: ${CONTACT.email}, ${CONTACT.phoneDisplay}, WhatsApp ${CONTACT.whatsapp}.
+Motto: "${MOTTO}" Based at ${CONTACT.address}, Nigeria (CAC RC ${CONTACT.rc}). Every course is taught live and starts whenever the student is ready, online or in person (no more than ${CENTRE_SEATS} per in-person class, priced above a place online). ${names(COURSES.filter((c) => offeredInPerson(c) && !offeredOnline(c)))} and CBT training are taught in person only. Fees can be paid in instalments. Prices are in Nigerian naira (NGN). Contact: ${CONTACT.email}, ${CONTACT.phoneDisplay}, WhatsApp ${CONTACT.whatsapp}.
 
 Each link below is the markdown version of a page on ${SITE_URL}; drop the \`.md\` suffix for the HTML page.
 

@@ -13,7 +13,7 @@ thinking.
 
 | | |
 |---|---|
-| **Format** | Taught live — online, or in person at the centre · start any time |
+| **Format** | Taught live — online or in person · start any time |
 
 ## Before you start
 

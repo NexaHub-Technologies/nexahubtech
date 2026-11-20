@@ -1,17 +1,17 @@
 # Timetable — NexaHubTech
 
-> When NexaHubTech classes run each week — at the Kubwa centre and live online. There are no fixed intakes: you start any day and join a standing session that suits you.
+> When NexaHubTech classes run each week, online and in person. There are no fixed intakes: start any day and join the session that suits you.
 
 Canonical page: https://nexahubtech.company/timetable
 
 There are no fixed intakes. You start any day and join one of these standing weekly sessions; people at different points in the same course share a session, and the materials carry each person at their own pace. Times are in West Africa Time.
 
-## In the centre — at most 6 people
+## In person — no more than 6 per class, at the learning centre in Kubwa, Abuja
 
 - **Development & data** — Mon, Wed, Fri · 8:30 AM – 11:00 AM
 - **Computer & office skills** — Tue, Thu · 8:30 AM – 11:00 AM
 - **Computer & office skills** — Mon, Wed, Fri · 11:30 AM – 2:00 PM
-- **Video** — Tue, Thu · 11:30 AM – 2:00 PM. Editing and theory in the centre; shoots on location are arranged on top
+- **Video** — Tue, Thu · 11:30 AM – 2:00 PM. Editing and theory in class; location shoots arranged separately
 - **Development & data** — Tue, Thu · 2:00 PM – 4:00 PM
 - **CBT exam practice** — Mon – Fri · 4:00 PM – 6:00 PM. Full Training and Crash Course
 - **Computer & office skills** — Sat · 9:00 AM – 12:00 PM. For people who work on weekdays
@@ -20,6 +20,7 @@ There are no fixed intakes. You start any day and join one of these standing wee
 
 ## Live online
 
+- **Computer & office skills** — Mon, Wed · 7:00 PM – 9:00 PM
 - **Development & data** — Mon, Wed, Fri · 7:00 PM – 9:00 PM
 - **Development & data** — Tue, Thu · 7:00 PM – 9:00 PM
 - **Video** — Mon, Wed · 6:30 PM – 8:00 PM

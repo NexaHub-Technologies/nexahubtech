@@ -7,14 +7,15 @@ Canonical page: https://nexahubtech.company/courses/computer-essentials
 | | |
 |---|---|
 | Subject | Digital Literacy |
-| Fee — in kubwa, max 6 | ₦45,000, or 2 × ₦25,000 |
+| Fee — live online | ₦37,500, or 2 × ₦20,000 |
+| Fee — in person | ₦45,000, or 2 × ₦25,000 |
 | Duration | 3 Weeks |
-| Format | Taught in the centre, in person. |
+| Format | Taught live — online or in person. |
 | Level | The shortest way in if a computer still feels risky |
 | Start | Any day |
-| Session times | Tue, Thu · 8:30 AM – 11:00 AM (in kubwa, max 6); Mon, Wed, Fri · 11:30 AM – 2:00 PM (in kubwa, max 6); Sat · 9:00 AM – 12:00 PM (in kubwa, max 6) |
+| Session times | Tue, Thu · 8:30 AM – 11:00 AM (in person); Mon, Wed, Fri · 11:30 AM – 2:00 PM (in person); Sat · 9:00 AM – 12:00 PM (in person); Mon, Wed · 7:00 PM – 9:00 PM (live online) |
 
-The first three modules of PC Basics, on their own. Like PC Basics it is only taught in person at our Kubwa centre: a beginner needs somebody beside them saying that one, on the left, not a video call. Machines are provided, and you start whenever you are ready.
+The first three modules of PC Basics, on their own. Learn online, with your instructor guiding every click on a shared screen, or in person in a class of no more than 6, where machines are provided. Start whenever you are ready.
 
 ## The idea this course installs: Every screen is asking you something
 
@@ -35,8 +36,9 @@ What you need to know:
 
 What you need to have:
 
-- Nothing to buy — a machine is provided at every session
-- A USB drive of any size, to take your work home
+- Online: a laptop or desktop computer and a stable internet connection
+- In person: nothing to buy — a machine is provided at every session
+- A USB drive of any size, to keep a copy of your work
 - 3–4 hours a week outside sessions to practise
 
 ## Modules
@@ -54,7 +56,7 @@ What you need to have:
 ## Included
 
 - No computer experience assumed at all
-- A machine provided at every session
+- Learn online, or in person with a machine provided
 - Files and folders taught properly, not guessed at
 - A letter, a spreadsheet and a slide of your own
 - Carry on into the full PC Basics course whenever you are ready

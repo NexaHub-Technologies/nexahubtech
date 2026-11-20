@@ -12,7 +12,6 @@ import { pageMeta } from "../lib/seo";
 
 export const Route = createFileRoute("/centre")({
 	component: CentrePage,
-	ssr: false,
 	head: () => pageMeta(PAGES.centre),
 });
 
@@ -25,12 +24,9 @@ const MAPS_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURICo
 )}`;
 
 const FACTS = [
-	{
-		n: String(CENTRE_SEATS),
-		l: "seats in the room — so nobody is at the back",
-	},
-	{ n: "1", l: "instructor in the room, beside you, not on a screen" },
-	{ n: "6", l: "days a week open, Monday to Saturday" },
+	{ n: String(CENTRE_SEATS), l: "learners at most in every class" },
+	{ n: "1", l: "instructor in the room for every session" },
+	{ n: "6", l: "days a week, Monday to Saturday" },
 ];
 
 function CentrePage() {
@@ -44,20 +40,17 @@ function CentrePage() {
 				<div className="max-w-[46rem]">
 					<span className="pill rise rise-1">
 						<span className="spark" />
-						The centre
+						Learning centre
 					</span>
 					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
-						Classes of {CENTRE_SEATS}.{" "}
-						<span style={{ color: "var(--learn-ink)" }}>
-							Somebody beside you
-						</span>
-						.
+						Small classes.{" "}
+						<span style={{ color: "var(--learn-ink)" }}>Real attention</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
-						Our centre in Kubwa is one room, set up for small groups: a machine
-						for each person where the course needs one, an instructor who can
-						see every screen, and power that does not decide when the lesson
-						ends.
+						Our learning centre in Kubwa, Abuja is built for focused,
+						small-group learning: no more than {CENTRE_SEATS} learners per
+						class, a machine for everyone who needs one, an instructor who can
+						see every screen, and backup power so sessions run to time.
 					</p>
 				</div>
 			</section>
@@ -79,9 +72,9 @@ function CentrePage() {
 					<h2 className="display text-[1.5rem] mt-3">{CONTACT.address}</h2>
 					<p className="lead mt-2">Open {CBT_DETAILS.hours}.</p>
 					<p className="lead mt-4 text-[0.95rem]">
-						Come and see the room before you pay. Walk in during opening hours,
-						or message us and we will expect you. CBT candidates can take a
-						short free placement test on the day.
+						You are welcome to visit before you enrol. Walk in during opening
+						hours, or message us and we will expect you. CBT candidates can take
+						a short free placement test on the day.
 					</p>
 					<div className="mt-6 flex flex-wrap gap-3">
 						<a
@@ -103,8 +96,8 @@ function CentrePage() {
 					</div>
 				</div>
 				<div className="card panel-learn reveal p-8">
-					<Eyebrow>Taught here</Eyebrow>
-					<h3 className="display text-[1.2rem] mt-3">Only at the centre</h3>
+					<Eyebrow>What we teach here</Eyebrow>
+					<h3 className="display text-[1.2rem] mt-3">In person only</h3>
 					<ul className="mt-2">
 						{onlyHere.map((c) => (
 							<li key={c.slug} className="feat">
@@ -129,12 +122,12 @@ function CentrePage() {
 							</Link>
 						</li>
 					</ul>
-					<h3 className="display text-[1.2rem] mt-6">Here or online</h3>
+					<h3 className="display text-[1.2rem] mt-6">In person or online</h3>
 					<p className="text-[0.92rem] text-mute mt-2">
 						{either.map((c) => c.t).join(" · ")}
 					</p>
 					<Link to="/timetable" className="view-link mt-5">
-						When the room is in use <i aria-hidden="true">→</i>
+						In-person session times <i aria-hidden="true">→</i>
 					</Link>
 				</div>
 			</section>
@@ -142,10 +135,12 @@ function CentrePage() {
 			<section className="wrap py-14">
 				<div className="reveal card p-8 md:p-10 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
 					<div className="max-w-[36rem]">
-						<h2 className="display text-[1.6rem]">Too far from Kubwa?</h2>
+						<h2 className="display text-[1.6rem]">
+							Prefer to learn from home?
+						</h2>
 						<p className="lead text-[0.97rem] mt-2">
-							Most courses are also taught live online, from anywhere in
-							Nigeria, with the same materials and the same instructor.
+							Almost every course is also taught live online, with the same
+							materials, the same instructor and a lower fee.
 						</p>
 					</div>
 					<div className="flex flex-wrap gap-3 shrink-0">

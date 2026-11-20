@@ -57,15 +57,15 @@ export const PAGES = {
 	home: {
 		path: "/",
 		name: "Home",
-		title: "NexaHubTech — Learn tech properly, in Kubwa or online",
+		title: "NexaHubTech — Live Tech Courses, Online or In Person",
 		description:
-			"NexaHubTech is a tech school in Kubwa, FCT-Abuja, with a software studio behind it. Learn computer skills, Microsoft Office, coding, data and video — in small classes of six at the centre, or live online from anywhere in Nigeria — and start whenever you are ready.",
+			"NexaHubTech offers live, instructor-led courses in software development, data, office productivity and video, backed by a working software studio. Learn online from anywhere or in person in a small class, start any day, and pay in instalments.",
 		image: "/og/home.jpg",
 		card: {
-			eyebrow: "A tech school in Kubwa, FCT-Abuja",
+			eyebrow: "Live, instructor-led tech courses",
 			headline: "Learn tech properly.",
-			accent: "In Kubwa or online.",
-			sub: `Classes of ${CENTRE_SEATS} · courses from ${cheapestCourse} · ${CONTACT.website}`,
+			accent: "On your terms.",
+			sub: `Online or in person · courses from ${cheapestCourse} · ${CONTACT.website}`,
 		},
 		kind: "WebPage",
 	},
@@ -74,13 +74,13 @@ export const PAGES = {
 		name: "Courses",
 		title: "Courses — NexaHubTech",
 		description:
-			"Every course at NexaHubTech, from your first time on a computer to React, data analysis and video — taught live online or in small groups at our Kubwa centre, with fees you can pay in instalments. Start any day.",
+			"Every NexaHubTech course, from first steps on a computer to React, data analysis and video — taught live, online or in person, with flexible payment plans. Start any day.",
 		image: "/og/courses.jpg",
 		card: {
 			eyebrow: "Our courses",
 			headline: "Real skills,",
 			accent: "taught properly.",
-			sub: `${COURSE_COUNT_WORD_CAP} courses · online or in Kubwa · start any day`,
+			sub: `${COURSE_COUNT_WORD_CAP} courses · online or in person · start any day`,
 		},
 		kind: "CollectionPage",
 	},
@@ -104,7 +104,7 @@ export const PAGES = {
 		name: "Fees",
 		title: "Course Fees — NexaHubTech",
 		description:
-			"Every NexaHubTech fee on one page: each course live online and in person at the Kubwa centre, paid in full or in instalments, plus CBT practice and rates for organisations.",
+			"Every NexaHubTech fee on one page: each course online and in person, paid in full or in instalments, plus CBT practice and rates for organisations.",
 		image: "/og/fees.jpg",
 		card: {
 			eyebrow: "Fees",
@@ -119,13 +119,13 @@ export const PAGES = {
 		name: "Timetable",
 		title: "Session Times — NexaHubTech",
 		description:
-			"When NexaHubTech classes run each week — at the Kubwa centre and live online. There are no fixed intakes: you start any day and join a standing session that suits you.",
+			"When NexaHubTech classes run each week, online and in person. There are no fixed intakes: start any day and join the session that suits you.",
 		image: "/og/timetable.jpg",
 		card: {
 			eyebrow: "Session times",
 			headline: "Start any day.",
 			accent: "Pick your session.",
-			sub: `${CBT_DETAILS.hours} at the centre · evenings online`,
+			sub: `Evenings online · in person ${CBT_DETAILS.hours}`,
 		},
 		kind: "WebPage",
 	},
@@ -134,7 +134,7 @@ export const PAGES = {
 		name: "For Business",
 		title: "Training for Organisations — NexaHubTech",
 		description:
-			"Train your staff, your students or your team with NexaHubTech: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online or at our Kubwa centre.",
+			"Train your staff, your students or your team with NexaHubTech: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online, in person or at your office.",
 		image: "/og/for-business.jpg",
 		card: {
 			eyebrow: "For organisations",
@@ -146,14 +146,14 @@ export const PAGES = {
 	},
 	centre: {
 		path: "/centre",
-		name: "The Centre",
-		title: "Our Kubwa Centre — NexaHubTech",
-		description: `Visit the NexaHubTech centre at ${CONTACT.address}: one room, classes of at most ${CENTRE_SEATS}, machines provided, open ${CBT_DETAILS.hours}. Come and see it before you pay.`,
+		name: "Learning Centre",
+		title: "Our Learning Centre — NexaHubTech",
+		description: `Visit the NexaHubTech learning centre at ${CONTACT.address}: small classes of no more than ${CENTRE_SEATS}, machines provided, open ${CBT_DETAILS.hours}. You are welcome to visit before you enrol.`,
 		image: "/og/centre.jpg",
 		card: {
-			eyebrow: "The centre",
-			headline: `Classes of ${CENTRE_SEATS}.`,
-			accent: "Somebody beside you.",
+			eyebrow: "Learning centre",
+			headline: "Small classes.",
+			accent: "Real attention.",
 			sub: `${CONTACT.address}`,
 		},
 		kind: "WebPage",
@@ -178,7 +178,7 @@ export const PAGES = {
 		name: "Enrol",
 		title: "Enrol — NexaHubTech",
 		description:
-			"Apply for a place at NexaHubTech — taught live, online or at our Kubwa centre, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.",
+			"Apply for a place at NexaHubTech — taught live, online or in person, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.",
 		image: "/og/enrol.jpg",
 		card: {
 			eyebrow: "Enrolment",

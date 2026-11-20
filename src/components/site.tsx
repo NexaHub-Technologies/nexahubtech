@@ -54,7 +54,7 @@ export const NAV = [
    that need them, without crowding the header */
 export const LEARN_MORE = [
 	{ to: "/timetable", label: "Session times" },
-	{ to: "/centre", label: "The centre" },
+	{ to: "/centre", label: "Learning centre" },
 	{ to: "/teaching", label: "How we teach" },
 ] as const;
 

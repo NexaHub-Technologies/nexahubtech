@@ -1,6 +1,6 @@
 # Enrol — NexaHubTech
 
-> Apply for a place at NexaHubTech — taught live, online or at our Kubwa centre, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.
+> Apply for a place at NexaHubTech — taught live, online or in person, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.
 
 Canonical page: https://nexahubtech.company/enrol
 
@@ -8,10 +8,10 @@ Applying takes a few minutes: tell us about yourself, choose your course and how
 
 The application form is at https://nexahubtech.company/enrol. To open it with a course already chosen, add `?course=<slug>`:
 
-- Computer Essentials (₦45,000): https://nexahubtech.company/enrol?course=computer-essentials
+- Computer Essentials (From ₦37,500): https://nexahubtech.company/enrol?course=computer-essentials
 - PC Basics (₦75,000): https://nexahubtech.company/enrol?course=pc-basics
-- Office Essentials (₦55,000): https://nexahubtech.company/enrol?course=office-essentials
-- Microsoft Office (₦95,000): https://nexahubtech.company/enrol?course=microsoft-office
+- Office Essentials (From ₦45,000): https://nexahubtech.company/enrol?course=office-essentials
+- Microsoft Office (From ₦80,000): https://nexahubtech.company/enrol?course=microsoft-office
 - Python Programming (From ₦95,000): https://nexahubtech.company/enrol?course=python-programming
 - JavaScript Programming (From ₦95,000): https://nexahubtech.company/enrol?course=javascript-programming
 - Frontend Development (From ₦120,000): https://nexahubtech.company/enrol?course=frontend-development
@@ -21,8 +21,8 @@ The application form is at https://nexahubtech.company/enrol. To open it with a 
 - Next.js (From ₦160,000): https://nexahubtech.company/enrol?course=nextjs-fullstack
 - Mobile Development (From ₦190,000): https://nexahubtech.company/enrol?course=mobile-development
 - Data Analysis (From ₦130,000): https://nexahubtech.company/enrol?course=data-analysis
-- Mobile Videography (₦50,000): https://nexahubtech.company/enrol?course=mobile-videography
-- Videography & Video Editing (₦120,000): https://nexahubtech.company/enrol?course=videography-video-editing
+- Mobile Videography (From ₦50,000): https://nexahubtech.company/enrol?course=mobile-videography
+- Videography & Video Editing (From ₦100,000): https://nexahubtech.company/enrol?course=videography-video-editing
 - Cybersecurity (From ₦230,000): https://nexahubtech.company/enrol?course=cybersecurity
 
 For WAEC & JAMB CBT training, see [WAEC & JAMB CBT Training](https://nexahubtech.company/cbt.md), or walk in during opening hours.

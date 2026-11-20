@@ -6,7 +6,6 @@ import { pageMeta } from "../lib/seo";
 
 export const Route = createFileRoute("/for-business")({
 	component: ForBusinessPage,
-	ssr: false,
 	head: () => pageMeta(PAGES.forBusiness),
 });
 
@@ -50,8 +49,8 @@ function ForBusinessPage() {
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
 						Staff who lose hours to Word and Excel. Candidates who have never
 						sat a computer-based exam. A team that needs to learn to build. We
-						teach them where it suits you — at your office, at our Kubwa centre,
-						or live online.
+						teach them where it suits you — at your office, at our learning
+						centre, or live online.
 					</p>
 				</div>
 			</section>

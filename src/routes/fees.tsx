@@ -18,7 +18,6 @@ import { pageMeta } from "../lib/seo";
 
 export const Route = createFileRoute("/fees")({
 	component: FeesPage,
-	ssr: false,
 	head: () => pageMeta(PAGES.fees),
 });
 
@@ -68,12 +67,12 @@ const RULES = [
 		d: "Pay the whole fee before your first session, or split it into equal instalments across the course. Instalments cost a little more in total, because we carry the wait.",
 	},
 	{
-		t: `A seat in the centre costs more`,
-		d: `The room holds ${CENTRE_SEATS}, so a seat in it is priced above a place online. Same course, same materials, same instructor — with them in the room.`,
+		t: "Online or in person — your choice",
+		d: `Almost every course is offered both ways. In-person places cost more because classes are capped at ${CENTRE_SEATS}; the curriculum, materials and instructor are the same either way.`,
 	},
 	{
-		t: "See before you pay",
-		d: "Walk into the centre during opening hours, look around, and ask anything. Not sure a course fits? Tell us where you are starting from and we will say honestly.",
+		t: "Ask before you commit",
+		d: "Visit our learning centre during opening hours, or message us on WhatsApp. Unsure which course fits? Tell us where you are starting from and we will advise you honestly.",
 	},
 ];
 

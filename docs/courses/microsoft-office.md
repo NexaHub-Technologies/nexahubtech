@@ -17,12 +17,12 @@ losing hours a week to it.
 
 | | |
 |---|---|
-| **Format** | Taught in the centre, in person · start any time |
+| **Format** | Taught live — online or in person · start any time |
 
-**Why in person.** Office work is learnt at a real desk, with your own files open
-and somebody able to look over your shoulder at the sheet that will not add up.
-The course runs in the centre on licensed Windows machines, in groups of at most
-six. Teams can also be trained at their own office, on their own machines.
+**Online or in person.** Online, you learn on your own Windows PC with your own
+files open, and share your screen when a sheet will not add up. In person, the
+class is at most six, on licensed Windows machines. Teams can also be trained at
+their own office, on their own machines.
 
 ## Before you start
 
@@ -33,9 +33,9 @@ pretend you should already know them.
 
 **Have:** **a Windows PC.** This is not a preference. Access is not made for
 macOS, and module 05 is Access — a Mac can carry the other five modules and then
-stops. The centre has licensed Windows machines, and anyone on a Mac should plan
-to use one in week 7. You will also need a Microsoft 365 or Office
-licence, real work from your own desk to bring, and 4–6 hours a week outside
+stops. In-person classes use licensed Windows machines, and anyone on a Mac
+learning online should plan to attend in person in week 7. Online, you will also
+need a Microsoft 365 or Office licence; real work from your own desk to bring, and 4–6 hours a week outside
 sessions.
 
 > **How this differs from PC Basics.** They overlap by design and are not

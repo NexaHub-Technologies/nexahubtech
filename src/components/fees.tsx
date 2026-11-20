@@ -21,8 +21,8 @@ import { type SessionSlot, seatsLabel, slotLabel } from "../lib/timetable";
 
 const DELIVERY_NOTE: Record<Delivery, string> = {
 	online:
-		"Live sessions from anywhere in Nigeria, with materials and feedback on WhatsApp.",
-	inhouse: `A group of at most ${CENTRE_SEATS} at our Kubwa centre, with an instructor in the room.`,
+		"Real-time sessions from anywhere, with materials and feedback on WhatsApp.",
+	inhouse: `A small class of no more than ${CENTRE_SEATS}, with your instructor in the room.`,
 };
 
 /* the fee, as two lines a card can carry: each way to take the course, and its

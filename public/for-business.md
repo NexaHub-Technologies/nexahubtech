@@ -1,6 +1,6 @@
 # For Business — NexaHubTech
 
-> Train your staff, your students or your team with NexaHubTech: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online or at our Kubwa centre.
+> Train your staff, your students or your team with NexaHubTech: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online, in person or at your office.
 
 Canonical page: https://nexahubtech.company/for-business
 
@@ -30,10 +30,10 @@ Your candidates practise the computer-based exam on real desktops at our Kubwa l
 
 For: Companies, agencies and NGOs. **On proposal** priced per group.
 
-Any course in the catalogue — development, data, video or office skills — for a group from one organisation, live online or at the centre, scheduled around your team. Tell us who needs to learn what, and we will send a proposal.
+Any course in the catalogue — development, data, video or office skills — for a group from one organisation, online, in person or at your office, scheduled around your team. Tell us who needs to learn what, and we will send a proposal.
 
 - The same curriculum, mental model and model answers as the public course
-- Sessions scheduled around your team, online or at the centre
+- Sessions online, in person or at your office, on your schedule
 - Examples and exercises taken from your own work where it helps
 - A short report on each person's progress, if you want one
 

@@ -8,13 +8,14 @@ Canonical page: https://nexahubtech.company/courses/mobile-videography
 |---|---|
 | Subject | Phone video & editing |
 | Fee — live online | ₦50,000, or 2 × ₦27,500 |
+| Fee — in person | ₦60,000, or 2 × ₦32,500 |
 | Duration | 4 Weeks |
-| Format | Taught live, online. |
+| Format | Taught live — online or in person. |
 | Level | Built for complete beginners with a phone |
 | Start | Any day |
-| Session times | Mon, Wed · 6:30 PM – 8:00 PM (live online) |
+| Session times | Tue, Thu · 11:30 AM – 2:00 PM (in person); Mon, Wed · 6:30 PM – 8:00 PM (live online) |
 
-Everything here is done on a phone, so it is taught live online — from anywhere in Nigeria, with sessions and materials on WhatsApp and your clips reviewed between sessions. You start the day you are ready. When you want cameras, lights and an edit suite, Videography & Video Editing is the next step.
+Everything is done on the phone you already own, so you can learn live online from anywhere or in person in a class of no more than 6. Your clips are reviewed between sessions either way, and you start the day you are ready. When you want cameras, lights and an edit suite, Videography & Video Editing is the next step.
 
 ## The idea this course installs: The edit starts when you press record
 
@@ -37,7 +38,7 @@ What you need to have:
 
 - A phone that records at 1080p or better, with 10GB free
 - A free phone editing app — we say which in the first session
-- A stable internet connection for live sessions
+- For online sessions, a stable internet connection
 - 3–4 hours a week for shooting and editing assignments
 
 ## Modules
@@ -59,7 +60,7 @@ What you need to have:
 - Framing, light and sound without buying kit
 - Editing in a free phone app
 - A finished short for a real purpose
-- Taught live online — start any day
+- Online or in person — start any day
 
 ## Where it leads
 

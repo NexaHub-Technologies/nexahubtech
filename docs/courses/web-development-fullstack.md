@@ -13,7 +13,7 @@ applications.
 
 | | |
 |---|---|
-| **Format** | Taught live — online, or in person at the centre · start any time |
+| **Format** | Taught live — online or in person · start any time |
 | **Scope** | HTML, CSS, JavaScript, Node.js and Express. No React or Next.js. |
 
 ## Before you start

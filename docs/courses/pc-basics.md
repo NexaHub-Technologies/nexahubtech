@@ -17,8 +17,8 @@ actually doing, and how to use one without the constant worry of breaking it.
 |---|---|
 | **Format** | Taught in the centre, in person · start any time |
 
-**Why in person only.** Most courses here can be taken live online or at the
-centre. This one is only taught at the centre: the first thing a student needs is
+**Why in person only.** Every other course here can be taken live online or in
+person. This one is taught only in person: the first thing a student needs is
 someone standing beside them saying *that one, on the left*. Sitting a person who
 has never used a computer in front of a video call is asking them to use the
 skill the course exists to teach.

@@ -58,7 +58,7 @@ export interface SessionSlot {
 }
 
 export const SLOTS: SessionSlot[] = [
-	/* ── in the centre ── */
+	/* ── in person, at the learning centre ── */
 	{
 		id: "development-mwf-morning",
 		family: "development",
@@ -90,7 +90,7 @@ export const SLOTS: SessionSlot[] = [
 		days: ["Tue", "Thu"],
 		start: "11:30",
 		end: "14:00",
-		note: "Editing and theory in the centre; shoots on location are arranged on top",
+		note: "Editing and theory in class; location shoots arranged separately",
 	},
 	{
 		id: "development-tt-afternoon",
@@ -138,6 +138,14 @@ export const SLOTS: SessionSlot[] = [
 	},
 
 	/* ── live online ── */
+	{
+		id: "digital-mw-evening",
+		family: "digital",
+		delivery: "online",
+		days: ["Mon", "Wed"],
+		start: "19:00",
+		end: "21:00",
+	},
 	{
 		id: "development-mwf-evening",
 		family: "development",
@@ -194,7 +202,7 @@ export function slotLabel(s: SessionSlot): string {
 
 export function seatsLabel(s: SessionSlot): string {
 	return s.delivery === "inhouse"
-		? `Up to ${CENTRE_SEATS} people, in the centre`
+		? `In person · up to ${CENTRE_SEATS} per class`
 		: "Live online";
 }
 

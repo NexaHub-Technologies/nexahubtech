@@ -49,10 +49,10 @@ function CoursesIndex() {
 						<span style={{ color: "var(--learn-ink)" }}>taught properly</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
-						{COURSE_COUNT_WORD_CAP} courses built on the same principle:
-						understand first, then build. Every one is taught live by an
-						instructor — online, or in a group of at most {CENTRE_SEATS} at our
-						Kubwa centre — and starts whenever you are ready.
+						{COURSE_COUNT_WORD_CAP} courses built on one principle: understand
+						first, then build. Every course is taught live by an instructor —
+						learn online from anywhere, or in person in a class of no more than{" "}
+						{CENTRE_SEATS}, and start whenever you are ready.
 					</p>
 					<p className="rise rise-4 mt-4 text-[0.95rem] text-mute">
 						Every fee can be paid in full or in instalments.{" "}

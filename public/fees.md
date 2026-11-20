@@ -1,23 +1,23 @@
 # Fees — NexaHubTech
 
-> Every NexaHubTech fee on one page: each course live online and in person at the Kubwa centre, paid in full or in instalments, plus CBT practice and rates for organisations.
+> Every NexaHubTech fee on one page: each course online and in person, paid in full or in instalments, plus CBT practice and rates for organisations.
 
 Canonical page: https://nexahubtech.company/fees
 
-Every fee covers the whole course. Pay in full before your first session, or in equal instalments — which cost a little more in total. A seat in the centre costs more than a place online, because the room holds 6.
+Every fee covers the whole course. Pay in full before your first session, or in equal instalments — which cost a little more in total. Almost every course is offered online and in person; in-person places cost more because classes are capped at 6.
 
 ## Start here
 
-| Course | Length | Live online | In Kubwa, max 6 |
+| Course | Length | Live online | In person |
 |---|---|---|---|
-| Computer Essentials | 3 Weeks | — | ₦45,000 (or 2 × ₦25,000) |
+| Computer Essentials | 3 Weeks | ₦37,500 (or 2 × ₦20,000) | ₦45,000 (or 2 × ₦25,000) |
 | PC Basics | 6 Weeks | — | ₦75,000 (or 2 × ₦40,000) |
-| Office Essentials | 4 Weeks | — | ₦55,000 (or 2 × ₦30,000) |
-| Microsoft Office | 8 Weeks | — | ₦95,000 (or 2 × ₦52,500) |
+| Office Essentials | 4 Weeks | ₦45,000 (or 2 × ₦25,000) | ₦55,000 (or 2 × ₦30,000) |
+| Microsoft Office | 8 Weeks | ₦80,000 (or 2 × ₦42,500) | ₦95,000 (or 2 × ₦52,500) |
 
 ## Become a developer
 
-| Course | Length | Live online | In Kubwa, max 6 |
+| Course | Length | Live online | In person |
 |---|---|---|---|
 | Python Programming | 6 Weeks | ₦95,000 (or 2 × ₦52,500) | ₦115,000 (or 2 × ₦62,500) |
 | JavaScript Programming | 8 Weeks | ₦95,000 (or 2 × ₦52,500) | ₦115,000 (or 2 × ₦62,500) |
@@ -27,7 +27,7 @@ Every fee covers the whole course. Pay in full before your first session, or in 
 
 ## Level up
 
-| Course | Length | Live online | In Kubwa, max 6 |
+| Course | Length | Live online | In person |
 |---|---|---|---|
 | React | 8 Weeks | ₦130,000 (or 2 × ₦70,000) | ₦160,000 (or 2 × ₦87,500) |
 | Next.js | 10 Weeks | ₦160,000 (or 2 × ₦87,500) | ₦195,000 (or 2 × ₦105,000) |
@@ -36,14 +36,14 @@ Every fee covers the whole course. Pay in full before your first session, or in 
 
 ## Create
 
-| Course | Length | Live online | In Kubwa, max 6 |
+| Course | Length | Live online | In person |
 |---|---|---|---|
-| Mobile Videography | 4 Weeks | ₦50,000 (or 2 × ₦27,500) | — |
-| Videography & Video Editing | 8 Weeks | — | ₦120,000 (or 2 × ₦65,000) |
+| Mobile Videography | 4 Weeks | ₦50,000 (or 2 × ₦27,500) | ₦60,000 (or 2 × ₦32,500) |
+| Videography & Video Editing | 8 Weeks | ₦100,000 (or 2 × ₦55,000) | ₦120,000 (or 2 × ₦65,000) |
 
 ## On request
 
-| Course | Length | Live online | In Kubwa, max 6 |
+| Course | Length | Live online | In person |
 |---|---|---|---|
 | Cybersecurity | 16 Weeks | ₦230,000 (or 3 × ₦82,500) | ₦280,000 (or 3 × ₦100,000) |
 

@@ -16,7 +16,6 @@ import {
 
 export const Route = createFileRoute("/timetable")({
 	component: TimetablePage,
-	ssr: false,
 	head: () => pageMeta(PAGES.timetable),
 });
 
@@ -79,20 +78,21 @@ function TimetablePage() {
 						goes on explaining, reviewing and getting you unstuck.
 					</p>
 					<p className="rise rise-4 mt-4 text-[0.95rem] text-mute">
-						Times are West Africa Time. The centre is open {CBT_DETAILS.hours}.
+						Times are West Africa Time. In-person sessions run{" "}
+						{CBT_DETAILS.hours}.
 					</p>
 				</div>
 			</section>
 
 			<section className="wrap py-10">
 				<div className="reveal max-w-[42rem] mb-7">
-					<Eyebrow>In the centre</Eyebrow>
+					<Eyebrow>In person</Eyebrow>
 					<h2 className="shout shout-md mt-4">
-						One room, at most {CENTRE_SEATS} people.
+						Small classes of no more than {CENTRE_SEATS}.
 					</h2>
 					<p className="lead mt-3">
-						Everything taught in person happens in the same room in Kubwa, so
-						this is its week.
+						In-person sessions run at our learning centre in Kubwa, Abuja.
+						Online sessions are listed by course below.
 					</p>
 				</div>
 				<RoomWeek />
@@ -119,7 +119,7 @@ function TimetablePage() {
 					))}
 				</div>
 				<p className="reveal text-[0.9rem] text-mute mt-8">
-					CBT exam practice runs in the centre on weekday afternoons, with timed
+					CBT exam practice runs in person on weekday afternoons, with timed
 					mock exams on Saturday.{" "}
 					<Link to="/cbt" className="underline font-semibold">
 						CBT training
