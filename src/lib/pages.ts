@@ -78,8 +78,8 @@ export const PAGES = {
 		image: "/og/academy.jpg",
 		card: {
 			eyebrow: "Live, instructor-led courses",
-			headline: "Learn tech properly.",
-			accent: "At your own pace.",
+			headline: "Learn tech,",
+			accent: "the right way.",
 			sub: `Online or in person · courses from ${cheapestCourse} · ${CONTACT.website}/academy`,
 		},
 		kind: "WebPage",
