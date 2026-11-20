@@ -1,6 +1,6 @@
-# Learning Centre — NexaHubTech
+# Learning Centre — NexaHubTech Academy
 
-> Visit the NexaHubTech learning centre at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja: small classes of no more than 6, machines provided, open Monday – Saturday, 8:00 AM – 6:00 PM. You are welcome to visit before you enrol.
+> Visit the NexaHubTech Academy learning centre at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja: small classes of no more than 6, machines provided, open Monday – Saturday, 8:00 AM – 6:00 PM. You are welcome to visit before you enrol.
 
 Canonical page: https://nexahubtech.company/centre
 

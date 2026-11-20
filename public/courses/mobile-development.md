@@ -1,4 +1,4 @@
-# Mobile Development — NexaHubTech
+# Mobile Development — NexaHubTech Academy
 
 > Build real mobile applications — from concept to the app store.
 

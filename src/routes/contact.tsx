@@ -247,7 +247,7 @@ function Contact() {
 
 					<div className="grid gap-5">
 						<div className="card panel-learn p-7">
-							<Eyebrow>For learners</Eyebrow>
+							<Eyebrow>NexaHubTech Academy</Eyebrow>
 							<p className="lead mt-3">
 								Ask about any of the {COURSE_COUNT_WORD} courses, when you could
 								start, or whether a track is right for where you’re starting
@@ -255,7 +255,7 @@ function Contact() {
 							</p>
 						</div>
 						<div className="card panel-studio p-7">
-							<Eyebrow variant="build">For businesses</Eyebrow>
+							<Eyebrow variant="build">NexaHubTech · for businesses</Eyebrow>
 							<p className="lead mt-3">
 								Tell us about the product you need. We’ll help you scope it,
 								design it well, and build it right.

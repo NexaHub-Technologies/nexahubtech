@@ -1,6 +1,6 @@
-# Fees — NexaHubTech
+# Fees — NexaHubTech Academy
 
-> Every NexaHubTech fee on one page: each course online and in person, paid in full or in instalments, plus CBT practice and rates for organisations.
+> Every NexaHubTech Academy fee on one page: each course online and in person, paid in full or in instalments, plus CBT practice and rates for organisations.
 
 Canonical page: https://nexahubtech.company/fees
 

@@ -1,5 +1,5 @@
-/* How the school teaches, made public — the learn arm's counterpart to the
-   studio's system design process in approach.ts. Same underlying claim, at a
+/* How NexaHubTech Academy teaches, made public — the counterpart to the
+   company's system design process in approach.ts. Same underlying claim, at a
    different scale: understand the thing before you build with it.
 
    The three-part session already appears in shortened form on every course page;

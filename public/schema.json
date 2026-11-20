@@ -3,14 +3,14 @@
   "@graph": [
     {
       "@type": [
-        "EducationalOrganization",
+        "Organization",
         "LocalBusiness"
       ],
       "@id": "https://nexahubtech.company/#organization",
       "name": "NexaHubTech",
       "url": "https://nexahubtech.company/",
-      "description": "NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio under one roof. We teach real, in-demand skills — and then put them to work on real client products.",
-      "slogan": "Learn to build. Build for real.",
+      "description": "NexaHubTech is a Nigerian technology company that designs, builds and maintains software for businesses. Its training division, NexaHubTech Academy, teaches practical technology skills — online and in person — and develops the talent our engineering work depends on.",
+      "slogan": "Software, built properly.",
       "logo": {
         "@type": "ImageObject",
         "@id": "https://nexahubtech.company/#logo",
@@ -96,21 +96,48 @@
         "Cloud solutions",
         "Technical support"
       ],
-      "hasOfferCatalog": [
-        {
-          "@id": "https://nexahubtech.company/courses#catalog"
-        },
-        {
-          "@id": "https://nexahubtech.company/services#catalog"
-        }
-      ]
+      "hasOfferCatalog": {
+        "@id": "https://nexahubtech.company/services#catalog"
+      },
+      "subOrganization": {
+        "@id": "https://nexahubtech.company/academy#organization"
+      }
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://nexahubtech.company/academy#organization",
+      "name": "NexaHubTech Academy",
+      "alternateName": "NexaHubTech Academy, a division of NexaHubTech",
+      "url": "https://nexahubtech.company/academy",
+      "description": "NexaHubTech Academy is the training division of NexaHubTech. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day.",
+      "slogan": "Learn to build. Build for real.",
+      "parentOrganization": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "logo": "https://nexahubtech.company/apple-touch-icon.png",
+      "email": "nexahubt@gmail.com",
+      "telephone": "+2349134513173",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Phase 2, F01 Building Materials Market",
+        "addressLocality": "Kubwa",
+        "addressRegion": "FCT-Abuja",
+        "addressCountry": "NG"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Nigeria"
+      },
+      "hasOfferCatalog": {
+        "@id": "https://nexahubtech.company/courses#catalog"
+      }
     },
     {
       "@type": "WebSite",
       "@id": "https://nexahubtech.company/#website",
       "url": "https://nexahubtech.company/",
       "name": "NexaHubTech",
-      "description": "NexaHubTech offers live, instructor-led courses in software development, data, office productivity and video, backed by a working software studio. Learn online from anywhere or in person in a small class, start any day, and pay in instalments.",
+      "description": "NexaHubTech designs, builds and maintains production software for businesses and founders — scoped carefully, built properly, and supported long after launch. Based in Abuja, Nigeria.",
       "inLanguage": "en-NG",
       "publisher": {
         "@id": "https://nexahubtech.company/#organization"
@@ -119,7 +146,7 @@
     {
       "@type": "OfferCatalog",
       "@id": "https://nexahubtech.company/courses#catalog",
-      "name": "NexaHubTech courses",
+      "name": "NexaHubTech Academy courses",
       "url": "https://nexahubtech.company/courses",
       "numberOfItems": 17,
       "itemListElement": [
@@ -254,7 +281,7 @@
       "image": "https://nexahubtech.company/og/course-computer-essentials.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/academy#organization"
       },
       "educationalLevel": "The shortest way in if a computer still feels risky",
       "coursePrerequisites": [
@@ -346,7 +373,7 @@
       "image": "https://nexahubtech.company/og/course-pc-basics.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/academy#organization"
       },
       "educationalLevel": "The place to begin if a computer still feels risky",
       "coursePrerequisites": [
@@ -432,7 +459,7 @@
       "image": "https://nexahubtech.company/og/course-office-essentials.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/academy#organization"
       },
       "educationalLevel": "Built for office staff who use Word and Excel but were never shown how",
       "coursePrerequisites": [
@@ -530,7 +557,7 @@
       "image": "https://nexahubtech.company/og/course-microsoft-office.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/academy#organization"
       },
       "educationalLevel": "Built for clerical and office staff already doing the work",
       "coursePrerequisites": [
@@ -640,7 +667,7 @@
       "image": "https://nexahubtech.company/og/course-python-programming.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/academy#organization"
       },
       "educationalLevel": "The right place to start if you have never coded",
       "coursePrerequisites": [
@@ -763,7 +790,7 @@
       "image": "https://nexahubtech.company/og/course-javascript-programming.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/academy#organization"
       },
       "educationalLevel": "For beginners, and for anyone who has only ever copied JavaScript",
       "coursePrerequisites": [
@@ -892,7 +919,7 @@
       "image": "https://nexahubtech.company/og/course-frontend-development.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/academy#organization"
       },
       "educationalLevel": "Built for complete beginners",
       "coursePrerequisites": [
@@ -1014,7 +1041,7 @@
       "image": "https://nexahubtech.company/og/course-backend-development.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/academy#organization"
       },
       "educationalLevel": "Open to beginners; smoother with some programming",
       "coursePrerequisites": [
@@ -1138,7 +1165,7 @@
       "image": "https://nexahubtech.company/og/course-web-development-fullstack.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/academy#organization"
       },
       "educationalLevel": "Built for complete beginners",
       "coursePrerequisites": [
@@ -1274,7 +1301,7 @@
       "image": "https://nexahubtech.company/og/course-react-development.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/academy#organization"
       },
       "educationalLevel": "Assumes you already write JavaScript",
       "coursePrerequisites": [
@@ -1405,7 +1432,7 @@
       "image": "https://nexahubtech.company/og/course-nextjs-fullstack.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/academy#organization"
       },
       "educationalLevel": "Assumes you already write React",
       "coursePrerequisites": [
@@ -1541,7 +1568,7 @@
       "image": "https://nexahubtech.company/og/course-mobile-development.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/academy#organization"
       },
       "educationalLevel": "Assumes you can already program",
       "coursePrerequisites": [
@@ -1664,7 +1691,7 @@
       "image": "https://nexahubtech.company/og/course-data-analysis.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/academy#organization"
       },
       "educationalLevel": "Open to beginners who enjoy a question",
       "coursePrerequisites": [
@@ -1794,7 +1821,7 @@
       "image": "https://nexahubtech.company/og/course-mobile-videography.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/academy#organization"
       },
       "educationalLevel": "Built for complete beginners with a phone",
       "coursePrerequisites": [
@@ -1891,7 +1918,7 @@
       "image": "https://nexahubtech.company/og/course-videography-video-editing.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/academy#organization"
       },
       "educationalLevel": "Built for complete beginners",
       "coursePrerequisites": [
@@ -1994,7 +2021,7 @@
       "image": "https://nexahubtech.company/og/course-cybersecurity.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/academy#organization"
       },
       "educationalLevel": "Assumes general technical confidence",
       "coursePrerequisites": [
@@ -2125,11 +2152,11 @@
       "@id": "https://nexahubtech.company/cbt#course",
       "url": "https://nexahubtech.company/cbt",
       "name": "WAEC & JAMB CBT Training",
-      "description": "Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.",
+      "description": "Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech Academy, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.",
       "image": "https://nexahubtech.company/og/cbt.jpg",
       "inLanguage": "en",
       "provider": {
-        "@id": "https://nexahubtech.company/#organization"
+        "@id": "https://nexahubtech.company/academy#organization"
       },
       "about": [
         {
@@ -2602,8 +2629,8 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/#webpage",
       "url": "https://nexahubtech.company/",
-      "name": "NexaHubTech — Live Tech Courses, Online or In Person",
-      "description": "NexaHubTech offers live, instructor-led courses in software development, data, office productivity and video, backed by a working software studio. Learn online from anywhere or in person in a small class, start any day, and pay in instalments.",
+      "name": "NexaHubTech — Software Development Company in Abuja, Nigeria",
+      "description": "NexaHubTech designs, builds and maintains production software for businesses and founders — scoped carefully, built properly, and supported long after launch. Based in Abuja, Nigeria.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2620,11 +2647,53 @@
       }
     },
     {
+      "@type": "WebPage",
+      "@id": "https://nexahubtech.company/academy#webpage",
+      "url": "https://nexahubtech.company/academy",
+      "name": "NexaHubTech Academy — Live Tech Courses, Online or In Person",
+      "description": "NexaHubTech Academy, the training division of NexaHubTech, offers live, instructor-led courses in software development, data, office productivity and video. Learn online or in person, start any day, and pay in instalments.",
+      "inLanguage": "en-NG",
+      "isPartOf": {
+        "@id": "https://nexahubtech.company/#website"
+      },
+      "publisher": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nexahubtech.company/og/academy.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://nexahubtech.company/academy#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://nexahubtech.company/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nexahubtech.company/academy#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nexahubtech.company/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "NexaHubTech Academy",
+          "item": "https://nexahubtech.company/academy"
+        }
+      ]
+    },
+    {
       "@type": "CollectionPage",
       "@id": "https://nexahubtech.company/courses#webpage",
       "url": "https://nexahubtech.company/courses",
-      "name": "Courses — NexaHubTech",
-      "description": "Every NexaHubTech course, from first steps on a computer to React, data analysis and video — taught live, online or in person, with flexible payment plans. Start any day.",
+      "name": "Courses — NexaHubTech Academy",
+      "description": "Every NexaHubTech Academy course, from first steps on a computer to React, data analysis and video — taught live, online or in person, with flexible payment plans. Start any day.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2665,8 +2734,8 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/fees#webpage",
       "url": "https://nexahubtech.company/fees",
-      "name": "Course Fees — NexaHubTech",
-      "description": "Every NexaHubTech fee on one page: each course online and in person, paid in full or in instalments, plus CBT practice and rates for organisations.",
+      "name": "Course Fees — NexaHubTech Academy",
+      "description": "Every NexaHubTech Academy fee on one page: each course online and in person, paid in full or in instalments, plus CBT practice and rates for organisations.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2707,8 +2776,8 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/timetable#webpage",
       "url": "https://nexahubtech.company/timetable",
-      "name": "Session Times — NexaHubTech",
-      "description": "When NexaHubTech classes run each week, online and in person. There are no fixed intakes: start any day and join the session that suits you.",
+      "name": "Session Times — NexaHubTech Academy",
+      "description": "When NexaHubTech Academy classes run each week, online and in person. There are no fixed intakes: start any day and join the session that suits you.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2749,8 +2818,8 @@
       "@type": "FAQPage",
       "@id": "https://nexahubtech.company/cbt#webpage",
       "url": "https://nexahubtech.company/cbt",
-      "name": "WAEC & JAMB CBT Training in Kubwa, Abuja — NexaHubTech",
-      "description": "Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.",
+      "name": "WAEC & JAMB CBT Training in Kubwa, Abuja — NexaHubTech Academy",
+      "description": "Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech Academy, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2833,8 +2902,8 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/for-business#webpage",
       "url": "https://nexahubtech.company/for-business",
-      "name": "Training for Organisations — NexaHubTech",
-      "description": "Train your staff, your students or your team with NexaHubTech: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online, in person or at your office.",
+      "name": "Training for Organisations — NexaHubTech Academy",
+      "description": "Train your staff, your students or your team with NexaHubTech Academy: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online, in person or at your office.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2875,8 +2944,8 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/centre#webpage",
       "url": "https://nexahubtech.company/centre",
-      "name": "Our Learning Centre — NexaHubTech",
-      "description": "Visit the NexaHubTech learning centre at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja: small classes of no more than 6, machines provided, open Monday – Saturday, 8:00 AM – 6:00 PM. You are welcome to visit before you enrol.",
+      "name": "Our Learning Centre — NexaHubTech Academy",
+      "description": "Visit the NexaHubTech Academy learning centre at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja: small classes of no more than 6, machines provided, open Monday – Saturday, 8:00 AM – 6:00 PM. You are welcome to visit before you enrol.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2917,8 +2986,8 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/teaching#webpage",
       "url": "https://nexahubtech.company/teaching",
-      "name": "How We Teach — NexaHubTech",
-      "description": "The pedagogy behind every NexaHubTech course: the mental model before the syntax, one idea at a time, and a session built in three parts.",
+      "name": "How We Teach — NexaHubTech Academy",
+      "description": "The pedagogy behind every NexaHubTech Academy course: the mental model before the syntax, one idea at a time, and a session built in three parts.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2959,8 +3028,8 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/enrol#webpage",
       "url": "https://nexahubtech.company/enrol",
-      "name": "Enrol — NexaHubTech",
-      "description": "Apply for a place at NexaHubTech — taught live, online or in person, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.",
+      "name": "Enrol — NexaHubTech Academy",
+      "description": "Apply for a place at NexaHubTech Academy — taught live, online or in person, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -3002,7 +3071,7 @@
       "@id": "https://nexahubtech.company/services#webpage",
       "url": "https://nexahubtech.company/services",
       "name": "Services — NexaHubTech",
-      "description": "What the NexaHubTech studio builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.",
+      "description": "What NexaHubTech builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -3086,7 +3155,7 @@
       "@id": "https://nexahubtech.company/about#webpage",
       "url": "https://nexahubtech.company/about",
       "name": "About — NexaHubTech",
-      "description": "NexaHubTech is a Nigeria-based skills-to-service company — a tech school and a software studio built on one idea: learning should be tied to real work.",
+      "description": "NexaHubTech is a Nigeria-based software development company. Its training division, NexaHubTech Academy, teaches the skills the company practises — in live courses, online or in person.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -3128,7 +3197,7 @@
       "@id": "https://nexahubtech.company/contact#webpage",
       "url": "https://nexahubtech.company/contact",
       "name": "Contact — NexaHubTech",
-      "description": "Get in touch with NexaHubTech — ask about a course, taught live and started whenever you like, or start a project with the studio.",
+      "description": "Get in touch with NexaHubTech — start a software project with the company, or ask NexaHubTech Academy about a course.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -3169,7 +3238,7 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/computer-essentials#webpage",
       "url": "https://nexahubtech.company/courses/computer-essentials",
-      "name": "Computer Essentials — NexaHubTech",
+      "name": "Computer Essentials — NexaHubTech Academy",
       "description": "Three weeks from never having used a computer to saving, finding and printing your own work — with somebody beside you the whole way.",
       "inLanguage": "en-NG",
       "isPartOf": {
@@ -3217,7 +3286,7 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/pc-basics#webpage",
       "url": "https://nexahubtech.company/courses/pc-basics",
-      "name": "PC Basics — NexaHubTech",
+      "name": "PC Basics — NexaHubTech Academy",
       "description": "Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.",
       "inLanguage": "en-NG",
       "isPartOf": {
@@ -3265,7 +3334,7 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/office-essentials#webpage",
       "url": "https://nexahubtech.company/courses/office-essentials",
-      "name": "Office Essentials — NexaHubTech",
+      "name": "Office Essentials — NexaHubTech Academy",
       "description": "The two programs most office work actually happens in — Word and Excel — in four weeks, taught properly.",
       "inLanguage": "en-NG",
       "isPartOf": {
@@ -3313,7 +3382,7 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/microsoft-office#webpage",
       "url": "https://nexahubtech.company/courses/microsoft-office",
-      "name": "Microsoft Office — NexaHubTech",
+      "name": "Microsoft Office — NexaHubTech Academy",
       "description": "The four programs an office actually runs on, taught to the standard the work deserves.",
       "inLanguage": "en-NG",
       "isPartOf": {
@@ -3361,7 +3430,7 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/python-programming#webpage",
       "url": "https://nexahubtech.company/courses/python-programming",
-      "name": "Python Programming — NexaHubTech",
+      "name": "Python Programming — NexaHubTech Academy",
       "description": "Learn programming from scratch with Python — the language that powers everything from scripts to AI.",
       "inLanguage": "en-NG",
       "isPartOf": {
@@ -3409,7 +3478,7 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/javascript-programming#webpage",
       "url": "https://nexahubtech.company/courses/javascript-programming",
-      "name": "JavaScript Programming — NexaHubTech",
+      "name": "JavaScript Programming — NexaHubTech Academy",
       "description": "Learn JavaScript as a language — the same core that runs in a browser and on a server.",
       "inLanguage": "en-NG",
       "isPartOf": {
@@ -3457,7 +3526,7 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/frontend-development#webpage",
       "url": "https://nexahubtech.company/courses/frontend-development",
-      "name": "Frontend Development — NexaHubTech",
+      "name": "Frontend Development — NexaHubTech Academy",
       "description": "Learn the web from first principles — HTML, CSS, and JavaScript done properly.",
       "inLanguage": "en-NG",
       "isPartOf": {
@@ -3505,7 +3574,7 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/backend-development#webpage",
       "url": "https://nexahubtech.company/courses/backend-development",
-      "name": "Backend Development — NexaHubTech",
+      "name": "Backend Development — NexaHubTech Academy",
       "description": "Build the engine behind applications — APIs, databases, and server-side logic.",
       "inLanguage": "en-NG",
       "isPartOf": {
@@ -3553,7 +3622,7 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/web-development-fullstack#webpage",
       "url": "https://nexahubtech.company/courses/web-development-fullstack",
-      "name": "Web Development — NexaHubTech",
+      "name": "Web Development — NexaHubTech Academy",
       "description": "Learn frontend and backend in one complete path — from first principles to full applications.",
       "inLanguage": "en-NG",
       "isPartOf": {
@@ -3601,7 +3670,7 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/react-development#webpage",
       "url": "https://nexahubtech.company/courses/react-development",
-      "name": "React — NexaHubTech",
+      "name": "React — NexaHubTech Academy",
       "description": "Go beyond the basics — build React applications that stay understandable as they grow.",
       "inLanguage": "en-NG",
       "isPartOf": {
@@ -3649,7 +3718,7 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/nextjs-fullstack#webpage",
       "url": "https://nexahubtech.company/courses/nextjs-fullstack",
-      "name": "Next.js — NexaHubTech",
+      "name": "Next.js — NexaHubTech Academy",
       "description": "Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.",
       "inLanguage": "en-NG",
       "isPartOf": {
@@ -3697,7 +3766,7 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/mobile-development#webpage",
       "url": "https://nexahubtech.company/courses/mobile-development",
-      "name": "Mobile Development — NexaHubTech",
+      "name": "Mobile Development — NexaHubTech Academy",
       "description": "Build real mobile applications — from concept to the app store.",
       "inLanguage": "en-NG",
       "isPartOf": {
@@ -3745,7 +3814,7 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/data-analysis#webpage",
       "url": "https://nexahubtech.company/courses/data-analysis",
-      "name": "Data Analysis — NexaHubTech",
+      "name": "Data Analysis — NexaHubTech Academy",
       "description": "Turn raw data into clear insights — with Python, SQL, and real analytical thinking.",
       "inLanguage": "en-NG",
       "isPartOf": {
@@ -3793,7 +3862,7 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/mobile-videography#webpage",
       "url": "https://nexahubtech.company/courses/mobile-videography",
-      "name": "Mobile Videography — NexaHubTech",
+      "name": "Mobile Videography — NexaHubTech Academy",
       "description": "Shoot, light, record and edit video worth watching — on the phone you already own.",
       "inLanguage": "en-NG",
       "isPartOf": {
@@ -3841,7 +3910,7 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/videography-video-editing#webpage",
       "url": "https://nexahubtech.company/courses/videography-video-editing",
-      "name": "Videography & Video Editing — NexaHubTech",
+      "name": "Videography & Video Editing — NexaHubTech Academy",
       "description": "Capture and craft video content that communicates — from shooting to final cut.",
       "inLanguage": "en-NG",
       "isPartOf": {
@@ -3889,7 +3958,7 @@
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/cybersecurity#webpage",
       "url": "https://nexahubtech.company/courses/cybersecurity",
-      "name": "Cybersecurity — NexaHubTech",
+      "name": "Cybersecurity — NexaHubTech Academy",
       "description": "Understand how systems are attacked — and how to defend them.",
       "inLanguage": "en-NG",
       "isPartOf": {

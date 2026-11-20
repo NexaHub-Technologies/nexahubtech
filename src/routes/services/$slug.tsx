@@ -51,7 +51,7 @@ function ServiceDetail() {
 				<div className="max-w-[46rem]">
 					<span className="pill rise rise-1">
 						<span className="spark" />
-						The studio
+						Our services
 					</span>
 					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
 						{service.t}
@@ -100,9 +100,8 @@ function ServiceDetail() {
 						</h2>
 						<p className="lead mt-4 max-w-[34rem]">
 							We treat every project as a problem worth understanding before
-							it's a thing worth building — the same principle the school is
-							built on. You'll know what we're building and why before we write
-							the first line.
+							it's a thing worth building. You'll know what we're building and
+							why before we write the first line.
 						</p>
 					</div>
 					<div className="card panel-studio p-8">

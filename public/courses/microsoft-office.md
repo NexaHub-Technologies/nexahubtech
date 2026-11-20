@@ -1,4 +1,4 @@
-# Microsoft Office — NexaHubTech
+# Microsoft Office — NexaHubTech Academy
 
 > The four programs an office actually runs on, taught to the standard the work deserves.
 

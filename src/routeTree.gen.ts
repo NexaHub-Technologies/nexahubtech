@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AcademyRouteImport } from './routes/academy'
 import { Route as ApproachRouteImport } from './routes/approach'
 import { Route as CbtRouteImport } from './routes/cbt'
 import { Route as CbtTrainingRouteImport } from './routes/cbt-training'
@@ -35,6 +36,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AcademyRoute = AcademyRouteImport.update({
+  id: '/academy',
+  path: '/academy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApproachRoute = ApproachRouteImport.update({
@@ -116,6 +122,7 @@ const CoursesSlugIndexRoute = CoursesSlugIndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/academy': typeof AcademyRoute
   '/approach': typeof ApproachRoute
   '/cbt': typeof CbtRoute
   '/cbt-training': typeof CbtTrainingRoute
@@ -135,6 +142,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/academy': typeof AcademyRoute
   '/approach': typeof ApproachRoute
   '/cbt': typeof CbtRoute
   '/cbt-training': typeof CbtTrainingRoute
@@ -155,6 +163,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/academy': typeof AcademyRoute
   '/approach': typeof ApproachRoute
   '/cbt': typeof CbtRoute
   '/cbt-training': typeof CbtTrainingRoute
@@ -176,6 +185,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/academy'
     | '/approach'
     | '/cbt'
     | '/cbt-training'
@@ -195,6 +205,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/academy'
     | '/approach'
     | '/cbt'
     | '/cbt-training'
@@ -214,6 +225,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/academy'
     | '/approach'
     | '/cbt'
     | '/cbt-training'
@@ -234,6 +246,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AcademyRoute: typeof AcademyRoute
   ApproachRoute: typeof ApproachRoute
   CbtRoute: typeof CbtRoute
   CbtTrainingRoute: typeof CbtTrainingRoute
@@ -265,6 +278,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/academy': {
+      id: '/academy'
+      path: '/academy'
+      fullPath: '/academy'
+      preLoaderRoute: typeof AcademyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/approach': {
@@ -378,6 +398,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AcademyRoute: AcademyRoute,
   ApproachRoute: ApproachRoute,
   CbtRoute: CbtRoute,
   CbtTrainingRoute: CbtTrainingRoute,

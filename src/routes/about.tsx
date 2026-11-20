@@ -1,6 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eyebrow, useReveal } from "../components/site";
-import { MISSION, SUMMARY, THESIS, VALUES, VISION } from "../lib/company";
+import {
+	ACADEMY_SUMMARY,
+	DEFINITION,
+	MISSION,
+	SUMMARY,
+	THESIS,
+	VALUES,
+	VISION,
+} from "../lib/company";
 import { COURSE_COUNT_WORD_CAP } from "../lib/courses";
 import { PAGES } from "../lib/pages";
 import { pageMeta } from "../lib/seo";
@@ -47,35 +55,39 @@ function About() {
 						Who we are
 					</span>
 					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
-						We closed the gap between{" "}
-						<span style={{ color: "var(--learn-ink)" }}>learning</span> and{" "}
-						<span style={{ color: "var(--build-ink)" }}>building</span>.
+						A software company,{" "}
+						<span style={{ color: "var(--build-ink)" }}>built properly</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
-						{SUMMARY}
+						{DEFINITION}
 					</p>
 				</div>
 			</section>
 
-			{/* the thesis */}
+			{/* the company and its training division */}
 			<section className="wrap py-14">
-				<div className="card reveal p-8 md:p-12">
-					<div className="grid md:grid-cols-2 gap-10">
-						<div>
-							<Eyebrow>Our story</Eyebrow>
-							<h2 className="shout shout-md mt-4">Built on one idea.</h2>
-							<p className="lead mt-4">
-								We grew into something with a clear purpose: not just building
-								software, and not just teaching it, but wiring the two together.
-							</p>
-							{/* TODO: founding story & rebrand year — awaiting copy */}
-						</div>
-						<div>
-							<Eyebrow variant="build">Skills-to-service</Eyebrow>
-							<h2 className="shout shout-md mt-4">One connected loop.</h2>
-							<p className="lead mt-4">{THESIS}</p>
-						</div>
+				<div className="grid md:grid-cols-2 gap-5">
+					<div className="card panel-studio reveal p-8 md:p-10">
+						<Eyebrow variant="build">NexaHubTech</Eyebrow>
+						<h2 className="shout shout-md mt-4">The company.</h2>
+						<p className="lead mt-4">{SUMMARY}</p>
+						<Link to="/services" className="view-link is-build mt-5">
+							What we build <i aria-hidden="true">→</i>
+						</Link>
 					</div>
+					<div className="card panel-learn reveal p-8 md:p-10">
+						<Eyebrow>NexaHubTech Academy</Eyebrow>
+						<h2 className="shout shout-md mt-4">The training division.</h2>
+						<p className="lead mt-4">{ACADEMY_SUMMARY}</p>
+						<Link to="/academy" className="view-link mt-5">
+							Visit the Academy <i aria-hidden="true">→</i>
+						</Link>
+					</div>
+				</div>
+				<div className="card reveal p-8 md:p-10 mt-5">
+					<Eyebrow variant="plain">How they relate</Eyebrow>
+					<p className="lead mt-4 max-w-[46rem]">{THESIS}</p>
+					{/* TODO: founding story & rebrand year — awaiting copy */}
 				</div>
 			</section>
 
@@ -103,7 +115,7 @@ function About() {
 					<Eyebrow variant="plain">What we believe</Eyebrow>
 					<h2 className="shout shout-md mt-4">Our core values.</h2>
 					<p className="lead mt-4">
-						The principles behind both arms — the school and the studio alike.
+						The principles behind the company and the Academy alike.
 					</p>
 				</div>
 				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -124,7 +136,7 @@ function About() {
 						The co-founders.
 					</h2>
 					<p className="lead mt-4">
-						NexaHubTech — the school and the studio, run as one thing.
+						NexaHubTech and NexaHubTech Academy.
 					</p>
 				</div>
 				<div className="grid sm:grid-cols-2 gap-5">
@@ -155,11 +167,11 @@ function About() {
 					<div className="card card-lift panel-learn p-9">
 						<h3 className="display text-[1.6rem]">Want to learn with us?</h3>
 						<p className="lead mt-3">
-							{COURSE_COUNT_WORD_CAP} tracks, from switching a computer on to
-							cybersecurity.
+							NexaHubTech Academy runs {COURSE_COUNT_WORD_CAP} courses, from
+							switching a computer on to cybersecurity.
 						</p>
-						<Link to="/courses" className="btn btn-primary mt-5">
-							Explore the courses
+						<Link to="/academy" className="btn btn-primary mt-5">
+							Visit the Academy
 						</Link>
 					</div>
 					<div className="card card-lift panel-studio p-9">

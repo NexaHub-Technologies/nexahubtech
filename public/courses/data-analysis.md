@@ -1,4 +1,4 @@
-# Data Analysis — NexaHubTech
+# Data Analysis — NexaHubTech Academy
 
 > Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
 

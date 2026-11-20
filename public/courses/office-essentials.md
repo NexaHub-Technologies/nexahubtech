@@ -1,4 +1,4 @@
-# Office Essentials — NexaHubTech
+# Office Essentials — NexaHubTech Academy
 
 > The two programs most office work actually happens in — Word and Excel — in four weeks, taught properly.
 

@@ -1,4 +1,4 @@
-# React — NexaHubTech
+# React — NexaHubTech Academy
 
 > Go beyond the basics — build React applications that stay understandable as they grow.
 

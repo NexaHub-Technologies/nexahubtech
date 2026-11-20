@@ -1,19 +1,23 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { CONTACT, MOTTO } from "../lib/contact";
-import type { SiteMode } from "../lib/mode";
+import { CONTACT, MOTTO, TAGLINE } from "../lib/contact";
+import { ARM_HOME, ARM_LABEL, ARM_NAME, type SiteMode } from "../lib/mode";
 import { useMode } from "./mode";
 
 export { CONTACT, MOTTO };
 
 /* shared site chrome + small hooks, used by the root layout and pages */
 
+/* The mark and the name. On the Academy's pages the name gains its division —
+   "NexaHubTech Academy" — so a visitor always knows which business they are in. */
 export function Logo({
 	height = 26,
 	wordmark = "1.12rem",
+	arm = "build",
 }: {
 	height?: number;
 	wordmark?: string;
+	arm?: SiteMode;
 }) {
 	return (
 		<span className="flex items-center gap-2.5">
@@ -26,13 +30,18 @@ export function Logo({
 			/>
 			<span className="display site-wordmark" style={{ fontSize: wordmark }}>
 				NexaHubTech
+				{arm === "learn" ? (
+					<span className="site-subbrand">Academy</span>
+				) : null}
 			</span>
 		</span>
 	);
 }
 
 export const NAV = [
-	{ to: "/", label: "Home" },
+	{ to: "/", label: "Home", side: "build" },
+	/* the Academy's header has no Home link: its name is the link home, and the
+	   room is needed for the division's own name beside the mark */
 	{ to: "/courses", label: "Courses", side: "learn" },
 	{ to: "/fees", label: "Fees", side: "learn" },
 	{ to: "/cbt", label: "CBT Training", side: "learn" },
@@ -50,7 +59,7 @@ export const NAV = [
 	side?: SiteMode;
 }[];
 
-/* the school's other pages — reachable from the footer and from the pages
+/* the Academy's other pages — reachable from the footer and from the pages
    that need them, without crowding the header */
 export const LEARN_MORE = [
 	{ to: "/timetable", label: "Session times" },
@@ -71,27 +80,27 @@ export const CTA_BY_MODE = {
 	build: { to: "/contact", label: "Start a project" },
 } as const;
 
+/* the switch between the two businesses. The company comes first — it is the
+   parent — and each side lands on its own front page. */
 export function ModeSwitch({ className = "" }: { className?: string }) {
 	const { mode, setMode } = useMode();
 	return (
 		<fieldset className={`mode-switch ${className}`}>
-			<legend className="sr-only">Choose what brings you here</legend>
-			<button
-				type="button"
-				data-on={mode === "learn"}
-				aria-pressed={mode === "learn"}
-				onClick={() => setMode("learn")}
-			>
-				Learn
-			</button>
-			<button
-				type="button"
-				data-on={mode === "build"}
-				aria-pressed={mode === "build"}
-				onClick={() => setMode("build")}
-			>
-				Build
-			</button>
+			<legend className="sr-only">
+				Switch between NexaHubTech and its Academy
+			</legend>
+			{(["build", "learn"] as const).map((m) => (
+				<button
+					key={m}
+					type="button"
+					data-on={mode === m}
+					aria-pressed={mode === m}
+					title={ARM_NAME[m]}
+					onClick={() => setMode(m)}
+				>
+					{ARM_LABEL[m]}
+				</button>
+			))}
 		</fieldset>
 	);
 }
@@ -196,12 +205,12 @@ export function Header() {
 		<header className="site-header" id="site-header" data-menu-open={open}>
 			<div className="wrap nav-island flex items-center justify-between gap-3 h-[64px]">
 				<Link
-					to="/"
+					to={ARM_HOME[mode]}
 					className="flex items-center shrink-0"
-					aria-label="NexaHubTech home"
+					aria-label={`${ARM_NAME[mode]} home`}
 					onClick={() => setOpen(false)}
 				>
-					<Logo height={26} />
+					<Logo height={26} arm={mode} />
 				</Link>
 
 				<nav className="hidden lg:flex items-center gap-0.5 xl:gap-1">
@@ -222,9 +231,13 @@ export function Header() {
 
 				<div className="hidden lg:flex items-center gap-3">
 					<ModeSwitch />
-					<Link to={cta.to} className="btn btn-blast">
-						{cta.label}
-					</Link>
+					{/* below xl the header needs the room; the menu and every page
+					    still carry the call to action */}
+					<span className="hidden xl:block">
+						<Link to={cta.to} className="btn btn-blast whitespace-nowrap">
+							{cta.label}
+						</Link>
+					</span>
 				</div>
 
 				<div className="flex items-center gap-2 lg:hidden">
@@ -282,13 +295,21 @@ export function Footer() {
 			<div className="wrap py-12 flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
 				<div>
 					<Link
-						to="/"
+						to={ARM_HOME[mode]}
 						className="flex items-center"
-						aria-label="NexaHubTech home"
+						aria-label={`${ARM_NAME[mode]} home`}
 					>
-						<Logo height={24} />
+						<Logo height={24} arm={mode} />
 					</Link>
-					<p className="text-[0.9rem] text-mute mt-2">{MOTTO}</p>
+					{mode === "learn" ? (
+						<p className="text-[0.85rem] text-mute mt-2">
+							The training division of{" "}
+							<Link to="/" className="underline">
+								NexaHubTech
+							</Link>
+						</p>
+					) : null}
+					<p className="text-[0.9rem] text-mute mt-2">{TAGLINE[mode]}</p>
 					<p className="text-[0.85rem] text-mute mt-3">{CONTACT.address}</p>
 					<a
 						className="text-[0.85rem] text-mute hover:underline"
@@ -329,12 +350,12 @@ export function Footer() {
 					<p className="text-[0.85rem] text-mute">© 2026 NexaHubTech</p>
 					<p className="text-[0.78rem] text-mute">RC {CONTACT.rc}</p>
 					<Link
-						to={mode === "build" ? "/courses" : "/services"}
+						to={mode === "build" ? ARM_HOME.learn : ARM_HOME.build}
 						className="cross-link"
 					>
 						{mode === "build"
-							? "Looking to learn? See our courses"
-							: "Need software built? See our services"}
+							? "Looking to learn? Visit NexaHubTech Academy"
+							: "Need software built? Visit NexaHubTech"}
 						<i aria-hidden="true"> →</i>
 					</Link>
 				</div>

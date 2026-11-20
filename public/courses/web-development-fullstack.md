@@ -1,4 +1,4 @@
-# Web Development — NexaHubTech
+# Web Development — NexaHubTech Academy
 
 > Learn frontend and backend in one complete path — from first principles to full applications.
 

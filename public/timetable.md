@@ -1,6 +1,6 @@
-# Timetable — NexaHubTech
+# Timetable — NexaHubTech Academy
 
-> When NexaHubTech classes run each week, online and in person. There are no fixed intakes: start any day and join the session that suits you.
+> When NexaHubTech Academy classes run each week, online and in person. There are no fixed intakes: start any day and join the session that suits you.
 
 Canonical page: https://nexahubtech.company/timetable
 

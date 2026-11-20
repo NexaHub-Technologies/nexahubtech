@@ -1,4 +1,4 @@
-# Backend Development — NexaHubTech
+# Backend Development — NexaHubTech Academy
 
 > Build the engine behind applications — APIs, databases, and server-side logic.
 

@@ -1,4 +1,4 @@
-# Next.js — NexaHubTech
+# Next.js — NexaHubTech Academy
 
 > Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
 

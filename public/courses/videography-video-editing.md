@@ -1,4 +1,4 @@
-# Videography & Video Editing — NexaHubTech
+# Videography & Video Editing — NexaHubTech Academy
 
 > Capture and craft video content that communicates — from shooting to final cut.
 

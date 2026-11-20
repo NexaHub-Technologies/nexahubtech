@@ -4,14 +4,17 @@ import {
 	HeadContent,
 	Outlet,
 	Scripts,
+	useRouterState,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 
 import { ModeProvider } from "../components/mode";
 import { Preloader } from "../components/preloader";
 import { Footer, Header } from "../components/site";
-import { SITE_URL } from "../lib/contact";
-import { DEFAULT_MODE, MODE_INIT_SCRIPT } from "../lib/mode";
+import { DEFINITION, ONE_LINER } from "../lib/company";
+import { MOTTO, SITE_URL } from "../lib/contact";
+import { DEFAULT_MODE, MODE_INIT_SCRIPT, modeForPath } from "../lib/mode";
+import { PAGES } from "../lib/pages";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
@@ -25,22 +28,20 @@ export const Route = createRootRoute({
 				content: "width=device-width, initial-scale=1",
 			},
 			{
-				title: "NexaHubTech — Learn to build. Build for real.",
+				title: PAGES.home.title,
 			},
 			{
 				name: "description",
-				content:
-					"NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio. We teach people to become developers, then put those skills to work building real products for real clients.",
+				content: DEFINITION,
 			},
 			{ name: "theme-color", content: "#f6eff4" },
 			{
 				property: "og:title",
-				content: "NexaHubTech — Learn to build. Build for real.",
+				content: PAGES.home.title,
 			},
 			{
 				property: "og:description",
-				content:
-					"A tech school + a software studio. We teach the skills to become a developer, then use them on real client work — so learning is tied to actual engineering, not theory.",
+				content: ONE_LINER,
 			},
 			{ property: "og:type", content: "website" },
 			{ property: "og:site_name", content: "NexaHubTech" },
@@ -51,8 +52,7 @@ export const Route = createRootRoute({
 			{ property: "og:image:height", content: "630" },
 			{
 				property: "og:image:alt",
-				content:
-					"NexaHubTech — Learn to build. Build for real. A tech school + a software studio.",
+				content: `NexaHubTech — ${MOTTO} ${ONE_LINER}`,
 			},
 			{ name: "twitter:card", content: "summary_large_image" },
 			{ name: "twitter:image", content: `${SITE_URL}/og-image.png` },
@@ -96,10 +96,16 @@ function RootLayout() {
 function RootDocument({ children }: { children: React.ReactNode }) {
 	/* MODE_INIT_SCRIPT stamps data-mode on <html> before React hydrates, so the
 	   client DOM legitimately differs from the server markup here. Rendering the
-	   default keeps the served HTML honest for non-JS visitors; the suppression
-	   covers this element's attributes only, which is exactly the divergence. */
+	   route's own arm — or the default on a shared page — keeps the served HTML
+	   honest for non-JS visitors; the suppression covers this element's
+	   attributes only, which is exactly the divergence. */
+	const pathname = useRouterState({ select: (s) => s.location.pathname });
 	return (
-		<html lang="en" data-mode={DEFAULT_MODE} suppressHydrationWarning>
+		<html
+			lang="en"
+			data-mode={modeForPath(pathname) ?? DEFAULT_MODE}
+			suppressHydrationWarning
+		>
 			<head>
 				{/* stamps data-mode before first paint so the server-rendered
 				    /contact route never flashes the wrong side */}

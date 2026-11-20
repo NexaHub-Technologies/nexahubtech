@@ -1,7 +1,10 @@
 # NexaHubTech
 
-Marketing site for NexaHubTech — a Nigeria-based skills-to-service company: a tech
-school and a software studio under one roof.
+Website for NexaHubTech, a Nigerian technology company that designs, builds and
+maintains software for businesses, and for its training division, NexaHubTech
+Academy. The company's pages live at `/`; the Academy's at `/academy`, `/courses`
+and the routes listed in `ARM_ROUTES` (`src/lib/mode.ts`). How the company
+describes itself is defined once, in `src/lib/company.ts`.
 
 Built with [TanStack Start](https://tanstack.com/start) (React 19, TanStack Router,
 Vite, Tailwind v4), formatted and linted with [Biome](https://biomejs.dev).

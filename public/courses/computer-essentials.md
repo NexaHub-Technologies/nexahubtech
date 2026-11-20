@@ -1,4 +1,4 @@
-# Computer Essentials — NexaHubTech
+# Computer Essentials — NexaHubTech Academy
 
 > Three weeks from never having used a computer to saving, finding and printing your own work — with somebody beside you the whole way.
 

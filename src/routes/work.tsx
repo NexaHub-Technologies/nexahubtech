@@ -123,16 +123,17 @@ function Work() {
 						</Link>
 					</div>
 					<div className="card card-lift panel-learn p-9">
-						<Eyebrow>The other arm</Eyebrow>
+						<Eyebrow>NexaHubTech Academy</Eyebrow>
 						<h3 className="display text-[1.6rem] mt-3">
-							These are what the school teaches from.
+							Our training division teaches from this work.
 						</h3>
 						<p className="lead mt-3">
-							The curriculum is built out of real engineering problems, which is
-							the whole reason the studio and the school sit in one company.
+							NexaHubTech Academy builds its curriculum from real engineering
+							problems like these, and its strongest learners go on to build
+							with us.
 						</p>
-						<Link to="/courses" className="btn btn-primary mt-5">
-							See the courses
+						<Link to="/academy" className="btn btn-primary mt-5">
+							Visit the Academy
 						</Link>
 					</div>
 				</div>
