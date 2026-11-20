@@ -85,9 +85,9 @@ function HeroStage() {
 const HERO_BY_MODE = {
 	learn: {
 		pill: "NexaHubTech Academy",
-		headA: "Learn tech properly.",
-		headB: "At your ",
-		headAccent: "own pace",
+		headA: "Learn tech, ",
+		headB: "the ",
+		headAccent: "right way",
 		accentVar: "var(--learn-ink)",
 		lead: "Practical courses in computers, coding, data and video — taught live by people who build real software every day. Online or in person, and you can start any day.",
 		primary: { to: "/courses", label: "Explore courses" },
