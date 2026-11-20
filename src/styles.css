@@ -2342,72 +2342,6 @@ a.contact-detail:hover {
   color: var(--mute);
 }
 
-.fee-option {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  padding: 1.25rem 1.35rem;
-  border-radius: 18px;
-  background: var(--card);
-  border: 1px solid var(--line);
-}
-.fee-option[data-delivery='inhouse'] {
-  background: var(--marigold-tint);
-  border-color: transparent;
-}
-.fee-option-label {
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--learn-ink);
-}
-.fee-option-price {
-  font-size: 1.75rem;
-  margin-top: 0.2rem;
-}
-.fee-option-plan {
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--ink-soft);
-}
-.fee-option-note {
-  margin-top: 0.5rem;
-  font-size: 0.86rem;
-  line-height: 1.5;
-  color: var(--mute);
-}
-
-.slot-list {
-  display: grid;
-  gap: 0.5rem;
-}
-.slot-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.25rem 1rem;
-  padding: 0.75rem 1rem;
-  border-radius: 14px;
-  background: var(--card);
-  border: 1px solid var(--line-soft);
-}
-.slot-row[data-delivery='inhouse'] {
-  border-left: 3px solid var(--marigold);
-}
-.slot-row[data-delivery='online'] {
-  border-left: 3px solid var(--teal);
-}
-.slot-when {
-  font-weight: 700;
-  color: var(--ink);
-}
-.slot-where {
-  font-size: 0.85rem;
-  color: var(--mute);
-}
-
 /* a plain, readable table for the fees page — wraps sideways on a phone
    rather than squeezing the figures */
 .fee-table-wrap {
@@ -2460,32 +2394,6 @@ a.contact-detail:hover {
   color: var(--mute-2);
 }
 
-/* the learning path at the top of /courses */
-.path-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-}
-.path-chip {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.4rem 0.85rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--learn-ink);
-  background: var(--marigold-tint);
-  transition: background 180ms ease;
-}
-.path-chip:hover {
-  background: var(--card);
-}
-.path-arrow {
-  color: var(--mute);
-  font-size: 0.85rem;
-}
-
 /* "NexaHubTech Academy": the division name sits beside the company's, smaller
    and in the Academy's own ink, so the two read as parent and division */
 .site-subbrand {
@@ -2526,4 +2434,81 @@ a.contact-detail:hover {
   .site-header .mode-switch button {
     padding-inline: 0.7rem;
   }
+}
+
+/* the price on a course page: one figure, one quiet line, a switch between
+   online and in person where both exist */
+.price-box {
+  padding: 1.6rem;
+  border-radius: 20px;
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+.price-switch {
+  display: inline-flex;
+  padding: 4px;
+  gap: 4px;
+  border-radius: 999px;
+  background: var(--paper-2);
+  border: 1px solid var(--line-soft);
+}
+.price-switch button {
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  transition: background 160ms ease, color 160ms ease;
+}
+.price-switch button[data-on='true'] {
+  background: var(--card);
+  color: var(--learn-ink);
+  box-shadow: 0 1px 4px rgba(49, 16, 73, 0.12);
+}
+.price-switch button:focus-visible {
+  outline: 2px solid var(--learn-ink);
+  outline-offset: 2px;
+}
+.price-only {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--learn-ink);
+}
+.price-figure {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+.price-times summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--learn-ink);
+}
+
+/* the track filter on /courses */
+.track-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.track-filter button {
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  background: var(--card);
+}
+.track-filter button[aria-pressed='true'] {
+  background: var(--learn-ink);
+  border-color: var(--learn-ink);
+  color: #fff;
+}
+.track-filter button:focus-visible {
+  outline: 2px solid var(--learn-ink);
+  outline-offset: 2px;
 }

@@ -1,6 +1,6 @@
 import { APPROACH } from "./approach";
 import { BUSINESS_OFFERS } from "./business";
-import { CBT_DETAILS, CBT_FROM_PRICE } from "./cbt";
+import { CBT_FROM_PRICE } from "./cbt";
 import { CONTACT } from "./contact";
 import {
 	CENTRE_SEATS,
@@ -116,37 +116,22 @@ export const PAGES = {
 	},
 	fees: {
 		path: "/fees",
-		name: "Fees",
-		title: "Course Fees — NexaHubTech Academy",
+		name: "Pricing",
+		title: "Pricing — NexaHubTech Academy",
 		description:
-			"Every NexaHubTech Academy fee on one page: each course online and in person, paid in full or in instalments, plus CBT practice and rates for organisations.",
+			"Simple, all-inclusive pricing for every NexaHubTech Academy course: one fee for the whole course, online or in person, paid in full or in parts — plus CBT practice and rates for organisations.",
 		image: "/og/fees.jpg",
 		card: {
-			eyebrow: "Fees",
-			headline: "What it costs,",
-			accent: "on one page.",
+			eyebrow: "Pricing",
+			headline: "Simple pricing,",
+			accent: "no surprises.",
 			sub: `Courses from ${cheapestCourse} · pay in full or in instalments`,
-		},
-		kind: "WebPage",
-	},
-	timetable: {
-		path: "/timetable",
-		name: "Timetable",
-		title: "Session Times — NexaHubTech Academy",
-		description:
-			"When NexaHubTech Academy classes run each week, online and in person. There are no fixed intakes: start any day and join the session that suits you.",
-		image: "/og/timetable.jpg",
-		card: {
-			eyebrow: "Session times",
-			headline: "Start any day.",
-			accent: "Pick your session.",
-			sub: `Evenings online · in person ${CBT_DETAILS.hours}`,
 		},
 		kind: "WebPage",
 	},
 	forBusiness: {
 		path: "/for-business",
-		name: "For Business",
+		name: "Organisations",
 		title: "Training for Organisations — NexaHubTech Academy",
 		description:
 			"Train your staff, your students or your team with NexaHubTech Academy: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online, in person or at your office.",
@@ -159,34 +144,19 @@ export const PAGES = {
 		},
 		kind: "WebPage",
 	},
-	centre: {
-		path: "/centre",
-		name: "Learning Centre",
-		title: "Our Learning Centre — NexaHubTech Academy",
-		description: `Visit the NexaHubTech Academy learning centre at ${CONTACT.address}: small classes of no more than ${CENTRE_SEATS}, machines provided, open ${CBT_DETAILS.hours}. You are welcome to visit before you enrol.`,
-		image: "/og/centre.jpg",
+	academyAbout: {
+		path: "/academy/about",
+		name: "About the Academy",
+		title: "About NexaHubTech Academy — How We Teach, Where and When",
+		description: `How NexaHubTech Academy teaches — the idea before the syntax, every session in three parts — and where and when it happens: live online in the evenings, or in person in classes of no more than ${CENTRE_SEATS} at our learning centre in Kubwa, Abuja.`,
+		image: "/og/academy-about.jpg",
 		card: {
-			eyebrow: "Learning centre",
-			headline: "Small classes.",
-			accent: "Real attention.",
-			sub: `${CONTACT.address}`,
-		},
-		kind: "WebPage",
-	},
-	teaching: {
-		path: "/teaching",
-		name: "How We Teach",
-		title: "How We Teach — NexaHubTech Academy",
-		description:
-			"The pedagogy behind every NexaHubTech Academy course: the mental model before the syntax, one idea at a time, and a session built in three parts.",
-		image: "/og/teaching.jpg",
-		card: {
-			eyebrow: "How we teach",
+			eyebrow: "About the Academy",
 			headline: "Understand it first.",
 			accent: "Then build with it.",
-			sub: "The method behind every course",
+			sub: `Online or in person · classes of up to ${CENTRE_SEATS}`,
 		},
-		kind: "WebPage",
+		kind: "AboutPage",
 	},
 	enrol: {
 		path: "/enrol",
@@ -319,12 +289,10 @@ export const INDEXABLE_PAGES: Page[] = [
 		PAGES.home,
 		PAGES.academy,
 		PAGES.courses,
-		PAGES.fees,
-		PAGES.timetable,
 		PAGES.cbt,
+		PAGES.academyAbout,
+		PAGES.fees,
 		PAGES.forBusiness,
-		PAGES.centre,
-		PAGES.teaching,
 		PAGES.enrol,
 		PAGES.services,
 		PAGES.approach,

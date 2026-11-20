@@ -40,18 +40,18 @@ export function Logo({
 
 export const NAV = [
 	{ to: "/", label: "Home", side: "build" },
-	/* the Academy's header has no Home link: its name is the link home, and the
-	   room is needed for the division's own name beside the mark */
-	{ to: "/courses", label: "Courses", side: "learn" },
-	{ to: "/fees", label: "Fees", side: "learn" },
-	{ to: "/cbt", label: "CBT Training", side: "learn" },
-	{ to: "/for-business", label: "For Business", side: "learn" },
 	{ to: "/services", label: "Services", side: "build" },
 	/* /work is deliberately absent while client naming is unconfirmed — the route
 	   still exists and still claims the build arm, so restoring it is this line:
 	   { to: "/work", label: "Work", side: "build" }, */
 	{ to: "/approach", label: "Approach", side: "build" },
-	{ to: "/about", label: "About" },
+	{ to: "/about", label: "About", side: "build" },
+	/* the Academy's header has no Home link: its name is the link home. Four
+	   links and one button — pricing and organisations live in the footer and on
+	   the pages that need them. */
+	{ to: "/courses", label: "Courses", side: "learn" },
+	{ to: "/cbt", label: "CBT prep", side: "learn" },
+	{ to: "/academy/about", label: "About", side: "learn" },
 	{ to: "/contact", label: "Contact" },
 ] as const satisfies readonly {
 	to: string;
@@ -59,12 +59,10 @@ export const NAV = [
 	side?: SiteMode;
 }[];
 
-/* the Academy's other pages — reachable from the footer and from the pages
-   that need them, without crowding the header */
+/* the Academy's other pages — in the footer, without crowding the header */
 export const LEARN_MORE = [
-	{ to: "/timetable", label: "Session times" },
-	{ to: "/centre", label: "Learning centre" },
-	{ to: "/teaching", label: "How we teach" },
+	{ to: "/fees", label: "Pricing" },
+	{ to: "/for-business", label: "Organisations" },
 ] as const;
 
 /* each side shows only its own routes. The other side's pages stay reachable by URL —
@@ -76,7 +74,7 @@ export function navFor(mode: SiteMode) {
 
 /* the header's primary action follows the arm you are in */
 export const CTA_BY_MODE = {
-	learn: { to: "/courses", label: "Start learning" },
+	learn: { to: "/enrol", label: "Enrol" },
 	build: { to: "/contact", label: "Start a project" },
 } as const;
 

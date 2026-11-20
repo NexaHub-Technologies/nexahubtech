@@ -113,8 +113,32 @@ export const LEVELS: { id: Level; t: string; d: string }[] = [
 ];
 
 /* Which instructor teaches it, and so which of the weekly session slots it
-   runs in. The school has one instructor per family. */
+   runs in. The Academy has one instructor per family. */
 export type Family = "digital" | "development" | "video";
+
+/* How the public browses the catalogue: three tracks, one per family. The
+   finer levels stay in the data for the pricing list and the machine-readable
+   copies, but a visitor only ever chooses between these three. */
+export const TRACKS: { id: Family; t: string; d: string; who: string }[] = [
+	{
+		id: "digital",
+		t: "Digital skills",
+		d: "Computers and Microsoft Office, from the very first click to the reports your job runs on.",
+		who: "New to computers or office work",
+	},
+	{
+		id: "development",
+		t: "Software & data",
+		d: "Coding, websites, mobile apps, data analysis and security — from your first line of code.",
+		who: "Ready to code, or already coding",
+	},
+	{
+		id: "video",
+		t: "Video",
+		d: "Shoot, light and edit video, from the phone in your pocket to a full camera kit.",
+		who: "Creators, churches and small businesses",
+	},
+];
 
 export interface Course {
 	slug: string;
@@ -1947,6 +1971,10 @@ export function feeSummary(c: Course): string {
 
 export function coursesAt(level: Level): Course[] {
 	return COURSES.filter((c) => c.level === level);
+}
+
+export function coursesIn(track: Family): Course[] {
+	return COURSES.filter((c) => c.family === track);
 }
 
 export function nextCourse(c: Course): Course | undefined {

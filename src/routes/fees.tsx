@@ -1,38 +1,52 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eyebrow, useReveal } from "../components/site";
-import { BUSINESS_OFFERS } from "../lib/business";
-import { CBT_PACKAGES } from "../lib/cbt";
+import { CBT_FROM_PRICE } from "../lib/cbt";
 import {
-	bundleSaving,
 	CENTRE_SEATS,
 	type Course,
-	coursesAt,
+	coursesIn,
 	DELIVERY_LABEL,
 	type Fee,
 	formatNaira,
-	instalmentLabel,
-	LEVELS,
+	TRACKS,
 } from "../lib/courses";
 import { PAGES } from "../lib/pages";
 import { pageMeta } from "../lib/seo";
 
 export const Route = createFileRoute("/fees")({
-	component: FeesPage,
+	component: PricingPage,
 	head: () => pageMeta(PAGES.fees),
 });
 
-function FeeCell({ fee }: { fee: Fee | undefined }) {
-	if (!fee) return <td className="is-none">Not offered</td>;
+/* Pricing, made scannable: three rules said once, then one number per cell.
+   Instalment amounts live on each course page, beside the price they split —
+   repeating them here doubled every figure on the page. */
+
+const RULES = [
+	{
+		t: "One price, the whole course",
+		d: "Sessions, materials, exercises, model answers and feedback. Nothing is sold to you halfway through.",
+	},
+	{
+		t: "Pay in full, or in parts",
+		d: "Pay before your first session, or split the fee into equal parts across the course for a little more in total. Each course page shows the exact parts.",
+	},
+	{
+		t: "Online costs less",
+		d: `Same instructor, same materials either way. In person costs more because classes are capped at ${CENTRE_SEATS}.`,
+	},
+];
+
+function Price({ fee }: { fee: Fee | undefined }) {
+	if (!fee) return <td className="is-none">—</td>;
 	return (
 		<td>
 			<span className="display text-[1.02rem]">{formatNaira(fee.upfront)}</span>
-			<small>or {instalmentLabel(fee)}</small>
 		</td>
 	);
 }
 
-function CourseRow({ c }: { c: Course }) {
-	const saving = bundleSaving(c);
+function Row({ c }: { c: Course }) {
 	return (
 		<tr>
 			<th scope="row">
@@ -43,40 +57,15 @@ function CourseRow({ c }: { c: Course }) {
 				>
 					{c.t}
 				</Link>
-				{c.d ? <small className="font-normal text-mute">{c.d}</small> : null}
-				{saving ? (
-					<small className="font-normal text-mute">
-						Saves {formatNaira(saving)} against its parts
-					</small>
-				) : null}
 			</th>
 			<td>{c.duration}</td>
-			<FeeCell fee={c.fees.online} />
-			<FeeCell fee={c.fees.inhouse} />
+			<Price fee={c.fees.online} />
+			<Price fee={c.fees.inhouse} />
 		</tr>
 	);
 }
 
-const RULES = [
-	{
-		t: "The fee covers the whole course",
-		d: "Sessions, materials, exercise briefs, model answers and feedback. Nothing is sold to you halfway through.",
-	},
-	{
-		t: "Pay in full, or in instalments",
-		d: "Pay the whole fee before your first session, or split it into equal instalments across the course. Instalments cost a little more in total, because we carry the wait.",
-	},
-	{
-		t: "Online or in person — your choice",
-		d: `Almost every course is offered both ways. In-person places cost more because classes are capped at ${CENTRE_SEATS}; the curriculum, materials and instructor are the same either way.`,
-	},
-	{
-		t: "Ask before you commit",
-		d: "Visit our learning centre during opening hours, or message us on WhatsApp. Unsure which course fits? Tell us where you are starting from and we will advise you honestly.",
-	},
-];
-
-function FeesPage() {
+function PricingPage() {
 	useReveal();
 	return (
 		<>
@@ -84,24 +73,25 @@ function FeesPage() {
 				<div className="max-w-[46rem]">
 					<span className="pill rise rise-1">
 						<span className="spark" />
-						Fees
+						Pricing
 					</span>
 					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
-						What it costs,{" "}
-						<span style={{ color: "var(--learn-ink)" }}>on one page</span>.
+						Simple pricing,{" "}
+						<span style={{ color: "var(--learn-ink)" }}>no surprises</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
-						Every course, both ways it can be taken, and how to spread the fee.
-						Prices are in naira and cover the whole course.
+						Every course, both ways it can be taken. Prices are in naira and
+						cover the whole course.
 					</p>
 				</div>
 			</section>
 
-			<section className="wrap py-8">
-				<div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-					{RULES.map((r) => (
+			<section className="wrap py-6">
+				<div className="grid md:grid-cols-3 gap-4">
+					{RULES.map((r, i) => (
 						<div key={r.t} className="card reveal p-6">
-							<h2 className="display text-[1.08rem]">{r.t}</h2>
+							<span className="step-badge badge-learn">{i + 1}</span>
+							<h2 className="display text-[1.1rem] mt-3">{r.t}</h2>
 							<p className="lead mt-2 text-[0.92rem]">{r.d}</p>
 						</div>
 					))}
@@ -109,15 +99,15 @@ function FeesPage() {
 			</section>
 
 			<section className="wrap py-8 grid gap-6">
-				{LEVELS.map((level) => (
-					<div key={level.id} className="reveal fee-table-wrap">
+				{TRACKS.map((t) => (
+					<div key={t.id} className="reveal fee-table-wrap">
 						<table className="fee-table">
-							<caption>{level.t}</caption>
+							<caption>{t.t}</caption>
 							<colgroup>
-								<col style={{ width: "40%" }} />
-								<col style={{ width: "14%" }} />
-								<col style={{ width: "23%" }} />
-								<col style={{ width: "23%" }} />
+								<col style={{ width: "46%" }} />
+								<col style={{ width: "18%" }} />
+								<col style={{ width: "18%" }} />
+								<col style={{ width: "18%" }} />
 							</colgroup>
 							<thead>
 								<tr>
@@ -128,73 +118,39 @@ function FeesPage() {
 								</tr>
 							</thead>
 							<tbody>
-								{coursesAt(level.id).map((c) => (
-									<CourseRow key={c.slug} c={c} />
+								{coursesIn(t.id).map((c) => (
+									<Row key={c.slug} c={c} />
 								))}
 							</tbody>
 						</table>
 					</div>
 				))}
+				<p className="reveal text-[0.9rem] text-mute">
+					— means the course is taught one way only. PC Basics is in person,
+					because it starts before you can use a computer on your own.
+				</p>
 			</section>
 
-			<section className="wrap py-8 grid lg:grid-cols-2 gap-6 items-start">
-				<div className="reveal fee-table-wrap">
-					<table className="fee-table !min-w-0">
-						<caption>CBT exam practice · in Kubwa</caption>
-						<colgroup>
-							<col style={{ width: "72%" }} />
-							<col style={{ width: "28%" }} />
-						</colgroup>
-						<thead>
-							<tr>
-								<th scope="col">Package</th>
-								<th scope="col">Fee</th>
-							</tr>
-						</thead>
-						<tbody>
-							{CBT_PACKAGES.map((p) => (
-								<tr key={p.id}>
-									<th scope="row">
-										{p.name}
-										<small className="font-normal text-mute">
-											{p.duration}
-										</small>
-									</th>
-									<td>
-										<span className="display text-[1.02rem]">{p.price}</span>
-									</td>
-								</tr>
-							))}
-						</tbody>
-					</table>
+			<section className="wrap py-8 grid md:grid-cols-2 gap-5">
+				<div className="reveal card panel-learn p-8">
+					<h2 className="display text-[1.3rem]">CBT exam prep</h2>
+					<p className="lead mt-2 text-[0.95rem]">
+						WAEC and JAMB practice on exam-style software, in person. From{" "}
+						{CBT_FROM_PRICE} for a single timed mock.
+					</p>
+					<Link to="/cbt" className="view-link mt-5">
+						CBT prep <i aria-hidden="true">→</i>
+					</Link>
 				</div>
-				<div className="reveal fee-table-wrap">
-					<table className="fee-table !min-w-0">
-						<caption>For organisations</caption>
-						<colgroup>
-							<col style={{ width: "72%" }} />
-							<col style={{ width: "28%" }} />
-						</colgroup>
-						<thead>
-							<tr>
-								<th scope="col">Offer</th>
-								<th scope="col">Rate</th>
-							</tr>
-						</thead>
-						<tbody>
-							{BUSINESS_OFFERS.map((o) => (
-								<tr key={o.id}>
-									<th scope="row">
-										{o.t}
-										<small className="font-normal text-mute">{o.unit}</small>
-									</th>
-									<td>
-										<span className="display text-[1.02rem]">{o.price}</span>
-									</td>
-								</tr>
-							))}
-						</tbody>
-					</table>
+				<div className="reveal card p-8">
+					<h2 className="display text-[1.3rem]">Organisations</h2>
+					<p className="lead mt-2 text-[0.95rem]">
+						Training a team, a school or a church media unit? We quote per
+						group, at our centre or at yours.
+					</p>
+					<Link to="/for-business" className="view-link mt-5">
+						Organisations <i aria-hidden="true">→</i>
+					</Link>
 				</div>
 			</section>
 
@@ -202,24 +158,22 @@ function FeesPage() {
 				<div className="reveal card panel-learn p-8 md:p-10 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
 					<div className="max-w-[36rem]">
 						<Eyebrow>Next</Eyebrow>
-						<h2 className="display text-[1.6rem] mt-3">
-							Found the course? Pick a session.
-						</h2>
+						<h2 className="display text-[1.6rem] mt-3">Found your course?</h2>
 						<p className="lead text-[0.97rem] mt-2">
-							There are no intakes to wait for — you start any day, in a weekly
-							session that suits you.
+							Start any day. We agree your session and payment plan when you
+							enrol.
 						</p>
 					</div>
 					<div className="flex flex-wrap gap-3 shrink-0">
-						<Link to="/timetable" className="btn btn-primary">
-							Session times
-						</Link>
 						<Link
 							to="/enrol"
 							search={{ course: undefined }}
-							className="btn btn-ghost"
+							className="btn btn-primary"
 						>
-							Enrol now
+							Enrol
+						</Link>
+						<Link to="/courses" className="btn btn-ghost">
+							See the courses
 						</Link>
 					</div>
 				</div>

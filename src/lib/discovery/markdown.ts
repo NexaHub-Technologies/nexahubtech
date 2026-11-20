@@ -32,7 +32,7 @@ import {
 	CENTRE_SEATS,
 	COURSES,
 	type Course,
-	coursesAt,
+	coursesIn,
 	DELIVERY_LABEL,
 	deliveriesOf,
 	deliveryPhrase,
@@ -40,11 +40,11 @@ import {
 	feeSummary,
 	formatNaira,
 	instalmentLabel,
-	LEVELS,
 	nextCourse,
 	offeredInPerson,
 	offeredOnline,
 	priceLabel,
+	TRACKS,
 } from "../courses";
 import { ARM_NAME, modeForPath } from "../mode";
 import {
@@ -116,12 +116,12 @@ Tagline: *${TAGLINE.learn}*
 
 ## ${COURSES.length} live courses, online or in person, start any day
 
-Every course but PC Basics can be taken live online or in person, in a class of no more than ${CENTRE_SEATS}. Fees can be paid in full or in instalments: ${mdLink(PAGES.fees)}. Session times: ${mdLink(PAGES.timetable)}.
+Every course but PC Basics can be taken live online or in person, in a class of no more than ${CENTRE_SEATS}. Fees can be paid in full or in instalments: ${mdLink(PAGES.fees)}. How we teach, where and when: ${mdLink(PAGES.academyAbout)}.
 
 ${COURSES.map(courseLine).join("\n")}
 ${cbtLine()}
 
-How the teaching works: ${mdLink(PAGES.teaching)}. The learning centre: ${mdLink(PAGES.centre)}. Training for organisations: ${mdLink(PAGES.forBusiness)}. To apply: ${mdLink(PAGES.enrol)}.
+Training for organisations: ${mdLink(PAGES.forBusiness)}. To apply: ${mdLink(PAGES.enrol)}.
 
 ## Backed by NexaHubTech
 
@@ -131,12 +131,12 @@ ${THESIS} The parent company: ${mdLink(PAGES.home)}.`;
 function courses(): string {
 	return `Every course is taught live by an instructor, with structured materials and real feedback — online, or in person in a class of no more than ${CENTRE_SEATS} — and starts whenever you are ready. Every course is offered both ways except PC Basics, which is taught in person only. Prices are in Nigerian naira, cover the whole course, and can be paid in instalments: ${mdLink(PAGES.fees)}.
 
-${LEVELS.map(
-	(l) => `## ${l.t}
+${TRACKS.map(
+	(t) => `## ${t.t}
 
-${l.d}
+${t.d} For: ${t.who.toLowerCase()}.
 
-${coursesAt(l.id).map(courseLine).join("\n")}`,
+${coursesIn(t.id).map(courseLine).join("\n")}`,
 ).join("\n\n")}
 
 ## Also offered
@@ -228,12 +228,12 @@ function courseNext(c: Course): string {
 function fees(): string {
 	return `Every fee covers the whole course. Pay in full before your first session, or in equal instalments — which cost a little more in total. Almost every course is offered online and in person; in-person places cost more because classes are capped at ${CENTRE_SEATS}.
 
-${LEVELS.map(
-	(l) => `## ${l.t}
+${TRACKS.map(
+	(t) => `## ${t.t}
 
 | Course | Length | ${DELIVERY_LABEL.online} | ${DELIVERY_LABEL.inhouse} |
 |---|---|---|---|
-${coursesAt(l.id).map(feeRow).join("\n")}`,
+${coursesIn(t.id).map(feeRow).join("\n")}`,
 ).join("\n\n")}
 
 ## CBT exam practice
@@ -245,27 +245,6 @@ ${CBT_PACKAGES.map((p) => `- **${p.name}** — ${p.price}. ${p.duration}.`).join
 ${BUSINESS_OFFERS.map((o) => `- **${o.t}** — ${o.price} ${o.unit}.`).join("\n")}
 
 Details: ${mdLink(PAGES.forBusiness)}.`;
-}
-
-function timetable(): string {
-	const group = (inhouse: boolean) =>
-		SLOTS.filter((s) => (s.delivery === "inhouse") === inhouse)
-			.map(
-				(s) =>
-					`- **${FAMILY_LABEL[s.family]}** — ${slotLabel(s)}${s.note ? `. ${s.note}` : ""}`,
-			)
-			.join("\n");
-	return `There are no fixed intakes. You start any day and join one of these standing weekly sessions; people at different points in the same course share a session, and the materials carry each person at their own pace. Times are in West Africa Time.
-
-## In person — no more than ${CENTRE_SEATS} per class, at the learning centre in Kubwa, Abuja
-
-${group(true)}
-
-## Live online
-
-${group(false)}
-
-Which session a course runs in: Computer Essentials, PC Basics, Office Essentials and Microsoft Office in *${FAMILY_LABEL.digital}*; every coding, data and security course in *${FAMILY_LABEL.development}*; both video courses in *${FAMILY_LABEL.video}*.`;
 }
 
 function forBusiness(): string {
@@ -280,28 +259,6 @@ ${bullets(o.points)}`,
 	).join("\n\n")}
 
 To arrange any of these, email ${CONTACT.email} or message ${CONTACT.whatsapp}.`;
-}
-
-function centre(): string {
-	const onlyHere = COURSES.filter(
-		(c) => offeredInPerson(c) && !offeredOnline(c),
-	);
-	const either = COURSES.filter((c) => offeredInPerson(c) && offeredOnline(c));
-	return `- Where: ${CONTACT.address}, Nigeria
-- Open: ${CBT_DETAILS.hours}
-- Small classes of no more than ${CENTRE_SEATS}
-- Machines are provided for the computer-skills, office and CBT sessions
-
-You are welcome to visit before you enrol. CBT candidates can take a short free placement test on the day.
-
-## In person only
-
-${onlyHere.map((c) => `- ${mdLink(coursePage(c))}`).join("\n")}
-- ${mdLink(PAGES.cbt)}
-
-## In person or online
-
-${either.map((c) => `- ${mdLink(coursePage(c))}`).join("\n")}`;
 }
 
 function cbt(): string {
@@ -329,18 +286,52 @@ ${bullets(p.features)}`,
 ${CBT_FAQS.map((f) => `### ${f.question}\n\n${f.answer}`).join("\n\n")}`;
 }
 
-function teaching(): string {
-	return `## Principles
+function academyAbout(): string {
+	const group = (inhouse: boolean) =>
+		SLOTS.filter((s) => (s.delivery === "inhouse") === inhouse)
+			.map(
+				(s) =>
+					`- **${FAMILY_LABEL[s.family]}** — ${slotLabel(s)}${s.note ? `. ${s.note}` : ""}`,
+			)
+			.join("\n");
+	return `${ACADEMY_SUMMARY}
+
+## How we teach
+
+We teach the idea before the syntax. It feels slower for a fortnight, then it compounds — every new thing attaches to something the learner already understands.
+
+### Principles
 
 ${PRINCIPLES.map((p) => `${p.n}. **${p.t}** — ${p.d}`).join("\n")}
 
-## Every session, in three parts
+### Every session, in three parts
 
 ${SESSION.map((s) => `${s.n}. **${s.t}** — ${s.d} *Why:* ${s.why}`).join("\n")}
 
-## What we deliberately do not do
+### How long a course takes
 
-${ANTIPATTERNS.map((a) => `- **${a.t}** — ${a.d}`).join("\n")}`;
+Every course states a length: what it takes at the hours the course asks for, not a term to keep up with. More hours finishes sooner; fewer takes longer.
+
+### What we deliberately do not do
+
+${ANTIPATTERNS.map((a) => `- **${a.t}** — ${a.d}`).join("\n")}
+
+## Where and when
+
+Every course except PC Basics can be taken live online or in person. There are no fixed intakes: start any day and join a standing weekly session. People at different points in the same course share a session, and the materials carry each person at their own pace.
+
+- Learning centre: ${CONTACT.address}, Nigeria
+- Open: ${CBT_DETAILS.hours}
+- In-person classes of no more than ${CENTRE_SEATS}; machines provided for the computer-skills, office and CBT sessions
+- Visitors are welcome before enrolling
+
+### Session times — in person (West Africa Time)
+
+${group(true)}
+
+### Session times — live online (West Africa Time)
+
+${group(false)}`;
 }
 
 function enrol(): string {
@@ -432,11 +423,9 @@ function body(page: Page): string {
 		[PAGES.academy.path]: academy,
 		[PAGES.courses.path]: courses,
 		[PAGES.fees.path]: fees,
-		[PAGES.timetable.path]: timetable,
 		[PAGES.forBusiness.path]: forBusiness,
-		[PAGES.centre.path]: centre,
 		[PAGES.cbt.path]: cbt,
-		[PAGES.teaching.path]: teaching,
+		[PAGES.academyAbout.path]: academyAbout,
 		[PAGES.enrol.path]: enrol,
 		[PAGES.services.path]: services,
 		[PAGES.approach.path]: approach,
@@ -475,12 +464,10 @@ ${CONTACT_BLOCK}
 const school = [
 	PAGES.academy,
 	PAGES.courses,
-	PAGES.fees,
-	PAGES.timetable,
 	PAGES.cbt,
+	PAGES.academyAbout,
+	PAGES.fees,
 	PAGES.forBusiness,
-	PAGES.centre,
-	PAGES.teaching,
 	PAGES.enrol,
 ];
 const studio = [PAGES.services, PAGES.approach];

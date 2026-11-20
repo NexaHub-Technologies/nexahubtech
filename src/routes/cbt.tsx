@@ -2,9 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { CONTACT, Eyebrow, useReveal } from "../components/site";
 import {
+	CBT_BUNDLE_PACKAGE,
 	CBT_DETAILS,
 	CBT_FAQS,
-	CBT_PACKAGES,
+	CBT_FEATURED,
+	CBT_GROUP_PACKAGE,
 	CBT_PILLARS,
 	SAMPLE_CBT_QUESTIONS,
 } from "../lib/cbt";
@@ -247,8 +249,8 @@ function CbtPage() {
 					<Eyebrow>Packages</Eyebrow>
 					<h2 className="shout shout-md mt-4">Pick what fits your timeline.</h2>
 				</div>
-				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-					{CBT_PACKAGES.map((pkg) => (
+				<div className="grid md:grid-cols-3 gap-5">
+					{CBT_FEATURED.map((pkg) => (
 						<div
 							key={pkg.id}
 							className={`card card-lift reveal p-6 flex flex-col ${
@@ -280,24 +282,33 @@ function CbtPage() {
 									</li>
 								))}
 							</ul>
-							{pkg.id === "school-group" ? (
-								<Link
-									to="/for-business"
-									className="btn btn-primary w-full mt-6 !py-2 text-[0.88rem]"
-								>
-									Arrange for a group
-								</Link>
-							) : (
-								<Link
-									to="/enrol"
-									search={{ course: "cbt-training" }}
-									className={`btn ${pkg.badge ? "btn-primary" : "btn-ghost"} w-full mt-6 !py-2 text-[0.88rem]`}
-								>
-									Choose this
-								</Link>
-							)}
+							<Link
+								to="/enrol"
+								search={{ course: "cbt-training" }}
+								className={`btn ${pkg.badge ? "btn-primary" : "btn-ghost"} w-full mt-6 !py-2 text-[0.88rem]`}
+							>
+								Choose this
+							</Link>
 						</div>
 					))}
+				</div>
+				{/* the two variations, a line each — not two more cards to compare */}
+				<div className="reveal mt-6 grid gap-2 text-[0.93rem]">
+					<p>
+						<span className="font-semibold">{CBT_BUNDLE_PACKAGE.name}:</span>{" "}
+						<span className="text-mute">
+							{CBT_BUNDLE_PACKAGE.price} · {CBT_BUNDLE_PACKAGE.duration}
+						</span>
+					</p>
+					<p>
+						<span className="font-semibold">{CBT_GROUP_PACKAGE.name}:</span>{" "}
+						<span className="text-mute">
+							{CBT_GROUP_PACKAGE.price} · {CBT_GROUP_PACKAGE.duration}.{" "}
+						</span>
+						<Link to="/for-business" className="underline font-semibold">
+							Arrange for a group
+						</Link>
+					</p>
 				</div>
 			</section>
 

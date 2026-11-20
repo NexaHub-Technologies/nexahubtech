@@ -1,13 +1,11 @@
 import { Link } from "@tanstack/react-router";
-import { BUSINESS_OFFERS } from "../lib/business";
 import {
 	CENTRE_SEATS,
 	COURSE_COUNT,
-	coursesAt,
+	coursesIn,
 	formatNaira,
-	LEVELS,
-	type Level,
 	lowestFee,
+	TRACKS,
 } from "../lib/courses";
 import { SERVICES } from "../lib/services";
 import { useMode } from "./mode";
@@ -91,9 +89,9 @@ const HERO_BY_MODE = {
 		headB: "On your ",
 		headAccent: "terms",
 		accentVar: "var(--learn-ink)",
-		lead: "Practical courses in software development, data, office productivity and video — taught live by people who build real software every day. Learn online from anywhere or in person in a small class, start any day, and spread your fee across the course.",
+		lead: "Practical courses in computers, coding, data and video — taught live by people who build real software every day. Online or in person, and you can start any day.",
 		primary: { to: "/courses", label: "Explore courses" },
-		secondary: { to: "/fees", label: "Compare fees" },
+		secondary: { to: "/academy/about", label: "How we teach" },
 	},
 	build: {
 		pill: "Software development company",
@@ -279,113 +277,82 @@ export function Thesis() {
 
 /* ── learn-side sections ─────────────────────────────────────────── */
 
-const STARTING_POINTS: { level: Level; who: string }[] = [
-	{ level: "start-here", who: "New to computers or office work" },
-	{ level: "developer", who: "Ready to learn to code" },
-	{ level: "level-up", who: "Already writing code" },
+/* the whole Academy in three steps — the shape a visitor follows from here */
+const HOW_IT_WORKS = [
+	{
+		n: "1",
+		t: "Choose a track",
+		d: "Digital skills, software & data, or video. Every course says who it is for and what you need before day one.",
+	},
+	{
+		n: "2",
+		t: "Pick how you learn",
+		d: `Live online from anywhere, or in person in a class of no more than ${CENTRE_SEATS}. One price per course, payable in parts.`,
+	},
+	{
+		n: "3",
+		t: "Start any day",
+		d: "No intakes to wait for. Enrol, and we agree your start date and weekly session with you.",
+	},
 ];
 
-export function StartingPoints() {
+export function HowItWorks() {
 	return (
 		<section className="wrap py-16">
 			<div className="reveal max-w-[40rem] mb-10">
-				<Eyebrow>Choose your starting point</Eyebrow>
-				<h2 className="shout mt-4">Wherever you are, there is a next step.</h2>
+				<Eyebrow>How it works</Eyebrow>
+				<h2 className="shout mt-4">Three steps to your first session.</h2>
 			</div>
 			<div className="grid md:grid-cols-3 gap-5">
-				{STARTING_POINTS.map(({ level, who }) => {
-					const meta = LEVELS.find((l) => l.id === level);
-					const courses = coursesAt(level);
-					const from = formatNaira(Math.min(...courses.map(lowestFee)));
-					return (
-						<Link
-							key={level}
-							to="/courses"
-							hash={level}
-							className="card card-lift panel-learn reveal p-7 flex flex-col"
-						>
-							<span className="text-[0.8rem] text-mute font-semibold uppercase tracking-wider">
-								{who}
-							</span>
-							<h3 className="display text-[1.5rem] mt-2">{meta?.t}</h3>
-							<p className="lead mt-2 text-[0.95rem] flex-1">
-								{courses.map((c) => c.t).join(" · ")}
-							</p>
-							<div className="flex items-center justify-between mt-5 pt-4 border-t border-[var(--line-soft)]">
-								<span className="display text-[1.05rem]">From {from}</span>
-								<span className="view-link">
-									See courses <i aria-hidden="true">→</i>
-								</span>
-							</div>
-						</Link>
-					);
-				})}
+				{HOW_IT_WORKS.map((s, i) => (
+					<div key={s.t} className="step-card reveal">
+						<span className={`step-num ${i === 2 ? "is-build" : ""}`}>
+							0{s.n}
+						</span>
+						<h3 className="display text-[1.4rem] mt-2">{s.t}</h3>
+						<p className="lead mt-2 text-[0.97rem]">{s.d}</p>
+					</div>
+				))}
 			</div>
 		</section>
 	);
 }
 
-const LIVE_ONLINE = [
-	"Real-time sessions with your instructor — never pre-recorded",
-	"Materials, exercises and feedback shared on WhatsApp",
-	"Evening sessions that fit around work or study",
-	"Our most affordable way to learn",
-];
-
-const IN_PERSON = [
-	"Your instructor in the room, able to see your screen",
-	"Machines provided for computer and office courses",
-	"Weekday and Saturday sessions",
-	"Our learning centre in Kubwa, Abuja",
-];
-
-export function TwoWays() {
+/* the three tracks, each with where its prices start */
+export function Tracks() {
 	return (
 		<section className="wrap py-16">
 			<div className="reveal max-w-[40rem] mb-10">
-				<Eyebrow>Your choice</Eyebrow>
-				<h2 className="shout mt-4">Learn online or in person.</h2>
-				<p className="lead mt-4">
-					Same curriculum, same instructors, same standard. Almost every course
-					is offered both ways, so you choose the format that fits your
-					schedule.
-				</p>
+				<Eyebrow>Choose your track</Eyebrow>
+				<h2 className="shout mt-4">Wherever you are, there is a next step.</h2>
 			</div>
-			<div className="grid md:grid-cols-2 gap-6">
-				<div className="card panel-learn reveal p-8">
-					<Eyebrow>Live online</Eyebrow>
-					<h3 className="display text-[1.7rem] mt-3">
-						Learn from anywhere, in real time.
-					</h3>
-					<ul className="mt-5">
-						{LIVE_ONLINE.map((x) => (
-							<li key={x} className="feat">
-								<span className="mk mk-learn">✓</span>
-								{x}
-							</li>
-						))}
-					</ul>
-					<Link to="/timetable" className="view-link mt-6">
-						See session times <i aria-hidden="true">→</i>
-					</Link>
-				</div>
-				<div className="card reveal p-8">
-					<Eyebrow variant="build">In person</Eyebrow>
-					<h3 className="display text-[1.7rem] mt-3">
-						Small classes of no more than {CENTRE_SEATS}.
-					</h3>
-					<ul className="mt-5">
-						{IN_PERSON.map((x) => (
-							<li key={x} className="feat">
-								<span className="mk mk-build">✓</span>
-								{x}
-							</li>
-						))}
-					</ul>
-					<Link to="/centre" className="view-link mt-6">
-						Visit the learning centre <i aria-hidden="true">→</i>
-					</Link>
-				</div>
+			<div className="grid md:grid-cols-3 gap-5">
+				{TRACKS.map((t) => {
+					const courses = coursesIn(t.id);
+					const from = formatNaira(Math.min(...courses.map(lowestFee)));
+					return (
+						<Link
+							key={t.id}
+							to="/courses"
+							hash={t.id}
+							className="card card-lift panel-learn reveal p-7 flex flex-col"
+						>
+							<span className="text-[0.8rem] text-mute font-semibold uppercase tracking-wider">
+								{t.who}
+							</span>
+							<h3 className="display text-[1.5rem] mt-2">{t.t}</h3>
+							<p className="lead mt-2 text-[0.95rem] flex-1">{t.d}</p>
+							<div className="flex items-center justify-between mt-5 pt-4 border-t border-[var(--line-soft)]">
+								<span className="display text-[1.05rem]">
+									{courses.length} courses · from {from}
+								</span>
+								<span className="view-link" aria-hidden="true">
+									<i>→</i>
+								</span>
+							</div>
+						</Link>
+					);
+				})}
 			</div>
 		</section>
 	);
@@ -413,32 +380,11 @@ export function StudioProof() {
 						<Link to="/" className="btn btn-teal">
 							Visit NexaHubTech
 						</Link>
-						<Link to="/teaching" className="view-link is-build">
+						<Link to="/academy/about" className="view-link is-build">
 							How we teach <i aria-hidden="true">→</i>
 						</Link>
 					</div>
 				</div>
-			</div>
-		</section>
-	);
-}
-
-export function ForTeams() {
-	return (
-		<section className="wrap py-10">
-			<div className="reveal card p-8 md:p-10 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
-				<div className="max-w-[38rem]">
-					<Eyebrow variant="plain">For organisations</Eyebrow>
-					<h2 className="display text-[1.6rem] mt-3">
-						Training a team, or a school's candidates?
-					</h2>
-					<p className="lead text-[0.97rem] mt-2">
-						{BUSINESS_OFFERS.map((o) => o.t).join(" · ")}.
-					</p>
-				</div>
-				<Link to="/for-business" className="btn btn-primary shrink-0">
-					For business
-				</Link>
 			</div>
 		</section>
 	);
@@ -483,51 +429,6 @@ export function Services() {
 	);
 }
 
-const APPROACH = [
-	{
-		n: "1",
-		t: "Understand",
-		d: "We start with the idea, not the keyword. Before any syntax, you build a clear mental model of what’s really happening.",
-	},
-	{
-		n: "2",
-		t: "Practice",
-		d: "Short, focused exercises with model answers. You try, compare, and adjust — until the concept genuinely clicks.",
-	},
-	{
-		n: "3",
-		t: "Build",
-		d: "You apply it to something real. Our strongest learners go on to build alongside NexaHubTech engineers on client projects.",
-	},
-];
-
-export function Approach() {
-	return (
-		<section className="wrap py-16">
-			<div className="reveal max-w-[42rem] mb-10">
-				<Eyebrow>Our approach</Eyebrow>
-				<h2 className="shout mt-4">Mental model first. Syntax second.</h2>
-				<p className="lead mt-4">
-					Most courses start with code and hope understanding catches up. We do
-					it the other way around — and it’s why our learners actually get it.
-				</p>
-			</div>
-
-			<div className="grid md:grid-cols-3 gap-5">
-				{APPROACH.map((s, i) => (
-					<div key={s.t} className="step-card reveal">
-						<span className={`step-num ${i === 2 ? "is-build" : ""}`}>
-							0{s.n}
-						</span>
-						<h3 className="display text-[1.5rem] mt-2">{s.t}</h3>
-						<p className="lead mt-2 text-[0.97rem]">{s.d}</p>
-					</div>
-				))}
-			</div>
-		</section>
-	);
-}
-
 export function ClosingCTA() {
 	const { mode } = useMode();
 	const build = mode === "build";
@@ -554,7 +455,7 @@ export function ClosingCTA() {
 					<p className="blast-lead mt-5">
 						{build
 							? "Tell us about the product you need. We’ll help you scope it, design it well, and build it right — then keep it running."
-							: "Start any day, online or in person, with a payment plan that suits you — taught live by people who build software every day. Preparing for WAEC or JAMB? Our CBT training gets you exam-ready."}
+							: "Start any day, online or in person, and pay in parts if you prefer — taught live by people who build software every day."}
 					</p>
 					<div className="mt-8 flex flex-wrap gap-3">
 						{build ? (
@@ -564,10 +465,10 @@ export function ClosingCTA() {
 						) : (
 							<>
 								<Link to="/courses" className="btn btn-blast">
-									See courses & fees <i aria-hidden="true">→</i>
+									Find your course <i aria-hidden="true">→</i>
 								</Link>
 								<Link to="/cbt" className="btn btn-ghost">
-									CBT Training for WAEC & JAMB
+									CBT prep for WAEC & JAMB
 								</Link>
 							</>
 						)}

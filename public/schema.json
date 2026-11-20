@@ -2471,8 +2471,8 @@
     },
     {
       "@type": "ItemList",
-      "@id": "https://nexahubtech.company/teaching#principles",
-      "name": "How NexaHubTech teaches",
+      "@id": "https://nexahubtech.company/academy/about#principles",
+      "name": "How NexaHubTech Academy teaches",
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "itemListElement": [
         {
@@ -2503,8 +2503,8 @@
     },
     {
       "@type": "HowTo",
-      "@id": "https://nexahubtech.company/teaching#session",
-      "name": "How a NexaHubTech teaching session runs",
+      "@id": "https://nexahubtech.company/academy/about#session",
+      "name": "How a NexaHubTech Academy session runs",
       "description": "Every session on every course is built in the same three parts.",
       "step": [
         {
@@ -2731,90 +2731,6 @@
       ]
     },
     {
-      "@type": "WebPage",
-      "@id": "https://nexahubtech.company/fees#webpage",
-      "url": "https://nexahubtech.company/fees",
-      "name": "Course Fees — NexaHubTech Academy",
-      "description": "Every NexaHubTech Academy fee on one page: each course online and in person, paid in full or in instalments, plus CBT practice and rates for organisations.",
-      "inLanguage": "en-NG",
-      "isPartOf": {
-        "@id": "https://nexahubtech.company/#website"
-      },
-      "publisher": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://nexahubtech.company/og/fees.jpg"
-      },
-      "breadcrumb": {
-        "@id": "https://nexahubtech.company/fees#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://nexahubtech.company/courses#catalog"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://nexahubtech.company/fees#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nexahubtech.company/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Fees",
-          "item": "https://nexahubtech.company/fees"
-        }
-      ]
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://nexahubtech.company/timetable#webpage",
-      "url": "https://nexahubtech.company/timetable",
-      "name": "Session Times — NexaHubTech Academy",
-      "description": "When NexaHubTech Academy classes run each week, online and in person. There are no fixed intakes: start any day and join the session that suits you.",
-      "inLanguage": "en-NG",
-      "isPartOf": {
-        "@id": "https://nexahubtech.company/#website"
-      },
-      "publisher": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://nexahubtech.company/og/timetable.jpg"
-      },
-      "breadcrumb": {
-        "@id": "https://nexahubtech.company/timetable#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://nexahubtech.company/#organization"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://nexahubtech.company/timetable#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nexahubtech.company/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Timetable",
-          "item": "https://nexahubtech.company/timetable"
-        }
-      ]
-    },
-    {
       "@type": "FAQPage",
       "@id": "https://nexahubtech.company/cbt#webpage",
       "url": "https://nexahubtech.company/cbt",
@@ -2899,6 +2815,96 @@
       ]
     },
     {
+      "@type": "AboutPage",
+      "@id": "https://nexahubtech.company/academy/about#webpage",
+      "url": "https://nexahubtech.company/academy/about",
+      "name": "About NexaHubTech Academy — How We Teach, Where and When",
+      "description": "How NexaHubTech Academy teaches — the idea before the syntax, every session in three parts — and where and when it happens: live online in the evenings, or in person in classes of no more than 6 at our learning centre in Kubwa, Abuja.",
+      "inLanguage": "en-NG",
+      "isPartOf": {
+        "@id": "https://nexahubtech.company/#website"
+      },
+      "publisher": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nexahubtech.company/og/academy-about.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://nexahubtech.company/academy/about#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://nexahubtech.company/academy/about#principles"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nexahubtech.company/academy/about#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nexahubtech.company/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "NexaHubTech Academy",
+          "item": "https://nexahubtech.company/academy"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "About the Academy",
+          "item": "https://nexahubtech.company/academy/about"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://nexahubtech.company/fees#webpage",
+      "url": "https://nexahubtech.company/fees",
+      "name": "Pricing — NexaHubTech Academy",
+      "description": "Simple, all-inclusive pricing for every NexaHubTech Academy course: one fee for the whole course, online or in person, paid in full or in parts — plus CBT practice and rates for organisations.",
+      "inLanguage": "en-NG",
+      "isPartOf": {
+        "@id": "https://nexahubtech.company/#website"
+      },
+      "publisher": {
+        "@id": "https://nexahubtech.company/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://nexahubtech.company/og/fees.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://nexahubtech.company/fees#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://nexahubtech.company/courses#catalog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nexahubtech.company/fees#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nexahubtech.company/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pricing",
+          "item": "https://nexahubtech.company/fees"
+        }
+      ]
+    },
+    {
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/for-business#webpage",
       "url": "https://nexahubtech.company/for-business",
@@ -2935,92 +2941,8 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "For Business",
+          "name": "Organisations",
           "item": "https://nexahubtech.company/for-business"
-        }
-      ]
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://nexahubtech.company/centre#webpage",
-      "url": "https://nexahubtech.company/centre",
-      "name": "Our Learning Centre — NexaHubTech Academy",
-      "description": "Visit the NexaHubTech Academy learning centre at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja: small classes of no more than 6, machines provided, open Monday – Saturday, 8:00 AM – 6:00 PM. You are welcome to visit before you enrol.",
-      "inLanguage": "en-NG",
-      "isPartOf": {
-        "@id": "https://nexahubtech.company/#website"
-      },
-      "publisher": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://nexahubtech.company/og/centre.jpg"
-      },
-      "breadcrumb": {
-        "@id": "https://nexahubtech.company/centre#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://nexahubtech.company/#organization"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://nexahubtech.company/centre#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nexahubtech.company/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Learning Centre",
-          "item": "https://nexahubtech.company/centre"
-        }
-      ]
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://nexahubtech.company/teaching#webpage",
-      "url": "https://nexahubtech.company/teaching",
-      "name": "How We Teach — NexaHubTech Academy",
-      "description": "The pedagogy behind every NexaHubTech Academy course: the mental model before the syntax, one idea at a time, and a session built in three parts.",
-      "inLanguage": "en-NG",
-      "isPartOf": {
-        "@id": "https://nexahubtech.company/#website"
-      },
-      "publisher": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://nexahubtech.company/og/teaching.jpg"
-      },
-      "breadcrumb": {
-        "@id": "https://nexahubtech.company/teaching#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://nexahubtech.company/teaching#principles"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://nexahubtech.company/teaching#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nexahubtech.company/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "How We Teach",
-          "item": "https://nexahubtech.company/teaching"
         }
       ]
     },

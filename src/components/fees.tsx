@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
+import { useState } from "react";
 import {
 	bundleSaving,
-	bundlesContaining,
 	CENTRE_SEATS,
 	type Course,
 	DELIVERY_LABEL,
@@ -11,13 +11,14 @@ import {
 	formatNaira,
 	getCourseBySlug,
 	instalmentLabel,
-	nextCourse,
 	priceLabel,
 } from "../lib/courses";
-import { type SessionSlot, seatsLabel, slotLabel } from "../lib/timetable";
+import { type SessionSlot, slotLabel, slotsFor } from "../lib/timetable";
 
-/* Every fee on the site renders through these, from the numbers in courses.ts —
-   a card, a course page and the fees table cannot show three different prices. */
+/* Every fee on the site renders through these, from the numbers in courses.ts.
+   The rule they follow: show one price at a time. A card shows where a course
+   starts; a course page shows one way of taking it, and lets the visitor switch.
+   Instalments are a single quiet line, never a second headline figure. */
 
 const DELIVERY_NOTE: Record<Delivery, string> = {
 	online:
@@ -25,8 +26,120 @@ const DELIVERY_NOTE: Record<Delivery, string> = {
 	inhouse: `A small class of no more than ${CENTRE_SEATS}, with your instructor in the room.`,
 };
 
-/* the fee, as two lines a card can carry: each way to take the course, and its
-   instalment plan underneath */
+/* "or pay in 2 parts of ₦65,000" */
+export function partsLine(fee: Fee): string {
+	return `or pay in ${fee.instalments.count} parts of ${formatNaira(fee.instalments.amount)}`;
+}
+
+/* a course in a list: what it is, how long, where its price starts */
+export function CourseCard({ course }: { course: Course }) {
+	return (
+		<Link
+			to="/courses/$slug"
+			params={{ slug: course.slug }}
+			className="card card-lift reveal p-6 flex flex-col"
+		>
+			<h3 className="display text-[1.2rem]">{course.t}</h3>
+			<p className="lead mt-2 text-[0.93rem] flex-1">{course.tagline}</p>
+			<div className="flex items-center justify-between gap-3 mt-5 pt-4 border-t border-[var(--line-soft)]">
+				<span className="text-[0.85rem] text-mute font-semibold">
+					{course.duration} · {priceLabel(course)}
+				</span>
+				<span className="view-link" aria-hidden="true">
+					<i>→</i>
+				</span>
+			</div>
+		</Link>
+	);
+}
+
+/* the price on a course page: one way of taking it at a time, with a switch
+   where there are two. Session times sit behind a disclosure — they matter when
+   someone is deciding, not while they are reading. */
+export function PriceBox({
+	course,
+	slots = slotsFor(course),
+}: {
+	course: Course;
+	slots?: SessionSlot[];
+}) {
+	const ways = deliveriesOf(course);
+	const [way, setWay] = useState<Delivery>(ways[0]);
+	const fee = course.fees[way] as Fee;
+	const saving = bundleSaving(course, way);
+	const onRequest = course.admission === "on-request";
+	const times = slots.filter((s) => s.delivery === way);
+
+	return (
+		<div className="price-box">
+			{ways.length > 1 ? (
+				<fieldset className="price-switch">
+					<legend className="sr-only">How would you like to learn?</legend>
+					{ways.map((d) => (
+						<button
+							key={d}
+							type="button"
+							aria-pressed={d === way}
+							data-on={d === way}
+							onClick={() => setWay(d)}
+						>
+							{DELIVERY_LABEL[d]}
+						</button>
+					))}
+				</fieldset>
+			) : (
+				<span className="price-only">{DELIVERY_LABEL[way]} only</span>
+			)}
+
+			<p className="mt-5">
+				<span className="display price-figure">{formatNaira(fee.upfront)}</span>
+				<span className="block text-[0.9rem] text-mute mt-1">
+					for the whole course · {partsLine(fee)}
+				</span>
+			</p>
+			<p className="lead mt-4 text-[0.93rem]">{DELIVERY_NOTE[way]}</p>
+			{saving && course.bundle ? (
+				<p className="text-[0.88rem] text-mute mt-3">
+					Covers{" "}
+					{course.bundle.parts
+						.map((s) => getCourseBySlug(s)?.t ?? s)
+						.join(" and ")}{" "}
+					in one track — {formatNaira(saving)} less than taking both.
+				</p>
+			) : null}
+
+			{times.length ? (
+				<details className="price-times mt-5">
+					<summary>
+						{onRequest ? "When it would run" : "See session times"}
+					</summary>
+					<ul className="mt-3 grid gap-1.5">
+						{times.map((s) => (
+							<li key={s.id} className="text-[0.9rem]">
+								{slotLabel(s)}
+								{s.note ? <span className="text-mute"> · {s.note}</span> : null}
+							</li>
+						))}
+					</ul>
+					<p className="text-[0.82rem] text-mute mt-3">
+						Start any day. We agree your session when you enrol.
+					</p>
+				</details>
+			) : null}
+
+			<Link
+				to="/enrol"
+				search={{ course: course.slug }}
+				className="btn btn-primary w-full mt-6 justify-center"
+			>
+				{onRequest ? "Register your interest" : "Enrol"}
+			</Link>
+		</div>
+	);
+}
+
+/* both prices as two compact lines — used where a visitor is already committing
+   (the enrol summary), and nowhere they are still browsing */
 export function FeeLines({ course }: { course: Course }) {
 	return (
 		<div className="fee-lines">
@@ -42,132 +155,6 @@ export function FeeLines({ course }: { course: Course }) {
 					</div>
 				);
 			})}
-		</div>
-	);
-}
-
-/* the full choice on a course page: each delivery as its own option */
-export function FeeOptions({ course }: { course: Course }) {
-	const ways = deliveriesOf(course);
-	return (
-		<div
-			className={`grid gap-4 ${ways.length > 1 ? "sm:grid-cols-2" : "sm:max-w-[22rem]"}`}
-		>
-			{ways.map((d) => {
-				const fee = course.fees[d] as Fee;
-				return (
-					<div key={d} className="fee-option" data-delivery={d}>
-						<span className="fee-option-label">{DELIVERY_LABEL[d]}</span>
-						<span className="display fee-option-price">
-							{formatNaira(fee.upfront)}
-						</span>
-						<span className="fee-option-plan">
-							or {instalmentLabel(fee)} in instalments
-						</span>
-						<p className="fee-option-note">{DELIVERY_NOTE[d]}</p>
-					</div>
-				);
-			})}
-		</div>
-	);
-}
-
-/* the weekly sessions a course can be joined in */
-export function SlotList({ slots }: { slots: SessionSlot[] }) {
-	return (
-		<ul className="slot-list">
-			{slots.map((s) => (
-				<li key={s.id} className="slot-row" data-delivery={s.delivery}>
-					<span className="slot-when">{slotLabel(s)}</span>
-					<span className="slot-where">
-						{seatsLabel(s)}
-						{s.note ? ` · ${s.note}` : ""}
-					</span>
-				</li>
-			))}
-		</ul>
-	);
-}
-
-/* "where this leads": the next course, and any bundle this course is part of */
-export function NextSteps({ course }: { course: Course }) {
-	const next = nextCourse(course);
-	const parentBundles = bundlesContaining(course.slug);
-	const ownSaving = bundleSaving(course);
-	if (!next && !parentBundles.length && !ownSaving) return null;
-
-	return (
-		<div className="grid md:grid-cols-2 gap-5">
-			{ownSaving && course.bundle ? (
-				<div className="card panel-learn p-7">
-					<span className="text-[0.8rem] text-mute font-semibold uppercase tracking-wider">
-						One track, two courses
-					</span>
-					<p className="lead mt-2">
-						This covers{" "}
-						{course.bundle.parts
-							.map((s) => getCourseBySlug(s)?.t ?? s)
-							.join(" and ")}{" "}
-						in one continuous course, for{" "}
-						<strong>{formatNaira(ownSaving)} less</strong> than taking them
-						separately.
-					</p>
-				</div>
-			) : null}
-			{parentBundles.map((b) => {
-				const saving = bundleSaving(b);
-				return (
-					<Link
-						key={b.slug}
-						to="/courses/$slug"
-						params={{ slug: b.slug }}
-						className="card card-lift panel-learn p-7"
-					>
-						<span className="text-[0.8rem] text-mute font-semibold uppercase tracking-wider">
-							Want both halves?
-						</span>
-						<h3 className="display text-[1.2rem] mt-2">
-							{b.t}
-							{b.d ? ` (${b.d})` : ""}
-						</h3>
-						<p className="lead mt-1 text-[0.92rem]">
-							{b.bundle?.parts
-								.map((s) => getCourseBySlug(s)?.t ?? s)
-								.join(" + ")}{" "}
-							in one track
-							{saving ? ` — ${formatNaira(saving)} less than both apart` : ""}.
-						</p>
-						<span className="view-link mt-3">
-							See the track <i aria-hidden="true">→</i>
-						</span>
-					</Link>
-				);
-			})}
-			{next ? (
-				<Link
-					to="/courses/$slug"
-					params={{ slug: next.slug }}
-					className="card card-lift p-7"
-				>
-					<span className="text-[0.8rem] text-mute font-semibold uppercase tracking-wider">
-						{course.next?.upgrade ? "Carry on" : "Where this leads"}
-					</span>
-					<h3 className="display text-[1.2rem] mt-2">{next.t}</h3>
-					<p className="lead mt-1 text-[0.92rem]">
-						{course.next?.upgrade
-							? `Continue into the full course for ${formatNaira(course.next.upgrade)} more — you pick up where you stopped.`
-							: next.tagline}
-					</p>
-					{course.next?.upgrade ? null : (
-						<p className="text-[0.85rem] text-mute mt-2 font-semibold">
-							{priceLabel(next)} · {next.duration}
-						</p>
-					)}
-					<span className="view-link mt-3">
-						View course <i aria-hidden="true">→</i>
-					</span>
-				</Link>
-			) : null}
 		</div>
 	);
 }

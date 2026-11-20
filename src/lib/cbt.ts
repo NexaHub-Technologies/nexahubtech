@@ -148,6 +148,22 @@ export const CBT_FROM_PRICE = CBT_PACKAGES.map((p) => p.price).sort(
 	(a, b) => Number(a.replace(/\D/g, "")) - Number(b.replace(/\D/g, "")),
 )[0];
 
+/* the three a candidate chooses between on the CBT page. The mock bundle and the
+   school rate are real offers, but they are variations — a line each under the
+   three, not two more cards to compare. */
+export const CBT_FEATURED_IDS = [
+	"masterclass",
+	"intensive-crash",
+	"walkin-mock",
+];
+export const CBT_FEATURED = CBT_PACKAGES.filter((p) =>
+	CBT_FEATURED_IDS.includes(p.id),
+);
+
+export const CBT_BUNDLE_PACKAGE = CBT_PACKAGES.find(
+	(p) => p.id === "mock-bundle",
+) as CbtPackage;
+
 export const CBT_GROUP_PACKAGE = CBT_PACKAGES.find(
 	(p) => p.id === "school-group",
 ) as CbtPackage;

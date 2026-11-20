@@ -8,6 +8,7 @@ import {
 	COURSE_COUNT_WORD,
 	COURSES,
 	coursesAt,
+	coursesIn,
 	deliveriesOf,
 	type Fee,
 	formatNaira,
@@ -15,6 +16,7 @@ import {
 	LEVELS,
 	nextCourse,
 	offeredInPerson,
+	TRACKS,
 } from "./courses";
 
 /* every course carries a mental model, and the type makes that non-negotiable —
@@ -242,5 +244,14 @@ describe("the catalogue's structure", () => {
 				c.level === "on-request",
 			);
 		}
+	});
+});
+
+describe("tracks", () => {
+	it("place every course in exactly one track, and no track is empty", () => {
+		const placed = TRACKS.flatMap((t) => coursesIn(t.id).map((c) => c.slug));
+		expect(placed.sort()).toEqual(COURSES.map((c) => c.slug).sort());
+		for (const t of TRACKS)
+			expect(coursesIn(t.id).length, t.id).toBeGreaterThan(0);
 	});
 });
