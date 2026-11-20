@@ -1,4 +1,4 @@
-# Microsoft Office — NexaHubTech
+# Microsoft Office — NexaHubTech Academy
 
 > The four programs an office actually runs on, taught to the standard the work deserves.
 
@@ -7,13 +7,15 @@ Canonical page: https://nexahubtech.company/courses/microsoft-office
 | | |
 |---|---|
 | Subject | Word, Excel, PowerPoint & Access |
-| Price | ₦110,000 |
-| Duration | 10 Weeks |
-| Format | Taught live, online, hands-on. |
+| Fee — live online | ₦80,000, or 2 × ₦42,500 |
+| Fee — in person | ₦95,000, or 2 × ₦52,500 |
+| Duration | 8 Weeks |
+| Format | Taught live — online or in person. |
 | Level | Built for clerical and office staff already doing the work |
-| Start | Any time |
+| Start | Any day |
+| Session times | Tue, Thu · 8:30 AM – 11:00 AM (in person); Mon, Wed, Fri · 11:30 AM – 2:00 PM (in person); Sat · 9:00 AM – 12:00 PM (in person); Mon, Wed · 7:00 PM – 9:00 PM (live online) |
 
-An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+Learn live online on your own Windows PC, or in person in a class of no more than 6 on our licensed machines. Either way the course is built around real work from your own desk, so you leave each session with something that already runs better. Start the day you are ready. Teams can also be trained at their own office.
 
 ## The idea this course installs: The data is not the document
 
@@ -36,7 +38,7 @@ What you need to know:
 What you need to have:
 
 - A Windows PC — Access is not made for macOS, and module 05 is Access
-- A Microsoft 365 or Office licence, or use a licensed machine in the centre
+- Online: a Microsoft 365 or Office licence. In person: licensed machines are provided
 - Real work from your own desk to bring, or use the sample desk we supply
 - 4–6 hours a week outside sessions to practise
 
@@ -61,7 +63,11 @@ What you need to have:
 - Mail merge, lookups, pivot tables and relational queries
 - Built around real clerical work, not invented exercises
 - When to stop using a spreadsheet and start using a database
-- Licensed machines available in the centre
+- Learn online, or in person on our licensed machines
+
+## Where it leads
+
+Next: [Data Analysis](https://nexahubtech.company/courses/data-analysis.md).
 
 ## Enrol
 

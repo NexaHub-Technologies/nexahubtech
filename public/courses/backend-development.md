@@ -1,4 +1,4 @@
-# Backend Development — NexaHubTech
+# Backend Development — NexaHubTech Academy
 
 > Build the engine behind applications — APIs, databases, and server-side logic.
 
@@ -7,13 +7,15 @@ Canonical page: https://nexahubtech.company/courses/backend-development
 | | |
 |---|---|
 | Subject | Backend Development |
-| Price | ₦100,000 |
+| Fee — live online | ₦110,000, or 2 × ₦60,000 |
+| Fee — in person | ₦135,000, or 2 × ₦72,500 |
 | Duration | 8 Weeks |
-| Format | Taught live, online, hands-on. |
+| Format | Taught live — online or in person. |
 | Level | Open to beginners; smoother with some programming |
-| Start | Any time |
+| Start | Any day |
+| Session times | Mon, Wed, Fri · 8:30 AM – 11:00 AM (in person); Tue, Thu · 2:00 PM – 4:00 PM (in person); Sat · 12:30 PM – 3:30 PM (in person); Mon, Wed, Fri · 7:00 PM – 9:00 PM (live online); Tue, Thu · 7:00 PM – 9:00 PM (live online) |
 
-An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.
 
 ## The idea this course installs: A server is a function you can call over a wire
 
@@ -66,6 +68,10 @@ What you need to have:
 - Authentication, security, and deployment
 - Real-world backend architecture patterns
 - Taught live with hands-on exercises — start any time
+
+## Where it leads
+
+Next: [Next.js](https://nexahubtech.company/courses/nextjs-fullstack.md).
 
 ## Enrol
 

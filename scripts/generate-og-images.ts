@@ -9,6 +9,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { basename } from "node:path";
 import { COURSES } from "../src/lib/courses";
+import { modeForPath } from "../src/lib/mode";
 import { coursePage, PAGES, type Page, servicePage } from "../src/lib/pages";
 import { SERVICES } from "../src/lib/services";
 
@@ -78,7 +79,13 @@ const logo = (() => {
 		.trim();
 })();
 
-function svg(eyebrow: string, headline: string, accent: string, sub: string) {
+function svg(
+	eyebrow: string,
+	headline: string,
+	accent: string,
+	sub: string,
+	academy: boolean,
+) {
 	const { lines, size } = layout(headline, Boolean(accent));
 	/* centre the headline, accent and subline in the space under the eyebrow,
 	   so a three-line card neither climbs into the eyebrow nor runs off the end */
@@ -112,7 +119,7 @@ function svg(eyebrow: string, headline: string, accent: string, sub: string) {
   <rect width="1200" height="630" fill="url(#glow)"/>
   <rect width="1200" height="630" fill="url(#glow2)"/>
   <g transform="translate(80,74) scale(0.0501)">${logo}</g>
-  <text x="150" y="112" font-family="Bricolage Grotesque" font-weight="700" font-size="34" fill="#ffffff">NexaHubTech</text>
+  <text x="150" y="112" font-family="Bricolage Grotesque" font-weight="700" font-size="34" fill="#ffffff">NexaHubTech${academy ? '<tspan dx="12" fill="#f9a8cd" font-weight="600" font-size="30">Academy</tspan>' : ""}</text>
   <text x="80" y="186" font-family="Hanken Grotesk" font-weight="600" font-size="26" fill="#f9a8cd" letter-spacing="3">${esc(eyebrow.toUpperCase())}</text>
   ${body}
   ${accent ? `<text x="80" y="${blockEnd}" font-family="Bricolage Grotesque" font-weight="800" font-size="${size}" fill="#f9a8cd">${esc(accent)}</text>` : ""}
@@ -132,6 +139,8 @@ const jobs = pages.map((p) => ({
 	name: basename(p.image, ".jpg"),
 	...p.card,
 	accent: p.card.accent ?? "",
+	/* the Academy's pages carry its name on their cards, like they do in the header */
+	academy: modeForPath(p.path) === "learn",
 }));
 
 await ensureFonts();
@@ -141,7 +150,7 @@ const env = { ...process.env, FONTCONFIG_FILE: `${process.cwd()}/${CACHE}/fonts.
 
 for (const j of jobs) {
 	const file = `${TMP}/${j.name}.svg`;
-	writeFileSync(file, svg(j.eyebrow, j.headline, j.accent, j.sub));
+	writeFileSync(file, svg(j.eyebrow, j.headline, j.accent, j.sub, j.academy));
 	const raw = `${TMP}/${j.name}.png`;
 	execFileSync("rsvg-convert", ["-w", "1200", "-h", "630", file, "-o", raw], { env });
 	execFileSync("magick", [raw, "-strip", "-quality", "88", `${OUT}/${j.name}.jpg`], { env });

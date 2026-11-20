@@ -13,7 +13,7 @@ and data in one stack.
 
 | | |
 |---|---|
-| **Format** | Taught live, online · start any time |
+| **Format** | Taught live — online or in person · start any time |
 
 ## Before you start
 

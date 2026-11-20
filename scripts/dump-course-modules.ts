@@ -7,7 +7,6 @@ const out: Record<string, unknown> = {};
 for (const c of COURSES) {
 	out[c.slug] = {
 		t: c.t,
-		price: c.price,
 		duration: c.duration,
 		level: c.requirements.level,
 		modules: c.modules.map((m) => ({ n: m.n, t: m.t, d: m.d })),

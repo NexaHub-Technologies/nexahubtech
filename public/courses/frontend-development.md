@@ -1,4 +1,4 @@
-# Frontend Development — NexaHubTech
+# Frontend Development — NexaHubTech Academy
 
 > Learn the web from first principles — HTML, CSS, and JavaScript done properly.
 
@@ -7,13 +7,15 @@ Canonical page: https://nexahubtech.company/courses/frontend-development
 | | |
 |---|---|
 | Subject | Frontend Development |
-| Price | ₦120,000 |
+| Fee — live online | ₦120,000, or 2 × ₦65,000 |
+| Fee — in person | ₦145,000, or 2 × ₦77,500 |
 | Duration | 10 Weeks |
-| Format | Taught live, online, hands-on. |
+| Format | Taught live — online or in person. |
 | Level | Built for complete beginners |
-| Start | Any time |
+| Start | Any day |
+| Session times | Mon, Wed, Fri · 8:30 AM – 11:00 AM (in person); Tue, Thu · 2:00 PM – 4:00 PM (in person); Sat · 12:30 PM – 3:30 PM (in person); Mon, Wed, Fri · 7:00 PM – 9:00 PM (live online); Tue, Thu · 7:00 PM – 9:00 PM (live online) |
 
-An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.
 
 ## The idea this course installs: You describe; the browser draws
 
@@ -65,6 +67,10 @@ What you need to have:
 - Structured session notes and exercise briefs
 - Real project at the end of the track
 - Built to grow real engineering intuition
+
+## Where it leads
+
+Next: [Backend Development](https://nexahubtech.company/courses/backend-development.md).
 
 ## Enrol
 

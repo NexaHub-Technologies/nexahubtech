@@ -29,5 +29,13 @@ export const CONTACT = {
 	rc: "9545130",
 } as const;
 
-/* the registered company motto, exactly as it appears in the profile */
-export const MOTTO = "Learn to build. Build for real.";
+/* Each business has its own motto, in the same three-beat shape. The company's
+   is the work it does for a client, in order; the Academy's is the path a
+   learner takes — ending where the company's middle begins. */
+export const TAGLINE = {
+	build: "Design. Ship. Support.",
+	learn: "Learn. Build. Ship.",
+} as const;
+
+/* the company's line — what the domain, the emails and the schema carry */
+export const MOTTO = TAGLINE.build;

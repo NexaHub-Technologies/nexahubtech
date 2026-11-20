@@ -1,6 +1,7 @@
-/* The studio's system design process, made public. It is the build arm's answer
-   to the mental models on the course pages: the school says understand before you
-   write syntax, and the studio says understand before you write software.
+/* NexaHubTech's system design process, made public. It is the company's answer
+   to the mental models on the Academy's course pages: the Academy says understand
+   before you write syntax, and the company says understand before you write
+   software.
 
    Grouped into three phases because eleven flat items read as a checklist, and
    this is meant to read as an argument. The phases are what the page leads with;

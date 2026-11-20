@@ -11,13 +11,19 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AcademyRouteImport } from './routes/academy'
 import { Route as ApproachRouteImport } from './routes/approach'
 import { Route as CbtRouteImport } from './routes/cbt'
 import { Route as CbtTrainingRouteImport } from './routes/cbt-training'
+import { Route as CentreRouteImport } from './routes/centre'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as EnrolRouteImport } from './routes/enrol'
+import { Route as FeesRouteImport } from './routes/fees'
+import { Route as ForBusinessRouteImport } from './routes/for-business'
 import { Route as TeachingRouteImport } from './routes/teaching'
+import { Route as TimetableRouteImport } from './routes/timetable'
 import { Route as WorkRouteImport } from './routes/work'
+import { Route as AcademyAboutRouteImport } from './routes/academy_.about'
 import { Route as CoursesIndexRouteImport } from './routes/courses/index'
 import { Route as ServicesIndexRouteImport } from './routes/services/index'
 import { Route as ServicesSlugRouteImport } from './routes/services/$slug'
@@ -31,6 +37,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AcademyRoute = AcademyRouteImport.update({
+  id: '/academy',
+  path: '/academy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApproachRoute = ApproachRouteImport.update({
@@ -48,6 +59,11 @@ const CbtTrainingRoute = CbtTrainingRouteImport.update({
   path: '/cbt-training',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CentreRoute = CentreRouteImport.update({
+  id: '/centre',
+  path: '/centre',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -58,14 +74,34 @@ const EnrolRoute = EnrolRouteImport.update({
   path: '/enrol',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FeesRoute = FeesRouteImport.update({
+  id: '/fees',
+  path: '/fees',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForBusinessRoute = ForBusinessRouteImport.update({
+  id: '/for-business',
+  path: '/for-business',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TeachingRoute = TeachingRouteImport.update({
   id: '/teaching',
   path: '/teaching',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TimetableRoute = TimetableRouteImport.update({
+  id: '/timetable',
+  path: '/timetable',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WorkRoute = WorkRouteImport.update({
   id: '/work',
   path: '/work',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AcademyAboutRoute = AcademyAboutRouteImport.update({
+  id: '/academy_/about',
+  path: '/academy/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CoursesIndexRoute = CoursesIndexRouteImport.update({
@@ -92,13 +128,19 @@ const CoursesSlugIndexRoute = CoursesSlugIndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/academy': typeof AcademyRoute
   '/approach': typeof ApproachRoute
   '/cbt': typeof CbtRoute
   '/cbt-training': typeof CbtTrainingRoute
+  '/centre': typeof CentreRoute
   '/contact': typeof ContactRoute
   '/enrol': typeof EnrolRoute
+  '/fees': typeof FeesRoute
+  '/for-business': typeof ForBusinessRoute
   '/teaching': typeof TeachingRoute
+  '/timetable': typeof TimetableRoute
   '/work': typeof WorkRoute
+  '/academy/about': typeof AcademyAboutRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/courses/': typeof CoursesIndexRoute
   '/services/': typeof ServicesIndexRoute
@@ -107,13 +149,19 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/academy': typeof AcademyRoute
   '/approach': typeof ApproachRoute
   '/cbt': typeof CbtRoute
   '/cbt-training': typeof CbtTrainingRoute
+  '/centre': typeof CentreRoute
   '/contact': typeof ContactRoute
   '/enrol': typeof EnrolRoute
+  '/fees': typeof FeesRoute
+  '/for-business': typeof ForBusinessRoute
   '/teaching': typeof TeachingRoute
+  '/timetable': typeof TimetableRoute
   '/work': typeof WorkRoute
+  '/academy/about': typeof AcademyAboutRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/courses': typeof CoursesIndexRoute
   '/services': typeof ServicesIndexRoute
@@ -123,13 +171,19 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/academy': typeof AcademyRoute
   '/approach': typeof ApproachRoute
   '/cbt': typeof CbtRoute
   '/cbt-training': typeof CbtTrainingRoute
+  '/centre': typeof CentreRoute
   '/contact': typeof ContactRoute
   '/enrol': typeof EnrolRoute
+  '/fees': typeof FeesRoute
+  '/for-business': typeof ForBusinessRoute
   '/teaching': typeof TeachingRoute
+  '/timetable': typeof TimetableRoute
   '/work': typeof WorkRoute
+  '/academy_/about': typeof AcademyAboutRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/courses/': typeof CoursesIndexRoute
   '/services/': typeof ServicesIndexRoute
@@ -140,13 +194,19 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/academy'
     | '/approach'
     | '/cbt'
     | '/cbt-training'
+    | '/centre'
     | '/contact'
     | '/enrol'
+    | '/fees'
+    | '/for-business'
     | '/teaching'
+    | '/timetable'
     | '/work'
+    | '/academy/about'
     | '/services/$slug'
     | '/courses/'
     | '/services/'
@@ -155,13 +215,19 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/academy'
     | '/approach'
     | '/cbt'
     | '/cbt-training'
+    | '/centre'
     | '/contact'
     | '/enrol'
+    | '/fees'
+    | '/for-business'
     | '/teaching'
+    | '/timetable'
     | '/work'
+    | '/academy/about'
     | '/services/$slug'
     | '/courses'
     | '/services'
@@ -170,13 +236,19 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/academy'
     | '/approach'
     | '/cbt'
     | '/cbt-training'
+    | '/centre'
     | '/contact'
     | '/enrol'
+    | '/fees'
+    | '/for-business'
     | '/teaching'
+    | '/timetable'
     | '/work'
+    | '/academy_/about'
     | '/services/$slug'
     | '/courses/'
     | '/services/'
@@ -186,13 +258,19 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AcademyRoute: typeof AcademyRoute
   ApproachRoute: typeof ApproachRoute
   CbtRoute: typeof CbtRoute
   CbtTrainingRoute: typeof CbtTrainingRoute
+  CentreRoute: typeof CentreRoute
   ContactRoute: typeof ContactRoute
   EnrolRoute: typeof EnrolRoute
+  FeesRoute: typeof FeesRoute
+  ForBusinessRoute: typeof ForBusinessRoute
   TeachingRoute: typeof TeachingRoute
+  TimetableRoute: typeof TimetableRoute
   WorkRoute: typeof WorkRoute
+  AcademyAboutRoute: typeof AcademyAboutRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
   CoursesIndexRoute: typeof CoursesIndexRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
@@ -213,6 +291,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/academy': {
+      id: '/academy'
+      path: '/academy'
+      fullPath: '/academy'
+      preLoaderRoute: typeof AcademyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/approach': {
@@ -236,6 +321,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CbtTrainingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/centre': {
+      id: '/centre'
+      path: '/centre'
+      fullPath: '/centre'
+      preLoaderRoute: typeof CentreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -250,6 +342,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EnrolRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fees': {
+      id: '/fees'
+      path: '/fees'
+      fullPath: '/fees'
+      preLoaderRoute: typeof FeesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/for-business': {
+      id: '/for-business'
+      path: '/for-business'
+      fullPath: '/for-business'
+      preLoaderRoute: typeof ForBusinessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/teaching': {
       id: '/teaching'
       path: '/teaching'
@@ -257,11 +363,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TeachingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/timetable': {
+      id: '/timetable'
+      path: '/timetable'
+      fullPath: '/timetable'
+      preLoaderRoute: typeof TimetableRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/work': {
       id: '/work'
       path: '/work'
       fullPath: '/work'
       preLoaderRoute: typeof WorkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/academy_/about': {
+      id: '/academy_/about'
+      path: '/academy/about'
+      fullPath: '/academy/about'
+      preLoaderRoute: typeof AcademyAboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/courses/': {
@@ -298,13 +418,19 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AcademyRoute: AcademyRoute,
   ApproachRoute: ApproachRoute,
   CbtRoute: CbtRoute,
   CbtTrainingRoute: CbtTrainingRoute,
+  CentreRoute: CentreRoute,
   ContactRoute: ContactRoute,
   EnrolRoute: EnrolRoute,
+  FeesRoute: FeesRoute,
+  ForBusinessRoute: ForBusinessRoute,
   TeachingRoute: TeachingRoute,
+  TimetableRoute: TimetableRoute,
   WorkRoute: WorkRoute,
+  AcademyAboutRoute: AcademyAboutRoute,
   ServicesSlugRoute: ServicesSlugRoute,
   CoursesIndexRoute: CoursesIndexRoute,
   ServicesIndexRoute: ServicesIndexRoute,

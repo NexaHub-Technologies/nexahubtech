@@ -55,9 +55,17 @@ interface ModeContextValue {
 const ModeContext = createContext<ModeContextValue | null>(null);
 
 export function ModeProvider({ children }: { children: ReactNode }) {
-	const mode = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+	const stored = useSyncExternalStore(
+		subscribe,
+		getSnapshot,
+		getServerSnapshot,
+	);
 	const pathname = useRouterState({ select: (s) => s.location.pathname });
 	const router = useRouter();
+	/* a page that belongs to an arm is always shown as that arm — on the server
+	   too, which knows the path but not the visitor's stored choice. Only the
+	   shared pages fall back to what the visitor picked. */
+	const mode = modeForPath(pathname) ?? stored;
 
 	/* arriving on a route that belongs to one arm switches to it; shared routes
 	   return null and leave the visitor's own choice intact */

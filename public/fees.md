@@ -1,0 +1,61 @@
+# Pricing — NexaHubTech Academy
+
+> Simple, all-inclusive pricing for every NexaHubTech Academy course: one fee for the whole course, online or in person, paid in full or in parts — plus CBT practice and rates for organisations.
+
+Canonical page: https://nexahubtech.company/fees
+
+Every fee covers the whole course. Pay in full before your first session, or in equal instalments — which cost a little more in total. Almost every course is offered online and in person; in-person places cost more because classes are capped at 6.
+
+## Digital skills
+
+| Course | Length | Live online | In person |
+|---|---|---|---|
+| Computer Essentials | 3 Weeks | ₦37,500 (or 2 × ₦20,000) | ₦45,000 (or 2 × ₦25,000) |
+| PC Basics | 6 Weeks | — | ₦75,000 (or 2 × ₦40,000) |
+| Office Essentials | 4 Weeks | ₦45,000 (or 2 × ₦25,000) | ₦55,000 (or 2 × ₦30,000) |
+| Microsoft Office | 8 Weeks | ₦80,000 (or 2 × ₦42,500) | ₦95,000 (or 2 × ₦52,500) |
+
+## Software & data
+
+| Course | Length | Live online | In person |
+|---|---|---|---|
+| Python Programming | 6 Weeks | ₦95,000 (or 2 × ₦52,500) | ₦115,000 (or 2 × ₦62,500) |
+| JavaScript Programming | 8 Weeks | ₦95,000 (or 2 × ₦52,500) | ₦115,000 (or 2 × ₦62,500) |
+| Frontend Development | 10 Weeks | ₦120,000 (or 2 × ₦65,000) | ₦145,000 (or 2 × ₦77,500) |
+| Backend Development | 8 Weeks | ₦110,000 (or 2 × ₦60,000) | ₦135,000 (or 2 × ₦72,500) |
+| Web Development | 18 Weeks | ₦200,000 (or 3 × ₦75,000) | ₦240,000 (or 3 × ₦87,500) |
+| React | 8 Weeks | ₦130,000 (or 2 × ₦70,000) | ₦160,000 (or 2 × ₦87,500) |
+| Next.js | 10 Weeks | ₦160,000 (or 2 × ₦87,500) | ₦195,000 (or 2 × ₦105,000) |
+| Mobile Development | 12 Weeks | ₦190,000 (or 2 × ₦102,500) | ₦230,000 (or 2 × ₦125,000) |
+| Data Analysis | 10 Weeks | ₦130,000 (or 2 × ₦70,000) | ₦160,000 (or 2 × ₦87,500) |
+
+## Video
+
+| Course | Length | Live online | In person |
+|---|---|---|---|
+| Mobile Videography | 4 Weeks | ₦50,000 (or 2 × ₦27,500) | ₦60,000 (or 2 × ₦32,500) |
+| Videography & Video Editing | 8 Weeks | ₦100,000 (or 2 × ₦55,000) | ₦120,000 (or 2 × ₦65,000) |
+
+## CBT exam practice
+
+- **Full Training** — ₦25,000. 4 weeks · Mon – Fri.
+- **Crash Course** — ₦15,000. 2 weeks · Mon – Fri.
+- **School & Group Training** — ₦20,000. 4 weeks · Mon – Fri · per candidate, groups of 10 or more.
+- **Three Mock Exams** — ₦8,000. Three 2-hour sessions, on separate days.
+- **One Mock Exam** — ₦3,000. One 2-hour session.
+
+## For organisations
+
+- **Microsoft Office for your staff** — ₦85,000 per staff member · minimum 4 · 8 weeks.
+- **CBT practice for schools** — ₦20,000 4 weeks · Mon – Fri · per candidate, groups of 10 or more.
+- **Training for a team** — On proposal priced per group.
+
+Details: [Organisations](https://nexahubtech.company/for-business.md).
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130

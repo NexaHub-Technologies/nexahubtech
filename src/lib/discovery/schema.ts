@@ -14,9 +14,17 @@
 
 import { APPROACH } from "../approach";
 import { CBT_DETAILS, CBT_FAQS, CBT_PACKAGES, CBT_PILLARS } from "../cbt";
-import { SUMMARY } from "../company";
-import { ADDRESS, CONTACT, MOTTO, SITE_URL } from "../contact";
-import { COURSES, type Course, taughtInPerson } from "../courses";
+import { ACADEMY_SUMMARY, DEFINITION } from "../company";
+import { ADDRESS, CONTACT, MOTTO, SITE_URL, TAGLINE } from "../contact";
+import {
+	COURSES,
+	type Course,
+	DELIVERY_LABEL,
+	deliveriesOf,
+	type Fee,
+	formatNaira,
+	instalmentLabel,
+} from "../courses";
 import {
 	coursePage,
 	findPage,
@@ -45,14 +53,15 @@ const ref = (id: string) => ({ "@id": id });
 
 export const ID = {
 	organization: `${SITE_URL}/#organization`,
+	academy: `${abs(PAGES.academy.path)}#organization`,
 	website: `${SITE_URL}/#website`,
 	logo: `${SITE_URL}/#logo`,
 	courseCatalog: `${abs(PAGES.courses.path)}#catalog`,
 	serviceCatalog: `${abs(PAGES.services.path)}#catalog`,
 	cbtCourse: `${abs(PAGES.cbt.path)}#course`,
 	approach: `${abs(PAGES.approach.path)}#process`,
-	session: `${abs(PAGES.teaching.path)}#session`,
-	principles: `${abs(PAGES.teaching.path)}#principles`,
+	session: `${abs(PAGES.academyAbout.path)}#session`,
+	principles: `${abs(PAGES.academyAbout.path)}#principles`,
 	webpage: (path: string) => `${abs(path)}#webpage`,
 	breadcrumb: (path: string) => `${abs(path)}#breadcrumb`,
 	course: (c: Course) => `${abs(coursePage(c).path)}#course`,
@@ -85,22 +94,26 @@ const offerBase = {
 /* ── the organisation and the website ───────────────────────────── */
 
 function allPrices(): number[] {
-	return [...COURSES.map((c) => c.price), ...CBT_PACKAGES.map((p) => p.price)]
-		.map(naira)
-		.map(Number);
+	return [
+		...COURSES.flatMap((c) =>
+			deliveriesOf(c).map((d) => (c.fees[d] as Fee).upfront),
+		),
+		...CBT_PACKAGES.map((p) => Number(naira(p.price))),
+	];
 }
 
 export function organization(): Node {
 	const prices = allPrices();
 	const { days, opens, closes } = CBT_DETAILS.openingHours;
 	return {
-		/* a school and a business with a door people walk through — both are true,
-		   and both unlock properties the other type lacks */
-		"@type": ["EducationalOrganization", "LocalBusiness"],
+		/* the software company — a business with a door people walk through. Its
+		   studio is the company itself (the services are offered under its name);
+		   the Academy is a separate organisation beneath it (academy()). */
+		"@type": ["Organization", "LocalBusiness"],
 		"@id": ID.organization,
 		name: "NexaHubTech",
 		url: abs("/"),
-		description: SUMMARY,
+		description: DEFINITION,
 		slogan: MOTTO,
 		logo: {
 			"@type": "ImageObject",
@@ -152,7 +165,36 @@ export function organization(): Node {
 			...COURSES.map((c) => c.t),
 			...SERVICES.flatMap((s) => s.items.map((i) => i.t)),
 		],
-		hasOfferCatalog: [ref(ID.courseCatalog), ref(ID.serviceCatalog)],
+		hasOfferCatalog: ref(ID.serviceCatalog),
+		subOrganization: ref(ID.academy),
+	};
+}
+
+/* NexaHubTech Academy — one of the company's two arms, its own organisation
+   under it: the Academy provides the courses, the studio the services */
+export function academy(): Node {
+	return {
+		"@type": "EducationalOrganization",
+		"@id": ID.academy,
+		name: "NexaHubTech Academy",
+		alternateName: "NexaHubTech Academy, the training arm of NexaHubTech",
+		url: abs(PAGES.academy.path),
+		description: ACADEMY_SUMMARY,
+		slogan: TAGLINE.learn,
+		parentOrganization: ref(ID.organization),
+		/* the company's mark; the logo node itself lives inside organization() */
+		logo: abs("/apple-touch-icon.png"),
+		email: CONTACT.email,
+		telephone: CONTACT.phone,
+		address: {
+			"@type": "PostalAddress",
+			streetAddress: ADDRESS.street,
+			addressLocality: ADDRESS.locality,
+			addressRegion: ADDRESS.region,
+			addressCountry: ADDRESS.country,
+		},
+		areaServed: { "@type": "Country", name: "Nigeria" },
+		hasOfferCatalog: ref(ID.courseCatalog),
 	};
 }
 
@@ -168,11 +210,11 @@ export function website(): Node {
 	};
 }
 
-/* ── the school ─────────────────────────────────────────────────── */
+/* ── NexaHubTech Academy ─────────────────────────────────────────────────── */
 
 export function course(c: Course): Node {
 	const page = coursePage(c);
-	const inPerson = taughtInPerson(c);
+	const ways = deliveriesOf(c);
 	return {
 		"@type": "Course",
 		"@id": ID.course(c),
@@ -182,7 +224,7 @@ export function course(c: Course): Node {
 		about: c.d || undefined,
 		image: abs(page.image),
 		inLanguage: "en",
-		provider: ref(ID.organization),
+		provider: ref(ID.academy),
 		educationalLevel: c.requirements.level,
 		coursePrerequisites: c.requirements.know,
 		/* the course's one big idea, then what it lets you do */
@@ -203,18 +245,24 @@ export function course(c: Course): Node {
 				learningResourceType: p.capstone ? "Capstone project" : "Project",
 			})),
 		isAccessibleForFree: false,
-		offers: {
-			...offerBase,
-			price: naira(c.price),
-			url: abs(`${PAGES.enrol.path}?course=${c.slug}`),
-		},
-		hasCourseInstance: {
+		/* one offer per way the course is sold, each with its instalment plan */
+		offers: ways.map((d) => {
+			const fee = c.fees[d] as Fee;
+			return {
+				...offerBase,
+				name: DELIVERY_LABEL[d],
+				price: String(fee.upfront),
+				description: `${formatNaira(fee.upfront)} in full, or ${instalmentLabel(fee)}.`,
+				url: abs(`${PAGES.enrol.path}?course=${c.slug}`),
+			};
+		}),
+		hasCourseInstance: ways.map((d) => ({
 			"@type": "CourseInstance",
-			courseMode: inPerson ? "Onsite" : "Online",
+			courseMode: d === "inhouse" ? "Onsite" : "Online",
 			description: `${c.format.t} ${c.format.d}`,
 			duration: isoWeeks(c.duration),
-			location: inPerson ? ref(ID.organization) : undefined,
-		},
+			location: d === "inhouse" ? ref(ID.organization) : undefined,
+		})),
 	};
 }
 
@@ -227,7 +275,7 @@ export function cbtCourse(): Node {
 		description: PAGES.cbt.description,
 		image: abs(PAGES.cbt.image),
 		inLanguage: "en",
-		provider: ref(ID.organization),
+		provider: ref(ID.academy),
 		about: CBT_DETAILS.targetExams.map((name) => ({ "@type": "Thing", name })),
 		teaches: CBT_PILLARS.map((p) => p.title),
 		syllabusSections: CBT_PILLARS.map((p, i) => ({
@@ -257,7 +305,7 @@ export function courseCatalog(): Node {
 	return {
 		"@type": "OfferCatalog",
 		"@id": ID.courseCatalog,
-		name: "NexaHubTech courses",
+		name: "NexaHubTech Academy courses",
 		url: abs(PAGES.courses.path),
 		numberOfItems: COURSES.length + 1,
 		itemListElement: [...COURSES.map(ID.course), ID.cbtCourse].map((id, i) => ({
@@ -272,7 +320,7 @@ export function teachingPrinciples(): Node {
 	return {
 		"@type": "ItemList",
 		"@id": ID.principles,
-		name: "How NexaHubTech teaches",
+		name: "How NexaHubTech Academy teaches",
 		itemListOrder: "https://schema.org/ItemListOrderAscending",
 		itemListElement: PRINCIPLES.map((p, i) => ({
 			"@type": "ListItem",
@@ -287,7 +335,7 @@ export function sessionHowTo(): Node {
 	return {
 		"@type": "HowTo",
 		"@id": ID.session,
-		name: "How a NexaHubTech teaching session runs",
+		name: "How a NexaHubTech Academy session runs",
 		description:
 			"Every session on every course is built in the same three parts.",
 		step: SESSION.map((s, i) => ({
@@ -299,7 +347,7 @@ export function sessionHowTo(): Node {
 	};
 }
 
-/* ── the studio ─────────────────────────────────────────────────── */
+/* ── NexaHubTech, the company ─────────────────────────────────────────────────── */
 
 export function service(s: ServiceLine): Node {
 	const page = servicePage(s);
@@ -408,7 +456,7 @@ function subjectOf(page: Page): { main?: string; nodes: Node[] } {
 			return { main: ID.serviceCatalog, nodes: [serviceCatalog()] };
 		case PAGES.cbt.path:
 			return { nodes: [cbtCourse()] };
-		case PAGES.teaching.path:
+		case PAGES.academyAbout.path:
 			return {
 				main: ID.principles,
 				nodes: [teachingPrinciples(), sessionHowTo()],
@@ -416,6 +464,7 @@ function subjectOf(page: Page): { main?: string; nodes: Node[] } {
 		case PAGES.approach.path:
 			return { main: ID.approach, nodes: [approachHowTo()] };
 		case PAGES.enrol.path:
+		case PAGES.fees.path:
 			return { main: ID.courseCatalog, nodes: [courseCatalog()] };
 		default:
 			/* home, about, contact: the page is about the company itself */
@@ -476,6 +525,7 @@ export function pageGraph(page: Page): Graph {
 		"@context": "https://schema.org",
 		"@graph": dedupe([
 			organization(),
+			academy(),
 			website(),
 			webpage(page),
 			...(crumbs ? [crumbs] : []),
@@ -490,6 +540,7 @@ export function siteGraph(): Graph {
 		"@context": "https://schema.org",
 		"@graph": dedupe([
 			organization(),
+			academy(),
 			website(),
 			courseCatalog(),
 			...COURSES.map(course),

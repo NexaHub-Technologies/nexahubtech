@@ -1,6 +1,6 @@
 # Contact — NexaHubTech
 
-> Get in touch with NexaHubTech — ask about a course, taught live and started whenever you like, or start a project with the studio.
+> Get in touch with NexaHubTech — start a software project with the studio, or ask NexaHubTech Academy about a course.
 
 Canonical page: https://nexahubtech.company/contact
 

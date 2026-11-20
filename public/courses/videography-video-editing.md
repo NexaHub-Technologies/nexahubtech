@@ -1,4 +1,4 @@
-# Videography & Video Editing — NexaHubTech
+# Videography & Video Editing — NexaHubTech Academy
 
 > Capture and craft video content that communicates — from shooting to final cut.
 
@@ -7,13 +7,15 @@ Canonical page: https://nexahubtech.company/courses/videography-video-editing
 | | |
 |---|---|
 | Subject | Videography & Video Editing |
-| Price | ₦120,000 |
+| Fee — live online | ₦100,000, or 2 × ₦55,000 |
+| Fee — in person | ₦120,000, or 2 × ₦65,000 |
 | Duration | 8 Weeks |
-| Format | Taught live, online, hands-on. |
+| Format | Taught live — online or in person, with shoots on location. |
 | Level | Built for complete beginners |
-| Start | Any time |
+| Start | Any day |
+| Session times | Tue, Thu · 11:30 AM – 2:00 PM (in person); Mon, Wed · 6:30 PM – 8:00 PM (live online) |
 
-An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+Learn live online, with your footage reviewed between sessions, or in person in a class of no more than 6, with cameras, lights and an edit suite to work on. Either way, shooting assignments happen out on location, and you start the day you are ready. New to video with only a phone? Mobile Videography is the quickest way in.
 
 ## The idea this course installs: You are directing attention, not recording events
 

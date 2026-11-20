@@ -1,4 +1,4 @@
-# Mobile Development — NexaHubTech
+# Mobile Development — NexaHubTech Academy
 
 > Build real mobile applications — from concept to the app store.
 
@@ -7,13 +7,15 @@ Canonical page: https://nexahubtech.company/courses/mobile-development
 | | |
 |---|---|
 | Subject | Mobile Development |
-| Price | ₦190,000 |
+| Fee — live online | ₦190,000, or 2 × ₦102,500 |
+| Fee — in person | ₦230,000, or 2 × ₦125,000 |
 | Duration | 12 Weeks |
-| Format | Taught live, online, hands-on. |
+| Format | Taught live — online or in person. |
 | Level | Assumes you can already program |
-| Start | Any time |
+| Start | Any day |
+| Session times | Mon, Wed, Fri · 8:30 AM – 11:00 AM (in person); Tue, Thu · 2:00 PM – 4:00 PM (in person); Sat · 12:30 PM – 3:30 PM (in person); Mon, Wed, Fri · 7:00 PM – 9:00 PM (live online); Tue, Thu · 7:00 PM – 9:00 PM (live online) |
 
-An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.
 
 ## The idea this course installs: Your app is a guest, not the host
 

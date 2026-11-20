@@ -2,9 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { CONTACT, Eyebrow, useReveal } from "../components/site";
 import {
+	CBT_BUNDLE_PACKAGE,
 	CBT_DETAILS,
 	CBT_FAQS,
-	CBT_PACKAGES,
+	CBT_FEATURED,
+	CBT_GROUP_PACKAGE,
 	CBT_PILLARS,
 	SAMPLE_CBT_QUESTIONS,
 } from "../lib/cbt";
@@ -172,7 +174,7 @@ function CbtPage() {
 					</span>
 					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.5rem]">
 						Walk into your CBT exam{" "}
-						<span style={{ color: "var(--learn-ink)" }}>already at ease</span>.
+						<span className="hot-text">already at ease</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
 						Knowing your subjects is half of it. The other half is the computer:
@@ -247,8 +249,8 @@ function CbtPage() {
 					<Eyebrow>Packages</Eyebrow>
 					<h2 className="shout shout-md mt-4">Pick what fits your timeline.</h2>
 				</div>
-				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-					{CBT_PACKAGES.map((pkg) => (
+				<div className="grid md:grid-cols-3 gap-5">
+					{CBT_FEATURED.map((pkg) => (
 						<div
 							key={pkg.id}
 							className={`card card-lift reveal p-6 flex flex-col ${
@@ -289,6 +291,24 @@ function CbtPage() {
 							</Link>
 						</div>
 					))}
+				</div>
+				{/* the two variations, a line each — not two more cards to compare */}
+				<div className="reveal mt-6 grid gap-2 text-[0.93rem]">
+					<p>
+						<span className="font-semibold">{CBT_BUNDLE_PACKAGE.name}:</span>{" "}
+						<span className="text-mute">
+							{CBT_BUNDLE_PACKAGE.price} · {CBT_BUNDLE_PACKAGE.duration}
+						</span>
+					</p>
+					<p>
+						<span className="font-semibold">{CBT_GROUP_PACKAGE.name}:</span>{" "}
+						<span className="text-mute">
+							{CBT_GROUP_PACKAGE.price} · {CBT_GROUP_PACKAGE.duration}.{" "}
+						</span>
+						<Link to="/for-business" className="underline font-semibold">
+							Arrange for a group
+						</Link>
+					</p>
 				</div>
 			</section>
 

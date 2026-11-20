@@ -1,5 +1,6 @@
+import { CBT_FROM_PRICE } from "./cbt";
 import { CONTACT } from "./contact";
-import { getCourseBySlug } from "./courses";
+import { feeSummary, getCourseBySlug } from "./courses";
 
 /* The enrolment form mirrors the sections of the school's registration form —
    personal details, course choice, technical background, commitment, and the
@@ -99,7 +100,13 @@ export function courseLabel(slug: string): string {
 export function enrolmentDocument(e: Enrolment): EmailDocument {
 	const isCbt = e.course === "cbt" || e.course === "cbt-training";
 	const course = getCourseBySlug(e.course);
-	const courseFee = course?.price ?? (isCbt ? "From ₦3,000" : "—");
+	/* every way the course is sold, with instalments — staff confirm which one
+	   when they agree the start date */
+	const courseFee = course
+		? feeSummary(course)
+		: isCbt
+			? `From ${CBT_FROM_PRICE}`
+			: "—";
 	const courseDuration =
 		course?.duration ?? (isCbt ? "1 session – 4 weeks" : "—");
 	const courseName = isCbt

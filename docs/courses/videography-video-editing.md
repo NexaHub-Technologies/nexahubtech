@@ -12,7 +12,7 @@ Capture and craft video content that communicates — from shooting to final cut
 
 | | |
 |---|---|
-| **Format** | Taught live, online · start any time · shooting assignments |
+| **Format** | Taught live — online or in person · start any time · shooting assignments on location |
 
 ## Before you start
 

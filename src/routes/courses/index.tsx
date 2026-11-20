@@ -1,6 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import { CourseCard } from "../../components/fees";
 import { Eyebrow, useReveal } from "../../components/site";
-import { COURSE_COUNT_WORD_CAP, COURSES } from "../../lib/courses";
+import {
+	COURSE_COUNT_WORD_CAP,
+	coursesIn,
+	type Family,
+	TRACKS,
+} from "../../lib/courses";
 import { PAGES } from "../../lib/pages";
 import { pageMeta } from "../../lib/seo";
 
@@ -9,131 +16,105 @@ export const Route = createFileRoute("/courses/")({
 	head: () => pageMeta(PAGES.courses),
 });
 
+type Filter = Family | "all";
+
+/* The catalogue, grouped into the tracks a visitor recognises themselves in. Every
+   card says the same three things — what it is, how long, where its price
+   starts — and the full price lives on the course page, one way at a time. */
 function CoursesIndex() {
+	const [filter, setFilter] = useState<Filter>("all");
 	useReveal();
+
+	/* /courses#video (from the Academy home and course pages) opens on that
+	   track. Read after mount, so the server render always shows every course. */
+	useEffect(() => {
+		const hash = window.location.hash.slice(1);
+		if (TRACKS.some((t) => t.id === hash)) setFilter(hash as Family);
+	}, []);
+
+	const choose = (f: Filter) => {
+		setFilter(f);
+		const url = f === "all" ? window.location.pathname : `#${f}`;
+		window.history.replaceState(null, "", url);
+	};
+
+	const shown = TRACKS.filter((t) => filter === "all" || t.id === filter);
+
 	return (
 		<>
 			<section className="wrap page-head">
 				<div className="max-w-[46rem]">
 					<span className="pill rise rise-1">
 						<span className="spark" />
-						Our Courses
+						NexaHubTech Academy
 					</span>
 					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
-						Real skills,{" "}
-						<span style={{ color: "var(--learn-ink)" }}>taught properly</span>.
+						Find your <span className="hot-text">course</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
-						{COURSE_COUNT_WORD_CAP} courses built on the same principle:
-						understand first, then build. Every track is taught live by an
-						instructor, starts whenever you are ready, and is designed to grow
-						real capability — not just familiarity.
-					</p>
-					<p className="rise rise-4 mt-4 text-[0.95rem] text-mute">
-						Select a course to see its modules, what a session looks like, and
-						how to enrol.
+						{COURSE_COUNT_WORD_CAP} courses, grouped by what you want to do.
+						Every one is taught live by an instructor, online or in person, and
+						you can start any day.
 					</p>
 				</div>
-			</section>
-
-			<section className="wrap py-14">
-				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-					{COURSES.map((c, i) => (
-						<Link
-							key={c.slug}
-							to="/courses/$slug"
-							params={{ slug: c.slug }}
-							className="card card-lift reveal panel-learn p-7 flex flex-col"
+				<fieldset className="track-filter rise rise-4 mt-8">
+					<legend className="sr-only">Show courses in</legend>
+					<button
+						type="button"
+						aria-pressed={filter === "all"}
+						onClick={() => choose("all")}
+					>
+						All courses
+					</button>
+					{TRACKS.map((t) => (
+						<button
+							key={t.id}
+							type="button"
+							aria-pressed={filter === t.id}
+							onClick={() => choose(t.id)}
 						>
-							<div className="flex items-center gap-3 mb-4">
-								<span className="step-badge badge-learn">
-									{String(i + 1).padStart(2, "0")}
-								</span>
-								{c.d && (
-									<span className="pill text-[0.75rem] !py-1 !px-2.5">
-										{c.d}
-									</span>
-								)}
-							</div>
-							<h2 className="display text-[1.3rem]">{c.t}</h2>
-							<p className="lead mt-2 text-[0.95rem] flex-1">{c.tagline}</p>
-							<span className="course-level">{c.requirements.level}</span>
-							<div className="flex items-center justify-between mt-4 pt-4 border-t border-[var(--line-soft)]">
-								<span className="display text-[1.05rem]">{c.price}</span>
-								<span className="text-[0.85rem] text-mute font-semibold">
-									{c.duration}
-								</span>
-							</div>
-							<span className="view-link mt-3">
-								View course <i aria-hidden="true">→</i>
-							</span>
-						</Link>
+							{t.t}
+						</button>
 					))}
-				</div>
+				</fieldset>
 			</section>
 
-			{/* CBT Training Banner */}
-			<section className="wrap pb-8">
-				<div className="reveal card panel-learn p-8 md:p-10 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
-					<div className="max-w-[36rem]">
-						<span className="pill text-[0.78rem] !py-1 !px-2.5">
-							Exam Preparation · In-Person in Kubwa
-						</span>
-						<h2 className="display text-[1.6rem] mt-3">
-							Preparing for WAEC or JAMB CBT?
-						</h2>
-						<p className="lead text-[0.97rem] mt-2">
-							We run dedicated Computer-Based Test training at our Kubwa lab —
-							covering the JAMB 8-key system, on-screen calculator drills, time
-							management, and full-length timed mock exams.
-						</p>
+			{shown.map((t) => (
+				<section key={t.id} id={t.id} className="wrap py-8 scroll-mt-28">
+					<div className="max-w-[42rem] mb-6">
+						<Eyebrow>{t.t}</Eyebrow>
+						<p className="lead mt-3">{t.d}</p>
+						<p className="text-[0.88rem] text-mute mt-1">For: {t.who}</p>
 					</div>
-					<div className="flex flex-wrap gap-3 shrink-0">
-						<Link to="/cbt" className="btn btn-primary">
-							View CBT training
-						</Link>
-						<Link
-							to="/enrol"
-							search={{ course: "cbt-training" }}
-							className="btn btn-ghost"
-						>
-							Register now
-						</Link>
+					<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+						{coursesIn(t.id).map((c) => (
+							<CourseCard key={c.slug} course={c} />
+						))}
 					</div>
-				</div>
-			</section>
+				</section>
+			))}
 
 			<section className="wrap py-14">
-				<div className="reveal card p-8 md:p-12">
-					<div className="grid md:grid-cols-[1.1fr_0.9fr] gap-6 items-center">
-						<div>
-							<Eyebrow>How we teach</Eyebrow>
-							<h2 className="shout shout-md mt-4">
-								Every course, same approach.
-							</h2>
-							<p className="lead mt-4 max-w-[34rem]">
-								Mental model first, then practice, then a model answer. No
-								slides-to-death. No copy-paste tutorials. Every session is
-								structured to build understanding, then prove it.
-							</p>
-							<Link to="/teaching" className="view-link mt-5">
-								How we teach, in full <i aria-hidden="true">→</i>
-							</Link>
-						</div>
-						<div className="card panel-learn p-8">
-							<h3 className="display text-[1.3rem]">Ready to start?</h3>
-							<p className="lead mt-2">
-								Pick a course and tell us a little about you. We'll agree your
-								start date and session times.
-							</p>
-							<Link
-								to="/enrol"
-								search={{ course: undefined }}
-								className="btn btn-primary mt-5"
-							>
-								Enrol now
-							</Link>
-						</div>
+				<div className="grid md:grid-cols-2 gap-5">
+					<div className="reveal card panel-learn p-8">
+						<h2 className="display text-[1.4rem]">Sitting WAEC or JAMB?</h2>
+						<p className="lead mt-2 text-[0.95rem]">
+							Short, practical CBT preparation on real exam-style software —
+							from a single walk-in mock to a full masterclass.
+						</p>
+						<Link to="/cbt" className="view-link mt-5">
+							CBT prep <i aria-hidden="true">→</i>
+						</Link>
+					</div>
+					<div className="reveal card p-8">
+						<h2 className="display text-[1.4rem]">Not sure where to start?</h2>
+						<p className="lead mt-2 text-[0.95rem]">
+							Tell us what you want to be able to do. We'll point you to the
+							right first course — honestly, even if it's the cheapest one.
+						</p>
+						<Link to="/contact" className="view-link mt-5">
+							Ask us <i aria-hidden="true">→</i>
+						</Link>
 					</div>
 				</div>
 			</section>

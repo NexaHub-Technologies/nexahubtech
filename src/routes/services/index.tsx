@@ -25,9 +25,8 @@ function ServicesIndex() {
 						<span style={{ color: "var(--build-ink)" }}>properly</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
-						The studio takes on the full range of client work — from a first
-						product to the systems and support that keep it running. Same rigor
-						we teach in the classroom, applied to your business.
+						We take on the full range of client work — from a first product to
+						the systems and support that keep it running.
 					</p>
 					<p className="rise rise-4 mt-4 text-[0.95rem] text-mute">
 						Select a service to see what it covers in detail.
@@ -72,20 +71,20 @@ function ServicesIndex() {
 						</span>
 					</Link>
 					<Link
-						to="/courses"
+						to="/academy"
 						className="card card-lift reveal panel-learn p-8 flex flex-col"
 					>
 						<Eyebrow>Looking to learn instead?</Eyebrow>
 						<h2 className="display text-[1.6rem] mt-3">
-							The school runs {COURSE_COUNT_WORD} courses.
+							NexaHubTech Academy runs {COURSE_COUNT_WORD} courses.
 						</h2>
 						<p className="lead mt-3 text-[0.97rem] flex-1">
-							Frontend, JavaScript, React, Next.js, backend, fullstack, mobile,
-							cybersecurity, Python, data and video — all taught live, hands-on,
-							and started whenever you are ready.
+							Our Academy teaches software development, data, office
+							productivity and video — live, online or in person, starting
+							whenever you are ready.
 						</p>
 						<span className="view-link mt-5">
-							Explore the courses <i aria-hidden="true">→</i>
+							Visit the Academy <i aria-hidden="true">→</i>
 						</span>
 					</Link>
 

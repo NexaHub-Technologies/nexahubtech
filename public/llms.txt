@@ -1,49 +1,56 @@
 # NexaHubTech
 
-> NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio under one roof. We teach real, in-demand skills — and then put them to work on real client products.
+> NexaHubTech is a Nigerian software company with two arms: a software studio that designs, builds and maintains software for businesses, and NexaHubTech Academy, which teaches practical technology skills — online and in person — and develops the talent our engineering work depends on.
 
-Motto: "Learn to build. Build for real." Based at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria (CAC RC 9545130). Every course is taught live — online, except PC Basics and CBT training, taught in person at the centre — and starts whenever the student is ready. Prices are in Nigerian naira (NGN). Contact: nexahubt@gmail.com, +234 913 451 3173, WhatsApp https://wa.me/2349134513173.
+Tagline: "Design. Ship. Support." Based at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria (CAC RC 9545130). Its two arms each have their own pages: the software studio, under the NexaHubTech name, and NexaHubTech Academy. Every Academy course is taught live and starts whenever the student is ready, online or in person (no more than 6 per in-person class, priced above a place online). PC Basics and CBT training are taught in person only. Fees can be paid in instalments. Prices are in Nigerian naira (NGN). Contact: nexahubt@gmail.com, +234 913 451 3173, WhatsApp https://wa.me/2349134513173.
 
 Each link below is the markdown version of a page on https://nexahubtech.company; drop the `.md` suffix for the HTML page.
 
 ## Start here
 
-- [Home](https://nexahubtech.company/home.md): NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio. We teach people to become developers, then put those skills to work building real products for real clients.
+- [Home](https://nexahubtech.company/home.md): NexaHubTech designs, builds and maintains production software for businesses and founders — scoped carefully, built properly, and supported long after launch. Based in Abuja, Nigeria.
 
-## The school
+## NexaHubTech Academy
 
-- [Courses](https://nexahubtech.company/courses.md): Explore all courses at NexaHubTech — from web development, JavaScript, React and Next.js to cybersecurity, data analysis and videography. Learn real skills with live, hands-on teaching you can start at any time.
-- [WAEC & JAMB CBT Training](https://nexahubtech.company/cbt.md): Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
-- [How We Teach](https://nexahubtech.company/teaching.md): The pedagogy behind every NexaHubTech course: the mental model before the syntax, one idea at a time, and a session built in three parts.
-- [Enrol](https://nexahubtech.company/enrol.md): Apply for a place at NexaHubTech — taught live, start any time. Tell us about you, pick your course and training mode, and we'll be in touch about your start date.
+NexaHubTech Academy is the training arm of NexaHubTech, alongside its software studio. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day.
+
+- [NexaHubTech Academy](https://nexahubtech.company/academy.md): NexaHubTech Academy, the training arm of NexaHubTech, offers live, instructor-led courses in software development, data, office productivity and video. Learn online or in person, start any day, and pay in instalments.
+- [Courses](https://nexahubtech.company/courses.md): Every NexaHubTech Academy course, from first steps on a computer to React, data analysis and video — taught live, online or in person, with flexible payment plans. Start any day.
+- [WAEC & JAMB CBT Training](https://nexahubtech.company/cbt.md): Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech Academy, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
+- [About the Academy](https://nexahubtech.company/academy/about.md): How NexaHubTech Academy teaches — the idea before the syntax, every session in three parts — and where and when it happens: live online in the evenings, or in person in classes of no more than 6 at our learning centre in Kubwa, Abuja.
+- [Pricing](https://nexahubtech.company/fees.md): Simple, all-inclusive pricing for every NexaHubTech Academy course: one fee for the whole course, online or in person, paid in full or in parts — plus CBT practice and rates for organisations.
+- [Organisations](https://nexahubtech.company/for-business.md): Train your staff, your students or your team with NexaHubTech Academy: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online, in person or at your office.
+- [Enrol](https://nexahubtech.company/enrol.md): Apply for a place at NexaHubTech Academy — taught live, online or in person, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.
 
 ## Courses
 
-- [PC Basics](https://nexahubtech.company/courses/pc-basics.md): Digital Literacy. ₦80,000, 6 Weeks. Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
-- [Microsoft Office](https://nexahubtech.company/courses/microsoft-office.md): Word, Excel, PowerPoint & Access. ₦110,000, 10 Weeks. The four programs an office actually runs on, taught to the standard the work deserves.
-- [Web Development](https://nexahubtech.company/courses/web-development-fullstack.md): Fullstack. ₦160,000, 10 Weeks. Learn frontend and backend in one complete path — from first principles to full applications.
-- [Frontend Development](https://nexahubtech.company/courses/frontend-development.md): ₦120,000, 10 Weeks. Learn the web from first principles — HTML, CSS, and JavaScript done properly.
-- [JavaScript Programming](https://nexahubtech.company/courses/javascript-programming.md): Browser & Node.js. ₦100,000, 8 Weeks. Learn JavaScript as a language — the same core that runs in a browser and on a server.
-- [React](https://nexahubtech.company/courses/react-development.md): Intermediate to Advanced. ₦120,000, 8 Weeks. Go beyond the basics — build React applications that stay understandable as they grow.
-- [Next.js](https://nexahubtech.company/courses/nextjs-fullstack.md): Fullstack React. ₦160,000, 10 Weeks. Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
-- [Backend Development](https://nexahubtech.company/courses/backend-development.md): ₦100,000, 8 Weeks. Build the engine behind applications — APIs, databases, and server-side logic.
-- [Mobile Development](https://nexahubtech.company/courses/mobile-development.md): ₦190,000, 12 Weeks. Build real mobile applications — from concept to the app store.
-- [Cybersecurity](https://nexahubtech.company/courses/cybersecurity.md): ₦230,000, 16 Weeks. Understand how systems are attacked — and how to defend them.
-- [Python Programming](https://nexahubtech.company/courses/python-programming.md): ₦100,000, 6 Weeks. Learn programming from scratch with Python — the language that powers everything from scripts to AI.
-- [Data Analysis](https://nexahubtech.company/courses/data-analysis.md): ₦120,000, 12 Weeks. Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
-- [Videography & Video Editing](https://nexahubtech.company/courses/videography-video-editing.md): ₦120,000, 8 Weeks. Capture and craft video content that communicates — from shooting to final cut.
+- [Computer Essentials](https://nexahubtech.company/courses/computer-essentials.md): Digital Literacy. Live online ₦37,500 (or 2 × ₦20,000) · In person ₦45,000 (or 2 × ₦25,000). 3 Weeks. Three weeks from never having used a computer to saving, finding and printing your own work — with somebody beside you the whole way.
+- [PC Basics](https://nexahubtech.company/courses/pc-basics.md): Digital Literacy. In person ₦75,000 (or 2 × ₦40,000). 6 Weeks. Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
+- [Office Essentials](https://nexahubtech.company/courses/office-essentials.md): Word & Excel. Live online ₦45,000 (or 2 × ₦25,000) · In person ₦55,000 (or 2 × ₦30,000). 4 Weeks. The two programs most office work actually happens in — Word and Excel — in four weeks, taught properly.
+- [Microsoft Office](https://nexahubtech.company/courses/microsoft-office.md): Word, Excel, PowerPoint & Access. Live online ₦80,000 (or 2 × ₦42,500) · In person ₦95,000 (or 2 × ₦52,500). 8 Weeks. The four programs an office actually runs on, taught to the standard the work deserves.
+- [Python Programming](https://nexahubtech.company/courses/python-programming.md): Live online ₦95,000 (or 2 × ₦52,500) · In person ₦115,000 (or 2 × ₦62,500). 6 Weeks. Learn programming from scratch with Python — the language that powers everything from scripts to AI.
+- [JavaScript Programming](https://nexahubtech.company/courses/javascript-programming.md): Browser & Node.js. Live online ₦95,000 (or 2 × ₦52,500) · In person ₦115,000 (or 2 × ₦62,500). 8 Weeks. Learn JavaScript as a language — the same core that runs in a browser and on a server.
+- [Frontend Development](https://nexahubtech.company/courses/frontend-development.md): Live online ₦120,000 (or 2 × ₦65,000) · In person ₦145,000 (or 2 × ₦77,500). 10 Weeks. Learn the web from first principles — HTML, CSS, and JavaScript done properly.
+- [Backend Development](https://nexahubtech.company/courses/backend-development.md): Live online ₦110,000 (or 2 × ₦60,000) · In person ₦135,000 (or 2 × ₦72,500). 8 Weeks. Build the engine behind applications — APIs, databases, and server-side logic.
+- [Web Development](https://nexahubtech.company/courses/web-development-fullstack.md): Fullstack. Live online ₦200,000 (or 3 × ₦75,000) · In person ₦240,000 (or 3 × ₦87,500). 18 Weeks. Learn frontend and backend in one complete path — from first principles to full applications.
+- [React](https://nexahubtech.company/courses/react-development.md): Intermediate to Advanced. Live online ₦130,000 (or 2 × ₦70,000) · In person ₦160,000 (or 2 × ₦87,500). 8 Weeks. Go beyond the basics — build React applications that stay understandable as they grow.
+- [Next.js](https://nexahubtech.company/courses/nextjs-fullstack.md): Fullstack React. Live online ₦160,000 (or 2 × ₦87,500) · In person ₦195,000 (or 2 × ₦105,000). 10 Weeks. Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
+- [Mobile Development](https://nexahubtech.company/courses/mobile-development.md): Live online ₦190,000 (or 2 × ₦102,500) · In person ₦230,000 (or 2 × ₦125,000). 12 Weeks. Build real mobile applications — from concept to the app store.
+- [Data Analysis](https://nexahubtech.company/courses/data-analysis.md): Live online ₦130,000 (or 2 × ₦70,000) · In person ₦160,000 (or 2 × ₦87,500). 10 Weeks. Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
+- [Mobile Videography](https://nexahubtech.company/courses/mobile-videography.md): Phone video & editing. Live online ₦50,000 (or 2 × ₦27,500) · In person ₦60,000 (or 2 × ₦32,500). 4 Weeks. Shoot, light, record and edit video worth watching — on the phone you already own.
+- [Videography & Video Editing](https://nexahubtech.company/courses/videography-video-editing.md): Live online ₦100,000 (or 2 × ₦55,000) · In person ₦120,000 (or 2 × ₦65,000). 8 Weeks. Capture and craft video content that communicates — from shooting to final cut.
 
-## The studio
+## The studio — software for businesses
 
-- [Services](https://nexahubtech.company/services.md): What the NexaHubTech studio builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.
+- [Services](https://nexahubtech.company/services.md): What NexaHubTech builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.
 - [Our Approach](https://nexahubtech.company/approach.md): How NexaHubTech works: we settle what should be built, and why, before any of it gets written — for company websites and for the software your members sign into.
 - [Software Development](https://nexahubtech.company/services/software-development.md): Products built to last — thought through before they’re built, then kept running.
 - [Digital Solutions](https://nexahubtech.company/services/digital-solutions.md): The work around the product that decides whether it actually lands.
 
-## The company
+## About NexaHubTech
 
-- [About](https://nexahubtech.company/about.md): NexaHubTech is a Nigeria-based skills-to-service company — a tech school and a software studio built on one idea: learning should be tied to real work.
-- [Contact](https://nexahubtech.company/contact.md): Get in touch with NexaHubTech — ask about a course, taught live and started whenever you like, or start a project with the studio.
+- [About](https://nexahubtech.company/about.md): NexaHubTech is a Nigeria-based software company with two arms: a software studio that builds for businesses, and NexaHubTech Academy, which teaches the skills the studio practises — in live courses, online or in person.
+- [Contact](https://nexahubtech.company/contact.md): Get in touch with NexaHubTech — start a software project with the studio, or ask NexaHubTech Academy about a course.
 
 ## Optional
 

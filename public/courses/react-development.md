@@ -1,4 +1,4 @@
-# React — NexaHubTech
+# React — NexaHubTech Academy
 
 > Go beyond the basics — build React applications that stay understandable as they grow.
 
@@ -7,13 +7,15 @@ Canonical page: https://nexahubtech.company/courses/react-development
 | | |
 |---|---|
 | Subject | Intermediate to Advanced |
-| Price | ₦120,000 |
+| Fee — live online | ₦130,000, or 2 × ₦70,000 |
+| Fee — in person | ₦160,000, or 2 × ₦87,500 |
 | Duration | 8 Weeks |
-| Format | Taught live, online, hands-on. |
+| Format | Taught live — online or in person. |
 | Level | Assumes you already write JavaScript |
-| Start | Any time |
+| Start | Any day |
+| Session times | Mon, Wed, Fri · 8:30 AM – 11:00 AM (in person); Tue, Thu · 2:00 PM – 4:00 PM (in person); Sat · 12:30 PM – 3:30 PM (in person); Mon, Wed, Fri · 7:00 PM – 9:00 PM (live online); Tue, Thu · 7:00 PM – 9:00 PM (live online) |
 
-An instructor teaches you live, with structured materials and real feedback, and you start the day you are ready. Sessions and materials run over WhatsApp, keeping it close and accessible.
+You choose how you learn. Join live online from anywhere, with materials and feedback shared on WhatsApp, or attend in person in a class of no more than 6. The instructor, the materials and the standard are the same either way — and you start the day you are ready.
 
 ## The idea this course installs: The screen is a function of state
 
@@ -68,6 +70,10 @@ What you need to have:
 - Rendering behaviour, reconciliation, and profiling
 - State management and data-fetching patterns
 - An advanced project built to production standards
+
+## Where it leads
+
+Next: [Next.js](https://nexahubtech.company/courses/nextjs-fullstack.md).
 
 ## Enrol
 

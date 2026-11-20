@@ -12,7 +12,7 @@ Build the engine behind applications — APIs, databases, and server-side logic.
 
 | | |
 |---|---|
-| **Format** | Taught live, online · start any time |
+| **Format** | Taught live — online or in person · start any time |
 
 ## Before you start
 

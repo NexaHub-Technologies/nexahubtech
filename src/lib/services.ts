@@ -1,7 +1,7 @@
-/* what the studio arm sells. Category names and the individual service names come
-   from the company profile; the descriptions are written for the site. The school
-   arm's offering lives in COURSES (src/lib/courses.ts) and is surfaced at /courses,
-   so it is deliberately not repeated here. */
+/* what NexaHubTech, the company, sells. Category names and the individual service
+   names come from the company profile; the descriptions are written for the site.
+   NexaHubTech Academy's offering lives in COURSES (src/lib/courses.ts) and is
+   surfaced at /courses, so it is deliberately not repeated here. */
 
 export interface ServiceItem {
 	t: string;

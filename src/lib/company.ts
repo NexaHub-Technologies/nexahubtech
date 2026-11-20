@@ -3,12 +3,29 @@
    knowledge graph and the markdown mirrors under public/ — which is the only way
    those copies can be guaranteed to say the same thing as the page. */
 
-/* the one-paragraph answer to "what is NexaHubTech?" */
-export const SUMMARY =
-	"NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio under one roof. We teach real, in-demand skills — and then put them to work on real client products.";
+/* The definition of the company, said once. NexaHubTech is the software
+   company; it works through two arms — its software studio, which carries the
+   NexaHubTech name, and NexaHubTech Academy. Commercially the company is
+   "NexaHubTech" — the legal name, NexaHubTech Limited, belongs on contracts,
+   invoices and the RC number, not in marketing copy. */
+export const DEFINITION =
+	"NexaHubTech is a Nigerian software company with two arms: a software studio that designs, builds and maintains software for businesses, and NexaHubTech Academy, which teaches practical technology skills — online and in person — and develops the talent our engineering work depends on.";
 
+/* the same thing in one breath, for bios, pitches and share text */
+export const ONE_LINER =
+	"NexaHubTech is a software company: its studio builds software for businesses, and NexaHubTech Academy trains the people who build it.";
+
+/* the studio — what the company does for clients */
+export const STUDIO_SUMMARY =
+	"The NexaHubTech studio designs, builds and maintains production software for businesses and founders — scoped carefully, built properly, and supported long after launch.";
+
+/* the Academy, said once so every page that mentions it agrees */
+export const ACADEMY_SUMMARY =
+	"NexaHubTech Academy is the training arm of NexaHubTech, alongside its software studio. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day.";
+
+/* how the two arms relate: separate work, one standard */
 export const THESIS =
-	"The studio meets real engineering problems. Those problems shape what we teach. The school grows people who go on to help build — and the loop continues. Nobody learns in a vacuum, and nobody ships without principles.";
+	"The studio builds software for clients; the Academy teaches what the studio practises. The engineering problems we meet on client work shape the Academy's lessons, and its strongest learners go on to build with us in the studio. Two arms, one standard: understand the problem first, then build.";
 
 export const VISION =
 	"To become a global leading technology ecosystem where learning, innovation, and digital transformation create world-class talent and impactful digital solutions.";
