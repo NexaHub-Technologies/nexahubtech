@@ -26,6 +26,12 @@ export function Link({
 	activeProps,
 	onClick,
 	children,
+	/* router-only options: an <a> has no such attributes */
+	activeOptions,
+	inactiveProps,
+	preload,
+	replace,
+	resetScroll,
 	...rest
 }) {
 	const active = to === PATH && activeProps?.className;
