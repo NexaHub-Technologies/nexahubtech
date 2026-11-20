@@ -28,7 +28,7 @@ const STAGE = {
 			d: "Build the mental model first — the code comes easily after that.",
 			foot: "Understand → practice → build.",
 		},
-		tag: "learn → build → ship ↻",
+		tag: "learn → build → ship",
 		b: {
 			label: "In production",
 			t: "Taught by engineers who ship for clients",
@@ -42,7 +42,7 @@ const STAGE = {
 			d: "You know what is being built, and why, before a line is written.",
 			foot: "Understand → design → build.",
 		},
-		tag: "design → ship → support ↻",
+		tag: "design → ship → support",
 		b: {
 			label: "In production",
 			t: "Shipped in working increments, then supported",
