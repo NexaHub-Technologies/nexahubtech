@@ -18,7 +18,7 @@ const OUT = "public/og";
 const TMP = ".cache/og-tmp";
 
 const FONT_CSS =
-	"https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Hanken+Grotesk:wght@500;600&display=swap";
+	"https://fonts.googleapis.com/css2?family=Cal+Sans&family=Hanken+Grotesk:wght@500;600&display=swap";
 
 async function ensureFonts() {
 	if (existsSync(`${CACHE}/fonts.conf`)) return;
@@ -93,10 +93,12 @@ function svg(
 	const blockHeight = lineCount * (size + 14) + 150;
 	const free = Math.max(0, 600 - 222 - blockHeight);
 	const top = Math.round(222 + size * 0.8 + free / 2);
+	/* matches the site's large-heading tracking (-0.025em) */
+	const track = (size * -0.025).toFixed(2);
 	const body = lines
 		.map(
 			(l, i) =>
-				`<text x="80" y="${top + i * (size + 14)}" font-family="Bricolage Grotesque" font-weight="800" font-size="${size}" fill="#ffffff">${esc(l)}</text>`,
+				`<text x="80" y="${top + i * (size + 14)}" font-family="Cal Sans" font-weight="400" font-size="${size}" letter-spacing="${track}" fill="#ffffff">${esc(l)}</text>`,
 		)
 		.join("\n  ");
 	/* only reserve the accent line's height when there is one, or short titles
@@ -119,10 +121,10 @@ function svg(
   <rect width="1200" height="630" fill="url(#glow)"/>
   <rect width="1200" height="630" fill="url(#glow2)"/>
   <g transform="translate(80,74) scale(0.0501)">${logo}</g>
-  <text x="150" y="112" font-family="Bricolage Grotesque" font-weight="700" font-size="34" fill="#ffffff">NexaHubTech${academy ? '<tspan dx="12" fill="#f9a8cd" font-weight="600" font-size="30">Academy</tspan>' : ""}</text>
+  <text x="150" y="112" font-family="Cal Sans" font-weight="400" font-size="34" letter-spacing="-0.5" fill="#ffffff">NexaHubTech${academy ? '<tspan dx="12" fill="#f9a8cd" font-weight="400" font-size="30">Academy</tspan>' : ""}</text>
   <text x="80" y="186" font-family="Hanken Grotesk" font-weight="600" font-size="26" fill="#f9a8cd" letter-spacing="3">${esc(eyebrow.toUpperCase())}</text>
   ${body}
-  ${accent ? `<text x="80" y="${blockEnd}" font-family="Bricolage Grotesque" font-weight="800" font-size="${size}" fill="#f9a8cd">${esc(accent)}</text>` : ""}
+  ${accent ? `<text x="80" y="${blockEnd}" font-family="Cal Sans" font-weight="400" font-size="${size}" letter-spacing="${track}" fill="#f9a8cd">${esc(accent)}</text>` : ""}
   <rect x="80" y="${blockEnd + 46}" width="86" height="4" rx="2" fill="#f06ba8"/>
   <text x="80" y="${blockEnd + 104}" font-family="Hanken Grotesk" font-weight="500" font-size="27" fill="#cfbcdd">${esc(sub)}</text>
 </svg>`;

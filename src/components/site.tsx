@@ -39,15 +39,15 @@ export function Logo({
 }
 
 export const NAV = [
-	{ to: "/", label: "Home", side: "build" },
+	{ to: "/", label: "Home", side: "build", exact: true },
 	{ to: "/services", label: "Services", side: "build" },
 	/* /work is deliberately absent while client naming is unconfirmed — the route
 	   still exists and still claims the build arm, so restoring it is this line:
 	   { to: "/work", label: "Work", side: "build" }, */
 	{ to: "/approach", label: "Approach", side: "build" },
 	{ to: "/about", label: "About", side: "build" },
-	/* the Academy's header has no Home link: its name is the link home.
-	   Organisations lives in the footer and on the pages that need it. */
+	/* Organisations lives in the footer and on the pages that need it */
+	{ to: "/academy", label: "Home", side: "learn", exact: true },
 	{ to: "/courses", label: "Courses", side: "learn" },
 	{ to: "/fees", label: "Pricing", side: "learn" },
 	{ to: "/cbt", label: "CBT prep", side: "learn" },
@@ -57,6 +57,8 @@ export const NAV = [
 	to: string;
 	label: string;
 	side?: SiteMode;
+	/* a home link is only active on its own page, not on every page below it */
+	exact?: boolean;
 }[];
 
 /* the Academy's other pages — in the footer, without crowding the header */
@@ -219,6 +221,7 @@ export function Header() {
 								to={n.to}
 								className={`nav-link${side}`}
 								activeProps={{ className: `nav-link is-active${side}` }}
+								activeOptions={{ exact: "exact" in n && n.exact }}
 							>
 								{n.label}
 							</Link>
@@ -265,6 +268,7 @@ export function Header() {
 								to={n.to}
 								className={`mobile-link${side}`}
 								activeProps={{ className: `mobile-link is-active${side}` }}
+								activeOptions={{ exact: "exact" in n && n.exact }}
 								onClick={() => setOpen(false)}
 							>
 								{n.label}
