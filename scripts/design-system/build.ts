@@ -14,6 +14,7 @@ import { spawnSync } from "node:child_process";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { modeForPath } from "../../src/lib/mode";
 
 /* the bundler is Bun's own — the script runs under bun — and the project carries
    no Bun type definitions, so this is the slice of its API used here */
@@ -60,7 +61,29 @@ const CARDS = [
 	"Footer",
 	"Preloader",
 	"SessionLoop",
+	"Hero",
+	"Tapes",
+	"Numbers",
+	"Thesis",
+	"HowItWorks",
+	"Tracks",
+	"StudioProof",
+	"Services",
+	"ClosingCTA",
+	"StudioProcess",
+	"AcademyPointer",
+	"CourseCard",
+	"PriceBox",
+	"FeeLines",
 ];
+
+/* the page a card pretends to be on. It must be one neither arm owns: on an
+   owned page ModeProvider pins the mode to that arm, and every card would show
+   one side however its theme or the switch is set. */
+const PREVIEW_PATH = "/contact";
+if (modeForPath(PREVIEW_PATH) !== null) {
+	throw new Error(`${PREVIEW_PATH} now belongs to an arm; pick a shared page`);
+}
 
 mkdirSync(OUT, { recursive: true });
 const sha = spawnSync("git", ["rev-parse", "--short", "HEAD"], {
@@ -172,7 +195,10 @@ const result = await Bun.build({
 	minify: true,
 	target: "browser",
 	plugins: [previewGlobals],
-	define: { "process.env.NODE_ENV": '"production"' },
+	define: {
+		"process.env.NODE_ENV": '"production"',
+		PREVIEW_PATH: JSON.stringify(PREVIEW_PATH),
+	},
 });
 if (!result.success) {
 	console.error(result.logs);
