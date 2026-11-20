@@ -18,7 +18,7 @@ import { Eyebrow } from "./site";
    mode-aware sections below always render the right side for the page they are
    on. Sections that belong to one arm only are used by that arm's page only. */
 
-/* ── hero visual : the learn → build journey, rendered warmly ───── */
+/* ── hero visual : the cards beside each front page's headline ───── */
 
 /* the cards behind the hero headline: a lesson and a shipped product on the
    Academy's page, the company's own process on its page */
@@ -497,7 +497,7 @@ const APPROACH = [
 	{
 		n: "3",
 		t: "Build",
-		d: "You apply it to something real. The strongest learners go on to build alongside the studio on actual client work.",
+		d: "You apply it to something real. Our strongest learners go on to build alongside NexaHubTech engineers on client projects.",
 	},
 ];
 

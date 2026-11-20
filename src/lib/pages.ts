@@ -305,7 +305,7 @@ export function servicePage(service: ServiceLine): Page {
 		description: service.tagline,
 		image: `/og/service-${service.slug}.jpg`,
 		card: {
-			eyebrow: "The studio",
+			eyebrow: "Services",
 			headline: service.t,
 			sub: `${service.items.length} services · NexaHubTech`,
 		},

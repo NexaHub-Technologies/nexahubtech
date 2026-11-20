@@ -119,16 +119,16 @@ function ForBusinessPage() {
 					<div className="max-w-[36rem]">
 						<Eyebrow variant="build">Need software, not training?</Eyebrow>
 						<h2 className="display text-[1.5rem] mt-3">
-							The studio builds it for you.
+							NexaHubTech builds it for you.
 						</h2>
 						<p className="lead text-[0.97rem] mt-2">
-							The same people who teach here build production software for
+							NexaHubTech, our parent company, builds production software for
 							businesses — designed before it is built, and maintained after.
 						</p>
 					</div>
 					<div className="flex flex-wrap gap-3 shrink-0">
 						<Link to="/services" className="btn btn-teal">
-							See the studio
+							See our services
 						</Link>
 						<a href={`mailto:${CONTACT.email}`} className="btn btn-ghost">
 							{CONTACT.email}

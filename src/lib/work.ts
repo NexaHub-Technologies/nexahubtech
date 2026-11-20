@@ -1,4 +1,4 @@
-/* Shipped work, for the studio arm. /services says what we do; this says what we
+/* Shipped work, for the company. /services says what we do; this says what we
    have actually built, which is the part a client is really deciding on.
 
    Deliberately architectural rather than promotional: each entry states the

@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Eyebrow, useReveal } from "../components/site";
 import {
 	ACADEMY_SUMMARY,
+	DEFINITION,
 	MISSION,
 	SUMMARY,
 	THESIS,
@@ -58,9 +59,7 @@ function About() {
 						<span style={{ color: "var(--build-ink)" }}>built properly</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
-						NexaHubTech is a software development company based in Abuja. Its
-						training division, NexaHubTech Academy, is run as a separate
-						business with its own courses, pages and enrolment.
+						{DEFINITION}
 					</p>
 				</div>
 			</section>
@@ -137,7 +136,7 @@ function About() {
 						The co-founders.
 					</h2>
 					<p className="lead mt-4">
-						NexaHubTech — the school and the studio, run as one thing.
+						NexaHubTech and NexaHubTech Academy.
 					</p>
 				</div>
 				<div className="grid sm:grid-cols-2 gap-5">

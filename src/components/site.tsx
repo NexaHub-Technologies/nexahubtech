@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { CONTACT, MOTTO } from "../lib/contact";
+import { CONTACT, MOTTO, TAGLINE } from "../lib/contact";
 import { ARM_HOME, ARM_LABEL, ARM_NAME, type SiteMode } from "../lib/mode";
 import { useMode } from "./mode";
 
@@ -59,7 +59,7 @@ export const NAV = [
 	side?: SiteMode;
 }[];
 
-/* the school's other pages — reachable from the footer and from the pages
+/* the Academy's other pages — reachable from the footer and from the pages
    that need them, without crowding the header */
 export const LEARN_MORE = [
 	{ to: "/timetable", label: "Session times" },
@@ -309,7 +309,7 @@ export function Footer() {
 							</Link>
 						</p>
 					) : null}
-					<p className="text-[0.9rem] text-mute mt-2">{MOTTO}</p>
+					<p className="text-[0.9rem] text-mute mt-2">{TAGLINE[mode]}</p>
 					<p className="text-[0.85rem] text-mute mt-3">{CONTACT.address}</p>
 					<a
 						className="text-[0.85rem] text-mute hover:underline"

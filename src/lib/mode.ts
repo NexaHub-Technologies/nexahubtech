@@ -1,5 +1,5 @@
 /* which arm of the company the visitor is looking at. They are two separate
-   things under one roof: NexaHubTech, the software company ("build"), and
+   businesses: NexaHubTech, the software company ("build"), and
    NexaHubTech Academy, its training division ("learn"). Every page belongs to
    one of them, except /about and /contact, which describe both and take the
    frame of whichever the visitor came from. */

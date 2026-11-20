@@ -14,8 +14,8 @@
 
 import { APPROACH } from "../approach";
 import { CBT_DETAILS, CBT_FAQS, CBT_PACKAGES, CBT_PILLARS } from "../cbt";
-import { ACADEMY_SUMMARY, SUMMARY } from "../company";
-import { ADDRESS, CONTACT, MOTTO, SITE_URL } from "../contact";
+import { ACADEMY_SUMMARY, DEFINITION } from "../company";
+import { ADDRESS, CONTACT, MOTTO, SITE_URL, TAGLINE } from "../contact";
 import {
 	COURSES,
 	type Course,
@@ -112,7 +112,7 @@ export function organization(): Node {
 		"@id": ID.organization,
 		name: "NexaHubTech",
 		url: abs("/"),
-		description: SUMMARY,
+		description: DEFINITION,
 		slogan: MOTTO,
 		logo: {
 			"@type": "ImageObject",
@@ -179,6 +179,7 @@ export function academy(): Node {
 		alternateName: "NexaHubTech Academy, a division of NexaHubTech",
 		url: abs(PAGES.academy.path),
 		description: ACADEMY_SUMMARY,
+		slogan: TAGLINE.learn,
 		parentOrganization: ref(ID.organization),
 		/* the company's mark; the logo node itself lives inside organization() */
 		logo: abs("/apple-touch-icon.png"),
@@ -208,7 +209,7 @@ export function website(): Node {
 	};
 }
 
-/* ── the school ─────────────────────────────────────────────────── */
+/* ── NexaHubTech Academy ─────────────────────────────────────────────────── */
 
 export function course(c: Course): Node {
 	const page = coursePage(c);
@@ -345,7 +346,7 @@ export function sessionHowTo(): Node {
 	};
 }
 
-/* ── the studio ─────────────────────────────────────────────────── */
+/* ── NexaHubTech, the company ─────────────────────────────────────────────────── */
 
 export function service(s: ServiceLine): Node {
 	const page = servicePage(s);

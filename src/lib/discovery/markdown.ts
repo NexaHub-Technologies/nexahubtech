@@ -19,13 +19,14 @@ import {
 } from "../cbt";
 import {
 	ACADEMY_SUMMARY,
+	DEFINITION,
 	MISSION,
 	SUMMARY,
 	THESIS,
 	VALUES,
 	VISION,
 } from "../company";
-import { CONTACT, MOTTO, SITE_URL } from "../contact";
+import { CONTACT, MOTTO, SITE_URL, TAGLINE } from "../contact";
 import {
 	bundleSaving,
 	CENTRE_SEATS,
@@ -95,7 +96,7 @@ const serviceLine = (s: ServiceLine) =>
 function home(): string {
 	return `${SUMMARY}
 
-Motto: *${MOTTO}*
+Tagline: *${MOTTO}*
 
 ## What we build
 
@@ -110,6 +111,8 @@ ${ACADEMY_SUMMARY} It is run as a separate business with its own pages: ${mdLink
 
 function academy(): string {
 	return `${ACADEMY_SUMMARY}
+
+Tagline: *${TAGLINE.learn}*
 
 ## ${COURSES.length} live courses, online or in person, start any day
 
@@ -386,7 +389,11 @@ ${phase.steps.map((s) => `${s.n}. **${s.t}** — ${s.d}`).join("\n")}`,
 }
 
 function about(): string {
-	return `${SUMMARY}
+	return `${DEFINITION}
+
+## NexaHubTech
+
+${SUMMARY}
 
 ## NexaHubTech Academy
 
@@ -487,9 +494,9 @@ const names = (cs: Course[]) => cs.map((c) => c.t).join(", ");
 export function llmsTxt(): string {
 	return `# NexaHubTech
 
-> ${SUMMARY}
+> ${DEFINITION}
 
-Motto: "${MOTTO}" Based at ${CONTACT.address}, Nigeria (CAC RC ${CONTACT.rc}). Its training division, NexaHubTech Academy, runs as a separate business with its own pages. Every Academy course is taught live and starts whenever the student is ready, online or in person (no more than ${CENTRE_SEATS} per in-person class, priced above a place online). ${names(COURSES.filter((c) => offeredInPerson(c) && !offeredOnline(c)))} and CBT training are taught in person only. Fees can be paid in instalments. Prices are in Nigerian naira (NGN). Contact: ${CONTACT.email}, ${CONTACT.phoneDisplay}, WhatsApp ${CONTACT.whatsapp}.
+Tagline: "${MOTTO}" Based at ${CONTACT.address}, Nigeria (CAC RC ${CONTACT.rc}). Its training division, NexaHubTech Academy, runs as a separate business with its own pages. Every Academy course is taught live and starts whenever the student is ready, online or in person (no more than ${CENTRE_SEATS} per in-person class, priced above a place online). ${names(COURSES.filter((c) => offeredInPerson(c) && !offeredOnline(c)))} and CBT training are taught in person only. Fees can be paid in instalments. Prices are in Nigerian naira (NGN). Contact: ${CONTACT.email}, ${CONTACT.phoneDisplay}, WhatsApp ${CONTACT.whatsapp}.
 
 Each link below is the markdown version of a page on ${SITE_URL}; drop the \`.md\` suffix for the HTML page.
 

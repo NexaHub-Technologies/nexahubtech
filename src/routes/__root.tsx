@@ -11,8 +11,10 @@ import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { ModeProvider } from "../components/mode";
 import { Preloader } from "../components/preloader";
 import { Footer, Header } from "../components/site";
-import { SITE_URL } from "../lib/contact";
+import { DEFINITION, ONE_LINER } from "../lib/company";
+import { MOTTO, SITE_URL } from "../lib/contact";
 import { DEFAULT_MODE, MODE_INIT_SCRIPT, modeForPath } from "../lib/mode";
+import { PAGES } from "../lib/pages";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
@@ -26,22 +28,20 @@ export const Route = createRootRoute({
 				content: "width=device-width, initial-scale=1",
 			},
 			{
-				title: "NexaHubTech — Learn to build. Build for real.",
+				title: PAGES.home.title,
 			},
 			{
 				name: "description",
-				content:
-					"NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio. We teach people to become developers, then put those skills to work building real products for real clients.",
+				content: DEFINITION,
 			},
 			{ name: "theme-color", content: "#f6eff4" },
 			{
 				property: "og:title",
-				content: "NexaHubTech — Learn to build. Build for real.",
+				content: PAGES.home.title,
 			},
 			{
 				property: "og:description",
-				content:
-					"A tech school + a software studio. We teach the skills to become a developer, then use them on real client work — so learning is tied to actual engineering, not theory.",
+				content: ONE_LINER,
 			},
 			{ property: "og:type", content: "website" },
 			{ property: "og:site_name", content: "NexaHubTech" },
@@ -52,8 +52,7 @@ export const Route = createRootRoute({
 			{ property: "og:image:height", content: "630" },
 			{
 				property: "og:image:alt",
-				content:
-					"NexaHubTech — Learn to build. Build for real. A tech school + a software studio.",
+				content: `NexaHubTech — ${MOTTO} ${ONE_LINER}`,
 			},
 			{ name: "twitter:card", content: "summary_large_image" },
 			{ name: "twitter:image", content: `${SITE_URL}/og-image.png` },

@@ -6,6 +6,8 @@ Canonical page: https://nexahubtech.company/academy
 
 NexaHubTech Academy is the training division of NexaHubTech. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day.
 
+Tagline: *Learn to build. Build for real.*
+
 ## 16 live courses, online or in person, start any day
 
 Every course but PC Basics can be taken live online or in person, in a class of no more than 6. Fees can be paid in full or in instalments: [Fees](https://nexahubtech.company/fees.md). Session times: [Timetable](https://nexahubtech.company/timetable.md).

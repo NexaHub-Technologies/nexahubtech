@@ -1,5 +1,12 @@
 # Website Build Prompt — NexaHubTech
 
+> **Positioning update (November 2026).** NexaHubTech is no longer described as a
+> "skills-to-service company". It is a technology company that designs, builds and
+> maintains software for businesses, with a training division, **NexaHubTech
+> Academy**. The live definition is in `src/lib/company.ts`; where this brief
+> disagrees with it, the code wins. "NexaHubTech" is the commercial name — the
+> legal name, NexaHubTech Limited, is for contracts and invoices only.
+
 > **How to use this doc:** Paste this whole brief into your AI builder of choice (Claude Code, v0, Lovable, Bolt, etc.) as the system prompt, or hand it to a designer/developer as a creative brief. Sections marked `[NEEDS INPUT]` are placeholders only you can fill — don't let the builder invent them.
 
 ---
@@ -7,15 +14,15 @@
 ## 1. Company Snapshot
 
 **Name:** NexaHubTech (formerly Codex Technologies)
-**Type:** Skills-to-service company
+**Type:** Technology company (software development), with a training division
 **Location:** Nigeria
-**One-line description:** A Nigerian skills-to-service company that trains developers in web and AI engineering, then puts those skills to work building real client software.
+**One-line description:** NexaHubTech builds software for businesses, and trains the people who build it through NexaHubTech Academy.
 
-**Core thesis:** Education and delivery aren't separate businesses — they're a feedback loop. People learn on a curriculum built from real engineering problems; the studio delivers production software using the same rigor it teaches. Nobody learns in a vacuum, and nobody ships without principles.
+**Core thesis:** Two businesses, one standard. The company builds software for clients; the Academy teaches what the company practises, and its strongest learners go on to build with us.
 
 ---
 
-## 2. The Two Arms of the Business
+## 2. The Company and its Academy
 
 ### A. Education Arm — "Learn"
 - Frontend Web Development course (HTML, CSS, JavaScript fundamentals), with fullstack ambitions
@@ -64,7 +71,7 @@
 
 ### About
 - Origin story: Codex Technologies → NexaHubTech rebrand `[NEEDS INPUT: why the rebrand happened, founding year]`
-- The "skills-to-service" thesis explained
+- The company and its training division, and how the Academy feeds the company's talent
 - Founder bio (Mich)
 - Values: first-principles reasoning, least-cost optimization, architecture before code
 

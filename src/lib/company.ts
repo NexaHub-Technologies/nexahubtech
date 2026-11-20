@@ -3,7 +3,17 @@
    knowledge graph and the markdown mirrors under public/ — which is the only way
    those copies can be guaranteed to say the same thing as the page. */
 
-/* the one-paragraph answer to "what is NexaHubTech?" */
+/* The definition of the company, said once. Commercially the company is
+   "NexaHubTech" — the legal name, NexaHubTech Limited, belongs on contracts,
+   invoices and the RC number, not in marketing copy. */
+export const DEFINITION =
+	"NexaHubTech is a Nigerian technology company that designs, builds and maintains software for businesses. Its training division, NexaHubTech Academy, teaches practical technology skills — online and in person — and develops the talent our engineering work depends on.";
+
+/* the same thing in one breath, for bios, pitches and share text */
+export const ONE_LINER =
+	"NexaHubTech builds software for businesses, and trains the people who build it through NexaHubTech Academy.";
+
+/* the company on its own — what it does for clients */
 export const SUMMARY =
 	"NexaHubTech is a Nigeria-based software development company. We design, build and maintain production software for businesses and founders — scoped carefully, built properly, and supported long after launch.";
 
