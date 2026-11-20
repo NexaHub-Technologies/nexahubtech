@@ -1,6 +1,6 @@
-# Courses — NexaHubTech
+# Courses — NexaHubTech Academy
 
-> Every NexaHubTech course, from first steps on a computer to React, data analysis and video — taught live, online or in person, with flexible payment plans. Start any day.
+> Every NexaHubTech Academy course, from first steps on a computer to React, data analysis and video — taught live, online or in person, with flexible payment plans. Start any day.
 
 Canonical page: https://nexahubtech.company/courses
 

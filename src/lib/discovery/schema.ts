@@ -14,7 +14,7 @@
 
 import { APPROACH } from "../approach";
 import { CBT_DETAILS, CBT_FAQS, CBT_PACKAGES, CBT_PILLARS } from "../cbt";
-import { SUMMARY } from "../company";
+import { ACADEMY_SUMMARY, SUMMARY } from "../company";
 import { ADDRESS, CONTACT, MOTTO, SITE_URL } from "../contact";
 import {
 	COURSES,
@@ -53,6 +53,7 @@ const ref = (id: string) => ({ "@id": id });
 
 export const ID = {
 	organization: `${SITE_URL}/#organization`,
+	academy: `${abs(PAGES.academy.path)}#organization`,
 	website: `${SITE_URL}/#website`,
 	logo: `${SITE_URL}/#logo`,
 	courseCatalog: `${abs(PAGES.courses.path)}#catalog`,
@@ -105,9 +106,9 @@ export function organization(): Node {
 	const prices = allPrices();
 	const { days, opens, closes } = CBT_DETAILS.openingHours;
 	return {
-		/* a school and a business with a door people walk through — both are true,
-		   and both unlock properties the other type lacks */
-		"@type": ["EducationalOrganization", "LocalBusiness"],
+		/* the software company — a business with a door people walk through. Its
+		   training division is a separate organisation beneath it (academy()). */
+		"@type": ["Organization", "LocalBusiness"],
 		"@id": ID.organization,
 		name: "NexaHubTech",
 		url: abs("/"),
@@ -163,7 +164,35 @@ export function organization(): Node {
 			...COURSES.map((c) => c.t),
 			...SERVICES.flatMap((s) => s.items.map((i) => i.t)),
 		],
-		hasOfferCatalog: [ref(ID.courseCatalog), ref(ID.serviceCatalog)],
+		hasOfferCatalog: ref(ID.serviceCatalog),
+		subOrganization: ref(ID.academy),
+	};
+}
+
+/* NexaHubTech Academy — the training division, its own organisation under the
+   company: it provides the courses, the company provides the services */
+export function academy(): Node {
+	return {
+		"@type": "EducationalOrganization",
+		"@id": ID.academy,
+		name: "NexaHubTech Academy",
+		alternateName: "NexaHubTech Academy, a division of NexaHubTech",
+		url: abs(PAGES.academy.path),
+		description: ACADEMY_SUMMARY,
+		parentOrganization: ref(ID.organization),
+		/* the company's mark; the logo node itself lives inside organization() */
+		logo: abs("/apple-touch-icon.png"),
+		email: CONTACT.email,
+		telephone: CONTACT.phone,
+		address: {
+			"@type": "PostalAddress",
+			streetAddress: ADDRESS.street,
+			addressLocality: ADDRESS.locality,
+			addressRegion: ADDRESS.region,
+			addressCountry: ADDRESS.country,
+		},
+		areaServed: { "@type": "Country", name: "Nigeria" },
+		hasOfferCatalog: ref(ID.courseCatalog),
 	};
 }
 
@@ -193,7 +222,7 @@ export function course(c: Course): Node {
 		about: c.d || undefined,
 		image: abs(page.image),
 		inLanguage: "en",
-		provider: ref(ID.organization),
+		provider: ref(ID.academy),
 		educationalLevel: c.requirements.level,
 		coursePrerequisites: c.requirements.know,
 		/* the course's one big idea, then what it lets you do */
@@ -244,7 +273,7 @@ export function cbtCourse(): Node {
 		description: PAGES.cbt.description,
 		image: abs(PAGES.cbt.image),
 		inLanguage: "en",
-		provider: ref(ID.organization),
+		provider: ref(ID.academy),
 		about: CBT_DETAILS.targetExams.map((name) => ({ "@type": "Thing", name })),
 		teaches: CBT_PILLARS.map((p) => p.title),
 		syllabusSections: CBT_PILLARS.map((p, i) => ({
@@ -274,7 +303,7 @@ export function courseCatalog(): Node {
 	return {
 		"@type": "OfferCatalog",
 		"@id": ID.courseCatalog,
-		name: "NexaHubTech courses",
+		name: "NexaHubTech Academy courses",
 		url: abs(PAGES.courses.path),
 		numberOfItems: COURSES.length + 1,
 		itemListElement: [...COURSES.map(ID.course), ID.cbtCourse].map((id, i) => ({
@@ -494,6 +523,7 @@ export function pageGraph(page: Page): Graph {
 		"@context": "https://schema.org",
 		"@graph": dedupe([
 			organization(),
+			academy(),
 			website(),
 			webpage(page),
 			...(crumbs ? [crumbs] : []),
@@ -508,6 +538,7 @@ export function siteGraph(): Graph {
 		"@context": "https://schema.org",
 		"@graph": dedupe([
 			organization(),
+			academy(),
 			website(),
 			courseCatalog(),
 			...COURSES.map(course),

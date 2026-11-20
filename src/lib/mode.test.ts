@@ -7,6 +7,7 @@ import {
 	DEFAULT_MODE,
 	destinationForModeSwitch,
 	isSiteMode,
+	MODE_INIT_SCRIPT,
 	MODE_STORAGE_KEY,
 	modeForPath,
 	persistMode,
@@ -23,7 +24,8 @@ function clearStores() {
 }
 
 describe("modeForPath", () => {
-	it("claims the school routes for learn", () => {
+	it("claims the Academy's routes for learn", () => {
+		expect(modeForPath("/academy")).toBe("learn");
 		expect(modeForPath("/courses")).toBe("learn");
 		expect(modeForPath("/courses/frontend-development")).toBe("learn");
 		expect(modeForPath("/enrol")).toBe("learn");
@@ -36,7 +38,9 @@ describe("modeForPath", () => {
 		expect(modeForPath("/for-business")).toBe("learn");
 	});
 
-	it("claims the studio routes for build", () => {
+	/* the domain's front page is the software company's, not a shared page */
+	it("claims the front page and the studio routes for build", () => {
+		expect(modeForPath("/")).toBe("build");
 		expect(modeForPath("/services")).toBe("build");
 		expect(modeForPath("/services/digital-solutions")).toBe("build");
 		expect(modeForPath("/approach")).toBe("build");
@@ -44,7 +48,7 @@ describe("modeForPath", () => {
 	});
 
 	it("leaves shared routes alone so an explicit choice survives", () => {
-		for (const p of ["/", "/about", "/contact"]) {
+		for (const p of ["/about", "/contact"]) {
 			expect(modeForPath(p)).toBeNull();
 		}
 	});
@@ -52,6 +56,7 @@ describe("modeForPath", () => {
 	it("does not match routes that merely start with the same letters", () => {
 		expect(modeForPath("/coursework")).toBeNull();
 		expect(modeForPath("/services-agreement")).toBeNull();
+		expect(modeForPath("/academy-awards")).toBeNull();
 	});
 });
 
@@ -59,10 +64,16 @@ describe("destinationForModeSwitch", () => {
 	/* the bug this exists to stop: switching to learn on /services rebuilt the nav
 	   around the school while leaving a studio page on screen */
 	it("moves you off a page owned by the arm you are leaving", () => {
-		for (const p of ["/services", "/services/digital-solutions", "/approach"]) {
+		for (const p of [
+			"/",
+			"/services",
+			"/services/digital-solutions",
+			"/approach",
+		]) {
 			expect(destinationForModeSwitch(p, "learn")).toBe(ARM_HOME.learn);
 		}
 		for (const p of [
+			"/academy",
 			"/courses",
 			"/courses/react-development",
 			"/teaching",
@@ -81,15 +92,50 @@ describe("destinationForModeSwitch", () => {
 	});
 
 	it("leaves shared pages alone — they belong to both arms", () => {
-		for (const p of ["/", "/about", "/contact"]) {
+		for (const p of ["/about", "/contact"]) {
 			expect(destinationForModeSwitch(p, "learn")).toBeNull();
 			expect(destinationForModeSwitch(p, "build")).toBeNull();
 		}
 	});
 
 	it("lands on each arm's index, never deeper", () => {
-		expect(ARM_HOME.learn).toBe("/courses");
-		expect(ARM_HOME.build).toBe("/services");
+		expect(ARM_HOME.learn).toBe("/academy");
+		expect(ARM_HOME.build).toBe("/");
+		expect(modeForPath(ARM_HOME.learn)).toBe("learn");
+		expect(modeForPath(ARM_HOME.build)).toBe("build");
+	});
+});
+
+/* The head script has to make the same call as modeForPath before React exists,
+   or a page paints as one arm and then snaps to the other. */
+describe("MODE_INIT_SCRIPT", () => {
+	beforeEach(clearStores);
+
+	const run = (path: string) => {
+		window.history.replaceState(null, "", path);
+		delete document.documentElement.dataset.mode;
+		new Function(MODE_INIT_SCRIPT)();
+		return document.documentElement.dataset.mode;
+	};
+
+	it("gives every owned route its own arm, whatever was stored", () => {
+		persistMode("learn");
+		for (const p of ["/", "/services", "/approach", "/work"])
+			expect(run(p), p).toBe("build");
+		persistMode("build");
+		for (const p of ["/academy", "/courses/pc-basics", "/fees", "/cbt"])
+			expect(run(p), p).toBe("learn");
+	});
+
+	it("lets a shared page keep the visitor's choice", () => {
+		persistMode("learn");
+		expect(run("/about")).toBe("learn");
+		persistMode("build");
+		expect(run("/contact")).toBe("build");
+	});
+
+	it("falls back to the company on a shared page with nothing stored", () => {
+		expect(run("/about")).toBe(DEFAULT_MODE);
 	});
 });
 
@@ -140,7 +186,8 @@ describe("readStoredMode", () => {
 		expect(readStoredMode()).toBeNull();
 	});
 
-	it("defaults to learn", () => {
-		expect(DEFAULT_MODE).toBe("learn");
+	/* the company leads; the Academy is one of its divisions */
+	it("defaults to the company", () => {
+		expect(DEFAULT_MODE).toBe("build");
 	});
 });

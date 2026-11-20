@@ -1,6 +1,6 @@
-# Enrol — NexaHubTech
+# Enrol — NexaHubTech Academy
 
-> Apply for a place at NexaHubTech — taught live, online or in person, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.
+> Apply for a place at NexaHubTech Academy — taught live, online or in person, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.
 
 Canonical page: https://nexahubtech.company/enrol
 

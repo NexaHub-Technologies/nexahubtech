@@ -1,4 +1,4 @@
-# Mobile Videography — NexaHubTech
+# Mobile Videography — NexaHubTech Academy
 
 > Shoot, light, record and edit video worth watching — on the phone you already own.
 

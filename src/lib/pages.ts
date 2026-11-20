@@ -57,24 +57,39 @@ export const PAGES = {
 	home: {
 		path: "/",
 		name: "Home",
-		title: "NexaHubTech — Live Tech Courses, Online or In Person",
+		title: "NexaHubTech — Software Development Company in Abuja, Nigeria",
 		description:
-			"NexaHubTech offers live, instructor-led courses in software development, data, office productivity and video, backed by a working software studio. Learn online from anywhere or in person in a small class, start any day, and pay in instalments.",
+			"NexaHubTech designs, builds and maintains production software for businesses and founders — scoped carefully, built properly, and supported long after launch. Based in Abuja, Nigeria.",
 		image: "/og/home.jpg",
 		card: {
-			eyebrow: "Live, instructor-led tech courses",
+			eyebrow: "Software development company",
+			headline: "Software, built",
+			accent: "properly.",
+			sub: `${SERVICES.map((s) => s.t).join(" · ")} · ${CONTACT.website}`,
+		},
+		kind: "WebPage",
+	},
+	academy: {
+		path: "/academy",
+		name: "NexaHubTech Academy",
+		title: "NexaHubTech Academy — Live Tech Courses, Online or In Person",
+		description:
+			"NexaHubTech Academy, the training division of NexaHubTech, offers live, instructor-led courses in software development, data, office productivity and video. Learn online or in person, start any day, and pay in instalments.",
+		image: "/og/academy.jpg",
+		card: {
+			eyebrow: "Live, instructor-led courses",
 			headline: "Learn tech properly.",
 			accent: "On your terms.",
-			sub: `Online or in person · courses from ${cheapestCourse} · ${CONTACT.website}`,
+			sub: `Online or in person · courses from ${cheapestCourse} · ${CONTACT.website}/academy`,
 		},
 		kind: "WebPage",
 	},
 	courses: {
 		path: "/courses",
 		name: "Courses",
-		title: "Courses — NexaHubTech",
+		title: "Courses — NexaHubTech Academy",
 		description:
-			"Every NexaHubTech course, from first steps on a computer to React, data analysis and video — taught live, online or in person, with flexible payment plans. Start any day.",
+			"Every NexaHubTech Academy course, from first steps on a computer to React, data analysis and video — taught live, online or in person, with flexible payment plans. Start any day.",
 		image: "/og/courses.jpg",
 		card: {
 			eyebrow: "Our courses",
@@ -87,9 +102,9 @@ export const PAGES = {
 	cbt: {
 		path: "/cbt",
 		name: "WAEC & JAMB CBT Training",
-		title: "WAEC & JAMB CBT Training in Kubwa, Abuja — NexaHubTech",
+		title: "WAEC & JAMB CBT Training in Kubwa, Abuja — NexaHubTech Academy",
 		description:
-			"Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.",
+			"Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech Academy, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.",
 		image: "/og/cbt.jpg",
 		card: {
 			eyebrow: "WAEC & JAMB CBT training",
@@ -102,9 +117,9 @@ export const PAGES = {
 	fees: {
 		path: "/fees",
 		name: "Fees",
-		title: "Course Fees — NexaHubTech",
+		title: "Course Fees — NexaHubTech Academy",
 		description:
-			"Every NexaHubTech fee on one page: each course online and in person, paid in full or in instalments, plus CBT practice and rates for organisations.",
+			"Every NexaHubTech Academy fee on one page: each course online and in person, paid in full or in instalments, plus CBT practice and rates for organisations.",
 		image: "/og/fees.jpg",
 		card: {
 			eyebrow: "Fees",
@@ -117,9 +132,9 @@ export const PAGES = {
 	timetable: {
 		path: "/timetable",
 		name: "Timetable",
-		title: "Session Times — NexaHubTech",
+		title: "Session Times — NexaHubTech Academy",
 		description:
-			"When NexaHubTech classes run each week, online and in person. There are no fixed intakes: start any day and join the session that suits you.",
+			"When NexaHubTech Academy classes run each week, online and in person. There are no fixed intakes: start any day and join the session that suits you.",
 		image: "/og/timetable.jpg",
 		card: {
 			eyebrow: "Session times",
@@ -132,9 +147,9 @@ export const PAGES = {
 	forBusiness: {
 		path: "/for-business",
 		name: "For Business",
-		title: "Training for Organisations — NexaHubTech",
+		title: "Training for Organisations — NexaHubTech Academy",
 		description:
-			"Train your staff, your students or your team with NexaHubTech: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online, in person or at your office.",
+			"Train your staff, your students or your team with NexaHubTech Academy: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online, in person or at your office.",
 		image: "/og/for-business.jpg",
 		card: {
 			eyebrow: "For organisations",
@@ -147,8 +162,8 @@ export const PAGES = {
 	centre: {
 		path: "/centre",
 		name: "Learning Centre",
-		title: "Our Learning Centre — NexaHubTech",
-		description: `Visit the NexaHubTech learning centre at ${CONTACT.address}: small classes of no more than ${CENTRE_SEATS}, machines provided, open ${CBT_DETAILS.hours}. You are welcome to visit before you enrol.`,
+		title: "Our Learning Centre — NexaHubTech Academy",
+		description: `Visit the NexaHubTech Academy learning centre at ${CONTACT.address}: small classes of no more than ${CENTRE_SEATS}, machines provided, open ${CBT_DETAILS.hours}. You are welcome to visit before you enrol.`,
 		image: "/og/centre.jpg",
 		card: {
 			eyebrow: "Learning centre",
@@ -161,9 +176,9 @@ export const PAGES = {
 	teaching: {
 		path: "/teaching",
 		name: "How We Teach",
-		title: "How We Teach — NexaHubTech",
+		title: "How We Teach — NexaHubTech Academy",
 		description:
-			"The pedagogy behind every NexaHubTech course: the mental model before the syntax, one idea at a time, and a session built in three parts.",
+			"The pedagogy behind every NexaHubTech Academy course: the mental model before the syntax, one idea at a time, and a session built in three parts.",
 		image: "/og/teaching.jpg",
 		card: {
 			eyebrow: "How we teach",
@@ -176,9 +191,9 @@ export const PAGES = {
 	enrol: {
 		path: "/enrol",
 		name: "Enrol",
-		title: "Enrol — NexaHubTech",
+		title: "Enrol — NexaHubTech Academy",
 		description:
-			"Apply for a place at NexaHubTech — taught live, online or in person, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.",
+			"Apply for a place at NexaHubTech Academy — taught live, online or in person, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.",
 		image: "/og/enrol.jpg",
 		card: {
 			eyebrow: "Enrolment",
@@ -193,7 +208,7 @@ export const PAGES = {
 		name: "Services",
 		title: "Services — NexaHubTech",
 		description:
-			"What the NexaHubTech studio builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.",
+			"What NexaHubTech builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.",
 		image: "/og/services.jpg",
 		card: {
 			eyebrow: "Our services",
@@ -223,13 +238,13 @@ export const PAGES = {
 		name: "About",
 		title: "About — NexaHubTech",
 		description:
-			"NexaHubTech is a Nigeria-based skills-to-service company — a tech school and a software studio built on one idea: learning should be tied to real work.",
+			"NexaHubTech is a Nigeria-based software development company. Its training division, NexaHubTech Academy, teaches the skills the company practises — in live courses, online or in person.",
 		image: "/og/about.jpg",
 		card: {
 			eyebrow: "Who we are",
 			headline: "We closed the gap between",
 			accent: "learning and building.",
-			sub: "A tech school and a software studio",
+			sub: "A software company · and its Academy",
 		},
 		kind: "AboutPage",
 	},
@@ -238,7 +253,7 @@ export const PAGES = {
 		name: "Contact",
 		title: "Contact — NexaHubTech",
 		description:
-			"Get in touch with NexaHubTech — ask about a course, taught live and started whenever you like, or start a project with the studio.",
+			"Get in touch with NexaHubTech — start a software project with the company, or ask NexaHubTech Academy about a course.",
 		image: "/og/contact.jpg",
 		card: {
 			eyebrow: "Two ways in",
@@ -252,7 +267,7 @@ export const PAGES = {
 		name: "Our Work",
 		title: "Our Work — NexaHubTech",
 		description:
-			"Case studies from the NexaHubTech studio: cooperative society platforms, a two-sided parking marketplace, a real-time video platform, and an infinite-canvas social product.",
+			"Case studies from NexaHubTech: cooperative society platforms, a two-sided parking marketplace, a real-time video platform, and an infinite-canvas social product.",
 		image: "/og/work.jpg",
 		card: {
 			eyebrow: "Our work",
@@ -270,7 +285,7 @@ export function coursePage(course: Course): Page {
 	return {
 		path: `/courses/${course.slug}`,
 		name: course.t,
-		title: `${course.t} — NexaHubTech`,
+		title: `${course.t} — NexaHubTech Academy`,
 		description: course.tagline,
 		image: `/og/course-${course.slug}.jpg`,
 		card: {
@@ -302,6 +317,7 @@ export function servicePage(service: ServiceLine): Page {
 export const INDEXABLE_PAGES: Page[] = [
 	...[
 		PAGES.home,
+		PAGES.academy,
 		PAGES.courses,
 		PAGES.fees,
 		PAGES.timetable,

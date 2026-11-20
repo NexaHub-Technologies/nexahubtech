@@ -1,6 +1,6 @@
-# WAEC & JAMB CBT Training — NexaHubTech
+# WAEC & JAMB CBT Training — NexaHubTech Academy
 
-> Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
+> Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech Academy, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
 
 Canonical page: https://nexahubtech.company/cbt
 

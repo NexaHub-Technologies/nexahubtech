@@ -1,6 +1,6 @@
-# For Business — NexaHubTech
+# For Business — NexaHubTech Academy
 
-> Train your staff, your students or your team with NexaHubTech: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online, in person or at your office.
+> Train your staff, your students or your team with NexaHubTech Academy: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online, in person or at your office.
 
 Canonical page: https://nexahubtech.company/for-business
 

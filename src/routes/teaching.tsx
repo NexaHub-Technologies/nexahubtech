@@ -198,7 +198,7 @@ function Teaching() {
 				</div>
 			</section>
 
-			{/* the same idea, on the studio side */}
+			{/* the same idea, at the parent company */}
 			<section className="wrap py-14">
 				<div className="reveal grid md:grid-cols-2 gap-5">
 					<div className="card card-lift panel-learn p-9">
@@ -215,14 +215,14 @@ function Teaching() {
 						</Link>
 					</div>
 					<div className="card card-lift panel-studio p-9">
-						<Eyebrow variant="build">The same idea, applied</Eyebrow>
+						<Eyebrow variant="build">At NexaHubTech</Eyebrow>
 						<h3 className="display text-[1.6rem] mt-3">
-							It is how the studio works too.
+							It is how NexaHubTech builds, too.
 						</h3>
 						<p className="lead mt-3">
-							Understand before you build is not only a teaching method here —
-							it is eleven steps of system design before any client project gets
-							written.
+							Understand before you build is not only how the Academy teaches —
+							at NexaHubTech, our parent company, it is eleven steps of system
+							design before any client project gets written.
 						</p>
 						<Link to="/approach" className="btn btn-teal mt-5">
 							See how we build

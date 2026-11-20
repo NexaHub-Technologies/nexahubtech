@@ -1,4 +1,4 @@
-# PC Basics — NexaHubTech
+# PC Basics — NexaHubTech Academy
 
 > Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
 

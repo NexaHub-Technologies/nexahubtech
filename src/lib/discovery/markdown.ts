@@ -17,7 +17,14 @@ import {
 	CBT_PACKAGES,
 	CBT_PILLARS,
 } from "../cbt";
-import { MISSION, SUMMARY, THESIS, VALUES, VISION } from "../company";
+import {
+	ACADEMY_SUMMARY,
+	MISSION,
+	SUMMARY,
+	THESIS,
+	VALUES,
+	VISION,
+} from "../company";
 import { CONTACT, MOTTO, SITE_URL } from "../contact";
 import {
 	bundleSaving,
@@ -38,6 +45,7 @@ import {
 	offeredOnline,
 	priceLabel,
 } from "../courses";
+import { ARM_NAME, modeForPath } from "../mode";
 import {
 	coursePage,
 	INDEXABLE_PAGES,
@@ -89,11 +97,21 @@ function home(): string {
 
 Motto: *${MOTTO}*
 
-## How it works
+## What we build
 
-${THESIS}
+${SERVICES.map(serviceLine).join("\n")}
 
-## The school — ${COURSES.length} live courses, online or in person, start any day
+How a project runs: ${mdLink(PAGES.approach)}. To start one: ${mdLink(PAGES.contact)}.
+
+## NexaHubTech Academy
+
+${ACADEMY_SUMMARY} It is run as a separate business with its own pages: ${mdLink(PAGES.academy)}.`;
+}
+
+function academy(): string {
+	return `${ACADEMY_SUMMARY}
+
+## ${COURSES.length} live courses, online or in person, start any day
 
 Every course but PC Basics can be taken live online or in person, in a class of no more than ${CENTRE_SEATS}. Fees can be paid in full or in instalments: ${mdLink(PAGES.fees)}. Session times: ${mdLink(PAGES.timetable)}.
 
@@ -102,11 +120,9 @@ ${cbtLine()}
 
 How the teaching works: ${mdLink(PAGES.teaching)}. The learning centre: ${mdLink(PAGES.centre)}. Training for organisations: ${mdLink(PAGES.forBusiness)}. To apply: ${mdLink(PAGES.enrol)}.
 
-## The studio — software built properly
+## Backed by NexaHubTech
 
-${SERVICES.map(serviceLine).join("\n")}
-
-How a project runs: ${mdLink(PAGES.approach)}.`;
+${THESIS} The parent company: ${mdLink(PAGES.home)}.`;
 }
 
 function courses(): string {
@@ -372,7 +388,11 @@ ${phase.steps.map((s) => `${s.n}. **${s.t}** — ${s.d}`).join("\n")}`,
 function about(): string {
 	return `${SUMMARY}
 
-## Skills-to-service
+## NexaHubTech Academy
+
+${ACADEMY_SUMMARY} ${mdLink(PAGES.academy)}
+
+## How they relate
 
 ${THESIS}
 
@@ -402,6 +422,7 @@ function body(page: Page): string {
 	if (s) return serviceDetail(s);
 	const bodies: Record<string, () => string> = {
 		[PAGES.home.path]: home,
+		[PAGES.academy.path]: academy,
 		[PAGES.courses.path]: courses,
 		[PAGES.fees.path]: fees,
 		[PAGES.timetable.path]: timetable,
@@ -423,8 +444,13 @@ function body(page: Page): string {
 /* one page as markdown. The header repeats the page's own title, summary and
    canonical URL, so a file that is fetched alone still says what it is. */
 export function pageMarkdown(page: Page): string {
+	/* each page is titled with the business it belongs to; the shared pages
+	   (about, contact) belong to the parent company */
+	const brand = ARM_NAME[modeForPath(page.path) ?? "build"];
 	const title =
-		page.path === "/" ? "NexaHubTech" : `${page.name} — NexaHubTech`;
+		page.path === "/" || page.name === brand
+			? brand
+			: `${page.name} — ${brand}`;
 	return `# ${title}
 
 > ${page.description}
@@ -440,6 +466,7 @@ ${CONTACT_BLOCK}
 /* ── llms.txt ───────────────────────────────────────────────────── */
 
 const school = [
+	PAGES.academy,
 	PAGES.courses,
 	PAGES.fees,
 	PAGES.timetable,
@@ -462,7 +489,7 @@ export function llmsTxt(): string {
 
 > ${SUMMARY}
 
-Motto: "${MOTTO}" Based at ${CONTACT.address}, Nigeria (CAC RC ${CONTACT.rc}). Every course is taught live and starts whenever the student is ready, online or in person (no more than ${CENTRE_SEATS} per in-person class, priced above a place online). ${names(COURSES.filter((c) => offeredInPerson(c) && !offeredOnline(c)))} and CBT training are taught in person only. Fees can be paid in instalments. Prices are in Nigerian naira (NGN). Contact: ${CONTACT.email}, ${CONTACT.phoneDisplay}, WhatsApp ${CONTACT.whatsapp}.
+Motto: "${MOTTO}" Based at ${CONTACT.address}, Nigeria (CAC RC ${CONTACT.rc}). Its training division, NexaHubTech Academy, runs as a separate business with its own pages. Every Academy course is taught live and starts whenever the student is ready, online or in person (no more than ${CENTRE_SEATS} per in-person class, priced above a place online). ${names(COURSES.filter((c) => offeredInPerson(c) && !offeredOnline(c)))} and CBT training are taught in person only. Fees can be paid in instalments. Prices are in Nigerian naira (NGN). Contact: ${CONTACT.email}, ${CONTACT.phoneDisplay}, WhatsApp ${CONTACT.whatsapp}.
 
 Each link below is the markdown version of a page on ${SITE_URL}; drop the \`.md\` suffix for the HTML page.
 
@@ -470,7 +497,9 @@ Each link below is the markdown version of a page on ${SITE_URL}; drop the \`.md
 
 ${entry(PAGES.home)}
 
-## The school
+## NexaHubTech Academy — the training division
+
+${ACADEMY_SUMMARY}
 
 ${school.map((p) => entry(p)).join("\n")}
 
@@ -478,7 +507,7 @@ ${school.map((p) => entry(p)).join("\n")}
 
 ${COURSES.map((c) => entry(coursePage(c), `${c.d ? `${c.d}. ` : ""}${feeSummary(c)}. ${c.duration}. ${c.tagline}`)).join("\n")}
 
-## The studio
+## Services
 
 ${studio.map((p) => entry(p)).join("\n")}
 ${SERVICES.map((s) => entry(servicePage(s))).join("\n")}

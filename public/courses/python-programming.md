@@ -1,4 +1,4 @@
-# Python Programming — NexaHubTech
+# Python Programming — NexaHubTech Academy
 
 > Learn programming from scratch with Python — the language that powers everything from scripts to AI.
 

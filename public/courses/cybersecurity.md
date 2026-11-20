@@ -1,4 +1,4 @@
-# Cybersecurity — NexaHubTech
+# Cybersecurity — NexaHubTech Academy
 
 > Understand how systems are attacked — and how to defend them.
 

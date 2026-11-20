@@ -1,6 +1,6 @@
 # Services — NexaHubTech
 
-> What the NexaHubTech studio builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.
+> What NexaHubTech builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.
 
 Canonical page: https://nexahubtech.company/services
 

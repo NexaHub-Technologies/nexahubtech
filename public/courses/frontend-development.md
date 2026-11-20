@@ -1,4 +1,4 @@
-# Frontend Development — NexaHubTech
+# Frontend Development — NexaHubTech Academy
 
 > Learn the web from first principles — HTML, CSS, and JavaScript done properly.
 

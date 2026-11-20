@@ -1,14 +1,18 @@
 # About — NexaHubTech
 
-> NexaHubTech is a Nigeria-based skills-to-service company — a tech school and a software studio built on one idea: learning should be tied to real work.
+> NexaHubTech is a Nigeria-based software development company. Its training division, NexaHubTech Academy, teaches the skills the company practises — in live courses, online or in person.
 
 Canonical page: https://nexahubtech.company/about
 
-NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio under one roof. We teach real, in-demand skills — and then put them to work on real client products.
+NexaHubTech is a Nigeria-based software development company. We design, build and maintain production software for businesses and founders — scoped carefully, built properly, and supported long after launch.
 
-## Skills-to-service
+## NexaHubTech Academy
 
-The studio meets real engineering problems. Those problems shape what we teach. The school grows people who go on to help build — and the loop continues. Nobody learns in a vacuum, and nobody ships without principles.
+NexaHubTech Academy is the training division of NexaHubTech. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day. [NexaHubTech Academy](https://nexahubtech.company/academy.md)
+
+## How they relate
+
+The company builds software for clients; the Academy teaches what the company practises. The engineering problems we meet on client work shape the Academy's lessons, and its strongest learners go on to build with us. Two businesses, one standard: understand the problem first, then build.
 
 ## Vision
 

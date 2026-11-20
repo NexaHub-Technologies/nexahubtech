@@ -725,13 +725,14 @@
   font-size: 0.76rem;
   padding: 0.32rem 0.6rem;
 }
-@media (max-width: 359px) {
+@media (max-width: 399px) {
   .mode-switch.is-compact button {
     font-size: 0.72rem;
     padding: 0.3rem 0.5rem;
   }
-  /* below ~360px the bar cannot hold wordmark + switch + menu button. The mark
-     and the link's aria-label still identify it. */
+  /* below ~400px the bar cannot hold wordmark + "Company | Academy" + menu
+     button. The mark, the switch's lit side and the link's aria-label still say
+     which business this is. */
   .site-header .site-wordmark {
     display: none;
   }
@@ -1514,7 +1515,10 @@ a.contact-detail:hover {
 .blast .hero-stage {
   padding: 0;
 }
-.blast .jcard {
+/* the hero stage is dark on both sides, so its cards stay white on both —
+   the company side's card token would otherwise turn them dark-on-dark */
+.blast .jcard,
+:root[data-mode='build'] .blast .jcard {
   background: #ffffff;
   color: #311049;
   border: 0;
@@ -2480,4 +2484,46 @@ a.contact-detail:hover {
 .path-arrow {
   color: var(--mute);
   font-size: 0.85rem;
+}
+
+/* "NexaHubTech Academy": the division name sits beside the company's, smaller
+   and in the Academy's own ink, so the two read as parent and division */
+.site-subbrand {
+  margin-left: 0.4em;
+  font-weight: 600;
+  font-size: 0.82em;
+  color: var(--learn-ink);
+}
+/* on a phone the division name drops under the company's, so the header keeps
+   room for the switch and the menu button */
+@media (max-width: 639px) {
+  .site-header .site-wordmark:has(.site-subbrand) {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+  }
+  .site-header .site-subbrand {
+    margin-left: 0;
+    font-size: 0.72em;
+  }
+}
+@media (max-width: 399px) {
+  .site-header .site-wordmark:has(.site-subbrand) {
+    display: none;
+  }
+}
+
+
+/* nav labels never wrap onto two lines, and between the lg and xl breakpoints
+   they tighten so the Academy's longer header still fits on one row */
+.nav-link {
+  white-space: nowrap;
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .site-header .nav-link {
+    font-size: 0.86rem;
+  }
+  .site-header .mode-switch button {
+    padding-inline: 0.7rem;
+  }
 }

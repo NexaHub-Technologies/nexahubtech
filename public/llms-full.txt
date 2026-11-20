@@ -1,25 +1,28 @@
 # NexaHubTech
 
-> NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio under one roof. We teach real, in-demand skills — and then put them to work on real client products.
+> NexaHubTech is a Nigeria-based software development company. We design, build and maintain production software for businesses and founders — scoped carefully, built properly, and supported long after launch.
 
-Motto: "Learn to build. Build for real." Based at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria (CAC RC 9545130). Every course is taught live and starts whenever the student is ready, online or in person (no more than 6 per in-person class, priced above a place online). PC Basics and CBT training are taught in person only. Fees can be paid in instalments. Prices are in Nigerian naira (NGN). Contact: nexahubt@gmail.com, +234 913 451 3173, WhatsApp https://wa.me/2349134513173.
+Motto: "Learn to build. Build for real." Based at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria (CAC RC 9545130). Its training division, NexaHubTech Academy, runs as a separate business with its own pages. Every Academy course is taught live and starts whenever the student is ready, online or in person (no more than 6 per in-person class, priced above a place online). PC Basics and CBT training are taught in person only. Fees can be paid in instalments. Prices are in Nigerian naira (NGN). Contact: nexahubt@gmail.com, +234 913 451 3173, WhatsApp https://wa.me/2349134513173.
 
 Each link below is the markdown version of a page on https://nexahubtech.company; drop the `.md` suffix for the HTML page.
 
 ## Start here
 
-- [Home](https://nexahubtech.company/home.md): NexaHubTech offers live, instructor-led courses in software development, data, office productivity and video, backed by a working software studio. Learn online from anywhere or in person in a small class, start any day, and pay in instalments.
+- [Home](https://nexahubtech.company/home.md): NexaHubTech designs, builds and maintains production software for businesses and founders — scoped carefully, built properly, and supported long after launch. Based in Abuja, Nigeria.
 
-## The school
+## NexaHubTech Academy — the training division
 
-- [Courses](https://nexahubtech.company/courses.md): Every NexaHubTech course, from first steps on a computer to React, data analysis and video — taught live, online or in person, with flexible payment plans. Start any day.
-- [Fees](https://nexahubtech.company/fees.md): Every NexaHubTech fee on one page: each course online and in person, paid in full or in instalments, plus CBT practice and rates for organisations.
-- [Timetable](https://nexahubtech.company/timetable.md): When NexaHubTech classes run each week, online and in person. There are no fixed intakes: start any day and join the session that suits you.
-- [WAEC & JAMB CBT Training](https://nexahubtech.company/cbt.md): Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
-- [For Business](https://nexahubtech.company/for-business.md): Train your staff, your students or your team with NexaHubTech: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online, in person or at your office.
-- [Learning Centre](https://nexahubtech.company/centre.md): Visit the NexaHubTech learning centre at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja: small classes of no more than 6, machines provided, open Monday – Saturday, 8:00 AM – 6:00 PM. You are welcome to visit before you enrol.
-- [How We Teach](https://nexahubtech.company/teaching.md): The pedagogy behind every NexaHubTech course: the mental model before the syntax, one idea at a time, and a session built in three parts.
-- [Enrol](https://nexahubtech.company/enrol.md): Apply for a place at NexaHubTech — taught live, online or in person, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.
+NexaHubTech Academy is the training division of NexaHubTech. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day.
+
+- [NexaHubTech Academy](https://nexahubtech.company/academy.md): NexaHubTech Academy, the training division of NexaHubTech, offers live, instructor-led courses in software development, data, office productivity and video. Learn online or in person, start any day, and pay in instalments.
+- [Courses](https://nexahubtech.company/courses.md): Every NexaHubTech Academy course, from first steps on a computer to React, data analysis and video — taught live, online or in person, with flexible payment plans. Start any day.
+- [Fees](https://nexahubtech.company/fees.md): Every NexaHubTech Academy fee on one page: each course online and in person, paid in full or in instalments, plus CBT practice and rates for organisations.
+- [Timetable](https://nexahubtech.company/timetable.md): When NexaHubTech Academy classes run each week, online and in person. There are no fixed intakes: start any day and join the session that suits you.
+- [WAEC & JAMB CBT Training](https://nexahubtech.company/cbt.md): Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech Academy, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
+- [For Business](https://nexahubtech.company/for-business.md): Train your staff, your students or your team with NexaHubTech Academy: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online, in person or at your office.
+- [Learning Centre](https://nexahubtech.company/centre.md): Visit the NexaHubTech Academy learning centre at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja: small classes of no more than 6, machines provided, open Monday – Saturday, 8:00 AM – 6:00 PM. You are welcome to visit before you enrol.
+- [How We Teach](https://nexahubtech.company/teaching.md): The pedagogy behind every NexaHubTech Academy course: the mental model before the syntax, one idea at a time, and a session built in three parts.
+- [Enrol](https://nexahubtech.company/enrol.md): Apply for a place at NexaHubTech Academy — taught live, online or in person, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.
 
 ## Courses
 
@@ -40,17 +43,17 @@ Each link below is the markdown version of a page on https://nexahubtech.company
 - [Videography & Video Editing](https://nexahubtech.company/courses/videography-video-editing.md): Live online ₦100,000 (or 2 × ₦55,000) · In person ₦120,000 (or 2 × ₦65,000). 8 Weeks. Capture and craft video content that communicates — from shooting to final cut.
 - [Cybersecurity](https://nexahubtech.company/courses/cybersecurity.md): Live online ₦230,000 (or 3 × ₦82,500) · In person ₦280,000 (or 3 × ₦100,000). 16 Weeks. Understand how systems are attacked — and how to defend them.
 
-## The studio
+## Services
 
-- [Services](https://nexahubtech.company/services.md): What the NexaHubTech studio builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.
+- [Services](https://nexahubtech.company/services.md): What NexaHubTech builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.
 - [Our Approach](https://nexahubtech.company/approach.md): How NexaHubTech works: we settle what should be built, and why, before any of it gets written — for company websites and for the software your members sign into.
 - [Software Development](https://nexahubtech.company/services/software-development.md): Products built to last — thought through before they’re built, then kept running.
 - [Digital Solutions](https://nexahubtech.company/services/digital-solutions.md): The work around the product that decides whether it actually lands.
 
 ## The company
 
-- [About](https://nexahubtech.company/about.md): NexaHubTech is a Nigeria-based skills-to-service company — a tech school and a software studio built on one idea: learning should be tied to real work.
-- [Contact](https://nexahubtech.company/contact.md): Get in touch with NexaHubTech — ask about a course, taught live and started whenever you like, or start a project with the studio.
+- [About](https://nexahubtech.company/about.md): NexaHubTech is a Nigeria-based software development company. Its training division, NexaHubTech Academy, teaches the skills the company practises — in live courses, online or in person.
+- [Contact](https://nexahubtech.company/contact.md): Get in touch with NexaHubTech — start a software project with the company, or ask NexaHubTech Academy about a course.
 
 ## Optional
 
@@ -60,19 +63,44 @@ Each link below is the markdown version of a page on https://nexahubtech.company
 
 # NexaHubTech
 
-> NexaHubTech offers live, instructor-led courses in software development, data, office productivity and video, backed by a working software studio. Learn online from anywhere or in person in a small class, start any day, and pay in instalments.
+> NexaHubTech designs, builds and maintains production software for businesses and founders — scoped carefully, built properly, and supported long after launch. Based in Abuja, Nigeria.
 
 Canonical page: https://nexahubtech.company/
 
-NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio under one roof. We teach real, in-demand skills — and then put them to work on real client products.
+NexaHubTech is a Nigeria-based software development company. We design, build and maintain production software for businesses and founders — scoped carefully, built properly, and supported long after launch.
 
 Motto: *Learn to build. Build for real.*
 
-## How it works
+## What we build
 
-The studio meets real engineering problems. Those problems shape what we teach. The school grows people who go on to help build — and the loop continues. Nobody learns in a vacuum, and nobody ships without principles.
+- [Software Development](https://nexahubtech.company/services/software-development.md) — Products built to last — thought through before they’re built, then kept running. (Custom software development, Website design & development, Mobile application development, Enterprise solutions, API development & integration, Software maintenance & support)
+- [Digital Solutions](https://nexahubtech.company/services/digital-solutions.md) — The work around the product that decides whether it actually lands. (Branding & digital strategy, Business process automation, IT consulting, Cloud solutions, Technical support)
 
-## The school — 16 live courses, online or in person, start any day
+How a project runs: [Our Approach](https://nexahubtech.company/approach.md). To start one: [Contact](https://nexahubtech.company/contact.md).
+
+## NexaHubTech Academy
+
+NexaHubTech Academy is the training division of NexaHubTech. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day. It is run as a separate business with its own pages: [NexaHubTech Academy](https://nexahubtech.company/academy.md).
+
+## Contact
+
+- Email: nexahubt@gmail.com
+- Phone: +234 913 451 3173
+- WhatsApp: https://wa.me/2349134513173
+- Address: Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria
+- Company registration: RC 9545130
+
+---
+
+# NexaHubTech Academy
+
+> NexaHubTech Academy, the training division of NexaHubTech, offers live, instructor-led courses in software development, data, office productivity and video. Learn online or in person, start any day, and pay in instalments.
+
+Canonical page: https://nexahubtech.company/academy
+
+NexaHubTech Academy is the training division of NexaHubTech. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day.
+
+## 16 live courses, online or in person, start any day
 
 Every course but PC Basics can be taken live online or in person, in a class of no more than 6. Fees can be paid in full or in instalments: [Fees](https://nexahubtech.company/fees.md). Session times: [Timetable](https://nexahubtech.company/timetable.md).
 
@@ -96,12 +124,9 @@ Every course but PC Basics can be taken live online or in person, in a class of 
 
 How the teaching works: [How We Teach](https://nexahubtech.company/teaching.md). The learning centre: [Learning Centre](https://nexahubtech.company/centre.md). Training for organisations: [For Business](https://nexahubtech.company/for-business.md). To apply: [Enrol](https://nexahubtech.company/enrol.md).
 
-## The studio — software built properly
+## Backed by NexaHubTech
 
-- [Software Development](https://nexahubtech.company/services/software-development.md) — Products built to last — thought through before they’re built, then kept running. (Custom software development, Website design & development, Mobile application development, Enterprise solutions, API development & integration, Software maintenance & support)
-- [Digital Solutions](https://nexahubtech.company/services/digital-solutions.md) — The work around the product that decides whether it actually lands. (Branding & digital strategy, Business process automation, IT consulting, Cloud solutions, Technical support)
-
-How a project runs: [Our Approach](https://nexahubtech.company/approach.md).
+The company builds software for clients; the Academy teaches what the company practises. The engineering problems we meet on client work shape the Academy's lessons, and its strongest learners go on to build with us. Two businesses, one standard: understand the problem first, then build. The parent company: [Home](https://nexahubtech.company/home.md).
 
 ## Contact
 
@@ -113,9 +138,9 @@ How a project runs: [Our Approach](https://nexahubtech.company/approach.md).
 
 ---
 
-# Courses — NexaHubTech
+# Courses — NexaHubTech Academy
 
-> Every NexaHubTech course, from first steps on a computer to React, data analysis and video — taught live, online or in person, with flexible payment plans. Start any day.
+> Every NexaHubTech Academy course, from first steps on a computer to React, data analysis and video — taught live, online or in person, with flexible payment plans. Start any day.
 
 Canonical page: https://nexahubtech.company/courses
 
@@ -178,9 +203,9 @@ Apply for any course at https://nexahubtech.company/enrol.
 
 ---
 
-# Fees — NexaHubTech
+# Fees — NexaHubTech Academy
 
-> Every NexaHubTech fee on one page: each course online and in person, paid in full or in instalments, plus CBT practice and rates for organisations.
+> Every NexaHubTech Academy fee on one page: each course online and in person, paid in full or in instalments, plus CBT practice and rates for organisations.
 
 Canonical page: https://nexahubtech.company/fees
 
@@ -253,9 +278,9 @@ Details: [For Business](https://nexahubtech.company/for-business.md).
 
 ---
 
-# Timetable — NexaHubTech
+# Timetable — NexaHubTech Academy
 
-> When NexaHubTech classes run each week, online and in person. There are no fixed intakes: start any day and join the session that suits you.
+> When NexaHubTech Academy classes run each week, online and in person. There are no fixed intakes: start any day and join the session that suits you.
 
 Canonical page: https://nexahubtech.company/timetable
 
@@ -292,9 +317,9 @@ Which session a course runs in: Computer Essentials, PC Basics, Office Essential
 
 ---
 
-# WAEC & JAMB CBT Training — NexaHubTech
+# WAEC & JAMB CBT Training — NexaHubTech Academy
 
-> Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
+> Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech Academy, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
 
 Canonical page: https://nexahubtech.company/cbt
 
@@ -385,9 +410,9 @@ Yes. Walk in during opening hours, look at the lab, and take a short free placem
 
 ---
 
-# For Business — NexaHubTech
+# For Business — NexaHubTech Academy
 
-> Train your staff, your students or your team with NexaHubTech: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online, in person or at your office.
+> Train your staff, your students or your team with NexaHubTech Academy: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online, in person or at your office.
 
 Canonical page: https://nexahubtech.company/for-business
 
@@ -436,9 +461,9 @@ To arrange any of these, email nexahubt@gmail.com or message https://wa.me/23491
 
 ---
 
-# Learning Centre — NexaHubTech
+# Learning Centre — NexaHubTech Academy
 
-> Visit the NexaHubTech learning centre at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja: small classes of no more than 6, machines provided, open Monday – Saturday, 8:00 AM – 6:00 PM. You are welcome to visit before you enrol.
+> Visit the NexaHubTech Academy learning centre at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja: small classes of no more than 6, machines provided, open Monday – Saturday, 8:00 AM – 6:00 PM. You are welcome to visit before you enrol.
 
 Canonical page: https://nexahubtech.company/centre
 
@@ -482,9 +507,9 @@ You are welcome to visit before you enrol. CBT candidates can take a short free 
 
 ---
 
-# How We Teach — NexaHubTech
+# How We Teach — NexaHubTech Academy
 
-> The pedagogy behind every NexaHubTech course: the mental model before the syntax, one idea at a time, and a session built in three parts.
+> The pedagogy behind every NexaHubTech Academy course: the mental model before the syntax, one idea at a time, and a session built in three parts.
 
 Canonical page: https://nexahubtech.company/teaching
 
@@ -518,9 +543,9 @@ Canonical page: https://nexahubtech.company/teaching
 
 ---
 
-# Enrol — NexaHubTech
+# Enrol — NexaHubTech Academy
 
-> Apply for a place at NexaHubTech — taught live, online or in person, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.
+> Apply for a place at NexaHubTech Academy — taught live, online or in person, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.
 
 Canonical page: https://nexahubtech.company/enrol
 
@@ -559,7 +584,7 @@ For WAEC & JAMB CBT training, see [WAEC & JAMB CBT Training](https://nexahubtech
 
 # Services — NexaHubTech
 
-> What the NexaHubTech studio builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.
+> What NexaHubTech builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.
 
 Canonical page: https://nexahubtech.company/services
 
@@ -649,15 +674,19 @@ The last three steps turn a design into something you can hold us to — and som
 
 # About — NexaHubTech
 
-> NexaHubTech is a Nigeria-based skills-to-service company — a tech school and a software studio built on one idea: learning should be tied to real work.
+> NexaHubTech is a Nigeria-based software development company. Its training division, NexaHubTech Academy, teaches the skills the company practises — in live courses, online or in person.
 
 Canonical page: https://nexahubtech.company/about
 
-NexaHubTech is a Nigeria-based skills-to-service company: a tech school and a software studio under one roof. We teach real, in-demand skills — and then put them to work on real client products.
+NexaHubTech is a Nigeria-based software development company. We design, build and maintain production software for businesses and founders — scoped carefully, built properly, and supported long after launch.
 
-## Skills-to-service
+## NexaHubTech Academy
 
-The studio meets real engineering problems. Those problems shape what we teach. The school grows people who go on to help build — and the loop continues. Nobody learns in a vacuum, and nobody ships without principles.
+NexaHubTech Academy is the training division of NexaHubTech. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day. [NexaHubTech Academy](https://nexahubtech.company/academy.md)
+
+## How they relate
+
+The company builds software for clients; the Academy teaches what the company practises. The engineering problems we meet on client work shape the Academy's lessons, and its strongest learners go on to build with us. Two businesses, one standard: understand the problem first, then build.
 
 ## Vision
 
@@ -688,7 +717,7 @@ To design and deliver cutting-edge technology solutions that solve practical pro
 
 # Contact — NexaHubTech
 
-> Get in touch with NexaHubTech — ask about a course, taught live and started whenever you like, or start a project with the studio.
+> Get in touch with NexaHubTech — start a software project with the company, or ask NexaHubTech Academy about a course.
 
 Canonical page: https://nexahubtech.company/contact
 
@@ -706,7 +735,7 @@ The centre at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja is open M
 
 ---
 
-# Computer Essentials — NexaHubTech
+# Computer Essentials — NexaHubTech Academy
 
 > Three weeks from never having used a computer to saving, finding and printing your own work — with somebody beside you the whole way.
 
@@ -787,7 +816,7 @@ Apply at https://nexahubtech.company/enrol?course=computer-essentials — or ask
 
 ---
 
-# PC Basics — NexaHubTech
+# PC Basics — NexaHubTech Academy
 
 > Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
 
@@ -870,7 +899,7 @@ Apply at https://nexahubtech.company/enrol?course=pc-basics — or ask a questio
 
 ---
 
-# Office Essentials — NexaHubTech
+# Office Essentials — NexaHubTech Academy
 
 > The two programs most office work actually happens in — Word and Excel — in four weeks, taught properly.
 
@@ -952,7 +981,7 @@ Apply at https://nexahubtech.company/enrol?course=office-essentials — or ask a
 
 ---
 
-# Microsoft Office — NexaHubTech
+# Microsoft Office — NexaHubTech Academy
 
 > The four programs an office actually runs on, taught to the standard the work deserves.
 
@@ -1037,7 +1066,7 @@ Apply at https://nexahubtech.company/enrol?course=microsoft-office — or ask a 
 
 ---
 
-# Python Programming — NexaHubTech
+# Python Programming — NexaHubTech Academy
 
 > Learn programming from scratch with Python — the language that powers everything from scripts to AI.
 
@@ -1125,7 +1154,7 @@ Apply at https://nexahubtech.company/enrol?course=python-programming — or ask 
 
 ---
 
-# JavaScript Programming — NexaHubTech
+# JavaScript Programming — NexaHubTech Academy
 
 > Learn JavaScript as a language — the same core that runs in a browser and on a server.
 
@@ -1215,7 +1244,7 @@ Apply at https://nexahubtech.company/enrol?course=javascript-programming — or 
 
 ---
 
-# Frontend Development — NexaHubTech
+# Frontend Development — NexaHubTech Academy
 
 > Learn the web from first principles — HTML, CSS, and JavaScript done properly.
 
@@ -1303,7 +1332,7 @@ Apply at https://nexahubtech.company/enrol?course=frontend-development — or as
 
 ---
 
-# Backend Development — NexaHubTech
+# Backend Development — NexaHubTech Academy
 
 > Build the engine behind applications — APIs, databases, and server-side logic.
 
@@ -1392,7 +1421,7 @@ Apply at https://nexahubtech.company/enrol?course=backend-development — or ask
 
 ---
 
-# Web Development — NexaHubTech
+# Web Development — NexaHubTech Academy
 
 > Learn frontend and backend in one complete path — from first principles to full applications.
 
@@ -1485,7 +1514,7 @@ Apply at https://nexahubtech.company/enrol?course=web-development-fullstack — 
 
 ---
 
-# React — NexaHubTech
+# React — NexaHubTech Academy
 
 > Go beyond the basics — build React applications that stay understandable as they grow.
 
@@ -1576,7 +1605,7 @@ Apply at https://nexahubtech.company/enrol?course=react-development — or ask a
 
 ---
 
-# Next.js — NexaHubTech
+# Next.js — NexaHubTech Academy
 
 > Build fullstack applications on the React metaframework — routing, rendering, and data in one stack.
 
@@ -1668,7 +1697,7 @@ Apply at https://nexahubtech.company/enrol?course=nextjs-fullstack — or ask a 
 
 ---
 
-# Mobile Development — NexaHubTech
+# Mobile Development — NexaHubTech Academy
 
 > Build real mobile applications — from concept to the app store.
 
@@ -1753,7 +1782,7 @@ Apply at https://nexahubtech.company/enrol?course=mobile-development — or ask 
 
 ---
 
-# Data Analysis — NexaHubTech
+# Data Analysis — NexaHubTech Academy
 
 > Turn raw data into clear insights — with Python, SQL, and real analytical thinking.
 
@@ -1839,7 +1868,7 @@ Apply at https://nexahubtech.company/enrol?course=data-analysis — or ask a que
 
 ---
 
-# Mobile Videography — NexaHubTech
+# Mobile Videography — NexaHubTech Academy
 
 > Shoot, light, record and edit video worth watching — on the phone you already own.
 
@@ -1921,7 +1950,7 @@ Apply at https://nexahubtech.company/enrol?course=mobile-videography — or ask 
 
 ---
 
-# Videography & Video Editing — NexaHubTech
+# Videography & Video Editing — NexaHubTech Academy
 
 > Capture and craft video content that communicates — from shooting to final cut.
 
@@ -1999,7 +2028,7 @@ Apply at https://nexahubtech.company/enrol?course=videography-video-editing — 
 
 ---
 
-# Cybersecurity — NexaHubTech
+# Cybersecurity — NexaHubTech Academy
 
 > Understand how systems are attacked — and how to defend them.
 

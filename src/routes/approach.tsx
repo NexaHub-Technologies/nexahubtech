@@ -159,7 +159,7 @@ function Approach() {
 				</div>
 			</section>
 
-			{/* it is the same idea the school teaches */}
+			{/* a project, or — for anyone here to learn — the Academy */}
 			<section className="wrap py-14">
 				<div className="reveal grid md:grid-cols-2 gap-5">
 					<div className="card card-lift panel-studio p-9">
@@ -176,16 +176,16 @@ function Approach() {
 						</Link>
 					</div>
 					<div className="card card-lift panel-learn p-9">
-						<Eyebrow>The same idea, taught</Eyebrow>
+						<Eyebrow>NexaHubTech Academy</Eyebrow>
 						<h3 className="display text-[1.6rem] mt-3">
-							This is what the school teaches.
+							Here to learn, not to build?
 						</h3>
 						<p className="lead mt-3">
-							Understand the model before the syntax — the pedagogy on every
-							course is the process on this page, at a smaller scale.
+							Our training division teaches the same way of thinking in live
+							courses — the model before the syntax, online or in person.
 						</p>
-						<Link to="/courses" className="btn btn-primary mt-5">
-							See the courses
+						<Link to="/academy" className="btn btn-primary mt-5">
+							Visit the Academy
 						</Link>
 					</div>
 				</div>

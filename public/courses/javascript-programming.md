@@ -1,4 +1,4 @@
-# JavaScript Programming — NexaHubTech
+# JavaScript Programming — NexaHubTech Academy
 
 > Learn JavaScript as a language — the same core that runs in a browser and on a server.
 
