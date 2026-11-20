@@ -78,8 +78,8 @@ export const PAGES = {
 		image: "/og/academy.jpg",
 		card: {
 			eyebrow: "Live, instructor-led courses",
-			headline: "Learn tech properly.",
-			accent: "At your own pace.",
+			headline: "Learn tech,",
+			accent: "the right way.",
 			sub: `Online or in person · courses from ${cheapestCourse} · ${CONTACT.website}/academy`,
 		},
 		kind: "WebPage",
@@ -93,8 +93,8 @@ export const PAGES = {
 		image: "/og/courses.jpg",
 		card: {
 			eyebrow: "Our courses",
-			headline: "Real skills,",
-			accent: "taught properly.",
+			headline: "Find your",
+			accent: "course.",
 			sub: `${COURSE_COUNT_WORD_CAP} courses · online or in person · start any day`,
 		},
 		kind: "CollectionPage",
@@ -212,8 +212,8 @@ export const PAGES = {
 		image: "/og/about.jpg",
 		card: {
 			eyebrow: "Who we are",
-			headline: "We closed the gap between",
-			accent: "learning and building.",
+			headline: "A software company,",
+			accent: "built properly.",
 			sub: "A software studio · and an Academy",
 		},
 		kind: "AboutPage",
