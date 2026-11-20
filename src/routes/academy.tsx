@@ -11,7 +11,7 @@ import { useReveal } from "../components/site";
 import { PAGES } from "../lib/pages";
 import { pageMeta } from "../lib/seo";
 
-/* NexaHubTech Academy's front page — the training division, kept apart from the
+/* NexaHubTech Academy's front page — the training arm, kept apart from the
    company's front page at /. Deliberately short: choose a track, see how it
    works, and go. Everything else is one click away on the course pages. */
 export const Route = createFileRoute("/academy")({

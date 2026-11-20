@@ -79,7 +79,7 @@ function ServicesIndex() {
 							NexaHubTech Academy runs {COURSE_COUNT_WORD} courses.
 						</h2>
 						<p className="lead mt-3 text-[0.97rem] flex-1">
-							Our training division teaches software development, data, office
+							Our Academy teaches software development, data, office
 							productivity and video — live, online or in person, starting
 							whenever you are ready.
 						</p>

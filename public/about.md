@@ -1,22 +1,22 @@
 # About — NexaHubTech
 
-> NexaHubTech is a Nigeria-based software development company. Its training division, NexaHubTech Academy, teaches the skills the company practises — in live courses, online or in person.
+> NexaHubTech is a Nigeria-based software company with two arms: a software studio that builds for businesses, and NexaHubTech Academy, which teaches the skills the studio practises — in live courses, online or in person.
 
 Canonical page: https://nexahubtech.company/about
 
-NexaHubTech is a Nigerian technology company that designs, builds and maintains software for businesses. Its training division, NexaHubTech Academy, teaches practical technology skills — online and in person — and develops the talent our engineering work depends on.
+NexaHubTech is a Nigerian software company with two arms: a software studio that designs, builds and maintains software for businesses, and NexaHubTech Academy, which teaches practical technology skills — online and in person — and develops the talent our engineering work depends on.
 
-## NexaHubTech
+## The studio
 
-NexaHubTech is a Nigeria-based software development company. We design, build and maintain production software for businesses and founders — scoped carefully, built properly, and supported long after launch.
+The NexaHubTech studio designs, builds and maintains production software for businesses and founders — scoped carefully, built properly, and supported long after launch.
 
 ## NexaHubTech Academy
 
-NexaHubTech Academy is the training division of NexaHubTech. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day. [NexaHubTech Academy](https://nexahubtech.company/academy.md)
+NexaHubTech Academy is the training arm of NexaHubTech, alongside its software studio. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day. [NexaHubTech Academy](https://nexahubtech.company/academy.md)
 
 ## How they relate
 
-The company builds software for clients; the Academy teaches what the company practises. The engineering problems we meet on client work shape the Academy's lessons, and its strongest learners go on to build with us. Two businesses, one standard: understand the problem first, then build.
+The studio builds software for clients; the Academy teaches what the studio practises. The engineering problems we meet on client work shape the Academy's lessons, and its strongest learners go on to build with us in the studio. Two arms, one standard: understand the problem first, then build.
 
 ## Vision
 

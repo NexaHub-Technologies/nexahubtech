@@ -1,8 +1,8 @@
 # NexaHubTech
 
-> NexaHubTech is a Nigerian technology company that designs, builds and maintains software for businesses. Its training division, NexaHubTech Academy, teaches practical technology skills — online and in person — and develops the talent our engineering work depends on.
+> NexaHubTech is a Nigerian software company with two arms: a software studio that designs, builds and maintains software for businesses, and NexaHubTech Academy, which teaches practical technology skills — online and in person — and develops the talent our engineering work depends on.
 
-Tagline: "Design. Ship. Support." Based at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria (CAC RC 9545130). Its training division, NexaHubTech Academy, runs as a separate business with its own pages. Every Academy course is taught live and starts whenever the student is ready, online or in person (no more than 6 per in-person class, priced above a place online). PC Basics and CBT training are taught in person only. Fees can be paid in instalments. Prices are in Nigerian naira (NGN). Contact: nexahubt@gmail.com, +234 913 451 3173, WhatsApp https://wa.me/2349134513173.
+Tagline: "Design. Ship. Support." Based at Phase 2, F01 Building Materials Market, Kubwa, FCT-Abuja, Nigeria (CAC RC 9545130). Its two arms each have their own pages: the software studio, under the NexaHubTech name, and NexaHubTech Academy. Every Academy course is taught live and starts whenever the student is ready, online or in person (no more than 6 per in-person class, priced above a place online). PC Basics and CBT training are taught in person only. Fees can be paid in instalments. Prices are in Nigerian naira (NGN). Contact: nexahubt@gmail.com, +234 913 451 3173, WhatsApp https://wa.me/2349134513173.
 
 Each link below is the markdown version of a page on https://nexahubtech.company; drop the `.md` suffix for the HTML page.
 
@@ -10,11 +10,11 @@ Each link below is the markdown version of a page on https://nexahubtech.company
 
 - [Home](https://nexahubtech.company/home.md): NexaHubTech designs, builds and maintains production software for businesses and founders — scoped carefully, built properly, and supported long after launch. Based in Abuja, Nigeria.
 
-## NexaHubTech Academy — the training division
+## NexaHubTech Academy
 
-NexaHubTech Academy is the training division of NexaHubTech. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day.
+NexaHubTech Academy is the training arm of NexaHubTech, alongside its software studio. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day.
 
-- [NexaHubTech Academy](https://nexahubtech.company/academy.md): NexaHubTech Academy, the training division of NexaHubTech, offers live, instructor-led courses in software development, data, office productivity and video. Learn online or in person, start any day, and pay in instalments.
+- [NexaHubTech Academy](https://nexahubtech.company/academy.md): NexaHubTech Academy, the training arm of NexaHubTech, offers live, instructor-led courses in software development, data, office productivity and video. Learn online or in person, start any day, and pay in instalments.
 - [Courses](https://nexahubtech.company/courses.md): Every NexaHubTech Academy course, from first steps on a computer to React, data analysis and video — taught live, online or in person, with flexible payment plans. Start any day.
 - [WAEC & JAMB CBT Training](https://nexahubtech.company/cbt.md): Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech Academy, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
 - [About the Academy](https://nexahubtech.company/academy/about.md): How NexaHubTech Academy teaches — the idea before the syntax, every session in three parts — and where and when it happens: live online in the evenings, or in person in classes of no more than 6 at our learning centre in Kubwa, Abuja.
@@ -40,17 +40,17 @@ NexaHubTech Academy is the training division of NexaHubTech. It teaches software
 - [Mobile Videography](https://nexahubtech.company/courses/mobile-videography.md): Phone video & editing. Live online ₦50,000 (or 2 × ₦27,500) · In person ₦60,000 (or 2 × ₦32,500). 4 Weeks. Shoot, light, record and edit video worth watching — on the phone you already own.
 - [Videography & Video Editing](https://nexahubtech.company/courses/videography-video-editing.md): Live online ₦100,000 (or 2 × ₦55,000) · In person ₦120,000 (or 2 × ₦65,000). 8 Weeks. Capture and craft video content that communicates — from shooting to final cut.
 
-## Services
+## The studio — software for businesses
 
 - [Services](https://nexahubtech.company/services.md): What NexaHubTech builds — custom software, websites, mobile apps, enterprise systems and API work, plus strategy, automation, cloud and support.
 - [Our Approach](https://nexahubtech.company/approach.md): How NexaHubTech works: we settle what should be built, and why, before any of it gets written — for company websites and for the software your members sign into.
 - [Software Development](https://nexahubtech.company/services/software-development.md): Products built to last — thought through before they’re built, then kept running.
 - [Digital Solutions](https://nexahubtech.company/services/digital-solutions.md): The work around the product that decides whether it actually lands.
 
-## The company
+## About NexaHubTech
 
-- [About](https://nexahubtech.company/about.md): NexaHubTech is a Nigeria-based software development company. Its training division, NexaHubTech Academy, teaches the skills the company practises — in live courses, online or in person.
-- [Contact](https://nexahubtech.company/contact.md): Get in touch with NexaHubTech — start a software project with the company, or ask NexaHubTech Academy about a course.
+- [About](https://nexahubtech.company/about.md): NexaHubTech is a Nigeria-based software company with two arms: a software studio that builds for businesses, and NexaHubTech Academy, which teaches the skills the studio practises — in live courses, online or in person.
+- [Contact](https://nexahubtech.company/contact.md): Get in touch with NexaHubTech — start a software project with the studio, or ask NexaHubTech Academy about a course.
 
 ## Optional
 

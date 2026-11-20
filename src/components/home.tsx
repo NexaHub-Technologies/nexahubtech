@@ -170,7 +170,7 @@ export function Hero() {
 						<p className="rise rise-5 mt-7 text-[0.92rem] text-[#bfaecb]">
 							{mode === "build"
 								? "Based in Abuja, Nigeria · building for Africa and beyond."
-								: "The training division of NexaHubTech · online and in Abuja."}
+								: "The training arm of NexaHubTech · online and in Abuja."}
 						</p>
 					</div>
 
@@ -372,10 +372,10 @@ export function StudioProof() {
 						Taught by a team that ships real software.
 					</h2>
 					<p className="lead mt-3">
-						NexaHubTech Academy is the training division of NexaHubTech, a
-						software development company. The problems its engineers solve for
-						clients shape our lessons, and our strongest learners get to work on
-						real projects.
+						NexaHubTech Academy is one of NexaHubTech's two arms; the other is
+						its software studio. The problems the studio solves for clients
+						shape our lessons, and our strongest learners get to work on real
+						projects.
 					</p>
 					<div className="mt-7 flex flex-wrap items-center gap-4">
 						<Link to="/" className="btn btn-teal">
@@ -522,7 +522,7 @@ export function StudioProcess() {
 	);
 }
 
-/* the company's front page points to its training division once, quietly —
+/* the company's front page points to its Academy once, quietly —
    enough to find it, not enough to blur the two */
 export function AcademyPointer() {
 	return (
@@ -534,8 +534,8 @@ export function AcademyPointer() {
 						Looking to learn rather than build?
 					</h2>
 					<p className="lead text-[0.97rem] mt-2">
-						Our training division teaches software development, data, office
-						productivity and video in live courses, online or in person.
+						Our Academy teaches software development, data, office productivity
+						and video in live courses, online or in person.
 					</p>
 				</div>
 				<Link to="/academy" className="btn btn-ghost shrink-0">

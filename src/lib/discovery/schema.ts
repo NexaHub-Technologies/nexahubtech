@@ -107,7 +107,8 @@ export function organization(): Node {
 	const { days, opens, closes } = CBT_DETAILS.openingHours;
 	return {
 		/* the software company — a business with a door people walk through. Its
-		   training division is a separate organisation beneath it (academy()). */
+		   studio is the company itself (the services are offered under its name);
+		   the Academy is a separate organisation beneath it (academy()). */
 		"@type": ["Organization", "LocalBusiness"],
 		"@id": ID.organization,
 		name: "NexaHubTech",
@@ -169,14 +170,14 @@ export function organization(): Node {
 	};
 }
 
-/* NexaHubTech Academy — the training division, its own organisation under the
-   company: it provides the courses, the company provides the services */
+/* NexaHubTech Academy — one of the company's two arms, its own organisation
+   under it: the Academy provides the courses, the studio the services */
 export function academy(): Node {
 	return {
 		"@type": "EducationalOrganization",
 		"@id": ID.academy,
 		name: "NexaHubTech Academy",
-		alternateName: "NexaHubTech Academy, a division of NexaHubTech",
+		alternateName: "NexaHubTech Academy, the training arm of NexaHubTech",
 		url: abs(PAGES.academy.path),
 		description: ACADEMY_SUMMARY,
 		slogan: TAGLINE.learn,

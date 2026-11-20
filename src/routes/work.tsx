@@ -125,7 +125,7 @@ function Work() {
 					<div className="card card-lift panel-learn p-9">
 						<Eyebrow>NexaHubTech Academy</Eyebrow>
 						<h3 className="display text-[1.6rem] mt-3">
-							Our training division teaches from this work.
+							Our Academy teaches from this work.
 						</h3>
 						<p className="lead mt-3">
 							NexaHubTech Academy builds its curriculum from real engineering

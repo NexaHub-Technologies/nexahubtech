@@ -181,8 +181,8 @@ function Approach() {
 							Here to learn, not to build?
 						</h3>
 						<p className="lead mt-3">
-							Our training division teaches the same way of thinking in live
-							courses — the model before the syntax, online or in person.
+							Our Academy teaches the same way of thinking in live courses — the
+							model before the syntax, online or in person.
 						</p>
 						<Link to="/academy" className="btn btn-primary mt-5">
 							Visit the Academy

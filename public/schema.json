@@ -9,7 +9,7 @@
       "@id": "https://nexahubtech.company/#organization",
       "name": "NexaHubTech",
       "url": "https://nexahubtech.company/",
-      "description": "NexaHubTech is a Nigerian technology company that designs, builds and maintains software for businesses. Its training division, NexaHubTech Academy, teaches practical technology skills — online and in person — and develops the talent our engineering work depends on.",
+      "description": "NexaHubTech is a Nigerian software company with two arms: a software studio that designs, builds and maintains software for businesses, and NexaHubTech Academy, which teaches practical technology skills — online and in person — and develops the talent our engineering work depends on.",
       "slogan": "Design. Ship. Support.",
       "logo": {
         "@type": "ImageObject",
@@ -106,9 +106,9 @@
       "@type": "EducationalOrganization",
       "@id": "https://nexahubtech.company/academy#organization",
       "name": "NexaHubTech Academy",
-      "alternateName": "NexaHubTech Academy, a division of NexaHubTech",
+      "alternateName": "NexaHubTech Academy, the training arm of NexaHubTech",
       "url": "https://nexahubtech.company/academy",
-      "description": "NexaHubTech Academy is the training division of NexaHubTech. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day.",
+      "description": "NexaHubTech Academy is the training arm of NexaHubTech, alongside its software studio. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day.",
       "slogan": "Learn. Build. Ship.",
       "parentOrganization": {
         "@id": "https://nexahubtech.company/#organization"
@@ -2508,7 +2508,7 @@
       "@id": "https://nexahubtech.company/academy#webpage",
       "url": "https://nexahubtech.company/academy",
       "name": "NexaHubTech Academy — Live Tech Courses, Online or In Person",
-      "description": "NexaHubTech Academy, the training division of NexaHubTech, offers live, instructor-led courses in software development, data, office productivity and video. Learn online or in person, start any day, and pay in instalments.",
+      "description": "NexaHubTech Academy, the training arm of NexaHubTech, offers live, instructor-led courses in software development, data, office productivity and video. Learn online or in person, start any day, and pay in instalments.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2934,7 +2934,7 @@
       "@id": "https://nexahubtech.company/about#webpage",
       "url": "https://nexahubtech.company/about",
       "name": "About — NexaHubTech",
-      "description": "NexaHubTech is a Nigeria-based software development company. Its training division, NexaHubTech Academy, teaches the skills the company practises — in live courses, online or in person.",
+      "description": "NexaHubTech is a Nigeria-based software company with two arms: a software studio that builds for businesses, and NexaHubTech Academy, which teaches the skills the studio practises — in live courses, online or in person.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -2976,7 +2976,7 @@
       "@id": "https://nexahubtech.company/contact#webpage",
       "url": "https://nexahubtech.company/contact",
       "name": "Contact — NexaHubTech",
-      "description": "Get in touch with NexaHubTech — start a software project with the company, or ask NexaHubTech Academy about a course.",
+      "description": "Get in touch with NexaHubTech — start a software project with the studio, or ask NexaHubTech Academy about a course.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"

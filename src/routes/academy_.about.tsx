@@ -61,9 +61,9 @@ function AcademyAbout() {
 						<span className="hot-text">Then build with it</span>.
 					</h1>
 					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
-						NexaHubTech Academy is the training division of NexaHubTech. Every
-						course is taught live, online or in person, on the same method — and
-						you can start any day.
+						NexaHubTech Academy is the training arm of NexaHubTech. Every course
+						is taught live, online or in person, on the same method — and you
+						can start any day.
 					</p>
 					<nav
 						className="rise rise-4 mt-6 flex flex-wrap gap-x-5 gap-y-2 text-[0.95rem] font-semibold"

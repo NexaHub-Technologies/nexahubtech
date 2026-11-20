@@ -77,14 +77,14 @@ export const CTA_BY_MODE = {
 	build: { to: "/contact", label: "Start a project" },
 } as const;
 
-/* the switch between the two businesses. The company comes first — it is the
-   parent — and each side lands on its own front page. */
+/* the switch between NexaHubTech's two arms. The studio comes first — it
+   carries the company's name — and each side lands on its own front page. */
 export function ModeSwitch({ className = "" }: { className?: string }) {
 	const { mode, setMode } = useMode();
 	return (
 		<fieldset className={`mode-switch ${className}`}>
 			<legend className="sr-only">
-				Switch between NexaHubTech and its Academy
+				Switch between the NexaHubTech studio and NexaHubTech Academy
 			</legend>
 			{(["build", "learn"] as const).map((m) => (
 				<button
@@ -300,7 +300,7 @@ export function Footer() {
 					</Link>
 					{mode === "learn" ? (
 						<p className="text-[0.85rem] text-mute mt-2">
-							The training division of{" "}
+							The training arm of{" "}
 							<Link to="/" className="underline">
 								NexaHubTech
 							</Link>

@@ -74,12 +74,12 @@ export const PAGES = {
 		name: "NexaHubTech Academy",
 		title: "NexaHubTech Academy — Live Tech Courses, Online or In Person",
 		description:
-			"NexaHubTech Academy, the training division of NexaHubTech, offers live, instructor-led courses in software development, data, office productivity and video. Learn online or in person, start any day, and pay in instalments.",
+			"NexaHubTech Academy, the training arm of NexaHubTech, offers live, instructor-led courses in software development, data, office productivity and video. Learn online or in person, start any day, and pay in instalments.",
 		image: "/og/academy.jpg",
 		card: {
 			eyebrow: "Live, instructor-led courses",
 			headline: "Learn tech properly.",
-			accent: "On your terms.",
+			accent: "At your own pace.",
 			sub: `Online or in person · courses from ${cheapestCourse} · ${CONTACT.website}/academy`,
 		},
 		kind: "WebPage",
@@ -208,13 +208,13 @@ export const PAGES = {
 		name: "About",
 		title: "About — NexaHubTech",
 		description:
-			"NexaHubTech is a Nigeria-based software development company. Its training division, NexaHubTech Academy, teaches the skills the company practises — in live courses, online or in person.",
+			"NexaHubTech is a Nigeria-based software company with two arms: a software studio that builds for businesses, and NexaHubTech Academy, which teaches the skills the studio practises — in live courses, online or in person.",
 		image: "/og/about.jpg",
 		card: {
 			eyebrow: "Who we are",
 			headline: "We closed the gap between",
 			accent: "learning and building.",
-			sub: "A software company · and its Academy",
+			sub: "A software studio · and an Academy",
 		},
 		kind: "AboutPage",
 	},
@@ -223,7 +223,7 @@ export const PAGES = {
 		name: "Contact",
 		title: "Contact — NexaHubTech",
 		description:
-			"Get in touch with NexaHubTech — start a software project with the company, or ask NexaHubTech Academy about a course.",
+			"Get in touch with NexaHubTech — start a software project with the studio, or ask NexaHubTech Academy about a course.",
 		image: "/og/contact.jpg",
 		card: {
 			eyebrow: "Two ways in",

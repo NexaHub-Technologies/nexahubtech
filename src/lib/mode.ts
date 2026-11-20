@@ -1,13 +1,13 @@
-/* which arm of the company the visitor is looking at. They are two separate
-   businesses: NexaHubTech, the software company ("build"), and
-   NexaHubTech Academy, its training division ("learn"). Every page belongs to
+/* which arm of NexaHubTech the visitor is looking at. NexaHubTech is a
+   software company with two arms: its software studio ("build"), which carries
+   the company's own name, and NexaHubTech Academy ("learn"). Every page belongs to
    one of them, except /about and /contact, which describe both and take the
    frame of whichever the visitor came from. */
 
 export type SiteMode = "learn" | "build";
 
 export const MODE_STORAGE_KEY = "nht-mode";
-/* the company leads: a first-time visitor to the domain meets the software company */
+/* the studio leads: a first-time visitor to the domain meets the software company's studio */
 export const DEFAULT_MODE: SiteMode = "build";
 
 export const ARM_NAME: Record<SiteMode, string> = {
@@ -17,7 +17,7 @@ export const ARM_NAME: Record<SiteMode, string> = {
 
 /* what the switch calls each arm */
 export const ARM_LABEL: Record<SiteMode, string> = {
-	build: "Company",
+	build: "Studio",
 	learn: "Academy",
 };
 
@@ -50,7 +50,7 @@ const owns = (root: string, pathname: string) =>
 /* routes that belong to one arm set the mode on arrival. Shared routes return null
    so they never override a choice the visitor made deliberately. */
 export function modeForPath(pathname: string): SiteMode | null {
-	/* the domain's front page is the company's */
+	/* the domain's front page is the studio's */
 	if (pathname === "/") return "build";
 	for (const mode of ["learn", "build"] as const) {
 		if (ARM_ROUTES[mode].some((root) => owns(root, pathname))) return mode;

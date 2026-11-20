@@ -1,10 +1,10 @@
 # NexaHubTech Academy
 
-> NexaHubTech Academy, the training division of NexaHubTech, offers live, instructor-led courses in software development, data, office productivity and video. Learn online or in person, start any day, and pay in instalments.
+> NexaHubTech Academy, the training arm of NexaHubTech, offers live, instructor-led courses in software development, data, office productivity and video. Learn online or in person, start any day, and pay in instalments.
 
 Canonical page: https://nexahubtech.company/academy
 
-NexaHubTech Academy is the training division of NexaHubTech. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day.
+NexaHubTech Academy is the training arm of NexaHubTech, alongside its software studio. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day.
 
 Tagline: *Learn. Build. Ship.*
 
@@ -33,7 +33,7 @@ Training for organisations: [Organisations](https://nexahubtech.company/for-busi
 
 ## Backed by NexaHubTech
 
-The company builds software for clients; the Academy teaches what the company practises. The engineering problems we meet on client work shape the Academy's lessons, and its strongest learners go on to build with us. Two businesses, one standard: understand the problem first, then build. The parent company: [Home](https://nexahubtech.company/home.md).
+The studio builds software for clients; the Academy teaches what the studio practises. The engineering problems we meet on client work shape the Academy's lessons, and its strongest learners go on to build with us in the studio. Two arms, one standard: understand the problem first, then build. The parent company: [Home](https://nexahubtech.company/home.md).
 
 ## Contact
 

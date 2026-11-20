@@ -21,7 +21,7 @@ import {
 	ACADEMY_SUMMARY,
 	DEFINITION,
 	MISSION,
-	SUMMARY,
+	STUDIO_SUMMARY,
 	THESIS,
 	VALUES,
 	VISION,
@@ -94,7 +94,7 @@ const serviceLine = (s: ServiceLine) =>
 /* ── page bodies ────────────────────────────────────────────────── */
 
 function home(): string {
-	return `${SUMMARY}
+	return `${STUDIO_SUMMARY}
 
 Tagline: *${MOTTO}*
 
@@ -106,7 +106,7 @@ How a project runs: ${mdLink(PAGES.approach)}. To start one: ${mdLink(PAGES.cont
 
 ## NexaHubTech Academy
 
-${ACADEMY_SUMMARY} It is run as a separate business with its own pages: ${mdLink(PAGES.academy)}.`;
+${ACADEMY_SUMMARY} It has its own pages: ${mdLink(PAGES.academy)}.`;
 }
 
 function academy(): string {
@@ -382,9 +382,9 @@ ${phase.steps.map((s) => `${s.n}. **${s.t}** — ${s.d}`).join("\n")}`,
 function about(): string {
 	return `${DEFINITION}
 
-## NexaHubTech
+## The studio
 
-${SUMMARY}
+${STUDIO_SUMMARY}
 
 ## NexaHubTech Academy
 
@@ -483,7 +483,7 @@ export function llmsTxt(): string {
 
 > ${DEFINITION}
 
-Tagline: "${MOTTO}" Based at ${CONTACT.address}, Nigeria (CAC RC ${CONTACT.rc}). Its training division, NexaHubTech Academy, runs as a separate business with its own pages. Every Academy course is taught live and starts whenever the student is ready, online or in person (no more than ${CENTRE_SEATS} per in-person class, priced above a place online). ${names(COURSES.filter((c) => offeredInPerson(c) && !offeredOnline(c)))} and CBT training are taught in person only. Fees can be paid in instalments. Prices are in Nigerian naira (NGN). Contact: ${CONTACT.email}, ${CONTACT.phoneDisplay}, WhatsApp ${CONTACT.whatsapp}.
+Tagline: "${MOTTO}" Based at ${CONTACT.address}, Nigeria (CAC RC ${CONTACT.rc}). Its two arms each have their own pages: the software studio, under the NexaHubTech name, and NexaHubTech Academy. Every Academy course is taught live and starts whenever the student is ready, online or in person (no more than ${CENTRE_SEATS} per in-person class, priced above a place online). ${names(COURSES.filter((c) => offeredInPerson(c) && !offeredOnline(c)))} and CBT training are taught in person only. Fees can be paid in instalments. Prices are in Nigerian naira (NGN). Contact: ${CONTACT.email}, ${CONTACT.phoneDisplay}, WhatsApp ${CONTACT.whatsapp}.
 
 Each link below is the markdown version of a page on ${SITE_URL}; drop the \`.md\` suffix for the HTML page.
 
@@ -491,7 +491,7 @@ Each link below is the markdown version of a page on ${SITE_URL}; drop the \`.md
 
 ${entry(PAGES.home)}
 
-## NexaHubTech Academy — the training division
+## NexaHubTech Academy
 
 ${ACADEMY_SUMMARY}
 
@@ -501,12 +501,12 @@ ${school.map((p) => entry(p)).join("\n")}
 
 ${COURSES.map((c) => entry(coursePage(c), `${c.d ? `${c.d}. ` : ""}${feeSummary(c)}. ${c.duration}. ${c.tagline}`)).join("\n")}
 
-## Services
+## The studio — software for businesses
 
 ${studio.map((p) => entry(p)).join("\n")}
 ${SERVICES.map((s) => entry(servicePage(s))).join("\n")}
 
-## The company
+## About NexaHubTech
 
 ${company.map((p) => entry(p)).join("\n")}
 

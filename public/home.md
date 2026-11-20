@@ -4,7 +4,7 @@
 
 Canonical page: https://nexahubtech.company/
 
-NexaHubTech is a Nigeria-based software development company. We design, build and maintain production software for businesses and founders — scoped carefully, built properly, and supported long after launch.
+The NexaHubTech studio designs, builds and maintains production software for businesses and founders — scoped carefully, built properly, and supported long after launch.
 
 Tagline: *Design. Ship. Support.*
 
@@ -17,7 +17,7 @@ How a project runs: [Our Approach](https://nexahubtech.company/approach.md). To 
 
 ## NexaHubTech Academy
 
-NexaHubTech Academy is the training division of NexaHubTech. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day. It is run as a separate business with its own pages: [NexaHubTech Academy](https://nexahubtech.company/academy.md).
+NexaHubTech Academy is the training arm of NexaHubTech, alongside its software studio. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day. It has its own pages: [NexaHubTech Academy](https://nexahubtech.company/academy.md).
 
 ## Contact
 

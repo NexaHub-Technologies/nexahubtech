@@ -4,7 +4,7 @@
 
 Canonical page: https://nexahubtech.company/academy/about
 
-NexaHubTech Academy is the training division of NexaHubTech. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day.
+NexaHubTech Academy is the training arm of NexaHubTech, alongside its software studio. It teaches software development, data, office productivity and video in live, instructor-led courses — online or in person, starting any day.
 
 ## How we teach
 

@@ -4,7 +4,7 @@ import {
 	ACADEMY_SUMMARY,
 	DEFINITION,
 	MISSION,
-	SUMMARY,
+	STUDIO_SUMMARY,
 	THESIS,
 	VALUES,
 	VISION,
@@ -64,20 +64,20 @@ function About() {
 				</div>
 			</section>
 
-			{/* the company and its training division */}
+			{/* the company's two arms */}
 			<section className="wrap py-14">
 				<div className="grid md:grid-cols-2 gap-5">
 					<div className="card panel-studio reveal p-8 md:p-10">
-						<Eyebrow variant="build">NexaHubTech</Eyebrow>
-						<h2 className="shout shout-md mt-4">The company.</h2>
-						<p className="lead mt-4">{SUMMARY}</p>
+						<Eyebrow variant="build">Software studio</Eyebrow>
+						<h2 className="shout shout-md mt-4">The studio.</h2>
+						<p className="lead mt-4">{STUDIO_SUMMARY}</p>
 						<Link to="/services" className="view-link is-build mt-5">
 							What we build <i aria-hidden="true">→</i>
 						</Link>
 					</div>
 					<div className="card panel-learn reveal p-8 md:p-10">
 						<Eyebrow>NexaHubTech Academy</Eyebrow>
-						<h2 className="shout shout-md mt-4">The training division.</h2>
+						<h2 className="shout shout-md mt-4">The Academy.</h2>
 						<p className="lead mt-4">{ACADEMY_SUMMARY}</p>
 						<Link to="/academy" className="view-link mt-5">
 							Visit the Academy <i aria-hidden="true">→</i>
@@ -115,7 +115,7 @@ function About() {
 					<Eyebrow variant="plain">What we believe</Eyebrow>
 					<h2 className="shout shout-md mt-4">Our core values.</h2>
 					<p className="lead mt-4">
-						The principles behind the company and the Academy alike.
+						The principles behind the studio and the Academy alike.
 					</p>
 				</div>
 				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
