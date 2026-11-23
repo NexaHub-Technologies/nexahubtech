@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
 	AcademyPointer,
-	ClientLogos,
 	ClientQuotes,
 	ClosingCTA,
 	FeaturedWork,
+	ProductShowcase,
 	Services,
 	StudioHero,
 	StudioProcess,
@@ -23,7 +23,7 @@ function App() {
 	return (
 		<>
 			<StudioHero />
-			<ClientLogos />
+			<ProductShowcase />
 			<FeaturedWork />
 			<Services />
 			<StudioProcess />

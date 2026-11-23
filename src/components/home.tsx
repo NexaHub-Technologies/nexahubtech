@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { AVAILABLE_FOR_PROJECTS, BOOK_A_CALL } from "../lib/contact";
 import {
 	CENTRE_SEATS,
 	coursesIn,
@@ -104,24 +105,117 @@ export function ClosingCTA({
 
 /* ── the company's front page ───────────────────────────────────── */
 
+/* The front page's opening: an availability badge, the headline set large
+   across two lines, a few stickers around it, the pitch, two actions, and the
+   "Trusted by" row. The stickers are decoration — every fact on them is also
+   said in words elsewhere on the site — so screen readers skip them. */
 export function StudioHero() {
 	return (
-		<Hero
-			eyebrow="Software studio · Abuja"
-			title="Software, built properly."
-			lead="NexaHubTech designs, builds and maintains production software for businesses and founders — scoped carefully, built properly, and supported long after launch."
-			primary={{ to: "/contact", label: "Start a project" }}
-			secondary={{ to: "/work", label: "See our work" }}
-			figure={<Figure {...HOME_HERO} />}
-		/>
+		<section className="studio-hero">
+			<div className="wrap flex flex-col items-center text-center">
+				<a
+					href={BOOK_A_CALL}
+					target="_blank"
+					rel="noreferrer"
+					className="avail-pill"
+				>
+					<span
+						className={`avail-dot${AVAILABLE_FOR_PROJECTS ? "" : " is-busy"}`}
+						aria-hidden="true"
+					/>
+					<span className="font-semibold text-ink">
+						{AVAILABLE_FOR_PROJECTS
+							? "Available for new projects"
+							: "Booked up — taking enquiries"}
+					</span>
+					<span className="avail-sep" aria-hidden="true" />
+					<span className="text-mute">
+						Book a call <i aria-hidden="true">→</i>
+					</span>
+				</a>
+
+				<div className="mega-wrap">
+					<h1 className="mega">
+						<span>Software,</span> <span>built properly.</span>
+					</h1>
+					<span className="sticker sticker-pill is-rose" aria-hidden="true">
+						Web &amp; mobile apps
+					</span>
+					<span className="sticker sticker-pill is-lilac" aria-hidden="true">
+						Made in Nigeria
+					</span>
+					<span className="sticker sticker-burst" aria-hidden="true">
+						<svg
+							viewBox="0 0 120 120"
+							className="sticker-burst-shape"
+							aria-hidden="true"
+						>
+							<defs>
+								<linearGradient id="burst-fill" x1="0" y1="0" x2="1" y2="1">
+									<stop offset="0" stopColor="#ffd25a" />
+									<stop offset="1" stopColor="#ff9a62" />
+								</linearGradient>
+							</defs>
+							<polygon
+								points={BURST_POINTS}
+								fill="url(#burst-fill)"
+								stroke="#fff"
+								strokeWidth="5"
+								strokeLinejoin="round"
+							/>
+						</svg>
+						<span className="sticker-burst-text">
+							<b>11</b>
+							<span>steps before code</span>
+						</span>
+					</span>
+					<span className="sticker sticker-mark" aria-hidden="true">
+						<img src="/logo-main.svg" alt="" />
+					</span>
+				</div>
+
+				<p className="lead mt-12 md:mt-14 text-[1.12rem] max-w-[38rem]">
+					An independent software studio in Abuja. We design, build and maintain
+					production software for businesses and founders — scoped carefully,
+					built properly, and supported long after launch.
+				</p>
+				<div className="mt-8 flex flex-wrap justify-center gap-3">
+					<Link to="/contact" className="btn btn-primary btn-lg">
+						Start a project
+					</Link>
+					<Link to="/work" className="btn btn-ghost btn-lg">
+						See our work
+					</Link>
+				</div>
+
+				<ClientLogos />
+			</div>
+		</section>
 	);
 }
 
+/* a 14-point starburst, drawn once */
+const BURST_POINTS = Array.from({ length: 28 }, (_, i) => {
+	const r = i % 2 === 0 ? 56 : 44;
+	const a = (Math.PI * i) / 14 - Math.PI / 2;
+	return `${(60 + r * Math.cos(a)).toFixed(1)},${(60 + r * Math.sin(a)).toFixed(1)}`;
+}).join(" ");
+
+/* the logos of organisations we have built for, under a "Trusted by" rule */
 export function ClientLogos() {
 	return (
-		<section className="wrap pb-6">
-			<p className="kicker mb-4">Organisations we have built for</p>
+		<div className="trusted">
+			<p className="trusted-label">Trusted by</p>
 			<LogoRow logos={CLIENT_LOGOS} />
+		</div>
+	);
+}
+
+/* the best screen of the best shipped product, wide, under the opening */
+export function ProductShowcase() {
+	return (
+		<section className="wrap pb-6">
+			<Figure {...HOME_HERO} ratio="16 / 8" />
 		</section>
 	);
 }

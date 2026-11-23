@@ -45,3 +45,20 @@ test("evidence slots show labelled placeholders until filled", async ({
 		page.getByRole("img", { name: /^Placeholder: A shipped product/ }),
 	).toBeVisible();
 });
+
+test("the front page opens with the availability badge, the headline and Trusted by", async ({
+	page,
+}) => {
+	await page.goto("/");
+	await expect(page.getByRole("link", { name: /Available for new projects/ })).toHaveAttribute(
+		"href",
+		/wa\.me/,
+	);
+	await expect(page.getByRole("heading", { level: 1 })).toHaveText(
+		/Software,\s*built properly\./i,
+	);
+	await expect(page.getByText("Trusted by")).toBeVisible();
+	/* the stickers are decoration, hidden from assistive technology */
+	for (const s of await page.locator(".sticker").all())
+		await expect(s).toHaveAttribute("aria-hidden", "true");
+});

@@ -39,3 +39,12 @@ export const TAGLINE = {
 
 /* the company's line — what the domain, the emails and the schema carry */
 export const MOTTO = TAGLINE.build;
+
+/* Shown on the front page as "Available for new projects". Set to false when
+   the studio is fully booked, and the badge says so instead. */
+export const AVAILABLE_FOR_PROJECTS = true;
+
+/* where "Book a call" goes: WhatsApp, with the message started for them */
+export const BOOK_A_CALL = `${CONTACT.whatsapp}?text=${encodeURIComponent(
+	"Hello NexaHubTech! I'd like to book a call about a project.",
+)}`;
