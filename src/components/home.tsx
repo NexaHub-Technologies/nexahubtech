@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { useEffect, useRef } from "react";
 import { AVAILABLE_FOR_PROJECTS, BOOK_A_CALL } from "../lib/contact";
 import {
 	CENTRE_SEATS,
@@ -125,17 +126,98 @@ const MOTTO_STEPS = [
 
 /* The NHT mark, drawn as the outline from the code-doodle pack (the logo's
    own geometry), set large and faint behind the hero with a soft glow. It is
-   decoration: hidden from screen readers, behind the content, and still. */
+   decoration: hidden from screen readers and behind the content. */
 const MARK_PATH =
 	"M0,0L385.6,0L385.6,100L100,100L100,578.4L0,578.4ZM485.6,1156.8L771.2,1156.8L771.2,1256.8L485.6,1256.8ZM1256.8,1253.2L871.2,1253.2L871.2,1153.2L1156.8,1153.2L1156.8,674.8L1256.8,674.8ZM1256.8,3.6L1256.8,582L1156.8,582L1156.8,103.6L871.2,103.6L871.2,3.6ZM485.6,0L771.2,0L771.2,100L485.6,100ZM100,678.4L100,1156.8L385.6,1156.8L385.6,1256.8L0,1256.8L0,678.4ZM192.8,192.8H1064V1064H192.8Z";
 
+/* A brighter copy of the mark sits on top, shown only in a soft circle around
+   the mouse, so the glow drifts after the pointer and lights the lines it
+   passes. It eases behind the pointer rather than snapping to it, fades out
+   when the pointer leaves the hero, and stays off for touch screens and for
+   anyone who has asked their system for reduced motion. The animation frame
+   loop only runs while the glow is still catching up. */
+function useGlowFollowsPointer() {
+	const ref = useRef<HTMLDivElement>(null);
+	useEffect(() => {
+		const mark = ref.current;
+		const hero = mark?.parentElement;
+		if (!mark || !hero) return;
+		const allowed = window.matchMedia(
+			"(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)",
+		);
+		if (!allowed.matches) return;
+
+		// the glow eases towards the pointer; x and y are relative to the hero,
+		// and the mark's own offset inside it is kept so its lines light up
+		// in the right place
+		let x = 0;
+		let y = 0;
+		let targetX = 0;
+		let targetY = 0;
+		let offsetX = 0;
+		let offsetY = 0;
+		let frame = 0;
+		let placed = false;
+
+		const tick = () => {
+			x += (targetX - x) * 0.08;
+			y += (targetY - y) * 0.08;
+			hero.style.setProperty("--hx", `${x.toFixed(1)}px`);
+			hero.style.setProperty("--hy", `${y.toFixed(1)}px`);
+			mark.style.setProperty("--mx", `${(x - offsetX).toFixed(1)}px`);
+			mark.style.setProperty("--my", `${(y - offsetY).toFixed(1)}px`);
+			const settled =
+				Math.abs(targetX - x) < 0.3 && Math.abs(targetY - y) < 0.3;
+			frame = settled ? 0 : requestAnimationFrame(tick);
+		};
+
+		const onMove = (e: PointerEvent) => {
+			if (e.pointerType !== "mouse") return;
+			const heroBox = hero.getBoundingClientRect();
+			const markBox = mark.getBoundingClientRect();
+			offsetX = markBox.left - heroBox.left;
+			offsetY = markBox.top - heroBox.top;
+			targetX = e.clientX - heroBox.left;
+			targetY = e.clientY - heroBox.top;
+			if (!placed) {
+				// start where the pointer came in, rather than sliding in from a corner
+				x = targetX;
+				y = targetY;
+				placed = true;
+			}
+			hero.classList.add("is-lit");
+			if (!frame) frame = requestAnimationFrame(tick);
+		};
+		const onLeave = () => {
+			hero.classList.remove("is-lit");
+			placed = false;
+		};
+
+		hero.addEventListener("pointermove", onMove, { passive: true });
+		hero.addEventListener("pointerleave", onLeave);
+		return () => {
+			hero.removeEventListener("pointermove", onMove);
+			hero.removeEventListener("pointerleave", onLeave);
+			cancelAnimationFrame(frame);
+		};
+	}, []);
+	return ref;
+}
+
 function HeroMark() {
+	const ref = useGlowFollowsPointer();
 	return (
-		<div className="hero-mark" aria-hidden="true">
+		<div ref={ref} className="hero-mark" aria-hidden="true">
 			<svg viewBox="-40 -40 1337 1337" focusable="false" aria-hidden="true">
 				<path className="hero-mark-glow" d={MARK_PATH} />
 				<path className="hero-mark-line" d={MARK_PATH} />
 			</svg>
+			<div className="hero-mark-spot">
+				<svg viewBox="-40 -40 1337 1337" focusable="false" aria-hidden="true">
+					<path className="hero-mark-glow" d={MARK_PATH} />
+					<path className="hero-mark-line" d={MARK_PATH} />
+				</svg>
+			</div>
 		</div>
 	);
 }
