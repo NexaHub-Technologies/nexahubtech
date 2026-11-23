@@ -489,18 +489,26 @@ html {
   opacity: 0.05;
 }
 
-/* the course and track icons: full-colour tiles that lift a little when
-   their card is hovered */
-.course-icon {
-  display: block;
+/* the course, track and studio icons: a brand code doodle on a soft tinted
+   square, in the accent colour */
+.doodle-tile {
+  display: grid;
+  place-items: center;
   flex: none;
+  border-radius: 24%;
+  background: var(--accent-tint);
+  color: var(--accent-ink);
   transition: transform 200ms ease;
 }
-.card:hover .course-icon {
+.doodle-tile-art {
+  width: 74%;
+  height: 74%;
+}
+.card:hover .doodle-tile {
   transform: translateY(-2px);
 }
 @media (prefers-reduced-motion: reduce) {
-  .card:hover .course-icon {
+  .card:hover .doodle-tile {
     transform: none;
   }
 }

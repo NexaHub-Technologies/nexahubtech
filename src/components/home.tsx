@@ -18,7 +18,7 @@ import {
 } from "../lib/evidence";
 import { SERVICES } from "../lib/services";
 import { WORK } from "../lib/work";
-import { DrawingTile, TrackIcon } from "./course-icon";
+import { DoodleTile, TrackIcon } from "./course-icon";
 import { CaseStudyCard, LogoRow, Quote, TextSlot } from "./evidence";
 import { Figure } from "./figure";
 import { Eyebrow, SectionHead } from "./site";
@@ -106,15 +106,15 @@ export function ClosingCTA({
 /* ── the company's front page ───────────────────────────────────── */
 
 /* The front page's opening. One confident headline in the site's own type,
-   framed by four tiles for the kinds of software the studio builds — drawn in
-   the same style as the Academy's course icons — then the pitch, the two
+   framed by four tiles for the kinds of software the studio builds — the
+   brand's code doodles, as on the course icons — then the pitch, the two
    actions, and the company's motto as the shape of every project. */
 
 const WORK_TILES = [
-	{ drawing: "frontend-development", t: "Web apps", pos: "is-tl" },
-	{ drawing: "mobile-development", t: "Mobile apps", pos: "is-bl" },
-	{ drawing: "backend-development", t: "Backends & APIs", pos: "is-tr" },
-	{ drawing: "data-analysis", t: "Dashboards & data", pos: "is-br" },
+	{ doodle: "globe", t: "Web apps", pos: "is-tl" },
+	{ doodle: "phone", t: "Mobile apps", pos: "is-bl" },
+	{ doodle: "server", t: "Backends & APIs", pos: "is-tr" },
+	{ doodle: "chart", t: "Dashboards & data", pos: "is-br" },
 ] as const;
 
 const MOTTO_STEPS = [
@@ -149,9 +149,8 @@ export function StudioHero() {
 					<ul className="hero-tiles" aria-label="What we build">
 						{WORK_TILES.map((w) => (
 							<li key={w.t} className={`hero-tile ${w.pos}`}>
-								<DrawingTile
-									drawing={w.drawing}
-									track="development"
+								<DoodleTile
+									name={w.doodle}
 									className="w-14 h-14 md:w-[4.5rem] md:h-[4.5rem]"
 								/>
 								<span>{w.t}</span>
