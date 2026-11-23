@@ -4,6 +4,7 @@ import {
 	HeadContent,
 	Outlet,
 	Scripts,
+	useRouterState,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 
@@ -11,6 +12,7 @@ import { Footer, Header } from "../components/site";
 import { DEFINITION, ONE_LINER } from "../lib/company";
 import { MOTTO, SITE_URL } from "../lib/contact";
 import { PAGES } from "../lib/pages";
+import { inAcademy } from "../lib/site";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
@@ -78,10 +80,14 @@ export const Route = createRootRoute({
 });
 
 function RootLayout() {
+	/* the Academy's pages carry its doodle pattern behind their opening section */
+	const academy = useRouterState({
+		select: (s) => inAcademy(s.location.pathname),
+	});
 	return (
 		<>
 			<Header />
-			<main>
+			<main data-section={academy ? "academy" : undefined}>
 				<Outlet />
 			</main>
 			<Footer />

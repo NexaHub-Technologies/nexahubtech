@@ -1120,3 +1120,25 @@ label.choice {
   border-color: var(--ink);
   color: #fff;
 }
+
+/* ── the Academy's doodles ─────────────────────────────────────────
+   The Academy's code-doodle tile (public/images/doodles/), faint, behind the
+   opening section of every Academy page and nowhere else: it marks the
+   section without competing with what is on the page. It fades out
+   downwards, so it never runs into the content below. */
+main[data-section='academy'] > :first-child {
+  position: relative;
+  isolation: isolate;
+}
+main[data-section='academy'] > :first-child::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0 calc(50% - 50vw);
+  background: url('/images/doodles/doodle-ink-lines.svg') repeat;
+  background-size: 560px;
+  opacity: 0.07;
+  mask-image: linear-gradient(to bottom, #000 55%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent);
+  pointer-events: none;
+}
