@@ -540,3 +540,23 @@ export function TrackIcon({
 		/>
 	);
 }
+
+/* Any of the drawings above on a track's tile, for places that show a kind
+   of work rather than a course — e.g. the front page's studio tiles. */
+export function DrawingTile({
+	drawing,
+	track,
+	className = "w-14 h-14",
+}: {
+	drawing: string;
+	track: Family;
+	className?: string;
+}) {
+	return (
+		<Tile
+			family={track}
+			drawing={DRAWINGS[drawing] ?? DRAWINGS.default}
+			className={className}
+		/>
+	);
+}

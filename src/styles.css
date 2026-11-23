@@ -1260,38 +1260,33 @@ main[data-section='academy'] > :first-child::before {
 }
 
 /* ── the front page's opening ──────────────────────────────────────
-   A centred headline set large across two lines, with a few stickers
-   around it: the studio's one loud moment, kept to the top of one page. */
+   A centred headline in the site's own type, framed by four tiles for the
+   kinds of software the studio builds, then the motto as a three-step
+   strip. The tiles sit in the margins on wide screens and line up under the
+   headline on narrow ones. */
 .studio-hero {
-  padding-block: 2.75rem 1.5rem;
-  overflow: hidden;
+  padding-block: 3rem 3rem;
 }
 @media (min-width: 768px) {
   .studio-hero {
-    padding-block: 3.5rem 2rem;
+    padding-block: 4.5rem 3.5rem;
   }
 }
-.avail-pill {
+.hero-status {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: var(--card);
-  box-shadow: var(--shadow-sm);
-  font-size: 0.92rem;
-  transition: border-color 150ms ease;
-}
-.avail-pill:hover {
-  border-color: var(--ink-soft);
-}
-.avail-pill i {
-  font-style: normal;
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
 }
 .avail-dot {
-  width: 9px;
-  height: 9px;
+  flex: none;
+  width: 8px;
+  height: 8px;
   border-radius: 999px;
   background: #22c55e;
   box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.18);
@@ -1300,187 +1295,109 @@ main[data-section='academy'] > :first-child::before {
   background: #f59e0b;
   box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
 }
-.avail-sep {
-  width: 1px;
-  height: 16px;
-  background: var(--line);
-}
-@media (max-width: 479px) {
-  .avail-sep,
-  .avail-pill > span:last-child {
-    display: none;
-  }
-}
 
-/* the stickers are placed against the full content width, so they sit in
-   the margins around the headline rather than over its letters */
-.mega-wrap {
+.hero-stage {
   position: relative;
   width: 100%;
-  margin-top: 3.25rem;
+  margin-top: 1.5rem;
 }
-@media (min-width: 768px) {
-  .mega-wrap {
-    margin-top: 3.5rem;
-  }
-}
-.mega {
+.hero-title {
   margin: 0;
   font-family: var(--font-display);
   font-weight: 700;
-  text-transform: uppercase;
   color: var(--ink);
-  font-size: 12.5vw;
-  line-height: 0.92;
-  letter-spacing: -0.025em;
-}
-.mega > span {
-  display: block;
-}
-/* from tablets up, each half of the headline stays on one line: Cal Sans is
-   wider than a condensed face, so the size follows the viewport */
-@media (min-width: 768px) {
-  .mega {
-    font-size: min(7.1vw, 6.7rem);
-  }
-  .mega > span {
-    white-space: nowrap;
-  }
+  font-size: clamp(2.9rem, 8.4vw, 6.6rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
 
-.sticker {
-  position: absolute;
-  z-index: 2;
-  pointer-events: none;
-  user-select: none;
+.hero-tiles {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  max-width: 30rem;
+  margin-inline: auto;
 }
-.sticker-pill {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(0.82rem, 1.6vw, 1.4rem);
-  line-height: 1;
-  white-space: nowrap;
-  padding: 0.65em 1.25em;
-  border-radius: 999px;
-  border: 4px solid #ffffff;
-  box-shadow: 0 12px 26px -12px rgba(42, 15, 63, 0.5);
-}
-.sticker-pill.is-rose {
-  top: -1.7em;
-  left: 4%;
-  color: #ffffff;
-  background: linear-gradient(100deg, #f06ba8, #ff9a62);
-  transform: rotate(-8deg);
-}
-.sticker-pill.is-lilac {
-  bottom: -2.4em;
-  right: 3%;
-  color: #2a0f3f;
-  background: linear-gradient(100deg, #f9a8cd, #c9a7ff);
-  transform: rotate(6deg);
-}
-.sticker-burst {
-  left: 0;
-  bottom: -2.25rem;
-  width: clamp(96px, 11vw, 150px);
-  aspect-ratio: 1;
-  transform: rotate(-10deg);
-  filter: drop-shadow(0 12px 18px rgba(42, 15, 63, 0.28));
-}
-.sticker-burst-shape {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-.sticker-burst-text {
-  position: absolute;
-  inset: 0;
+.hero-tile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: #2a0f3f;
-  line-height: 1;
-}
-.sticker-burst-text b {
-  font-family: var(--font-display);
-  font-size: clamp(1.6rem, 2.8vw, 2.5rem);
-}
-.sticker-burst-text span {
-  margin-top: 0.25rem;
-  max-width: 5.5em;
-  font-size: clamp(0.55rem, 0.8vw, 0.72rem);
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-.sticker-mark {
-  top: -3.25rem;
-  right: 1.5%;
-  width: clamp(80px, 9vw, 124px);
-  aspect-ratio: 1;
-  border-radius: 999px;
-  border: 5px solid #ffffff;
-  background: linear-gradient(135deg, #ffd25a, #ff9a62);
-  box-shadow: 0 16px 30px -14px rgba(42, 15, 63, 0.55);
-  display: grid;
-  place-items: center;
-  transform: rotate(8deg);
-}
-.sticker-mark img {
-  width: 48%;
-  height: auto;
-}
-@media (max-width: 899px) {
-  .sticker-burst,
-  .sticker-mark {
-    display: none;
-  }
-}
-@media (max-width: 767px) {
-  .sticker-pill.is-rose {
-    top: -3.1em;
-    left: 0;
-  }
-  .sticker-pill.is-lilac {
-    bottom: -3.5em;
-    right: 0;
-  }
-}
-
-.btn-lg {
-  padding: 0.95rem 1.6rem;
-  font-size: 1rem;
-  border-radius: 999px;
-}
-
-.trusted {
-  width: 100%;
-  margin-top: 3.5rem;
-}
-@media (min-width: 768px) {
-  .trusted {
-    margin-top: 4.5rem;
-  }
-}
-.trusted-label {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  margin: 0 auto 1.25rem;
-  max-width: 64rem;
-  font-size: 0.95rem;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 600;
   color: var(--mute);
 }
-.trusted-label::before,
-.trusted-label::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--line);
+/* wide screens: the tiles move into the margins around the headline */
+@media (min-width: 1100px) {
+  .hero-tiles {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    max-width: none;
+    display: block;
+    pointer-events: none;
+  }
+  .hero-tile {
+    position: absolute;
+    width: 7.5rem;
+  }
+  .hero-tile.is-tl {
+    left: 1%;
+    top: -0.5rem;
+  }
+  .hero-tile.is-bl {
+    left: 7%;
+    bottom: -2.5rem;
+  }
+  .hero-tile.is-tr {
+    right: 1%;
+    top: -0.5rem;
+  }
+  .hero-tile.is-br {
+    right: 7%;
+    bottom: -2.5rem;
+  }
 }
-.trusted .logo-row {
+
+.motto-strip {
+  list-style: none;
+  margin: 3.5rem 0 0;
+  padding: 0;
+  width: 100%;
   max-width: 56rem;
-  margin-inline: auto;
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .motto-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.motto-strip > li {
+  background: var(--card);
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.motto-word {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--ink);
+}
+.motto-strip > li:nth-child(2) .motto-word {
+  color: var(--accent-ink);
+}
+.motto-note {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
 }

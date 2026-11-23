@@ -46,19 +46,21 @@ test("evidence slots show labelled placeholders until filled", async ({
 	).toBeVisible();
 });
 
-test("the front page opens with the availability badge, the headline and Trusted by", async ({
+test("the front page opens with its status, headline, tiles and motto", async ({
 	page,
 }) => {
 	await page.goto("/");
-	await expect(page.getByRole("link", { name: /Available for new projects/ })).toHaveAttribute(
+	await expect(page.getByText(/taking on new projects/i)).toBeVisible();
+	await expect(page.getByRole("heading", { level: 1 })).toHaveText(
+		/Software,\s*built properly\./,
+	);
+	const tiles = page.getByRole("list", { name: "What we build" }).getByRole("listitem");
+	await expect(tiles).toHaveCount(4);
+	const motto = page.getByRole("list", { name: "How every project runs" });
+	for (const word of ["Design.", "Ship.", "Support."])
+		await expect(motto).toContainText(word);
+	await expect(page.getByRole("link", { name: "Book a call" })).toHaveAttribute(
 		"href",
 		/wa\.me/,
 	);
-	await expect(page.getByRole("heading", { level: 1 })).toHaveText(
-		/Software,\s*built properly\./i,
-	);
-	await expect(page.getByText("Trusted by")).toBeVisible();
-	/* the stickers are decoration, hidden from assistive technology */
-	for (const s of await page.locator(".sticker").all())
-		await expect(s).toHaveAttribute("aria-hidden", "true");
 });

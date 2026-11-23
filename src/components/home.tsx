@@ -18,7 +18,7 @@ import {
 } from "../lib/evidence";
 import { SERVICES } from "../lib/services";
 import { WORK } from "../lib/work";
-import { TrackIcon } from "./course-icon";
+import { DrawingTile, TrackIcon } from "./course-icon";
 import { CaseStudyCard, LogoRow, Quote, TextSlot } from "./evidence";
 import { Figure } from "./figure";
 import { Eyebrow, SectionHead } from "./site";
@@ -105,109 +105,100 @@ export function ClosingCTA({
 
 /* ── the company's front page ───────────────────────────────────── */
 
-/* The front page's opening: an availability badge, the headline set large
-   across two lines, a few stickers around it, the pitch, two actions, and the
-   "Trusted by" row. The stickers are decoration — every fact on them is also
-   said in words elsewhere on the site — so screen readers skip them. */
+/* The front page's opening. One confident headline in the site's own type,
+   framed by four tiles for the kinds of software the studio builds — drawn in
+   the same style as the Academy's course icons — then the pitch, the two
+   actions, and the company's motto as the shape of every project. */
+
+const WORK_TILES = [
+	{ drawing: "frontend-development", t: "Web apps", pos: "is-tl" },
+	{ drawing: "mobile-development", t: "Mobile apps", pos: "is-bl" },
+	{ drawing: "backend-development", t: "Backends & APIs", pos: "is-tr" },
+	{ drawing: "data-analysis", t: "Dashboards & data", pos: "is-br" },
+] as const;
+
+const MOTTO_STEPS = [
+	{ t: "Design.", d: "The problem first, then a plan you sign off." },
+	{ t: "Ship.", d: "Working software, in increments you can use." },
+	{ t: "Support.", d: "Fixes, updates and someone to call, after launch." },
+];
+
 export function StudioHero() {
 	return (
 		<section className="studio-hero">
 			<div className="wrap flex flex-col items-center text-center">
-				<a
-					href={BOOK_A_CALL}
-					target="_blank"
-					rel="noreferrer"
-					className="avail-pill"
-				>
+				<p className="hero-status">
 					<span
 						className={`avail-dot${AVAILABLE_FOR_PROJECTS ? "" : " is-busy"}`}
 						aria-hidden="true"
 					/>
-					<span className="font-semibold text-ink">
+					<span>
+						<span className="hidden sm:inline">Software studio · Abuja · </span>
 						{AVAILABLE_FOR_PROJECTS
-							? "Available for new projects"
-							: "Booked up — taking enquiries"}
+							? "taking on new projects"
+							: "booked up, taking enquiries"}
 					</span>
-					<span className="avail-sep" aria-hidden="true" />
-					<span className="text-mute">
-						Book a call <i aria-hidden="true">→</i>
-					</span>
-				</a>
+				</p>
 
-				<div className="mega-wrap">
-					<h1 className="mega">
-						<span>Software,</span> <span>built properly.</span>
+				<div className="hero-stage">
+					<h1 className="hero-title">
+						Software,
+						<br />
+						built <span className="hot-text">properly.</span>
 					</h1>
-					<span className="sticker sticker-pill is-rose" aria-hidden="true">
-						Web &amp; mobile apps
-					</span>
-					<span className="sticker sticker-pill is-lilac" aria-hidden="true">
-						Made in Nigeria
-					</span>
-					<span className="sticker sticker-burst" aria-hidden="true">
-						<svg
-							viewBox="0 0 120 120"
-							className="sticker-burst-shape"
-							aria-hidden="true"
-						>
-							<defs>
-								<linearGradient id="burst-fill" x1="0" y1="0" x2="1" y2="1">
-									<stop offset="0" stopColor="#ffd25a" />
-									<stop offset="1" stopColor="#ff9a62" />
-								</linearGradient>
-							</defs>
-							<polygon
-								points={BURST_POINTS}
-								fill="url(#burst-fill)"
-								stroke="#fff"
-								strokeWidth="5"
-								strokeLinejoin="round"
-							/>
-						</svg>
-						<span className="sticker-burst-text">
-							<b>11</b>
-							<span>steps before code</span>
-						</span>
-					</span>
-					<span className="sticker sticker-mark" aria-hidden="true">
-						<img src="/logo-main.svg" alt="" />
-					</span>
+					<ul className="hero-tiles" aria-label="What we build">
+						{WORK_TILES.map((w) => (
+							<li key={w.t} className={`hero-tile ${w.pos}`}>
+								<DrawingTile
+									drawing={w.drawing}
+									track="development"
+									className="w-14 h-14 md:w-[4.5rem] md:h-[4.5rem]"
+								/>
+								<span>{w.t}</span>
+							</li>
+						))}
+					</ul>
 				</div>
 
-				<p className="lead mt-12 md:mt-14 text-[1.12rem] max-w-[38rem]">
-					An independent software studio in Abuja. We design, build and maintain
-					production software for businesses and founders — scoped carefully,
-					built properly, and supported long after launch.
+				<p className="lead mt-8 text-[1.12rem] max-w-[38rem]">
+					We design, build and maintain production software for businesses and
+					founders — scoped carefully, built properly, and supported long after
+					launch.
 				</p>
 				<div className="mt-8 flex flex-wrap justify-center gap-3">
-					<Link to="/contact" className="btn btn-primary btn-lg">
+					<Link to="/contact" className="btn btn-primary">
 						Start a project
 					</Link>
-					<Link to="/work" className="btn btn-ghost btn-lg">
-						See our work
-					</Link>
+					<a
+						href={BOOK_A_CALL}
+						target="_blank"
+						rel="noreferrer"
+						className="btn btn-ghost"
+					>
+						Book a call
+					</a>
 				</div>
 
-				<ClientLogos />
+				<ol className="motto-strip" aria-label="How every project runs">
+					{MOTTO_STEPS.map((m) => (
+						<li key={m.t}>
+							<span className="motto-word">{m.t}</span>
+							<span className="motto-note">{m.d}</span>
+						</li>
+					))}
+				</ol>
 			</div>
 		</section>
 	);
 }
 
-/* a 14-point starburst, drawn once */
-const BURST_POINTS = Array.from({ length: 28 }, (_, i) => {
-	const r = i % 2 === 0 ? 56 : 44;
-	const a = (Math.PI * i) / 14 - Math.PI / 2;
-	return `${(60 + r * Math.cos(a)).toFixed(1)},${(60 + r * Math.sin(a)).toFixed(1)}`;
-}).join(" ");
-
-/* the logos of organisations we have built for, under a "Trusted by" rule */
+/* the logos of organisations we have built for */
 export function ClientLogos() {
 	return (
-		<div className="trusted">
-			<p className="trusted-label">Trusted by</p>
+		<section className="wrap pb-10">
+			<p className="kicker mb-4 text-center">Organisations we have built for</p>
 			<LogoRow logos={CLIENT_LOGOS} />
-		</div>
+		</section>
 	);
 }
 
