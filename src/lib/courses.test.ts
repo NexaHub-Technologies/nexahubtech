@@ -168,13 +168,10 @@ describe("course fees", () => {
 		}
 	});
 
-	/* Learners choose how they learn. PC Basics is the single exception: a
-	   complete beginner cannot be taught to use a computer over a video call. */
-	it("offers every course both online and in person, except PC Basics", () => {
+	/* Learners choose how they learn: online or in person. */
+	it("offers every course both online and in person", () => {
 		for (const c of COURSES) {
-			expect(deliveriesOf(c), c.slug).toEqual(
-				c.slug === "pc-basics" ? ["inhouse"] : ["online", "inhouse"],
-			);
+			expect(deliveriesOf(c), c.slug).toEqual(["online", "inhouse"]);
 		}
 	});
 

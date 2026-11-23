@@ -14,6 +14,7 @@ import {
 	priceLabel,
 } from "../lib/courses";
 import { type SessionSlot, slotLabel, slotsFor } from "../lib/timetable";
+import { CourseIcon } from "./course-icon";
 
 /* Every fee on the site renders through these, from the numbers in courses.ts.
    The rule they follow: show one price at a time. A card shows where a course
@@ -39,7 +40,8 @@ export function CourseCard({ course }: { course: Course }) {
 			params={{ slug: course.slug }}
 			className="card card-lift p-6 flex flex-col"
 		>
-			<h3 className="display text-[1.2rem]">{course.t}</h3>
+			<CourseIcon slug={course.slug} className="w-12 h-12" />
+			<h3 className="display text-[1.2rem] mt-4">{course.t}</h3>
 			<p className="lead mt-2 text-[0.93rem] flex-1">{course.tagline}</p>
 			<div className="flex items-center justify-between gap-3 mt-5 pt-4 border-t border-[var(--line-soft)]">
 				<span className="text-[0.85rem] text-mute font-semibold">

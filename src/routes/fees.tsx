@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { CourseIcon, TrackIcon } from "../components/course-icon";
 import { Eyebrow } from "../components/site";
 import { CBT_FROM_PRICE } from "../lib/cbt";
 import {
@@ -53,8 +54,9 @@ function Row({ c }: { c: Course }) {
 				<Link
 					to="/courses/$slug"
 					params={{ slug: c.slug }}
-					className="hover:underline"
+					className="inline-flex items-center gap-2.5 hover:underline"
 				>
+					<CourseIcon slug={c.slug} className="w-7 h-7 shrink-0" />
 					{c.t}
 				</Link>
 			</th>
@@ -97,7 +99,12 @@ function PricingPage() {
 				{TRACKS.map((t) => (
 					<div key={t.id} className="fee-table-wrap">
 						<table className="fee-table">
-							<caption>{t.t}</caption>
+							<caption>
+								<span className="inline-flex items-center gap-3">
+									<TrackIcon track={t.id} className="w-9 h-9" />
+									{t.t}
+								</span>
+							</caption>
 							<colgroup>
 								<col style={{ width: "46%" }} />
 								<col style={{ width: "18%" }} />

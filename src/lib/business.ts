@@ -20,8 +20,8 @@ export interface BusinessOffer {
 	link?: { to: string; label: string };
 }
 
-const office = getCourseBySlug("microsoft-office");
-if (!office) throw new Error("business.ts: microsoft-office is not a course");
+const office = getCourseBySlug("office-essentials");
+if (!office) throw new Error("business.ts: office-essentials is not a course");
 
 /* per staff member, and the smallest group worth sending an instructor out for */
 export const OFFICE_ONSITE_RATE = 85_000;

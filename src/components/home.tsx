@@ -17,6 +17,7 @@ import {
 } from "../lib/evidence";
 import { SERVICES } from "../lib/services";
 import { WORK } from "../lib/work";
+import { TrackIcon } from "./course-icon";
 import { CaseStudyCard, LogoRow, Quote, TextSlot } from "./evidence";
 import { Figure } from "./figure";
 import { Eyebrow, SectionHead } from "./site";
@@ -339,9 +340,10 @@ export function Tracks() {
 							key={t.id}
 							to="/courses"
 							hash={t.id}
-							className="card p-7 flex flex-col"
+							className="card card-lift p-7 flex flex-col"
 						>
-							<span className="kicker">{t.who}</span>
+							<TrackIcon track={t.id} className="w-14 h-14" />
+							<span className="kicker mt-5">{t.who}</span>
 							<h3 className="h3 text-[1.35rem] mt-2">{t.t}</h3>
 							<p className="lead mt-2 text-[0.95rem] flex-1">{t.d}</p>
 							<p className="mt-5 pt-4 rule text-[0.92rem] font-semibold text-ink">

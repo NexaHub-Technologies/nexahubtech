@@ -1,51 +1,54 @@
 # Computer Essentials — NexaHubTech Academy
 
-> Three weeks from never having used a computer to saving, finding and printing your own work — with somebody beside you the whole way.
+> From never having used a computer to managing files, browsing safely, and working with documents — with an instructor beside you every step.
 
 Canonical page: https://nexahubtech.company/courses/computer-essentials
 
 | | |
 |---|---|
-| Subject | Digital Literacy |
-| Fee — live online | ₦37,500, or 2 × ₦20,000 |
-| Fee — in person | ₦45,000, or 2 × ₦25,000 |
-| Duration | 3 Weeks |
+| Subject | Digital Literacy & PC Basics |
+| Fee — live online | ₦65,000, or 2 × ₦35,000 |
+| Fee — in person | ₦75,000, or 2 × ₦40,000 |
+| Duration | 6 Weeks |
 | Format | Taught live — online or in person. |
-| Level | The shortest way in if a computer still feels risky |
+| Level | The place to begin if a computer still feels risky or unfamiliar |
 | Start | Any day |
 | Session times | Tue, Thu · 8:30 AM – 11:00 AM (in person); Mon, Wed, Fri · 11:30 AM – 2:00 PM (in person); Sat · 9:00 AM – 12:00 PM (in person); Mon, Wed · 7:00 PM – 9:00 PM (live online) |
 
-The first three modules of PC Basics, on their own. Learn online, with your instructor guiding every click on a shared screen, or in person in a class of no more than 6, where machines are provided. Start whenever you are ready.
+Learn live online with screen sharing and guided practice, or in person in a class of no more than 6 on machines provided in our Kubwa centre. Either way an instructor is beside you explaining every step, and you start whenever you are ready.
 
-## The idea this course installs: Every screen is asking you something
+## The idea this course installs: Everything lives somewhere, and every screen is asking a question
 
-Nothing on a computer happens by itself. Every window, box and message is the machine asking a question and waiting for an answer — where to save this, whether to keep that, which of these you meant. Beginners click past the question to make it go away, and then believe the computer did something to them. Read the question first and the machine stops being unpredictable: it does what you told it, every time, and almost everything it did can be undone.
+A computer never puts anything nowhere and never acts by surprise. Every document you save, every file you move, and every app you install goes to a place with a name you can read out loud. Every dialogue box and message is simply the machine asking an honest question before proceeding. Once you know where things live and read before clicking, the fear disappears completely: you can find any file, undo almost any action, and work with total confidence.
 
 Once it lands, you can:
 
-- Read a box before clicking it, and know what you are agreeing to
-- Undo, close and recover without panicking
-- Save your work where you meant to, and open it again tomorrow
+- Find any file you have saved without searching blindly
+- Read dialogue boxes calmly and know what you are agreeing to
+- Undo, recover and back up your work without panicking
 
 ## Before you start
 
 What you need to know:
 
-- Nothing about computers — this course assumes none
+- Nothing about computers — this is the course that assumes none at all
 - How to read and write in English
+- If you can already use a smartphone, you have all the baseline needed
 
 What you need to have:
 
-- Online: a laptop or desktop computer and a stable internet connection
-- In person: nothing to buy — a machine is provided at every session
-- A USB drive of any size, to keep a copy of your work
-- 3–4 hours a week outside sessions to practise
+- A laptop running Windows, macOS or Linux — or use one of ours in the centre
+- A phone that can receive SMS for account verification
+- A USB drive of any size to back up your personal files
+- 4–5 hours a week outside sessions to practise
 
 ## Modules
 
 01. **The machine, and what it is doing** — The parts, the desktop, the mouse and the keyboard — and why nothing you click can break it.
-02. **Files, folders and where things go** — Paths, saving, naming and copying — so your work is always somewhere you can find it.
-03. **Documents, numbers and slides** — A letter, a sum and a slide: enough of each to do real work, and to see what to learn next.
+02. **Files, folders and where things go** — Paths, saving, naming, copying and backing up. The foundation everything else stands on.
+03. **Documents, numbers and slides** — Write a letter properly, make a spreadsheet do arithmetic, and build a deck worth presenting.
+04. **The internet, email and accounts** — Browse, search well, judge what you find, and set up an account you can get back into.
+05. **Staying safe, and getting unstuck** — Scams, passwords and privacy — plus how to describe a problem well enough to be helped.
 
 ## Every session
 
@@ -56,14 +59,14 @@ What you need to have:
 ## Included
 
 - No computer experience assumed at all
-- Learn online, or in person with a machine provided
 - Files and folders taught properly, not guessed at
-- A letter, a spreadsheet and a slide of your own
-- Carry on into the full PC Basics course whenever you are ready
+- Word processing, spreadsheets and presentation slides
+- Email, accounts and staying safe from scams
+- Machines available in the centre if you do not own one
 
 ## Where it leads
 
-Next: [PC Basics](https://nexahubtech.company/courses/pc-basics.md) — carry on for ₦35,000 more.
+Next: [Office Essentials](https://nexahubtech.company/courses/office-essentials.md).
 
 ## Enrol
 

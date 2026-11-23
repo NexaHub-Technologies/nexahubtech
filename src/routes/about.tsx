@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { Download, ExternalLink, FileText } from "lucide-react";
 import { PersonCard } from "../components/evidence";
 import { Figure } from "../components/figure";
 import { ClosingCTA } from "../components/home";
@@ -59,6 +60,12 @@ function About() {
 					</a>
 					<a href="#values" className="view-link">
 						What we believe
+					</a>
+					<a href="#partners" className="view-link">
+						Partners
+					</a>
+					<a href="#profile" className="view-link">
+						Company profile
 					</a>
 					<a href="#visit" className="view-link">
 						Visit us
@@ -204,6 +211,124 @@ function About() {
 								<p className="text-[0.95rem] text-ink-soft mt-1">{v.d}</p>
 							</div>
 						))}
+					</div>
+				</div>
+			</section>
+
+			{/* partners and collaborators */}
+			<section id="partners" className="wrap section scroll-mt-24">
+				<SectionHead
+					eyebrow="Partners & Collaborators"
+					title="Working with trusted industry partners."
+					intro="We collaborate with established technology firms and infrastructure providers to deliver reliable enterprise solutions and world-class digital learning."
+				/>
+				<div className="grid md:grid-cols-2 gap-6 mt-10">
+					<div className="card card-lift p-8 flex flex-col justify-between">
+						<div>
+							<div className="flex items-center justify-between gap-4">
+								<span className="pill">Technology Partner</span>
+								<ExternalLink
+									className="w-4 h-4 text-mute"
+									aria-hidden="true"
+								/>
+							</div>
+							<h3 className="h3 text-[1.4rem] mt-4">Coresys Technologies</h3>
+							<p className="lead mt-3 text-[0.95rem]">
+								Enterprise software development, digital transformation
+								consultancy, and core systems infrastructure solutions across
+								Nigeria.
+							</p>
+						</div>
+						<div className="mt-6 pt-5 border-t border-[var(--line-soft)]">
+							<a
+								href="https://coresystech.ng/"
+								target="_blank"
+								rel="noreferrer"
+								className="view-link"
+							>
+								Visit coresystech.ng <i aria-hidden="true">→</i>
+							</a>
+						</div>
+					</div>
+
+					<div className="card card-lift p-8 flex flex-col justify-between">
+						<div>
+							<div className="flex items-center justify-between gap-4">
+								<span className="pill">Hardware & Systems</span>
+								<ExternalLink
+									className="w-4 h-4 text-mute"
+									aria-hidden="true"
+								/>
+							</div>
+							<h3 className="h3 text-[1.4rem] mt-4">Gateway Computers</h3>
+							<p className="lead mt-3 text-[0.95rem]">
+								Computing hardware, enterprise systems integration, learning
+								centre equipment, and dependable IT equipment support.
+							</p>
+						</div>
+						<div className="mt-6 pt-5 border-t border-[var(--line-soft)]">
+							<a
+								href="https://gateway-computers.com/"
+								target="_blank"
+								rel="noreferrer"
+								className="view-link"
+							>
+								Visit gateway-computers.com <i aria-hidden="true">→</i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* company profile */}
+			<section id="profile" className="band scroll-mt-24">
+				<div className="wrap section">
+					<div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-10 items-center">
+						<div>
+							<Eyebrow>Company Profile</Eyebrow>
+							<h2 className="h2 mt-3">Download our corporate profile.</h2>
+							<p className="lead mt-4 text-[1.02rem] max-w-[38rem]">
+								Get an in-depth view of NexaHubTech Limited: our engineering
+								studio capabilities, our Academy curriculum tracks, company
+								structure, governance, and how we work with clients and
+								organisations.
+							</p>
+							<div className="mt-7 flex flex-wrap items-center gap-4">
+								<a
+									href="/nexahubtech-company-profile.pdf"
+									download="NexaHubTech-Company-Profile.pdf"
+									target="_blank"
+									rel="noreferrer"
+									className="btn btn-primary"
+								>
+									<Download className="w-4 h-4" aria-hidden="true" />
+									Download company profile (PDF)
+								</a>
+								<span className="text-[0.88rem] text-mute font-medium">
+									PDF document · Official overview
+								</span>
+							</div>
+						</div>
+
+						<div className="card p-6 border-dashed flex items-center gap-5">
+							<div className="w-14 h-14 rounded-xl bg-[var(--accent-tint)] text-[var(--accent-ink)] flex items-center justify-center shrink-0">
+								<FileText className="w-7 h-7" aria-hidden="true" />
+							</div>
+							<div>
+								<h3 className="font-bold text-ink">NexaHubTech Profile</h3>
+								<p className="text-[0.85rem] text-mute mt-0.5">
+									Capability statement, studio services & Academy tracks
+								</p>
+								<a
+									href="/nexahubtech-company-profile.pdf"
+									target="_blank"
+									rel="noreferrer"
+									className="view-link text-[0.88rem] mt-2 inline-flex"
+								>
+									Open PDF in new tab <i aria-hidden="true">→</i>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>

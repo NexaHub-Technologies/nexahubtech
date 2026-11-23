@@ -1,9 +1,32 @@
 import { Link, useRouterState } from "@tanstack/react-router";
+import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { CONTACT, MOTTO, TAGLINE } from "../lib/contact";
 import { inAcademy } from "../lib/site";
+import { useTheme } from "../lib/theme";
 
 export { CONTACT, MOTTO };
+
+export function ThemeToggle({ className }: { className?: string }) {
+	const { theme, toggleTheme, mounted } = useTheme();
+	const isDark = mounted && theme === "dark";
+
+	return (
+		<button
+			type="button"
+			onClick={toggleTheme}
+			className={`theme-toggle ${className ?? ""}`}
+			aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+			title={isDark ? "Switch to light mode" : "Switch to dark mode"}
+		>
+			{isDark ? (
+				<Sun className="w-[18px] h-[18px]" aria-hidden="true" />
+			) : (
+				<Moon className="w-[18px] h-[18px]" aria-hidden="true" />
+			)}
+		</button>
+	);
+}
 
 /* The site's chrome: one header and one footer for the whole site. The
    Academy is a section of the site, reached from the main navigation; on its
@@ -175,25 +198,29 @@ export function Header() {
 					))}
 				</nav>
 
-				<div className="hidden lg:block">
+				<div className="hidden lg:flex items-center gap-3">
+					<ThemeToggle />
 					<Link to={cta.to} className="btn btn-primary whitespace-nowrap">
 						{cta.label}
 					</Link>
 				</div>
 
-				<button
-					type="button"
-					className="menu-btn lg:hidden"
-					aria-label={open ? "Close menu" : "Open menu"}
-					aria-expanded={open}
-					aria-controls="mobile-menu"
-					data-open={open}
-					onClick={() => setOpen((v) => !v)}
-				>
-					<span />
-					<span />
-					<span />
-				</button>
+				<div className="flex items-center gap-2 lg:hidden">
+					<ThemeToggle />
+					<button
+						type="button"
+						className="menu-btn"
+						aria-label={open ? "Close menu" : "Open menu"}
+						aria-expanded={open}
+						aria-controls="mobile-menu"
+						data-open={open}
+						onClick={() => setOpen((v) => !v)}
+					>
+						<span />
+						<span />
+						<span />
+					</button>
+				</div>
 			</div>
 
 			{academy ? <AcademyBar /> : null}

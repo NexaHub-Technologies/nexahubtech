@@ -18,8 +18,7 @@ fails if a course has no document, if a module has no exercise brief, or if the
 projects do not tile the course — every module in exactly one project, every
 week accounted for, three or four projects, the last one the capstone.
 
-**Five courses have no projects.** Computer Essentials, PC Basics, Office
-Essentials, Microsoft Office and Mobile Videography are assessed through their
+**Three courses have no projects.** Computer Essentials, Office Essentials, and AI for Office Use are assessed through their
 per-module exercise briefs alone, so the tiling rule does not apply to them;
 instead the test requires that they carry no projects section, no capstone and no
 spec directory, and that **every** one of their modules has an exercise brief
@@ -32,10 +31,9 @@ offered both ways are taught from the same document.
 
 | Course | Length | Level |
 |---|---|---|
-| [Computer Essentials](computer-essentials.md) | 3 Weeks | Never used a computer |
-| [PC Basics](pc-basics.md) | 6 Weeks | Never used a computer |
-| [Office Essentials](office-essentials.md) | 4 Weeks | Office staff, Word and Excel |
-| [Microsoft Office](microsoft-office.md) | 8 Weeks | Clerical and office staff |
+| [Computer Essentials](computer-essentials.md) | 6 Weeks | Never used a computer, or needs confidence |
+| [Office Essentials](office-essentials.md) | 8 Weeks | Office staff, Word, Excel, PowerPoint & Access |
+| [AI for Office Use](ai-for-office-use.md) | 4 Weeks | Office staff, AI prompt engineering & MS Office integration |
 | [Python Programming](python-programming.md) | 6 Weeks | Never coded before |
 | [JavaScript Programming](javascript-programming.md) | 8 Weeks | Beginners, and copy-paste JavaScript |
 | [Frontend Development](frontend-development.md) | 10 Weeks | Complete beginners |

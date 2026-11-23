@@ -1,5 +1,5 @@
 import { createFileRoute, Link, redirect } from "@tanstack/react-router";
-import { PersonCard } from "../../components/evidence";
+import { CourseIcon } from "../../components/course-icon";
 import { PriceBox } from "../../components/fees";
 import { Figure } from "../../components/figure";
 import { CONTACT, Eyebrow } from "../../components/site";
@@ -10,14 +10,28 @@ import {
 	priceLabel,
 	TRACKS,
 } from "../../lib/courses";
-import { TEAM } from "../../lib/evidence";
 import { coursePage } from "../../lib/pages";
 import { pageMeta } from "../../lib/seo";
 
 export const Route = createFileRoute("/courses/$slug/")({
 	/* a paused course's old address lands on the catalogue, not a dead end.
-	   302, because the course is coming back. */
+	   302, because the course is coming back.
+	   Legacy merged slugs redirect 301 to their new consolidated courses. */
 	beforeLoad: ({ params }) => {
+		if (params.slug === "pc-basics") {
+			throw redirect({
+				to: "/courses/$slug",
+				params: { slug: "computer-essentials" },
+				statusCode: 301,
+			});
+		}
+		if (params.slug === "microsoft-office") {
+			throw redirect({
+				to: "/courses/$slug",
+				params: { slug: "office-essentials" },
+				statusCode: 301,
+			});
+		}
 		if (isPaused(params.slug))
 			throw redirect({ to: "/courses", statusCode: 302 });
 	},
@@ -61,34 +75,31 @@ function CourseDetail() {
 
 	const track = TRACKS.find((t) => t.id === course.family);
 	const onRequest = course.admission === "on-request";
-	/* the instructor for the course's track, from the team list */
-	const instructor = TEAM.find((p) =>
-		p.role.includes(
-			{
-				digital: "Digital skills",
-				development: "Software & data",
-				video: "Video",
-			}[course.family],
-		),
-	);
 
 	return (
 		<>
 			<section className="wrap page-head">
-				<div className="max-w-[46rem]">
-					<Link to="/courses" hash={course.family} className="pill">
-						{track?.t ?? "Course"}
-						{course.d ? ` · ${course.d}` : ""}
-					</Link>
-					<h1 className="h1 mt-3">{course.t}</h1>
-					<p className="lead mt-6 text-[1.1rem] max-w-[38rem]">
-						{course.tagline}
-					</p>
-					<p className="mt-6 text-mute font-semibold">
-						{course.duration} · {deliveryPhrase(course)} ·{" "}
-						{onRequest ? "opens on request" : "start any day"} ·{" "}
-						{priceLabel(course)}
-					</p>
+				<div className="flex flex-col-reverse md:flex-row md:items-start justify-between gap-6 relative">
+					<div className="max-w-[46rem]">
+						<Link to="/courses" hash={course.family} className="pill">
+							{track?.t ?? "Course"}
+							{course.d ? ` · ${course.d}` : ""}
+						</Link>
+						<h1 className="h1 mt-3">{course.t}</h1>
+						<p className="lead mt-6 text-[1.1rem] max-w-[38rem]">
+							{course.tagline}
+						</p>
+						<p className="mt-6 text-mute font-semibold">
+							{course.duration} · {deliveryPhrase(course)} ·{" "}
+							{onRequest ? "opens on request" : "start any day"} ·{" "}
+							{priceLabel(course)}
+						</p>
+					</div>
+
+					<CourseIcon
+						slug={course.slug}
+						className="w-16 h-16 md:w-28 md:h-28 shrink-0"
+					/>
 				</div>
 			</section>
 
@@ -203,27 +214,16 @@ function CourseDetail() {
 				</div>
 			</section>
 
-			{/* who teaches it, and what a learner made on it — both evidence slots
-			    filled from src/lib/evidence.ts */}
+			{/* what a learner made on it — from src/lib/evidence.ts */}
 			<section className="wrap py-14">
-				<div className="grid md:grid-cols-[0.55fr_1.45fr] gap-8 md:gap-12 items-start">
-					{instructor ? (
-						<div>
-							<Eyebrow>Your instructor</Eyebrow>
-							<div className="mt-4 max-w-[12rem] md:max-w-[16rem]">
-								<PersonCard p={instructor} />
-							</div>
-						</div>
-					) : null}
-					<div>
-						<Eyebrow>Made on this course</Eyebrow>
-						<div className="mt-4">
-							<Figure
-								kind={course.family === "video" ? "photo" : "screenshot"}
-								alt={`A learner's project from ${course.t}`}
-								ratio="16 / 10"
-							/>
-						</div>
+				<div className="max-w-[52rem]">
+					<Eyebrow>Made on this course</Eyebrow>
+					<div className="mt-4">
+						<Figure
+							kind={course.family === "video" ? "photo" : "screenshot"}
+							alt={`A learner's project from ${course.t}`}
+							ratio="16 / 10"
+						/>
 					</div>
 				</div>
 			</section>

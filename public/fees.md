@@ -10,10 +10,9 @@ Every fee covers the whole course. Pay in full before your first session, or in 
 
 | Course | Length | Live online | In person |
 |---|---|---|---|
-| Computer Essentials | 3 Weeks | ₦37,500 (or 2 × ₦20,000) | ₦45,000 (or 2 × ₦25,000) |
-| PC Basics | 6 Weeks | — | ₦75,000 (or 2 × ₦40,000) |
-| Office Essentials | 4 Weeks | ₦45,000 (or 2 × ₦25,000) | ₦55,000 (or 2 × ₦30,000) |
-| Microsoft Office | 8 Weeks | ₦80,000 (or 2 × ₦42,500) | ₦95,000 (or 2 × ₦52,500) |
+| Computer Essentials | 6 Weeks | ₦65,000 (or 2 × ₦35,000) | ₦75,000 (or 2 × ₦40,000) |
+| Office Essentials | 8 Weeks | ₦80,000 (or 2 × ₦42,500) | ₦95,000 (or 2 × ₦52,500) |
+| AI for Office Use | 4 Weeks | ₦60,000 (or 2 × ₦32,500) | ₦75,000 (or 2 × ₦40,000) |
 
 ## Software & data
 

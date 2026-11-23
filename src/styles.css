@@ -81,6 +81,62 @@ html {
   --ring: var(--accent);
 }
 
+.dark {
+  --paper: #0f0917;         /* the dark page */
+  --paper-2: #181024;       /* tinted sections, insets, footer */
+  --card: #1d142c;          /* card surfaces */
+  --ink: #f7f4fb;           /* headings and primary text */
+  --ink-soft: #c8bad6;      /* long-form reading text */
+  --mute: #9685a7;          /* captions and secondary info */
+  --mute-2: #483958;        /* subtle placeholder strokes and borders */
+
+  --accent: #a855f7;        /* vibrant violet accent */
+  --accent-deep: #9333ea;   /* hover */
+  --accent-ink: #c084fc;    /* high contrast small accent text */
+  --accent-tint: rgba(168, 85, 247, 0.16); /* soft tint washes */
+
+  --plum: #311049;
+
+  /* compatibility aliases */
+  --marigold: var(--accent);
+  --marigold-deep: var(--accent-deep);
+  --marigold-ink: var(--accent-ink);
+  --marigold-tint: var(--accent-tint);
+  --teal: var(--plum);
+  --teal-deep: #200833;
+  --teal-tint: var(--accent-tint);
+  --warm: #f472b6;
+  --learn-ink: var(--accent-ink);
+  --build-ink: var(--accent-ink);
+  --mode-accent: var(--accent);
+  --mode-accent-ink: var(--accent-ink);
+  --mode-accent-tint: var(--accent-tint);
+
+  --line: rgba(255, 255, 255, 0.12);
+  --line-soft: rgba(255, 255, 255, 0.07);
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 12px 28px -12px rgba(0, 0, 0, 0.7);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+
+  /* shadcn tokens */
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card-foreground: var(--ink);
+  --popover: var(--card);
+  --popover-foreground: var(--ink);
+  --primary: var(--accent);
+  --primary-foreground: #ffffff;
+  --secondary: var(--paper-2);
+  --secondary-foreground: var(--ink);
+  --muted: var(--paper-2);
+  --muted-foreground: var(--mute);
+  --accent-foreground: var(--accent-ink);
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: var(--line);
+  --input: var(--line);
+  --ring: var(--accent);
+}
+
 @theme inline {
   --font-sans: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Cal Sans', 'Hanken Grotesk', sans-serif;
@@ -387,6 +443,66 @@ html {
 }
 .mobile-link.is-active {
   color: var(--accent-ink);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: color 150ms ease, background 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+.theme-toggle:hover {
+  color: var(--ink);
+  border-color: var(--accent);
+  background: var(--paper-2);
+}
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.dark .site-header {
+  background: rgba(15, 9, 23, 0.92);
+}
+.dark .site-logo {
+  filter: brightness(0) invert(1);
+}
+.dark .mobile-menu {
+  background: var(--card);
+}
+.dark .sub-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.dark .form-error {
+  color: #fca5a5;
+  background: #381219;
+  border-color: #7f1d1d;
+}
+.dark main[data-section='academy'] > :first-child::before {
+  filter: invert(1);
+  opacity: 0.05;
+}
+
+/* the course and track icons: full-colour tiles that lift a little when
+   their card is hovered */
+.course-icon {
+  display: block;
+  flex: none;
+  transition: transform 200ms ease;
+}
+.card:hover .course-icon {
+  transform: translateY(-2px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .card:hover .course-icon {
+    transform: none;
+  }
 }
 
 /* ── buttons & links ───────────────────────────────────────────── */
@@ -1118,7 +1234,7 @@ label.choice {
 .track-filter button[aria-pressed='true'] {
   background: var(--ink);
   border-color: var(--ink);
-  color: #fff;
+  color: var(--paper);
 }
 
 /* ── the Academy's doodles ─────────────────────────────────────────

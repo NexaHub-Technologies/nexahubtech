@@ -1,4 +1,4 @@
-# Microsoft Office
+# Office Essentials
 
 Word, Excel, PowerPoint and Access, taught to the standard clerical work
 actually deserves — for people already doing the job, mostly self-taught, and
@@ -37,14 +37,6 @@ stops. In-person classes use licensed Windows machines, and anyone on a Mac
 learning online should plan to attend in person in week 7. Online, you will also
 need a Microsoft 365 or Office licence; real work from your own desk to bring, and 4–6 hours a week outside
 sessions.
-
-> **How this differs from PC Basics.** They overlap by design and are not
-> substitutes. [PC Basics](pc-basics.md) module 03 spends two weeks on the *idea*
-> — that a heading is a style and a total is a formula — for somebody who has
-> never used a computer. This course assumes that idea and spends eight weeks on
-> the craft: mail merge, lookups, pivot tables, slide masters, and a relational
-> database. If you have never used a computer, start there. If you have been
-> doing this job for three years by hand, start here.
 
 > **On the honest limit.** Eight weeks makes you genuinely good at four programs.
 > It does not make you a data analyst — that is
@@ -254,12 +246,3 @@ handover note somebody else can follow without asking you anything.
 No grades, and no course project. This course is assessed entirely through the
 per-module exercise briefs above. The people taking it are already in the job;
 what they need is to stop losing hours, not a portfolio.
-
-One demonstration carries most of the weight and cannot be talked around:
-**change one input and watch what moves.** Change a template's theme and every
-merged letter must restyle itself; change one salary and every dependent figure,
-pivot and chart must move. Whatever does not move was done by hand, and doing it
-by hand is the thing this course exists to end.
-
-The module 06 handover note is the other measure that cannot be coached: somebody
-who is not you either runs the task from it or does not.

@@ -10,10 +10,9 @@ Every course is taught live by an instructor, with structured materials and real
 
 Computers and Microsoft Office, from the very first click to the reports your job runs on. For: new to computers or office work.
 
-- [Computer Essentials](https://nexahubtech.company/courses/computer-essentials.md) — Digital Literacy. From ₦37,500 · 3 Weeks · live online or in person. Three weeks from never having used a computer to saving, finding and printing your own work — with somebody beside you the whole way.
-- [PC Basics](https://nexahubtech.company/courses/pc-basics.md) — Digital Literacy. ₦75,000 · 6 Weeks · in person. Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
-- [Office Essentials](https://nexahubtech.company/courses/office-essentials.md) — Word & Excel. From ₦45,000 · 4 Weeks · live online or in person. The two programs most office work actually happens in — Word and Excel — in four weeks, taught properly.
-- [Microsoft Office](https://nexahubtech.company/courses/microsoft-office.md) — Word, Excel, PowerPoint & Access. From ₦80,000 · 8 Weeks · live online or in person. The four programs an office actually runs on, taught to the standard the work deserves.
+- [Computer Essentials](https://nexahubtech.company/courses/computer-essentials.md) — Digital Literacy & PC Basics. From ₦65,000 · 6 Weeks · live online or in person. From never having used a computer to managing files, browsing safely, and working with documents — with an instructor beside you every step.
+- [Office Essentials](https://nexahubtech.company/courses/office-essentials.md) — Word, Excel, PowerPoint & Access. From ₦80,000 · 8 Weeks · live online or in person. The four programs an office actually runs on, taught to the standard professional work deserves.
+- [AI for Office Use](https://nexahubtech.company/courses/ai-for-office-use.md) — Prompting & Office AI. From ₦60,000 · 4 Weeks · live online or in person. Master practical AI tools, prompt engineering, and their application across Microsoft Office to automate tasks and work faster.
 
 ## Software & data
 
