@@ -32,7 +32,16 @@ export const Route = createRootRoute({
 				name: "description",
 				content: DEFINITION,
 			},
-			{ name: "theme-color", content: "#ffffff" },
+			{
+				name: "theme-color",
+				content: "#ffffff",
+				media: "(prefers-color-scheme: light)",
+			},
+			{
+				name: "theme-color",
+				content: "#211633",
+				media: "(prefers-color-scheme: dark)",
+			},
 			{
 				property: "og:title",
 				content: PAGES.home.title,

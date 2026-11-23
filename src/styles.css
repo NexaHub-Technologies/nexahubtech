@@ -81,19 +81,22 @@ html {
   --ring: var(--accent);
 }
 
+/* Dark mode, at dusk rather than midnight: a warm violet-plum ground instead
+   of near-black, lifted surfaces, and a light lilac accent with dark text on
+   its buttons. Every text colour stays at 7:1 or better on the page. */
 .dark {
-  --paper: #0f0917;         /* the dark page */
-  --paper-2: #181024;       /* tinted sections, insets, footer */
-  --card: #1d142c;          /* card surfaces */
-  --ink: #f7f4fb;           /* headings and primary text */
-  --ink-soft: #c8bad6;      /* long-form reading text */
-  --mute: #9685a7;          /* captions and secondary info */
-  --mute-2: #483958;        /* subtle placeholder strokes and borders */
+  --paper: #211633;         /* the page — deep violet-plum, not black */
+  --paper-2: #2a1d3f;       /* tinted sections, insets, footer */
+  --card: #2f2148;          /* card surfaces, a step up from the page */
+  --ink: #fbf7ff;           /* headings and primary text — 16:1 */
+  --ink-soft: #ddd0ea;      /* long-form reading text — 11.6:1 */
+  --mute: #b6a5ca;          /* captions and secondary info — 7.5:1 */
+  --mute-2: #6a5785;        /* placeholder strokes and borders */
 
-  --accent: #a855f7;        /* vibrant violet accent */
-  --accent-deep: #9333ea;   /* hover */
-  --accent-ink: #c084fc;    /* high contrast small accent text */
-  --accent-tint: rgba(168, 85, 247, 0.16); /* soft tint washes */
+  --accent: #c4a0ff;        /* light lilac: buttons (dark text on them) */
+  --accent-deep: #d3b6ff;   /* hover — lighter, not darker, on a dark page */
+  --accent-ink: #d6b8ff;    /* small accent text — 9.9:1 */
+  --accent-tint: rgba(196, 160, 255, 0.16); /* soft tint washes */
 
   --plum: #311049;
 
@@ -103,19 +106,19 @@ html {
   --marigold-ink: var(--accent-ink);
   --marigold-tint: var(--accent-tint);
   --teal: var(--plum);
-  --teal-deep: #200833;
+  --teal-deep: #2a0f3f;
   --teal-tint: var(--accent-tint);
-  --warm: #f472b6;
+  --warm: #f78fc2;
   --learn-ink: var(--accent-ink);
   --build-ink: var(--accent-ink);
   --mode-accent: var(--accent);
   --mode-accent-ink: var(--accent-ink);
   --mode-accent-tint: var(--accent-tint);
 
-  --line: rgba(255, 255, 255, 0.12);
-  --line-soft: rgba(255, 255, 255, 0.07);
-  --shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 12px 28px -12px rgba(0, 0, 0, 0.7);
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --line: rgba(255, 255, 255, 0.14);
+  --line-soft: rgba(255, 255, 255, 0.08);
+  --shadow: 0 1px 3px rgba(10, 4, 20, 0.35), 0 12px 28px -14px rgba(10, 4, 20, 0.55);
+  --shadow-sm: 0 1px 2px rgba(10, 4, 20, 0.3);
 
   /* shadcn tokens */
   --background: var(--paper);
@@ -124,14 +127,14 @@ html {
   --popover: var(--card);
   --popover-foreground: var(--ink);
   --primary: var(--accent);
-  --primary-foreground: #ffffff;
   --secondary: var(--paper-2);
   --secondary-foreground: var(--ink);
   --muted: var(--paper-2);
   --muted-foreground: var(--mute);
   --accent-foreground: var(--accent-ink);
-  --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
+  --primary-foreground: #211633;
+  --destructive: #f87171;
+  --destructive-foreground: #211633;
   --border: var(--line);
   --input: var(--line);
   --ring: var(--accent);
@@ -467,8 +470,40 @@ html {
   transform: scale(0.95);
 }
 
+.dark body {
+  /* a faint rose and lilac wash at the top of the page — dusk, not a light
+     show; it stays behind everything and does not move */
+  background:
+    radial-gradient(1100px 520px at 12% -8%, rgba(240, 107, 168, 0.09), transparent 62%),
+    radial-gradient(1000px 520px at 92% -6%, rgba(196, 160, 255, 0.12), transparent 62%),
+    var(--paper);
+}
 .dark .site-header {
-  background: rgba(15, 9, 23, 0.92);
+  background: rgba(33, 22, 51, 0.9);
+}
+/* buttons on a light lilac read best with the page's dark ink */
+.dark .btn-primary,
+.dark .btn-teal,
+.dark .btn-blast {
+  color: #211633;
+}
+.dark ::selection {
+  background: var(--accent);
+  color: #211633;
+}
+/* placeholder sketches drawn in the page's colours rather than white */
+.dark .ps-frame {
+  fill: var(--card);
+}
+.dark .ps-dot,
+.dark .ps-block {
+  fill: #4a3a63;
+}
+.dark .ps-soft {
+  fill: #3b2d52;
+}
+.dark .placeholder {
+  outline-color: rgba(196, 160, 255, 0.35);
 }
 .dark .site-logo {
   filter: brightness(0) invert(1);
@@ -486,7 +521,7 @@ html {
 }
 .dark main[data-section='academy'] > :first-child::before {
   filter: invert(1);
-  opacity: 0.05;
+  opacity: 0.08;
 }
 
 /* the course and track icons: full-colour tiles that lift a little when
