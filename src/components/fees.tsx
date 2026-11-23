@@ -37,7 +37,7 @@ export function CourseCard({ course }: { course: Course }) {
 		<Link
 			to="/courses/$slug"
 			params={{ slug: course.slug }}
-			className="card card-lift reveal p-6 flex flex-col"
+			className="card card-lift p-6 flex flex-col"
 		>
 			<h3 className="display text-[1.2rem]">{course.t}</h3>
 			<p className="lead mt-2 text-[0.93rem] flex-1">{course.tagline}</p>

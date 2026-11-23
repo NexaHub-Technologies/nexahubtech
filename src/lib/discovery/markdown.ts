@@ -46,7 +46,7 @@ import {
 	priceLabel,
 	TRACKS,
 } from "../courses";
-import { ARM_NAME, modeForPath } from "../mode";
+import { TEAM } from "../evidence";
 import {
 	coursePage,
 	INDEXABLE_PAGES,
@@ -56,6 +56,7 @@ import {
 	servicePage,
 } from "../pages";
 import { SERVICES, type ServiceLine } from "../services";
+import { brandFor } from "../site";
 import { ANTIPATTERNS, PRINCIPLES, SESSION } from "../teaching";
 import { FAMILY_LABEL, SLOTS, slotLabel, slotsFor } from "../timetable";
 
@@ -116,7 +117,7 @@ Tagline: *${TAGLINE.learn}*
 
 ## ${COURSES.length} live courses, online or in person, start any day
 
-Every course but PC Basics can be taken live online or in person, in a class of no more than ${CENTRE_SEATS}. Fees can be paid in full or in instalments: ${mdLink(PAGES.fees)}. How we teach, where and when: ${mdLink(PAGES.academyAbout)}.
+Every course but PC Basics can be taken live online or in person, in a class of no more than ${CENTRE_SEATS}. Fees can be paid in full or in instalments: ${mdLink(PAGES.fees)}. How we teach, and where and when classes meet: ${mdLink(PAGES.about)}.
 
 ${COURSES.map(courseLine).join("\n")}
 ${cbtLine()}
@@ -286,7 +287,8 @@ ${bullets(p.features)}`,
 ${CBT_FAQS.map((f) => `### ${f.question}\n\n${f.answer}`).join("\n\n")}`;
 }
 
-function academyAbout(): string {
+/* how we teach, and where and when — part of the one About page */
+function teachingAndVisit(): string {
 	const group = (inhouse: boolean) =>
 		SLOTS.filter((s) => (s.delivery === "inhouse") === inhouse)
 			.map(
@@ -294,9 +296,7 @@ function academyAbout(): string {
 					`- **${FAMILY_LABEL[s.family]}** — ${slotLabel(s)}${s.note ? `. ${s.note}` : ""}`,
 			)
 			.join("\n");
-	return `${ACADEMY_SUMMARY}
-
-## How we teach
+	return `## How we teach
 
 We teach the idea before the syntax. It feels slower for a fortnight, then it compounds — every new thing attaches to something the learner already understands.
 
@@ -318,9 +318,9 @@ ${ANTIPATTERNS.map((a) => `- **${a.t}** — ${a.d}`).join("\n")}
 
 ## Where and when
 
-Every course except PC Basics can be taken live online or in person. There are no fixed intakes: start any day and join a standing weekly session. People at different points in the same course share a session, and the materials carry each person at their own pace.
+The studio and the Academy share one address. Every Academy course except PC Basics can be taken live online or in person. There are no fixed intakes: start any day and join a standing weekly session. People at different points in the same course share a session, and the materials carry each person at their own pace.
 
-- Learning centre: ${CONTACT.address}, Nigeria
+- Office and learning centre: ${CONTACT.address}, Nigeria
 - Open: ${CBT_DETAILS.hours}
 - In-person classes of no more than ${CENTRE_SEATS}; machines provided for the computer-skills, office and CBT sessions
 - Visitors are welcome before enrolling
@@ -394,6 +394,14 @@ ${ACADEMY_SUMMARY} ${mdLink(PAGES.academy)}
 
 ${THESIS}
 
+## The team
+
+${TEAM.filter((t) => t.name)
+	.map((t) => `- **${t.name}** — ${t.role}`)
+	.join("\n")}
+
+${teachingAndVisit()}
+
 ## Vision
 
 ${VISION}
@@ -425,7 +433,6 @@ function body(page: Page): string {
 		[PAGES.fees.path]: fees,
 		[PAGES.forBusiness.path]: forBusiness,
 		[PAGES.cbt.path]: cbt,
-		[PAGES.academyAbout.path]: academyAbout,
 		[PAGES.enrol.path]: enrol,
 		[PAGES.services.path]: services,
 		[PAGES.approach.path]: approach,
@@ -440,9 +447,9 @@ function body(page: Page): string {
 /* one page as markdown. The header repeats the page's own title, summary and
    canonical URL, so a file that is fetched alone still says what it is. */
 export function pageMarkdown(page: Page): string {
-	/* each page is titled with the business it belongs to; the shared pages
-	   (about, contact) belong to the parent company */
-	const brand = ARM_NAME[modeForPath(page.path) ?? "build"];
+	/* each page is titled with the name it is published under: the Academy's
+	   section carries the Academy's name, everything else the company's */
+	const brand = brandFor(page.path);
 	const title =
 		page.path === "/" || page.name === brand
 			? brand
@@ -465,7 +472,6 @@ const school = [
 	PAGES.academy,
 	PAGES.courses,
 	PAGES.cbt,
-	PAGES.academyAbout,
 	PAGES.fees,
 	PAGES.forBusiness,
 	PAGES.enrol,

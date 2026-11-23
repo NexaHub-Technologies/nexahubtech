@@ -17,7 +17,6 @@ NexaHubTech Academy is the training arm of NexaHubTech, alongside its software s
 - [NexaHubTech Academy](https://nexahubtech.company/academy.md): NexaHubTech Academy, the training arm of NexaHubTech, offers live, instructor-led courses in software development, data, office productivity and video. Learn online or in person, start any day, and pay in instalments.
 - [Courses](https://nexahubtech.company/courses.md): Every NexaHubTech Academy course, from first steps on a computer to React, data analysis and video — taught live, online or in person, with flexible payment plans. Start any day.
 - [WAEC & JAMB CBT Training](https://nexahubtech.company/cbt.md): Get comfortable with the computer-based exam before the day. CBT practice for JAMB and WAEC candidates at NexaHubTech Academy, Phase 2, F01 Building Materials Market, Kubwa: keyboard shortcuts, pacing, past questions and timed mock exams.
-- [About the Academy](https://nexahubtech.company/academy/about.md): How NexaHubTech Academy teaches — the idea before the syntax, every session in three parts — and where and when it happens: live online in the evenings, or in person in classes of no more than 6 at our learning centre in Kubwa, Abuja.
 - [Pricing](https://nexahubtech.company/fees.md): Simple, all-inclusive pricing for every NexaHubTech Academy course: one fee for the whole course, online or in person, paid in full or in parts — plus CBT practice and rates for organisations.
 - [Organisations](https://nexahubtech.company/for-business.md): Train your staff, your students or your team with NexaHubTech Academy: Microsoft Office taught at your office, CBT exam practice for schools, and any course for a group — online, in person or at your office.
 - [Enrol](https://nexahubtech.company/enrol.md): Apply for a place at NexaHubTech Academy — taught live, online or in person, and started whenever you are ready. Tell us about you, pick your course and how you want to learn, and we'll agree your start date and session times.
@@ -49,7 +48,7 @@ NexaHubTech Academy is the training arm of NexaHubTech, alongside its software s
 
 ## About NexaHubTech
 
-- [About](https://nexahubtech.company/about.md): NexaHubTech is a Nigeria-based software company with two arms: a software studio that builds for businesses, and NexaHubTech Academy, which teaches the skills the studio practises — in live courses, online or in person.
+- [About](https://nexahubtech.company/about.md): NexaHubTech is a Nigeria-based software company with two arms: a software studio that builds for businesses, and NexaHubTech Academy, which teaches the skills the studio practises. Meet the team, see how we work and teach, and visit our office and learning centre in Kubwa, Abuja.
 - [Contact](https://nexahubtech.company/contact.md): Get in touch with NexaHubTech — start a software project with the studio, or ask NexaHubTech Academy about a course.
 
 ## Optional

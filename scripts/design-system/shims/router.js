@@ -1,6 +1,6 @@
 /* Preview stand-ins for @tanstack/react-router: a card has no router. Links are
    plain anchors that do not navigate, and the current path is PREVIEW_PATH — a
-   page neither arm owns (build.ts checks), so a card's mode follows its theme. */
+   page outside the Academy's section (build.ts checks). */
 const R = window.React;
 const PATH = PREVIEW_PATH;
 

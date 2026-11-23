@@ -1,34 +1,43 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
+	AcademyFacts,
+	AcademyHero,
 	ClosingCTA,
-	Hero,
 	HowItWorks,
+	InsideTheCentre,
+	LearnerQuotes,
+	LearnerWork,
 	StudioProof,
-	Tapes,
 	Tracks,
 } from "../components/home";
-import { useReveal } from "../components/site";
 import { PAGES } from "../lib/pages";
 import { pageMeta } from "../lib/seo";
 
-/* NexaHubTech Academy's front page — the training arm, kept apart from the
-   company's front page at /. Deliberately short: choose a track, see how it
-   works, and go. Everything else is one click away on the course pages. */
 export const Route = createFileRoute("/academy")({
-	component: AcademyHome,
+	component: Academy,
 	head: () => pageMeta(PAGES.academy),
 });
 
-function AcademyHome() {
-	useReveal();
+/* NexaHubTech Academy's front page, a section of the one site. Choose a
+   track, see how it works and where you would learn, see what learners have
+   made, and go. */
+function Academy() {
 	return (
 		<>
-			<Hero />
-			<Tapes />
+			<AcademyHero />
+			<AcademyFacts />
 			<Tracks />
 			<HowItWorks />
+			<InsideTheCentre />
+			<LearnerWork />
+			<LearnerQuotes />
 			<StudioProof />
-			<ClosingCTA />
+			<ClosingCTA
+				title="Ready to start?"
+				lead="Start any day, online or in person, and pay in parts if you prefer."
+				primary={{ to: "/courses", label: "Find your course" }}
+				secondary={{ to: "/enrol", label: "Enrol" }}
+			/>
 		</>
 	);
 }

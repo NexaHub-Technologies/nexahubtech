@@ -1,10 +1,15 @@
 # NexaHubTech
 
-Website for NexaHubTech, a Nigerian technology company that designs, builds and
-maintains software for businesses, and for its training division, NexaHubTech
-Academy. The company's pages live at `/`; the Academy's at `/academy`, `/courses`
-and the routes listed in `ARM_ROUTES` (`src/lib/mode.ts`). How the company
-describes itself is defined once, in `src/lib/company.ts`.
+Website for NexaHubTech, a Nigerian software company with two arms: a software
+studio that designs, builds and maintains software for businesses, and NexaHubTech
+Academy. It is one website: the studio's pages live at `/`, and the Academy is a
+section of the site at `/academy`, `/courses` and the routes listed in
+`ACADEMY_ROUTES` (`src/lib/site.ts`). How the company describes itself is defined
+once, in `src/lib/company.ts`.
+
+Photos, screenshots, client logos, quotes and team portraits are slots listed in
+`src/lib/evidence.ts`. Until a slot has real material it shows a labelled
+placeholder; filling one is a file under `public/images/` and one line there.
 
 Built with [TanStack Start](https://tanstack.com/start) (React 19, TanStack Router,
 Vite, Tailwind v4), formatted and linted with [Biome](https://biomejs.dev).

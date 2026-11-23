@@ -9,7 +9,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { basename } from "node:path";
 import { COURSES } from "../src/lib/courses";
-import { modeForPath } from "../src/lib/mode";
+import { inAcademy } from "../src/lib/site";
 import { coursePage, PAGES, type Page, servicePage } from "../src/lib/pages";
 import { SERVICES } from "../src/lib/services";
 
@@ -142,7 +142,7 @@ const jobs = pages.map((p) => ({
 	...p.card,
 	accent: p.card.accent ?? "",
 	/* the Academy's pages carry its name on their cards, like they do in the header */
-	academy: modeForPath(p.path) === "learn",
+	academy: inAcademy(p.path),
 }));
 
 await ensureFonts();

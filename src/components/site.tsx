@@ -1,23 +1,20 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { CONTACT, MOTTO, TAGLINE } from "../lib/contact";
-import { ARM_HOME, ARM_LABEL, ARM_NAME, type SiteMode } from "../lib/mode";
-import { useMode } from "./mode";
+import { inAcademy } from "../lib/site";
 
 export { CONTACT, MOTTO };
 
-/* shared site chrome + small hooks, used by the root layout and pages */
+/* The site's chrome: one header and one footer for the whole site. The
+   Academy is a section of the site, reached from the main navigation; on its
+   pages a second row lists the Academy's own pages. */
 
-/* The mark and the name. On the Academy's pages the name gains its division —
-   "NexaHubTech Academy" — so a visitor always knows which business they are in. */
 export function Logo({
 	height = 26,
 	wordmark = "1.12rem",
-	arm = "build",
 }: {
 	height?: number;
 	wordmark?: string;
-	arm?: SiteMode;
 }) {
 	return (
 		<span className="flex items-center gap-2.5">
@@ -30,79 +27,34 @@ export function Logo({
 			/>
 			<span className="display site-wordmark" style={{ fontSize: wordmark }}>
 				NexaHubTech
-				{arm === "learn" ? (
-					<span className="site-subbrand">Academy</span>
-				) : null}
 			</span>
 		</span>
 	);
 }
 
+/* the main navigation — the same on every page */
 export const NAV = [
-	{ to: "/", label: "Home", side: "build", exact: true },
-	{ to: "/services", label: "Services", side: "build" },
-	/* /work is deliberately absent while client naming is unconfirmed — the route
-	   still exists and still claims the build arm, so restoring it is this line:
-	   { to: "/work", label: "Work", side: "build" }, */
-	{ to: "/approach", label: "Approach", side: "build" },
-	{ to: "/about", label: "About", side: "build" },
-	/* Organisations lives in the footer and on the pages that need it */
-	{ to: "/academy", label: "Home", side: "learn", exact: true },
-	{ to: "/courses", label: "Courses", side: "learn" },
-	{ to: "/fees", label: "Pricing", side: "learn" },
-	{ to: "/cbt", label: "CBT prep", side: "learn" },
-	{ to: "/academy/about", label: "About", side: "learn" },
+	{ to: "/services", label: "Services" },
+	{ to: "/work", label: "Work" },
+	{ to: "/approach", label: "Approach" },
+	{ to: "/academy", label: "Academy", section: true },
+	{ to: "/about", label: "About" },
 	{ to: "/contact", label: "Contact" },
 ] as const satisfies readonly {
 	to: string;
 	label: string;
-	side?: SiteMode;
-	/* a home link is only active on its own page, not on every page below it */
-	exact?: boolean;
+	/* the Academy link stays active across the whole section */
+	section?: boolean;
 }[];
 
-/* the Academy's other pages — in the footer, without crowding the header */
-export const LEARN_MORE = [
+/* the Academy's own pages, shown as a second row inside the section */
+export const ACADEMY_NAV = [
+	{ to: "/academy", label: "Overview", exact: true },
+	{ to: "/courses", label: "Courses" },
+	{ to: "/fees", label: "Pricing" },
+	{ to: "/cbt", label: "CBT prep" },
 	{ to: "/for-business", label: "Organisations" },
-] as const;
-
-/* each side shows only its own routes. The other side's pages stay reachable by URL —
-   landing on one flips the mode, so the visitor never hits a nav that disowns the page
-   they are on. */
-export function navFor(mode: SiteMode) {
-	return NAV.filter((n) => !("side" in n) || n.side === mode);
-}
-
-/* the header's primary action follows the arm you are in */
-export const CTA_BY_MODE = {
-	learn: { to: "/enrol", label: "Enrol" },
-	build: { to: "/contact", label: "Start a project" },
-} as const;
-
-/* the switch between NexaHubTech's two arms. The studio comes first — it
-   carries the company's name — and each side lands on its own front page. */
-export function ModeSwitch({ className = "" }: { className?: string }) {
-	const { mode, setMode } = useMode();
-	return (
-		<fieldset className={`mode-switch ${className}`}>
-			<legend className="sr-only">
-				Switch between the NexaHubTech studio and NexaHubTech Academy
-			</legend>
-			{(["build", "learn"] as const).map((m) => (
-				<button
-					key={m}
-					type="button"
-					data-on={mode === m}
-					aria-pressed={mode === m}
-					title={ARM_NAME[m]}
-					onClick={() => setMode(m)}
-				>
-					{ARM_LABEL[m]}
-				</button>
-			))}
-		</fieldset>
-	);
-}
+] as const satisfies readonly { to: string; label: string; exact?: boolean }[];
 
 function XIcon() {
 	return (
@@ -164,21 +116,19 @@ export const SOCIALS = [
 	},
 ] as const;
 
+function usePathname() {
+	return useRouterState({ select: (s) => s.location.pathname });
+}
+
 export function Header() {
 	const [open, setOpen] = useState(false);
-	const { mode } = useMode();
-	const cta = CTA_BY_MODE[mode];
-	const nav = navFor(mode);
-
-	useEffect(() => {
-		document.documentElement.classList.add("js");
-		const header = document.getElementById("site-header");
-		const onScroll = () =>
-			header?.classList.toggle("scrolled", window.scrollY > 12);
-		onScroll();
-		window.addEventListener("scroll", onScroll, { passive: true });
-		return () => window.removeEventListener("scroll", onScroll);
-	}, []);
+	const pathname = usePathname();
+	const academy = inAcademy(pathname);
+	/* inside the Academy the header's action is enrolling; everywhere else it is
+	   starting a project */
+	const cta = academy
+		? ({ to: "/enrol", label: "Enrol" } as const)
+		: ({ to: "/contact", label: "Start a project" } as const);
 
 	/* while the mobile menu is open: lock scroll, close on Escape or on
 	   resize up to the desktop breakpoint */
@@ -202,82 +152,68 @@ export function Header() {
 
 	return (
 		<header className="site-header" id="site-header" data-menu-open={open}>
-			<div className="wrap nav-island flex items-center justify-between gap-3 h-[64px]">
+			<div className="wrap flex items-center justify-between gap-4 h-[68px]">
 				<Link
-					to={ARM_HOME[mode]}
+					to="/"
 					className="flex items-center shrink-0"
-					aria-label={`${ARM_NAME[mode]} home`}
+					aria-label="NexaHubTech home"
 					onClick={() => setOpen(false)}
 				>
-					<Logo height={26} arm={mode} />
+					<Logo height={26} />
 				</Link>
 
-				<nav className="hidden lg:flex items-center gap-0.5 xl:gap-1">
-					{nav.map((n) => {
-						const side = "side" in n && n.side === mode ? " is-side" : "";
-						return (
-							<Link
-								key={n.to}
-								to={n.to}
-								className={`nav-link${side}`}
-								activeProps={{ className: `nav-link is-active${side}` }}
-								activeOptions={{ exact: "exact" in n && n.exact }}
-							>
-								{n.label}
-							</Link>
-						);
-					})}
+				<nav className="hidden lg:flex items-center gap-1" aria-label="Main">
+					{NAV.map((n) => (
+						<Link
+							key={n.to}
+							to={n.to}
+							className={`nav-link${"section" in n && academy ? " is-active" : ""}`}
+							activeProps={{ className: "nav-link is-active" }}
+						>
+							{n.label}
+						</Link>
+					))}
 				</nav>
 
-				<div className="hidden lg:flex items-center gap-3">
-					<ModeSwitch />
-					{/* below xl the header needs the room; the menu and every page
-					    still carry the call to action */}
-					<span className="hidden xl:block">
-						<Link to={cta.to} className="btn btn-blast whitespace-nowrap">
-							{cta.label}
-						</Link>
-					</span>
+				<div className="hidden lg:block">
+					<Link to={cta.to} className="btn btn-primary whitespace-nowrap">
+						{cta.label}
+					</Link>
 				</div>
 
-				<div className="flex items-center gap-2 lg:hidden">
-					<ModeSwitch className="is-compact" />
-					<button
-						type="button"
-						className="menu-btn"
-						aria-label={open ? "Close menu" : "Open menu"}
-						aria-expanded={open}
-						aria-controls="mobile-menu"
-						data-open={open}
-						onClick={() => setOpen((v) => !v)}
-					>
-						<span />
-						<span />
-						<span />
-					</button>
-				</div>
+				<button
+					type="button"
+					className="menu-btn lg:hidden"
+					aria-label={open ? "Close menu" : "Open menu"}
+					aria-expanded={open}
+					aria-controls="mobile-menu"
+					data-open={open}
+					onClick={() => setOpen((v) => !v)}
+				>
+					<span />
+					<span />
+					<span />
+				</button>
 			</div>
 
+			{academy ? <AcademyBar /> : null}
+
 			<div className="mobile-menu lg:hidden" id="mobile-menu" hidden={!open}>
-				<nav className="wrap flex flex-col py-3">
-					{nav.map((n) => {
-						const side = "side" in n && n.side === mode ? " is-side" : "";
-						return (
-							<Link
-								key={n.to}
-								to={n.to}
-								className={`mobile-link${side}`}
-								activeProps={{ className: `mobile-link is-active${side}` }}
-								activeOptions={{ exact: "exact" in n && n.exact }}
-								onClick={() => setOpen(false)}
-							>
-								{n.label}
-							</Link>
-						);
-					})}
+				<nav className="wrap flex flex-col py-3" aria-label="Main">
+					{NAV.map((n) => (
+						<Link
+							key={n.to}
+							to={n.to}
+							className="mobile-link"
+							activeProps={{ className: "mobile-link is-active" }}
+							onClick={() => setOpen(false)}
+						>
+							{n.label}
+						</Link>
+					))}
 					<Link
 						to={cta.to}
-						className="btn btn-blast mt-4"
+						className="btn btn-primary mt-4"
 						onClick={() => setOpen(false)}
 					>
 						{cta.label}
@@ -288,53 +224,86 @@ export function Header() {
 	);
 }
 
-export function Footer() {
-	const { mode } = useMode();
-	const nav = navFor(mode);
+/* The Academy's second row. It scrolls sideways on a phone rather than
+   wrapping, so it never takes more than one line. */
+function AcademyBar() {
 	return (
-		<footer className="footer mt-10">
-			<div className="wrap py-12 flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
-				<div>
+		<div className="academy-bar">
+			<nav
+				className="wrap flex items-center gap-1 overflow-x-auto"
+				aria-label="NexaHubTech Academy"
+			>
+				<span className="academy-bar-name">Academy</span>
+				{ACADEMY_NAV.map((n) => (
 					<Link
-						to={ARM_HOME[mode]}
-						className="flex items-center"
-						aria-label={`${ARM_NAME[mode]} home`}
+						key={n.to}
+						to={n.to}
+						className="sub-link"
+						activeProps={{ className: "sub-link is-active" }}
+						activeOptions={{ exact: "exact" in n && n.exact }}
 					>
-						<Logo height={24} arm={mode} />
+						{n.label}
 					</Link>
-					{mode === "learn" ? (
-						<p className="text-[0.85rem] text-mute mt-2">
-							The training arm of{" "}
-							<Link to="/" className="underline">
-								NexaHubTech
-							</Link>
-						</p>
-					) : null}
-					<p className="text-[0.9rem] text-mute mt-2">{TAGLINE[mode]}</p>
-					<p className="text-[0.85rem] text-mute mt-3">{CONTACT.address}</p>
-					<a
-						className="text-[0.85rem] text-mute hover:underline"
-						href={CONTACT.websiteHref}
-					>
-						{CONTACT.website}
-					</a>
-				</div>
-				<nav className="flex flex-wrap items-center gap-6">
-					{nav.map((n) => (
-						<Link key={n.to} to={n.to} className="nav-link">
-							{n.label}
-						</Link>
-					))}
-					{mode === "learn"
-						? LEARN_MORE.map((n) => (
-								<Link key={n.to} to={n.to} className="nav-link">
-									{n.label}
-								</Link>
-							))
-						: null}
-				</nav>
-				<div className="flex flex-col items-start md:items-end gap-3">
-					<div className="flex gap-2.5">
+				))}
+			</nav>
+		</div>
+	);
+}
+
+const FOOTER_COLUMNS = [
+	{
+		t: "Studio",
+		links: [
+			{ to: "/services", label: "Services" },
+			{ to: "/work", label: "Work" },
+			{ to: "/approach", label: "How we work" },
+			{ to: "/contact", label: "Start a project" },
+		],
+	},
+	{
+		t: "Academy",
+		links: [
+			{ to: "/academy", label: "Overview" },
+			{ to: "/courses", label: "Courses" },
+			{ to: "/fees", label: "Pricing" },
+			{ to: "/cbt", label: "CBT prep" },
+			{ to: "/for-business", label: "Organisations" },
+			{ to: "/enrol", label: "Enrol" },
+		],
+	},
+	{
+		t: "Company",
+		links: [
+			{ to: "/about", label: "About" },
+			{ to: "/about", hash: "team", label: "Team" },
+			{ to: "/contact", label: "Contact" },
+		],
+	},
+] as const;
+
+export function Footer() {
+	return (
+		<footer className="footer">
+			<div className="wrap py-14 grid gap-10 md:grid-cols-[1.3fr_repeat(3,1fr)]">
+				<div>
+					<Link to="/" className="inline-flex" aria-label="NexaHubTech home">
+						<Logo height={24} />
+					</Link>
+					<p className="text-[0.92rem] text-ink-soft mt-4 max-w-[18rem]">
+						A software company in Abuja. We build software for businesses, and
+						teach through NexaHubTech Academy.
+					</p>
+					<p className="text-[0.85rem] text-mute mt-4">{CONTACT.address}</p>
+					<p className="text-[0.85rem] text-mute mt-1">
+						<a href={`mailto:${CONTACT.email}`} className="hover:underline">
+							{CONTACT.email}
+						</a>{" "}
+						·{" "}
+						<a href={`tel:${CONTACT.phone}`} className="hover:underline">
+							{CONTACT.phoneDisplay}
+						</a>
+					</p>
+					<div className="flex gap-2 mt-5">
 						{SOCIALS.map((s) => (
 							<a
 								key={s.label}
@@ -348,82 +317,83 @@ export function Footer() {
 							</a>
 						))}
 					</div>
-					<p className="text-[0.85rem] text-mute">© 2026 NexaHubTech</p>
-					<p className="text-[0.78rem] text-mute">RC {CONTACT.rc}</p>
-					<Link
-						to={mode === "build" ? ARM_HOME.learn : ARM_HOME.build}
-						className="cross-link"
-					>
-						{mode === "build"
-							? "Looking to learn? Visit NexaHubTech Academy"
-							: "Need software built? Visit NexaHubTech"}
-						<i aria-hidden="true"> →</i>
-					</Link>
 				</div>
+				{FOOTER_COLUMNS.map((col) => (
+					<nav key={col.t} aria-label={col.t}>
+						<h2 className="footer-heading">{col.t}</h2>
+						<ul className="mt-3 grid gap-2">
+							{col.links.map((l) => (
+								<li key={`${l.to}${"hash" in l ? l.hash : ""}`}>
+									<Link
+										to={l.to}
+										hash={"hash" in l ? l.hash : undefined}
+										className="footer-link"
+									>
+										{l.label}
+									</Link>
+								</li>
+							))}
+						</ul>
+					</nav>
+				))}
 			</div>
-			{/* the name, as big as the page allows: a sign-off, not content */}
-			<div className="wrap footer-word" aria-hidden="true">
-				NexaHubTech
+			<div className="wrap py-6 border-t border-[var(--line)] flex flex-col sm:flex-row gap-2 justify-between text-[0.82rem] text-mute">
+				<span>© 2026 NexaHubTech Limited · RC {CONTACT.rc}</span>
+				<span>
+					Studio: {TAGLINE.build} · Academy: {TAGLINE.learn}
+				</span>
 			</div>
 		</footer>
 	);
 }
 
-/* reveal-on-scroll — call once per page; re-runs on client navigation */
-export function useReveal() {
-	useEffect(() => {
-		document.documentElement.classList.add("js");
-		const io = new IntersectionObserver(
-			(entries) => {
-				for (const e of entries) {
-					if (e.isIntersecting) {
-						e.target.classList.add("in-view");
-						io.unobserve(e.target);
-					}
-				}
-			},
-			/* threshold MUST stay 0. A fractional threshold is a proportion of the
-			   *element*, so anything taller than viewport ÷ threshold can never reach
-			   it: it stays at opacity 0 for ever and the section renders blank. At
-			   0.12 that ceiling is about eight screens — an 8068px article needed
-			   968px visible in a 656px window and never revealed. The rootMargin
-			   already supplies the "don't fire too early" behaviour, and unlike a
-			   fractional threshold it does not depend on how tall the element is. */
-			{ rootMargin: "0px 0px -10% 0px", threshold: 0 },
-		);
-
-		const observe = () => {
-			for (const el of document.querySelectorAll(".reveal:not(.in-view)")) {
-				io.observe(el);
-			}
-		};
-
-		observe();
-
-		const mo = new MutationObserver(observe);
-		mo.observe(document.body, { childList: true, subtree: true });
-
-		return () => {
-			mo.disconnect();
-			io.disconnect();
-		};
-	}, []);
-}
-
 /* small shared building blocks */
 
-export function Eyebrow({
-	children,
-	variant = "learn",
+export function Eyebrow({ children }: { children: React.ReactNode }) {
+	return <span className="eyebrow">{children}</span>;
+}
+
+/* a section's heading block: label, heading, optional intro */
+export function SectionHead({
+	eyebrow,
+	title,
+	intro,
+	className = "",
 }: {
-	children: React.ReactNode;
-	variant?: "learn" | "build" | "plain";
+	eyebrow?: string;
+	title: React.ReactNode;
+	intro?: React.ReactNode;
+	className?: string;
 }) {
-	const cls =
-		variant === "build"
-			? "eyebrow is-build"
-			: variant === "plain"
-				? "eyebrow is-plain"
-				: "eyebrow";
-	return <span className={cls}>{children}</span>;
+	return (
+		<div className={`max-w-[42rem] ${className}`}>
+			{eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
+			<h2 className="h2 mt-3">{title}</h2>
+			{intro ? <p className="lead mt-4">{intro}</p> : null}
+		</div>
+	);
+}
+
+/* the page title block every inner page opens with */
+export function PageHead({
+	eyebrow,
+	title,
+	intro,
+	children,
+}: {
+	eyebrow?: string;
+	title: React.ReactNode;
+	intro?: React.ReactNode;
+	children?: React.ReactNode;
+}) {
+	return (
+		<section className="wrap page-head">
+			<div className="max-w-[46rem]">
+				{eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
+				<h1 className="h1 mt-3">{title}</h1>
+				{intro ? <p className="lead mt-5 text-[1.1rem]">{intro}</p> : null}
+				{children}
+			</div>
+		</section>
+	);
 }

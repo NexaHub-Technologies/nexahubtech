@@ -1,36 +1,40 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
 	AcademyPointer,
+	ClientLogos,
+	ClientQuotes,
 	ClosingCTA,
-	Hero,
-	Numbers,
+	FeaturedWork,
 	Services,
+	StudioHero,
 	StudioProcess,
-	Tapes,
-	Thesis,
 } from "../components/home";
-import { useReveal } from "../components/site";
 import { PAGES } from "../lib/pages";
 import { pageMeta } from "../lib/seo";
 
-/* the company's front page. The Academy has its own, at /academy. */
 export const Route = createFileRoute("/")({
-	component: Home,
+	component: App,
 	head: () => pageMeta(PAGES.home),
 });
 
-function Home() {
-	useReveal();
+/* The company's front page: what we do, the proof, how we work, and a way to
+   start. The Academy has its own front page at /academy. */
+function App() {
 	return (
 		<>
-			<Hero />
-			<Tapes />
-			<Numbers />
-			<Thesis />
+			<StudioHero />
+			<ClientLogos />
+			<FeaturedWork />
 			<Services />
 			<StudioProcess />
+			<ClientQuotes />
 			<AcademyPointer />
-			<ClosingCTA />
+			<ClosingCTA
+				title="Have a product in mind?"
+				lead="Tell us the problem rather than the solution. The first conversation costs you nothing, and you will leave it knowing what it would take."
+				primary={{ to: "/contact", label: "Start a project" }}
+				secondary={{ to: "/approach", label: "How we work" }}
+			/>
 		</>
 	);
 }

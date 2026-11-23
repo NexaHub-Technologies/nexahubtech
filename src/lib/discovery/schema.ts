@@ -60,8 +60,8 @@ export const ID = {
 	serviceCatalog: `${abs(PAGES.services.path)}#catalog`,
 	cbtCourse: `${abs(PAGES.cbt.path)}#course`,
 	approach: `${abs(PAGES.approach.path)}#process`,
-	session: `${abs(PAGES.academyAbout.path)}#session`,
-	principles: `${abs(PAGES.academyAbout.path)}#principles`,
+	session: `${abs(PAGES.about.path)}#session`,
+	principles: `${abs(PAGES.about.path)}#principles`,
 	webpage: (path: string) => `${abs(path)}#webpage`,
 	breadcrumb: (path: string) => `${abs(path)}#breadcrumb`,
 	course: (c: Course) => `${abs(coursePage(c).path)}#course`,
@@ -456,9 +456,10 @@ function subjectOf(page: Page): { main?: string; nodes: Node[] } {
 			return { main: ID.serviceCatalog, nodes: [serviceCatalog()] };
 		case PAGES.cbt.path:
 			return { nodes: [cbtCourse()] };
-		case PAGES.academyAbout.path:
+		case PAGES.about.path:
+			/* the company is the page's subject; how it teaches is on it too */
 			return {
-				main: ID.principles,
+				main: ID.organization,
 				nodes: [teachingPrinciples(), sessionHowTo()],
 			};
 		case PAGES.approach.path:

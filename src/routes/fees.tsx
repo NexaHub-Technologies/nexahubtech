@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Eyebrow, useReveal } from "../components/site";
+import { Eyebrow } from "../components/site";
 import { CBT_FROM_PRICE } from "../lib/cbt";
 import {
 	CENTRE_SEATS,
@@ -66,19 +66,15 @@ function Row({ c }: { c: Course }) {
 }
 
 function PricingPage() {
-	useReveal();
 	return (
 		<>
 			<section className="wrap page-head">
 				<div className="max-w-[46rem]">
-					<span className="pill rise rise-1">
-						<span className="spark" />
-						Pricing
-					</span>
-					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
+					<span className="pill">Pricing</span>
+					<h1 className="h1 mt-3">
 						Simple pricing, <span className="hot-text">no surprises</span>.
 					</h1>
-					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
+					<p className="lead mt-6 text-[1.1rem] max-w-[38rem]">
 						Every course, both ways it can be taken. Prices are in naira and
 						cover the whole course.
 					</p>
@@ -88,7 +84,7 @@ function PricingPage() {
 			<section className="wrap py-6">
 				<div className="grid md:grid-cols-3 gap-4">
 					{RULES.map((r, i) => (
-						<div key={r.t} className="card reveal p-6">
+						<div key={r.t} className="card p-6">
 							<span className="step-badge badge-learn">{i + 1}</span>
 							<h2 className="display text-[1.1rem] mt-3">{r.t}</h2>
 							<p className="lead mt-2 text-[0.92rem]">{r.d}</p>
@@ -99,7 +95,7 @@ function PricingPage() {
 
 			<section className="wrap py-8 grid gap-6">
 				{TRACKS.map((t) => (
-					<div key={t.id} className="reveal fee-table-wrap">
+					<div key={t.id} className="fee-table-wrap">
 						<table className="fee-table">
 							<caption>{t.t}</caption>
 							<colgroup>
@@ -124,14 +120,14 @@ function PricingPage() {
 						</table>
 					</div>
 				))}
-				<p className="reveal text-[0.9rem] text-mute">
+				<p className="text-[0.9rem] text-mute">
 					— means the course is taught one way only. PC Basics is in person,
 					because it starts before you can use a computer on your own.
 				</p>
 			</section>
 
 			<section className="wrap py-8 grid md:grid-cols-2 gap-5">
-				<div className="reveal card panel-learn p-8">
+				<div className="card panel-learn p-8">
 					<h2 className="display text-[1.3rem]">CBT exam prep</h2>
 					<p className="lead mt-2 text-[0.95rem]">
 						WAEC and JAMB practice on exam-style software, in person. From{" "}
@@ -141,7 +137,7 @@ function PricingPage() {
 						CBT prep <i aria-hidden="true">→</i>
 					</Link>
 				</div>
-				<div className="reveal card p-8">
+				<div className="card p-8">
 					<h2 className="display text-[1.3rem]">Organisations</h2>
 					<p className="lead mt-2 text-[0.95rem]">
 						Training a team, a school or a church media unit? We quote per
@@ -154,7 +150,7 @@ function PricingPage() {
 			</section>
 
 			<section className="wrap py-14">
-				<div className="reveal card panel-learn p-8 md:p-10 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+				<div className="card panel-learn p-8 md:p-10 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
 					<div className="max-w-[36rem]">
 						<Eyebrow>Next</Eyebrow>
 						<h2 className="display text-[1.6rem] mt-3">Found your course?</h2>

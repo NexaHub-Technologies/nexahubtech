@@ -1,31 +1,45 @@
-/* What the design system's bundle exposes as window.NexaHub. ModeProvider and
-   useMode get no card of their own; previews of the mode-aware components wrap
-   them in ModeProvider. courseBySlug lets the fee previews show a real course. */
-import { CourseCard, FeeLines, PriceBox } from "../../src/components/fees";
+/* What the design system's bundle exposes as window.NexaHub. courseBySlug lets
+   the fee previews show a real course; WORK and TEAM give the evidence cards
+   real entries to render. */
+
 import {
+	CaseStudyCard,
+	LogoRow,
+	PersonCard,
+	Quote,
+	TextSlot,
+} from "../../src/components/evidence";
+import { CourseCard, FeeLines, PriceBox } from "../../src/components/fees";
+import { Figure } from "../../src/components/figure";
+import {
+	AcademyFacts,
+	AcademyHero,
 	AcademyPointer,
+	ClientLogos,
+	ClientQuotes,
 	ClosingCTA,
-	Hero,
+	FeaturedWork,
 	HowItWorks,
-	Numbers,
+	InsideTheCentre,
+	LearnerQuotes,
+	LearnerWork,
 	Services,
+	StudioHero,
 	StudioProcess,
 	StudioProof,
-	Tapes,
-	Thesis,
 	Tracks,
 } from "../../src/components/home";
-import { ModeProvider, useMode } from "../../src/components/mode";
-import { Preloader } from "../../src/components/preloader";
-import { SessionLoop } from "../../src/components/session-loop";
 import {
 	Eyebrow,
 	Footer,
 	Header,
 	Logo,
-	ModeSwitch,
+	PageHead,
+	SectionHead,
 } from "../../src/components/site";
 import { getCourseBySlug } from "../../src/lib/courses";
+import { CLIENT_LOGOS, TEAM } from "../../src/lib/evidence";
+import { WORK } from "../../src/lib/work";
 
 declare global {
 	interface Window {
@@ -36,26 +50,37 @@ declare global {
 window.NexaHub = {
 	Logo,
 	Eyebrow,
-	ModeSwitch,
+	SectionHead,
+	PageHead,
 	Header,
 	Footer,
-	Preloader,
-	SessionLoop,
-	Hero,
-	Tapes,
-	Numbers,
-	Thesis,
-	HowItWorks,
-	Tracks,
-	StudioProof,
+	Figure,
+	TextSlot,
+	LogoRow,
+	CaseStudyCard,
+	Quote,
+	PersonCard,
+	StudioHero,
+	ClientLogos,
+	FeaturedWork,
 	Services,
-	ClosingCTA,
 	StudioProcess,
+	ClientQuotes,
 	AcademyPointer,
+	AcademyHero,
+	AcademyFacts,
+	Tracks,
+	HowItWorks,
+	InsideTheCentre,
+	LearnerWork,
+	LearnerQuotes,
+	StudioProof,
+	ClosingCTA,
 	CourseCard,
 	PriceBox,
 	FeeLines,
-	ModeProvider,
-	useMode,
 	courseBySlug: getCourseBySlug,
+	work: WORK,
+	team: TEAM,
+	clientLogos: CLIENT_LOGOS,
 };

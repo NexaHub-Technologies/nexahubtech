@@ -1,317 +1,319 @@
 import { Link } from "@tanstack/react-router";
 import {
 	CENTRE_SEATS,
-	COURSE_COUNT,
 	coursesIn,
 	formatNaira,
 	lowestFee,
 	TRACKS,
 } from "../lib/courses";
+import {
+	ACADEMY_PHOTOS,
+	CLIENT_LOGOS,
+	CLIENT_TESTIMONIALS,
+	FEATURED_WORK,
+	HOME_HERO,
+	LEARNER_TESTIMONIALS,
+	LEARNER_WORK,
+} from "../lib/evidence";
 import { SERVICES } from "../lib/services";
-import { useMode } from "./mode";
-import { Eyebrow } from "./site";
+import { WORK } from "../lib/work";
+import { CaseStudyCard, LogoRow, Quote, TextSlot } from "./evidence";
+import { Figure } from "./figure";
+import { Eyebrow, SectionHead } from "./site";
 
-/* The sections of the two front pages. NexaHubTech, the software company, opens
-   at / and NexaHubTech Academy at /academy; each route owns its arm, so the
-   mode-aware sections below always render the right side for the page they are
-   on. Sections that belong to one arm only are used by that arm's page only. */
+/* The sections of the two front pages: the company's at / and the Academy's at
+   /academy. Calm by design — a headline, the evidence, and a way to act. Every
+   image is a slot that shows a labelled placeholder until real material is
+   added in src/lib/evidence.ts. */
 
-/* ── hero visual : the cards beside each front page's headline ───── */
+/* ── shared ─────────────────────────────────────────────────────── */
 
-/* the cards behind the hero headline: a lesson and a shipped product on the
-   Academy's page, the company's own process on its page */
-const STAGE = {
-	learn: {
-		a: {
-			label: "In the classroom",
-			t: "How the browser actually thinks",
-			d: "Build the mental model first — the code comes easily after that.",
-			foot: "Understand → practice → build.",
-		},
-		tag: "learn → build → ship",
-		b: {
-			label: "In production",
-			t: "Taught by engineers who ship for clients",
-			foot: "The same rigor, in every lesson.",
-		},
-	},
-	build: {
-		a: {
-			label: "Before we build",
-			t: "Scope, data and edge cases, agreed in writing",
-			d: "You know what is being built, and why, before a line is written.",
-			foot: "Understand → design → build.",
-		},
-		tag: "design → ship → support",
-		b: {
-			label: "In production",
-			t: "Shipped in working increments, then supported",
-			foot: "Updates, fixes and someone to call.",
-		},
-	},
-} as const;
-
-function HeroStage() {
-	const { mode } = useMode();
-	const st = STAGE[mode];
+export function Hero({
+	eyebrow,
+	title,
+	lead,
+	primary,
+	secondary,
+	figure,
+	note,
+}: {
+	eyebrow: string;
+	title: React.ReactNode;
+	lead: string;
+	primary: { to: string; label: string };
+	secondary: { to: string; label: string };
+	figure: React.ReactNode;
+	note?: string;
+}) {
 	return (
-		<div className="hero-stage rise rise-3" aria-hidden="true">
-			<div className="jcard j-learn">
-				<span className="jlabel" style={{ color: "var(--learn-ink)" }}>
-					<span className="jdot jdot-learn" />
-					{st.a.label}
-				</span>
-				<p className="display text-[1.15rem] mt-2.5">{st.a.t}</p>
-				<p className="text-[0.9rem] text-mute mt-1.5">{st.a.d}</p>
-				<p className="text-[0.85rem] text-mute mt-4">{st.a.foot}</p>
+		<section className="wrap pt-12 pb-14 md:pt-16 md:pb-20">
+			<div className="grid lg:grid-cols-[1fr_1.05fr] gap-10 lg:gap-14 items-center">
+				<div>
+					<Eyebrow>{eyebrow}</Eyebrow>
+					<h1 className="h1 mt-4">{title}</h1>
+					<p className="lead mt-5 text-[1.12rem] max-w-[34rem]">{lead}</p>
+					<div className="mt-8 flex flex-wrap gap-3">
+						<Link to={primary.to} className="btn btn-primary">
+							{primary.label}
+						</Link>
+						<Link to={secondary.to} className="btn btn-ghost">
+							{secondary.label}
+						</Link>
+					</div>
+					{note ? <p className="muted-note mt-6">{note}</p> : null}
+				</div>
+				<div>{figure}</div>
 			</div>
-
-			<span className="loop-tag">{st.tag}</span>
-
-			<div className="jcard j-build">
-				<span className="jlabel" style={{ color: "var(--build-ink)" }}>
-					<span className="jdot jdot-build" />
-					{st.b.label}
-				</span>
-				<p className="display text-[1.15rem] mt-2.5">{st.b.t}</p>
-				<p className="text-[0.85rem] text-mute mt-4">{st.b.foot}</p>
-			</div>
-		</div>
+		</section>
 	);
 }
 
-/* the hero speaks to whichever arm the visitor is in. Same company, same page —
-   the mode decides who gets addressed first. */
-const HERO_BY_MODE = {
-	learn: {
-		pill: "NexaHubTech Academy",
-		headA: "Learn tech, ",
-		headB: "the ",
-		headAccent: "right way",
-		accentVar: "var(--learn-ink)",
-		lead: "Practical courses in computers, coding, data and video — taught live by people who build real software every day. Online or in person, and you can start any day.",
-		primary: { to: "/courses", label: "Explore courses" },
-		secondary: { to: "/academy/about", label: "How we teach" },
-	},
-	build: {
-		pill: "Software Company",
-		headA: "Software, built",
-		headB: "",
-		headAccent: "properly",
-		accentVar: "var(--build-ink)",
-		lead: "NexaHubTech designs, builds and maintains production software for businesses and founders — scoped carefully, built properly, and supported long after launch.",
-		primary: { to: "/contact", label: "Start a project" },
-		secondary: { to: "/services", label: "See our services" },
-	},
-} as const;
-
-/* fixed spots for the sparks around the burst — positions as percentages of
-   the stage, with staggered delays so they never twinkle together */
-const SPARKS = [
-	{ top: "14%", left: "58%", delay: "0s", size: 14 },
-	{ top: "72%", left: "54%", delay: "1.1s", size: 10 },
-	{ top: "22%", left: "93%", delay: "0.6s", size: 18 },
-	{ top: "84%", left: "88%", delay: "1.7s", size: 12 },
-	{ top: "8%", left: "30%", delay: "2.3s", size: 9 },
-];
-
-/* The opening is a dark stage with a slow-turning burst of rays behind the
-   journey cards: the one place on the page that is loud on purpose. It stays
-   dark in both modes, so its colours are fixed rather than mode tokens. */
-export function Hero() {
-	const { mode } = useMode();
-	const h = HERO_BY_MODE[mode];
+export function ClosingCTA({
+	title,
+	lead,
+	primary,
+	secondary,
+}: {
+	title: string;
+	lead: string;
+	primary: { to: string; label: string };
+	secondary?: { to: string; label: string };
+}) {
 	return (
-		<section className="wrap pt-4 md:pt-6 pb-6">
-			<div className="blast rise rise-1">
-				<div className="blast-rays" aria-hidden="true" />
-				<div className="blast-core" aria-hidden="true" />
-				{SPARKS.map((p) => (
-					<span
-						key={p.top + p.left}
-						className="blast-spark"
-						aria-hidden="true"
-						style={{
-							top: p.top,
-							left: p.left,
-							width: p.size,
-							height: p.size,
-							animationDelay: p.delay,
-						}}
-					/>
-				))}
-
-				<div className="relative z-10 grid lg:grid-cols-[1.3fr_0.7fr] gap-10 xl:gap-14 items-center">
-					<div>
-						<span className="pill rise rise-1">
-							<span className="spark" />
-							{h.pill}
-						</span>
-						<h1
-							className="blast-title slam mt-6"
-							style={{ textWrap: "balance" }}
-						>
-							{h.headA}
-							<br />
-							{h.headB}
-							<span className="hot-text">{h.headAccent}</span>.
-						</h1>
-						<p className="blast-lead rise rise-3 mt-6 max-w-[34rem]">
-							{h.lead}
-						</p>
-						<div className="rise rise-4 mt-9 flex flex-wrap gap-3">
-							<Link to={h.primary.to} className="btn btn-blast">
-								{h.primary.label} <i aria-hidden="true">→</i>
-							</Link>
-							<Link to={h.secondary.to} className="btn btn-ghost">
-								{h.secondary.label}
-							</Link>
-						</div>
-						<p className="rise rise-5 mt-7 text-[0.92rem] text-[#bfaecb]">
-							{mode === "build"
-								? "Based in Abuja, Nigeria · building for Africa and beyond."
-								: "The training arm of NexaHubTech · online and in Abuja."}
-						</p>
-					</div>
-
-					<HeroStage />
+		<section className="wrap section">
+			<div className="card p-8 md:p-12 flex flex-col md:flex-row gap-8 md:items-center justify-between">
+				<div className="max-w-[36rem]">
+					<h2 className="h2">{title}</h2>
+					<p className="lead mt-3">{lead}</p>
+				</div>
+				<div className="flex flex-wrap gap-3 shrink-0">
+					<Link to={primary.to} className="btn btn-primary">
+						{primary.label}
+					</Link>
+					{secondary ? (
+						<Link to={secondary.to} className="btn btn-ghost">
+							{secondary.label}
+						</Link>
+					) : null}
 				</div>
 			</div>
 		</section>
 	);
 }
 
-/* two strips of tape crossing under the hero, each running the other way.
-   Decorative: every phrase on them is said in full elsewhere on the page. */
-const TAPE_BY_MODE = {
-	learn: [
-		"Learn. Build. Ship.",
-		"Online or in person",
-		"Live, instructor-led",
-		"Start any day",
-		"Flexible payment plans",
-		"Mental model first",
-	],
-	build: [
-		"Design. Ship. Support.",
-		"Designed before it's built",
-		"Maintained after",
-		"Shipped in increments",
-		"Someone to call",
-	],
-} as const;
+/* ── the company's front page ───────────────────────────────────── */
 
-export function Tapes() {
-	const { mode } = useMode();
-	const words = TAPE_BY_MODE[mode];
-	const run = (key: string) => (
-		<div className="tape-track" key={key}>
-			{[0, 1].map((copy) =>
-				words.map((w) => (
-					<span key={`${copy}-${w}`} className="tape-item">
-						{w}
-						<span className="tape-star">✦</span>
-					</span>
-				)),
-			)}
-		</div>
-	);
+export function StudioHero() {
 	return (
-		<div className="tapes" aria-hidden="true">
-			<div className="tape tape-back">{run("back")}</div>
-			<div className="tape tape-front">{run("front")}</div>
-		</div>
+		<Hero
+			eyebrow="Software studio · Abuja"
+			title="Software, built properly."
+			lead="NexaHubTech designs, builds and maintains production software for businesses and founders — scoped carefully, built properly, and supported long after launch."
+			primary={{ to: "/contact", label: "Start a project" }}
+			secondary={{ to: "/work", label: "See our work" }}
+			figure={<Figure {...HOME_HERO} />}
+		/>
 	);
 }
 
-/* real figures only: what the catalogue and the services list actually hold */
-export function Numbers() {
-	const { mode } = useMode();
-	const stats =
-		mode === "build"
-			? [
-					{
-						n: String(SERVICES.length),
-						l: "service lines, from first build to support",
-					},
-					{ n: "3", l: "steps: understand, design, build & keep" },
-					{ n: "1", l: "team from first scope to long-term support" },
-				]
-			: [
-					{ n: String(COURSE_COUNT), l: "live, instructor-led courses" },
-					{ n: "2", l: "ways to learn — online or in person" },
-					{
-						n: String(CENTRE_SEATS),
-						l: "learners at most in an in-person class",
-					},
-				];
+export function ClientLogos() {
 	return (
-		<section className="wrap py-14">
-			<div className="numbers">
-				{stats.map((s) => (
-					<div key={s.l} className="number reveal">
-						<span className="number-n hot-text">{s.n}</span>
-						<span className="number-l">{s.l}</span>
-					</div>
+		<section className="wrap pb-6">
+			<p className="kicker mb-4">Organisations we have built for</p>
+			<LogoRow logos={CLIENT_LOGOS} />
+		</section>
+	);
+}
+
+export function FeaturedWork() {
+	const featured = FEATURED_WORK.map((slug) =>
+		WORK.find((w) => w.slug === slug),
+	).filter((w) => w !== undefined);
+	return (
+		<section className="wrap section">
+			<div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+				<SectionHead
+					eyebrow="Selected work"
+					title="What we have built."
+					intro="Each project is written up as the problem it had to solve and the decisions that shaped it."
+				/>
+				<Link to="/work" className="view-link shrink-0">
+					All work <i aria-hidden="true">→</i>
+				</Link>
+			</div>
+			<div className="grid md:grid-cols-2 gap-6">
+				{featured.map((w) => (
+					<CaseStudyCard key={w.slug} work={w} />
 				))}
 			</div>
 		</section>
 	);
 }
 
-export function Thesis() {
+export function Services() {
 	return (
-		<section className="wrap py-16 md:py-24">
-			<span className="eyebrow is-plain text-mute">Our view</span>
-			<p className="manifesto reveal mt-5">
-				Most software goes wrong before it is written. We{" "}
-				<mark>design first</mark>, build in working increments, and{" "}
-				<mark>stay for what comes after.</mark>
-			</p>
-			<p className="lead reveal mt-7 max-w-[38rem] text-[1.1rem]">
-				Clear scope, honest estimates and software that keeps running — for
-				businesses that cannot afford to build the same thing twice.
-			</p>
+		<section className="band">
+			<div className="wrap section">
+				<SectionHead
+					eyebrow="What we do"
+					title="From a first product to long-term support."
+					intro="We take on the full range of client work — the product, the systems around it, and the support that keeps it running."
+					className="mb-10"
+				/>
+				<div className="grid md:grid-cols-2 gap-6">
+					{SERVICES.map((s) => (
+						<Link
+							key={s.slug}
+							to="/services/$slug"
+							params={{ slug: s.slug }}
+							className="card p-7 flex flex-col"
+						>
+							<h3 className="h3 text-[1.35rem]">{s.t}</h3>
+							<p className="lead mt-2 text-[0.97rem]">{s.tagline}</p>
+							<ul className="mt-5 grid gap-1.5 flex-1">
+								{s.items.slice(0, 4).map((i) => (
+									<li key={i.t} className="text-[0.93rem] text-ink-soft">
+										· {i.t}
+									</li>
+								))}
+							</ul>
+							<span className="view-link mt-6">
+								{s.items.length} services <i aria-hidden="true">→</i>
+							</span>
+						</Link>
+					))}
+				</div>
+			</div>
 		</section>
 	);
 }
 
-/* ── learn-side sections ─────────────────────────────────────────── */
-
-/* the whole Academy in three steps — the shape a visitor follows from here */
-const HOW_IT_WORKS = [
+const STUDIO_PROCESS = [
 	{
-		n: "1",
-		t: "Choose a track",
-		d: "Digital skills, software & data, or video. Every course says who it is for and what you need before day one.",
+		t: "Understand",
+		d: "We start with the problem, not the feature list. You will know what we are building and why before we write a line.",
 	},
 	{
-		n: "2",
-		t: "Pick how you learn",
-		d: `Live online from anywhere, or in person in a class of no more than ${CENTRE_SEATS}. One price per course, payable in parts.`,
+		t: "Design",
+		d: "Structure, data and edge cases worked out up front — because the expensive mistakes are the ones you build well.",
 	},
 	{
-		n: "3",
-		t: "Start any day",
-		d: "No intakes to wait for. Enrol, and we agree your start date and weekly session with you.",
+		t: "Build and keep",
+		d: "Shipped in working increments, then maintained. Updates, fixes, and someone to call when it breaks.",
 	},
 ];
 
-export function HowItWorks() {
+export function StudioProcess() {
 	return (
-		<section className="wrap py-16">
-			<div className="reveal max-w-[40rem] mb-10">
-				<Eyebrow>How it works</Eyebrow>
-				<h2 className="shout mt-4">Three steps to your first session.</h2>
+		<section className="wrap section">
+			<div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16">
+				<div>
+					<SectionHead
+						eyebrow="How we work"
+						title="Understand first, then build."
+						intro="Most software goes wrong before it is written. A disciplined process keeps scope, budget and quality under control."
+					/>
+					<Link to="/approach" className="view-link mt-6">
+						The full process <i aria-hidden="true">→</i>
+					</Link>
+				</div>
+				<ol className="steps">
+					{STUDIO_PROCESS.map((s) => (
+						<li key={s.t}>
+							<h3 className="h3">{s.t}</h3>
+							<p className="lead mt-1 text-[0.97rem]">{s.d}</p>
+						</li>
+					))}
+				</ol>
 			</div>
-			<div className="grid md:grid-cols-3 gap-5">
-				{HOW_IT_WORKS.map((s, i) => (
-					<div key={s.t} className="step-card reveal">
-						<span className={`step-num ${i === 2 ? "is-build" : ""}`}>
-							0{s.n}
-						</span>
-						<h3 className="display text-[1.4rem] mt-2">{s.t}</h3>
-						<p className="lead mt-2 text-[0.97rem]">{s.d}</p>
+		</section>
+	);
+}
+
+export function ClientQuotes() {
+	return (
+		<section className="wrap section pt-0">
+			<SectionHead
+				eyebrow="In their words"
+				title="What clients say."
+				className="mb-8"
+			/>
+			<div className="grid md:grid-cols-2 gap-6">
+				{CLIENT_TESTIMONIALS.map((t, i) => (
+					// biome-ignore lint/suspicious/noArrayIndexKey: fixed slots
+					<Quote key={i} t={t} />
+				))}
+			</div>
+		</section>
+	);
+}
+
+/* the company's front page points to its Academy once — enough to find it */
+export function AcademyPointer() {
+	return (
+		<section className="band">
+			<div className="wrap section grid lg:grid-cols-2 gap-10 items-center">
+				<Figure {...ACADEMY_PHOTOS.hero} />
+				<div>
+					<SectionHead
+						eyebrow="NexaHubTech Academy"
+						title="We also teach what we practise."
+						intro="Our Academy runs live courses in computers, coding, data and video — online, or in person at our centre in Kubwa, in classes of no more than six."
+					/>
+					<div className="mt-7 flex flex-wrap gap-3">
+						<Link to="/academy" className="btn btn-ghost">
+							Visit the Academy
+						</Link>
+						<Link to="/courses" className="view-link self-center">
+							See the courses <i aria-hidden="true">→</i>
+						</Link>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
+}
+
+/* ── the Academy's front page ───────────────────────────────────── */
+
+export function AcademyHero() {
+	return (
+		<Hero
+			eyebrow="NexaHubTech Academy"
+			title="Learn tech, the right way."
+			lead="Practical courses in computers, coding, data and video — taught live by people who build real software every day. Online or in person, and you can start any day."
+			primary={{ to: "/courses", label: "Explore courses" }}
+			secondary={{ to: "/enrol", label: "Enrol" }}
+			figure={<Figure {...ACADEMY_PHOTOS.hero} />}
+			note="The training arm of NexaHubTech · online, and in person in Kubwa, Abuja."
+		/>
+	);
+}
+
+const FACTS = [
+	{
+		t: "Live and instructor-led",
+		d: "Every session is taught by a person, not a video.",
+	},
+	{
+		t: "Online or in person",
+		d: "Same instructor, same materials, either way.",
+	},
+	{
+		t: `At most ${CENTRE_SEATS} in a class`,
+		d: "Small enough that nobody gets left behind.",
+	},
+	{ t: "Start any day", d: "No intakes to wait for. Pay in full or in parts." },
+];
+
+export function AcademyFacts() {
+	return (
+		<section className="wrap pb-6">
+			<div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 rule pt-8">
+				{FACTS.map((f) => (
+					<div key={f.t}>
+						<h3 className="font-bold text-ink">{f.t}</h3>
+						<p className="text-[0.92rem] text-mute mt-1">{f.d}</p>
 					</div>
 				))}
 			</div>
@@ -322,12 +324,13 @@ export function HowItWorks() {
 /* the three tracks, each with where its prices start */
 export function Tracks() {
 	return (
-		<section className="wrap py-16">
-			<div className="reveal max-w-[40rem] mb-10">
-				<Eyebrow>Choose your track</Eyebrow>
-				<h2 className="shout mt-4">Wherever you are, there is a next step.</h2>
-			</div>
-			<div className="grid md:grid-cols-3 gap-5">
+		<section className="wrap section">
+			<SectionHead
+				eyebrow="Choose a track"
+				title="Wherever you are, there is a next step."
+				className="mb-10"
+			/>
+			<div className="grid md:grid-cols-3 gap-6">
 				{TRACKS.map((t) => {
 					const courses = coursesIn(t.id);
 					const from = formatNaira(Math.min(...courses.map(lowestFee)));
@@ -336,21 +339,14 @@ export function Tracks() {
 							key={t.id}
 							to="/courses"
 							hash={t.id}
-							className="card card-lift panel-learn reveal p-7 flex flex-col"
+							className="card p-7 flex flex-col"
 						>
-							<span className="text-[0.8rem] text-mute font-semibold uppercase tracking-wider">
-								{t.who}
-							</span>
-							<h3 className="display text-[1.5rem] mt-2">{t.t}</h3>
+							<span className="kicker">{t.who}</span>
+							<h3 className="h3 text-[1.35rem] mt-2">{t.t}</h3>
 							<p className="lead mt-2 text-[0.95rem] flex-1">{t.d}</p>
-							<div className="flex items-center justify-between mt-5 pt-4 border-t border-[var(--line-soft)]">
-								<span className="display text-[1.05rem]">
-									{courses.length} courses · from {from}
-								</span>
-								<span className="view-link" aria-hidden="true">
-									<i>→</i>
-								</span>
-							</div>
+							<p className="mt-5 pt-4 rule text-[0.92rem] font-semibold text-ink">
+								{courses.length} courses · from {from}
+							</p>
 						</Link>
 					);
 				})}
@@ -359,188 +355,157 @@ export function Tracks() {
 	);
 }
 
-export function StudioProof() {
-	return (
-		<section className="wrap py-16">
-			<div className="slab slab-build panel-studio reveal">
-				<span className="slab-word" aria-hidden="true">
-					Build
-				</span>
-				<div className="max-w-[40rem]">
-					<Eyebrow variant="build">Backed by NexaHubTech</Eyebrow>
-					<h2 className="display mt-3 text-[2rem] sm:text-[2.3rem]">
-						Taught by a team that ships real software.
-					</h2>
-					<p className="lead mt-3">
-						NexaHubTech Academy is one of NexaHubTech's two arms; the other is
-						its software studio. The problems the studio solves for clients
-						shape our lessons, and our strongest learners get to work on real
-						projects.
-					</p>
-					<div className="mt-7 flex flex-wrap items-center gap-4">
-						<Link to="/" className="btn btn-teal">
-							Visit NexaHubTech
-						</Link>
-						<Link to="/academy/about" className="view-link is-build">
-							How we teach <i aria-hidden="true">→</i>
-						</Link>
-					</div>
-				</div>
-			</div>
-		</section>
-	);
-}
-
-export function Services() {
-	return (
-		<section className="wrap py-16">
-			<div className="reveal max-w-[42rem] mb-10">
-				<Eyebrow variant="build">What we build</Eyebrow>
-				<h2 className="shout mt-4">From first product to long-term support.</h2>
-				<p className="lead mt-4">
-					We take on the full range of client work — a first product, the
-					systems around it, and the support that keeps it running.
-				</p>
-			</div>
-			<div className="grid md:grid-cols-2 gap-5">
-				{SERVICES.map((s, i) => (
-					<Link
-						key={s.slug}
-						to="/services/$slug"
-						params={{ slug: s.slug }}
-						className="slab slab-build panel-studio reveal flex flex-col"
-					>
-						<span className="slab-word" aria-hidden="true">
-							{String(i + 1).padStart(2, "0")}
-						</span>
-						<h3 className="display text-[1.7rem]">{s.t}</h3>
-						<p className="lead mt-3 text-[0.97rem] flex-1">{s.tagline}</p>
-						<span className="view-link mt-5">
-							View services <i aria-hidden="true">→</i>
-						</span>
-					</Link>
-				))}
-			</div>
-			<div className="reveal mt-7">
-				<Link to="/services" className="btn btn-teal">
-					View all services
-				</Link>
-			</div>
-		</section>
-	);
-}
-
-export function ClosingCTA() {
-	const { mode } = useMode();
-	const build = mode === "build";
-	return (
-		<section className="wrap py-16">
-			<div className="blast blast-cta reveal">
-				<div className="blast-rays" aria-hidden="true" />
-				<div className="blast-core" aria-hidden="true" />
-				<div className="relative z-10 max-w-[46rem]">
-					<span className="eyebrow">
-						{build ? "For businesses" : "For learners"}
-					</span>
-					<h2 className="blast-title mt-4">
-						{build ? (
-							<>
-								Build <span className="hot-text">with us</span>.
-							</>
-						) : (
-							<>
-								Start your <span className="hot-text">journey</span>.
-							</>
-						)}
-					</h2>
-					<p className="blast-lead mt-5">
-						{build
-							? "Tell us about the product you need. We’ll help you scope it, design it well, and build it right — then keep it running."
-							: "Start any day, online or in person, and pay in parts if you prefer — taught live by people who build software every day."}
-					</p>
-					<div className="mt-8 flex flex-wrap gap-3">
-						{build ? (
-							<Link to="/contact" className="btn btn-blast">
-								Start a project <i aria-hidden="true">→</i>
-							</Link>
-						) : (
-							<>
-								<Link to="/courses" className="btn btn-blast">
-									Find your course <i aria-hidden="true">→</i>
-								</Link>
-								<Link to="/cbt" className="btn btn-ghost">
-									CBT prep for WAEC & JAMB
-								</Link>
-							</>
-						)}
-					</div>
-				</div>
-			</div>
-		</section>
-	);
-}
-
-const STUDIO_PROCESS = [
+const HOW_IT_WORKS = [
 	{
-		n: "1",
-		t: "Understand",
-		d: "We start with the problem, not the feature list. You will know what we are building and why before we write a line.",
+		t: "Choose a course",
+		d: "Every course page says who it is for, what you need before day one, and what each module covers.",
 	},
 	{
-		n: "2",
-		t: "Design",
-		d: "Structure, data and edge cases worked out up front — because the expensive mistakes are the ones you build well.",
+		t: "Pick how you learn",
+		d: `Live online from anywhere, or in person in a class of no more than ${CENTRE_SEATS}. One price per course, payable in parts.`,
 	},
 	{
-		n: "3",
-		t: "Build & keep",
-		d: "Shipped in working increments, then maintained. Updates, fixes, and someone to call when it breaks.",
+		t: "Start any day",
+		d: "Enrol, and we agree your start date and weekly session with you.",
 	},
 ];
 
-export function StudioProcess() {
+export function HowItWorks() {
 	return (
-		<section className="wrap py-16">
-			<div className="reveal max-w-[42rem] mb-10">
-				<Eyebrow variant="build">How we work</Eyebrow>
-				<h2 className="shout mt-4">Understand first, then build.</h2>
-				<p className="lead mt-4">
-					A disciplined process that keeps scope, budget and quality under
-					control.
-				</p>
+		<section className="band">
+			<div className="wrap section grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16">
+				<SectionHead
+					eyebrow="How it works"
+					title="Three steps to your first session."
+				/>
+				<ol className="steps">
+					{HOW_IT_WORKS.map((s) => (
+						<li key={s.t}>
+							<h3 className="h3">{s.t}</h3>
+							<p className="lead mt-1 text-[0.97rem]">{s.d}</p>
+						</li>
+					))}
+				</ol>
 			</div>
-			<div className="grid md:grid-cols-3 gap-5">
-				{STUDIO_PROCESS.map((step) => (
-					<div key={step.t} className="step-card reveal">
-						<span className="step-num is-build">0{step.n}</span>
-						<h3 className="display text-[1.5rem] mt-2">{step.t}</h3>
-						<p className="lead mt-2 text-[0.97rem]">{step.d}</p>
-					</div>
+		</section>
+	);
+}
+
+export function InsideTheCentre() {
+	return (
+		<section className="wrap section">
+			<SectionHead
+				eyebrow="Where you learn"
+				title="A small room, and a live session online."
+				intro={`In person, you learn at our centre in Kubwa with no more than ${CENTRE_SEATS} others and a machine if you need one. Online, you join the same live session from wherever you are.`}
+				className="mb-10"
+			/>
+			<div className="grid md:grid-cols-3 gap-6">
+				<Figure {...ACADEMY_PHOTOS.room} caption="The learning centre" />
+				<Figure
+					{...ACADEMY_PHOTOS.instructor}
+					caption="Working through an exercise"
+				/>
+				<Figure
+					{...ACADEMY_PHOTOS.online}
+					ratio="4 / 3"
+					caption="Learning online"
+				/>
+			</div>
+			<Link to="/about" hash="visit" className="view-link mt-8">
+				Visit the centre <i aria-hidden="true">→</i>
+			</Link>
+		</section>
+	);
+}
+
+export function LearnerWork() {
+	return (
+		<section className="band">
+			<div className="wrap section">
+				<SectionHead
+					eyebrow="Learner work"
+					title="What our learners have built."
+					intro="Every course ends with something real — a site, a dashboard, an edit — made by the learner, not copied from a tutorial."
+					className="mb-10"
+				/>
+				<div className="grid md:grid-cols-3 gap-6">
+					{LEARNER_WORK.map((w, i) => (
+						// biome-ignore lint/suspicious/noArrayIndexKey: fixed slots
+						<article key={i}>
+							<Figure {...w.image} ratio="16 / 10" />
+							<h3 className="font-bold text-ink mt-3">
+								{w.title ?? <TextSlot>Project title</TextSlot>}
+							</h3>
+							<p className="text-[0.88rem] text-mute mt-0.5">
+								{w.by && w.course ? (
+									`${w.by} · ${w.course}`
+								) : (
+									<TextSlot>Learner · course</TextSlot>
+								)}
+							</p>
+						</article>
+					))}
+				</div>
+			</div>
+		</section>
+	);
+}
+
+export function LearnerQuotes() {
+	return (
+		<section className="wrap section">
+			<SectionHead
+				eyebrow="In their words"
+				title="What learners say."
+				className="mb-8"
+			/>
+			<div className="grid md:grid-cols-3 gap-6">
+				{LEARNER_TESTIMONIALS.map((t, i) => (
+					// biome-ignore lint/suspicious/noArrayIndexKey: fixed slots
+					<Quote key={i} t={t} who="learner" />
 				))}
 			</div>
 		</section>
 	);
 }
 
-/* the company's front page points to its Academy once, quietly —
-   enough to find it, not enough to blur the two */
-export function AcademyPointer() {
+/* the Academy's link back to the studio — why the teaching is credible */
+export function StudioProof() {
 	return (
-		<section className="wrap py-10">
-			<div className="reveal card p-8 md:p-10 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
-				<div className="max-w-[38rem]">
-					<Eyebrow variant="plain">NexaHubTech Academy</Eyebrow>
-					<h2 className="display text-[1.6rem] mt-3">
-						Looking to learn rather than build?
-					</h2>
-					<p className="lead text-[0.97rem] mt-2">
-						Our Academy teaches software development, data, office productivity
-						and video in live courses, online or in person.
+		<section className="wrap section pt-0">
+			<div className="grid md:grid-cols-2 gap-6">
+				<div className="card panel-learn p-8">
+					<Eyebrow>Taught by builders</Eyebrow>
+					<h3 className="h3 text-[1.35rem] mt-3">
+						The people who teach also ship software for clients.
+					</h3>
+					<p className="lead mt-3 text-[0.97rem]">
+						The problems NexaHubTech's studio solves for clients shape our
+						lessons, and our strongest learners get to work on real projects.
 					</p>
+					<Link to="/work" className="view-link mt-5">
+						See the studio's work <i aria-hidden="true">→</i>
+					</Link>
 				</div>
-				<Link to="/academy" className="btn btn-ghost shrink-0">
-					Visit the Academy
-				</Link>
+				<div className="card panel-learn p-8">
+					<Eyebrow>Also at the Academy</Eyebrow>
+					<h3 className="h3 text-[1.35rem] mt-3">
+						CBT prep, and training for organisations.
+					</h3>
+					<p className="lead mt-3 text-[0.97rem]">
+						WAEC and JAMB practice on exam-style software, and training for
+						teams, schools and church media units at our centre or yours.
+					</p>
+					<div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
+						<Link to="/cbt" className="view-link">
+							CBT prep <i aria-hidden="true">→</i>
+						</Link>
+						<Link to="/for-business" className="view-link">
+							Organisations <i aria-hidden="true">→</i>
+						</Link>
+					</div>
+				</div>
 			</div>
 		</section>
 	);

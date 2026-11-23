@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { CourseCard } from "../../components/fees";
-import { Eyebrow, useReveal } from "../../components/site";
+import { Eyebrow } from "../../components/site";
 import {
 	COURSE_COUNT_WORD_CAP,
 	coursesIn,
@@ -23,7 +23,6 @@ type Filter = Family | "all";
    starts — and the full price lives on the course page, one way at a time. */
 function CoursesIndex() {
 	const [filter, setFilter] = useState<Filter>("all");
-	useReveal();
 
 	/* /courses#video (from the Academy home and course pages) opens on that
 	   track. Read after mount, so the server render always shows every course. */
@@ -44,20 +43,17 @@ function CoursesIndex() {
 		<>
 			<section className="wrap page-head">
 				<div className="max-w-[46rem]">
-					<span className="pill rise rise-1">
-						<span className="spark" />
-						NexaHubTech Academy
-					</span>
-					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
+					<span className="pill">NexaHubTech Academy</span>
+					<h1 className="h1 mt-3">
 						Find your <span className="hot-text">course</span>.
 					</h1>
-					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
+					<p className="lead mt-6 text-[1.1rem] max-w-[38rem]">
 						{COURSE_COUNT_WORD_CAP} courses, grouped by what you want to do.
 						Every one is taught live by an instructor, online or in person, and
 						you can start any day.
 					</p>
 				</div>
-				<fieldset className="track-filter rise rise-4 mt-8">
+				<fieldset className="track-filter mt-8">
 					<legend className="sr-only">Show courses in</legend>
 					<button
 						type="button"
@@ -96,7 +92,7 @@ function CoursesIndex() {
 
 			<section className="wrap py-14">
 				<div className="grid md:grid-cols-2 gap-5">
-					<div className="reveal card panel-learn p-8">
+					<div className="card panel-learn p-8">
 						<h2 className="display text-[1.4rem]">Sitting WAEC or JAMB?</h2>
 						<p className="lead mt-2 text-[0.95rem]">
 							Short, practical CBT preparation on real exam-style software —
@@ -106,7 +102,7 @@ function CoursesIndex() {
 							CBT prep <i aria-hidden="true">→</i>
 						</Link>
 					</div>
-					<div className="reveal card p-8">
+					<div className="card p-8">
 						<h2 className="display text-[1.4rem]">Not sure where to start?</h2>
 						<p className="lead mt-2 text-[0.95rem]">
 							Tell us what you want to be able to do. We'll point you to the

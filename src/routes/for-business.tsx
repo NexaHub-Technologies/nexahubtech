@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { CONTACT, Eyebrow, useReveal } from "../components/site";
+import { CONTACT, Eyebrow } from "../components/site";
 import { BUSINESS_OFFERS } from "../lib/business";
 import { PAGES } from "../lib/pages";
 import { pageMeta } from "../lib/seo";
@@ -33,19 +33,15 @@ const STEPS = [
 ];
 
 function ForBusinessPage() {
-	useReveal();
 	return (
 		<>
 			<section className="wrap page-head">
 				<div className="max-w-[46rem]">
-					<span className="pill rise rise-1">
-						<span className="spark" />
-						For organisations
-					</span>
-					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
+					<span className="pill">For organisations</span>
+					<h1 className="h1 mt-3">
 						Train your team, <span className="hot-text">properly</span>.
 					</h1>
-					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
+					<p className="lead mt-6 text-[1.1rem] max-w-[38rem]">
 						Staff who lose hours to Word and Excel. Candidates who have never
 						sat a computer-based exam. A team that needs to learn to build. We
 						teach them where it suits you — at your office, at our learning
@@ -56,7 +52,7 @@ function ForBusinessPage() {
 
 			<section className="wrap py-10 grid gap-6">
 				{BUSINESS_OFFERS.map((o) => (
-					<article key={o.id} className="card reveal p-8 md:p-10">
+					<article key={o.id} className="card p-8 md:p-10">
 						<div className="grid md:grid-cols-[1.15fr_0.85fr] gap-8 items-start">
 							<div>
 								<Eyebrow>{o.for}</Eyebrow>
@@ -98,13 +94,13 @@ function ForBusinessPage() {
 			</section>
 
 			<section className="wrap py-14">
-				<div className="reveal max-w-[40rem] mb-9">
-					<Eyebrow variant="plain">How it works</Eyebrow>
+				<div className="max-w-[40rem] mb-9">
+					<Eyebrow>How it works</Eyebrow>
 					<h2 className="shout shout-md mt-4">Three steps, in writing.</h2>
 				</div>
 				<div className="grid md:grid-cols-3 gap-5">
 					{STEPS.map((s) => (
-						<div key={s.n} className="step-card reveal">
+						<div key={s.n} className="step-card">
 							<span className="step-num">{s.n}</span>
 							<h3 className="display text-[1.35rem] mt-2">{s.t}</h3>
 							<p className="lead mt-2 text-[0.95rem]">{s.d}</p>
@@ -114,9 +110,9 @@ function ForBusinessPage() {
 			</section>
 
 			<section className="wrap py-14">
-				<div className="reveal card p-8 md:p-10 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+				<div className="card p-8 md:p-10 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
 					<div className="max-w-[36rem]">
-						<Eyebrow variant="build">Need software, not training?</Eyebrow>
+						<Eyebrow>Need software, not training?</Eyebrow>
 						<h2 className="display text-[1.5rem] mt-3">
 							NexaHubTech builds it for you.
 						</h2>

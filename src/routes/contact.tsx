@@ -1,12 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { CONTACT, Eyebrow, SOCIALS, useReveal } from "../components/site";
+import { Figure } from "../components/figure";
+import { CONTACT, Eyebrow, SOCIALS } from "../components/site";
 import { COURSE_COUNT_WORD } from "../lib/courses";
 import {
 	type ComposedEnquiry,
 	composeEnquiry,
 	type Intent,
 } from "../lib/enquiry";
+import { OFFICE_PHOTO } from "../lib/evidence";
 import { PAGES } from "../lib/pages";
 import { sendEnquiry } from "../lib/send-enquiry";
 import { pageMeta } from "../lib/seo";
@@ -222,19 +224,13 @@ function ContactForm() {
 }
 
 function Contact() {
-	useReveal();
 	return (
 		<>
 			<section className="wrap page-head">
 				<div className="max-w-[44rem]">
-					<span className="pill rise rise-1">
-						<span className="spark" />
-						Two ways in
-					</span>
-					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
-						Let’s talk.
-					</h1>
-					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[36rem]">
+					<span className="pill">Two ways in</span>
+					<h1 className="h1 mt-3">Let’s talk.</h1>
+					<p className="lead mt-6 text-[1.1rem] max-w-[36rem]">
 						Whether you want to learn to build or need something built, you’re
 						in the right place. Tell us a little about what you’re after.
 					</p>
@@ -242,7 +238,7 @@ function Contact() {
 			</section>
 
 			<section className="wrap py-12">
-				<div className="reveal grid lg:grid-cols-[1fr_0.85fr] gap-6 items-start">
+				<div className="grid lg:grid-cols-[1fr_0.85fr] gap-6 items-start">
 					<ContactForm />
 
 					<div className="grid gap-5">
@@ -255,14 +251,14 @@ function Contact() {
 							</p>
 						</div>
 						<div className="card panel-studio p-7">
-							<Eyebrow variant="build">NexaHubTech · for businesses</Eyebrow>
+							<Eyebrow>The studio · for businesses</Eyebrow>
 							<p className="lead mt-3">
 								Tell us about the product you need. We’ll help you scope it,
 								design it well, and build it right.
 							</p>
 						</div>
 						<div className="card p-7">
-							<Eyebrow variant="plain">Reach us directly</Eyebrow>
+							<Eyebrow>Reach us directly</Eyebrow>
 							<div className="mt-3">
 								<a className="contact-detail" href={`mailto:${CONTACT.email}`}>
 									<span className="ic" aria-hidden="true">
@@ -326,6 +322,7 @@ function Contact() {
 								</div>
 							</div>
 						</div>
+						<Figure {...OFFICE_PHOTO} ratio="16 / 10" />
 					</div>
 				</div>
 			</section>
