@@ -3,7 +3,6 @@ import { BUSINESS_OFFERS } from "./business";
 import { CBT_FROM_PRICE } from "./cbt";
 import { CONTACT } from "./contact";
 import {
-	CENTRE_SEATS,
 	COURSE_COUNT_WORD_CAP,
 	COURSES,
 	type Course,
@@ -144,20 +143,6 @@ export const PAGES = {
 		},
 		kind: "WebPage",
 	},
-	academyAbout: {
-		path: "/academy/about",
-		name: "About the Academy",
-		title: "About NexaHubTech Academy — How We Teach, Where and When",
-		description: `How NexaHubTech Academy teaches — the idea before the syntax, every session in three parts — and where and when it happens: live online in the evenings, or in person in classes of no more than ${CENTRE_SEATS} at our learning centre in Kubwa, Abuja.`,
-		image: "/og/academy-about.jpg",
-		card: {
-			eyebrow: "About the Academy",
-			headline: "Understand it first.",
-			accent: "Then build with it.",
-			sub: `Online or in person · classes of up to ${CENTRE_SEATS}`,
-		},
-		kind: "AboutPage",
-	},
 	enrol: {
 		path: "/enrol",
 		name: "Enrol",
@@ -207,8 +192,7 @@ export const PAGES = {
 		path: "/about",
 		name: "About",
 		title: "About — NexaHubTech",
-		description:
-			"NexaHubTech is a Nigeria-based software company with two arms: a software studio that builds for businesses, and NexaHubTech Academy, which teaches the skills the studio practises — in live courses, online or in person.",
+		description: `NexaHubTech is a Nigeria-based software company with two arms: a software studio that builds for businesses, and NexaHubTech Academy, which teaches the skills the studio practises. Meet the team, see how we work and teach, and visit our office and learning centre in Kubwa, Abuja.`,
 		image: "/og/about.jpg",
 		card: {
 			eyebrow: "Who we are",
@@ -290,7 +274,6 @@ export const INDEXABLE_PAGES: Page[] = [
 		PAGES.academy,
 		PAGES.courses,
 		PAGES.cbt,
-		PAGES.academyAbout,
 		PAGES.fees,
 		PAGES.forBusiness,
 		PAGES.enrol,

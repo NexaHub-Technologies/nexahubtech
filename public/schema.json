@@ -2328,7 +2328,7 @@
     },
     {
       "@type": "ItemList",
-      "@id": "https://nexahubtech.company/academy/about#principles",
+      "@id": "https://nexahubtech.company/about#principles",
       "name": "How NexaHubTech Academy teaches",
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "itemListElement": [
@@ -2360,7 +2360,7 @@
     },
     {
       "@type": "HowTo",
-      "@id": "https://nexahubtech.company/academy/about#session",
+      "@id": "https://nexahubtech.company/about#session",
       "name": "How a NexaHubTech Academy session runs",
       "description": "Every session on every course is built in the same three parts.",
       "step": [
@@ -2672,54 +2672,6 @@
       ]
     },
     {
-      "@type": "AboutPage",
-      "@id": "https://nexahubtech.company/academy/about#webpage",
-      "url": "https://nexahubtech.company/academy/about",
-      "name": "About NexaHubTech Academy — How We Teach, Where and When",
-      "description": "How NexaHubTech Academy teaches — the idea before the syntax, every session in three parts — and where and when it happens: live online in the evenings, or in person in classes of no more than 6 at our learning centre in Kubwa, Abuja.",
-      "inLanguage": "en-NG",
-      "isPartOf": {
-        "@id": "https://nexahubtech.company/#website"
-      },
-      "publisher": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://nexahubtech.company/og/academy-about.jpg"
-      },
-      "breadcrumb": {
-        "@id": "https://nexahubtech.company/academy/about#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://nexahubtech.company/academy/about#principles"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://nexahubtech.company/academy/about#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nexahubtech.company/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "NexaHubTech Academy",
-          "item": "https://nexahubtech.company/academy"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "About the Academy",
-          "item": "https://nexahubtech.company/academy/about"
-        }
-      ]
-    },
-    {
       "@type": "WebPage",
       "@id": "https://nexahubtech.company/fees#webpage",
       "url": "https://nexahubtech.company/fees",
@@ -2934,7 +2886,7 @@
       "@id": "https://nexahubtech.company/about#webpage",
       "url": "https://nexahubtech.company/about",
       "name": "About — NexaHubTech",
-      "description": "NexaHubTech is a Nigeria-based software company with two arms: a software studio that builds for businesses, and NexaHubTech Academy, which teaches the skills the studio practises — in live courses, online or in person.",
+      "description": "NexaHubTech is a Nigeria-based software company with two arms: a software studio that builds for businesses, and NexaHubTech Academy, which teaches the skills the studio practises. Meet the team, see how we work and teach, and visit our office and learning centre in Kubwa, Abuja.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"

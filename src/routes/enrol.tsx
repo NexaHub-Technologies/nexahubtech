@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { FeeLines } from "../components/fees";
-import { CONTACT, Eyebrow, useReveal } from "../components/site";
+import { CONTACT, Eyebrow } from "../components/site";
 import { CBT_FROM_PRICE } from "../lib/cbt";
 import { COURSES, getCourseBySlug, priceLabel } from "../lib/courses";
 import {
@@ -122,7 +122,7 @@ function CourseSummary({ slug }: { slug: string }) {
 	if (!course) {
 		return (
 			<div className="card p-7">
-				<Eyebrow variant="plain">No course chosen yet</Eyebrow>
+				<Eyebrow>No course chosen yet</Eyebrow>
 				<p className="lead mt-3 text-[0.97rem]">
 					Pick a track in the form and its fee, length and outline will appear
 					here.
@@ -572,17 +572,15 @@ function Enrol() {
 	});
 	const chosen = getCourseBySlug(course);
 	const isCbt = course === "cbt" || course === "cbt-training";
-	useReveal();
 
 	return (
 		<>
 			<section className="wrap page-head">
 				<div className="max-w-[46rem]">
-					<span className="pill rise rise-1">
-						<span className="spark" />
+					<span className="pill">
 						{isCbt ? "CBT Registration" : "Enrolment"}
 					</span>
-					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
+					<h1 className="h1 mt-3">
 						{isCbt ? (
 							<>
 								Register for <span className="hot-text">CBT Training</span>.
@@ -597,7 +595,7 @@ function Enrol() {
 							</>
 						)}
 					</h1>
-					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
+					<p className="lead mt-6 text-[1.1rem] max-w-[38rem]">
 						Tell us a little about you and where you're starting from. It takes
 						a couple of minutes, and it helps us point you at the right track
 						and agree a start date.
@@ -606,13 +604,13 @@ function Enrol() {
 			</section>
 
 			<section className="wrap py-12">
-				<div className="reveal grid lg:grid-cols-[1fr_0.7fr] gap-6 items-start">
+				<div className="grid lg:grid-cols-[1fr_0.7fr] gap-6 items-start">
 					<EnrolForm course={course} setCourse={setCourse} />
 
 					<div className="grid gap-5">
 						<CourseSummary slug={course} />
 						<div className="card p-7">
-							<Eyebrow variant="build">What happens next</Eyebrow>
+							<Eyebrow>What happens next</Eyebrow>
 							<ol className="mt-3 grid gap-3">
 								<li className="feat">
 									<span className="mk mk-learn">1</span>
@@ -636,7 +634,7 @@ function Enrol() {
 							</ol>
 						</div>
 						<div className="card p-7">
-							<Eyebrow variant="plain">Rather just ask a question?</Eyebrow>
+							<Eyebrow>Rather just ask a question?</Eyebrow>
 							<p className="lead mt-3 text-[0.97rem]">
 								If you're not sure which track fits, tell us where you're
 								starting from and we'll point you at the right one.

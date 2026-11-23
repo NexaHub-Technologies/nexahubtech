@@ -4,8 +4,8 @@
 
      .design-system/bundle.css  src/styles.css compiled with its Tailwind utilities,
                                 minus the token values the system's tokens.json owns
-     .design-system/bundle.js   Logo, Eyebrow, ModeSwitch, Header, Footer, Preloader,
-                                SessionLoop and ModeProvider as window.NexaHub
+     .design-system/bundle.js   the site chrome, the evidence slots and the page
+                                sections (CARDS below) as window.NexaHub
 
    Run with: bun run design-system. Then upload both files to the system as
    project/components/bundle.css and project/components/bundle.js (see README.md
@@ -14,7 +14,7 @@ import { spawnSync } from "node:child_process";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { modeForPath } from "../../src/lib/mode";
+import { inAcademy } from "../../src/lib/site";
 
 /* the bundler is Bun's own — the script runs under bun — and the project carries
    no Bun type definitions, so this is the slice of its API used here */
@@ -56,33 +56,42 @@ const NAMESPACE = "NexaHub";
 const CARDS = [
 	"Logo",
 	"Eyebrow",
-	"ModeSwitch",
+	"SectionHead",
+	"PageHead",
 	"Header",
 	"Footer",
-	"Preloader",
-	"SessionLoop",
-	"Hero",
-	"Tapes",
-	"Numbers",
-	"Thesis",
-	"HowItWorks",
-	"Tracks",
-	"StudioProof",
+	"Figure",
+	"TextSlot",
+	"LogoRow",
+	"CaseStudyCard",
+	"Quote",
+	"PersonCard",
+	"StudioHero",
+	"ClientLogos",
+	"FeaturedWork",
 	"Services",
-	"ClosingCTA",
 	"StudioProcess",
+	"ClientQuotes",
 	"AcademyPointer",
+	"AcademyHero",
+	"AcademyFacts",
+	"Tracks",
+	"HowItWorks",
+	"InsideTheCentre",
+	"LearnerWork",
+	"LearnerQuotes",
+	"StudioProof",
+	"ClosingCTA",
 	"CourseCard",
 	"PriceBox",
 	"FeeLines",
 ];
 
-/* the page a card pretends to be on. It must be one neither arm owns: on an
-   owned page ModeProvider pins the mode to that arm, and every card would show
-   one side however its theme or the switch is set. */
+/* the page a card pretends to be on. A page outside the Academy's section, so
+   the Header renders without the Academy's second row. */
 const PREVIEW_PATH = "/contact";
-if (modeForPath(PREVIEW_PATH) !== null) {
-	throw new Error(`${PREVIEW_PATH} now belongs to an arm; pick a shared page`);
+if (inAcademy(PREVIEW_PATH)) {
+	throw new Error(`${PREVIEW_PATH} is in the Academy's section; pick another`);
 }
 
 mkdirSync(OUT, { recursive: true });
@@ -113,37 +122,14 @@ function rewriteBlock(
 	throw new Error(`styles.css: no "${opener}" block declaring ${marker}`);
 }
 
-/* a declaration line, not a comment or a continuation */
-const declares = (line: string, name: string) =>
-	line.trimStart().startsWith(`${name}:`);
-
 const lines = readFileSync(join(ROOT, "src/styles.css"), "utf8").split("\n");
 
-/* the light and build token blocks: tokens.json declares these values (as the
-   system's tokens.css), so a value changed on the system's page wins. What tokens
-   cannot carry — the mark is an image, --spark an alias the system never uses as
-   a token — stays. */
-rewriteBlock(lines, ":root {", "--paper", (l) => declares(l, "--mark"));
-rewriteBlock(
-	lines,
-	":root[data-mode='build'] {",
-	"--paper",
-	(l) => declares(l, "--mark") || declares(l, "--spark"),
-);
-/* the hot gradients stay — a gradient is not a colour token — but --stage is one */
-rewriteBlock(lines, ":root {", "--hot", (l) => !declares(l, "--stage"));
+/* the token block: tokens.json declares these values (as the system's
+   tokens.css), so a value changed on the system's page wins. Keep the system's
+   tokens.json in step with :root in styles.css. */
+rewriteBlock(lines, ":root {", "--paper", () => false);
 
-/* the system's previews switch themes with data-theme on <html>, where the site
-   uses data-mode; the shims set both */
-let input = lines
-	.join("\n")
-	.replaceAll("[data-mode=", "[data-theme=")
-	.replaceAll(":root[data-mode]", ":root[data-theme]");
-if (input.includes("data-mode")) {
-	throw new Error(
-		"styles.css: a data-mode selector the rewrite does not cover",
-	);
-}
+let input = lines.join("\n");
 /* scan the site's source for utilities, exactly as the Vite plugin does */
 input = input.replace(
 	"@import 'tailwindcss';",
@@ -158,14 +144,13 @@ const tw = spawnSync(
 );
 if (tw.status !== 0) throw new Error("tailwindcss failed");
 
-const css = `/* NexaHubTech — the site stylesheet (src/styles.css @ ${sha}) compiled with Tailwind against src/, minus the colour, spacing, radius and shadow values that tokens.json supplies (tokens.css). :root[data-mode] is written [data-theme] here. */\n${readFileSync(join(OUT, "compiled.css"), "utf8")}`;
+const css = `/* NexaHubTech — the site stylesheet (src/styles.css @ ${sha}) compiled with Tailwind against src/, minus the colour, spacing, radius and shadow values that tokens.json supplies (tokens.css). */\n${readFileSync(join(OUT, "compiled.css"), "utf8")}`;
 writeFileSync(join(OUT, "bundle.css"), css);
 
 /* ── bundle.js ──────────────────────────────────────────────────── */
 
-/* React comes from the preview frame's globals, and the router and the mode's
-   storage are swapped for preview stand-ins (shims/). The components themselves
-   are bundled untouched. */
+/* React comes from the preview frame's globals, and the router is swapped for a
+   preview stand-in (shims/). The components themselves are bundled untouched. */
 const previewGlobals = {
 	name: "preview-globals",
 	setup(build: PluginBuilder) {
@@ -178,14 +163,6 @@ const previewGlobals = {
 		build.onResolve({ filter: /^@tanstack\/react-router$/ }, () => ({
 			path: join(SHIMS, "router.js"),
 		}));
-		build.onResolve({ filter: /^REAL_MODE$/ }, () => ({
-			path: join(ROOT, "src/lib/mode.ts"),
-		}));
-		build.onResolve({ filter: /\/lib\/mode$/ }, (args) =>
-			args.importer.endsWith("components/mode.tsx")
-				? { path: join(SHIMS, "mode-lib.js") }
-				: undefined,
-		);
 	},
 };
 

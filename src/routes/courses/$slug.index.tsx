@@ -1,7 +1,8 @@
 import { createFileRoute, Link, redirect } from "@tanstack/react-router";
+import { PersonCard } from "../../components/evidence";
 import { PriceBox } from "../../components/fees";
-import { SessionLoop } from "../../components/session-loop";
-import { CONTACT, Eyebrow, useReveal } from "../../components/site";
+import { Figure } from "../../components/figure";
+import { CONTACT, Eyebrow } from "../../components/site";
 import {
 	deliveryPhrase,
 	getCourseBySlug,
@@ -9,6 +10,7 @@ import {
 	priceLabel,
 	TRACKS,
 } from "../../lib/courses";
+import { TEAM } from "../../lib/evidence";
 import { coursePage } from "../../lib/pages";
 import { pageMeta } from "../../lib/seo";
 
@@ -42,7 +44,6 @@ export const Route = createFileRoute("/courses/$slug/")({
 function CourseDetail() {
 	const { slug } = Route.useParams();
 	const course = getCourseBySlug(slug);
-	useReveal();
 
 	if (!course) {
 		return (
@@ -60,23 +61,30 @@ function CourseDetail() {
 
 	const track = TRACKS.find((t) => t.id === course.family);
 	const onRequest = course.admission === "on-request";
+	/* the instructor for the course's track, from the team list */
+	const instructor = TEAM.find((p) =>
+		p.role.includes(
+			{
+				digital: "Digital skills",
+				development: "Software & data",
+				video: "Video",
+			}[course.family],
+		),
+	);
 
 	return (
 		<>
 			<section className="wrap page-head">
 				<div className="max-w-[46rem]">
-					<Link to="/courses" hash={course.family} className="pill rise rise-1">
-						<span className="spark" />
+					<Link to="/courses" hash={course.family} className="pill">
 						{track?.t ?? "Course"}
 						{course.d ? ` · ${course.d}` : ""}
 					</Link>
-					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
-						{course.t}
-					</h1>
-					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
+					<h1 className="h1 mt-3">{course.t}</h1>
+					<p className="lead mt-6 text-[1.1rem] max-w-[38rem]">
 						{course.tagline}
 					</p>
-					<p className="rise rise-4 mt-6 text-mute font-semibold">
+					<p className="mt-6 text-mute font-semibold">
 						{course.duration} · {deliveryPhrase(course)} ·{" "}
 						{onRequest ? "opens on request" : "start any day"} ·{" "}
 						{priceLabel(course)}
@@ -85,8 +93,7 @@ function CourseDetail() {
 			</section>
 
 			{/* what you'll learn, with the price beside it. The timeline items
-			    animate on their own scroll timeline (styles.css), so they stay off
-			    .reveal — its transform would fight the timeline's. */}
+			    are a plain numbered list. */}
 			<section className="wrap py-10">
 				<div className="grid lg:grid-cols-[1.25fr_0.75fr] gap-10 lg:gap-14 items-start">
 					<div>
@@ -128,9 +135,9 @@ function CourseDetail() {
 			{/* the honest check — so nobody signs up for a course they can't take
 			    part in */}
 			<section className="wrap py-14">
-				<div className="reveal card p-8 md:p-12">
+				<div className="card p-8 md:p-12">
 					<div className="max-w-[42rem]">
-						<Eyebrow variant="plain">Is it for me?</Eyebrow>
+						<Eyebrow>Is it for me?</Eyebrow>
 						<h2 className="shout shout-md mt-4">
 							{course.requirements.level}.
 						</h2>
@@ -170,28 +177,59 @@ function CourseDetail() {
 				</div>
 			</section>
 
-			{/* how it is taught: the one idea the course hangs on, then the shape of
-			    every session — drawn as a loop, because it is one */}
+			{/* how it is taught: the one idea the course hangs on, then the parts of
+			    every session, in order */}
 			<section className="wrap py-14">
 				<div className="grid md:grid-cols-2 gap-6 items-stretch">
-					<div className="reveal card panel-learn p-8 md:p-10">
+					<div className="card panel-learn p-8 md:p-10">
 						<Eyebrow>The idea at its heart</Eyebrow>
 						<h2 className="shout shout-md mt-4">{course.mentalModel.t}</h2>
 						<p className="lead mt-4">{course.mentalModel.d}</p>
 					</div>
-					<div className="reveal card p-8 md:p-10">
-						<Eyebrow variant="build">How it's taught</Eyebrow>
+					<div className="card p-8 md:p-10">
+						<Eyebrow>How it's taught</Eyebrow>
 						<h2 className="display text-[1.4rem] mt-4">{course.format.t}</h2>
 						<p className="lead mt-3 text-[0.95rem]">{course.format.d}</p>
-						<div className="mt-6">
-							<SessionLoop parts={course.session} />
+						<h3 className="kicker mt-6">The parts of a session</h3>
+						<ol className="steps mt-4" aria-label="The parts of a session">
+							{course.session.map((part) => (
+								<li key={part.t}>
+									<h4 className="font-bold text-ink">{part.t}</h4>
+									<p className="lead mt-1 text-[0.93rem]">{part.d}</p>
+								</li>
+							))}
+						</ol>
+					</div>
+				</div>
+			</section>
+
+			{/* who teaches it, and what a learner made on it — both evidence slots
+			    filled from src/lib/evidence.ts */}
+			<section className="wrap py-14">
+				<div className="grid md:grid-cols-[0.55fr_1.45fr] gap-8 md:gap-12 items-start">
+					{instructor ? (
+						<div>
+							<Eyebrow>Your instructor</Eyebrow>
+							<div className="mt-4 max-w-[12rem] md:max-w-[16rem]">
+								<PersonCard p={instructor} />
+							</div>
+						</div>
+					) : null}
+					<div>
+						<Eyebrow>Made on this course</Eyebrow>
+						<div className="mt-4">
+							<Figure
+								kind={course.family === "video" ? "photo" : "screenshot"}
+								alt={`A learner's project from ${course.t}`}
+								ratio="16 / 10"
+							/>
 						</div>
 					</div>
 				</div>
 			</section>
 
 			<section className="wrap py-14">
-				<div className="reveal card panel-learn p-8 md:p-10 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+				<div className="card panel-learn p-8 md:p-10 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
 					<div className="max-w-[36rem]">
 						<h2 className="display text-[1.6rem]">
 							{onRequest ? "Interested?" : "Ready to start?"}

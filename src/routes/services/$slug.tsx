@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Eyebrow, useReveal } from "../../components/site";
+import { Eyebrow } from "../../components/site";
 import { servicePage } from "../../lib/pages";
 import { pageMeta } from "../../lib/seo";
 import { getServiceBySlug, SERVICES } from "../../lib/services";
@@ -24,7 +24,6 @@ export const Route = createFileRoute("/services/$slug")({
 function ServiceDetail() {
 	const { slug } = Route.useParams();
 	const service = getServiceBySlug(slug);
-	useReveal();
 
 	if (!service) {
 		return (
@@ -49,17 +48,12 @@ function ServiceDetail() {
 		<>
 			<section className="wrap page-head">
 				<div className="max-w-[46rem]">
-					<span className="pill rise rise-1">
-						<span className="spark" />
-						Our services
-					</span>
-					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
-						{service.t}
-					</h1>
-					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
+					<span className="pill">Our services</span>
+					<h1 className="h1 mt-3">{service.t}</h1>
+					<p className="lead mt-6 text-[1.1rem] max-w-[38rem]">
 						{service.tagline}
 					</p>
-					<div className="rise rise-4 mt-8 flex flex-wrap gap-3">
+					<div className="mt-8 flex flex-wrap gap-3">
 						<Link to="/contact" className="btn btn-teal">
 							Start a project
 						</Link>
@@ -72,14 +66,14 @@ function ServiceDetail() {
 
 			{/* what it covers */}
 			<section className="wrap py-14">
-				<div className="reveal max-w-[40rem] mb-9">
-					<Eyebrow variant="build">What it covers</Eyebrow>
+				<div className="max-w-[40rem] mb-9">
+					<Eyebrow>What it covers</Eyebrow>
 					<h2 className="shout shout-md mt-4">The work, specifically.</h2>
 					<p className="lead mt-4">{service.d}</p>
 				</div>
 				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 					{service.items.map((item, i) => (
-						<div key={item.t} className="step-card reveal">
+						<div key={item.t} className="step-card">
 							<span className="step-badge badge-build">
 								{String(i + 1).padStart(2, "0")}
 							</span>
@@ -92,9 +86,9 @@ function ServiceDetail() {
 
 			{/* how we work */}
 			<section className="wrap py-14">
-				<div className="reveal grid md:grid-cols-[1.1fr_0.9fr] gap-6 items-center">
+				<div className="grid md:grid-cols-[1.1fr_0.9fr] gap-6 items-center">
 					<div>
-						<Eyebrow variant="plain">How we work</Eyebrow>
+						<Eyebrow>How we work</Eyebrow>
 						<h2 className="shout shout-md mt-4">
 							Understand first, then build.
 						</h2>
@@ -119,7 +113,7 @@ function ServiceDetail() {
 
 			{/* navigation between services */}
 			<section className="wrap py-14">
-				<div className="reveal grid sm:grid-cols-2 gap-5">
+				<div className="grid sm:grid-cols-2 gap-5">
 					{prev ? (
 						<Link
 							to="/services/$slug"

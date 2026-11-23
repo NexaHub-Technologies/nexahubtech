@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Eyebrow, useReveal } from "../../components/site";
+import { FeaturedWork } from "../../components/home";
+import { Eyebrow } from "../../components/site";
 import { COURSE_COUNT_WORD } from "../../lib/courses";
 import { PAGES } from "../../lib/pages";
 import { pageMeta } from "../../lib/seo";
@@ -11,24 +12,20 @@ export const Route = createFileRoute("/services/")({
 });
 
 function ServicesIndex() {
-	useReveal();
 	return (
 		<>
 			<section className="wrap page-head">
 				<div className="max-w-[46rem]">
-					<span className="pill rise rise-1">
-						<span className="spark" />
-						Our Services
-					</span>
-					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
+					<span className="pill">Our Services</span>
+					<h1 className="h1 mt-3">
 						Software, built{" "}
 						<span style={{ color: "var(--build-ink)" }}>properly</span>.
 					</h1>
-					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
+					<p className="lead mt-6 text-[1.1rem] max-w-[38rem]">
 						We take on the full range of client work — from a first product to
 						the systems and support that keep it running.
 					</p>
-					<p className="rise rise-4 mt-4 text-[0.95rem] text-mute">
+					<p className="mt-4 text-[0.95rem] text-mute">
 						Select a service to see what it covers in detail.
 					</p>
 				</div>
@@ -41,7 +38,7 @@ function ServicesIndex() {
 							key={s.slug}
 							to="/services/$slug"
 							params={{ slug: s.slug }}
-							className="card card-lift reveal panel-studio p-8 flex flex-col"
+							className="card card-lift panel-studio p-8 flex flex-col"
 						>
 							<h2 className="display text-[1.6rem]">{s.t}</h2>
 							<p className="lead mt-3 text-[0.97rem] flex-1">{s.tagline}</p>
@@ -58,9 +55,9 @@ function ServicesIndex() {
 				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
 					<Link
 						to="/approach"
-						className="card card-lift reveal panel-studio p-8 flex flex-col"
+						className="card card-lift panel-studio p-8 flex flex-col"
 					>
-						<Eyebrow variant="build">Before we build</Eyebrow>
+						<Eyebrow>Before we build</Eyebrow>
 						<h2 className="display text-[1.6rem] mt-3">Design comes first.</h2>
 						<p className="lead mt-3 text-[0.97rem] flex-1">
 							Every project starts by settling what should be built and why,
@@ -72,7 +69,7 @@ function ServicesIndex() {
 					</Link>
 					<Link
 						to="/academy"
-						className="card card-lift reveal panel-learn p-8 flex flex-col"
+						className="card card-lift panel-learn p-8 flex flex-col"
 					>
 						<Eyebrow>Looking to learn instead?</Eyebrow>
 						<h2 className="display text-[1.6rem] mt-3">
@@ -88,8 +85,8 @@ function ServicesIndex() {
 						</span>
 					</Link>
 
-					<div className="card reveal p-8 flex flex-col">
-						<Eyebrow variant="plain">Not sure which you need?</Eyebrow>
+					<div className="card p-8 flex flex-col">
+						<Eyebrow>Not sure which you need?</Eyebrow>
 						<h2 className="display text-[1.6rem] mt-3">Tell us the problem.</h2>
 						<p className="lead mt-3 text-[0.97rem] flex-1">
 							Describe what you're trying to solve and we'll tell you honestly
@@ -102,6 +99,7 @@ function ServicesIndex() {
 					</div>
 				</div>
 			</section>
+			<FeaturedWork />
 		</>
 	);
 }

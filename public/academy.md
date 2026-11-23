@@ -10,7 +10,7 @@ Tagline: *Learn. Build. Ship.*
 
 ## 15 live courses, online or in person, start any day
 
-Every course but PC Basics can be taken live online or in person, in a class of no more than 6. Fees can be paid in full or in instalments: [Pricing](https://nexahubtech.company/fees.md). How we teach, where and when: [About the Academy](https://nexahubtech.company/academy/about.md).
+Every course but PC Basics can be taken live online or in person, in a class of no more than 6. Fees can be paid in full or in instalments: [Pricing](https://nexahubtech.company/fees.md). How we teach, and where and when classes meet: [About](https://nexahubtech.company/about.md).
 
 - [Computer Essentials](https://nexahubtech.company/courses/computer-essentials.md) — Digital Literacy. From ₦37,500 · 3 Weeks · live online or in person. Three weeks from never having used a computer to saving, finding and printing your own work — with somebody beside you the whole way.
 - [PC Basics](https://nexahubtech.company/courses/pc-basics.md) — Digital Literacy. ₦75,000 · 6 Weeks · in person. Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.

@@ -1,5 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Eyebrow, useReveal } from "../components/site";
+import { PersonCard } from "../components/evidence";
+import { Figure } from "../components/figure";
+import { ClosingCTA } from "../components/home";
+import { CONTACT, Eyebrow, PageHead, SectionHead } from "../components/site";
+import { CBT_DETAILS } from "../lib/cbt";
 import {
 	ACADEMY_SUMMARY,
 	DEFINITION,
@@ -9,180 +13,274 @@ import {
 	VALUES,
 	VISION,
 } from "../lib/company";
-import { COURSE_COUNT_WORD_CAP } from "../lib/courses";
+import { CENTRE_SEATS, TRACKS } from "../lib/courses";
+import { ACADEMY_PHOTOS, OFFICE_PHOTO, TEAM } from "../lib/evidence";
 import { PAGES } from "../lib/pages";
 import { pageMeta } from "../lib/seo";
+import { PRINCIPLES, SESSION } from "../lib/teaching";
+import { SLOTS, slotLabel } from "../lib/timetable";
 
+/* One About page for the whole company: who we are, the two arms, the people,
+   how we work and teach, what we believe, and where to find us. The Academy's
+   old About page and the /teaching, /centre and /timetable addresses redirect
+   to anchors here (#teaching, #visit). */
 export const Route = createFileRoute("/about")({
 	component: About,
 	head: () => pageMeta(PAGES.about),
 });
 
-/* Founders section is hidden for now. To restore it, uncomment this data and
-   the matching {/* founders *\/} block inside About().
+const VISIT_LINK = `${CONTACT.whatsapp}?text=${encodeURIComponent(
+	"Hello NexaHubTech! I would like to visit the office and learning centre. When is a good time?",
+)}`;
 
-   Real roles from the company profile PDF, to use when the copy is ready:
-     Agbo Divine    — Chief Executive Officer & Co-Founder
-     Onuoha Michael — Chief Technology Officer, Lead Technical Architect
-                      & Co-Founder
-
-const FOUNDERS = [
-	{
-		initials: "AD",
-		name: "Agbo Divine",
-		role: "Co-founder",
-		panel: "panel-learn",
-		tile: "linear-gradient(150deg, var(--marigold), var(--teal))",
-	},
-	{
-		initials: "OM",
-		name: "Onuoha Michael",
-		role: "Co-founder",
-		panel: "panel-build",
-		tile: "linear-gradient(150deg, var(--teal), var(--marigold))",
-	},
-];
-*/
+const MAPS_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+	`NexaHubTech, ${CONTACT.address}`,
+)}`;
 
 function About() {
-	useReveal();
+	const founders = TEAM.filter((p) => p.founder);
+	const team = TEAM.filter((p) => !p.founder);
 	return (
 		<>
-			<section className="wrap page-head">
-				<div className="max-w-[46rem]">
-					<span className="pill rise rise-1">
-						<span className="spark" />
-						Who we are
-					</span>
-					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
-						A software company,{" "}
-						<span style={{ color: "var(--build-ink)" }}>built properly</span>.
-					</h1>
-					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
-						{DEFINITION}
-					</p>
-				</div>
+			<PageHead
+				eyebrow="About NexaHubTech"
+				title="A software company, built properly."
+				intro={DEFINITION}
+			>
+				<nav
+					className="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-[0.95rem] font-semibold"
+					aria-label="On this page"
+				>
+					<a href="#team" className="view-link">
+						Team
+					</a>
+					<a href="#teaching" className="view-link">
+						How we teach
+					</a>
+					<a href="#values" className="view-link">
+						What we believe
+					</a>
+					<a href="#visit" className="view-link">
+						Visit us
+					</a>
+				</nav>
+			</PageHead>
+
+			<section className="wrap pb-4">
+				<Figure {...OFFICE_PHOTO} />
 			</section>
 
-			{/* the company's two arms */}
-			<section className="wrap py-14">
-				<div className="grid md:grid-cols-2 gap-5">
-					<div className="card panel-studio reveal p-8 md:p-10">
-						<Eyebrow variant="build">Software studio</Eyebrow>
-						<h2 className="shout shout-md mt-4">The studio.</h2>
-						<p className="lead mt-4">{STUDIO_SUMMARY}</p>
-						<Link to="/services" className="view-link is-build mt-5">
-							What we build <i aria-hidden="true">→</i>
-						</Link>
+			{/* the two arms */}
+			<section className="wrap section">
+				<div className="grid md:grid-cols-2 gap-6">
+					<div className="card p-8">
+						<Eyebrow>The studio</Eyebrow>
+						<h2 className="h3 text-[1.45rem] mt-3">Software for businesses.</h2>
+						<p className="lead mt-3">{STUDIO_SUMMARY}</p>
+						<div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
+							<Link to="/services" className="view-link">
+								Services <i aria-hidden="true">→</i>
+							</Link>
+							<Link to="/work" className="view-link">
+								Our work <i aria-hidden="true">→</i>
+							</Link>
+						</div>
 					</div>
-					<div className="card panel-learn reveal p-8 md:p-10">
+					<div className="card p-8">
 						<Eyebrow>NexaHubTech Academy</Eyebrow>
-						<h2 className="shout shout-md mt-4">The Academy.</h2>
-						<p className="lead mt-4">{ACADEMY_SUMMARY}</p>
-						<Link to="/academy" className="view-link mt-5">
-							Visit the Academy <i aria-hidden="true">→</i>
+						<h2 className="h3 text-[1.45rem] mt-3">
+							Live courses in tech skills.
+						</h2>
+						<p className="lead mt-3">{ACADEMY_SUMMARY}</p>
+						<div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
+							<Link to="/academy" className="view-link">
+								The Academy <i aria-hidden="true">→</i>
+							</Link>
+							<Link to="/courses" className="view-link">
+								Courses <i aria-hidden="true">→</i>
+							</Link>
+						</div>
+					</div>
+				</div>
+				<p className="lead mt-8 max-w-[46rem]">{THESIS}</p>
+			</section>
+
+			{/* the people */}
+			<section id="team" className="band scroll-mt-24">
+				<div className="wrap section">
+					<SectionHead
+						eyebrow="The team"
+						title="The people behind NexaHubTech."
+						intro="A small team that designs and builds the software, and teaches the courses."
+						className="mb-10"
+					/>
+					<h3 className="kicker mb-5">Founders</h3>
+					<div className="grid grid-cols-2 gap-5 sm:gap-8 max-w-[46rem]">
+						{founders.map((p) => (
+							<PersonCard key={p.role} p={p} />
+						))}
+					</div>
+					<h3 className="kicker mt-14 mb-5">Instructors and team</h3>
+					<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+						{team.map((p) => (
+							<PersonCard key={p.role} p={p} />
+						))}
+					</div>
+				</div>
+			</section>
+
+			{/* how we work and how we teach */}
+			<section id="teaching" className="wrap section scroll-mt-24">
+				<div className="grid lg:grid-cols-2 gap-12">
+					<div>
+						<SectionHead
+							eyebrow="How we work"
+							title="Understand first, then build."
+							intro="Every studio project starts with the problem, not the feature list: scope, data and edge cases are agreed in writing before a line of code is written. Then we ship in working increments and stay for what comes after."
+						/>
+						<Link to="/approach" className="view-link mt-6">
+							The full process <i aria-hidden="true">→</i>
 						</Link>
 					</div>
-				</div>
-				<div className="card reveal p-8 md:p-10 mt-5">
-					<Eyebrow variant="plain">How they relate</Eyebrow>
-					<p className="lead mt-4 max-w-[46rem]">{THESIS}</p>
-					{/* TODO: founding story & rebrand year — awaiting copy */}
-				</div>
-			</section>
-
-			{/* vision & mission */}
-			<section className="wrap py-14">
-				<div className="reveal max-w-[40rem] mb-9">
-					<Eyebrow variant="plain">Where we’re going</Eyebrow>
-					<h2 className="shout shout-md mt-4">Vision & mission.</h2>
-				</div>
-				<div className="grid md:grid-cols-2 gap-5">
-					<div className="card card-lift panel-learn reveal p-8">
-						<Eyebrow>Vision</Eyebrow>
-						<p className="lead mt-4 text-[1.02rem]">{VISION}</p>
-					</div>
-					<div className="card card-lift panel-studio reveal p-8">
-						<Eyebrow variant="build">Mission</Eyebrow>
-						<p className="lead mt-4 text-[1.02rem]">{MISSION}</p>
+					<div>
+						<SectionHead
+							eyebrow="How we teach"
+							title="The idea before the syntax."
+							intro="Most people are taught the syntax and never given the idea, so they can rebuild the project they were shown and nothing else. We teach the reason first. It feels slower for a fortnight, then it compounds."
+						/>
 					</div>
 				</div>
-			</section>
 
-			{/* values */}
-			<section className="wrap py-14">
-				<div className="reveal max-w-[40rem] mb-9">
-					<Eyebrow variant="plain">What we believe</Eyebrow>
-					<h2 className="shout shout-md mt-4">Our core values.</h2>
-					<p className="lead mt-4">
-						The principles behind the studio and the Academy alike.
-					</p>
-				</div>
-				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-					{VALUES.map((v) => (
-						<div key={v.t} className="card card-lift reveal p-7">
-							<h3 className="display text-[1.2rem]">{v.t}</h3>
-							<p className="lead mt-2 text-[0.97rem]">{v.d}</p>
+				<div className="grid md:grid-cols-2 gap-6 mt-12">
+					{PRINCIPLES.map((p) => (
+						<div key={p.n} className="card p-6">
+							<span className="step-badge">{p.n}</span>
+							<h3 className="h3 mt-4">{p.t}</h3>
+							<p className="lead mt-2 text-[0.95rem]">{p.d}</p>
 						</div>
 					))}
 				</div>
-			</section>
 
-			{/* founders — hidden for now; restore with the FOUNDERS data above
-						<section className="wrap py-14">
-				<div className="reveal max-w-[40rem] mb-9">
-					<Eyebrow variant="plain">Who’s behind it</Eyebrow>
-					<h2 className="shout shout-md mt-4">
-						The co-founders.
-					</h2>
-					<p className="lead mt-4">
-						NexaHubTech and NexaHubTech Academy.
-					</p>
-				</div>
-				<div className="grid sm:grid-cols-2 gap-5">
-					{FOUNDERS.map((f) => (
-						<div
-							key={f.name}
-							className={`card card-lift reveal p-7 ${f.panel}`}
-						>
-							<div
-								className="w-16 h-16 rounded-2xl grid place-items-center"
-								style={{ background: f.tile, boxShadow: "var(--shadow)" }}
-								aria-hidden="true"
-							>
-								<span className="display text-white text-xl">{f.initials}</span>
-							</div>
-							<h3 className="display text-[1.35rem] mt-5">{f.name}</h3>
-							<p className="lead mt-1 text-[0.97rem]">{f.role}</p>
-						</div>
-					))}
-				</div>
-				
-			</section>
-			*/}
-
-			{/* cta */}
-			<section className="wrap py-14">
-				<div className="reveal grid md:grid-cols-2 gap-5">
-					<div className="card card-lift panel-learn p-9">
-						<h3 className="display text-[1.6rem]">Want to learn with us?</h3>
-						<p className="lead mt-3">
-							NexaHubTech Academy runs {COURSE_COUNT_WORD_CAP} courses, from
-							switching a computer on to building full-stack apps.
+				<div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 mt-14 items-start">
+					<div>
+						<h3 className="h3 text-[1.35rem]">
+							Every session, in three parts.
+						</h3>
+						<ol className="steps mt-6">
+							{SESSION.map((s) => (
+								<li key={s.n}>
+									<h4 className="font-bold text-ink">{s.t}</h4>
+									<p className="lead mt-1 text-[0.95rem]">{s.d}</p>
+								</li>
+							))}
+						</ol>
+						<p className="muted-note mt-6">
+							A course's stated length is a pace, not a deadline: give it more
+							hours and you finish sooner.
 						</p>
-						<Link to="/academy" className="btn btn-primary mt-5">
-							Visit the Academy
-						</Link>
 					</div>
-					<div className="card card-lift panel-studio p-9">
-						<h3 className="display text-[1.6rem]">Have a product in mind?</h3>
-						<p className="lead mt-3">Let’s build it right.</p>
-						<Link to="/contact" className="btn btn-teal mt-5">
-							Start a project
-						</Link>
+					<Figure {...ACADEMY_PHOTOS.instructor} />
+				</div>
+			</section>
+
+			{/* vision, mission, values */}
+			<section id="values" className="band scroll-mt-24">
+				<div className="wrap section">
+					<div className="grid md:grid-cols-2 gap-6">
+						<div>
+							<Eyebrow>Vision</Eyebrow>
+							<p className="lead mt-3 text-[1.02rem]">{VISION}</p>
+						</div>
+						<div>
+							<Eyebrow>Mission</Eyebrow>
+							<p className="lead mt-3 text-[1.02rem]">{MISSION}</p>
+						</div>
+					</div>
+					<h2 className="h2 mt-14">Our values.</h2>
+					<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 mt-8">
+						{VALUES.map((v) => (
+							<div key={v.t} className="rule pt-4">
+								<h3 className="font-bold text-ink">{v.t}</h3>
+								<p className="text-[0.95rem] text-ink-soft mt-1">{v.d}</p>
+							</div>
+						))}
 					</div>
 				</div>
 			</section>
+
+			{/* where to find us */}
+			<section id="visit" className="wrap section scroll-mt-24">
+				<div className="grid lg:grid-cols-2 gap-10 items-start">
+					<div>
+						<SectionHead
+							eyebrow="Visit us"
+							title="Our office and learning centre."
+							intro={`One address for both: the studio works from here, and in-person Academy classes of no more than ${CENTRE_SEATS} meet here. You are welcome to visit before you enrol or start a project.`}
+						/>
+						<dl className="mt-7 grid gap-3 text-[0.97rem]">
+							<div>
+								<dt className="kicker">Address</dt>
+								<dd className="text-ink mt-1">{CONTACT.address}</dd>
+							</div>
+							<div>
+								<dt className="kicker">Open</dt>
+								<dd className="text-ink mt-1">{CBT_DETAILS.hours}</dd>
+							</div>
+						</dl>
+						<div className="mt-7 flex flex-wrap gap-3">
+							<a
+								href={VISIT_LINK}
+								target="_blank"
+								rel="noreferrer"
+								className="btn btn-primary"
+							>
+								Arrange a visit
+							</a>
+							<a
+								href={MAPS_LINK}
+								target="_blank"
+								rel="noreferrer"
+								className="btn btn-ghost"
+							>
+								Open in Maps
+							</a>
+						</div>
+
+						<div className="mt-10">
+							<h3 className="font-bold text-ink">Academy session times</h3>
+							<p className="muted-note mt-1">
+								West Africa Time. Online and in person. We agree your session
+								when you enrol.
+							</p>
+							<div className="mt-3 grid gap-1">
+								{TRACKS.map((t) => (
+									<details key={t.id} className="price-times">
+										<summary>{t.t}</summary>
+										<ul className="mt-2 mb-3 grid gap-1.5">
+											{SLOTS.filter((s) => s.family === t.id).map((s) => (
+												<li key={s.id} className="text-[0.9rem]">
+													<span className="font-semibold">
+														{s.delivery === "online" ? "Online" : "In person"}
+													</span>{" "}
+													· {slotLabel(s)}
+												</li>
+											))}
+										</ul>
+									</details>
+								))}
+							</div>
+						</div>
+					</div>
+					<Figure {...ACADEMY_PHOTOS.room} />
+				</div>
+			</section>
+
+			<ClosingCTA
+				title="Work with us, or learn with us."
+				lead="Have a product in mind? Tell us the problem. Want to learn? Find your course and start any day."
+				primary={{ to: "/contact", label: "Start a project" }}
+				secondary={{ to: "/courses", label: "Find a course" }}
+			/>
 		</>
 	);
 }

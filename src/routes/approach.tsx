@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Eyebrow, useReveal } from "../components/site";
+import { Eyebrow } from "../components/site";
 import { APPROACH, SCALING } from "../lib/approach";
 import { PAGES } from "../lib/pages";
 import { pageMeta } from "../lib/seo";
@@ -10,29 +10,25 @@ export const Route = createFileRoute("/approach")({
 });
 
 function Approach() {
-	useReveal();
 	return (
 		<>
 			<section className="wrap page-head">
 				<div className="max-w-[46rem]">
-					<span className="pill rise rise-1">
-						<span className="spark" />
-						How we work
-					</span>
-					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.4rem]">
+					<span className="pill">How we work</span>
+					<h1 className="h1 mt-3">
 						We settle what should be built{" "}
 						<span style={{ color: "var(--build-ink)" }}>
 							before we build it
 						</span>
 						.
 					</h1>
-					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
+					<p className="lead mt-6 text-[1.1rem] max-w-[38rem]">
 						Whether it is a site that makes your company findable, or software
 						your members sign into every week from a phone, the work starts the
 						same way — with what should exist and why, settled and written down.
 						It is slower to start with, and considerably cheaper to finish.
 					</p>
-					<div className="rise rise-4 mt-8 flex flex-wrap gap-3">
+					<div className="mt-8 flex flex-wrap gap-3">
 						<Link to="/contact" className="btn btn-teal">
 							Start a project
 						</Link>
@@ -45,10 +41,10 @@ function Approach() {
 
 			{/* the argument for spending time here at all */}
 			<section className="wrap py-14">
-				<div className="reveal card panel-studio p-8 md:p-12">
+				<div className="card panel-studio p-8 md:p-12">
 					<div className="grid md:grid-cols-[1.05fr_0.95fr] gap-8 md:gap-10 items-start">
 						<div>
-							<Eyebrow variant="build">Why it works this way</Eyebrow>
+							<Eyebrow>Why it works this way</Eyebrow>
 							<h2 className="shout shout-md mt-4">
 								The expensive mistake is building the wrong thing well.
 							</h2>
@@ -90,8 +86,8 @@ function Approach() {
 
 			{/* the process itself */}
 			<section className="wrap py-14">
-				<div className="reveal max-w-[42rem] mb-10">
-					<Eyebrow variant="plain">The process</Eyebrow>
+				<div className="max-w-[42rem] mb-10">
+					<Eyebrow>The process</Eyebrow>
 					<h2 className="shout shout-md mt-4">
 						Three phases, and what you hold at the end of each.
 					</h2>
@@ -104,7 +100,7 @@ function Approach() {
 
 				{APPROACH.map((phase, i) => (
 					<div key={phase.t} className={i > 0 ? "mt-14" : ""}>
-						<div className="reveal grid md:grid-cols-[0.8fr_1.2fr] gap-4 md:gap-10 items-baseline pb-6 mb-6 border-b border-[var(--line-soft)]">
+						<div className="grid md:grid-cols-[0.8fr_1.2fr] gap-4 md:gap-10 items-baseline pb-6 mb-6 border-b border-[var(--line-soft)]">
 							<h3 className="display text-[1.5rem] sm:text-[1.7rem]">
 								<span className="text-mute text-[0.95rem] font-semibold tracking-wider block mb-1">
 									Phase {i + 1}
@@ -117,7 +113,7 @@ function Approach() {
 						{/* the client's half. This is what a buyer is on the page to find
 						    out, so it sits above the engineering detail rather than under
 						    it. */}
-						<div className="reveal card panel-studio p-7 md:p-8 grid md:grid-cols-2 gap-6 md:gap-9 mb-7">
+						<div className="card panel-studio p-7 md:p-8 grid md:grid-cols-2 gap-6 md:gap-9 mb-7">
 							<div>
 								<span className="text-[0.8rem] text-mute font-semibold uppercase tracking-wider">
 									What you do
@@ -132,7 +128,7 @@ function Approach() {
 							</div>
 						</div>
 
-						<details className="reveal approach-detail">
+						<details className="approach-detail">
 							<summary>
 								What we are doing in this phase
 								<span className="text-mute"> · {phase.steps.length} steps</span>
@@ -153,17 +149,17 @@ function Approach() {
 
 			{/* the objection a buyer has by now, answered before they leave */}
 			<section className="wrap pb-4">
-				<div className="reveal card p-8 md:p-10 max-w-[46rem]">
-					<Eyebrow variant="build">Does every job get all of this?</Eyebrow>
+				<div className="card p-8 md:p-10 max-w-[46rem]">
+					<Eyebrow>Does every job get all of this?</Eyebrow>
 					<p className="lead mt-4">{SCALING}</p>
 				</div>
 			</section>
 
 			{/* a project, or — for anyone here to learn — the Academy */}
 			<section className="wrap py-14">
-				<div className="reveal grid md:grid-cols-2 gap-5">
+				<div className="grid md:grid-cols-2 gap-5">
 					<div className="card card-lift panel-studio p-9">
-						<Eyebrow variant="build">For businesses</Eyebrow>
+						<Eyebrow>For businesses</Eyebrow>
 						<h3 className="display text-[1.6rem] mt-3">
 							Have something to build?
 						</h3>

@@ -53,7 +53,7 @@ export const WORK: CaseStudy[] = [
 	},
 	{
 		slug: "domicop",
-		t: "DOMICOP",
+		t: "DOMICOOP",
 		kind: "Cooperative society platform",
 		tagline:
 			"Members, contributions and loans, with the society's own rules enforced by the database.",
@@ -76,7 +76,7 @@ export const WORK: CaseStudy[] = [
 		problem:
 			"No two cooperatives run on the same rules. Contribution cycles, loan eligibility and who signs off on what all differ by society, and a platform hard-coded to one of them is a rewrite for the next one.",
 		approach:
-			"Built on the pattern DOMICOP established, which is the only real test of whether that pattern was a design or merely an implementation. The role model and the policies that enforce it carry over unchanged; what differs is the domain rules sitting on top — precisely the seam the original system design set out to create.",
+			"Built on the pattern DOMICOOP established, which is the only real test of whether that pattern was a design or merely an implementation. The role model and the policies that enforce it carry over unchanged; what differs is the domain rules sitting on top — precisely the seam the original system design set out to create.",
 		stack: [
 			"Expo Router",
 			"Supabase",

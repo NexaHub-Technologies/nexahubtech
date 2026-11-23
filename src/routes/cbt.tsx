@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { CONTACT, Eyebrow, useReveal } from "../components/site";
+import { CONTACT, Eyebrow } from "../components/site";
 import {
 	CBT_BUNDLE_PACKAGE,
 	CBT_DETAILS,
@@ -98,9 +98,7 @@ function PracticeQuestions() {
 							type="button"
 							onClick={() => pick(opt.key)}
 							aria-disabled={Boolean(picked)}
-							className={`text-left p-3.5 rounded-xl border flex items-center gap-3 transition-colors ${state} ${
-								picked ? "cursor-default" : "hover:bg-[var(--paper-2)]"
-							}`}
+							className={`text-left p-3.5 rounded-xl border flex items-center gap-3 transition-colors ${state} ${picked ? "cursor-default" : "hover:bg-[var(--paper-2)]"}`}
 						>
 							<kbd className="inline-grid place-items-center w-7 h-7 rounded-lg text-[0.85rem] font-bold font-mono bg-[var(--paper-2)] text-[var(--ink)] shrink-0">
 								{opt.key}
@@ -162,26 +160,21 @@ function PracticeQuestions() {
 }
 
 function CbtPage() {
-	useReveal();
-
 	return (
 		<>
 			<section className="wrap page-head">
 				<div className="max-w-[46rem]">
-					<span className="pill rise rise-1">
-						<span className="spark" />
-						JAMB & WAEC · Kubwa centre
-					</span>
-					<h1 className="display rise rise-2 mt-6 text-[2.6rem] sm:text-[3.5rem]">
+					<span className="pill">JAMB & WAEC · Kubwa centre</span>
+					<h1 className="display mt-6 text-[2.6rem] sm:text-[3.5rem]">
 						Walk into your CBT exam{" "}
 						<span className="hot-text">already at ease</span>.
 					</h1>
-					<p className="lead rise rise-3 mt-6 text-[1.1rem] max-w-[38rem]">
+					<p className="lead mt-6 text-[1.1rem] max-w-[38rem]">
 						Knowing your subjects is half of it. The other half is the computer:
 						the keys, the clock and the screen. We help you practise both, on
 						real desktops, until exam day feels familiar.
 					</p>
-					<div className="rise rise-4 mt-8 flex flex-wrap gap-3">
+					<div className="mt-8 flex flex-wrap gap-3">
 						<Link
 							to="/enrol"
 							search={{ course: "cbt-training" }}
@@ -203,7 +196,7 @@ function CbtPage() {
 
 			<section id="practice" className="wrap py-14">
 				<div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-8 lg:gap-12 items-start">
-					<div className="reveal">
+					<div>
 						<Eyebrow>Try a few questions</Eyebrow>
 						<h2 className="shout shout-md mt-4">Answer with the keyboard.</h2>
 						<p className="lead mt-4">
@@ -220,22 +213,22 @@ function CbtPage() {
 							think about them.
 						</p>
 					</div>
-					<div className="reveal">
+					<div>
 						<PracticeQuestions />
 					</div>
 				</div>
 			</section>
 
 			<section className="wrap py-14">
-				<div className="reveal max-w-[40rem] mb-10">
-					<Eyebrow variant="plain">What we practise</Eyebrow>
+				<div className="max-w-[40rem] mb-10">
+					<Eyebrow>What we practise</Eyebrow>
 					<h2 className="shout shout-md mt-4">
 						From first click to final mock.
 					</h2>
 				</div>
 				<div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
 					{CBT_PILLARS.map((p) => (
-						<div key={p.n} className="card reveal p-6">
+						<div key={p.n} className="card p-6">
 							<span className="step-badge badge-learn">{p.n}</span>
 							<h3 className="display text-[1.2rem] mt-4">{p.title}</h3>
 							<p className="lead mt-2 text-[0.93rem]">{p.description}</p>
@@ -245,7 +238,7 @@ function CbtPage() {
 			</section>
 
 			<section className="wrap py-14">
-				<div className="reveal max-w-[40rem] mb-10">
+				<div className="max-w-[40rem] mb-10">
 					<Eyebrow>Packages</Eyebrow>
 					<h2 className="shout shout-md mt-4">Pick what fits your timeline.</h2>
 				</div>
@@ -253,9 +246,7 @@ function CbtPage() {
 					{CBT_FEATURED.map((pkg) => (
 						<div
 							key={pkg.id}
-							className={`card card-lift reveal p-6 flex flex-col ${
-								pkg.badge ? "panel-learn" : ""
-							}`}
+							className={`card card-lift p-6 flex flex-col ${pkg.badge ? "panel-learn" : ""}`}
 						>
 							<div className="flex items-center justify-between gap-2">
 								<h3 className="display text-[1.2rem]">{pkg.name}</h3>
@@ -293,7 +284,7 @@ function CbtPage() {
 					))}
 				</div>
 				{/* the two variations, a line each — not two more cards to compare */}
-				<div className="reveal mt-6 grid gap-2 text-[0.93rem]">
+				<div className="mt-6 grid gap-2 text-[0.93rem]">
 					<p>
 						<span className="font-semibold">{CBT_BUNDLE_PACKAGE.name}:</span>{" "}
 						<span className="text-mute">
@@ -314,8 +305,8 @@ function CbtPage() {
 
 			<section className="wrap py-14">
 				<div className="grid md:grid-cols-[0.8fr_1.2fr] gap-8 md:gap-12 items-start">
-					<div className="reveal">
-						<Eyebrow variant="plain">Questions</Eyebrow>
+					<div>
+						<Eyebrow>Questions</Eyebrow>
 						<h2 className="shout shout-md mt-4">Before you register.</h2>
 						<p className="lead mt-4">
 							Anything else, ask us on{" "}
@@ -330,7 +321,7 @@ function CbtPage() {
 							.
 						</p>
 					</div>
-					<div className="reveal grid gap-3">
+					<div className="grid gap-3">
 						{CBT_FAQS.map((faq) => (
 							<details key={faq.question} className="approach-detail">
 								<summary>{faq.question}</summary>
@@ -344,7 +335,7 @@ function CbtPage() {
 			</section>
 
 			<section className="wrap py-16">
-				<div className="reveal card panel-learn p-9 md:p-12 text-center max-w-[46rem] mx-auto">
+				<div className="card panel-learn p-9 md:p-12 text-center max-w-[46rem] mx-auto">
 					<Eyebrow>Come and see the lab</Eyebrow>
 					<h2 className="shout shout-md mt-3">
 						Start with a free placement test.

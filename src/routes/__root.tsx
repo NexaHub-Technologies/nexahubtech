@@ -4,16 +4,12 @@ import {
 	HeadContent,
 	Outlet,
 	Scripts,
-	useRouterState,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 
-import { ModeProvider } from "../components/mode";
-import { Preloader } from "../components/preloader";
 import { Footer, Header } from "../components/site";
 import { DEFINITION, ONE_LINER } from "../lib/company";
 import { MOTTO, SITE_URL } from "../lib/contact";
-import { DEFAULT_MODE, MODE_INIT_SCRIPT, modeForPath } from "../lib/mode";
 import { PAGES } from "../lib/pages";
 import appCss from "../styles.css?url";
 
@@ -34,7 +30,7 @@ export const Route = createRootRoute({
 				name: "description",
 				content: DEFINITION,
 			},
-			{ name: "theme-color", content: "#f6eff4" },
+			{ name: "theme-color", content: "#ffffff" },
 			{
 				property: "og:title",
 				content: PAGES.home.title,
@@ -83,40 +79,23 @@ export const Route = createRootRoute({
 
 function RootLayout() {
 	return (
-		<ModeProvider>
+		<>
 			<Header />
 			<main>
 				<Outlet />
 			</main>
 			<Footer />
-		</ModeProvider>
+		</>
 	);
 }
 
 function RootDocument({ children }: { children: React.ReactNode }) {
-	/* MODE_INIT_SCRIPT stamps data-mode on <html> before React hydrates, so the
-	   client DOM legitimately differs from the server markup here. Rendering the
-	   route's own arm — or the default on a shared page — keeps the served HTML
-	   honest for non-JS visitors; the suppression covers this element's
-	   attributes only, which is exactly the divergence. */
-	const pathname = useRouterState({ select: (s) => s.location.pathname });
 	return (
-		<html
-			lang="en"
-			data-mode={modeForPath(pathname) ?? DEFAULT_MODE}
-			suppressHydrationWarning
-		>
+		<html lang="en">
 			<head>
-				{/* stamps data-mode before first paint so the server-rendered
-				    /contact route never flashes the wrong side */}
-				<script
-					// biome-ignore lint/security/noDangerouslySetInnerHtml: static, self-authored constant
-					dangerouslySetInnerHTML={{ __html: MODE_INIT_SCRIPT }}
-				/>
 				<HeadContent />
 			</head>
 			<body>
-				<Preloader />
 				{children}
 				<TanStackDevtools
 					config={{
