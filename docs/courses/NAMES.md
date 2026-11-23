@@ -27,8 +27,8 @@ Rules, in order of importance:
 Videography is **not in this register** — its projects and materials are coming
 from the videography instructor.
 
-**PC Basics and Microsoft Office have no projects at all**, so they have no names
-here. Both are assessed through their per-module exercise briefs instead.
+**Computer Essentials, Office Essentials, and AI for Office Use have no projects at all**, so they have no names
+here. They are assessed through their per-module exercise briefs instead.
 
 ---
 

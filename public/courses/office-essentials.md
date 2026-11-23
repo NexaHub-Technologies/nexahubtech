@@ -1,52 +1,55 @@
 # Office Essentials — NexaHubTech Academy
 
-> The two programs most office work actually happens in — Word and Excel — in four weeks, taught properly.
+> The four programs an office actually runs on, taught to the standard professional work deserves.
 
 Canonical page: https://nexahubtech.company/courses/office-essentials
 
 | | |
 |---|---|
-| Subject | Word & Excel |
-| Fee — live online | ₦45,000, or 2 × ₦25,000 |
-| Fee — in person | ₦55,000, or 2 × ₦30,000 |
-| Duration | 4 Weeks |
+| Subject | Word, Excel, PowerPoint & Access |
+| Fee — live online | ₦80,000, or 2 × ₦42,500 |
+| Fee — in person | ₦95,000, or 2 × ₦52,500 |
+| Duration | 8 Weeks |
 | Format | Taught live — online or in person. |
-| Level | Built for office staff who use Word and Excel but were never shown how |
+| Level | Built for clerical and office staff already doing the work |
 | Start | Any day |
 | Session times | Tue, Thu · 8:30 AM – 11:00 AM (in person); Mon, Wed, Fri · 11:30 AM – 2:00 PM (in person); Sat · 9:00 AM – 12:00 PM (in person); Mon, Wed · 7:00 PM – 9:00 PM (live online) |
 
-Learn live online on your own computer, or in person in a class of no more than 6 on our licensed Windows machines. Either way you work on real documents from your own desk, and you start the day you are ready. Teams can also be trained at their own office.
+Learn live online on your own Windows PC, or in person in a class of no more than 6 on our licensed machines. Either way the course is built around real work from your own desk, so you leave each session with something that already runs better. Start the day you are ready. Teams can also be trained at their own office.
 
-## The idea this course installs: Type it once
+## The idea this course installs: The data is not the document
 
-Almost every slow afternoon in an office comes from typing the same thing twice: the heading reformatted by hand on every page, the letter retyped for every name, the total worked out on a calculator and keyed into a cell. Word and Excel are both built to stop that. Say once what a heading looks like, and every heading follows. Write a formula once, and it answers every time the numbers change. The skill is noticing the moment you are about to repeat yourself — and handing the repetition to the program.
+Each of these four programs keeps two things apart, and nearly every hour a self-taught office worker loses comes from mixing them up. There is the information — names, amounts, dates, records — and there is the way it happens to be laid out today. A style, a formula, a slide master and a query are all the same move: describe the presentation once, point it at the data, and let the program redraw it. Type the answer in by hand instead and you have made something that is correct exactly once, and wrong the first time anything changes.
 
 Once it lands, you can:
 
-- Restyle a whole document with one change
-- Send one letter to a hundred people without retyping it
-- Build a sheet whose totals are still right after the numbers change
+- Change a hundred pages, or ten thousand rows, with one edit
+- Hand over a file a colleague can safely change without breaking it
+- Know which of the four programs a job actually belongs in
 
 ## Before you start
 
 What you need to know:
 
-- How to use a computer — files, folders, saving, email
+- How to use a computer confidently — files, folders, saving, email
 - You have opened Word and Excel before, even if nobody showed you how
+- No formulas, no databases and no macros are assumed
 
 What you need to have:
 
-- Online: a Windows PC with Word and Excel installed
-- In person: nothing to buy — licensed machines are provided
-- Work from your own desk to bring, or use the sample desk we supply
-- 3–4 hours a week outside sessions to practise
+- A Windows PC — Access is not made for macOS, and module 05 is Access
+- Online: a Microsoft 365 or Office licence. In person: licensed machines are provided
+- Real work from your own desk to bring, or use the sample desk we supply
+- 4–6 hours a week outside sessions to practise
 
 ## Modules
 
-01. **Word: styles, not formatting** — Headings, templates and long documents built so that one change restyles all of them.
-02. **Word: one letter, many people** — Mail merge from a list — including the rows where the list is not clean.
-03. **Excel: a clean table that does the arithmetic** — One row per thing, one column per fact, and every total a formula.
-04. **Excel: lookups and a summary that updates** — Join two lists, summarise many rows, and chart one answer.
+01. **Word, properly** — Styles, templates, long documents and mail merge — the difference between typing and producing.
+02. **PowerPoint that carries a decision** — Slide masters, and a deck that still works when it is read without you in the room.
+03. **Excel: the data table and its formulas** — One clean table, honest columns, and every figure a formula that recalculates.
+04. **Excel: lookups, pivots and reporting** — Joining two sheets, summarising thousands of rows, and charts that answer one question.
+05. **Access: tables, relationships and queries** — When a spreadsheet stops being the right answer, and what a database does instead.
+06. **Choosing the right tool, and handing over** — Which of the four a job belongs in, and how to leave work a colleague can run.
 
 ## Every session
 
@@ -56,15 +59,15 @@ What you need to have:
 
 ## Included
 
-- Word and Excel only — the two programs most office work happens in
-- Styles, templates and mail merge
-- Clean tables, formulas and lookups
-- Built around real work from your own desk
+- Word, Excel, PowerPoint and Access in one path
+- Mail merge, lookups, pivot tables and relational queries
+- Built around real clerical work, not invented exercises
+- When to stop using a spreadsheet and start using a database
 - Learn online, or in person on our licensed machines
 
 ## Where it leads
 
-Next: [Microsoft Office](https://nexahubtech.company/courses/microsoft-office.md).
+Next: [AI for Office Use](https://nexahubtech.company/courses/ai-for-office-use.md).
 
 ## Enrol
 

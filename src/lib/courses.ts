@@ -184,124 +184,43 @@ export const CATALOGUE: Course[] = [
 	{
 		slug: "computer-essentials",
 		t: "Computer Essentials",
-		d: "Digital Literacy",
+		d: "Digital Literacy & PC Basics",
 		tagline:
-			"Three weeks from never having used a computer to saving, finding and printing your own work — with somebody beside you the whole way.",
-		duration: "3 Weeks",
-		category: "learn",
-		level: "start-here",
-		family: "digital",
-		admission: "rolling",
-		fees: {
-			online: { upfront: 37_500, instalments: { count: 2, amount: 20_000 } },
-			inhouse: { upfront: 45_000, instalments: { count: 2, amount: 25_000 } },
-		},
-		next: { slug: "pc-basics", upgrade: 35_000 },
-		format: {
-			t: "Taught live — online or in person.",
-			d: `The first three modules of PC Basics, on their own. Learn online, with your instructor guiding every click on a shared screen, or in person in a class of no more than ${CENTRE_SEATS}, where machines are provided. Start whenever you are ready.`,
-		},
-		mentalModel: {
-			t: "Every screen is asking you something",
-			d: "Nothing on a computer happens by itself. Every window, box and message is the machine asking a question and waiting for an answer — where to save this, whether to keep that, which of these you meant. Beginners click past the question to make it go away, and then believe the computer did something to them. Read the question first and the machine stops being unpredictable: it does what you told it, every time, and almost everything it did can be undone.",
-			unlocks: [
-				"Read a box before clicking it, and know what you are agreeing to",
-				"Undo, close and recover without panicking",
-				"Save your work where you meant to, and open it again tomorrow",
-			],
-		},
-		requirements: {
-			level: "The shortest way in if a computer still feels risky",
-			know: [
-				"Nothing about computers — this course assumes none",
-				"How to read and write in English",
-			],
-			have: [
-				"Online: a laptop or desktop computer and a stable internet connection",
-				"In person: nothing to buy — a machine is provided at every session",
-				"A USB drive of any size, to keep a copy of your work",
-				"3–4 hours a week outside sessions to practise",
-			],
-		},
-		projects: [],
-		modules: [
-			{
-				n: "01",
-				t: "The machine, and what it is doing",
-				d: "The parts, the desktop, the mouse and the keyboard — and why nothing you click can break it.",
-			},
-			{
-				n: "02",
-				t: "Files, folders and where things go",
-				d: "Paths, saving, naming and copying — so your work is always somewhere you can find it.",
-			},
-			{
-				n: "03",
-				t: "Documents, numbers and slides",
-				d: "A letter, a sum and a slide: enough of each to do real work, and to see what to learn next.",
-			},
-		],
-		session: [
-			{
-				t: "A mental model",
-				d: "Every session opens with the idea, explained plainly, before anything is clicked.",
-			},
-			{
-				t: "An exercise brief",
-				d: "A focused task that makes you use the concept — not just watch it being done.",
-			},
-			{
-				t: "A model answer",
-				d: "A worked solution to compare against, so you learn what good looks like.",
-			},
-		],
-		features: [
-			"No computer experience assumed at all",
-			"Learn online, or in person with a machine provided",
-			"Files and folders taught properly, not guessed at",
-			"A letter, a spreadsheet and a slide of your own",
-			"Carry on into the full PC Basics course whenever you are ready",
-		],
-	},
-	{
-		slug: "pc-basics",
-		t: "PC Basics",
-		d: "Digital Literacy",
-		tagline:
-			"Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.",
+			"From never having used a computer to managing files, browsing safely, and working with documents — with an instructor beside you every step.",
 		duration: "6 Weeks",
 		category: "learn",
 		level: "start-here",
 		family: "digital",
 		admission: "rolling",
 		fees: {
+			online: { upfront: 65_000, instalments: { count: 2, amount: 35_000 } },
 			inhouse: { upfront: 75_000, instalments: { count: 2, amount: 40_000 } },
 		},
 		next: { slug: "office-essentials" },
 		format: {
-			t: "Taught in the centre, in person.",
-			d: `This is the one course we teach only in person, in a class of no more than ${CENTRE_SEATS}. A complete beginner needs someone beside them pointing to the right button — a video call would depend on the very skills the course exists to teach. Machines are provided, and you start whenever you are ready.`,
+			t: "Taught live — online or in person.",
+			d: `Learn live online with screen sharing and guided practice, or in person in a class of no more than ${CENTRE_SEATS} on machines provided in our Kubwa centre. Either way an instructor is beside you explaining every step, and you start whenever you are ready.`,
 		},
 		mentalModel: {
-			t: "Everything lives somewhere",
-			d: "A computer never puts anything nowhere. Every document you save, every photo you copy, every app you install goes to a place that has a name — and that name is a path you can read out loud. Beginners lose work because they believe the machine decides where things go. It does not: it asks, and the answer is usually a box that got clicked past. Once you can say where a thing is, you can find it again, copy it, back it up and share it — and the fear goes with the not knowing.",
+			t: "Everything lives somewhere, and every screen is asking a question",
+			d: "A computer never puts anything nowhere and never acts by surprise. Every document you save, every file you move, and every app you install goes to a place with a name you can read out loud. Every dialogue box and message is simply the machine asking an honest question before proceeding. Once you know where things live and read before clicking, the fear disappears completely: you can find any file, undo almost any action, and work with total confidence.",
 			unlocks: [
-				"Find any file you have saved, on any computer, without hunting",
-				"Say what went wrong instead of starting the whole thing again",
-				"Move your work between a laptop, a phone and the cloud without losing it",
+				"Find any file you have saved without searching blindly",
+				"Read dialogue boxes calmly and know what you are agreeing to",
+				"Undo, recover and back up your work without panicking",
 			],
 		},
 		requirements: {
-			level: "The place to begin if a computer still feels risky",
+			level: "The place to begin if a computer still feels risky or unfamiliar",
 			know: [
-				"Nothing about computers — this is the course that assumes none",
+				"Nothing about computers — this is the course that assumes none at all",
 				"How to read and write in English",
-				"If you can already use a smartphone, you are further ahead than you think",
+				"If you can already use a smartphone, you have all the baseline needed",
 			],
 			have: [
 				"A laptop running Windows, macOS or Linux — or use one of ours in the centre",
-				"A phone that can receive SMS, for setting up accounts safely",
-				"A USB drive of any size, for the backup you will actually restore from",
+				"A phone that can receive SMS for account verification",
+				"A USB drive of any size to back up your personal files",
 				"4–5 hours a week outside sessions to practise",
 			],
 		},
@@ -315,12 +234,12 @@ export const CATALOGUE: Course[] = [
 			{
 				n: "02",
 				t: "Files, folders and where things go",
-				d: "Paths, saving, naming, copying and backing up. The module the whole course is built on.",
+				d: "Paths, saving, naming, copying and backing up. The foundation everything else stands on.",
 			},
 			{
 				n: "03",
 				t: "Documents, numbers and slides",
-				d: "Write a letter properly, make a spreadsheet do the arithmetic, and build a deck worth showing.",
+				d: "Write a letter properly, make a spreadsheet do arithmetic, and build a deck worth presenting.",
 			},
 			{
 				n: "04",
@@ -350,7 +269,7 @@ export const CATALOGUE: Course[] = [
 		features: [
 			"No computer experience assumed at all",
 			"Files and folders taught properly, not guessed at",
-			"Word processing, spreadsheets and slides",
+			"Word processing, spreadsheets and presentation slides",
 			"Email, accounts and staying safe from scams",
 			"Machines available in the centre if you do not own one",
 		],
@@ -358,97 +277,9 @@ export const CATALOGUE: Course[] = [
 	{
 		slug: "office-essentials",
 		t: "Office Essentials",
-		d: "Word & Excel",
-		tagline:
-			"The two programs most office work actually happens in — Word and Excel — in four weeks, taught properly.",
-		duration: "4 Weeks",
-		category: "learn",
-		level: "start-here",
-		family: "digital",
-		admission: "rolling",
-		fees: {
-			online: { upfront: 45_000, instalments: { count: 2, amount: 25_000 } },
-			inhouse: { upfront: 55_000, instalments: { count: 2, amount: 30_000 } },
-		},
-		next: { slug: "microsoft-office" },
-		format: {
-			t: "Taught live — online or in person.",
-			d: `Learn live online on your own computer, or in person in a class of no more than ${CENTRE_SEATS} on our licensed Windows machines. Either way you work on real documents from your own desk, and you start the day you are ready. Teams can also be trained at their own office.`,
-		},
-		mentalModel: {
-			t: "Type it once",
-			d: "Almost every slow afternoon in an office comes from typing the same thing twice: the heading reformatted by hand on every page, the letter retyped for every name, the total worked out on a calculator and keyed into a cell. Word and Excel are both built to stop that. Say once what a heading looks like, and every heading follows. Write a formula once, and it answers every time the numbers change. The skill is noticing the moment you are about to repeat yourself — and handing the repetition to the program.",
-			unlocks: [
-				"Restyle a whole document with one change",
-				"Send one letter to a hundred people without retyping it",
-				"Build a sheet whose totals are still right after the numbers change",
-			],
-		},
-		requirements: {
-			level:
-				"Built for office staff who use Word and Excel but were never shown how",
-			know: [
-				"How to use a computer — files, folders, saving, email",
-				"You have opened Word and Excel before, even if nobody showed you how",
-			],
-			have: [
-				"Online: a Windows PC with Word and Excel installed",
-				"In person: nothing to buy — licensed machines are provided",
-				"Work from your own desk to bring, or use the sample desk we supply",
-				"3–4 hours a week outside sessions to practise",
-			],
-		},
-		projects: [],
-		modules: [
-			{
-				n: "01",
-				t: "Word: styles, not formatting",
-				d: "Headings, templates and long documents built so that one change restyles all of them.",
-			},
-			{
-				n: "02",
-				t: "Word: one letter, many people",
-				d: "Mail merge from a list — including the rows where the list is not clean.",
-			},
-			{
-				n: "03",
-				t: "Excel: a clean table that does the arithmetic",
-				d: "One row per thing, one column per fact, and every total a formula.",
-			},
-			{
-				n: "04",
-				t: "Excel: lookups and a summary that updates",
-				d: "Join two lists, summarise many rows, and chart one answer.",
-			},
-		],
-		session: [
-			{
-				t: "A mental model",
-				d: "Every session opens with the idea, explained plainly, before anything is clicked.",
-			},
-			{
-				t: "An exercise brief",
-				d: "A focused task that makes you use the concept — not just watch it being done.",
-			},
-			{
-				t: "A model answer",
-				d: "A worked solution to compare against, so you learn what good looks like.",
-			},
-		],
-		features: [
-			"Word and Excel only — the two programs most office work happens in",
-			"Styles, templates and mail merge",
-			"Clean tables, formulas and lookups",
-			"Built around real work from your own desk",
-			"Learn online, or in person on our licensed machines",
-		],
-	},
-	{
-		slug: "microsoft-office",
-		t: "Microsoft Office",
 		d: "Word, Excel, PowerPoint & Access",
 		tagline:
-			"The four programs an office actually runs on, taught to the standard the work deserves.",
+			"The four programs an office actually runs on, taught to the standard professional work deserves.",
 		duration: "8 Weeks",
 		category: "learn",
 		level: "start-here",
@@ -458,7 +289,7 @@ export const CATALOGUE: Course[] = [
 			online: { upfront: 80_000, instalments: { count: 2, amount: 42_500 } },
 			inhouse: { upfront: 95_000, instalments: { count: 2, amount: 52_500 } },
 		},
-		next: { slug: "data-analysis" },
+		next: { slug: "ai-for-office-use" },
 		format: {
 			t: "Taught live — online or in person.",
 			d: `Learn live online on your own Windows PC, or in person in a class of no more than ${CENTRE_SEATS} on our licensed machines. Either way the course is built around real work from your own desk, so you leave each session with something that already runs better. Start the day you are ready. Teams can also be trained at their own office.`,
@@ -539,6 +370,95 @@ export const CATALOGUE: Course[] = [
 			"Built around real clerical work, not invented exercises",
 			"When to stop using a spreadsheet and start using a database",
 			"Learn online, or in person on our licensed machines",
+		],
+	},
+	{
+		slug: "ai-for-office-use",
+		t: "AI for Office Use",
+		d: "Prompting & Office AI",
+		tagline:
+			"Master practical AI tools, prompt engineering, and their application across Microsoft Office to automate tasks and work faster.",
+		duration: "4 Weeks",
+		category: "learn",
+		level: "start-here",
+		family: "digital",
+		admission: "rolling",
+		fees: {
+			online: { upfront: 60_000, instalments: { count: 2, amount: 32_500 } },
+			inhouse: { upfront: 75_000, instalments: { count: 2, amount: 40_000 } },
+		},
+		next: { slug: "data-analysis" },
+		format: {
+			t: "Taught live — online or in person.",
+			d: `Join live online from anywhere or attend in person in a small group of no more than ${CENTRE_SEATS} in our Kubwa centre. You will work directly with current AI tools and your own office files, learning hands-on prompting that produces accurate, usable workplace results from day one.`,
+		},
+		mentalModel: {
+			t: "AI is a fast collaborator that needs clear context and direction",
+			d: "Artificial intelligence does not guess your mind; it predicts the most useful continuation based on the context and instructions you provide. Treat an AI assistant like an eager junior colleague: explain the goal, define the constraints, show an example, and verify the output. Once you master structured prompting and apply it directly within Word, Excel and PowerPoint, tasks that used to consume hours turn into minutes of thoughtful editing.",
+			unlocks: [
+				"Draft polished reports, letters and minutes in Word in minutes instead of hours",
+				"Generate complex Excel formulas, clean messy tables and analyze numbers using natural language prompts",
+				"Create compelling PowerPoint outlines, rewrite emails, and automate routine administrative tasks safely",
+			],
+		},
+		requirements: {
+			level:
+				"Designed for office workers, assistants, and managers looking to work smarter with AI",
+			know: [
+				"Standard computer and typing familiarity",
+				"Basic use of Microsoft Office (Word, Excel, email)",
+				"No coding, mathematical background, or prompt engineering experience needed",
+			],
+			have: [
+				"A laptop or desktop computer with internet access",
+				"A web browser to access modern AI tools (ChatGPT, Microsoft Copilot, Claude)",
+				"Microsoft Office installed or accessible online",
+				"3–5 hours a week outside sessions to practise",
+			],
+		},
+		projects: [],
+		modules: [
+			{
+				n: "01",
+				t: "AI fundamentals and prompt engineering",
+				d: "How generative AI works, system prompts, role prompting, context windows, few-shot examples, and avoiding hallucinations.",
+			},
+			{
+				n: "02",
+				t: "AI for Microsoft Word and corporate documents",
+				d: "Drafting formal letters, reports, executive summaries, tone shifting, grammar refinement, and summarizing long PDFs.",
+			},
+			{
+				n: "03",
+				t: "AI for Microsoft Excel and data analysis",
+				d: "Prompting for formulas (XLOOKUP, nested IFs), debugging spreadsheet errors, extracting data from messy text, and trend summaries.",
+			},
+			{
+				n: "04",
+				t: "AI for presentations, productivity and workplace ethics",
+				d: "Outlining PowerPoint presentations, drafting email responses, meeting minute synthesis, data privacy, and workplace verification.",
+			},
+		],
+		session: [
+			{
+				t: "A mental model",
+				d: "Every session opens with the idea, explained plainly, before anything is clicked.",
+			},
+			{
+				t: "An exercise brief",
+				d: "A focused task that makes you use the concept — not just watch it being done.",
+			},
+			{
+				t: "A model answer",
+				d: "A worked solution to compare against, so you learn what good looks like.",
+			},
+		],
+		features: [
+			"Practical prompt engineering designed specifically for workplace tasks",
+			"Automate document drafting, tone adjustment, and reporting in Word",
+			"Generate and troubleshoot complex formulas and spreadsheet analysis in Excel",
+			"Build presentation outlines and summarize emails and meeting notes",
+			"Privacy, security, and verification practices for safe corporate AI use",
 		],
 	},
 	{

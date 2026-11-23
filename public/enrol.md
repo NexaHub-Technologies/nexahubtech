@@ -8,10 +8,9 @@ Applying takes a few minutes: tell us about yourself, choose your course and how
 
 The application form is at https://nexahubtech.company/enrol. To open it with a course already chosen, add `?course=<slug>`:
 
-- Computer Essentials (From ₦37,500): https://nexahubtech.company/enrol?course=computer-essentials
-- PC Basics (₦75,000): https://nexahubtech.company/enrol?course=pc-basics
-- Office Essentials (From ₦45,000): https://nexahubtech.company/enrol?course=office-essentials
-- Microsoft Office (From ₦80,000): https://nexahubtech.company/enrol?course=microsoft-office
+- Computer Essentials (From ₦65,000): https://nexahubtech.company/enrol?course=computer-essentials
+- Office Essentials (From ₦80,000): https://nexahubtech.company/enrol?course=office-essentials
+- AI for Office Use (From ₦60,000): https://nexahubtech.company/enrol?course=ai-for-office-use
 - Python Programming (From ₦95,000): https://nexahubtech.company/enrol?course=python-programming
 - JavaScript Programming (From ₦95,000): https://nexahubtech.company/enrol?course=javascript-programming
 - Frontend Development (From ₦120,000): https://nexahubtech.company/enrol?course=frontend-development

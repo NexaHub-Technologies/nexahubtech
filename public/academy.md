@@ -8,14 +8,13 @@ NexaHubTech Academy is the training arm of NexaHubTech, alongside its software s
 
 Tagline: *Learn. Build. Ship.*
 
-## 15 live courses, online or in person, start any day
+## 14 live courses, online or in person, start any day
 
 Every course but PC Basics can be taken live online or in person, in a class of no more than 6. Fees can be paid in full or in instalments: [Pricing](https://nexahubtech.company/fees.md). How we teach, and where and when classes meet: [About](https://nexahubtech.company/about.md).
 
-- [Computer Essentials](https://nexahubtech.company/courses/computer-essentials.md) — Digital Literacy. From ₦37,500 · 3 Weeks · live online or in person. Three weeks from never having used a computer to saving, finding and printing your own work — with somebody beside you the whole way.
-- [PC Basics](https://nexahubtech.company/courses/pc-basics.md) — Digital Literacy. ₦75,000 · 6 Weeks · in person. Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.
-- [Office Essentials](https://nexahubtech.company/courses/office-essentials.md) — Word & Excel. From ₦45,000 · 4 Weeks · live online or in person. The two programs most office work actually happens in — Word and Excel — in four weeks, taught properly.
-- [Microsoft Office](https://nexahubtech.company/courses/microsoft-office.md) — Word, Excel, PowerPoint & Access. From ₦80,000 · 8 Weeks · live online or in person. The four programs an office actually runs on, taught to the standard the work deserves.
+- [Computer Essentials](https://nexahubtech.company/courses/computer-essentials.md) — Digital Literacy & PC Basics. From ₦65,000 · 6 Weeks · live online or in person. From never having used a computer to managing files, browsing safely, and working with documents — with an instructor beside you every step.
+- [Office Essentials](https://nexahubtech.company/courses/office-essentials.md) — Word, Excel, PowerPoint & Access. From ₦80,000 · 8 Weeks · live online or in person. The four programs an office actually runs on, taught to the standard professional work deserves.
+- [AI for Office Use](https://nexahubtech.company/courses/ai-for-office-use.md) — Prompting & Office AI. From ₦60,000 · 4 Weeks · live online or in person. Master practical AI tools, prompt engineering, and their application across Microsoft Office to automate tasks and work faster.
 - [Python Programming](https://nexahubtech.company/courses/python-programming.md) — From ₦95,000 · 6 Weeks · live online or in person. Learn programming from scratch with Python — the language that powers everything from scripts to AI.
 - [JavaScript Programming](https://nexahubtech.company/courses/javascript-programming.md) — Browser & Node.js. From ₦95,000 · 8 Weeks · live online or in person. Learn JavaScript as a language — the same core that runs in a browser and on a server.
 - [Frontend Development](https://nexahubtech.company/courses/frontend-development.md) — From ₦120,000 · 10 Weeks · live online or in person. Learn the web from first principles — HTML, CSS, and JavaScript done properly.

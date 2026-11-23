@@ -8,7 +8,7 @@ Canonical page: https://nexahubtech.company/for-business
 
 For: Offices, shops and organisations. **₦85,000** per staff member · minimum 4 · 8 weeks.
 
-The full Microsoft Office course — Word, Excel, PowerPoint & Access — taught at your office, on your own machines, around the working day. Built on your team's real files and tasks, so the hours it saves start in week one.
+The full Office Essentials course — Word, Excel, PowerPoint & Access — taught at your office, on your own machines, around the working day. Built on your team's real files and tasks, so the hours it saves start in week one.
 
 - Taught at your premises, at times your team can actually attend
 - Windows machines with Microsoft Office installed — yours, so the skills land where the work is

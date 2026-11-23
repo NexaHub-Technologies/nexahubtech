@@ -1,43 +1,37 @@
-# PC Basics
+# Computer Essentials
 
 The course that assumes nothing. Where the parts are, what the machine is
 actually doing, and how to use one without the constant worry of breaking it.
 
-> **The mental model — Everything lives somewhere**
+> **The mental model — Everything lives somewhere, and every screen is asking a question**
 >
-> A computer never puts anything nowhere. Every document you save, every photo
-> you copy, every app you install goes to a place that has a name — and that
-> name is a path you can read out loud. Beginners lose work because they believe
-> the machine decides where things go. It does not: it asks, and the answer is
-> usually a box that got clicked past. Once you can say where a thing is, you can
-> find it again, copy it, back it up and share it — and the fear goes with the
-> not knowing.
+> A computer never puts anything nowhere and never acts by surprise. Every document you
+> save, every file you move, and every app you install goes to a place with a name you
+> can read out loud. Every dialogue box and message is simply the machine asking an honest
+> question before proceeding. Once you know where things live and read before clicking,
+> the fear disappears completely: you can find any file, undo almost any action, and
+> work with total confidence.
 
 | | |
 |---|---|
-| **Format** | Taught in the centre, in person · start any time |
+| **Format** | Taught live — online or in person · start any time |
 
-**Why in person only.** Every other course here can be taken live online or in
-person. This one is taught only in person: the first thing a student needs is
-someone standing beside them saying *that one, on the left*. Sitting a person who
-has never used a computer in front of a video call is asking them to use the
-skill the course exists to teach.
+**Online or in person.** Learn live online with guided practice and screen sharing,
+or in person in a class of no more than six at our learning centre in Kubwa, Abuja,
+where machines are provided. Either way you have an instructor beside you at every step,
+and you start the day you are ready.
 
 ## Before you start
 
 **Know:** nothing about computers. That is not a figure of speech — this is the
-course that assumes none. You need to read and write in English. If you already
-use a smartphone, you are further ahead than you think, and a fair amount of
-week one will be putting names to things you already do.
+course that assumes none at all. You need to read and write in English. If you already
+use a smartphone, you are further ahead than you think, and a fair amount of week one
+will be putting names to things you already do.
 
 **Have:** a laptop running Windows, macOS or Linux — or use one of ours in the
 centre, which is what most people do. A phone that can receive SMS, for setting
 up accounts safely. A USB drive of any size. 4–5 hours a week outside sessions
 to practise, and the practice is the course.
-
-> **A shorter way in.** [Computer Essentials](computer-essentials.md) is modules
-> 01–03 of this course on their own, over three weeks. Anyone who starts there
-> and carries on picks this course up at module 04.
 
 > **On pace.** Six weeks is not long, and the thing that decides whether it
 > works is not clever teaching — it is whether you touch a computer between
@@ -95,8 +89,8 @@ this is deliberate.
 ## Module 02 — Files, folders and where things go
 *Week 2*
 
-Paths, saving, naming, copying and backing up. The module the whole course is
-built on.
+Paths, saving, naming, copying and backing up. The foundation everything else
+stands on.
 
 **By the end you can**
 - Read a path out loud and say what each part of it means.
@@ -125,8 +119,8 @@ obstacle in the way.
 ## Module 03 — Documents, numbers and slides
 *Weeks 3–4*
 
-Write a letter properly, make a spreadsheet do the arithmetic, and build a deck
-worth showing.
+Write a letter properly, make a spreadsheet do arithmetic, and build a deck
+worth presenting.
 
 **By the end you can**
 - Structure a document with heading styles, so it can be restyled, contented and
@@ -220,8 +214,3 @@ No grades, and no course project. This course is assessed entirely through the
 per-module exercise briefs above — for a six-week course at this level, a
 portfolio piece is not what anybody needs. Competence is, and the exercises are
 where it shows.
-
-Module 02 is the one that decides everything: if paths make sense by the end of
-week two, the rest of the course is downhill, and if they do not, no amount of
-practice with spreadsheets will cover it. Anyone still guessing at where files
-went in week three repeats that week, on their own, before module 03 starts.

@@ -69,9 +69,8 @@
       "priceRange": "₦3,000 – ₦240,000",
       "knowsAbout": [
         "Computer Essentials",
-        "PC Basics",
         "Office Essentials",
-        "Microsoft Office",
+        "AI for Office Use",
         "Python Programming",
         "JavaScript Programming",
         "Frontend Development",
@@ -147,7 +146,7 @@
       "@id": "https://nexahubtech.company/courses#catalog",
       "name": "NexaHubTech Academy courses",
       "url": "https://nexahubtech.company/courses",
-      "numberOfItems": 16,
+      "numberOfItems": 15,
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -160,103 +159,96 @@
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://nexahubtech.company/courses/pc-basics#course"
+            "@id": "https://nexahubtech.company/courses/office-essentials#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://nexahubtech.company/courses/office-essentials#course"
+            "@id": "https://nexahubtech.company/courses/ai-for-office-use#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 4,
           "item": {
-            "@id": "https://nexahubtech.company/courses/microsoft-office#course"
+            "@id": "https://nexahubtech.company/courses/python-programming#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 5,
           "item": {
-            "@id": "https://nexahubtech.company/courses/python-programming#course"
+            "@id": "https://nexahubtech.company/courses/javascript-programming#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 6,
           "item": {
-            "@id": "https://nexahubtech.company/courses/javascript-programming#course"
+            "@id": "https://nexahubtech.company/courses/frontend-development#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 7,
           "item": {
-            "@id": "https://nexahubtech.company/courses/frontend-development#course"
+            "@id": "https://nexahubtech.company/courses/backend-development#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 8,
           "item": {
-            "@id": "https://nexahubtech.company/courses/backend-development#course"
+            "@id": "https://nexahubtech.company/courses/web-development-fullstack#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 9,
           "item": {
-            "@id": "https://nexahubtech.company/courses/web-development-fullstack#course"
+            "@id": "https://nexahubtech.company/courses/react-development#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 10,
           "item": {
-            "@id": "https://nexahubtech.company/courses/react-development#course"
+            "@id": "https://nexahubtech.company/courses/nextjs-fullstack#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 11,
           "item": {
-            "@id": "https://nexahubtech.company/courses/nextjs-fullstack#course"
+            "@id": "https://nexahubtech.company/courses/mobile-development#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 12,
           "item": {
-            "@id": "https://nexahubtech.company/courses/mobile-development#course"
+            "@id": "https://nexahubtech.company/courses/data-analysis#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 13,
           "item": {
-            "@id": "https://nexahubtech.company/courses/data-analysis#course"
+            "@id": "https://nexahubtech.company/courses/mobile-videography#course"
           }
         },
         {
           "@type": "ListItem",
           "position": 14,
           "item": {
-            "@id": "https://nexahubtech.company/courses/mobile-videography#course"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 15,
-          "item": {
             "@id": "https://nexahubtech.company/courses/videography-video-editing#course"
           }
         },
         {
           "@type": "ListItem",
-          "position": 16,
+          "position": 15,
           "item": {
             "@id": "https://nexahubtech.company/cbt#course"
           }
@@ -268,116 +260,24 @@
       "@id": "https://nexahubtech.company/courses/computer-essentials#course",
       "url": "https://nexahubtech.company/courses/computer-essentials",
       "name": "Computer Essentials",
-      "description": "Three weeks from never having used a computer to saving, finding and printing your own work — with somebody beside you the whole way.",
-      "about": "Digital Literacy",
+      "description": "From never having used a computer to managing files, browsing safely, and working with documents — with an instructor beside you every step.",
+      "about": "Digital Literacy & PC Basics",
       "image": "https://nexahubtech.company/og/course-computer-essentials.jpg",
       "inLanguage": "en",
       "provider": {
         "@id": "https://nexahubtech.company/academy#organization"
       },
-      "educationalLevel": "The shortest way in if a computer still feels risky",
+      "educationalLevel": "The place to begin if a computer still feels risky or unfamiliar",
       "coursePrerequisites": [
-        "Nothing about computers — this course assumes none",
-        "How to read and write in English"
-      ],
-      "teaches": [
-        "Every screen is asking you something",
-        "Read a box before clicking it, and know what you are agreeing to",
-        "Undo, close and recover without panicking",
-        "Save your work where you meant to, and open it again tomorrow"
-      ],
-      "timeRequired": "P3W",
-      "syllabusSections": [
-        {
-          "@type": "Syllabus",
-          "position": 1,
-          "name": "The machine, and what it is doing",
-          "description": "The parts, the desktop, the mouse and the keyboard — and why nothing you click can break it."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 2,
-          "name": "Files, folders and where things go",
-          "description": "Paths, saving, naming and copying — so your work is always somewhere you can find it."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 3,
-          "name": "Documents, numbers and slides",
-          "description": "A letter, a sum and a slide: enough of each to do real work, and to see what to learn next."
-        }
-      ],
-      "hasPart": [],
-      "isAccessibleForFree": false,
-      "offers": [
-        {
-          "@type": "Offer",
-          "priceCurrency": "NGN",
-          "availability": "https://schema.org/InStock",
-          "category": "Paid",
-          "seller": {
-            "@id": "https://nexahubtech.company/#organization"
-          },
-          "name": "Live online",
-          "price": "37500",
-          "description": "₦37,500 in full, or 2 × ₦20,000.",
-          "url": "https://nexahubtech.company/enrol?course=computer-essentials"
-        },
-        {
-          "@type": "Offer",
-          "priceCurrency": "NGN",
-          "availability": "https://schema.org/InStock",
-          "category": "Paid",
-          "seller": {
-            "@id": "https://nexahubtech.company/#organization"
-          },
-          "name": "In person",
-          "price": "45000",
-          "description": "₦45,000 in full, or 2 × ₦25,000.",
-          "url": "https://nexahubtech.company/enrol?course=computer-essentials"
-        }
-      ],
-      "hasCourseInstance": [
-        {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "description": "Taught live — online or in person. The first three modules of PC Basics, on their own. Learn online, with your instructor guiding every click on a shared screen, or in person in a class of no more than 6, where machines are provided. Start whenever you are ready.",
-          "duration": "P3W"
-        },
-        {
-          "@type": "CourseInstance",
-          "courseMode": "Onsite",
-          "description": "Taught live — online or in person. The first three modules of PC Basics, on their own. Learn online, with your instructor guiding every click on a shared screen, or in person in a class of no more than 6, where machines are provided. Start whenever you are ready.",
-          "duration": "P3W",
-          "location": {
-            "@id": "https://nexahubtech.company/#organization"
-          }
-        }
-      ]
-    },
-    {
-      "@type": "Course",
-      "@id": "https://nexahubtech.company/courses/pc-basics#course",
-      "url": "https://nexahubtech.company/courses/pc-basics",
-      "name": "PC Basics",
-      "description": "Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.",
-      "about": "Digital Literacy",
-      "image": "https://nexahubtech.company/og/course-pc-basics.jpg",
-      "inLanguage": "en",
-      "provider": {
-        "@id": "https://nexahubtech.company/academy#organization"
-      },
-      "educationalLevel": "The place to begin if a computer still feels risky",
-      "coursePrerequisites": [
-        "Nothing about computers — this is the course that assumes none",
+        "Nothing about computers — this is the course that assumes none at all",
         "How to read and write in English",
-        "If you can already use a smartphone, you are further ahead than you think"
+        "If you can already use a smartphone, you have all the baseline needed"
       ],
       "teaches": [
-        "Everything lives somewhere",
-        "Find any file you have saved, on any computer, without hunting",
-        "Say what went wrong instead of starting the whole thing again",
-        "Move your work between a laptop, a phone and the cloud without losing it"
+        "Everything lives somewhere, and every screen is asking a question",
+        "Find any file you have saved without searching blindly",
+        "Read dialogue boxes calmly and know what you are agreeing to",
+        "Undo, recover and back up your work without panicking"
       ],
       "timeRequired": "P6W",
       "syllabusSections": [
@@ -391,13 +291,13 @@
           "@type": "Syllabus",
           "position": 2,
           "name": "Files, folders and where things go",
-          "description": "Paths, saving, naming, copying and backing up. The module the whole course is built on."
+          "description": "Paths, saving, naming, copying and backing up. The foundation everything else stands on."
         },
         {
           "@type": "Syllabus",
           "position": 3,
           "name": "Documents, numbers and slides",
-          "description": "Write a letter properly, make a spreadsheet do the arithmetic, and build a deck worth showing."
+          "description": "Write a letter properly, make a spreadsheet do arithmetic, and build a deck worth presenting."
         },
         {
           "@type": "Syllabus",
@@ -423,17 +323,36 @@
           "seller": {
             "@id": "https://nexahubtech.company/#organization"
           },
+          "name": "Live online",
+          "price": "65000",
+          "description": "₦65,000 in full, or 2 × ₦35,000.",
+          "url": "https://nexahubtech.company/enrol?course=computer-essentials"
+        },
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
           "name": "In person",
           "price": "75000",
           "description": "₦75,000 in full, or 2 × ₦40,000.",
-          "url": "https://nexahubtech.company/enrol?course=pc-basics"
+          "url": "https://nexahubtech.company/enrol?course=computer-essentials"
         }
       ],
       "hasCourseInstance": [
         {
           "@type": "CourseInstance",
+          "courseMode": "Online",
+          "description": "Taught live — online or in person. Learn live online with screen sharing and guided practice, or in person in a class of no more than 6 on machines provided in our Kubwa centre. Either way an instructor is beside you explaining every step, and you start whenever you are ready.",
+          "duration": "P6W"
+        },
+        {
+          "@type": "CourseInstance",
           "courseMode": "Onsite",
-          "description": "Taught in the centre, in person. This is the one course we teach only in person, in a class of no more than 6. A complete beginner needs someone beside them pointing to the right button — a video call would depend on the very skills the course exists to teach. Machines are provided, and you start whenever you are ready.",
+          "description": "Taught live — online or in person. Learn live online with screen sharing and guided practice, or in person in a class of no more than 6 on machines provided in our Kubwa centre. Either way an instructor is beside you explaining every step, and you start whenever you are ready.",
           "duration": "P6W",
           "location": {
             "@id": "https://nexahubtech.company/#organization"
@@ -446,107 +365,9 @@
       "@id": "https://nexahubtech.company/courses/office-essentials#course",
       "url": "https://nexahubtech.company/courses/office-essentials",
       "name": "Office Essentials",
-      "description": "The two programs most office work actually happens in — Word and Excel — in four weeks, taught properly.",
-      "about": "Word & Excel",
-      "image": "https://nexahubtech.company/og/course-office-essentials.jpg",
-      "inLanguage": "en",
-      "provider": {
-        "@id": "https://nexahubtech.company/academy#organization"
-      },
-      "educationalLevel": "Built for office staff who use Word and Excel but were never shown how",
-      "coursePrerequisites": [
-        "How to use a computer — files, folders, saving, email",
-        "You have opened Word and Excel before, even if nobody showed you how"
-      ],
-      "teaches": [
-        "Type it once",
-        "Restyle a whole document with one change",
-        "Send one letter to a hundred people without retyping it",
-        "Build a sheet whose totals are still right after the numbers change"
-      ],
-      "timeRequired": "P4W",
-      "syllabusSections": [
-        {
-          "@type": "Syllabus",
-          "position": 1,
-          "name": "Word: styles, not formatting",
-          "description": "Headings, templates and long documents built so that one change restyles all of them."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 2,
-          "name": "Word: one letter, many people",
-          "description": "Mail merge from a list — including the rows where the list is not clean."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 3,
-          "name": "Excel: a clean table that does the arithmetic",
-          "description": "One row per thing, one column per fact, and every total a formula."
-        },
-        {
-          "@type": "Syllabus",
-          "position": 4,
-          "name": "Excel: lookups and a summary that updates",
-          "description": "Join two lists, summarise many rows, and chart one answer."
-        }
-      ],
-      "hasPart": [],
-      "isAccessibleForFree": false,
-      "offers": [
-        {
-          "@type": "Offer",
-          "priceCurrency": "NGN",
-          "availability": "https://schema.org/InStock",
-          "category": "Paid",
-          "seller": {
-            "@id": "https://nexahubtech.company/#organization"
-          },
-          "name": "Live online",
-          "price": "45000",
-          "description": "₦45,000 in full, or 2 × ₦25,000.",
-          "url": "https://nexahubtech.company/enrol?course=office-essentials"
-        },
-        {
-          "@type": "Offer",
-          "priceCurrency": "NGN",
-          "availability": "https://schema.org/InStock",
-          "category": "Paid",
-          "seller": {
-            "@id": "https://nexahubtech.company/#organization"
-          },
-          "name": "In person",
-          "price": "55000",
-          "description": "₦55,000 in full, or 2 × ₦30,000.",
-          "url": "https://nexahubtech.company/enrol?course=office-essentials"
-        }
-      ],
-      "hasCourseInstance": [
-        {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "description": "Taught live — online or in person. Learn live online on your own computer, or in person in a class of no more than 6 on our licensed Windows machines. Either way you work on real documents from your own desk, and you start the day you are ready. Teams can also be trained at their own office.",
-          "duration": "P4W"
-        },
-        {
-          "@type": "CourseInstance",
-          "courseMode": "Onsite",
-          "description": "Taught live — online or in person. Learn live online on your own computer, or in person in a class of no more than 6 on our licensed Windows machines. Either way you work on real documents from your own desk, and you start the day you are ready. Teams can also be trained at their own office.",
-          "duration": "P4W",
-          "location": {
-            "@id": "https://nexahubtech.company/#organization"
-          }
-        }
-      ]
-    },
-    {
-      "@type": "Course",
-      "@id": "https://nexahubtech.company/courses/microsoft-office#course",
-      "url": "https://nexahubtech.company/courses/microsoft-office",
-      "name": "Microsoft Office",
-      "description": "The four programs an office actually runs on, taught to the standard the work deserves.",
+      "description": "The four programs an office actually runs on, taught to the standard professional work deserves.",
       "about": "Word, Excel, PowerPoint & Access",
-      "image": "https://nexahubtech.company/og/course-microsoft-office.jpg",
+      "image": "https://nexahubtech.company/og/course-office-essentials.jpg",
       "inLanguage": "en",
       "provider": {
         "@id": "https://nexahubtech.company/academy#organization"
@@ -616,7 +437,7 @@
           "name": "Live online",
           "price": "80000",
           "description": "₦80,000 in full, or 2 × ₦42,500.",
-          "url": "https://nexahubtech.company/enrol?course=microsoft-office"
+          "url": "https://nexahubtech.company/enrol?course=office-essentials"
         },
         {
           "@type": "Offer",
@@ -629,7 +450,7 @@
           "name": "In person",
           "price": "95000",
           "description": "₦95,000 in full, or 2 × ₦52,500.",
-          "url": "https://nexahubtech.company/enrol?course=microsoft-office"
+          "url": "https://nexahubtech.company/enrol?course=office-essentials"
         }
       ],
       "hasCourseInstance": [
@@ -644,6 +465,105 @@
           "courseMode": "Onsite",
           "description": "Taught live — online or in person. Learn live online on your own Windows PC, or in person in a class of no more than 6 on our licensed machines. Either way the course is built around real work from your own desk, so you leave each session with something that already runs better. Start the day you are ready. Teams can also be trained at their own office.",
           "duration": "P8W",
+          "location": {
+            "@id": "https://nexahubtech.company/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://nexahubtech.company/courses/ai-for-office-use#course",
+      "url": "https://nexahubtech.company/courses/ai-for-office-use",
+      "name": "AI for Office Use",
+      "description": "Master practical AI tools, prompt engineering, and their application across Microsoft Office to automate tasks and work faster.",
+      "about": "Prompting & Office AI",
+      "image": "https://nexahubtech.company/og/course-ai-for-office-use.jpg",
+      "inLanguage": "en",
+      "provider": {
+        "@id": "https://nexahubtech.company/academy#organization"
+      },
+      "educationalLevel": "Designed for office workers, assistants, and managers looking to work smarter with AI",
+      "coursePrerequisites": [
+        "Standard computer and typing familiarity",
+        "Basic use of Microsoft Office (Word, Excel, email)",
+        "No coding, mathematical background, or prompt engineering experience needed"
+      ],
+      "teaches": [
+        "AI is a fast collaborator that needs clear context and direction",
+        "Draft polished reports, letters and minutes in Word in minutes instead of hours",
+        "Generate complex Excel formulas, clean messy tables and analyze numbers using natural language prompts",
+        "Create compelling PowerPoint outlines, rewrite emails, and automate routine administrative tasks safely"
+      ],
+      "timeRequired": "P4W",
+      "syllabusSections": [
+        {
+          "@type": "Syllabus",
+          "position": 1,
+          "name": "AI fundamentals and prompt engineering",
+          "description": "How generative AI works, system prompts, role prompting, context windows, few-shot examples, and avoiding hallucinations."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 2,
+          "name": "AI for Microsoft Word and corporate documents",
+          "description": "Drafting formal letters, reports, executive summaries, tone shifting, grammar refinement, and summarizing long PDFs."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 3,
+          "name": "AI for Microsoft Excel and data analysis",
+          "description": "Prompting for formulas (XLOOKUP, nested IFs), debugging spreadsheet errors, extracting data from messy text, and trend summaries."
+        },
+        {
+          "@type": "Syllabus",
+          "position": 4,
+          "name": "AI for presentations, productivity and workplace ethics",
+          "description": "Outlining PowerPoint presentations, drafting email responses, meeting minute synthesis, data privacy, and workplace verification."
+        }
+      ],
+      "hasPart": [],
+      "isAccessibleForFree": false,
+      "offers": [
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "Live online",
+          "price": "60000",
+          "description": "₦60,000 in full, or 2 × ₦32,500.",
+          "url": "https://nexahubtech.company/enrol?course=ai-for-office-use"
+        },
+        {
+          "@type": "Offer",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/InStock",
+          "category": "Paid",
+          "seller": {
+            "@id": "https://nexahubtech.company/#organization"
+          },
+          "name": "In person",
+          "price": "75000",
+          "description": "₦75,000 in full, or 2 × ₦40,000.",
+          "url": "https://nexahubtech.company/enrol?course=ai-for-office-use"
+        }
+      ],
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Online",
+          "description": "Taught live — online or in person. Join live online from anywhere or attend in person in a small group of no more than 6 in our Kubwa centre. You will work directly with current AI tools and your own office files, learning hands-on prompting that produces accurate, usable workplace results from day one.",
+          "duration": "P4W"
+        },
+        {
+          "@type": "CourseInstance",
+          "courseMode": "Onsite",
+          "description": "Taught live — online or in person. Join live online from anywhere or attend in person in a small group of no more than 6 in our Kubwa centre. You will work directly with current AI tools and your own office files, learning hands-on prompting that produces accurate, usable workplace results from day one.",
+          "duration": "P4W",
           "location": {
             "@id": "https://nexahubtech.company/#organization"
           }
@@ -2970,7 +2890,7 @@
       "@id": "https://nexahubtech.company/courses/computer-essentials#webpage",
       "url": "https://nexahubtech.company/courses/computer-essentials",
       "name": "Computer Essentials — NexaHubTech Academy",
-      "description": "Three weeks from never having used a computer to saving, finding and printing your own work — with somebody beside you the whole way.",
+      "description": "From never having used a computer to managing files, browsing safely, and working with documents — with an instructor beside you every step.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -3015,58 +2935,10 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://nexahubtech.company/courses/pc-basics#webpage",
-      "url": "https://nexahubtech.company/courses/pc-basics",
-      "name": "PC Basics — NexaHubTech Academy",
-      "description": "Start at the very beginning — the computer itself, and the confidence to use one without being afraid of breaking it.",
-      "inLanguage": "en-NG",
-      "isPartOf": {
-        "@id": "https://nexahubtech.company/#website"
-      },
-      "publisher": {
-        "@id": "https://nexahubtech.company/#organization"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://nexahubtech.company/og/course-pc-basics.jpg"
-      },
-      "breadcrumb": {
-        "@id": "https://nexahubtech.company/courses/pc-basics#breadcrumb"
-      },
-      "mainEntity": {
-        "@id": "https://nexahubtech.company/courses/pc-basics#course"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://nexahubtech.company/courses/pc-basics#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nexahubtech.company/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Courses",
-          "item": "https://nexahubtech.company/courses"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "PC Basics",
-          "item": "https://nexahubtech.company/courses/pc-basics"
-        }
-      ]
-    },
-    {
-      "@type": "WebPage",
       "@id": "https://nexahubtech.company/courses/office-essentials#webpage",
       "url": "https://nexahubtech.company/courses/office-essentials",
       "name": "Office Essentials — NexaHubTech Academy",
-      "description": "The two programs most office work actually happens in — Word and Excel — in four weeks, taught properly.",
+      "description": "The four programs an office actually runs on, taught to the standard professional work deserves.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -3111,10 +2983,10 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://nexahubtech.company/courses/microsoft-office#webpage",
-      "url": "https://nexahubtech.company/courses/microsoft-office",
-      "name": "Microsoft Office — NexaHubTech Academy",
-      "description": "The four programs an office actually runs on, taught to the standard the work deserves.",
+      "@id": "https://nexahubtech.company/courses/ai-for-office-use#webpage",
+      "url": "https://nexahubtech.company/courses/ai-for-office-use",
+      "name": "AI for Office Use — NexaHubTech Academy",
+      "description": "Master practical AI tools, prompt engineering, and their application across Microsoft Office to automate tasks and work faster.",
       "inLanguage": "en-NG",
       "isPartOf": {
         "@id": "https://nexahubtech.company/#website"
@@ -3124,18 +2996,18 @@
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://nexahubtech.company/og/course-microsoft-office.jpg"
+        "url": "https://nexahubtech.company/og/course-ai-for-office-use.jpg"
       },
       "breadcrumb": {
-        "@id": "https://nexahubtech.company/courses/microsoft-office#breadcrumb"
+        "@id": "https://nexahubtech.company/courses/ai-for-office-use#breadcrumb"
       },
       "mainEntity": {
-        "@id": "https://nexahubtech.company/courses/microsoft-office#course"
+        "@id": "https://nexahubtech.company/courses/ai-for-office-use#course"
       }
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://nexahubtech.company/courses/microsoft-office#breadcrumb",
+      "@id": "https://nexahubtech.company/courses/ai-for-office-use#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -3152,8 +3024,8 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Microsoft Office",
-          "item": "https://nexahubtech.company/courses/microsoft-office"
+          "name": "AI for Office Use",
+          "item": "https://nexahubtech.company/courses/ai-for-office-use"
         }
       ]
     },
