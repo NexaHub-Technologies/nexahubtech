@@ -79,7 +79,7 @@ function CourseDetail() {
 	return (
 		<>
 			<section className="wrap page-head">
-				<div className="flex flex-col md:flex-row md:items-start justify-between gap-6 relative">
+				<div className="flex flex-col-reverse md:flex-row md:items-start justify-between gap-6 relative">
 					<div className="max-w-[46rem]">
 						<Link to="/courses" hash={course.family} className="pill">
 							{track?.t ?? "Course"}
@@ -96,12 +96,10 @@ function CourseDetail() {
 						</p>
 					</div>
 
-					<div
-						className="hidden sm:flex items-center justify-center w-24 h-24 md:w-28 md:h-28 rounded-2xl border border-[var(--line-soft)] bg-[var(--paper-2)] text-accent p-4 shadow-sm shrink-0"
-						aria-hidden="true"
-					>
-						<CourseIcon slug={course.slug} filled />
-					</div>
+					<CourseIcon
+						slug={course.slug}
+						className="w-16 h-16 md:w-28 md:h-28 shrink-0"
+					/>
 				</div>
 			</section>
 

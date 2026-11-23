@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { TrackIcon } from "../../components/course-icon";
 import { CourseCard } from "../../components/fees";
 import { Eyebrow } from "../../components/site";
 import {
@@ -77,10 +78,13 @@ function CoursesIndex() {
 
 			{shown.map((t) => (
 				<section key={t.id} id={t.id} className="wrap py-8 scroll-mt-28">
-					<div className="max-w-[42rem] mb-6">
-						<Eyebrow>{t.t}</Eyebrow>
-						<p className="lead mt-3">{t.d}</p>
-						<p className="text-[0.88rem] text-mute mt-1">For: {t.who}</p>
+					<div className="flex items-start gap-4 max-w-[46rem] mb-6">
+						<TrackIcon track={t.id} className="w-12 h-12 shrink-0" />
+						<div>
+							<Eyebrow>{t.t}</Eyebrow>
+							<p className="lead mt-1.5">{t.d}</p>
+							<p className="text-[0.88rem] text-mute mt-1">For: {t.who}</p>
+						</div>
 					</div>
 					<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 						{coursesIn(t.id).map((c) => (

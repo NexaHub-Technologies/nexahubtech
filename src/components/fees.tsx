@@ -38,16 +38,12 @@ export function CourseCard({ course }: { course: Course }) {
 		<Link
 			to="/courses/$slug"
 			params={{ slug: course.slug }}
-			className="card card-lift p-6 flex flex-col relative overflow-hidden group"
+			className="card card-lift p-6 flex flex-col"
 		>
-			<div className="course-card-bg-icon text-accent" aria-hidden="true">
-				<CourseIcon slug={course.slug} />
-			</div>
-			<h3 className="display text-[1.2rem] relative z-10">{course.t}</h3>
-			<p className="lead mt-2 text-[0.93rem] flex-1 relative z-10">
-				{course.tagline}
-			</p>
-			<div className="flex items-center justify-between gap-3 mt-5 pt-4 border-t border-[var(--line-soft)] relative z-10">
+			<CourseIcon slug={course.slug} className="w-12 h-12" />
+			<h3 className="display text-[1.2rem] mt-4">{course.t}</h3>
+			<p className="lead mt-2 text-[0.93rem] flex-1">{course.tagline}</p>
+			<div className="flex items-center justify-between gap-3 mt-5 pt-4 border-t border-[var(--line-soft)]">
 				<span className="text-[0.85rem] text-mute font-semibold">
 					{course.duration} · {priceLabel(course)}
 				</span>

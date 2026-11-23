@@ -489,29 +489,20 @@ html {
   opacity: 0.05;
 }
 
-.course-card-bg-icon {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  width: 92px;
-  height: 92px;
-  pointer-events: none;
-  opacity: 0.15;
-  transform: translate(8px, -8px) scale(0.92);
-  transition: opacity 300ms ease, transform 300ms cubic-bezier(0.16, 1, 0.3, 1), fill 300ms ease;
-  z-index: 0;
+/* the course and track icons: full-colour tiles that lift a little when
+   their card is hovered */
+.course-icon {
+  display: block;
+  flex: none;
+  transition: transform 200ms ease;
 }
-.card:hover .course-card-bg-icon,
-.group:hover .course-card-bg-icon {
-  opacity: 0.9;
-  transform: translate(0, 0) scale(1.05);
+.card:hover .course-icon {
+  transform: translateY(-2px);
 }
-.dark .course-card-bg-icon {
-  opacity: 0.12;
-}
-.dark .card:hover .course-card-bg-icon,
-.dark .group:hover .course-card-bg-icon {
-  opacity: 0.92;
+@media (prefers-reduced-motion: reduce) {
+  .card:hover .course-icon {
+    transform: none;
+  }
 }
 
 /* ── buttons & links ───────────────────────────────────────────── */
@@ -1243,7 +1234,7 @@ label.choice {
 .track-filter button[aria-pressed='true'] {
   background: var(--ink);
   border-color: var(--ink);
-  color: #fff;
+  color: var(--paper);
 }
 
 /* ── the Academy's doodles ─────────────────────────────────────────
