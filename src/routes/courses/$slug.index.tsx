@@ -2,7 +2,7 @@ import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { CourseIcon } from "../../components/course-icon";
 import { PriceBox } from "../../components/fees";
 import { Figure } from "../../components/figure";
-import { Eyebrow } from "../../components/site";
+import { CONTACT, Eyebrow } from "../../components/site";
 import {
 	deliveryPhrase,
 	getCourseBySlug,
