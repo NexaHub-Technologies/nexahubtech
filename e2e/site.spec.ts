@@ -64,3 +64,47 @@ test("the front page opens with its status, headline, tiles and motto", async ({
 		/wa\.me/,
 	);
 });
+
+/* The Academy's doodles glow after the mouse, on whichever Academy page is
+   showing — including one reached by clicking through, without a reload. */
+test("the Academy doodle glow follows the mouse after client-side navigation", async ({
+	page,
+	isMobile,
+}) => {
+	test.skip(isMobile, "the glow is only for a mouse");
+	const opening = page.locator("main > :first-child");
+	const glowAt = () =>
+		opening.evaluate((el) => (el as HTMLElement).style.getPropertyValue("--gx"));
+
+	await page.goto("/");
+	await page
+		.locator("nav[aria-label='Main']")
+		.getByRole("link", { name: "Academy" })
+		.click();
+	await expect(page).toHaveURL(/\/academy$/);
+	await expect(page.locator("main")).toHaveAttribute("data-section", "academy");
+	await page.mouse.move(400, 500);
+	await page.mouse.move(120, 300, { steps: 10 });
+	await expect(page.locator("main")).toHaveClass(/is-lit/);
+	await expect.poll(glowAt).not.toBe("");
+
+	/* and on to another Academy page, through its own row of links */
+	await page
+		.getByRole("navigation", { name: "NexaHubTech Academy" })
+		.getByRole("link", { name: "Courses" })
+		.click();
+	await expect(page).toHaveURL(/\/courses$/);
+	await page.mouse.move(400, 500);
+	await page.mouse.move(140, 280, { steps: 10 });
+	await expect.poll(glowAt).not.toBe("");
+
+	/* back to the front page: the hero's own glow takes over, and the
+	   Academy's stops */
+	await page.locator("header a[href='/']").first().click();
+	await expect(page).toHaveURL(/\/$/);
+	await expect(page.locator("main")).not.toHaveAttribute("data-section");
+	await page.mouse.move(400, 500);
+	await page.mouse.move(300, 250, { steps: 10 });
+	await expect(page.locator(".studio-hero")).toHaveClass(/is-lit/);
+	await expect(page.locator("main")).not.toHaveClass(/is-lit/);
+});

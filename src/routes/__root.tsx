@@ -87,21 +87,26 @@ function RootLayout() {
 	const pathname = useRouterState({ select: (s) => s.location.pathname });
 	const academy = inAcademy(pathname);
 	const mainRef = useRef<HTMLElement>(null);
-	// biome-ignore lint/correctness/useExhaustiveDependencies: each page has its own opening section, so re-attach when the page changes
 	useEffect(() => {
 		const main = mainRef.current;
-		const opening = main?.firstElementChild;
-		if (!academy || !main || !(opening instanceof HTMLElement)) return;
+		if (!academy || !main) return;
+		/* the opening section is looked up on every move rather than once:
+		   after a click through to another page it is a different element,
+		   and the new page may not have rendered yet when this runs */
+		const opening = () => {
+			const el = main.firstElementChild;
+			return el instanceof HTMLElement ? el : null;
+		};
 		return followPointerGlow({
 			area: main,
 			layers: [{ el: opening, origin: fullBleedOrigin }],
 			// the pattern only covers the opening, edge to edge
 			isInside: (_x, y) => {
-				const box = opening.getBoundingClientRect();
-				return y >= box.top && y <= box.bottom;
+				const box = opening()?.getBoundingClientRect();
+				return !!box && y >= box.top && y <= box.bottom;
 			},
 		});
-	}, [academy, pathname]);
+	}, [academy]);
 	return (
 		<>
 			<Header />

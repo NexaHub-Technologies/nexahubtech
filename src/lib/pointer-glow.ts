@@ -13,7 +13,9 @@
    reduced motion. Returns a function that removes the listeners. */
 
 export type GlowLayer = {
-	el: HTMLElement;
+	/* the element, or a way to find it, for a layer that changes from page
+	   to page (looked up again on every move, so it is never a stale one) */
+	el: HTMLElement | (() => HTMLElement | null | undefined);
 	/* where the layer's drawing starts, in viewport px; defaults to the
 	   element's own box */
 	origin?: (box: DOMRect) => { left: number; top: number };
@@ -50,19 +52,14 @@ export function followPointerGlow({
 	let targetY = 0;
 	let frame = 0;
 	let placed = false;
-	let origins = layers.map(() => ({ left: 0, top: 0 }));
+	// the layers' elements and origins, as found on the latest move
+	let found: { el: HTMLElement; left: number; top: number }[] = [];
 
 	const write = () => {
-		layers.forEach((layer, i) => {
-			layer.el.style.setProperty(
-				"--gx",
-				`${(x - origins[i].left).toFixed(1)}px`,
-			);
-			layer.el.style.setProperty(
-				"--gy",
-				`${(y - origins[i].top).toFixed(1)}px`,
-			);
-		});
+		for (const { el, left, top } of found) {
+			el.style.setProperty("--gx", `${(x - left).toFixed(1)}px`);
+			el.style.setProperty("--gy", `${(y - top).toFixed(1)}px`);
+		}
 	};
 
 	const tick = () => {
@@ -84,10 +81,16 @@ export function followPointerGlow({
 			dim();
 			return;
 		}
-		origins = layers.map(({ el, origin }) => {
+		found = [];
+		for (const layer of layers) {
+			const el = typeof layer.el === "function" ? layer.el() : layer.el;
+			if (!el) continue;
 			const box = el.getBoundingClientRect();
-			return origin ? origin(box) : { left: box.left, top: box.top };
-		});
+			const at = layer.origin
+				? layer.origin(box)
+				: { left: box.left, top: box.top };
+			found.push({ el, ...at });
+		}
 		targetX = e.clientX;
 		targetY = e.clientY;
 		if (!placed) {
