@@ -1,4 +1,6 @@
 import { Link } from "@tanstack/react-router";
+import { useEffect, useRef } from "react";
+import { AVAILABLE_FOR_PROJECTS, BOOK_A_CALL } from "../lib/contact";
 import {
 	CENTRE_SEATS,
 	coursesIn,
@@ -15,9 +17,10 @@ import {
 	LEARNER_TESTIMONIALS,
 	LEARNER_WORK,
 } from "../lib/evidence";
+import { followPointerGlow } from "../lib/pointer-glow";
 import { SERVICES } from "../lib/services";
 import { WORK } from "../lib/work";
-import { TrackIcon } from "./course-icon";
+import { DoodleTile, TrackIcon } from "./course-icon";
 import { CaseStudyCard, LogoRow, Quote, TextSlot } from "./evidence";
 import { Figure } from "./figure";
 import { Eyebrow, SectionHead } from "./site";
@@ -104,24 +107,150 @@ export function ClosingCTA({
 
 /* ── the company's front page ───────────────────────────────────── */
 
-export function StudioHero() {
+/* The front page's opening. One confident headline in the site's own type,
+   framed by four tiles for the kinds of software the studio builds — the
+   brand's code doodles, as on the course icons — then the pitch, the two
+   actions, and the company's motto as the shape of every project. */
+
+const WORK_TILES = [
+	{ doodle: "globe", t: "Web apps", pos: "is-tl" },
+	{ doodle: "phone", t: "Mobile apps", pos: "is-bl" },
+	{ doodle: "server", t: "Backends & APIs", pos: "is-tr" },
+	{ doodle: "chart", t: "Dashboards & data", pos: "is-br" },
+] as const;
+
+const MOTTO_STEPS = [
+	{ t: "Design.", d: "The problem first, then a plan you sign off." },
+	{ t: "Ship.", d: "Working software, in increments you can use." },
+	{ t: "Support.", d: "Fixes, updates and someone to call, after launch." },
+];
+
+/* The NHT mark, drawn as the outline from the code-doodle pack (the logo's
+   own geometry), set large and faint behind the hero with a soft glow. It is
+   decoration: hidden from screen readers and behind the content. */
+const MARK_PATH =
+	"M0,0L385.6,0L385.6,100L100,100L100,578.4L0,578.4ZM485.6,1156.8L771.2,1156.8L771.2,1256.8L485.6,1256.8ZM1256.8,1253.2L871.2,1253.2L871.2,1153.2L1156.8,1153.2L1156.8,674.8L1256.8,674.8ZM1256.8,3.6L1256.8,582L1156.8,582L1156.8,103.6L871.2,103.6L871.2,3.6ZM485.6,0L771.2,0L771.2,100L485.6,100ZM100,678.4L100,1156.8L385.6,1156.8L385.6,1256.8L0,1256.8L0,678.4ZM192.8,192.8H1064V1064H192.8Z";
+
+/* A brighter copy of the mark sits on top, shown only in a soft circle around
+   the mouse, so the glow drifts after the pointer and lights the lines it
+   passes (see lib/pointer-glow.ts). The hero carries the moving halo; the
+   mark carries the brighter lines. */
+function useGlowFollowsPointer() {
+	const ref = useRef<HTMLDivElement>(null);
+	useEffect(() => {
+		const mark = ref.current;
+		const hero = mark?.parentElement;
+		if (!mark || !hero) return;
+		return followPointerGlow({
+			area: hero,
+			layers: [{ el: hero }, { el: mark }],
+		});
+	}, []);
+	return ref;
+}
+
+function HeroMark() {
+	const ref = useGlowFollowsPointer();
 	return (
-		<Hero
-			eyebrow="Software studio · Abuja"
-			title="Software, built properly."
-			lead="NexaHubTech designs, builds and maintains production software for businesses and founders — scoped carefully, built properly, and supported long after launch."
-			primary={{ to: "/contact", label: "Start a project" }}
-			secondary={{ to: "/work", label: "See our work" }}
-			figure={<Figure {...HOME_HERO} />}
-		/>
+		<div ref={ref} className="hero-mark" aria-hidden="true">
+			<svg viewBox="-40 -40 1337 1337" focusable="false" aria-hidden="true">
+				<path className="hero-mark-glow" d={MARK_PATH} />
+				<path className="hero-mark-line" d={MARK_PATH} />
+			</svg>
+			<div className="hero-mark-spot">
+				<svg viewBox="-40 -40 1337 1337" focusable="false" aria-hidden="true">
+					<path className="hero-mark-glow" d={MARK_PATH} />
+					<path className="hero-mark-line" d={MARK_PATH} />
+				</svg>
+			</div>
+		</div>
 	);
 }
 
+export function StudioHero() {
+	return (
+		<section className="studio-hero">
+			<HeroMark />
+			<div className="wrap relative z-[1] flex flex-col items-center text-center">
+				<p className="hero-status">
+					<span
+						className={`avail-dot${AVAILABLE_FOR_PROJECTS ? "" : " is-busy"}`}
+						aria-hidden="true"
+					/>
+					<span>
+						<span className="hidden sm:inline">Software studio · Abuja · </span>
+						{AVAILABLE_FOR_PROJECTS
+							? "taking on new projects"
+							: "booked up, taking enquiries"}
+					</span>
+				</p>
+
+				<div className="hero-stage">
+					<h1 className="hero-title">
+						Software,
+						<br />
+						built <span className="hot-text">properly.</span>
+					</h1>
+					<ul className="hero-tiles" aria-label="What we build">
+						{WORK_TILES.map((w) => (
+							<li key={w.t} className={`hero-tile ${w.pos}`}>
+								<DoodleTile
+									name={w.doodle}
+									className="w-14 h-14 md:w-[4.5rem] md:h-[4.5rem]"
+								/>
+								<span>{w.t}</span>
+							</li>
+						))}
+					</ul>
+				</div>
+
+				<p className="lead mt-8 text-[1.12rem] max-w-[38rem]">
+					We design, build and maintain production software for businesses and
+					founders — scoped carefully, built properly, and supported long after
+					launch.
+				</p>
+				<div className="mt-8 flex flex-wrap justify-center gap-3">
+					<Link to="/contact" className="btn btn-primary">
+						Start a project
+					</Link>
+					<a
+						href={BOOK_A_CALL}
+						target="_blank"
+						rel="noreferrer"
+						className="btn btn-ghost"
+					>
+						Book a call
+					</a>
+				</div>
+
+				<ol className="motto-strip" aria-label="How every project runs">
+					{MOTTO_STEPS.map((m) => (
+						<li key={m.t}>
+							<span className="motto-word">{m.t}</span>
+							<span className="motto-note">{m.d}</span>
+						</li>
+					))}
+				</ol>
+			</div>
+		</section>
+	);
+}
+
+/* the logos of organisations we have built for */
 export function ClientLogos() {
 	return (
-		<section className="wrap pb-6">
-			<p className="kicker mb-4">Organisations we have built for</p>
+		<section className="wrap pb-10">
+			<p className="kicker mb-4 text-center">Organisations we have built for</p>
 			<LogoRow logos={CLIENT_LOGOS} />
+		</section>
+	);
+}
+
+/* the best screen of the best shipped product, wide, under the opening */
+export function ProductShowcase() {
+	return (
+		<section className="wrap pb-6">
+			<Figure {...HOME_HERO} ratio="16 / 8" />
 		</section>
 	);
 }

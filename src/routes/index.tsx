@@ -5,6 +5,7 @@ import {
 	ClientQuotes,
 	ClosingCTA,
 	FeaturedWork,
+	ProductShowcase,
 	Services,
 	StudioHero,
 	StudioProcess,
@@ -23,6 +24,7 @@ function App() {
 	return (
 		<>
 			<StudioHero />
+			<ProductShowcase />
 			<ClientLogos />
 			<FeaturedWork />
 			<Services />

@@ -45,3 +45,22 @@ test("evidence slots show labelled placeholders until filled", async ({
 		page.getByRole("img", { name: /^Placeholder: A shipped product/ }),
 	).toBeVisible();
 });
+
+test("the front page opens with its status, headline, tiles and motto", async ({
+	page,
+}) => {
+	await page.goto("/");
+	await expect(page.getByText(/taking on new projects/i)).toBeVisible();
+	await expect(page.getByRole("heading", { level: 1 })).toHaveText(
+		/Software,\s*built properly\./,
+	);
+	const tiles = page.getByRole("list", { name: "What we build" }).getByRole("listitem");
+	await expect(tiles).toHaveCount(4);
+	const motto = page.getByRole("list", { name: "How every project runs" });
+	for (const word of ["Design.", "Ship.", "Support."])
+		await expect(motto).toContainText(word);
+	await expect(page.getByRole("link", { name: "Book a call" })).toHaveAttribute(
+		"href",
+		/wa\.me/,
+	);
+});

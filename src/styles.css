@@ -486,21 +486,29 @@ html {
 }
 .dark main[data-section='academy'] > :first-child::before {
   filter: invert(1);
-  opacity: 0.05;
+  opacity: 0.075;
 }
 
-/* the course and track icons: full-colour tiles that lift a little when
-   their card is hovered */
-.course-icon {
-  display: block;
+/* the course, track and studio icons: a brand code doodle on a soft tinted
+   square, in the accent colour */
+.doodle-tile {
+  display: grid;
+  place-items: center;
   flex: none;
+  border-radius: 24%;
+  background: var(--accent-tint);
+  color: var(--accent-ink);
   transition: transform 200ms ease;
 }
-.card:hover .course-icon {
+.doodle-tile-art {
+  width: 74%;
+  height: 74%;
+}
+.card:hover .doodle-tile {
   transform: translateY(-2px);
 }
 @media (prefers-reduced-motion: reduce) {
-  .card:hover .course-icon {
+  .card:hover .doodle-tile {
     transform: none;
   }
 }
@@ -1253,8 +1261,338 @@ main[data-section='academy'] > :first-child::before {
   inset: 0 calc(50% - 50vw);
   background: url('/images/doodles/doodle-ink-lines.svg') repeat;
   background-size: 560px;
-  opacity: 0.07;
+  opacity: 0.1;
   mask-image: linear-gradient(to bottom, #000 55%, transparent);
   -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent);
   pointer-events: none;
+}
+
+/* the glow that follows the mouse over the Academy's doodles, as on the
+   front page (lib/pointer-glow.ts puts --gx/--gy on the opening section and
+   is-lit on <main> while the pointer is over the opening). One layer, in the
+   accent colour, cut out by three masks at once:
+   - the doodle tile itself, added on top of a faint fill, so the lines come
+     through strongly and the space between them as a pale halo;
+   - the same downward fade as the pattern;
+   - a soft circle around the pointer. */
+main[data-section='academy'] > :first-child::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0 calc(50% - 50vw);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  background: rgba(106, 44, 173, 0.42);
+  -webkit-mask-image:
+    radial-gradient(circle 240px at var(--gx, 50%) var(--gy, 50%), #000, rgba(0, 0, 0, 0.4) 45%, transparent),
+    linear-gradient(to bottom, #000 55%, transparent),
+    url('/images/doodles/doodle-ink-lines.svg'),
+    linear-gradient(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.14));
+  -webkit-mask-size: auto, auto, 560px, auto;
+  -webkit-mask-repeat: no-repeat, no-repeat, repeat, no-repeat;
+  -webkit-mask-composite: source-in, source-in, source-over;
+  mask-image:
+    radial-gradient(circle 240px at var(--gx, 50%) var(--gy, 50%), #000, rgba(0, 0, 0, 0.4) 45%, transparent),
+    linear-gradient(to bottom, #000 55%, transparent),
+    url('/images/doodles/doodle-ink-lines.svg'),
+    linear-gradient(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.14));
+  mask-size: auto, auto, 560px, auto;
+  mask-repeat: no-repeat, no-repeat, repeat, no-repeat;
+  mask-composite: intersect, intersect, add;
+}
+main[data-section='academy'].is-lit > :first-child::after {
+  opacity: 1;
+}
+.dark main[data-section='academy'] > :first-child::after {
+  background: rgba(168, 85, 247, 0.5);
+}
+@media (prefers-reduced-motion: reduce) {
+  main[data-section='academy'] > :first-child::after {
+    display: none;
+  }
+}
+
+/* ── the front page's opening ──────────────────────────────────────
+   A centred headline in the site's own type, framed by four tiles for the
+   kinds of software the studio builds, then the motto as a three-step
+   strip. The tiles sit in the margins on wide screens and line up under the
+   headline on narrow ones. */
+.studio-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: 3rem 3rem;
+}
+
+/* the NHT mark behind the hero: large and faint, with a soft violet glow
+   around its lines and a pale halo behind it. It fades out towards the
+   centre, where the text sits, so it frames the content without crossing it. */
+.hero-mark {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: -1rem;
+  width: min(780px, 108vw);
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background: radial-gradient(closest-side, rgba(106, 44, 173, 0.07), transparent 72%);
+}
+.hero-mark svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  -webkit-mask-image: radial-gradient(closest-side, transparent 36%, #000 86%);
+  mask-image: radial-gradient(closest-side, transparent 36%, #000 86%);
+}
+.hero-mark-line {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 4;
+  stroke-linejoin: round;
+  opacity: 0.1;
+}
+.hero-mark-glow {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 26;
+  stroke-linejoin: round;
+  opacity: 0.06;
+  filter: blur(16px);
+}
+.dark .hero-mark {
+  background: radial-gradient(closest-side, rgba(168, 85, 247, 0.1), transparent 72%);
+}
+.dark .hero-mark-line {
+  opacity: 0.13;
+}
+.dark .hero-mark-glow {
+  opacity: 0.1;
+}
+/* the glow that follows the mouse. Two parts, both placed by the hero's
+   script and both fading in only while the pointer is over the hero:
+   - a soft violet halo across the whole hero, at the hero's --gx/--gy;
+   - a brighter copy of the mark, seen only through a soft circle at the
+     mark's own --gx/--gy, so the lines near the pointer light up. The centre fade on
+     the svg still applies, so it never lights the lines behind the headline. */
+.studio-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  background: radial-gradient(
+    circle 240px at var(--gx, 50%) var(--gy, 50%),
+    rgba(106, 44, 173, 0.06),
+    transparent 70%
+  );
+}
+.dark .studio-hero::before {
+  background: radial-gradient(
+    circle 240px at var(--gx, 50%) var(--gy, 50%),
+    rgba(168, 85, 247, 0.09),
+    transparent 70%
+  );
+}
+.hero-mark-spot {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  -webkit-mask-image: radial-gradient(
+    circle 260px at var(--gx, 50%) var(--gy, 50%),
+    #000,
+    rgba(0, 0, 0, 0.45) 45%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    circle 260px at var(--gx, 50%) var(--gy, 50%),
+    #000,
+    rgba(0, 0, 0, 0.45) 45%,
+    transparent 100%
+  );
+}
+.studio-hero.is-lit::before,
+.studio-hero.is-lit .hero-mark-spot {
+  opacity: 1;
+}
+.hero-mark-spot .hero-mark-line {
+  opacity: 0.36;
+}
+.hero-mark-spot .hero-mark-glow {
+  opacity: 0.2;
+}
+.dark .hero-mark-spot .hero-mark-line {
+  opacity: 0.42;
+}
+.dark .hero-mark-spot .hero-mark-glow {
+  opacity: 0.28;
+}
+
+.hero-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+}
+.avail-dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.18);
+}
+.avail-dot.is-busy {
+  background: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+}
+
+.hero-stage {
+  position: relative;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+.hero-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--ink);
+  font-size: clamp(2.9rem, 8.4vw, 6.6rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.hero-tiles {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  max-width: 30rem;
+  margin-inline: auto;
+}
+.hero-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--mute);
+}
+/* the four tiles drift gently up and down, each on its own slow rhythm so
+   they never move in step. Only a few pixels; off for reduced motion. */
+@keyframes tile-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.hero-tile {
+  animation: tile-float 7s ease-in-out infinite;
+}
+.hero-tile:nth-child(2) {
+  animation-duration: 8.2s;
+  animation-delay: -2.4s;
+}
+.hero-tile:nth-child(3) {
+  animation-duration: 7.6s;
+  animation-delay: -4.8s;
+}
+.hero-tile:nth-child(4) {
+  animation-duration: 6.6s;
+  animation-delay: -1.2s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-tile {
+    animation: none;
+  }
+  .studio-hero::before,
+  .hero-mark-spot {
+    display: none;
+  }
+}
+/* wide screens: the tiles move into the margins around the headline */
+@media (min-width: 1100px) {
+  .hero-tiles {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    max-width: none;
+    display: block;
+    pointer-events: none;
+  }
+  .hero-tile {
+    position: absolute;
+    width: 7.5rem;
+  }
+  .hero-tile.is-tl {
+    left: 1%;
+    top: -0.5rem;
+  }
+  .hero-tile.is-bl {
+    left: 7%;
+    bottom: -2.5rem;
+  }
+  .hero-tile.is-tr {
+    right: 1%;
+    top: -0.5rem;
+  }
+  .hero-tile.is-br {
+    right: 7%;
+    bottom: -2.5rem;
+  }
+}
+
+.motto-strip {
+  list-style: none;
+  margin: 3.5rem 0 0;
+  padding: 0;
+  width: 100%;
+  max-width: 56rem;
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .motto-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.motto-strip > li {
+  background: var(--card);
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.motto-word {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--ink);
+}
+.motto-strip > li:nth-child(2) .motto-word {
+  color: var(--accent-ink);
+}
+.motto-note {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
 }
