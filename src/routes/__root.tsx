@@ -7,11 +7,13 @@ import {
 	useRouterState,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+import { useEffect, useRef } from "react";
 
 import { Footer, Header } from "../components/site";
 import { DEFINITION, ONE_LINER } from "../lib/company";
 import { MOTTO, SITE_URL } from "../lib/contact";
 import { PAGES } from "../lib/pages";
+import { followPointerGlow, fullBleedOrigin } from "../lib/pointer-glow";
 import { inAcademy } from "../lib/site";
 import appCss from "../styles.css?url";
 
@@ -80,14 +82,30 @@ export const Route = createRootRoute({
 });
 
 function RootLayout() {
-	/* the Academy's pages carry its doodle pattern behind their opening section */
-	const academy = useRouterState({
-		select: (s) => inAcademy(s.location.pathname),
-	});
+	/* the Academy's pages carry its doodle pattern behind their opening
+	   section, with a soft glow that follows the mouse across it */
+	const pathname = useRouterState({ select: (s) => s.location.pathname });
+	const academy = inAcademy(pathname);
+	const mainRef = useRef<HTMLElement>(null);
+	// biome-ignore lint/correctness/useExhaustiveDependencies: each page has its own opening section, so re-attach when the page changes
+	useEffect(() => {
+		const main = mainRef.current;
+		const opening = main?.firstElementChild;
+		if (!academy || !main || !(opening instanceof HTMLElement)) return;
+		return followPointerGlow({
+			area: main,
+			layers: [{ el: opening, origin: fullBleedOrigin }],
+			// the pattern only covers the opening, edge to edge
+			isInside: (_x, y) => {
+				const box = opening.getBoundingClientRect();
+				return y >= box.top && y <= box.bottom;
+			},
+		});
+	}, [academy, pathname]);
 	return (
 		<>
 			<Header />
-			<main data-section={academy ? "academy" : undefined}>
+			<main ref={mainRef} data-section={academy ? "academy" : undefined}>
 				<Outlet />
 			</main>
 			<Footer />

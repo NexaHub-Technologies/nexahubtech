@@ -486,7 +486,7 @@ html {
 }
 .dark main[data-section='academy'] > :first-child::before {
   filter: invert(1);
-  opacity: 0.05;
+  opacity: 0.075;
 }
 
 /* the course, track and studio icons: a brand code doodle on a soft tinted
@@ -1261,10 +1261,56 @@ main[data-section='academy'] > :first-child::before {
   inset: 0 calc(50% - 50vw);
   background: url('/images/doodles/doodle-ink-lines.svg') repeat;
   background-size: 560px;
-  opacity: 0.07;
+  opacity: 0.1;
   mask-image: linear-gradient(to bottom, #000 55%, transparent);
   -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent);
   pointer-events: none;
+}
+
+/* the glow that follows the mouse over the Academy's doodles, as on the
+   front page (lib/pointer-glow.ts puts --gx/--gy on the opening section and
+   is-lit on <main> while the pointer is over the opening). One layer, in the
+   accent colour, cut out by three masks at once:
+   - the doodle tile itself, added on top of a faint fill, so the lines come
+     through strongly and the space between them as a pale halo;
+   - the same downward fade as the pattern;
+   - a soft circle around the pointer. */
+main[data-section='academy'] > :first-child::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0 calc(50% - 50vw);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  background: rgba(106, 44, 173, 0.42);
+  -webkit-mask-image:
+    radial-gradient(circle 240px at var(--gx, 50%) var(--gy, 50%), #000, rgba(0, 0, 0, 0.4) 45%, transparent),
+    linear-gradient(to bottom, #000 55%, transparent),
+    url('/images/doodles/doodle-ink-lines.svg'),
+    linear-gradient(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.14));
+  -webkit-mask-size: auto, auto, 560px, auto;
+  -webkit-mask-repeat: no-repeat, no-repeat, repeat, no-repeat;
+  -webkit-mask-composite: source-in, source-in, source-over;
+  mask-image:
+    radial-gradient(circle 240px at var(--gx, 50%) var(--gy, 50%), #000, rgba(0, 0, 0, 0.4) 45%, transparent),
+    linear-gradient(to bottom, #000 55%, transparent),
+    url('/images/doodles/doodle-ink-lines.svg'),
+    linear-gradient(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.14));
+  mask-size: auto, auto, 560px, auto;
+  mask-repeat: no-repeat, no-repeat, repeat, no-repeat;
+  mask-composite: intersect, intersect, add;
+}
+main[data-section='academy'].is-lit > :first-child::after {
+  opacity: 1;
+}
+.dark main[data-section='academy'] > :first-child::after {
+  background: rgba(168, 85, 247, 0.5);
+}
+@media (prefers-reduced-motion: reduce) {
+  main[data-section='academy'] > :first-child::after {
+    display: none;
+  }
 }
 
 /* ── the front page's opening ──────────────────────────────────────
@@ -1326,9 +1372,9 @@ main[data-section='academy'] > :first-child::before {
 }
 /* the glow that follows the mouse. Two parts, both placed by the hero's
    script and both fading in only while the pointer is over the hero:
-   - a soft violet halo across the whole hero, at --hx/--hy;
-   - a brighter copy of the mark, seen only through a soft circle at
-     --mx/--my, so the lines near the pointer light up. The centre fade on
+   - a soft violet halo across the whole hero, at the hero's --gx/--gy;
+   - a brighter copy of the mark, seen only through a soft circle at the
+     mark's own --gx/--gy, so the lines near the pointer light up. The centre fade on
      the svg still applies, so it never lights the lines behind the headline. */
 .studio-hero::before {
   content: "";
@@ -1339,14 +1385,14 @@ main[data-section='academy'] > :first-child::before {
   opacity: 0;
   transition: opacity 0.8s ease;
   background: radial-gradient(
-    circle 240px at var(--hx, 50%) var(--hy, 50%),
+    circle 240px at var(--gx, 50%) var(--gy, 50%),
     rgba(106, 44, 173, 0.06),
     transparent 70%
   );
 }
 .dark .studio-hero::before {
   background: radial-gradient(
-    circle 240px at var(--hx, 50%) var(--hy, 50%),
+    circle 240px at var(--gx, 50%) var(--gy, 50%),
     rgba(168, 85, 247, 0.09),
     transparent 70%
   );
@@ -1357,13 +1403,13 @@ main[data-section='academy'] > :first-child::before {
   opacity: 0;
   transition: opacity 0.8s ease;
   -webkit-mask-image: radial-gradient(
-    circle 260px at var(--mx, 50%) var(--my, 50%),
+    circle 260px at var(--gx, 50%) var(--gy, 50%),
     #000,
     rgba(0, 0, 0, 0.45) 45%,
     transparent 100%
   );
   mask-image: radial-gradient(
-    circle 260px at var(--mx, 50%) var(--my, 50%),
+    circle 260px at var(--gx, 50%) var(--gy, 50%),
     #000,
     rgba(0, 0, 0, 0.45) 45%,
     transparent 100%
