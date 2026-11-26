@@ -71,7 +71,7 @@ function ServicesIndex() {
 						to="/academy"
 						className="card card-lift panel-learn p-8 flex flex-col"
 					>
-						<Eyebrow>Looking to learn instead?</Eyebrow>
+						<Eyebrow arm="academy">Looking to learn instead?</Eyebrow>
 						<h2 className="display text-[1.6rem] mt-3">
 							NexaHubTech Academy runs {COURSE_COUNT_WORD} courses.
 						</h2>

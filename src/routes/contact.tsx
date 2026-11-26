@@ -243,7 +243,7 @@ function Contact() {
 
 					<div className="grid gap-5">
 						<div className="card panel-learn p-7">
-							<Eyebrow>NexaHubTech Academy</Eyebrow>
+							<Eyebrow arm="academy">NexaHubTech Academy</Eyebrow>
 							<p className="lead mt-3">
 								Ask about any of the {COURSE_COUNT_WORD} courses, when you could
 								start, or whether a track is right for where you’re starting

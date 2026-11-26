@@ -376,25 +376,40 @@ export function Footer() {
 
 /* small shared building blocks */
 
-export function Eyebrow({ children }: { children: React.ReactNode }) {
-	return <span className="eyebrow">{children}</span>;
+/* The label above a heading. Its rule takes the arm's cue colour: the
+   Studio's on Studio pages and the Academy's on Academy pages. Pass `arm`
+   when a label names the other arm, e.g. an Academy pointer on a Studio page. */
+export type Arm = "studio" | "academy";
+
+export function Eyebrow({
+	children,
+	arm,
+}: {
+	children: React.ReactNode;
+	arm?: Arm;
+}) {
+	return (
+		<span className={arm ? `eyebrow is-${arm}` : "eyebrow"}>{children}</span>
+	);
 }
 
 /* a section's heading block: label, heading, optional intro */
 export function SectionHead({
 	eyebrow,
+	arm,
 	title,
 	intro,
 	className = "",
 }: {
 	eyebrow?: string;
+	arm?: Arm;
 	title: React.ReactNode;
 	intro?: React.ReactNode;
 	className?: string;
 }) {
 	return (
 		<div className={`max-w-[42rem] ${className}`}>
-			{eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
+			{eyebrow ? <Eyebrow arm={arm}>{eyebrow}</Eyebrow> : null}
 			<h2 className="h2 mt-3">{title}</h2>
 			{intro ? <p className="lead mt-4">{intro}</p> : null}
 		</div>

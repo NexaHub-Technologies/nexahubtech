@@ -85,7 +85,7 @@ export function ClosingCTA({
 }) {
 	return (
 		<section className="wrap section">
-			<div className="card p-8 md:p-12 flex flex-col md:flex-row gap-8 md:items-center justify-between">
+			<div className="cta-stage p-8 md:p-12 flex flex-col md:flex-row gap-8 md:items-center justify-between">
 				<div className="max-w-[36rem]">
 					<h2 className="h2">{title}</h2>
 					<p className="lead mt-3">{lead}</p>
@@ -387,6 +387,7 @@ export function AcademyPointer() {
 				<div>
 					<SectionHead
 						eyebrow="NexaHubTech Academy"
+						arm="academy"
 						title="We also teach what we practise."
 						intro="Our Academy runs live courses in computers, coding, data and video — online, or in person at our centre in Kubwa, in classes of no more than six."
 					/>

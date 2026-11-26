@@ -38,6 +38,43 @@ html {
 
   --plum: #4a1063;          /* the brand's deep grape, for rare solid panels */
 
+  /* roles from the NexaHubTech Brand design system (tokens.json) */
+  --brand-ink: #311049;     /* the one ink of the NHT mark */
+  --action: #6a2cad;        /* the fill of the one primary button */
+  --action-hover: #56208f;
+  --on-action: #ffffff;     /* 8.2:1 on --action */
+  --rose-ink: #a8287a;      /* rose as readable text */
+  --arm-studio: #4a1063;    /* the Studio's cue: the eyebrow rule */
+  --arm-academy: #6a2cad;   /* the Academy's cue */
+  --error: #b42318;
+  --on-error: #ffffff;
+  --glass: rgba(251, 249, 252, 0.82); /* frosted chrome: the sticky header */
+
+  /* the stage: the one loud moment on a page */
+  --stage: #1a0828;
+  --stage-glow: rgba(106, 44, 173, 0.55);
+  --hot-1: #f06ba8;         /* rose */
+  --hot-2: #ff9a62;         /* peach */
+  --hot-3: #ffd25a;         /* yellow */
+  --on-hot: #1a0828;        /* text on anything filled with the hot gradient */
+  --hot: linear-gradient(100deg, var(--hot-1) 0%, var(--hot-2) 55%, var(--hot-3) 100%);
+  /* the one gradient allowed on calm paper: accent to deep rose */
+  --hot-light: linear-gradient(100deg, var(--accent) 0%, var(--rose-ink) 100%);
+
+  /* radii (radius-lg in the system is --radius-panel here, so it does not
+     clash with Tailwind's own --radius-* scale) */
+  --radius-tag: 6px;
+  --radius-chip: 8px;
+  --radius-btn: 10px;
+  --radius-tile: 11px;
+  --radius-panel: 20px;
+  --radius-stage: 32px;
+  --radius-doodle: 24%;
+
+  --shadow-stage: 0 40px 90px -40px rgba(26, 8, 40, 0.85);
+  --shadow-hot: 0 18px 40px -14px rgba(255, 154, 98, 0.7);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
   /* compatibility aliases */
   --marigold: var(--accent);
   --marigold-deep: var(--accent-deep);
@@ -46,7 +83,7 @@ html {
   --teal: var(--plum);
   --teal-deep: #380b4c;
   --teal-tint: var(--accent-tint);
-  --warm: #f06ba8;
+  --warm: var(--hot-1);
   --learn-ink: var(--accent-ink);
   --build-ink: var(--accent-ink);
   --mode-accent: var(--accent);
@@ -67,15 +104,15 @@ html {
   --card-foreground: var(--ink);
   --popover: var(--card);
   --popover-foreground: var(--ink);
-  --primary: var(--accent);
-  --primary-foreground: #ffffff;
+  --primary: var(--action);
+  --primary-foreground: var(--on-action);
   --secondary: var(--paper-2);
   --secondary-foreground: var(--ink);
   --muted: var(--paper-2);
   --muted-foreground: var(--mute);
   --accent-foreground: var(--accent-ink);
-  --destructive: #b42318;
-  --destructive-foreground: #fff;
+  --destructive: var(--error);
+  --destructive-foreground: var(--on-error);
   --border: var(--line);
   --input: var(--line);
   --ring: var(--accent);
@@ -95,7 +132,16 @@ html {
   --accent-ink: #c084fc;    /* high contrast small accent text */
   --accent-tint: rgba(168, 85, 247, 0.16); /* soft tint washes */
 
-  --plum: #311049;
+  --plum: #4a1063;          /* the same grape in every theme */
+
+  --action: #9333ea;        /* deeper than --accent: white on it is 5.4:1 */
+  --action-hover: #7e22ce;
+  --rose-ink: #f9a8cd;
+  --arm-studio: #f06ba8;    /* rose on dark */
+  --arm-academy: #c084fc;   /* lilac on dark */
+  --error: #f87171;
+  --on-error: #1a0828;
+  --glass: rgba(15, 9, 23, 0.82);
 
   /* compatibility aliases */
   --marigold: var(--accent);
@@ -105,7 +151,7 @@ html {
   --teal: var(--plum);
   --teal-deep: #200833;
   --teal-tint: var(--accent-tint);
-  --warm: #f472b6;
+  --warm: var(--hot-1);
   --learn-ink: var(--accent-ink);
   --build-ink: var(--accent-ink);
   --mode-accent: var(--accent);
@@ -123,15 +169,15 @@ html {
   --card-foreground: var(--ink);
   --popover: var(--card);
   --popover-foreground: var(--ink);
-  --primary: var(--accent);
-  --primary-foreground: #ffffff;
+  --primary: var(--action);
+  --primary-foreground: var(--on-action);
   --secondary: var(--paper-2);
   --secondary-foreground: var(--ink);
   --muted: var(--paper-2);
   --muted-foreground: var(--mute);
   --accent-foreground: var(--accent-ink);
-  --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
+  --destructive: var(--error);
+  --destructive-foreground: var(--on-error);
   --border: var(--line);
   --input: var(--line);
   --ring: var(--accent);
@@ -189,8 +235,8 @@ html {
     overflow-x: hidden;
   }
   ::selection {
-    background: var(--accent);
-    color: #ffffff;
+    background: var(--action);
+    color: var(--on-action);
   }
   :focus-visible {
     outline: 2px solid var(--accent);
@@ -255,8 +301,12 @@ html {
 .lead {
   color: var(--ink-soft);
 }
+/* the label above a heading: behind a 22×2px rule in the arm's cue colour
+   (plum or rose for the Studio, violet or lilac on Academy pages) */
 .eyebrow {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
   font-weight: 700;
   font-size: 0.78rem;
   letter-spacing: 0.1em;
@@ -267,15 +317,47 @@ html {
 .pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.6em;
   font-weight: 700;
   font-size: 0.78rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent-ink);
 }
+.eyebrow::before,
+.pill::before {
+  content: '';
+  flex: none;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--arm-studio);
+}
+main[data-section='academy'] .eyebrow::before,
+main[data-section='academy'] .pill::before,
+.eyebrow.is-academy::before {
+  background: var(--arm-academy);
+}
+main[data-section='academy'] .eyebrow.is-studio::before,
+.eyebrow.is-studio::before {
+  background: var(--arm-studio);
+}
+/* one phrase per headline in the calm gradient, violet to deep rose
+   (lilac to pink in dark mode); display sizes only */
 .hot-text {
-  color: var(--accent-ink);
+  background: var(--hot-light);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding-inline-end: 0.04em;
+}
+@media (forced-colors: active) {
+  .hot-text {
+    background: none;
+    color: inherit;
+  }
 }
 .muted-note {
   font-size: 0.88rem;
@@ -315,11 +397,14 @@ html {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(8px);
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
+/* the wordmark is live text in Hanken Grotesk 700, never the display face */
 .site-wordmark {
+  font-family: var(--font-sans);
   font-weight: 700;
   letter-spacing: -0.01em;
   color: var(--ink);
@@ -368,7 +453,7 @@ html {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 0.95rem;
-  color: var(--accent-ink);
+  color: var(--arm-academy);
   padding-right: 0.75rem;
   margin-right: 0.25rem;
   border-right: 1px solid var(--line);
@@ -467,9 +552,6 @@ html {
   transform: scale(0.95);
 }
 
-.dark .site-header {
-  background: rgba(15, 9, 23, 0.92);
-}
 .dark .site-logo {
   filter: brightness(0) invert(1);
 }
@@ -478,11 +560,6 @@ html {
 }
 .dark .sub-link:hover {
   background: rgba(255, 255, 255, 0.08);
-}
-.dark .form-error {
-  color: #fca5a5;
-  background: #381219;
-  border-color: #7f1d1d;
 }
 .dark main[data-section='academy'] > :first-child::before {
   filter: invert(1);
@@ -520,25 +597,42 @@ html {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
-  border-radius: 10px;
+  padding: 0.85rem 1.4rem;
+  border-radius: var(--radius-btn);
   font-weight: 700;
   font-size: 0.95rem;
   line-height: 1.2;
   border: 1.5px solid transparent;
   cursor: pointer;
-  transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease,
+    transform 240ms var(--ease-out),
+    box-shadow 240ms ease;
 }
+.btn i {
+  font-style: normal;
+  transition: transform 240ms var(--ease-out);
+}
+.btn:hover i {
+  transform: translateX(4px);
+}
+.btn:focus-visible {
+  outline-width: 2.5px;
+}
+/* the one filled button: --action (a deeper violet in dark mode) */
 .btn-primary,
 .btn-teal,
 .btn-blast {
-  background: var(--accent);
-  color: #ffffff;
+  background: var(--action);
+  color: var(--on-action);
 }
 .btn-primary:hover,
 .btn-teal:hover,
 .btn-blast:hover {
-  background: var(--accent-deep);
+  background: var(--action-hover);
+  transform: translateY(-2px);
 }
 .btn-ghost {
   background: var(--card);
@@ -546,7 +640,14 @@ html {
   border-color: var(--line);
 }
 .btn-ghost:hover {
-  border-color: var(--ink-soft);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn:hover,
+  .btn:hover i {
+    transform: none;
+  }
 }
 .btn:disabled {
   opacity: 0.55;
@@ -562,10 +663,10 @@ html {
 }
 .view-link i {
   font-style: normal;
-  transition: transform 150ms ease;
+  transition: transform 240ms var(--ease-out);
 }
 .view-link:hover i {
-  transform: translateX(3px);
+  transform: translateX(4px);
 }
 .view-link:hover {
   text-decoration: underline;
@@ -581,12 +682,22 @@ html {
 }
 a.card,
 .card-lift {
-  transition: border-color 150ms ease, box-shadow 150ms ease;
+  transition:
+    border-color 150ms ease,
+    box-shadow 240ms ease,
+    transform 240ms var(--ease-out);
 }
 a.card:hover,
 .card-lift:hover {
-  border-color: rgba(106, 44, 173, 0.45);
+  border-color: var(--accent);
   box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+@media (prefers-reduced-motion: reduce) {
+  a.card:hover,
+  .card-lift:hover {
+    transform: none;
+  }
 }
 /* the old arm panels: both are now the same quiet tint */
 .panel-learn,
@@ -628,9 +739,11 @@ a.card:hover,
   place-items: center;
   width: 36px;
   height: 36px;
-  border-radius: 10px;
+  border-radius: var(--radius-btn);
+  font-family: var(--font-display);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1.15rem;
+  line-height: 1;
   background: var(--accent-tint);
   color: var(--accent-ink);
 }
@@ -642,18 +755,20 @@ a.card:hover,
 }
 .tech-chip {
   display: inline-block;
-  padding: 0.25rem 0.65rem;
-  border-radius: 7px;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-chip);
   font-size: 0.8rem;
   font-weight: 600;
+  line-height: 1.4;
   color: var(--ink-soft);
   background: var(--paper-2);
-  border: 1px solid var(--line-soft);
+  border: 1px solid var(--line);
 }
 .tag {
   display: inline-block;
-  padding: 0.2rem 0.55rem;
-  border-radius: 6px;
+  padding: 0.22rem 0.6rem;
+  line-height: 1.4;
+  border-radius: var(--radius-tag);
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--accent-ink);
@@ -688,11 +803,13 @@ a.card:hover,
   top: 0;
   width: 36px;
   height: 36px;
-  border-radius: 10px;
+  border-radius: var(--radius-btn);
   display: grid;
   place-items: center;
+  font-family: var(--font-display);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1.15rem;
+  line-height: 1;
   background: var(--accent-tint);
   color: var(--accent-ink);
 }
@@ -705,7 +822,7 @@ a.card:hover,
 .figure-frame {
   position: relative;
   overflow: hidden;
-  border-radius: var(--radius);
+  border-radius: var(--radius-panel);
   border: 1px solid var(--line);
   background: var(--card);
 }
@@ -717,7 +834,7 @@ a.card:hover,
 }
 .figure-phone .figure-frame,
 .figure-logo .figure-frame {
-  border-radius: 18px;
+  border-radius: var(--radius-panel);
 }
 .figure-caption {
   margin-top: 0.6rem;
@@ -741,7 +858,7 @@ a.card:hover,
     transparent 0 14px,
     rgba(42, 15, 63, 0.025) 14px 15px
   );
-  outline: 1.5px dashed rgba(106, 44, 173, 0.3);
+  outline: 2px dashed var(--mute-2);
   outline-offset: -8px;
   border-radius: inherit;
 }
@@ -884,7 +1001,7 @@ a.card:hover,
 .social-btn {
   width: 34px;
   height: 34px;
-  border-radius: 9px;
+  border-radius: var(--radius-tile);
   display: grid;
   place-items: center;
   border: 1px solid var(--line);
@@ -894,7 +1011,7 @@ a.card:hover,
 }
 .social-btn:hover {
   color: var(--ink);
-  border-color: var(--ink-soft);
+  border-color: var(--accent);
 }
 
 /* ── contact & approach details ────────────────────────────────── */
@@ -913,7 +1030,7 @@ a.contact-detail:hover {
 .contact-detail .ic {
   width: 34px;
   height: 34px;
-  border-radius: 9px;
+  border-radius: var(--radius-tile);
   display: grid;
   place-items: center;
   background: var(--accent-tint);
@@ -1098,9 +1215,70 @@ label.choice {
   border-radius: 10px;
   font-size: 0.9rem;
   font-weight: 600;
-  color: #9a1c2c;
-  background: #fdf0f1;
-  border: 1px solid #f2c4ca;
+  color: var(--error);
+  background: color-mix(in srgb, var(--error) 8%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--error) 30%, transparent);
+}
+
+/* ── the stage ─────────────────────────────────────────────────── */
+
+/* The one loud moment on a page: the closing call to action. The deep stage
+   lit by the violet glow from one corner and a softer rose glow from the
+   other; white type; the hot-gradient button for the one action. It
+   re-points the calm tokens, so the heading, lead and ghost button inside
+   it read as stage without their own rules. */
+.cta-stage {
+  --ink: #ffffff;
+  --ink-soft: #e6d9f0;
+  --mute: #bfaecb;
+  --line: rgba(255, 255, 255, 0.22);
+  --card: transparent;
+  --accent: #ffffff;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--ink);
+  background:
+    radial-gradient(120% 90% at 0% 100%, var(--stage-glow), transparent 55%),
+    var(--stage);
+  border-radius: var(--radius-stage);
+  box-shadow: var(--shadow-stage);
+}
+.cta-stage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(70% 60% at 100% 0%, rgba(240, 107, 168, 0.22), transparent 60%);
+}
+.dark .cta-stage {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+.cta-stage .btn-primary {
+  background: var(--hot);
+  color: var(--on-hot);
+  font-weight: 800;
+  font-size: 1.05rem;
+  padding: 1.05rem 1.8rem;
+  box-shadow: var(--shadow-hot);
+}
+.cta-stage .btn-primary:hover {
+  background: var(--hot);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 26px 52px -14px rgba(255, 154, 98, 0.85);
+}
+.cta-stage .btn-ghost {
+  padding: 1.05rem 1.8rem;
+  font-size: 1.05rem;
+}
+.cta-stage :focus-visible {
+  outline-color: var(--hot-3);
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta-stage .btn-primary:hover {
+    transform: none;
+  }
 }
 
 /* ── fees & prices ─────────────────────────────────────────────── */
@@ -1587,10 +1765,8 @@ main[data-section='academy'].is-lit > :first-child::after {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.35rem;
+  letter-spacing: -0.01em;
   color: var(--ink);
-}
-.motto-strip > li:nth-child(2) .motto-word {
-  color: var(--accent-ink);
 }
 .motto-note {
   font-size: 0.92rem;
