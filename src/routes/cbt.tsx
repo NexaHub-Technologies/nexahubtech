@@ -250,15 +250,13 @@ function CbtPage() {
 						>
 							<div className="flex items-center justify-between gap-2">
 								<h3 className="display text-[1.2rem]">{pkg.name}</h3>
-								{pkg.badge && (
-									<span className="pill text-[0.72rem] !py-0.5 !px-2">
-										{pkg.badge}
-									</span>
-								)}
+								{pkg.badge && <span className="tag">{pkg.badge}</span>}
 							</div>
 							<p className="text-[0.85rem] text-mute mt-1">{pkg.idealFor}</p>
 							<p className="mt-4">
-								<span className="display text-[1.5rem]">{pkg.price}</span>
+								<span className="display figure-hot text-[1.5rem]">
+									{pkg.price}
+								</span>
 								<span className="block text-[0.84rem] text-mute">
 									{pkg.duration}
 								</span>

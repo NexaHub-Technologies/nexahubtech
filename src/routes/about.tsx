@@ -94,7 +94,7 @@ function About() {
 						</div>
 					</div>
 					<div className="card p-8">
-						<Eyebrow>NexaHubTech Academy</Eyebrow>
+						<Eyebrow arm="academy">NexaHubTech Academy</Eyebrow>
 						<h2 className="h3 text-[1.45rem] mt-3">
 							Live courses in tech skills.
 						</h2>
@@ -152,6 +152,7 @@ function About() {
 					<div>
 						<SectionHead
 							eyebrow="How we teach"
+							arm="academy"
 							title="The idea before the syntax."
 							intro="Most people are taught the syntax and never given the idea, so they can rebuild the project they were shown and nothing else. We teach the reason first. It feels slower for a fortnight, then it compounds."
 						/>
