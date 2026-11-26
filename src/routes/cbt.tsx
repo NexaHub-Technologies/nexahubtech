@@ -254,7 +254,9 @@ function CbtPage() {
 							</div>
 							<p className="text-[0.85rem] text-mute mt-1">{pkg.idealFor}</p>
 							<p className="mt-4">
-								<span className="display text-[1.5rem]">{pkg.price}</span>
+								<span className="display figure-hot text-[1.5rem]">
+									{pkg.price}
+								</span>
 								<span className="block text-[0.84rem] text-mute">
 									{pkg.duration}
 								</span>

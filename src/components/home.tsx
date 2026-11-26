@@ -381,7 +381,7 @@ export function ClientQuotes() {
 /* the company's front page points to its Academy once — enough to find it */
 export function AcademyPointer() {
 	return (
-		<section className="band">
+		<section className="band band-plum">
 			<div className="wrap section grid lg:grid-cols-2 gap-10 items-center">
 				<Figure {...ACADEMY_PHOTOS.hero} />
 				<div>

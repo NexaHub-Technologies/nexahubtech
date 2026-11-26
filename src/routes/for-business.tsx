@@ -70,7 +70,9 @@ function ForBusinessPage() {
 								</ul>
 							</div>
 							<div className="card panel-learn p-7">
-								<span className="display text-[2rem]">{o.price}</span>
+								<span className="display figure-hot text-[2rem]">
+									{o.price}
+								</span>
 								<p className="text-[0.88rem] text-mute mt-1">{o.unit}</p>
 								<div className="mt-6 flex flex-col gap-3">
 									<a
